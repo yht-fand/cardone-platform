@@ -1,0 +1,34 @@
+{
+  "postHandle": {
+    "permission_add": {
+      "beanId": "authorityFunc",
+      "params": {
+        "code": "usercenter.department.add"
+      }
+    },
+    "permission_modify": {
+      "beanId": "authorityFunc",
+      "params": {
+        "code": "usercenter.department.modify"
+      }
+    },
+    "permission_delete": {
+      "beanId": "authorityFunc",
+      "params": {
+        "code": "usercenter.department.delete"
+      }
+    },
+    "permission_impData": {
+      "beanId": "authorityFunc",
+      "params": {
+        "code": "usercenter.department.impData"
+      }
+    },
+    "permission_expData": {
+      "beanId": "authorityFunc",
+      "params": {
+        "code": "usercenter.department.expData"
+      }
+    }
+  }
+}

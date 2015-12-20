@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <groupId>top.cardone</groupId>
+        <artifactId>cardone-platform-usercenter-parent</artifactId>
+        <version>0.0.1-SNAPSHOT</version>
+        <relativePath>../parent</relativePath>
+    </parent>
+
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>top.cardone</groupId>
+    <artifactId>cardone-platform-usercenter-implements</artifactId>
+    <version>${project.parent.version}</version>
+    <name>cardone platform usercenter implements</name>
+    <description>card one framework platform usercenter implements</description>
+    <packaging>pom</packaging>
+
+    <modules>
+        <module>default</module>
+    </modules>
+</project>
+

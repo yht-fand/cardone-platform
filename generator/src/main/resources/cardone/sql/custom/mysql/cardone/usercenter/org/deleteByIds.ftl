@@ -1,0 +1,1 @@
+DELETE FROM t_org WHERE INSTR(:ids, ID) > 0

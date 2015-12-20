@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns="http://www.springframework.org/schema/beans"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd"
+       default-lazy-init="true">
+    <!-- 组织 -->
+    <bean id="top.cardone.usercenter.dao.OrgDao"
+          class="top.cardone.usercenter.dao.OrgJdbcDao">
+        <property name="configTable">
+            <map>
+                <entry key="config">
+                    <map>
+                        <entry key="sqlFileRoot" value="/cardone/usercenter/org/"/>
+                        <entry key="pks" value="orgId"/>
+                        <entry key="codes" value="orgId"/>
+                    </map>
+                </entry>
+                <entry key="insert">
+                    <map>
+                        <entry key="orgId" value="readRandomUUIDFunc"/>
+                        <entry key="createdByCode" value="readLoginUserCodeFunc"/>
+                    </map>
+                </entry>
+                <entry key="update">
+                    <map>
+                        <entry key="lastModifiedByCode" value="readLoginUserCodeFunc"/>
+                    </map>
+                </entry>
+            </map>
+        </property>
+    </bean>
+
+    <!-- 组织 -->
+    <bean id="top.cardone.usercenter.service.OrgService"
+          class="top.cardone.usercenter.service.OrgDefaultService">
+        <property name="dao" ref="top.cardone.usercenter.dao.OrgDao"/>
+    </bean>
+
+    <bean parent="messageListenerContainerParnet">
+        <property name="messageListener">
+            <bean  parent="exceptionParnet">
+                <property name="serviceInterface" value="top.cardone.usercenter.service.OrgService"/>
+                <property name="service" ref="top.cardone.usercenter.service.OrgService"/>
+            </bean>
+        </property>
+        <property name="destination">
+            <bean class="org.apache.activemq.command.ActiveMQQueue">
+                <constructor-arg value="top.cardone.usercenter.service.OrgService"/>
+            </bean>
+        </property>
+    </bean>
+</beans>
