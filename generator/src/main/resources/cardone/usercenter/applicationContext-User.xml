@@ -5,7 +5,7 @@
        default-lazy-init="true">
     <!-- 用户 -->
     <bean id="top.cardone.usercenter.dao.UserDao"
-          class="top.cardone.usercenter.dao.UserJdbcDao">
+          class="top.cardone.usercenter.dao.impl.UserDaoImpl">
         <property name="configTable">
             <map>
                 <entry key="config">
@@ -34,7 +34,7 @@
 
     <!-- 用户 -->
     <bean id="top.cardone.usercenter.service.UserService"
-          class="top.cardone.usercenter.service.UserDefaultService">
+          class="top.cardone.usercenter.service.impl.UserServiceImpl">
         <property name="dao" ref="top.cardone.usercenter.dao.UserDao"/>
     </bean>
 </beans>

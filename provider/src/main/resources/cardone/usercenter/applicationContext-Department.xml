@@ -5,7 +5,7 @@
        default-lazy-init="true">
     <!-- 部门 -->
     <bean id="top.cardone.usercenter.dao.DepartmentDao"
-          class="top.cardone.usercenter.dao.DepartmentJdbcDao">
+          class="top.cardone.usercenter.dao.impl.DepartmentDaoImpl">
         <property name="configTable">
             <map>
                 <entry key="config">
@@ -17,13 +17,15 @@
                 </entry>
                 <entry key="insert">
                     <map>
-                        <entry key="departmentId" value="readRandomUUIDFunc"/>
-                        <entry key="createdByCode" value="readLoginUserCodeFunc"/>
+                        <entry key="departmentId" value="getRandomUUIDFunc"/>
+                        <entry key="creator" value="getLoginUserIdFunc"/>
+                        <entry key="createDate" value="getNowDateFunc"/>
                     </map>
                 </entry>
                 <entry key="update">
                     <map>
-                        <entry key="lastModifiedByCode" value="readLoginUserCodeFunc"/>
+                        <entry key="modifier" value="getLoginUserIdFunc"/>
+                        <entry key="modifyDate" value="getNowDateFunc"/>
                     </map>
                 </entry>
             </map>
@@ -32,7 +34,7 @@
 
     <!-- 部门 -->
     <bean id="top.cardone.usercenter.service.DepartmentService"
-          class="top.cardone.usercenter.service.DepartmentDefaultService">
+          class="top.cardone.usercenter.service.impl.DepartmentServiceImpl">
         <property name="dao" ref="top.cardone.usercenter.dao.DepartmentDao"/>
     </bean>
 

@@ -12,7 +12,7 @@ public class Org implements java.io.Serializable {
     /**
      * 版本号
      */
-    private static final long serialVersionUID = 743029843512148543L;
+    private static final long serialVersionUID = 529769173176737985L;
 
     /**
      * 开始时间

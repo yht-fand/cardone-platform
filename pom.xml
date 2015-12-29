@@ -4,18 +4,18 @@
     <modelVersion>4.0.0</modelVersion>
 	
     <parent>
-        <groupId>top.cardone</groupId>
-        <artifactId>cardone-platform-usercenter-parent</artifactId>
+		<groupId>top.cardone.usercenter</groupId>
+        <artifactId>cardone-usercenter-parent</artifactId>
         <version>0.0.1-SNAPSHOT</version>
         <relativePath>parent</relativePath>
     </parent>
 
-    <groupId>top.cardone</groupId>
-    <artifactId>cardone-platform-usercenter-root</artifactId>
+    <groupId>top.cardone.usercenter</groupId>
+    <artifactId>cardone-usercenter-root</artifactId>
     <version>${project.parent.version}</version>
+    <name>cardone usercenter root</name>
+    <description>cardone usercenter root</description>
     <packaging>pom</packaging>
-    <name>cardone platform usercenter root</name>
-    <description>card one framework platform usercenter root</description>
 
     <modules>
         <module>api</module>

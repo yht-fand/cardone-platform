@@ -1,4 +1,4 @@
-package top.cardone.usercenter.service;
+package top.cardone.usercenter.service.impl;
 
 import top.cardone.usercenter.dao.DepartmentDao;
 import org.springframework.transaction.annotation.Transactional;
@@ -10,5 +10,5 @@ import top.cardone.data.service.SimpleDefaultService;
  * @author yao hai tao
  */
 @Transactional(readOnly = true)
-public class DepartmentDefaultService extends SimpleDefaultService<DepartmentDao> implements DepartmentService {
+public class DepartmentServiceImpl extends SimpleDefaultService<DepartmentDao> implements top.cardone.usercenter.service.DepartmentService {
 }

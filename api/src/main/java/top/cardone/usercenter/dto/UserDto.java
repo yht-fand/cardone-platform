@@ -12,5 +12,5 @@ public class UserDto extends User {
     /**
      * 版本号
      */
-    private static final long serialVersionUID = 893259033613690199L;
+    private static final long serialVersionUID = 685533051181851365L;
 }
