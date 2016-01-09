@@ -12,5 +12,5 @@ public class OrgDto extends Org {
     /**
      * 版本号
      */
-    private static final long serialVersionUID = 468643622474549100L;
+    private static final long serialVersionUID = 110735246644974344L;
 }

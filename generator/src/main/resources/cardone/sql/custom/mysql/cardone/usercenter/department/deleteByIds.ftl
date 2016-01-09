@@ -1,1 +1,0 @@
-DELETE FROM t_department WHERE INSTR(:ids, ID) > 0

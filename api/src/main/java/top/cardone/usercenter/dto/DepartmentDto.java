@@ -12,5 +12,5 @@ public class DepartmentDto extends Department {
     /**
      * 版本号
      */
-    private static final long serialVersionUID = 369484209630363379L;
+    private static final long serialVersionUID = 888843724144410626L;
 }

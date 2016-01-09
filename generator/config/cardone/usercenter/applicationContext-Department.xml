@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns="http://www.springframework.org/schema/beans"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd"
+       default-lazy-init="true">
+    <!-- 部门 -->
+    <bean id="top.cardone.usercenter.dao.DepartmentDao"
+          class="top.cardone.usercenter.dao.impl.DepartmentDaoImpl">
+        <property name="configTable">
+            <map>
+                <entry key="config">
+                    <map>
+                        <entry key="sqlFileRoot" value="/cardone/usercenter/department/"/>
+                        <entry key="pks" value="departmentId"/>
+                        <entry key="codes" value="departmentId"/>
+                    </map>
+                </entry>
+                <entry key="insert">
+                    <map>
+                        <entry key="departmentId" value="getRandomUUIDFunc"/>
+                        <entry key="createdByCode" value="readCreatedByCodeFunc"/>
+                        <entry key="createdDate" value="readCreatedDateFunc"/>
+                    </map>
+                </entry>
+                <entry key="update">
+                    <map>
+                        <entry key="lastModifiedByCode" value="readLastModifiedByCodeFunc"/>
+                        <entry key="lastModifiedDate" value="readLastModifiedDateFunc"/>
+                    </map>
+                </entry>
+            </map>
+        </property>
+    </bean>
+
+    <!-- 部门 -->
+    <bean id="top.cardone.usercenter.service.DepartmentService"
+          class="top.cardone.usercenter.service.impl.DepartmentServiceImpl">
+        <property name="dao" ref="top.cardone.usercenter.dao.DepartmentDao"/>
+    </bean>
+</beans>
