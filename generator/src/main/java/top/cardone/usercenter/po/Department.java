@@ -12,7 +12,7 @@ public class Department implements java.io.Serializable {
     /**
      * 版本号
      */
-    private static final long serialVersionUID = 864233807177704955L;
+    private static final long serialVersionUID = 209018423963784197L;
 
     /**
      * 开始时间
