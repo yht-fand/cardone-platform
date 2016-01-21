@@ -13,7 +13,7 @@
     <groupId>top.cardone.usercenter</groupId>
     <artifactId>cardone-usercenter-api</artifactId>
     <version>${project.parent.version}</version>
-    <name>cardone usercenter api</name>
+    <name>${project.artifactId}</name>
     <description>cardone usercenter api</description>
     <packaging>jar</packaging>
 

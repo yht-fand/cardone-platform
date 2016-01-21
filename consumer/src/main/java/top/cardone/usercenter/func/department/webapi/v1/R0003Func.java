@@ -1,11 +1,14 @@
-package top.cardone.usercenter.func.department.webapi.vi;
+package top.cardone.usercenter.func.department.webapi.v1;
 
-import org.springframework.stereotype.Component;
-import top.cardone.core.util.func.Func1;
-
-import top.cardone.usercenter.dto.DepartmentDto;
 import com.google.common.collect.Lists;
 import com.google.common.collect.Maps;
+import org.springframework.data.domain.Page;
+import org.springframework.stereotype.Component;
+import top.cardone.usercenter.dto.DepartmentDto;
+import top.cardone.usercenter.service.DepartmentService;
+import top.cardone.context.ApplicationContextHolder;
+import top.cardone.core.util.func.Func1;
+import top.cardone.data.support.PageSupport;
 
 import java.util.List;
 import java.util.Map;
@@ -13,11 +16,13 @@ import java.util.Map;
 /**
  * 部门 - 查询分页
  */
-@Component("/web-api/v1/usercenter/department/r0003.json")
-public class R0003Func implements Func1<Map<String, Object>, Map<String, Object>> {
+@Component("/web-api/v1/configuration/department/r0003.json")
+public class R0003Func implements Func1<Object, Map<String, Object>> {
     @Override
-    public Map<String, Object> func(Map<String, Object> map) {
-        return null;
+    public Object func(Map<String, Object> map) {
+        Page<DepartmentDto> departmentDtoPage = ApplicationContextHolder.getBean(DepartmentService.class).page(DepartmentDto.class, map);
+
+        return ApplicationContextHolder.func(PageSupport.class, pageSupport -> pageSupport.newMap(this.toMapList(departmentDtoPage.getContent()), map, departmentDtoPage.getTotalElements()));
     }
 
     private List<Map<String, Object>> toMapList(List<DepartmentDto> departmentDtoList) {

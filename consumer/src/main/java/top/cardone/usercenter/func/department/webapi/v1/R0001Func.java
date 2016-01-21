@@ -1,33 +1,24 @@
-package top.cardone.usercenter.func.department.webapi.vi;
+package top.cardone.usercenter.func.department.webapi.v1;
 
+import com.google.common.collect.Maps;
 import org.springframework.stereotype.Component;
+import top.cardone.usercenter.dto.DepartmentDto;
+import top.cardone.usercenter.service.DepartmentService;
+import top.cardone.context.ApplicationContextHolder;
 import top.cardone.core.util.func.Func1;
 
-import top.cardone.usercenter.dto.DepartmentDto;
-import com.google.common.collect.Lists;
-import com.google.common.collect.Maps;
-
-import java.util.List;
 import java.util.Map;
 
 /**
  * 部门 - 查询
  */
-@Component("/web-api/v1/usercenter/department/r0001.json")
-public class R0001Func implements Func1<Map<String, Object>, Map<String, Object>> {
+@Component("/web-api/v1/configuration/department/r0001.json")
+public class R0001Func implements Func1<Object, Map<String, Object>> {
     @Override
-    public Map<String, Object> func(Map<String, Object> map) {
-        return null;
-    }
+    public Object func(Map<String, Object> map) {
+        DepartmentDto departmentDto = ApplicationContextHolder.getBean(DepartmentService.class).findOne(DepartmentDto.class, map);
 
-    private List<Map<String, Object>> toMapList(List<DepartmentDto> departmentDtoList) {
-        List<Map<String, Object>> mapList = Lists.newArrayList();
-
-        for (DepartmentDto departmentDto : departmentDtoList) {
-            mapList.add(this.toMap(departmentDto));
-        }
-
-        return mapList;
+        return this.toMap(departmentDto);
     }
 
     private Map<String, Object> toMap(DepartmentDto departmentDto) {

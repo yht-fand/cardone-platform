@@ -13,7 +13,7 @@
     <groupId>top.cardone.usercenter</groupId>
     <artifactId>cardone-usercenter-root</artifactId>
     <version>${project.parent.version}</version>
-    <name>cardone usercenter root</name>
+    <name>${project.artifactId}</name>
     <description>cardone usercenter root</description>
     <packaging>pom</packaging>
 

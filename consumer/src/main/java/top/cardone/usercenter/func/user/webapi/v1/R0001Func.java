@@ -1,33 +1,24 @@
-package top.cardone.usercenter.func.user.webapi.vi;
+package top.cardone.usercenter.func.user.webapi.v1;
 
+import com.google.common.collect.Maps;
 import org.springframework.stereotype.Component;
+import top.cardone.usercenter.dto.UserDto;
+import top.cardone.usercenter.service.UserService;
+import top.cardone.context.ApplicationContextHolder;
 import top.cardone.core.util.func.Func1;
 
-import top.cardone.usercenter.dto.UserDto;
-import com.google.common.collect.Lists;
-import com.google.common.collect.Maps;
-
-import java.util.List;
 import java.util.Map;
 
 /**
  * 用户 - 查询
  */
-@Component("/web-api/v1/usercenter/user/r0001.json")
-public class R0001Func implements Func1<Map<String, Object>, Map<String, Object>> {
+@Component("/web-api/v1/configuration/user/r0001.json")
+public class R0001Func implements Func1<Object, Map<String, Object>> {
     @Override
-    public Map<String, Object> func(Map<String, Object> map) {
-        return null;
-    }
+    public Object func(Map<String, Object> map) {
+        UserDto userDto = ApplicationContextHolder.getBean(UserService.class).findOne(UserDto.class, map);
 
-    private List<Map<String, Object>> toMapList(List<UserDto> userDtoList) {
-        List<Map<String, Object>> mapList = Lists.newArrayList();
-
-        for (UserDto userDto : userDtoList) {
-            mapList.add(this.toMap(userDto));
-        }
-
-        return mapList;
+        return this.toMap(userDto);
     }
 
     private Map<String, Object> toMap(UserDto userDto) {

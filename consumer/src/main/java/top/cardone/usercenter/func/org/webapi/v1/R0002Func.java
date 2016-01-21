@@ -1,11 +1,12 @@
-package top.cardone.usercenter.func.org.webapi.vi;
+package top.cardone.usercenter.func.org.webapi.v1;
 
-import org.springframework.stereotype.Component;
-import top.cardone.core.util.func.Func1;
-
-import top.cardone.usercenter.dto.OrgDto;
 import com.google.common.collect.Lists;
 import com.google.common.collect.Maps;
+import org.springframework.stereotype.Component;
+import top.cardone.usercenter.dto.OrgDto;
+import top.cardone.usercenter.service.OrgService;
+import top.cardone.context.ApplicationContextHolder;
+import top.cardone.core.util.func.Func1;
 
 import java.util.List;
 import java.util.Map;
@@ -13,11 +14,13 @@ import java.util.Map;
 /**
  * 组织 - 查询列表
  */
-@Component("/web-api/v1/usercenter/org/r0002.json")
-public class R0002Func implements Func1<Map<String, Object>, Map<String, Object>> {
+@Component("/web-api/v1/configuration/org/r0002.json")
+public class R0002Func implements Func1<Object, Map<String, Object>> {
     @Override
-    public Map<String, Object> func(Map<String, Object> map) {
-        return null;
+    public Object func(Map<String, Object> map) {
+        List<OrgDto> orgDtoList = ApplicationContextHolder.getBean(OrgService.class).findList(OrgDto.class, map);
+
+        return this.toMapList(orgDtoList);
     }
 
     private List<Map<String, Object>> toMapList(List<OrgDto> orgDtoList) {

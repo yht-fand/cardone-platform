@@ -1,6 +1,8 @@
-package top.cardone.usercenter.func.user.webapi.vi;
+package top.cardone.usercenter.func.user.webapi.v1;
 
 import org.springframework.stereotype.Component;
+import top.cardone.usercenter.service.UserService;
+import top.cardone.context.ApplicationContextHolder;
 import top.cardone.core.util.func.Func1;
 
 import java.util.Map;
@@ -8,10 +10,10 @@ import java.util.Map;
 /**
  * 用户 - 删除
  */
-@Component("/web-api/v1/usercenter/user/d0004.json")
-public class D0004Func implements Func1<Map<String, Object>, Map<String, Object>> {
+@Component("/web-api/v1/configuration/user/d0004.json")
+public class D0004Func implements Func1<Object, Map<String, Object>> {
     @Override
-    public Map<String, Object> func(Map<String, Object> map) {
-        return null;
+    public Object func(Map<String, Object> map) {
+        return ApplicationContextHolder.getBean(UserService.class).delete(map);
     }
 }
