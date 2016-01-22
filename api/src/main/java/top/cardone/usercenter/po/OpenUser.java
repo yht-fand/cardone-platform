@@ -3,16 +3,16 @@ package top.cardone.usercenter.po;
 import java.util.Date;
 
 /**
- * 组织
+ * 开放用户
  *
  * @author yao hai tao
  */
 @lombok.ToString(callSuper = true)
-public class Org implements java.io.Serializable {
+public class OpenUser implements java.io.Serializable {
     /**
      * 版本号
      */
-    private static final long serialVersionUID = 811884191459445100L;
+    private static final long serialVersionUID = 569569950227543169L;
 
     /**
      * 开始时间
@@ -20,6 +20,13 @@ public class Org implements java.io.Serializable {
     @lombok.Getter
     @lombok.Setter
     protected Date beginDate;
+
+    /**
+     * 客户端标识
+     */
+    @lombok.Getter
+    @lombok.Setter
+    protected String clientId;
 
     /**
      * 创建人代码
@@ -43,6 +50,13 @@ public class Org implements java.io.Serializable {
     protected String dataStateCode;
 
     /**
+     * 部门代码
+     */
+    @lombok.Getter
+    @lombok.Setter
+    protected String departmentCode;
+
+    /**
      * 结束时间
      */
     @lombok.Getter
@@ -64,11 +78,11 @@ public class Org implements java.io.Serializable {
     protected Date lastModifiedDate;
 
     /**
-     * 名称
+     * 开放用户标识
      */
     @lombok.Getter
     @lombok.Setter
-    protected String name;
+    protected String openUserId;
 
     /**
      * 组织代码
@@ -76,34 +90,6 @@ public class Org implements java.io.Serializable {
     @lombok.Getter
     @lombok.Setter
     protected String orgCode;
-
-    /**
-     * 组织标识
-     */
-    @lombok.Getter
-    @lombok.Setter
-    protected String orgId;
-
-    /**
-     * 父级代码
-     */
-    @lombok.Getter
-    @lombok.Setter
-    protected String parentCode;
-
-    /**
-     * 父级树代码
-     */
-    @lombok.Getter
-    @lombok.Setter
-    protected String parentTreeCode;
-
-    /**
-     * 父级树名称
-     */
-    @lombok.Getter
-    @lombok.Setter
-    protected String parentTreeName;
 
     /**
      * 许可代码集合
@@ -125,6 +111,13 @@ public class Org implements java.io.Serializable {
     @lombok.Getter
     @lombok.Setter
     protected String stateCode;
+
+    /**
+     * 用户代码
+     */
+    @lombok.Getter
+    @lombok.Setter
+    protected String userCode;
 
     /**
      * 版本

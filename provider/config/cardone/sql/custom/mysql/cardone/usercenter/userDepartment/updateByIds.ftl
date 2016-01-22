@@ -1,0 +1,1 @@
+UPDATE t_user_department SET END_DATE = NOW() WHERE INSTR(:ids, userDepartmentId) > 0

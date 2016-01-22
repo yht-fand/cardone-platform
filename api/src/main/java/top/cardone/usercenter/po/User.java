@@ -12,7 +12,7 @@ public class User implements java.io.Serializable {
     /**
      * 版本号
      */
-    private static final long serialVersionUID = 394992252773194703L;
+    private static final long serialVersionUID = 437242834595384619L;
 
     /**
      * 地址
