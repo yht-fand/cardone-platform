@@ -171,6 +171,12 @@
 				<artifactId>cardone-usercenter-consumer</artifactId>
                 <version>0.0.1-SNAPSHOT</version>
             </dependency>
+
+            <dependency>
+                <groupId>top.cardone.log</groupId>
+                <artifactId>cardone-log-api</artifactId>
+                <version>0.0.1-SNAPSHOT</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 </project>
