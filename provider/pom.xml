@@ -34,6 +34,11 @@
 
         <dependency>
             <groupId>top.cardone</groupId>
+            <artifactId>cardone-cache-implements-memcached</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>top.cardone</groupId>
             <artifactId>cardone-template-implements-default</artifactId>
         </dependency>
 
