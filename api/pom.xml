@@ -22,6 +22,11 @@
             <groupId>top.cardone</groupId>
             <artifactId>cardone-data-commons-api</artifactId>
         </dependency>
+
+        <dependency>
+            <groupId>top.cardone.log</groupId>
+            <artifactId>cardone-log-api</artifactId>
+        </dependency>
     </dependencies>
 </project>
 
