@@ -14,7 +14,7 @@
     <artifactId>cardone-usercenter-parent</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>${project.artifactId}</name>
-    <description>cardone usercenter parent</description>
+    <description>top.cardone.usercenter cardone-usercenter-parent</description>
     <packaging>pom</packaging>
 
     <!-- 设定除中央仓库(repo1.maven.org/maven2/)外的其他仓库,按设定顺序进行查找. -->
@@ -169,12 +169,6 @@
             <dependency>
                 <groupId>top.cardone.usercenter</groupId>
 				<artifactId>cardone-usercenter-consumer</artifactId>
-                <version>0.0.1-SNAPSHOT</version>
-            </dependency>
-
-            <dependency>
-                <groupId>top.cardone.log</groupId>
-                <artifactId>cardone-log-api</artifactId>
                 <version>0.0.1-SNAPSHOT</version>
             </dependency>
         </dependencies>

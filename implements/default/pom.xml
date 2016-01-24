@@ -14,7 +14,7 @@
     <artifactId>cardone-usercenter-implements-default</artifactId>
     <version>${project.parent.version}</version>
     <name>${project.artifactId}</name>
-    <description>cardone usercenter implements default</description>
+    <description>top.cardone.usercenter cardone-usercenter-implements default</description>
     <packaging>jar</packaging>
 
     <dependencies>

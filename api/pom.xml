@@ -14,7 +14,7 @@
     <artifactId>cardone-usercenter-api</artifactId>
     <version>${project.parent.version}</version>
     <name>${project.artifactId}</name>
-    <description>cardone usercenter api</description>
+    <description>top.cardone.usercenter cardone-usercenter-api</description>
     <packaging>jar</packaging>
 
     <dependencies>
@@ -24,8 +24,8 @@
         </dependency>
 
         <dependency>
-            <groupId>top.cardone.log</groupId>
-            <artifactId>cardone-log-api</artifactId>
+            <groupId>top.cardone</groupId>
+            <artifactId>cardone-cache-api</artifactId>
         </dependency>
     </dependencies>
 </project>

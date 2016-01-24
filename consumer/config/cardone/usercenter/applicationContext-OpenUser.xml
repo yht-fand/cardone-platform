@@ -8,7 +8,7 @@
         <property name="serviceInterface" value="top.cardone.usercenter.service.OpenUserService"/>
         <property name="queue">
             <bean class="org.apache.activemq.command.ActiveMQQueue">
-                <constructor-arg value="top.cardone.usercenter.service.OpenUserService"/>
+                <constructor-arg value="cardone-usercenter-${cardone-usercenter-version}:top.cardone.usercenter.service.OpenUserService"/>
             </bean>
         </property>
     </bean>

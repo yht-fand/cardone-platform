@@ -9,8 +9,4 @@ import top.cardone.usercenter.po.UserDepartment;
  */
 @lombok.ToString(callSuper = true)
 public class UserDepartmentDto extends UserDepartment {
-    /**
-     * 版本号
-     */
-    private static final long serialVersionUID = 720280221133272796L;
 }

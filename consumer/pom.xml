@@ -18,7 +18,7 @@
     <artifactId>cardone-usercenter-consumer</artifactId>
     <version>${project.parent.version}</version>
     <name>${project.artifactId}</name>
-    <description>cardone usercenter consumer</description>
+    <description>top.cardone.usercenter cardone-usercenter-consumer</description>
     <packaging>jar</packaging>
 
     <dependencies>

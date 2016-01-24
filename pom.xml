@@ -14,7 +14,7 @@
     <artifactId>cardone-usercenter-root</artifactId>
     <version>${project.parent.version}</version>
     <name>${project.artifactId}</name>
-    <description>cardone usercenter root</description>
+    <description>top.cardone.usercenter cardone-usercenter-root</description>
     <packaging>pom</packaging>
 
     <modules>

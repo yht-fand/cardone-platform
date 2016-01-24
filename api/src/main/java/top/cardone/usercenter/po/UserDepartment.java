@@ -9,10 +9,6 @@ import java.util.Date;
  */
 @lombok.ToString(callSuper = true)
 public class UserDepartment implements java.io.Serializable {
-    /**
-     * 版本号
-     */
-    private static final long serialVersionUID = 387593840415059109L;
 
     /**
      * 开始时间
