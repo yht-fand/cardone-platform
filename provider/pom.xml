@@ -10,11 +10,15 @@
         <relativePath>../parent</relativePath>
     </parent>
 
+    <properties>
+        <maven.deploy.enabled>true</maven.deploy.enabled>
+    </properties>
+
     <groupId>top.cardone.usercenter</groupId>
     <artifactId>cardone-usercenter-provider</artifactId>
     <version>${project.parent.version}</version>
     <name>${project.artifactId}</name>
-    <description>cardone usercenter provider</description>
+    <description>top.cardone.usercenter cardone-usercenter-provider</description>
     <packaging>jar</packaging>
 
     <dependencies>
@@ -26,6 +30,11 @@
         <dependency>
             <groupId>top.cardone</groupId>
             <artifactId>cardone-cache-implements-default</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>top.cardone</groupId>
+            <artifactId>cardone-cache-implements-memcached</artifactId>
         </dependency>
 
         <dependency>

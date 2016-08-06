@@ -9,8 +9,4 @@ import top.cardone.usercenter.po.User;
  */
 @lombok.ToString(callSuper = true)
 public class UserDto extends User {
-    /**
-     * 版本号
-     */
-    private static final long serialVersionUID = 652378998444987606L;
 }

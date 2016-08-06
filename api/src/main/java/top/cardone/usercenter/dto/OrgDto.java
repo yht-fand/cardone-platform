@@ -9,8 +9,4 @@ import top.cardone.usercenter.po.Org;
  */
 @lombok.ToString(callSuper = true)
 public class OrgDto extends Org {
-    /**
-     * 版本号
-     */
-    private static final long serialVersionUID = 278774545962425376L;
 }
