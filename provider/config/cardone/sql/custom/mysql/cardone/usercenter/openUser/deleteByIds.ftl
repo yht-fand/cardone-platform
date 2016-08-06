@@ -1,0 +1,1 @@
+DELETE FROM c1_open_user WHERE INSTR(:ids, openUserId) > 0

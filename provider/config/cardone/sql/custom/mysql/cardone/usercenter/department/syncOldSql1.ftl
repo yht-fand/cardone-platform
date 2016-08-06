@@ -1,0 +1,5 @@
+UPDATE c1_department t INNER JOIN t_department d ON (t.DEPARTMENT_ID=d.ID AND d.DEPT_CODE !='root' )
+SET t.DEPARTMENT_CODE= REPLACE(d.DEPT_CODE, 'root',''),
+t.NAME= d.DEPT_NAME,
+t.PARENT_CODE= REPLACE(d.PARENT_DEPT_CODE, 'root','') ,
+t.PARENT_TREE_CODE= REPLACE(REPLACE(d.PARENT_CODE_LIST, 'root,',''),'root','')

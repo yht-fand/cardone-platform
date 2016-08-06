@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns="http://www.springframework.org/schema/beans"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <bean name="departmentTreeFunc" class="top.cardone.usercenter.func.DepartmentTreeFunc"/>
+
+    <bean parent="messageListenerContainerParnet">
+        <property name="messageListener">
+            <bean parent="remoteInvocationExecutorParnet">
+                <property name="serviceInterface" value="top.cardone.core.util.func.Func1"/>
+                <property name="service" ref="departmentTreeFunc"/>
+            </bean>
+        </property>
+        <property name="destination">
+            <bean class="org.apache.activemq.command.ActiveMQQueue">
+                <constructor-arg value="cardone-usercenter-${cardone-usercenter-version}:departmentTreeFunc"/>
+            </bean>
+        </property>
+    </bean>
+
+
+    <bean id="findOneUserByPrincipalFunc" class="top.cardone.usercenter.func.FindOneUserByPrincipalFunc"/>
+
+    <bean parent="messageListenerContainerParnet">
+        <property name="messageListener">
+            <bean parent="remoteInvocationExecutorParnet">
+                <property name="serviceInterface" value="top.cardone.core.util.func.Func0"/>
+                <property name="service" ref="findOneUserByPrincipalFunc"/>
+            </bean>
+        </property>
+        <property name="destination">
+            <bean class="org.apache.activemq.command.ActiveMQQueue">
+                <constructor-arg value="cardone-usercenter-${cardone-usercenter-version}:findOneUserByPrincipalFunc"/>
+            </bean>
+        </property>
+    </bean>
+
+
+    <bean id="readCreatedByIdFunc" class="top.cardone.usercenter.func.ReadCreatedByIdFunc"/>
+
+    <alias name="readCreatedByIdFunc" alias="readLastModifiedByIdFunc"/>
+
+    <bean parent="messageListenerContainerParnet">
+        <property name="messageListener">
+            <bean parent="remoteInvocationExecutorParnet">
+                <property name="serviceInterface" value="top.cardone.core.util.func.Func0"/>
+                <property name="service" ref="readCreatedByIdFunc"/>
+            </bean>
+        </property>
+        <property name="destination">
+            <bean class="org.apache.activemq.command.ActiveMQQueue">
+                <constructor-arg value="cardone-usercenter-${cardone-usercenter-version}:readCreatedByIdFunc"/>
+            </bean>
+        </property>
+    </bean>
+</beans>
