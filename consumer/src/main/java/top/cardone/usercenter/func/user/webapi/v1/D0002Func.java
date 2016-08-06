@@ -12,7 +12,7 @@ import java.util.Map;
 /**
  * 用户 - 批量删除
  */
-@Component("/web-api/v1/configuration/user/d0002.json")
+@Component("/web-api/v1/usercenter/user/d0002.json")
 public class D0002Func implements Func1<Object, Map<String, Object>> {
     @Override
     public Object func(Map<String, Object> map) {

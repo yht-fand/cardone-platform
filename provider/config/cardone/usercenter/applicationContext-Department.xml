@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xmlns="http://www.springframework.org/schema/beans"
-       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd"
-       default-lazy-init="true">
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
     <!-- 部门 -->
     <bean id="top.cardone.usercenter.dao.DepartmentDao"
           class="top.cardone.usercenter.dao.impl.DepartmentDaoImpl">
@@ -12,12 +11,12 @@
                     <map>
                         <entry key="sqlFileRoot" value="/cardone/usercenter/department/"/>
                         <entry key="pks" value="departmentId"/>
-                        <entry key="codes" value="departmentId"/>
+                        <entry key="codes" value="departmentCode"/>
                     </map>
                 </entry>
                 <entry key="insert">
                     <map>
-                        <entry key="departmentId" value="getRandomUUIDFunc"/>
+                        <entry key="departmentId" value="readRandomUUIDFunc"/>
                         <entry key="createdByCode" value="readCreatedByCodeFunc"/>
                         <entry key="createdDate" value="readCreatedDateFunc"/>
                     </map>
@@ -40,7 +39,7 @@
 
     <bean parent="messageListenerContainerParnet">
         <property name="messageListener">
-            <bean  parent="exceptionParnet">
+            <bean  parent="remoteInvocationExecutorParnet">
                 <property name="serviceInterface" value="top.cardone.usercenter.service.DepartmentService"/>
                 <property name="service" ref="top.cardone.usercenter.service.DepartmentService"/>
             </bean>

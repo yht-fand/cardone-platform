@@ -1,74 +1,127 @@
 package top.cardone.usercenter.func.user.webapi.v1;
 
-import com.google.common.collect.Maps;
+import com.google.common.collect.HashBasedTable;
+import com.google.common.collect.Table;
+import org.springframework.data.domain.Page;
 import org.springframework.stereotype.Component;
-import top.cardone.usercenter.dto.UserDto;
 import top.cardone.usercenter.service.UserService;
 import top.cardone.context.ApplicationContextHolder;
 import top.cardone.core.util.func.Func1;
+import top.cardone.data.support.PageSupport;
 
+import java.util.List;
 import java.util.Map;
 
 /**
  * 用户 - 查询
  */
-@Component("/web-api/v1/configuration/user/r0004.json")
+@Component("/web-api/v1/usercenter/user/r0004.json")
 public class R0004Func implements Func1<Object, Map<String, Object>> {
-    @Override
-    public Object func(Map<String, Object> map) {
-        UserDto userDto = ApplicationContextHolder.getBean(UserService.class).findOne(UserDto.class, map);
+    private Table<String, String, String> inputConfigTable;
+    private Table<String, String, String> outConfigTable;
 
-        return this.toMap(userDto);
+    public R0004Func() {
+        inputConfigTable = HashBasedTable.create();
+		inputConfigTable.put("address", "funcBeanId", "escapeSqlFunc");
+		inputConfigTable.put("age", "funcBeanId", "escapeSqlFunc");
+		inputConfigTable.put("areaCode", "funcBeanId", "escapeSqlFunc");
+		inputConfigTable.put("beginDate", "funcBeanId", "escapeSqlFunc");
+		inputConfigTable.put("birthday", "funcBeanId", "escapeSqlFunc");
+		inputConfigTable.put("callName", "funcBeanId", "escapeSqlFunc");
+		inputConfigTable.put("cityCode", "funcBeanId", "escapeSqlFunc");
+		inputConfigTable.put("companyName", "funcBeanId", "escapeSqlFunc");
+		inputConfigTable.put("countryCode", "funcBeanId", "escapeSqlFunc");
+		inputConfigTable.put("createdByCode", "funcBeanId", "escapeSqlFunc");
+		inputConfigTable.put("createdDate", "funcBeanId", "escapeSqlFunc");
+		inputConfigTable.put("dataStateCode", "funcBeanId", "escapeSqlFunc");
+		inputConfigTable.put("departmentCode", "funcBeanId", "escapeSqlFunc");
+		inputConfigTable.put("diplomaCode", "funcBeanId", "escapeSqlFunc");
+		inputConfigTable.put("email", "funcBeanId", "escapeSqlFunc");
+		inputConfigTable.put("endDate", "funcBeanId", "escapeSqlFunc");
+		inputConfigTable.put("flagCode", "funcBeanId", "escapeSqlFunc");
+		inputConfigTable.put("folkCode", "funcBeanId", "escapeSqlFunc");
+		inputConfigTable.put("idCardNo", "funcBeanId", "escapeSqlFunc");
+		inputConfigTable.put("intro", "funcBeanId", "escapeSqlFunc");
+		inputConfigTable.put("lastModifiedByCode", "funcBeanId", "escapeSqlFunc");
+		inputConfigTable.put("lastModifiedDate", "funcBeanId", "escapeSqlFunc");
+		inputConfigTable.put("locus", "funcBeanId", "escapeSqlFunc");
+		inputConfigTable.put("marryStateCode", "funcBeanId", "escapeSqlFunc");
+		inputConfigTable.put("mobilePhone", "funcBeanId", "escapeSqlFunc");
+		inputConfigTable.put("name", "funcBeanId", "escapeSqlFunc");
+		inputConfigTable.put("orgCode", "funcBeanId", "escapeSqlFunc");
+		inputConfigTable.put("password", "funcBeanId", "escapeSqlFunc");
+		inputConfigTable.put("passwordSalt", "funcBeanId", "escapeSqlFunc");
+		inputConfigTable.put("permissionCodes", "funcBeanId", "escapeSqlFunc");
+		inputConfigTable.put("portraitUrl", "funcBeanId", "escapeSqlFunc");
+		inputConfigTable.put("privatePassword", "funcBeanId", "escapeSqlFunc");
+		inputConfigTable.put("privatePasswordSalt", "funcBeanId", "escapeSqlFunc");
+		inputConfigTable.put("professionCode", "funcBeanId", "escapeSqlFunc");
+		inputConfigTable.put("provinceCode", "funcBeanId", "escapeSqlFunc");
+		inputConfigTable.put("qq", "funcBeanId", "escapeSqlFunc");
+		inputConfigTable.put("roleCodes", "funcBeanId", "escapeSqlFunc");
+		inputConfigTable.put("sexCode", "funcBeanId", "escapeSqlFunc");
+		inputConfigTable.put("stateCode", "funcBeanId", "escapeSqlFunc");
+		inputConfigTable.put("telephone", "funcBeanId", "escapeSqlFunc");
+		inputConfigTable.put("userCode", "funcBeanId", "escapeSqlFunc");
+		inputConfigTable.put("userId", "funcBeanId", "escapeSqlFunc");
+		inputConfigTable.put("version", "funcBeanId", "escapeSqlFunc");
+		inputConfigTable.put("wfId", "funcBeanId", "escapeSqlFunc");
+
+        outConfigTable = HashBasedTable.create();
+		outConfigTable.put("ADDRESS", "newName", "address");
+		outConfigTable.put("AGE", "newName", "age");
+		outConfigTable.put("AREA_CODE", "newName", "areaCode");
+		outConfigTable.put("BEGIN_DATE", "newName", "beginDate");
+		outConfigTable.put("BIRTHDAY", "newName", "birthday");
+		outConfigTable.put("CALL_NAME", "newName", "callName");
+		outConfigTable.put("CITY_CODE", "newName", "cityCode");
+		outConfigTable.put("COMPANY_NAME", "newName", "companyName");
+		outConfigTable.put("COUNTRY_CODE", "newName", "countryCode");
+		outConfigTable.put("CREATED_BY_CODE", "newName", "createdByCode");
+		outConfigTable.put("CREATED_DATE", "newName", "createdDate");
+		outConfigTable.put("DATA_STATE_CODE", "newName", "dataStateCode");
+		outConfigTable.put("DEPARTMENT_CODE", "newName", "departmentCode");
+		outConfigTable.put("DIPLOMA_CODE", "newName", "diplomaCode");
+		outConfigTable.put("EMAIL", "newName", "email");
+		outConfigTable.put("END_DATE", "newName", "endDate");
+		outConfigTable.put("FLAG_CODE", "newName", "flagCode");
+		outConfigTable.put("FOLK_CODE", "newName", "folkCode");
+		outConfigTable.put("ID_CARD_NO", "newName", "idCardNo");
+		outConfigTable.put("INTRO", "newName", "intro");
+		outConfigTable.put("LAST_MODIFIED_BY_CODE", "newName", "lastModifiedByCode");
+		outConfigTable.put("LAST_MODIFIED_DATE", "newName", "lastModifiedDate");
+		outConfigTable.put("LOCUS", "newName", "locus");
+		outConfigTable.put("MARRY_STATE_CODE", "newName", "marryStateCode");
+		outConfigTable.put("MOBILE_PHONE", "newName", "mobilePhone");
+		outConfigTable.put("NAME", "newName", "name");
+		outConfigTable.put("ORG_CODE", "newName", "orgCode");
+		outConfigTable.put("PASSWORD_", "newName", "password");
+		outConfigTable.put("PASSWORD_SALT", "newName", "passwordSalt");
+		outConfigTable.put("PERMISSION_CODES", "newName", "permissionCodes");
+		outConfigTable.put("PORTRAIT_URL", "newName", "portraitUrl");
+		outConfigTable.put("PRIVATE_PASSWORD", "newName", "privatePassword");
+		outConfigTable.put("PRIVATE_PASSWORD_SALT", "newName", "privatePasswordSalt");
+		outConfigTable.put("PROFESSION_CODE", "newName", "professionCode");
+		outConfigTable.put("PROVINCE_CODE", "newName", "provinceCode");
+		outConfigTable.put("QQ", "newName", "qq");
+		outConfigTable.put("ROLE_CODES", "newName", "roleCodes");
+		outConfigTable.put("SEX_CODE", "newName", "sexCode");
+		outConfigTable.put("STATE_CODE", "newName", "stateCode");
+		outConfigTable.put("TELEPHONE", "newName", "telephone");
+		outConfigTable.put("USER_CODE", "newName", "userCode");
+		outConfigTable.put("USER_ID", "newName", "userId");
+		outConfigTable.put("VERSION_", "newName", "version");
+		outConfigTable.put("WF_ID", "newName", "wfId");
     }
+	
+    @Override
+    public Object func(Map<String, Object> inputMap) {
+        inputMap.putAll(top.cardone.context.util.MapUtils.newHashMap(inputMap, inputConfigTable));
 
-    private Map<String, Object> toMap(UserDto userDto) {
-        Map<String, Object> map = Maps.newHashMap();
+        Page<Map<String, Object>> userPage = ApplicationContextHolder.getBean(UserService.class).pageByCode(inputMap);
 
-        map.put("address", userDto.getAddress());
-        map.put("age", userDto.getAge());
-        map.put("areaCode", userDto.getAreaCode());
-        map.put("beginDate", userDto.getBeginDate());
-        map.put("birthday", userDto.getBirthday());
-        map.put("callName", userDto.getCallName());
-        map.put("cityCode", userDto.getCityCode());
-        map.put("companyName", userDto.getCompanyName());
-        map.put("countryCode", userDto.getCountryCode());
-        map.put("createdByCode", userDto.getCreatedByCode());
-        map.put("createdDate", userDto.getCreatedDate());
-        map.put("dataStateCode", userDto.getDataStateCode());
-        map.put("departmentCode", userDto.getDepartmentCode());
-        map.put("diplomaCode", userDto.getDiplomaCode());
-        map.put("email", userDto.getEmail());
-        map.put("endDate", userDto.getEndDate());
-        map.put("flagCode", userDto.getFlagCode());
-        map.put("folkCode", userDto.getFolkCode());
-        map.put("idCardNo", userDto.getIdCardNo());
-        map.put("intro", userDto.getIntro());
-        map.put("lastModifiedByCode", userDto.getLastModifiedByCode());
-        map.put("lastModifiedDate", userDto.getLastModifiedDate());
-        map.put("locus", userDto.getLocus());
-        map.put("marryStateCode", userDto.getMarryStateCode());
-        map.put("mobilePhone", userDto.getMobilePhone());
-        map.put("name", userDto.getName());
-        map.put("orgCode", userDto.getOrgCode());
-        map.put("password", userDto.getPassword());
-        map.put("passwordSalt", userDto.getPasswordSalt());
-        map.put("permissionCodes", userDto.getPermissionCodes());
-        map.put("portraitUrl", userDto.getPortraitUrl());
-        map.put("privatePassword", userDto.getPrivatePassword());
-        map.put("privatePasswordSalt", userDto.getPrivatePasswordSalt());
-        map.put("professionCode", userDto.getProfessionCode());
-        map.put("provinceCode", userDto.getProvinceCode());
-        map.put("qq", userDto.getQq());
-        map.put("roleCodes", userDto.getRoleCodes());
-        map.put("sexCode", userDto.getSexCode());
-        map.put("stateCode", userDto.getStateCode());
-        map.put("telephone", userDto.getTelephone());
-        map.put("userCode", userDto.getUserCode());
-        map.put("userId", userDto.getUserId());
-        map.put("version", userDto.getVersion());
-        map.put("wfId", userDto.getWfId());
+        List<Map<String, Object>> newContent = top.cardone.context.util.ListUtils.newArrayList(userPage.getContent(), outConfigTable);
 
-        return map;
+        return ApplicationContextHolder.getBean(PageSupport.class).newMap(newContent, inputMap, userPage.getTotalElements());
     }
 }

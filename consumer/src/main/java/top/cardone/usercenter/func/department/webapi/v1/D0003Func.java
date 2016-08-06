@@ -10,7 +10,7 @@ import java.util.Map;
 /**
  * 部门 - 删除
  */
-@Component("/web-api/v1/configuration/department/d0003.json")
+@Component("/web-api/v1/usercenter/department/d0003.json")
 public class D0003Func implements Func1<Object, Map<String, Object>> {
     @Override
     public Object func(Map<String, Object> map) {

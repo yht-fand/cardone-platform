@@ -29,6 +29,15 @@
       "params": {
         "code": "usercenter.department.expData"
       }
+    },
+    "permission_model": {
+      "beanId": "authorityFunc",
+      "params": {
+        "code": "usercenter.department.templateDowload"
+      }
+    },
+    "deptTree": {
+      "beanId": "departmentTreeFunc"
     }
   }
 }

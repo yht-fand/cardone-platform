@@ -11,7 +11,13 @@ import java.util.Map;
 @Component("/usercenter/org/index.json")
 public class IndexFunc implements Func1<Object, Map<String, Object>> {
     @Override
-    public Object func(Map<String, Object> map) {
+    public Object func(Map<String, Object> inputMap) {
+        validate(inputMap);
+		
         return null;
+    }
+	
+    private  void validate(Map<String,Object>  inputMap){
+
     }
 }

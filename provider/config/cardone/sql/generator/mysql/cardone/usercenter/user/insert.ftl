@@ -1,5 +1,5 @@
 INSERT
-INTO t_user
+INTO c1_user
 (<#assign prefixName = ' '>
 <#if (insert_address??) && (insert_address_value??)>
 ${prefixName} `ADDRESS`

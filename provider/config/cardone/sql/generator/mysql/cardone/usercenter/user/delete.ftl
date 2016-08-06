@@ -1,4 +1,4 @@
-DELETE FROM t_user
+DELETE FROM c1_user
 <#include "where.ftl">
 <#if (((prefixName!) == 'WHERE') && !(delete_all??))>
 ${prefixName} 1 = 2

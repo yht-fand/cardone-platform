@@ -4,7 +4,7 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd"
        default-lazy-init="true">
     <!-- 用户 -->
-    <bean name="top.cardone.usercenter.service.UserService" parent="consumerParent">
+    <bean name="top.cardone.usercenter.service.UserService" parent="invokerProxyFactoryParnet">
         <property name="serviceInterface" value="top.cardone.usercenter.service.UserService"/>
         <property name="queue">
             <bean class="org.apache.activemq.command.ActiveMQQueue">

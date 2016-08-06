@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xmlns="http://www.springframework.org/schema/beans"
-       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd"
-       default-lazy-init="true">
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
     <!-- 用户 -->
     <bean id="top.cardone.usercenter.dao.UserDao"
           class="top.cardone.usercenter.dao.impl.UserDaoImpl">
@@ -12,12 +11,12 @@
                     <map>
                         <entry key="sqlFileRoot" value="/cardone/usercenter/user/"/>
                         <entry key="pks" value="userId"/>
-                        <entry key="codes" value="userId"/>
+                        <entry key="codes" value="userCode"/>
                     </map>
                 </entry>
                 <entry key="insert">
                     <map>
-                        <entry key="userId" value="getRandomUUIDFunc"/>
+                        <entry key="userId" value="readRandomUUIDFunc"/>
                         <entry key="createdByCode" value="readCreatedByCodeFunc"/>
                         <entry key="createdDate" value="readCreatedDateFunc"/>
                     </map>
@@ -40,7 +39,7 @@
 
     <bean parent="messageListenerContainerParnet">
         <property name="messageListener">
-            <bean  parent="exceptionParnet">
+            <bean  parent="remoteInvocationExecutorParnet">
                 <property name="serviceInterface" value="top.cardone.usercenter.service.UserService"/>
                 <property name="service" ref="top.cardone.usercenter.service.UserService"/>
             </bean>

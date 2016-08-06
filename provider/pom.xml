@@ -28,6 +28,16 @@
         </dependency>
 
         <dependency>
+            <groupId>top.cardone.authority</groupId>
+            <artifactId>cardone-authority-implements-default</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>top.cardone.configuration</groupId>
+            <artifactId>cardone-configuration-implements-default</artifactId>
+        </dependency>
+
+        <dependency>
             <groupId>top.cardone</groupId>
             <artifactId>cardone-cache-implements-default</artifactId>
         </dependency>
@@ -75,6 +85,11 @@
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.quartz-scheduler</groupId>
+            <artifactId>quartz</artifactId>
         </dependency>
     </dependencies>
 

@@ -171,6 +171,18 @@
 				<artifactId>cardone-usercenter-consumer</artifactId>
                 <version>0.0.1-SNAPSHOT</version>
             </dependency>
+
+            <dependency>
+                <groupId>top.cardone.authority</groupId>
+                <artifactId>cardone-authority-implements-default</artifactId>
+                <version>0.0.2-SNAPSHOT</version>
+            </dependency>
+
+            <dependency>
+                <groupId>top.cardone.configuration</groupId>
+                <artifactId>cardone-configuration-implements-default</artifactId>
+                <version>0.0.1-SNAPSHOT</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 </project>

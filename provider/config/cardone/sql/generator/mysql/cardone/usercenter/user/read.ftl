@@ -135,5 +135,5 @@ WF_ID AS wfId
 <#default>
 COUNT(1) AS COUNT_
 </#switch>
-FROM t_user
+FROM c1_user
 <#include "where.ftl">

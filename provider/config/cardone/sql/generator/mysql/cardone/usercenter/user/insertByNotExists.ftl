@@ -1,6 +1,6 @@
 INSERT
 INTO
-t_user
+c1_user
 (<#assign prefixName = ' '>
 <#if (insert_address??) && (insert_address_value??)>
 ${prefixName} `ADDRESS`
@@ -357,7 +357,7 @@ ${prefixName} :insert_version_value
 ${prefixName} :insert_wfId_value
 <#assign prefixName = ','>
 </#if>
-FROM DUAL WHERE NOT EXISTS (SELECT 1 FROM t_user E
+FROM DUAL WHERE NOT EXISTS (SELECT 1 FROM c1_user E
 <#assign prefixName = 'WHERE'>
 <#if (where_and_eq_address??)>
 <#if (where_and_eq_address_value??)>
@@ -365,9 +365,6 @@ ${prefixName} E.ADDRESS = :where_and_eq_address_value
 <#else>
 ${prefixName} E.ADDRESS IS NULL
 </#if>
-<#assign prefixName = ''>
-</#if>
-<#if (prefixName!) != 'WHERE'>
 <#assign prefixName = 'AND'>
 </#if>
 <#if (where_and_eq_age??)>
@@ -376,9 +373,6 @@ ${prefixName} E.AGE = :where_and_eq_age_value
 <#else>
 ${prefixName} E.AGE IS NULL
 </#if>
-<#assign prefixName = ''>
-</#if>
-<#if (prefixName!) != 'WHERE'>
 <#assign prefixName = 'AND'>
 </#if>
 <#if (where_and_eq_areaCode??)>
@@ -387,9 +381,6 @@ ${prefixName} E.AREA_CODE = :where_and_eq_areaCode_value
 <#else>
 ${prefixName} E.AREA_CODE IS NULL
 </#if>
-<#assign prefixName = ''>
-</#if>
-<#if (prefixName!) != 'WHERE'>
 <#assign prefixName = 'AND'>
 </#if>
 <#if (where_and_eq_beginDate??)>
@@ -398,9 +389,6 @@ ${prefixName} E.BEGIN_DATE = :where_and_eq_beginDate_value
 <#else>
 ${prefixName} E.BEGIN_DATE IS NULL
 </#if>
-<#assign prefixName = ''>
-</#if>
-<#if (prefixName!) != 'WHERE'>
 <#assign prefixName = 'AND'>
 </#if>
 <#if (where_and_eq_birthday??)>
@@ -409,9 +397,6 @@ ${prefixName} E.BIRTHDAY = :where_and_eq_birthday_value
 <#else>
 ${prefixName} E.BIRTHDAY IS NULL
 </#if>
-<#assign prefixName = ''>
-</#if>
-<#if (prefixName!) != 'WHERE'>
 <#assign prefixName = 'AND'>
 </#if>
 <#if (where_and_eq_callName??)>
@@ -420,9 +405,6 @@ ${prefixName} E.CALL_NAME = :where_and_eq_callName_value
 <#else>
 ${prefixName} E.CALL_NAME IS NULL
 </#if>
-<#assign prefixName = ''>
-</#if>
-<#if (prefixName!) != 'WHERE'>
 <#assign prefixName = 'AND'>
 </#if>
 <#if (where_and_eq_cityCode??)>
@@ -431,9 +413,6 @@ ${prefixName} E.CITY_CODE = :where_and_eq_cityCode_value
 <#else>
 ${prefixName} E.CITY_CODE IS NULL
 </#if>
-<#assign prefixName = ''>
-</#if>
-<#if (prefixName!) != 'WHERE'>
 <#assign prefixName = 'AND'>
 </#if>
 <#if (where_and_eq_companyName??)>
@@ -442,9 +421,6 @@ ${prefixName} E.COMPANY_NAME = :where_and_eq_companyName_value
 <#else>
 ${prefixName} E.COMPANY_NAME IS NULL
 </#if>
-<#assign prefixName = ''>
-</#if>
-<#if (prefixName!) != 'WHERE'>
 <#assign prefixName = 'AND'>
 </#if>
 <#if (where_and_eq_countryCode??)>
@@ -453,9 +429,6 @@ ${prefixName} E.COUNTRY_CODE = :where_and_eq_countryCode_value
 <#else>
 ${prefixName} E.COUNTRY_CODE IS NULL
 </#if>
-<#assign prefixName = ''>
-</#if>
-<#if (prefixName!) != 'WHERE'>
 <#assign prefixName = 'AND'>
 </#if>
 <#if (where_and_eq_createdByCode??)>
@@ -464,9 +437,6 @@ ${prefixName} E.CREATED_BY_CODE = :where_and_eq_createdByCode_value
 <#else>
 ${prefixName} E.CREATED_BY_CODE IS NULL
 </#if>
-<#assign prefixName = ''>
-</#if>
-<#if (prefixName!) != 'WHERE'>
 <#assign prefixName = 'AND'>
 </#if>
 <#if (where_and_eq_createdDate??)>
@@ -475,9 +445,6 @@ ${prefixName} E.CREATED_DATE = :where_and_eq_createdDate_value
 <#else>
 ${prefixName} E.CREATED_DATE IS NULL
 </#if>
-<#assign prefixName = ''>
-</#if>
-<#if (prefixName!) != 'WHERE'>
 <#assign prefixName = 'AND'>
 </#if>
 <#if (where_and_eq_dataStateCode??)>
@@ -486,9 +453,6 @@ ${prefixName} E.DATA_STATE_CODE = :where_and_eq_dataStateCode_value
 <#else>
 ${prefixName} E.DATA_STATE_CODE IS NULL
 </#if>
-<#assign prefixName = ''>
-</#if>
-<#if (prefixName!) != 'WHERE'>
 <#assign prefixName = 'AND'>
 </#if>
 <#if (where_and_eq_departmentCode??)>
@@ -497,9 +461,6 @@ ${prefixName} E.DEPARTMENT_CODE = :where_and_eq_departmentCode_value
 <#else>
 ${prefixName} E.DEPARTMENT_CODE IS NULL
 </#if>
-<#assign prefixName = ''>
-</#if>
-<#if (prefixName!) != 'WHERE'>
 <#assign prefixName = 'AND'>
 </#if>
 <#if (where_and_eq_diplomaCode??)>
@@ -508,9 +469,6 @@ ${prefixName} E.DIPLOMA_CODE = :where_and_eq_diplomaCode_value
 <#else>
 ${prefixName} E.DIPLOMA_CODE IS NULL
 </#if>
-<#assign prefixName = ''>
-</#if>
-<#if (prefixName!) != 'WHERE'>
 <#assign prefixName = 'AND'>
 </#if>
 <#if (where_and_eq_email??)>
@@ -519,9 +477,6 @@ ${prefixName} E.EMAIL = :where_and_eq_email_value
 <#else>
 ${prefixName} E.EMAIL IS NULL
 </#if>
-<#assign prefixName = ''>
-</#if>
-<#if (prefixName!) != 'WHERE'>
 <#assign prefixName = 'AND'>
 </#if>
 <#if (where_and_eq_endDate??)>
@@ -530,9 +485,6 @@ ${prefixName} E.END_DATE = :where_and_eq_endDate_value
 <#else>
 ${prefixName} E.END_DATE IS NULL
 </#if>
-<#assign prefixName = ''>
-</#if>
-<#if (prefixName!) != 'WHERE'>
 <#assign prefixName = 'AND'>
 </#if>
 <#if (where_and_eq_flagCode??)>
@@ -541,9 +493,6 @@ ${prefixName} E.FLAG_CODE = :where_and_eq_flagCode_value
 <#else>
 ${prefixName} E.FLAG_CODE IS NULL
 </#if>
-<#assign prefixName = ''>
-</#if>
-<#if (prefixName!) != 'WHERE'>
 <#assign prefixName = 'AND'>
 </#if>
 <#if (where_and_eq_folkCode??)>
@@ -552,9 +501,6 @@ ${prefixName} E.FOLK_CODE = :where_and_eq_folkCode_value
 <#else>
 ${prefixName} E.FOLK_CODE IS NULL
 </#if>
-<#assign prefixName = ''>
-</#if>
-<#if (prefixName!) != 'WHERE'>
 <#assign prefixName = 'AND'>
 </#if>
 <#if (where_and_eq_idCardNo??)>
@@ -563,9 +509,6 @@ ${prefixName} E.ID_CARD_NO = :where_and_eq_idCardNo_value
 <#else>
 ${prefixName} E.ID_CARD_NO IS NULL
 </#if>
-<#assign prefixName = ''>
-</#if>
-<#if (prefixName!) != 'WHERE'>
 <#assign prefixName = 'AND'>
 </#if>
 <#if (where_and_eq_intro??)>
@@ -574,9 +517,6 @@ ${prefixName} E.INTRO = :where_and_eq_intro_value
 <#else>
 ${prefixName} E.INTRO IS NULL
 </#if>
-<#assign prefixName = ''>
-</#if>
-<#if (prefixName!) != 'WHERE'>
 <#assign prefixName = 'AND'>
 </#if>
 <#if (where_and_eq_lastModifiedByCode??)>
@@ -585,9 +525,6 @@ ${prefixName} E.LAST_MODIFIED_BY_CODE = :where_and_eq_lastModifiedByCode_value
 <#else>
 ${prefixName} E.LAST_MODIFIED_BY_CODE IS NULL
 </#if>
-<#assign prefixName = ''>
-</#if>
-<#if (prefixName!) != 'WHERE'>
 <#assign prefixName = 'AND'>
 </#if>
 <#if (where_and_eq_lastModifiedDate??)>
@@ -596,9 +533,6 @@ ${prefixName} E.LAST_MODIFIED_DATE = :where_and_eq_lastModifiedDate_value
 <#else>
 ${prefixName} E.LAST_MODIFIED_DATE IS NULL
 </#if>
-<#assign prefixName = ''>
-</#if>
-<#if (prefixName!) != 'WHERE'>
 <#assign prefixName = 'AND'>
 </#if>
 <#if (where_and_eq_locus??)>
@@ -607,9 +541,6 @@ ${prefixName} E.LOCUS = :where_and_eq_locus_value
 <#else>
 ${prefixName} E.LOCUS IS NULL
 </#if>
-<#assign prefixName = ''>
-</#if>
-<#if (prefixName!) != 'WHERE'>
 <#assign prefixName = 'AND'>
 </#if>
 <#if (where_and_eq_marryStateCode??)>
@@ -618,9 +549,6 @@ ${prefixName} E.MARRY_STATE_CODE = :where_and_eq_marryStateCode_value
 <#else>
 ${prefixName} E.MARRY_STATE_CODE IS NULL
 </#if>
-<#assign prefixName = ''>
-</#if>
-<#if (prefixName!) != 'WHERE'>
 <#assign prefixName = 'AND'>
 </#if>
 <#if (where_and_eq_mobilePhone??)>
@@ -629,9 +557,6 @@ ${prefixName} E.MOBILE_PHONE = :where_and_eq_mobilePhone_value
 <#else>
 ${prefixName} E.MOBILE_PHONE IS NULL
 </#if>
-<#assign prefixName = ''>
-</#if>
-<#if (prefixName!) != 'WHERE'>
 <#assign prefixName = 'AND'>
 </#if>
 <#if (where_and_eq_name??)>
@@ -640,9 +565,6 @@ ${prefixName} E.NAME = :where_and_eq_name_value
 <#else>
 ${prefixName} E.NAME IS NULL
 </#if>
-<#assign prefixName = ''>
-</#if>
-<#if (prefixName!) != 'WHERE'>
 <#assign prefixName = 'AND'>
 </#if>
 <#if (where_and_eq_orgCode??)>
@@ -651,9 +573,6 @@ ${prefixName} E.ORG_CODE = :where_and_eq_orgCode_value
 <#else>
 ${prefixName} E.ORG_CODE IS NULL
 </#if>
-<#assign prefixName = ''>
-</#if>
-<#if (prefixName!) != 'WHERE'>
 <#assign prefixName = 'AND'>
 </#if>
 <#if (where_and_eq_password??)>
@@ -662,9 +581,6 @@ ${prefixName} E.PASSWORD_ = :where_and_eq_password_value
 <#else>
 ${prefixName} E.PASSWORD_ IS NULL
 </#if>
-<#assign prefixName = ''>
-</#if>
-<#if (prefixName!) != 'WHERE'>
 <#assign prefixName = 'AND'>
 </#if>
 <#if (where_and_eq_passwordSalt??)>
@@ -673,9 +589,6 @@ ${prefixName} E.PASSWORD_SALT = :where_and_eq_passwordSalt_value
 <#else>
 ${prefixName} E.PASSWORD_SALT IS NULL
 </#if>
-<#assign prefixName = ''>
-</#if>
-<#if (prefixName!) != 'WHERE'>
 <#assign prefixName = 'AND'>
 </#if>
 <#if (where_and_eq_permissionCodes??)>
@@ -684,9 +597,6 @@ ${prefixName} E.PERMISSION_CODES = :where_and_eq_permissionCodes_value
 <#else>
 ${prefixName} E.PERMISSION_CODES IS NULL
 </#if>
-<#assign prefixName = ''>
-</#if>
-<#if (prefixName!) != 'WHERE'>
 <#assign prefixName = 'AND'>
 </#if>
 <#if (where_and_eq_portraitUrl??)>
@@ -695,9 +605,6 @@ ${prefixName} E.PORTRAIT_URL = :where_and_eq_portraitUrl_value
 <#else>
 ${prefixName} E.PORTRAIT_URL IS NULL
 </#if>
-<#assign prefixName = ''>
-</#if>
-<#if (prefixName!) != 'WHERE'>
 <#assign prefixName = 'AND'>
 </#if>
 <#if (where_and_eq_privatePassword??)>
@@ -706,9 +613,6 @@ ${prefixName} E.PRIVATE_PASSWORD = :where_and_eq_privatePassword_value
 <#else>
 ${prefixName} E.PRIVATE_PASSWORD IS NULL
 </#if>
-<#assign prefixName = ''>
-</#if>
-<#if (prefixName!) != 'WHERE'>
 <#assign prefixName = 'AND'>
 </#if>
 <#if (where_and_eq_privatePasswordSalt??)>
@@ -717,9 +621,6 @@ ${prefixName} E.PRIVATE_PASSWORD_SALT = :where_and_eq_privatePasswordSalt_value
 <#else>
 ${prefixName} E.PRIVATE_PASSWORD_SALT IS NULL
 </#if>
-<#assign prefixName = ''>
-</#if>
-<#if (prefixName!) != 'WHERE'>
 <#assign prefixName = 'AND'>
 </#if>
 <#if (where_and_eq_professionCode??)>
@@ -728,9 +629,6 @@ ${prefixName} E.PROFESSION_CODE = :where_and_eq_professionCode_value
 <#else>
 ${prefixName} E.PROFESSION_CODE IS NULL
 </#if>
-<#assign prefixName = ''>
-</#if>
-<#if (prefixName!) != 'WHERE'>
 <#assign prefixName = 'AND'>
 </#if>
 <#if (where_and_eq_provinceCode??)>
@@ -739,9 +637,6 @@ ${prefixName} E.PROVINCE_CODE = :where_and_eq_provinceCode_value
 <#else>
 ${prefixName} E.PROVINCE_CODE IS NULL
 </#if>
-<#assign prefixName = ''>
-</#if>
-<#if (prefixName!) != 'WHERE'>
 <#assign prefixName = 'AND'>
 </#if>
 <#if (where_and_eq_qq??)>
@@ -750,9 +645,6 @@ ${prefixName} E.QQ = :where_and_eq_qq_value
 <#else>
 ${prefixName} E.QQ IS NULL
 </#if>
-<#assign prefixName = ''>
-</#if>
-<#if (prefixName!) != 'WHERE'>
 <#assign prefixName = 'AND'>
 </#if>
 <#if (where_and_eq_roleCodes??)>
@@ -761,9 +653,6 @@ ${prefixName} E.ROLE_CODES = :where_and_eq_roleCodes_value
 <#else>
 ${prefixName} E.ROLE_CODES IS NULL
 </#if>
-<#assign prefixName = ''>
-</#if>
-<#if (prefixName!) != 'WHERE'>
 <#assign prefixName = 'AND'>
 </#if>
 <#if (where_and_eq_sexCode??)>
@@ -772,9 +661,6 @@ ${prefixName} E.SEX_CODE = :where_and_eq_sexCode_value
 <#else>
 ${prefixName} E.SEX_CODE IS NULL
 </#if>
-<#assign prefixName = ''>
-</#if>
-<#if (prefixName!) != 'WHERE'>
 <#assign prefixName = 'AND'>
 </#if>
 <#if (where_and_eq_stateCode??)>
@@ -783,9 +669,6 @@ ${prefixName} E.STATE_CODE = :where_and_eq_stateCode_value
 <#else>
 ${prefixName} E.STATE_CODE IS NULL
 </#if>
-<#assign prefixName = ''>
-</#if>
-<#if (prefixName!) != 'WHERE'>
 <#assign prefixName = 'AND'>
 </#if>
 <#if (where_and_eq_telephone??)>
@@ -794,9 +677,6 @@ ${prefixName} E.TELEPHONE = :where_and_eq_telephone_value
 <#else>
 ${prefixName} E.TELEPHONE IS NULL
 </#if>
-<#assign prefixName = ''>
-</#if>
-<#if (prefixName!) != 'WHERE'>
 <#assign prefixName = 'AND'>
 </#if>
 <#if (where_and_eq_userCode??)>
@@ -805,9 +685,6 @@ ${prefixName} E.USER_CODE = :where_and_eq_userCode_value
 <#else>
 ${prefixName} E.USER_CODE IS NULL
 </#if>
-<#assign prefixName = ''>
-</#if>
-<#if (prefixName!) != 'WHERE'>
 <#assign prefixName = 'AND'>
 </#if>
 <#if (where_and_eq_userId??)>
@@ -816,9 +693,6 @@ ${prefixName} E.USER_ID = :where_and_eq_userId_value
 <#else>
 ${prefixName} E.USER_ID IS NULL
 </#if>
-<#assign prefixName = ''>
-</#if>
-<#if (prefixName!) != 'WHERE'>
 <#assign prefixName = 'AND'>
 </#if>
 <#if (where_and_eq_version??)>
@@ -827,9 +701,6 @@ ${prefixName} E.VERSION_ = :where_and_eq_version_value
 <#else>
 ${prefixName} E.VERSION_ IS NULL
 </#if>
-<#assign prefixName = ''>
-</#if>
-<#if (prefixName!) != 'WHERE'>
 <#assign prefixName = 'AND'>
 </#if>
 <#if (where_and_eq_wfId??)>
@@ -838,6 +709,6 @@ ${prefixName} E.WF_ID = :where_and_eq_wfId_value
 <#else>
 ${prefixName} E.WF_ID IS NULL
 </#if>
-<#assign prefixName = ''>
+<#assign prefixName = 'AND'>
 </#if>
 ))

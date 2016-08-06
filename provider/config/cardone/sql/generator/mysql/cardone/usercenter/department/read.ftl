@@ -60,5 +60,5 @@ WF_ID AS wfId
 <#default>
 COUNT(1) AS COUNT_
 </#switch>
-FROM t_department
+FROM c1_department
 <#include "where.ftl">

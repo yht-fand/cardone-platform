@@ -10,10 +10,16 @@ import java.util.Map;
 /**
  * 组织 - 删除
  */
-@Component("/web-api/v1/configuration/org/d0004.json")
+@Component("/web-api/v1/usercenter/org/d0004.json")
 public class D0004Func implements Func1<Object, Map<String, Object>> {
     @Override
-    public Object func(Map<String, Object> map) {
-        return ApplicationContextHolder.getBean(OrgService.class).delete(map);
+    public Object func(Map<String, Object> inputMap) {
+        validate(inputMap);
+		
+        return ApplicationContextHolder.getBean(OrgService.class).deleteCache(inputMap);
+    }
+	
+    private  void validate(Map<String,Object>  inputMap){
+
     }
 }
