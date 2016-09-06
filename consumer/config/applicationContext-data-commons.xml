@@ -8,4 +8,6 @@
     <bean id="top.cardone.data.support.PageableSupport" class="top.cardone.data.support.impl.PageableSupportImpl"/>
 
     <bean id="top.cardone.data.support.PageSupport" class="top.cardone.data.support.impl.PageSupportImpl"/>
+
+    <bean id="top.cardone.data.support.ExcelSupport" class="top.cardone.data.support.impl.ExcelSupportImpl"/>
 </beans>
