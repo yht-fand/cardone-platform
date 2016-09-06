@@ -1,5 +1,5 @@
 INSERT
-INTO t_department
+INTO c1_department
 (<#assign prefixName = ' '>
 <#if (insert_beginDate??) && (insert_beginDate_value??)>
 ${prefixName} `BEGIN_DATE`

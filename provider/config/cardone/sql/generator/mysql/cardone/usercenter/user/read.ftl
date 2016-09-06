@@ -24,6 +24,9 @@ CITY_CODE AS cityCode
 <#case "companyName">
 COMPANY_NAME AS companyName
 <#break>
+<#case "contact">
+CONTACT AS contact
+<#break>
 <#case "countryCode">
 COUNTRY_CODE AS countryCode
 <#break>
@@ -53,6 +56,9 @@ FLAG_CODE AS flagCode
 <#break>
 <#case "folkCode">
 FOLK_CODE AS folkCode
+<#break>
+<#case "idCardCode">
+ID_CARD_CODE AS idCardCode
 <#break>
 <#case "idCardNo">
 ID_CARD_NO AS idCardNo
@@ -108,6 +114,12 @@ PROVINCE_CODE AS provinceCode
 <#case "qq">
 QQ AS qq
 <#break>
+<#case "regionCode2">
+REGION_CODE2 AS regionCode2
+<#break>
+<#case "remark">
+REMARK AS remark
+<#break>
 <#case "roleCodes">
 ROLE_CODES AS roleCodes
 <#break>
@@ -135,5 +147,5 @@ WF_ID AS wfId
 <#default>
 COUNT(1) AS COUNT_
 </#switch>
-FROM t_user
+FROM c1_user
 <#include "where.ftl">

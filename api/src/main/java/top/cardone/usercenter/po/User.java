@@ -25,7 +25,7 @@ public class User implements java.io.Serializable {
     protected Long age;
 
     /**
-     * 区域代码
+     * 地区代码
      */
     @lombok.Getter
     @lombok.Setter
@@ -53,7 +53,7 @@ public class User implements java.io.Serializable {
     protected String callName;
 
     /**
-     * 市代码
+     * 城市代码
      */
     @lombok.Getter
     @lombok.Setter
@@ -65,6 +65,13 @@ public class User implements java.io.Serializable {
     @lombok.Getter
     @lombok.Setter
     protected String companyName;
+
+    /**
+     * 联系人
+     */
+    @lombok.Getter
+    @lombok.Setter
+    protected String contact;
 
     /**
      * 国家代码
@@ -137,7 +144,14 @@ public class User implements java.io.Serializable {
     protected String folkCode;
 
     /**
-     * 身份证号码
+     * 证件类型代码
+     */
+    @lombok.Getter
+    @lombok.Setter
+    protected String idCardCode;
+
+    /**
+     * 证件号
      */
     @lombok.Getter
     @lombok.Setter
@@ -249,7 +263,7 @@ public class User implements java.io.Serializable {
     protected String professionCode;
 
     /**
-     * 省代码
+     * 省份代码
      */
     @lombok.Getter
     @lombok.Setter
@@ -261,6 +275,20 @@ public class User implements java.io.Serializable {
     @lombok.Getter
     @lombok.Setter
     protected String qq;
+
+    /**
+     * 区域代码
+     */
+    @lombok.Getter
+    @lombok.Setter
+    protected String regionCode2;
+
+    /**
+     * 备注
+     */
+    @lombok.Getter
+    @lombok.Setter
+    protected String remark;
 
     /**
      * 角色代码集合

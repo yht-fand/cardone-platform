@@ -87,7 +87,7 @@ ${prefixName} `WF_ID`
 , `VERSION_`
 , `WF_ID`
 </#if>
-FROM t_open_user
+FROM c1_open_user
 <#include "where.ftl">
 <#assign prefixName = 'ORDER BY'>
 <#if (order_by_beginDate??)>

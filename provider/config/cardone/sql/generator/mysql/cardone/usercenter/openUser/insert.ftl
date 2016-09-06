@@ -1,5 +1,5 @@
 INSERT
-INTO t_open_user
+INTO c1_open_user
 (<#assign prefixName = ' '>
 <#if (insert_beginDate??) && (insert_beginDate_value??)>
 ${prefixName} `BEGIN_DATE`

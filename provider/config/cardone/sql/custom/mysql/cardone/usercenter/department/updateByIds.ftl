@@ -1,1 +1,1 @@
-UPDATE t_department SET END_DATE = NOW() WHERE INSTR(:ids, departmentId) > 0
+UPDATE c1_department SET END_DATE = NOW() WHERE INSTR(:ids, DEPARTMENT_ID) > 0

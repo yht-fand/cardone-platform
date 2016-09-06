@@ -1,0 +1,1 @@
+DELETE FROM c1_city WHERE INSTR(:ids, CITY_ID) > 0

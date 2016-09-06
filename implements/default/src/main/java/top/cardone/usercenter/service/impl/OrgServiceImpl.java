@@ -130,4 +130,9 @@ public class OrgServiceImpl extends PageServiceImpl<OrgDao> implements top.cardo
     public int[] updateListCache(List<Object> updateList) {
         return this.updateList(updateList);
     }
+	
+    @Override
+    public Map<String, Object> findOneByOrgId(Object orgId) {
+        return this.dao.findOneByOrgId(orgId);
+    }
 }

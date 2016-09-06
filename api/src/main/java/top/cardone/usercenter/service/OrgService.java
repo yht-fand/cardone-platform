@@ -140,4 +140,12 @@ public interface OrgService extends PageService {
      */
     @CacheEvict(value = "top.cardone.usercenter.service.OrgService", allEntries = true)
     int[] updateListCache(List<Object> updateList);
+	
+    /**
+     * 查询组织对象
+     *
+     * @param orgId 组织标识
+     * @return 组织对象
+     */
+    Map<String, Object> findOneByOrgId(Object orgId);
 }

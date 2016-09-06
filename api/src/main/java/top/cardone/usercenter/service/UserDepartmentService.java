@@ -140,4 +140,12 @@ public interface UserDepartmentService extends PageService {
      */
     @CacheEvict(value = "top.cardone.usercenter.service.UserDepartmentService", allEntries = true)
     int[] updateListCache(List<Object> updateList);
+	
+    /**
+     * 查询用户与部门对象
+     *
+     * @param userDepartmentId 用户与部门标识
+     * @return 用户与部门对象
+     */
+    Map<String, Object> findOneByUserDepartmentId(Object userDepartmentId);
 }

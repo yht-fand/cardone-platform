@@ -57,5 +57,5 @@ WF_ID AS wfId
 <#default>
 COUNT(1) AS COUNT_
 </#switch>
-FROM t_org
+FROM c1_org
 <#include "where.ftl">

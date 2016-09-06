@@ -1,1 +1,10 @@
-{}
+{
+  "postHandle": {
+    "sexs": {
+      "beanId": "dictionarySelectFunc",
+      "params": {
+        "typeCode": "sex"
+      }
+    }
+  }
+}

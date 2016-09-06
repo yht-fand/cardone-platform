@@ -1,5 +1,5 @@
 INSERT
-INTO t_org
+INTO c1_org
 (<#assign prefixName = ' '>
 <#if (insert_beginDate??) && (insert_beginDate_value??)>
 ${prefixName} `BEGIN_DATE`

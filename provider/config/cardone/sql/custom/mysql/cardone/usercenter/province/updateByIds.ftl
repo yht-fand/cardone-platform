@@ -1,0 +1,1 @@
+UPDATE c1_province SET END_DATE = NOW() WHERE INSTR(:ids, provinceId) > 0

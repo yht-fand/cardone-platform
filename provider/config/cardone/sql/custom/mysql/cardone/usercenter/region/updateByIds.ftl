@@ -1,0 +1,1 @@
+UPDATE c1_region SET END_DATE = NOW() WHERE INSTR(:ids, regionId) > 0

@@ -1,0 +1,1 @@
+UPDATE c1_city SET END_DATE = NOW() WHERE INSTR(:ids, cityId) > 0

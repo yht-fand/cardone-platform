@@ -17,7 +17,7 @@
                 </entry>
                 <entry key="insert">
                     <map>
-                        <entry key="orgId" value="getRandomUUIDFunc"/>
+                        <entry key="orgId" value="readRandomUUIDFunc"/>
                         <entry key="createdByCode" value="readCreatedByCodeFunc"/>
                         <entry key="createdDate" value="readCreatedDateFunc"/>
                     </map>
@@ -31,24 +31,9 @@
             </map>
         </property>
     </bean>
-
-    <!-- 组织 -->
+	
     <bean id="top.cardone.usercenter.service.OrgService"
           class="top.cardone.usercenter.service.impl.OrgServiceImpl">
-        <property name="dao" ref="top.cardone.usercenter.dao.OrgDao"/>
-    </bean>
-
-    <bean parent="messageListenerContainerParnet">
-        <property name="messageListener">
-            <bean  parent="exceptionParnet">
-                <property name="serviceInterface" value="top.cardone.usercenter.service.OrgService"/>
-                <property name="service" ref="top.cardone.usercenter.service.OrgService"/>
-            </bean>
-        </property>
-        <property name="destination">
-            <bean class="org.apache.activemq.command.ActiveMQQueue">
-                <constructor-arg value="cardone-usercenter-${cardone-usercenter-version}:top.cardone.usercenter.service.OrgService"/>
-            </bean>
-        </property>
-    </bean>
+		<property name="dao" ref="top.cardone.usercenter.dao.OrgDao"/>
+	</bean>
 </beans>

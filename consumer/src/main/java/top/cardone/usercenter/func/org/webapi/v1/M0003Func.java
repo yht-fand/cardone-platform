@@ -10,10 +10,16 @@ import java.util.Map;
 /**
  * 组织 - 复合
  */
-@Component("/web-api/v1/configuration/org/m0003.json")
+@Component("/web-api/v1/usercenter/org/m0003.json")
 public class M0003Func implements Func1<Object, Map<String, Object>> {
     @Override
-    public Object func(Map<String, Object> map) {
-        return ApplicationContextHolder.getBean(OrgService.class).findOne(map);
+    public Object func(Map<String, Object> inputMap) {
+        validate(inputMap);
+		
+        return ApplicationContextHolder.getBean(OrgService.class).findOne(inputMap);
+    }
+	
+    private  void validate(Map<String,Object>  inputMap){
+
     }
 }

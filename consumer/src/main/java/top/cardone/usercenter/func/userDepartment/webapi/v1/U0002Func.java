@@ -10,14 +10,20 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * 用户与部门 - 批量修改
+ * 用户与部门 - 修改
  */
-@Component("/web-api/v1/configuration/userDepartment/u0002.json")
+@Component("/web-api/v1/usercenter/userDepartment/u0002.json")
 public class U0002Func implements Func1<Object, Map<String, Object>> {
     @Override
-    public Object func(Map<String, Object> map) {
-        List<Object> updateList = (List<Object>) MapUtils.getObject(map, "datas");
+    public Object func(Map<String, Object> inputMap) {
+        validate(inputMap);
+		
+        List<Object> updateList = (List<Object>) MapUtils.getObject(inputMap, "datas");
 
-        return ApplicationContextHolder.getBean(UserDepartmentService.class).updateList(updateList);
+        return ApplicationContextHolder.getBean(UserDepartmentService.class).updateListCache(updateList);
+    }
+	
+    private  void validate(Map<String,Object>  inputMap){
+
     }
 }

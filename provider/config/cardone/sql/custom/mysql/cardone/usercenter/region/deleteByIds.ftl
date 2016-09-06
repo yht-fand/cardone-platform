@@ -1,0 +1,1 @@
+DELETE FROM c1_region WHERE INSTR(:ids, REGION_ID) > 0

@@ -12,12 +12,18 @@ import java.util.Map;
 /**
  * 开放用户 - 批量删除
  */
-@Component("/web-api/v1/configuration/openUser/d0002.json")
+@Component("/web-api/v1/usercenter/openUser/d0002.json")
 public class D0002Func implements Func1<Object, Map<String, Object>> {
     @Override
-    public Object func(Map<String, Object> map) {
-        List<Object> deleteList = (List<Object>) MapUtils.getObject(map, "datas");
+    public Object func(Map<String, Object> inputMap) {
+        validate(inputMap);
+		
+        List<Object> deleteList = (List<Object>) MapUtils.getObject(inputMap, "datas");
 
-        return ApplicationContextHolder.getBean(OpenUserService.class).deleteList(deleteList);
+        return ApplicationContextHolder.getBean(OpenUserService.class).deleteListCache(deleteList);
+    }
+	
+    private  void validate(Map<String,Object>  inputMap){
+
     }
 }

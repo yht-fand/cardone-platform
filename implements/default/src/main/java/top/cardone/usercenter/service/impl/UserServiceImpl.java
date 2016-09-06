@@ -130,4 +130,31 @@ public class UserServiceImpl extends PageServiceImpl<UserDao> implements top.car
     public int[] updateListCache(List<Object> updateList) {
         return this.updateList(updateList);
     }
+
+    @Override
+    public Page<Map<String, Object>> pageByCode(Map<String, Object> page) {
+        return this.dao.pageByCode(page);
+    }
+
+    @Override
+    public Map<String, Object> findOneByUserId(String userId) {
+        return this.dao.findOneByUserId(userId);
+    }
+
+    @Override
+    public <R> R readOneByCondition(Class<R> requiredType, Map<String,Object> inputMap) {
+        return this.dao.readOneByCondition(requiredType,inputMap);
+    }
+
+    @Override
+    @Transactional
+    public int[][] saveListCache(List<Object> saveList) {
+        return this.saveList(saveList);
+    }
+
+    @Override
+    @Transactional
+    public void syncOldData() {
+        this.dao.syncOldData();
+    }
 }

@@ -1,1 +1,1 @@
-DELETE FROM t_user_department WHERE INSTR(:ids, userDepartmentId) > 0
+DELETE FROM c1_user_department WHERE INSTR(:ids, userDepartmentId) > 0

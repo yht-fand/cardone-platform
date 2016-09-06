@@ -1,6 +1,6 @@
 INSERT
 INTO
-t_open_user
+c1_open_user
 (<#assign prefixName = ' '>
 <#if (insert_beginDate??) && (insert_beginDate_value??)>
 ${prefixName} `BEGIN_DATE`
@@ -141,7 +141,7 @@ ${prefixName} :insert_version_value
 ${prefixName} :insert_wfId_value
 <#assign prefixName = ','>
 </#if>
-FROM DUAL WHERE NOT EXISTS (SELECT 1 FROM t_open_user E
+FROM DUAL WHERE NOT EXISTS (SELECT 1 FROM c1_open_user E
 <#assign prefixName = 'WHERE'>
 <#if (where_and_eq_beginDate??)>
 <#if (where_and_eq_beginDate_value??)>
@@ -149,9 +149,6 @@ ${prefixName} E.BEGIN_DATE = :where_and_eq_beginDate_value
 <#else>
 ${prefixName} E.BEGIN_DATE IS NULL
 </#if>
-<#assign prefixName = ''>
-</#if>
-<#if (prefixName!) != 'WHERE'>
 <#assign prefixName = 'AND'>
 </#if>
 <#if (where_and_eq_clientId??)>
@@ -160,9 +157,6 @@ ${prefixName} E.CLIENT_ID = :where_and_eq_clientId_value
 <#else>
 ${prefixName} E.CLIENT_ID IS NULL
 </#if>
-<#assign prefixName = ''>
-</#if>
-<#if (prefixName!) != 'WHERE'>
 <#assign prefixName = 'AND'>
 </#if>
 <#if (where_and_eq_createdByCode??)>
@@ -171,9 +165,6 @@ ${prefixName} E.CREATED_BY_CODE = :where_and_eq_createdByCode_value
 <#else>
 ${prefixName} E.CREATED_BY_CODE IS NULL
 </#if>
-<#assign prefixName = ''>
-</#if>
-<#if (prefixName!) != 'WHERE'>
 <#assign prefixName = 'AND'>
 </#if>
 <#if (where_and_eq_createdDate??)>
@@ -182,9 +173,6 @@ ${prefixName} E.CREATED_DATE = :where_and_eq_createdDate_value
 <#else>
 ${prefixName} E.CREATED_DATE IS NULL
 </#if>
-<#assign prefixName = ''>
-</#if>
-<#if (prefixName!) != 'WHERE'>
 <#assign prefixName = 'AND'>
 </#if>
 <#if (where_and_eq_dataStateCode??)>
@@ -193,9 +181,6 @@ ${prefixName} E.DATA_STATE_CODE = :where_and_eq_dataStateCode_value
 <#else>
 ${prefixName} E.DATA_STATE_CODE IS NULL
 </#if>
-<#assign prefixName = ''>
-</#if>
-<#if (prefixName!) != 'WHERE'>
 <#assign prefixName = 'AND'>
 </#if>
 <#if (where_and_eq_departmentCode??)>
@@ -204,9 +189,6 @@ ${prefixName} E.DEPARTMENT_CODE = :where_and_eq_departmentCode_value
 <#else>
 ${prefixName} E.DEPARTMENT_CODE IS NULL
 </#if>
-<#assign prefixName = ''>
-</#if>
-<#if (prefixName!) != 'WHERE'>
 <#assign prefixName = 'AND'>
 </#if>
 <#if (where_and_eq_endDate??)>
@@ -215,9 +197,6 @@ ${prefixName} E.END_DATE = :where_and_eq_endDate_value
 <#else>
 ${prefixName} E.END_DATE IS NULL
 </#if>
-<#assign prefixName = ''>
-</#if>
-<#if (prefixName!) != 'WHERE'>
 <#assign prefixName = 'AND'>
 </#if>
 <#if (where_and_eq_lastModifiedByCode??)>
@@ -226,9 +205,6 @@ ${prefixName} E.LAST_MODIFIED_BY_CODE = :where_and_eq_lastModifiedByCode_value
 <#else>
 ${prefixName} E.LAST_MODIFIED_BY_CODE IS NULL
 </#if>
-<#assign prefixName = ''>
-</#if>
-<#if (prefixName!) != 'WHERE'>
 <#assign prefixName = 'AND'>
 </#if>
 <#if (where_and_eq_lastModifiedDate??)>
@@ -237,9 +213,6 @@ ${prefixName} E.LAST_MODIFIED_DATE = :where_and_eq_lastModifiedDate_value
 <#else>
 ${prefixName} E.LAST_MODIFIED_DATE IS NULL
 </#if>
-<#assign prefixName = ''>
-</#if>
-<#if (prefixName!) != 'WHERE'>
 <#assign prefixName = 'AND'>
 </#if>
 <#if (where_and_eq_openUserId??)>
@@ -248,9 +221,6 @@ ${prefixName} E.OPEN_USER_ID = :where_and_eq_openUserId_value
 <#else>
 ${prefixName} E.OPEN_USER_ID IS NULL
 </#if>
-<#assign prefixName = ''>
-</#if>
-<#if (prefixName!) != 'WHERE'>
 <#assign prefixName = 'AND'>
 </#if>
 <#if (where_and_eq_orgCode??)>
@@ -259,9 +229,6 @@ ${prefixName} E.ORG_CODE = :where_and_eq_orgCode_value
 <#else>
 ${prefixName} E.ORG_CODE IS NULL
 </#if>
-<#assign prefixName = ''>
-</#if>
-<#if (prefixName!) != 'WHERE'>
 <#assign prefixName = 'AND'>
 </#if>
 <#if (where_and_eq_permissionCodes??)>
@@ -270,9 +237,6 @@ ${prefixName} E.PERMISSION_CODES = :where_and_eq_permissionCodes_value
 <#else>
 ${prefixName} E.PERMISSION_CODES IS NULL
 </#if>
-<#assign prefixName = ''>
-</#if>
-<#if (prefixName!) != 'WHERE'>
 <#assign prefixName = 'AND'>
 </#if>
 <#if (where_and_eq_roleCodes??)>
@@ -281,9 +245,6 @@ ${prefixName} E.ROLE_CODES = :where_and_eq_roleCodes_value
 <#else>
 ${prefixName} E.ROLE_CODES IS NULL
 </#if>
-<#assign prefixName = ''>
-</#if>
-<#if (prefixName!) != 'WHERE'>
 <#assign prefixName = 'AND'>
 </#if>
 <#if (where_and_eq_stateCode??)>
@@ -292,9 +253,6 @@ ${prefixName} E.STATE_CODE = :where_and_eq_stateCode_value
 <#else>
 ${prefixName} E.STATE_CODE IS NULL
 </#if>
-<#assign prefixName = ''>
-</#if>
-<#if (prefixName!) != 'WHERE'>
 <#assign prefixName = 'AND'>
 </#if>
 <#if (where_and_eq_userCode??)>
@@ -303,9 +261,6 @@ ${prefixName} E.USER_CODE = :where_and_eq_userCode_value
 <#else>
 ${prefixName} E.USER_CODE IS NULL
 </#if>
-<#assign prefixName = ''>
-</#if>
-<#if (prefixName!) != 'WHERE'>
 <#assign prefixName = 'AND'>
 </#if>
 <#if (where_and_eq_version??)>
@@ -314,9 +269,6 @@ ${prefixName} E.VERSION_ = :where_and_eq_version_value
 <#else>
 ${prefixName} E.VERSION_ IS NULL
 </#if>
-<#assign prefixName = ''>
-</#if>
-<#if (prefixName!) != 'WHERE'>
 <#assign prefixName = 'AND'>
 </#if>
 <#if (where_and_eq_wfId??)>
@@ -325,6 +277,6 @@ ${prefixName} E.WF_ID = :where_and_eq_wfId_value
 <#else>
 ${prefixName} E.WF_ID IS NULL
 </#if>
-<#assign prefixName = ''>
+<#assign prefixName = 'AND'>
 </#if>
 ))

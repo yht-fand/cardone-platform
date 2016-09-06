@@ -1,0 +1,1 @@
+DELETE FROM c1_area WHERE INSTR(:ids, AREA_ID) > 0

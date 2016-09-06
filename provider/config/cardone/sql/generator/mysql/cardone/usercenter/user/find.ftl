@@ -32,6 +32,10 @@ ${prefixName} `CITY_CODE`
 ${prefixName} `COMPANY_NAME`
 <#assign prefixName = ','>
 </#if>
+<#if (select_contact??)>
+${prefixName} `CONTACT`
+<#assign prefixName = ','>
+</#if>
 <#if (select_countryCode??)>
 ${prefixName} `COUNTRY_CODE`
 <#assign prefixName = ','>
@@ -70,6 +74,10 @@ ${prefixName} `FLAG_CODE`
 </#if>
 <#if (select_folkCode??)>
 ${prefixName} `FOLK_CODE`
+<#assign prefixName = ','>
+</#if>
+<#if (select_idCardCode??)>
+${prefixName} `ID_CARD_CODE`
 <#assign prefixName = ','>
 </#if>
 <#if (select_idCardNo??)>
@@ -144,6 +152,14 @@ ${prefixName} `PROVINCE_CODE`
 ${prefixName} `QQ`
 <#assign prefixName = ','>
 </#if>
+<#if (select_regionCode2??)>
+${prefixName} `REGION_CODE2`
+<#assign prefixName = ','>
+</#if>
+<#if (select_remark??)>
+${prefixName} `REMARK`
+<#assign prefixName = ','>
+</#if>
 <#if (select_roleCodes??)>
 ${prefixName} `ROLE_CODES`
 <#assign prefixName = ','>
@@ -185,6 +201,7 @@ ${prefixName} `WF_ID`
 , `CALL_NAME`
 , `CITY_CODE`
 , `COMPANY_NAME`
+, `CONTACT`
 , `COUNTRY_CODE`
 , `CREATED_BY_CODE`
 , `CREATED_DATE`
@@ -195,6 +212,7 @@ ${prefixName} `WF_ID`
 , `END_DATE`
 , `FLAG_CODE`
 , `FOLK_CODE`
+, `ID_CARD_CODE`
 , `ID_CARD_NO`
 , `INTRO`
 , `LAST_MODIFIED_BY_CODE`
@@ -213,6 +231,8 @@ ${prefixName} `WF_ID`
 , `PROFESSION_CODE`
 , `PROVINCE_CODE`
 , `QQ`
+, `REGION_CODE2`
+, `REMARK`
 , `ROLE_CODES`
 , `SEX_CODE`
 , `STATE_CODE`
@@ -222,7 +242,7 @@ ${prefixName} `WF_ID`
 , `VERSION_`
 , `WF_ID`
 </#if>
-FROM t_user
+FROM c1_user
 <#include "where.ftl">
 <#assign prefixName = 'ORDER BY'>
 <#if (order_by_address??)>
@@ -255,6 +275,10 @@ ${prefixName} `CITY_CODE` ${order_by_cityCode_value!}
 </#if>
 <#if (order_by_companyName??)>
 ${prefixName} `COMPANY_NAME` ${order_by_companyName_value!}
+<#assign prefixName = ','>
+</#if>
+<#if (order_by_contact??)>
+${prefixName} `CONTACT` ${order_by_contact_value!}
 <#assign prefixName = ','>
 </#if>
 <#if (order_by_countryCode??)>
@@ -295,6 +319,10 @@ ${prefixName} `FLAG_CODE` ${order_by_flagCode_value!}
 </#if>
 <#if (order_by_folkCode??)>
 ${prefixName} `FOLK_CODE` ${order_by_folkCode_value!}
+<#assign prefixName = ','>
+</#if>
+<#if (order_by_idCardCode??)>
+${prefixName} `ID_CARD_CODE` ${order_by_idCardCode_value!}
 <#assign prefixName = ','>
 </#if>
 <#if (order_by_idCardNo??)>
@@ -367,6 +395,14 @@ ${prefixName} `PROVINCE_CODE` ${order_by_provinceCode_value!}
 </#if>
 <#if (order_by_qq??)>
 ${prefixName} `QQ` ${order_by_qq_value!}
+<#assign prefixName = ','>
+</#if>
+<#if (order_by_regionCode2??)>
+${prefixName} `REGION_CODE2` ${order_by_regionCode2_value!}
+<#assign prefixName = ','>
+</#if>
+<#if (order_by_remark??)>
+${prefixName} `REMARK` ${order_by_remark_value!}
 <#assign prefixName = ','>
 </#if>
 <#if (order_by_roleCodes??)>

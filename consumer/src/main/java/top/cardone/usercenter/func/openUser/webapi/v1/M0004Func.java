@@ -10,10 +10,16 @@ import java.util.Map;
 /**
  * 开放用户 - 复合
  */
-@Component("/web-api/v1/configuration/openUser/m0004.json")
+@Component("/web-api/v1/usercenter/openUser/m0004.json")
 public class M0004Func implements Func1<Object, Map<String, Object>> {
     @Override
-    public Object func(Map<String, Object> map) {
-        return ApplicationContextHolder.getBean(OpenUserService.class).findOne(map);
+    public Object func(Map<String, Object> inputMap) {
+        validate(inputMap);
+		
+        return ApplicationContextHolder.getBean(OpenUserService.class).findOne(inputMap);
+    }
+	
+    private  void validate(Map<String,Object>  inputMap){
+
     }
 }

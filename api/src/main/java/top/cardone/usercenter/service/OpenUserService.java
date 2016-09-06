@@ -140,4 +140,12 @@ public interface OpenUserService extends PageService {
      */
     @CacheEvict(value = "top.cardone.usercenter.service.OpenUserService", allEntries = true)
     int[] updateListCache(List<Object> updateList);
+	
+    /**
+     * 查询开放用户对象
+     *
+     * @param openUserId 开放用户标识
+     * @return 开放用户对象
+     */
+    Map<String, Object> findOneByOpenUserId(Object openUserId);
 }

@@ -1,9 +1,13 @@
 package top.cardone.usercenter.service.impl;
 
+import com.google.common.collect.Maps;
+import org.apache.commons.collections.CollectionUtils;
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.data.domain.Page;
 import org.springframework.transaction.annotation.Transactional;
 import top.cardone.data.service.impl.PageServiceImpl;
 import top.cardone.usercenter.dao.DepartmentDao;
+import top.cardone.usercenter.dto.DepartmentDto;
 
 import java.util.List;
 import java.util.Map;
@@ -129,5 +133,99 @@ public class DepartmentServiceImpl extends PageServiceImpl<DepartmentDao> implem
     @Transactional
     public int[] updateListCache(List<Object> updateList) {
         return this.updateList(updateList);
+    }
+
+    @Override
+    public Page<Map<String, Object>> pageByCode(Map<String, Object> page) {
+        return this.dao.pageByCode(page);
+    }
+
+    /**
+     * 查询对象
+     *
+     * @param departmentId 部门标识
+     * @return 部门对象
+     */
+    public Map<String, Object> findOneByDepartmentId(String departmentId) {
+        return this.dao.findOneByDepartmentId(departmentId);
+    }
+
+    @Override
+    public List<Map<String, Object>> findListByDepartmentCode(String deptCode) {
+        return this.dao.findListByDepartmentCode(deptCode);
+    }
+
+    @Override
+    @Transactional
+    public int[][] saveListCache(List<Object> saveList) {
+        return this.saveList(saveList);
+    }
+
+    @Override
+    @Transactional
+    public void syncOldData() {
+        this.dao.syncOldData();
+    }
+
+
+    @Override
+    @Transactional
+    public void generateTreeInfo() {
+        List<DepartmentDto> items = this.dao.findList(DepartmentDto.class, null);
+
+        generateTreeInfo(null, items, 99);
+    }
+
+    private void generateTreeInfo(DepartmentDto parent, List<DepartmentDto> items, int dept) {
+        if (CollectionUtils.isEmpty(items) || dept < 1) {
+            return;
+        }
+
+        String parentCode = null;
+        String parentTreeCode = null;
+        String parentTreeName = null;
+
+        if (parent != null) {
+            parentCode = parent.getParentCode();
+            parentTreeCode = org.apache.commons.lang3.StringUtils.isBlank(parentCode) ? null : parent.getParentTreeCode();
+            parentTreeName = org.apache.commons.lang3.StringUtils.isBlank(parentCode) ? null : parent.getParentTreeName();
+
+            Map<String, Object> inupts = Maps.newHashMap();
+
+            inupts.put("parentCode", parentCode);
+            inupts.put("parentTreeCode", parentTreeCode);
+            inupts.put("parentTreeName", parentTreeName);
+            inupts.put("departmentId", parent.getDepartmentId());
+
+            this.dao.update(inupts);
+
+            parentCode = parent.getDepartmentCode();
+        }
+
+        for (DepartmentDto item : items) {
+            if (StringUtils.isBlank(item.getParentCode())) {
+                item.setParentCode(null);
+            }
+
+            if (!StringUtils.equals(parentCode, item.getParentCode())) {
+                continue;
+            }
+
+            if (parent != null) {
+                if (org.apache.commons.lang3.StringUtils.isNotBlank(parentTreeCode)) {
+                    item.setParentTreeCode(parentTreeCode + "," + parent.getDepartmentCode());
+                } else {
+                    item.setParentTreeCode(parent.getDepartmentCode());
+                }
+
+                if (org.apache.commons.lang3.StringUtils.isNotBlank(parentTreeName)) {
+                    item.setParentTreeName(parentTreeName + "," + parent.getName());
+                } else {
+                    item.setParentTreeName(parent.getName());
+                }
+            }
+
+            this.generateTreeInfo(item, items, dept--);
+        }
     }
 }

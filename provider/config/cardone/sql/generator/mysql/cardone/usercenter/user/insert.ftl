@@ -1,5 +1,5 @@
 INSERT
-INTO t_user
+INTO c1_user
 (<#assign prefixName = ' '>
 <#if (insert_address??) && (insert_address_value??)>
 ${prefixName} `ADDRESS`
@@ -31,6 +31,10 @@ ${prefixName} `CITY_CODE`
 </#if>
 <#if (insert_companyName??) && (insert_companyName_value??)>
 ${prefixName} `COMPANY_NAME`
+<#assign prefixName = ','>
+</#if>
+<#if (insert_contact??) && (insert_contact_value??)>
+${prefixName} `CONTACT`
 <#assign prefixName = ','>
 </#if>
 <#if (insert_countryCode??) && (insert_countryCode_value??)>
@@ -71,6 +75,10 @@ ${prefixName} `FLAG_CODE`
 </#if>
 <#if (insert_folkCode??) && (insert_folkCode_value??)>
 ${prefixName} `FOLK_CODE`
+<#assign prefixName = ','>
+</#if>
+<#if (insert_idCardCode??) && (insert_idCardCode_value??)>
+${prefixName} `ID_CARD_CODE`
 <#assign prefixName = ','>
 </#if>
 <#if (insert_idCardNo??) && (insert_idCardNo_value??)>
@@ -145,6 +153,14 @@ ${prefixName} `PROVINCE_CODE`
 ${prefixName} `QQ`
 <#assign prefixName = ','>
 </#if>
+<#if (insert_regionCode2??) && (insert_regionCode2_value??)>
+${prefixName} `REGION_CODE2`
+<#assign prefixName = ','>
+</#if>
+<#if (insert_remark??) && (insert_remark_value??)>
+${prefixName} `REMARK`
+<#assign prefixName = ','>
+</#if>
 <#if (insert_roleCodes??) && (insert_roleCodes_value??)>
 ${prefixName} `ROLE_CODES`
 <#assign prefixName = ','>
@@ -212,6 +228,10 @@ ${prefixName} :insert_cityCode_value
 ${prefixName} :insert_companyName_value
 <#assign prefixName = ','>
 </#if>
+<#if (insert_contact??) && (insert_contact_value??)>
+${prefixName} :insert_contact_value
+<#assign prefixName = ','>
+</#if>
 <#if (insert_countryCode??) && (insert_countryCode_value??)>
 ${prefixName} :insert_countryCode_value
 <#assign prefixName = ','>
@@ -250,6 +270,10 @@ ${prefixName} :insert_flagCode_value
 </#if>
 <#if (insert_folkCode??) && (insert_folkCode_value??)>
 ${prefixName} :insert_folkCode_value
+<#assign prefixName = ','>
+</#if>
+<#if (insert_idCardCode??) && (insert_idCardCode_value??)>
+${prefixName} :insert_idCardCode_value
 <#assign prefixName = ','>
 </#if>
 <#if (insert_idCardNo??) && (insert_idCardNo_value??)>
@@ -322,6 +346,14 @@ ${prefixName} :insert_provinceCode_value
 </#if>
 <#if (insert_qq??) && (insert_qq_value??)>
 ${prefixName} :insert_qq_value
+<#assign prefixName = ','>
+</#if>
+<#if (insert_regionCode2??) && (insert_regionCode2_value??)>
+${prefixName} :insert_regionCode2_value
+<#assign prefixName = ','>
+</#if>
+<#if (insert_remark??) && (insert_remark_value??)>
+${prefixName} :insert_remark_value
 <#assign prefixName = ','>
 </#if>
 <#if (insert_roleCodes??) && (insert_roleCodes_value??)>

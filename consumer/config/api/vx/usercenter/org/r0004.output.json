@@ -1,0 +1,56 @@
+{
+  "BEGIN_DATE": {
+    "newName": "beginDate"
+  },
+  "CREATED_BY_CODE": {
+    "newName": "createdByCode"
+  },
+  "CREATED_DATE": {
+    "newName": "createdDate"
+  },
+  "DATA_STATE_CODE": {
+    "newName": "dataStateCode"
+  },
+  "END_DATE": {
+    "newName": "endDate"
+  },
+  "LAST_MODIFIED_BY_CODE": {
+    "newName": "lastModifiedByCode"
+  },
+  "LAST_MODIFIED_DATE": {
+    "newName": "lastModifiedDate"
+  },
+  "NAME": {
+    "newName": "name"
+  },
+  "ORG_CODE": {
+    "newName": "orgCode"
+  },
+  "ORG_ID": {
+    "newName": "orgId"
+  },
+  "PARENT_CODE": {
+    "newName": "parentCode"
+  },
+  "PARENT_TREE_CODE": {
+    "newName": "parentTreeCode"
+  },
+  "PARENT_TREE_NAME": {
+    "newName": "parentTreeName"
+  },
+  "PERMISSION_CODES": {
+    "newName": "permissionCodes"
+  },
+  "ROLE_CODES": {
+    "newName": "roleCodes"
+  },
+  "STATE_CODE": {
+    "newName": "stateCode"
+  },
+  "VERSION_": {
+    "newName": "version"
+  },
+  "WF_ID": {
+    "newName": "wfId"
+  }
+}

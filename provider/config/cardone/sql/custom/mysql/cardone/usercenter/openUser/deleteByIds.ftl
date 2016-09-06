@@ -1,1 +1,1 @@
-DELETE FROM t_open_user WHERE INSTR(:ids, openUserId) > 0
+DELETE FROM c1_open_user WHERE INSTR(:ids, openUserId) > 0

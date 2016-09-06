@@ -1,1 +1,1 @@
-UPDATE t_open_user SET END_DATE = NOW() WHERE INSTR(:ids, openUserId) > 0
+UPDATE c1_open_user SET END_DATE = NOW() WHERE INSTR(:ids, openUserId) > 0

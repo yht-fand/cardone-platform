@@ -140,4 +140,32 @@ public interface UserService extends PageService {
      */
     @CacheEvict(value = "top.cardone.usercenter.service.UserService", allEntries = true)
     int[] updateListCache(List<Object> updateList);
+
+    /**
+     * @see top.cardone.usercenter.service.UserService#saveList
+     */
+    @CacheEvict(value = "top.cardone.usercenter.service.UserService", allEntries = true)
+    int[][] saveListCache(List<Object> saveList);
+    /**
+     * 分页
+     *
+     * @param page 对象
+     * @return 分页对象
+     */
+    Page<Map<String, Object>> pageByCode(Map<String, Object> page);
+
+    /**
+     * 查询对象
+     *
+     * @param userId 用户标识
+     * @return 对象用户对象
+     */
+    Map<String, Object> findOneByUserId(String userId);
+
+    <R> R readOneByCondition(Class<R> requiredType, Map<String,Object> inputMap);
+
+    /**
+     * 同步旧数据
+     */
+    void syncOldData();
 }

@@ -38,7 +38,7 @@ public class CommonController {
         model.put("time", new Date());
         model.put("message", this.message);
 
-//        throw new CodeException("000000", "test");
+//      throw new CodeException("000000", "test");
 
         return "welcome.ftl";
     }

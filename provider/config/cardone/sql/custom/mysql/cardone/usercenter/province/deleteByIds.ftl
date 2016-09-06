@@ -1,0 +1,1 @@
+DELETE FROM c1_province WHERE INSTR(:ids, PROVINCE_ID) > 0

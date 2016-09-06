@@ -1,0 +1,68 @@
+{
+  "beginDate": {
+    "newName": "beginDate",
+    "funcBeanIds": "escapeSqlFunc"
+  },
+  "cityCode": {
+    "newName": "cityCode",
+    "funcBeanIds": "escapeSqlFunc"
+  },
+  "cityId": {
+    "newName": "cityId",
+    "funcBeanIds": "escapeSqlFunc"
+  },
+  "cityName": {
+    "newName": "cityName",
+    "funcBeanIds": "escapeSqlFunc"
+  },
+  "createdByCode": {
+    "newName": "createdByCode",
+    "funcBeanIds": "escapeSqlFunc"
+  },
+  "createdDate": {
+    "newName": "createdDate",
+    "funcBeanIds": "escapeSqlFunc"
+  },
+  "dataStateCode": {
+    "newName": "dataStateCode",
+    "funcBeanIds": "escapeSqlFunc"
+  },
+  "endDate": {
+    "newName": "endDate",
+    "funcBeanIds": "escapeSqlFunc"
+  },
+  "lastModifiedByCode": {
+    "newName": "lastModifiedByCode",
+    "funcBeanIds": "escapeSqlFunc"
+  },
+  "lastModifiedDate": {
+    "newName": "lastModifiedDate",
+    "funcBeanIds": "escapeSqlFunc"
+  },
+  "permissionCodes": {
+    "newName": "permissionCodes",
+    "funcBeanIds": "escapeSqlFunc"
+  },
+  "roleCodes": {
+    "newName": "roleCodes",
+    "funcBeanIds": "escapeSqlFunc"
+  },
+  "stateCode": {
+    "newName": "stateCode",
+    "funcBeanIds": "escapeSqlFunc"
+  },
+  "version": {
+    "newName": "version",
+    "funcBeanIds": "escapeSqlFunc"
+  },
+  "wfId": {
+    "newName": "wfId",
+    "funcBeanIds": "escapeSqlFunc"
+  },
+  "pageSize": {
+    "newName": "pageSize"
+  },
+  "pageNumber": {
+    "newName": "pageNumber"
+  }
+}
