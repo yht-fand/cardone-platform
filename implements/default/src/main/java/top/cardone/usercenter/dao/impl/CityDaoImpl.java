@@ -14,11 +14,11 @@ public class CityDaoImpl extends PageDaoImpl implements top.cardone.usercenter.d
     @Override
     public Map<String, Object> findOneByCityId(Object cityId) {
         Map<String, Object> inputMap = Maps.newHashMap();
-		
+
         inputMap.put("cityId", cityId);
-		
+
         String findOneSqlFilePath = this.getSqlFilePath("page.find");
-		
+
         return this.findOne(findOneSqlFilePath, inputMap);
     }
 }

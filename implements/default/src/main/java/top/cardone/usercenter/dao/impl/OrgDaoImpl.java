@@ -14,11 +14,11 @@ public class OrgDaoImpl extends PageDaoImpl implements top.cardone.usercenter.da
     @Override
     public Map<String, Object> findOneByOrgId(Object orgId) {
         Map<String, Object> inputMap = Maps.newHashMap();
-		
+
         inputMap.put("orgId", orgId);
-		
+
         String findOneSqlFilePath = this.getSqlFilePath("page.find");
-		
+
         return this.findOne(findOneSqlFilePath, inputMap);
     }
 }

@@ -18,6 +18,7 @@ public interface UserDao extends PageDao {
      * @return 分页对象
      */
     Page<Map<String, Object>> pageByCode(Map<String, Object> page);
+
     /**
      * 查询对象
      *
@@ -26,7 +27,7 @@ public interface UserDao extends PageDao {
      */
     Map<String, Object> findOneByUserId(String userId);
 
-    <R> R readOneByCondition(Class<R> requiredType, Map<String,Object> inputMap);
+    <R> R readOneByCondition(Class<R> requiredType, Map<String, Object> inputMap);
 
     /**
      * 同步旧数据

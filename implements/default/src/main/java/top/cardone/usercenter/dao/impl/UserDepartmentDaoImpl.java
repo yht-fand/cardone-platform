@@ -14,11 +14,11 @@ public class UserDepartmentDaoImpl extends PageDaoImpl implements top.cardone.us
     @Override
     public Map<String, Object> findOneByUserDepartmentId(Object userDepartmentId) {
         Map<String, Object> inputMap = Maps.newHashMap();
-		
+
         inputMap.put("userDepartmentId", userDepartmentId);
-		
+
         String findOneSqlFilePath = this.getSqlFilePath("page.find");
-		
+
         return this.findOne(findOneSqlFilePath, inputMap);
     }
 }

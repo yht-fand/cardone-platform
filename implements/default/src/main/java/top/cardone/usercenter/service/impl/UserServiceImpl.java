@@ -142,8 +142,8 @@ public class UserServiceImpl extends PageServiceImpl<UserDao> implements top.car
     }
 
     @Override
-    public <R> R readOneByCondition(Class<R> requiredType, Map<String,Object> inputMap) {
-        return this.dao.readOneByCondition(requiredType,inputMap);
+    public <R> R readOneByCondition(Class<R> requiredType, Map<String, Object> inputMap) {
+        return this.dao.readOneByCondition(requiredType, inputMap);
     }
 
     @Override

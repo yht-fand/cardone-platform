@@ -14,11 +14,11 @@ public class ProvinceDaoImpl extends PageDaoImpl implements top.cardone.usercent
     @Override
     public Map<String, Object> findOneByProvinceId(Object provinceId) {
         Map<String, Object> inputMap = Maps.newHashMap();
-		
+
         inputMap.put("provinceId", provinceId);
-		
+
         String findOneSqlFilePath = this.getSqlFilePath("page.find");
-		
+
         return this.findOne(findOneSqlFilePath, inputMap);
     }
 }

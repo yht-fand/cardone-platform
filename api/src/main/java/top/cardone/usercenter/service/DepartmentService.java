@@ -114,7 +114,6 @@ public interface DepartmentService extends PageService {
     int[] insertListCache(List<Object> insertList);
 
 
-
     /**
      * @see top.cardone.usercenter.service.DepartmentService#insertListByNotExists
      */

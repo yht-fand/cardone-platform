@@ -14,11 +14,11 @@ public class AreaDaoImpl extends PageDaoImpl implements top.cardone.usercenter.d
     @Override
     public Map<String, Object> findOneByAreaId(Object areaId) {
         Map<String, Object> inputMap = Maps.newHashMap();
-		
+
         inputMap.put("areaId", areaId);
-		
+
         String findOneSqlFilePath = this.getSqlFilePath("page.find");
-		
+
         return this.findOne(findOneSqlFilePath, inputMap);
     }
 }

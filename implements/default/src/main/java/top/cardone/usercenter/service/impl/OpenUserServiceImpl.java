@@ -130,7 +130,7 @@ public class OpenUserServiceImpl extends PageServiceImpl<OpenUserDao> implements
     public int[] updateListCache(List<Object> updateList) {
         return this.updateList(updateList);
     }
-	
+
     @Override
     public Map<String, Object> findOneByOpenUserId(Object openUserId) {
         return this.dao.findOneByOpenUserId(openUserId);

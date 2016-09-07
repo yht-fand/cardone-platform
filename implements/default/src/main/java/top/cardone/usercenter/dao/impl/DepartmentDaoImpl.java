@@ -15,6 +15,9 @@ import java.util.Map;
  * @author yao hai tao
  */
 public class DepartmentDaoImpl extends PageDaoImpl implements top.cardone.usercenter.dao.DepartmentDao {
+    @Value("${department.syncOldSql:}")
+    private String syncOldSql;
+
     @Override
     public Page<Map<String, Object>> pageByCode(Map<String, Object> page) {
         String countSqlFilePath = this.getSqlFilePath("page.count");
@@ -37,9 +40,6 @@ public class DepartmentDaoImpl extends PageDaoImpl implements top.cardone.userce
         inputMap.put("departmentCode", departmentCode);
         return this.findList(findListSqlFilePath, inputMap);
     }
-
-    @Value("${department.syncOldSql:}")
-    private String syncOldSql;
 
     @Override
     public void syncOldData() {
