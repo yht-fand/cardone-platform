@@ -158,10 +158,10 @@ public interface UserService extends PageService {
     /**
      * 查询对象
      *
-     * @param userId 用户标识
+     * @param findOneMap 用户标识
      * @return 对象用户对象
      */
-    Map<String, Object> findOneByUserId(String userId);
+    Map<String, Object> findOneByUserId(Map<String, Object> findOneMap);
 
     <R> R readOneByCondition(Class<R> requiredType, Map<String, Object> inputMap);
 

@@ -1,6 +1,5 @@
 package top.cardone.usercenter.dao.impl;
 
-import com.google.common.collect.Maps;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.data.domain.Page;
@@ -25,11 +24,9 @@ public class UserDaoImpl extends PageDaoImpl implements top.cardone.usercenter.d
     }
 
     @Override
-    public Map<String, Object> findOneByUserId(String userId) {
-        Map<String, Object> inputMap = Maps.newHashMap();
-        inputMap.put("userId", userId);
+    public Map<String, Object> findOneByUserId(Map<String, Object> findOneMap) {
         String findOneSqlFilePath = this.getSqlFilePath("page.find");
-        return this.findOne(findOneSqlFilePath, inputMap);
+        return this.findOne(findOneSqlFilePath, findOneMap);
     }
 
     @Override

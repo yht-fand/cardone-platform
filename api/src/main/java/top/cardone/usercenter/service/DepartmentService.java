@@ -173,10 +173,10 @@ public interface DepartmentService extends PageService {
     /**
      * 查询对象
      *
-     * @param departmentId
+     * @param findOneMap
      * @return 部门对象
      */
-    Map<String, Object> findOneByDepartmentId(String departmentId);
+    Map<String, Object> findOneByDepartmentId(Map<String, Object> findOneMap);
 
     /**
      * 查询部门列表

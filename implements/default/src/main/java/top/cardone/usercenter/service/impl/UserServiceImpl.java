@@ -137,8 +137,8 @@ public class UserServiceImpl extends PageServiceImpl<UserDao> implements top.car
     }
 
     @Override
-    public Map<String, Object> findOneByUserId(String userId) {
-        return this.dao.findOneByUserId(userId);
+    public Map<String, Object> findOneByUserId(Map<String, Object> findOneMap) {
+        return this.dao.findOneByUserId(findOneMap);
     }
 
     @Override

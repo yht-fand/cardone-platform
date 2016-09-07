@@ -140,14 +140,8 @@ public class DepartmentServiceImpl extends PageServiceImpl<DepartmentDao> implem
         return this.dao.pageByCode(page);
     }
 
-    /**
-     * 查询对象
-     *
-     * @param departmentId 部门标识
-     * @return 部门对象
-     */
-    public Map<String, Object> findOneByDepartmentId(String departmentId) {
-        return this.dao.findOneByDepartmentId(departmentId);
+    public Map<String, Object> findOneByDepartmentId(Map<String, Object> findOneMap) {
+        return this.dao.findOneByDepartmentId(findOneMap);
     }
 
     @Override

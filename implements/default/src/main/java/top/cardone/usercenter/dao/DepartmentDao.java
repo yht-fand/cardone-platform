@@ -23,10 +23,10 @@ public interface DepartmentDao extends PageDao {
     /**
      * 根据部门标志查询部门对象
      *
-     * @param departmentId
+     * @param findOneMap
      * @return
      */
-    Map<String, Object> findOneByDepartmentId(String departmentId);
+    Map<String, Object> findOneByDepartmentId(Map<String, Object> findOneMap);
 
     /**
      * 查询部门列表

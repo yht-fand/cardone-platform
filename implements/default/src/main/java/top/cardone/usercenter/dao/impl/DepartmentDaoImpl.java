@@ -26,11 +26,9 @@ public class DepartmentDaoImpl extends PageDaoImpl implements top.cardone.userce
     }
 
     @Override
-    public Map<String, Object> findOneByDepartmentId(String departmentId) {
-        Map<String, Object> findOne = Maps.newHashMap();
+    public Map<String, Object> findOneByDepartmentId(Map<String, Object> findOneMap) {
         String findOneSqlFilePath = this.getSqlFilePath("page.find");
-        findOne.put("departmentId", departmentId);
-        return this.findOne(findOneSqlFilePath, findOne);
+        return this.findOne(findOneSqlFilePath, findOneMap);
     }
 
     @Override
