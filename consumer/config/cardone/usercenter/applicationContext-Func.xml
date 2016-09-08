@@ -2,32 +2,27 @@
 <beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xmlns="http://www.springframework.org/schema/beans"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
-    <bean name="departmentTreeFunc" parent="invokerProxyFactoryParnet">
-        <property name="serviceInterface" value="top.cardone.core.util.func.Func1"/>
-        <property name="queue">
-            <bean class="org.apache.activemq.command.ActiveMQQueue">
-                <constructor-arg value="cardone-usercenter-${cardone-usercenter-version}:departmentTreeFunc"/>
-            </bean>
-        </property>
-    </bean>
+    <bean name="top.cardone.usercenter.func.FindListDepartmentForTreeFunc"
+          class="top.cardone.usercenter.func.FindListDepartmentForTreeFunc"/>
 
-    <bean name="findOneUserByPrincipalFunc" parent="invokerProxyFactoryParnet">
-        <property name="serviceInterface" value="top.cardone.core.util.func.Func0"/>
-        <property name="queue">
-            <bean class="org.apache.activemq.command.ActiveMQQueue">
-                <constructor-arg value="cardone-usercenter-${cardone-usercenter-version}:findOneUserByPrincipalFunc"/>
-            </bean>
-        </property>
-    </bean>
+    <alias name="top.cardone.usercenter.func.FindListDepartmentForTreeFunc" alias="findListDepartmentForTreeFunc"/>
 
-    <bean name="readCreatedByIdFunc" parent="invokerProxyFactoryParnet">
-        <property name="serviceInterface" value="top.cardone.core.util.func.Func0"/>
-        <property name="queue">
-            <bean class="org.apache.activemq.command.ActiveMQQueue">
-                <constructor-arg value="cardone-usercenter-${cardone-usercenter-version}:readCreatedByIdFunc"/>
-            </bean>
-        </property>
-    </bean>
+    <alias name="top.cardone.usercenter.func.FindListDepartmentForTreeFunc" alias="departmentTreeFunc"/>
 
-    <alias name="readCreatedByIdFunc" alias="readLastModifiedByIdFunc"/>
+    <bean id="top.cardone.usercenter.func.FindOneUserByPrincipalFunc"
+          class="top.cardone.usercenter.func.FindOneUserByPrincipalFunc"/>
+
+    <alias name="top.cardone.usercenter.func.FindOneUserByPrincipalFunc" alias="findOneUserByPrincipalFunc"/>
+
+    <bean id="top.cardone.usercenter.func.ReadOneCreatedByIdFunc"
+          class="top.cardone.usercenter.func.ReadOneCreatedByIdFunc"/>
+
+    <alias name="top.cardone.usercenter.func.ReadOneCreatedByIdFunc" alias="readOneLastModifiedByIdFunc"/>
+
+    <alias name="top.cardone.usercenter.func.ReadOneCreatedByIdFunc" alias="readLastModifiedByIdFunc"/>
+
+    <bean id="top.cardone.usercenter.func.GenerateDepartmentTreeFunc"
+          class="top.cardone.usercenter.func.GenerateDepartmentTreeFunc"/>
+
+    <alias name="top.cardone.usercenter.func.GenerateDepartmentTreeFunc" alias="generateDepartmentTreeFunc"/>
 </beans>

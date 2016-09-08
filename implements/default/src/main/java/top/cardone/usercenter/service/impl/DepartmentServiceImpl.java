@@ -5,9 +5,11 @@ import org.apache.commons.collections.CollectionUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.data.domain.Page;
 import org.springframework.transaction.annotation.Transactional;
+import top.cardone.context.ApplicationContextHolder;
 import top.cardone.data.service.impl.PageServiceImpl;
 import top.cardone.usercenter.dao.DepartmentDao;
 import top.cardone.usercenter.dto.DepartmentDto;
+import top.cardone.usercenter.service.DepartmentService;
 
 import java.util.List;
 import java.util.Map;
@@ -135,11 +137,6 @@ public class DepartmentServiceImpl extends PageServiceImpl<DepartmentDao> implem
         return this.updateList(updateList);
     }
 
-    @Override
-    public Page<Map<String, Object>> pageByCode(Map<String, Object> page) {
-        return this.dao.pageByCode(page);
-    }
-
     public Map<String, Object> findOneByDepartmentId(Map<String, Object> findOneMap) {
         return this.dao.findOneByDepartmentId(findOneMap);
     }
@@ -161,13 +158,12 @@ public class DepartmentServiceImpl extends PageServiceImpl<DepartmentDao> implem
         this.dao.syncOldData();
     }
 
-
     @Override
     @Transactional
     public void generateTreeInfo() {
-        List<DepartmentDto> items = this.dao.findList(DepartmentDto.class, null);
+        List<DepartmentDto> items = ApplicationContextHolder.getBean(DepartmentService.class).findListCache(DepartmentDto.class, null);
 
-        generateTreeInfo(null, items, 99);
+        generateTreeInfo(null, items, 9);
     }
 
     private void generateTreeInfo(DepartmentDto parent, List<DepartmentDto> items, int dept) {
@@ -191,7 +187,7 @@ public class DepartmentServiceImpl extends PageServiceImpl<DepartmentDao> implem
             inupts.put("parentTreeName", parentTreeName);
             inupts.put("departmentId", parent.getDepartmentId());
 
-            this.dao.update(inupts);
+            ApplicationContextHolder.getBean(DepartmentService.class).updateCache(inupts);
 
             parentCode = parent.getDepartmentCode();
         }
@@ -219,7 +215,7 @@ public class DepartmentServiceImpl extends PageServiceImpl<DepartmentDao> implem
                 }
             }
 
-            this.generateTreeInfo(item, items, dept--);
+            this.generateTreeInfo(item, items, (dept - 1));
         }
     }
 }

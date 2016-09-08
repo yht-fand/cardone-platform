@@ -20,4 +20,9 @@
     <alias name="top.cardone.usercenter.func.ReadOneCreatedByIdFunc" alias="readOneLastModifiedByIdFunc"/>
 
     <alias name="top.cardone.usercenter.func.ReadOneCreatedByIdFunc" alias="readLastModifiedByIdFunc"/>
+
+    <bean id="top.cardone.usercenter.func.GenerateDepartmentTreeFunc"
+          class="top.cardone.usercenter.func.GenerateDepartmentTreeFunc"/>
+
+    <alias name="top.cardone.usercenter.func.GenerateDepartmentTreeFunc" alias="generateDepartmentTreeFunc"/>
 </beans>
