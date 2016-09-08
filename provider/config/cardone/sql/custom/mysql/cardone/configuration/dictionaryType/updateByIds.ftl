@@ -1,1 +1,0 @@
-UPDATE c1_dictionary_type SET END_DATE = NOW() WHERE INSTR(:ids, dictionaryTypeId) > 0
