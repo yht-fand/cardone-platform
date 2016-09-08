@@ -113,7 +113,6 @@ public interface DepartmentService extends PageService {
     @Func(beanId = "funcAnnotationFunc", value = "{\"afterBeanIds\": \"generateDepartmentTreeFunc\"}")
     int[] insertListCache(List<Object> insertList);
 
-
     /**
      * @see top.cardone.usercenter.service.DepartmentService#insertListByNotExists
      */
@@ -154,7 +153,6 @@ public interface DepartmentService extends PageService {
     @Func(beanId = "funcAnnotationFunc", value = "{\"afterBeanIds\": \"generateDepartmentTreeFunc\"}")
     int[] updateListCache(List<Object> updateList);
 
-
     /**
      * @see top.cardone.usercenter.service.DepartmentService#saveList
      */
@@ -186,5 +184,6 @@ public interface DepartmentService extends PageService {
     /**
      * 生成树信息
      */
+    @CacheEvict(value = "top.cardone.usercenter.service.DepartmentService", allEntries = true)
     void generateTreeInfo();
 }

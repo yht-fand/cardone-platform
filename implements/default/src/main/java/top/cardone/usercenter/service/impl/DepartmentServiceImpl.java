@@ -161,7 +161,7 @@ public class DepartmentServiceImpl extends PageServiceImpl<DepartmentDao> implem
     @Override
     @Transactional
     public void generateTreeInfo() {
-        List<DepartmentDto> items = ApplicationContextHolder.getBean(DepartmentService.class).findListCache(DepartmentDto.class, null);
+        List<DepartmentDto> items = this.dao.findList(DepartmentDto.class, null);
 
         generateTreeInfo(null, items, 9);
     }
@@ -187,7 +187,7 @@ public class DepartmentServiceImpl extends PageServiceImpl<DepartmentDao> implem
             inupts.put("parentTreeName", parentTreeName);
             inupts.put("departmentId", parent.getDepartmentId());
 
-            ApplicationContextHolder.getBean(DepartmentService.class).updateCache(inupts);
+          this.dao.update(inupts);
 
             parentCode = parent.getDepartmentCode();
         }
