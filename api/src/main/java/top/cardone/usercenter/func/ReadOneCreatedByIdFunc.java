@@ -11,7 +11,7 @@ import java.util.Map;
 /**
  * Created by Administrator on 2016/7/11.
  */
-public class ReadCreatedByIdFunc extends ReadPrincipalFunc {
+public class ReadOneCreatedByIdFunc extends ReadPrincipalFunc {
     @Override
     public String func() {
         String userCode = super.func();

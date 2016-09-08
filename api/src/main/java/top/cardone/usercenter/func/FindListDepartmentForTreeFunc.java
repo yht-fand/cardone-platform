@@ -17,7 +17,7 @@ import java.util.Map;
 /**
  * Created by cardone-home-001 on 2016/4/25.
  */
-public class DepartmentTreeFunc implements Func1<List<Map<String, Object>>, Map<String, Object>> {
+public class FindListDepartmentForTreeFunc implements Func1<List<Map<String, Object>>, Map<String, Object>> {
     @Setter
     private String departmentCodeKeyName = "departmentCode";
 
