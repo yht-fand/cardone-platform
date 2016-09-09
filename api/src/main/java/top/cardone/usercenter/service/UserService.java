@@ -148,14 +148,6 @@ public interface UserService extends PageService {
     int[][] saveListCache(List<Object> saveList);
 
     /**
-     * 分页
-     *
-     * @param page 对象
-     * @return 分页对象
-     */
-    Page<Map<String, Object>> pageByCode(Map<String, Object> page);
-
-    /**
      * 查询对象
      *
      * @param findOneMap 用户标识

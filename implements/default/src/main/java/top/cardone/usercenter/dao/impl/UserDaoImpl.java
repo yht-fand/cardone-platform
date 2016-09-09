@@ -17,21 +17,16 @@ public class UserDaoImpl extends PageDaoImpl implements top.cardone.usercenter.d
     private String syncOldSql;
 
     @Override
-    public Page<Map<String, Object>> pageByCode(Map<String, Object> page) {
-        String countSqlFilePath = this.getSqlFilePath("page.count");
-        String findListSqlFilePath = this.getSqlFilePath("page.find");
-        return this.page(countSqlFilePath, findListSqlFilePath, page);
-    }
-
-    @Override
     public Map<String, Object> findOneByUserId(Map<String, Object> findOneMap) {
         String findOneSqlFilePath = this.getSqlFilePath("page.find");
+
         return this.findOne(findOneSqlFilePath, findOneMap);
     }
 
     @Override
     public <R> R readOneByCondition(Class<R> requiredType, Map<String, Object> inputMap) {
         String sqlFilePath = this.getSqlFilePath("readOneByCondition");
+
         return this.readOne(requiredType, sqlFilePath, inputMap);
     }
 

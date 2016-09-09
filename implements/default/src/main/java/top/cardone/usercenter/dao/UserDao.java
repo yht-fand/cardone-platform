@@ -12,14 +12,6 @@ import java.util.Map;
  */
 public interface UserDao extends PageDao {
     /**
-     * 分页
-     *
-     * @param page 对象
-     * @return 分页对象
-     */
-    Page<Map<String, Object>> pageByCode(Map<String, Object> page);
-
-    /**
      * 查询对象
      *
      * @param findOneMap 用户标识
