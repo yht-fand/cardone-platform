@@ -27,7 +27,7 @@ public class DepartmentDaoImpl extends PageDaoImpl implements top.cardone.userce
 
     @Override
     public List<Map<String, Object>> findListByDepartmentCode(String departmentCode) {
-        String findListSqlFilePath = this.getSqlFilePath("findListByDeptCodeForDept");
+        String findListSqlFilePath = this.getSqlFilePath("findListByDepartmentCode");
 
         Map<String, Object> inputMap = Maps.newHashMap();
 
