@@ -137,6 +137,11 @@ public class UserServiceImpl extends PageServiceImpl<UserDao> implements top.car
     }
 
     @Override
+    public List<Map<String, Object>> findListByName(Map<String, Object> findListMap) {
+        return this.dao.findListByName(findListMap);
+    }
+
+    @Override
     public <R> R readOneByCondition(Class<R> requiredType, Map<String, Object> inputMap) {
         return this.dao.readOneByCondition(requiredType, inputMap);
     }

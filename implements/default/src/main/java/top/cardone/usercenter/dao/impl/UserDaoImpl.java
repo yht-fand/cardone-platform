@@ -2,9 +2,9 @@ package top.cardone.usercenter.dao.impl;
 
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.data.domain.Page;
 import top.cardone.data.jdbc.dao.impl.PageDaoImpl;
 
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -41,5 +41,12 @@ public class UserDaoImpl extends PageDaoImpl implements top.cardone.usercenter.d
         for (String sql : syncOldSqls) {
             this.update(sql, null);
         }
+    }
+
+    @Override
+    public List<Map<String, Object>> findListByName(Map<String, Object> findListMap) {
+        String findListSqlFilePath = this.getSqlFilePath("findListByName");
+
+        return this.findList(findListSqlFilePath, findListMap);
     }
 }

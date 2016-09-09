@@ -155,6 +155,14 @@ public interface UserService extends PageService {
      */
     Map<String, Object> findOneByUserId(Map<String, Object> findOneMap);
 
+    /**
+     * 查询对象集合
+     *
+     * @param findListMap 用户标识
+     * @return 对象用户对象
+     */
+    List<Map<String, Object>> findListByName(Map<String, Object> findListMap);
+
     <R> R readOneByCondition(Class<R> requiredType, Map<String, Object> inputMap);
 
     /**
