@@ -132,7 +132,12 @@ public class OrgServiceImpl extends PageServiceImpl<OrgDao> implements top.cardo
     }
 
     @Override
-    public Map<String, Object> findOneByOrgId(Object orgId) {
-        return this.dao.findOneByOrgId(orgId);
+    public Map<String, Object> findOneByOrgId(Map<String, Object> findOne) {
+        return this.dao.findOneByOrgId(findOne);
+    }
+
+    @Override
+    public List<Map<String, Object>> findListByOrgCode(String orgCode) {
+        return this.dao.findListByOrgCode(orgCode);
     }
 }

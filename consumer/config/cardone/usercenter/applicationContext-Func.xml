@@ -25,4 +25,9 @@
           class="top.cardone.usercenter.func.GenerateDepartmentTreeFunc"/>
 
     <alias name="top.cardone.usercenter.func.GenerateDepartmentTreeFunc" alias="generateDepartmentTreeFunc"/>
+
+    <bean name="top.cardone.usercenter.func.FindListOrgForTreeFunc"
+          class="top.cardone.usercenter.func.FindListOrgForTreeFunc"/>
+
+    <alias name="top.cardone.usercenter.func.FindListOrgForTreeFunc" alias="findListOrgForTreeFunc"/>
 </beans>

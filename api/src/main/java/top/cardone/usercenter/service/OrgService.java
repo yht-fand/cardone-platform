@@ -144,8 +144,10 @@ public interface OrgService extends PageService {
     /**
      * 查询组织对象
      *
-     * @param orgId 组织标识
+     * @param findOne 组织标识
      * @return 组织对象
      */
-    Map<String, Object> findOneByOrgId(Object orgId);
+    Map<String, Object> findOneByOrgId(Map<String, Object> findOne);
+
+    List<Map<String,Object>> findListByOrgCode(String orgCode);
 }
