@@ -163,8 +163,6 @@ public interface UserService extends PageService {
      */
     List<Map<String, Object>> findListByName(Map<String, Object> findListMap);
 
-    <R> R readOneByCondition(Class<R> requiredType, Map<String, Object> inputMap);
-
     /**
      * 同步旧数据
      */
