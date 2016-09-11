@@ -1,1 +1,1 @@
-DELETE FROM c1_org WHERE INSTR(:ids, orgId) > 0
+DELETE FROM c1_org WHERE INSTR(:orgIds, ORG_ID) > 0

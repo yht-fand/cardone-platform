@@ -4,6 +4,7 @@ import org.springframework.cache.annotation.CacheEvict;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.data.domain.Page;
 import top.cardone.cache.Caches;
+import top.cardone.context.annotation.Func;
 import top.cardone.data.service.PageService;
 
 import java.util.List;
@@ -55,24 +56,28 @@ public interface OrgService extends PageService {
      * @see top.cardone.usercenter.service.OrgService#delete
      */
     @CacheEvict(value = "top.cardone.usercenter.service.OrgService", allEntries = true)
+    @Func(beanId = "funcAnnotationFunc", value = "{\"afterBeanIds\": \"generateOrgTreeFunc\"}")
     int deleteCache(Object delete);
 
     /**
      * @see top.cardone.usercenter.service.OrgService#deleteAll
      */
     @CacheEvict(value = "top.cardone.usercenter.service.OrgService", allEntries = true)
+    @Func(beanId = "funcAnnotationFunc", value = "{\"afterBeanIds\": \"generateOrgTreeFunc\"}")
     int deleteAllCache();
 
     /**
      * @see top.cardone.usercenter.service.OrgService#deleteByIds
      */
     @CacheEvict(value = "top.cardone.usercenter.service.OrgService", allEntries = true)
+    @Func(beanId = "funcAnnotationFunc", value = "{\"afterBeanIds\": \"generateOrgTreeFunc\"}")
     int deleteByIdsCache(Object ids);
 
     /**
      * @see top.cardone.usercenter.service.OrgService#deleteList
      */
     @CacheEvict(value = "top.cardone.usercenter.service.OrgService", allEntries = true)
+    @Func(beanId = "funcAnnotationFunc", value = "{\"afterBeanIds\": \"generateOrgTreeFunc\"}")
     int[] deleteListCache(List<Object> deleteList);
 
     /**
@@ -91,24 +96,28 @@ public interface OrgService extends PageService {
      * @see top.cardone.usercenter.service.OrgService#insert
      */
     @CacheEvict(value = "top.cardone.usercenter.service.OrgService", allEntries = true)
+    @Func(beanId = "funcAnnotationFunc", value = "{\"afterBeanIds\": \"generateOrgTreeFunc\"}")
     int insertCache(Object insert);
 
     /**
      * @see top.cardone.usercenter.service.OrgService#insertByNotExists
      */
     @CacheEvict(value = "top.cardone.usercenter.service.OrgService", allEntries = true)
+    @Func(beanId = "funcAnnotationFunc", value = "{\"afterBeanIds\": \"generateOrgTreeFunc\"}")
     int insertByNotExistsCache(Object insert);
 
     /**
      * @see top.cardone.usercenter.service.OrgService#insertList
      */
     @CacheEvict(value = "top.cardone.usercenter.service.OrgService", allEntries = true)
+    @Func(beanId = "funcAnnotationFunc", value = "{\"afterBeanIds\": \"generateOrgTreeFunc\"}")
     int[] insertListCache(List<Object> insertList);
 
     /**
      * @see top.cardone.usercenter.service.OrgService#insertListByNotExists
      */
     @CacheEvict(value = "top.cardone.usercenter.service.OrgService", allEntries = true)
+    @Func(beanId = "funcAnnotationFunc", value = "{\"afterBeanIds\": \"generateOrgTreeFunc\"}")
     int[] insertListByNotExistsCache(List<Object> insertList);
 
     /**
@@ -127,18 +136,21 @@ public interface OrgService extends PageService {
      * @see top.cardone.usercenter.service.OrgService#save
      */
     @CacheEvict(value = "top.cardone.usercenter.service.OrgService", allEntries = true)
+    @Func(beanId = "funcAnnotationFunc", value = "{\"afterBeanIds\": \"generateOrgTreeFunc\"}")
     Integer saveCache(Object save);
 
     /**
      * @see top.cardone.usercenter.service.OrgService#update
      */
     @CacheEvict(value = "top.cardone.usercenter.service.OrgService", allEntries = true)
+    @Func(beanId = "funcAnnotationFunc", value = "{\"afterBeanIds\": \"generateOrgTreeFunc\"}")
     int updateCache(Object update);
 
     /**
      * @see top.cardone.usercenter.service.OrgService#updateList
      */
     @CacheEvict(value = "top.cardone.usercenter.service.OrgService", allEntries = true)
+    @Func(beanId = "funcAnnotationFunc", value = "{\"afterBeanIds\": \"generateOrgTreeFunc\"}")
     int[] updateListCache(List<Object> updateList);
 
     /**
@@ -150,4 +162,16 @@ public interface OrgService extends PageService {
     Map<String, Object> findOneByOrgId(Map<String, Object> findOne);
 
     List<Map<String,Object>> findListByOrgCode(String orgCode);
+
+    /**
+     * 生成树信息
+     */
+    @CacheEvict(value = "top.cardone.usercenter.service.OrgService", allEntries = true)
+    void generateTreeInfo();
+
+    /**
+     * 修正树信息
+     */
+    @CacheEvict(value = "top.cardone.usercenter.service.OrgService", allEntries = true)
+    int fixTreeInfo();
 }

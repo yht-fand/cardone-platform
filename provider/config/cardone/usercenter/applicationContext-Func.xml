@@ -30,4 +30,9 @@
           class="top.cardone.usercenter.func.FindListOrgForTreeFunc"/>
 
     <alias name="top.cardone.usercenter.func.FindListOrgForTreeFunc" alias="findListOrgForTreeFunc"/>
+
+    <bean id="top.cardone.usercenter.func.GenerateOrgTreeFunc"
+          class="top.cardone.usercenter.func.GenerateOrgTreeFunc"/>
+
+    <alias name="top.cardone.usercenter.func.GenerateOrgTreeFunc" alias="generateOrgTreeFunc"/>
 </beans>
