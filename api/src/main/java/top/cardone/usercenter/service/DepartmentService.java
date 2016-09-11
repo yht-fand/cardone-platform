@@ -186,4 +186,10 @@ public interface DepartmentService extends PageService {
      */
     @CacheEvict(value = "top.cardone.usercenter.service.DepartmentService", allEntries = true)
     void generateTreeInfo();
+
+    /**
+     * 修正树信息
+     */
+    @CacheEvict(value = "top.cardone.usercenter.service.DepartmentService", allEntries = true)
+    int fixTreeInfo();
 }
