@@ -174,4 +174,11 @@ public interface OrgService extends PageService {
      */
     @CacheEvict(value = "top.cardone.usercenter.service.OrgService", allEntries = true)
     int fixTreeInfo();
+
+    /**
+     * 查询
+     * @param findList
+     * @return
+     */
+    List<Map<String,Object>> findListByName(Map<String,Object> findList);
 }

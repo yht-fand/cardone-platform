@@ -20,4 +20,11 @@ public interface OrgDao extends PageDao {
     Map<String, Object> findOneByOrgId(Map<String, Object> findOne);
 
     List<Map<String,Object>> findListByOrgCode(String orgCode);
+
+    /**
+     * 查询
+     * @param findList
+     * @return
+     */
+    List<Map<String,Object>> findListByName(Map<String,Object> findList);
 }

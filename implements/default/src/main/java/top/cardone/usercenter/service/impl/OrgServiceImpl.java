@@ -284,4 +284,9 @@ public class OrgServiceImpl extends PageServiceImpl<OrgDao> implements top.cardo
             this.generateTreeInfo(item, items, (dept - 1));
         }
     }
+
+    @Override
+    public List<Map<String, Object>> findListByName(Map<String, Object> findList) {
+        return this.dao.findListByName(findList);
+    }
 }
