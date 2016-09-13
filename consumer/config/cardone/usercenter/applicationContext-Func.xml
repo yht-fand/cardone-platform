@@ -17,6 +17,10 @@
     <bean id="top.cardone.usercenter.func.ReadOneCreatedByIdFunc"
           class="top.cardone.usercenter.func.ReadOneCreatedByIdFunc"/>
 
+    <alias name="top.cardone.usercenter.func.ReadOneCreatedByIdFunc" alias="readOneCreatedByIdFunc"/>
+
+    <alias name="top.cardone.usercenter.func.ReadOneCreatedByIdFunc" alias="readCreatedByIdFunc"/>
+
     <alias name="top.cardone.usercenter.func.ReadOneCreatedByIdFunc" alias="readOneLastModifiedByIdFunc"/>
 
     <alias name="top.cardone.usercenter.func.ReadOneCreatedByIdFunc" alias="readLastModifiedByIdFunc"/>
@@ -35,4 +39,9 @@
           class="top.cardone.usercenter.func.GenerateOrgTreeFunc"/>
 
     <alias name="top.cardone.usercenter.func.GenerateOrgTreeFunc" alias="generateOrgTreeFunc"/>
+
+    <bean id="top.cardone.usercenter.func.GenerateRegionTreeFunc"
+          class="top.cardone.usercenter.func.GenerateRegionTreeFunc"/>
+
+    <alias name="top.cardone.usercenter.func.GenerateRegionTreeFunc" alias="generateRegionTreeFunc"/>
 </beans>

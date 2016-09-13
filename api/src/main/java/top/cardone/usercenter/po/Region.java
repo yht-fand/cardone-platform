@@ -74,6 +74,13 @@ public class Region implements java.io.Serializable {
     protected Date lastModifiedDate;
 
     /**
+     * 名称
+     */
+    @lombok.Getter
+    @lombok.Setter
+    protected String name;
+
+    /**
      * 父级代码
      */
     @lombok.Getter
@@ -121,13 +128,6 @@ public class Region implements java.io.Serializable {
     @lombok.Getter
     @lombok.Setter
     protected String regionId;
-
-    /**
-     * 区域名称
-     */
-    @lombok.Getter
-    @lombok.Setter
-    protected String regionName;
 
     /**
      * 角色代码集合

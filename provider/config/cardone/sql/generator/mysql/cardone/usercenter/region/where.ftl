@@ -71,6 +71,14 @@ ${prefixName} `LAST_MODIFIED_DATE` IS NULL
 </#if>
 <#assign prefixName = 'AND'>
 </#if>
+<#if (where_and_eq_name??)>
+<#if (where_and_eq_name_value??)>
+${prefixName} `NAME` = :where_and_eq_name_value
+<#else>
+${prefixName} `NAME` IS NULL
+</#if>
+<#assign prefixName = 'AND'>
+</#if>
 <#if (where_and_eq_parentCode??)>
 <#if (where_and_eq_parentCode_value??)>
 ${prefixName} `PARENT_CODE` = :where_and_eq_parentCode_value
@@ -124,14 +132,6 @@ ${prefixName} `REGION_CODE` IS NULL
 ${prefixName} `REGION_ID` = :where_and_eq_regionId_value
 <#else>
 ${prefixName} `REGION_ID` IS NULL
-</#if>
-<#assign prefixName = 'AND'>
-</#if>
-<#if (where_and_eq_regionName??)>
-<#if (where_and_eq_regionName_value??)>
-${prefixName} `REGION_NAME` = :where_and_eq_regionName_value
-<#else>
-${prefixName} `REGION_NAME` IS NULL
 </#if>
 <#assign prefixName = 'AND'>
 </#if>

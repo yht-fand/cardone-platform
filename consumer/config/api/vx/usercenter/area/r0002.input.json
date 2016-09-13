@@ -7,10 +7,6 @@
     "newName": "areaId",
     "funcBeanIds": "escapeSqlFunc"
   },
-  "areaName": {
-    "newName": "areaName",
-    "funcBeanIds": "escapeSqlFunc"
-  },
   "beginDate": {
     "newName": "beginDate",
     "funcBeanIds": "escapeSqlFunc"
@@ -43,8 +39,16 @@
     "newName": "lastModifiedDate",
     "funcBeanIds": "escapeSqlFunc"
   },
+  "name": {
+    "newName": "name",
+    "funcBeanIds": "escapeSqlFunc"
+  },
   "permissionCodes": {
     "newName": "permissionCodes",
+    "funcBeanIds": "escapeSqlFunc"
+  },
+  "provinceCode": {
+    "newName": "provinceCode",
     "funcBeanIds": "escapeSqlFunc"
   },
   "roleCodes": {

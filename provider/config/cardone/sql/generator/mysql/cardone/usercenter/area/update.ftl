@@ -8,10 +8,6 @@ ${prefixName} `AREA_CODE` = :update_areaCode_value
 ${prefixName} `AREA_ID` = :update_areaId_value
 <#assign prefixName = ','>
 </#if>
-<#if (update_areaName??)>
-${prefixName} `AREA_NAME` = :update_areaName_value
-<#assign prefixName = ','>
-</#if>
 <#if (update_beginDate??)>
 ${prefixName} `BEGIN_DATE` = :update_beginDate_value
 <#assign prefixName = ','>
@@ -44,8 +40,16 @@ ${prefixName} `LAST_MODIFIED_BY_CODE` = :update_lastModifiedByCode_value
 ${prefixName} `LAST_MODIFIED_DATE` = :update_lastModifiedDate_value
 <#assign prefixName = ','>
 </#if>
+<#if (update_name??)>
+${prefixName} `NAME` = :update_name_value
+<#assign prefixName = ','>
+</#if>
 <#if (update_permissionCodes??)>
 ${prefixName} `PERMISSION_CODES` = :update_permissionCodes_value
+<#assign prefixName = ','>
+</#if>
+<#if (update_provinceCode??)>
+${prefixName} `PROVINCE_CODE` = :update_provinceCode_value
 <#assign prefixName = ','>
 </#if>
 <#if (update_roleCodes??)>

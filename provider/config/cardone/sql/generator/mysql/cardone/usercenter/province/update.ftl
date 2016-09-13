@@ -28,6 +28,10 @@ ${prefixName} `LAST_MODIFIED_BY_CODE` = :update_lastModifiedByCode_value
 ${prefixName} `LAST_MODIFIED_DATE` = :update_lastModifiedDate_value
 <#assign prefixName = ','>
 </#if>
+<#if (update_name??)>
+${prefixName} `NAME` = :update_name_value
+<#assign prefixName = ','>
+</#if>
 <#if (update_permissionCodes??)>
 ${prefixName} `PERMISSION_CODES` = :update_permissionCodes_value
 <#assign prefixName = ','>
@@ -38,10 +42,6 @@ ${prefixName} `PROVINCE_CODE` = :update_provinceCode_value
 </#if>
 <#if (update_provinceId??)>
 ${prefixName} `PROVINCE_ID` = :update_provinceId_value
-<#assign prefixName = ','>
-</#if>
-<#if (update_provinceName??)>
-${prefixName} `PROVINCE_NAME` = :update_provinceName_value
 <#assign prefixName = ','>
 </#if>
 <#if (update_roleCodes??)>

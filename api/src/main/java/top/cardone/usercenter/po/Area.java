@@ -25,13 +25,6 @@ public class Area implements java.io.Serializable {
     protected String areaId;
 
     /**
-     * 地区名称
-     */
-    @lombok.Getter
-    @lombok.Setter
-    protected String areaName;
-
-    /**
      * 开始时间
      */
     @lombok.Getter
@@ -88,11 +81,25 @@ public class Area implements java.io.Serializable {
     protected Date lastModifiedDate;
 
     /**
+     * 名称
+     */
+    @lombok.Getter
+    @lombok.Setter
+    protected String name;
+
+    /**
      * 许可代码集合
      */
     @lombok.Getter
     @lombok.Setter
     protected String permissionCodes;
+
+    /**
+     * 省份代码
+     */
+    @lombok.Getter
+    @lombok.Setter
+    protected String provinceCode;
 
     /**
      * 角色代码集合

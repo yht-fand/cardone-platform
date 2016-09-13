@@ -8,10 +8,6 @@ ${prefixName} `AREA_CODE`
 ${prefixName} `AREA_ID`
 <#assign prefixName = ','>
 </#if>
-<#if (select_areaName??)>
-${prefixName} `AREA_NAME`
-<#assign prefixName = ','>
-</#if>
 <#if (select_beginDate??)>
 ${prefixName} `BEGIN_DATE`
 <#assign prefixName = ','>
@@ -44,8 +40,16 @@ ${prefixName} `LAST_MODIFIED_BY_CODE`
 ${prefixName} `LAST_MODIFIED_DATE`
 <#assign prefixName = ','>
 </#if>
+<#if (select_name??)>
+${prefixName} `NAME`
+<#assign prefixName = ','>
+</#if>
 <#if (select_permissionCodes??)>
 ${prefixName} `PERMISSION_CODES`
+<#assign prefixName = ','>
+</#if>
+<#if (select_provinceCode??)>
+${prefixName} `PROVINCE_CODE`
 <#assign prefixName = ','>
 </#if>
 <#if (select_roleCodes??)>
@@ -67,7 +71,6 @@ ${prefixName} `WF_ID`
 <#if prefixName ==  ' '>
   `AREA_CODE`
 , `AREA_ID`
-, `AREA_NAME`
 , `BEGIN_DATE`
 , `CITY_CODE`
 , `CREATED_BY_CODE`
@@ -76,7 +79,9 @@ ${prefixName} `WF_ID`
 , `END_DATE`
 , `LAST_MODIFIED_BY_CODE`
 , `LAST_MODIFIED_DATE`
+, `NAME`
 , `PERMISSION_CODES`
+, `PROVINCE_CODE`
 , `ROLE_CODES`
 , `STATE_CODE`
 , `VERSION_`
@@ -91,10 +96,6 @@ ${prefixName} `AREA_CODE` ${order_by_areaCode_value!}
 </#if>
 <#if (order_by_areaId??)>
 ${prefixName} `AREA_ID` ${order_by_areaId_value!}
-<#assign prefixName = ','>
-</#if>
-<#if (order_by_areaName??)>
-${prefixName} `AREA_NAME` ${order_by_areaName_value!}
 <#assign prefixName = ','>
 </#if>
 <#if (order_by_beginDate??)>
@@ -129,8 +130,16 @@ ${prefixName} `LAST_MODIFIED_BY_CODE` ${order_by_lastModifiedByCode_value!}
 ${prefixName} `LAST_MODIFIED_DATE` ${order_by_lastModifiedDate_value!}
 <#assign prefixName = ','>
 </#if>
+<#if (order_by_name??)>
+${prefixName} `NAME` ${order_by_name_value!}
+<#assign prefixName = ','>
+</#if>
 <#if (order_by_permissionCodes??)>
 ${prefixName} `PERMISSION_CODES` ${order_by_permissionCodes_value!}
+<#assign prefixName = ','>
+</#if>
+<#if (order_by_provinceCode??)>
+${prefixName} `PROVINCE_CODE` ${order_by_provinceCode_value!}
 <#assign prefixName = ','>
 </#if>
 <#if (order_by_roleCodes??)>

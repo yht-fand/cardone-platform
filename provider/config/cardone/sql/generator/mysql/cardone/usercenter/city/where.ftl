@@ -23,14 +23,6 @@ ${prefixName} `CITY_ID` IS NULL
 </#if>
 <#assign prefixName = 'AND'>
 </#if>
-<#if (where_and_eq_cityName??)>
-<#if (where_and_eq_cityName_value??)>
-${prefixName} `CITY_NAME` = :where_and_eq_cityName_value
-<#else>
-${prefixName} `CITY_NAME` IS NULL
-</#if>
-<#assign prefixName = 'AND'>
-</#if>
 <#if (where_and_eq_createdByCode??)>
 <#if (where_and_eq_createdByCode_value??)>
 ${prefixName} `CREATED_BY_CODE` = :where_and_eq_createdByCode_value
@@ -79,11 +71,27 @@ ${prefixName} `LAST_MODIFIED_DATE` IS NULL
 </#if>
 <#assign prefixName = 'AND'>
 </#if>
+<#if (where_and_eq_name??)>
+<#if (where_and_eq_name_value??)>
+${prefixName} `NAME` = :where_and_eq_name_value
+<#else>
+${prefixName} `NAME` IS NULL
+</#if>
+<#assign prefixName = 'AND'>
+</#if>
 <#if (where_and_eq_permissionCodes??)>
 <#if (where_and_eq_permissionCodes_value??)>
 ${prefixName} `PERMISSION_CODES` = :where_and_eq_permissionCodes_value
 <#else>
 ${prefixName} `PERMISSION_CODES` IS NULL
+</#if>
+<#assign prefixName = 'AND'>
+</#if>
+<#if (where_and_eq_provinceCode??)>
+<#if (where_and_eq_provinceCode_value??)>
+${prefixName} `PROVINCE_CODE` = :where_and_eq_provinceCode_value
+<#else>
+${prefixName} `PROVINCE_CODE` IS NULL
 </#if>
 <#assign prefixName = 'AND'>
 </#if>

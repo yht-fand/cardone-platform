@@ -27,6 +27,9 @@ LAST_MODIFIED_BY_CODE AS lastModifiedByCode
 <#case "lastModifiedDate">
 LAST_MODIFIED_DATE AS lastModifiedDate
 <#break>
+<#case "name">
+NAME AS name
+<#break>
 <#case "parentCode">
 PARENT_CODE AS parentCode
 <#break>
@@ -47,9 +50,6 @@ REGION_CODE AS regionCode
 <#break>
 <#case "regionId">
 REGION_ID AS regionId
-<#break>
-<#case "regionName">
-REGION_NAME AS regionName
 <#break>
 <#case "roleCodes">
 ROLE_CODES AS roleCodes

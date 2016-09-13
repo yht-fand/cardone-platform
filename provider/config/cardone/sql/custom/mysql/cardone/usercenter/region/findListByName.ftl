@@ -34,12 +34,16 @@ t.`LAST_MODIFIED_DATE`,
 ) AS LAST_MODIFIED_DATE
 FROM
 `c1_region` t
-<#if StringUtils.isNotBlank(regionId)>
-WHERE t.REGION_id =:regionId
-<#else>
-    <#include "page.where.ftl">
+WHERE 1 = 1
+<#if StringUtils.isNotBlank(regionCode)>
+AND t.`REGION_CODE` LIKE CONCAT('%', :regionCode, "%")
+</#if>
+<#if StringUtils.isNotBlank(name)>
+AND t.`NAME` LIKE CONCAT('%', :name, "%")
+</#if>
+<#if StringUtils.isNotBlank(parentCode)>
+AND (t.`PARENT_CODE` LIKE CONCAT('%', :parentCode, "%") OR EXISTS(SELECT 1 FROM c1_region e WHERE e.`REGION_CODE` = t.`PARENT_CODE` AND e.`NAME` LIKE CONCAT('%', :parentCode, "%")))
+</#if>
 ORDER BY t.`PARENT_CODE`,
 t.`REGION_CODE`,
 t.`CREATED_BY_CODE`
-limit <#if offset??>:offset<#else>0</#if> , <#if pageSize??>:pageSize<#else>10</#if>
-</#if>

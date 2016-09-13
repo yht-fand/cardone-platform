@@ -20,6 +20,9 @@
   "LAST_MODIFIED_DATE": {
     "newName": "lastModifiedDate"
   },
+  "NAME": {
+    "newName": "name"
+  },
   "PERMISSION_CODES": {
     "newName": "permissionCodes"
   },
@@ -28,9 +31,6 @@
   },
   "PROVINCE_ID": {
     "newName": "provinceId"
-  },
-  "PROVINCE_NAME": {
-    "newName": "provinceName"
   },
   "ROLE_CODES": {
     "newName": "roleCodes"

@@ -6,9 +6,6 @@ AREA_CODE AS areaCode
 <#case "areaId">
 AREA_ID AS areaId
 <#break>
-<#case "areaName">
-AREA_NAME AS areaName
-<#break>
 <#case "beginDate">
 BEGIN_DATE AS beginDate
 <#break>
@@ -33,8 +30,14 @@ LAST_MODIFIED_BY_CODE AS lastModifiedByCode
 <#case "lastModifiedDate">
 LAST_MODIFIED_DATE AS lastModifiedDate
 <#break>
+<#case "name">
+NAME AS name
+<#break>
 <#case "permissionCodes">
 PERMISSION_CODES AS permissionCodes
+<#break>
+<#case "provinceCode">
+PROVINCE_CODE AS provinceCode
 <#break>
 <#case "roleCodes">
 ROLE_CODES AS roleCodes

@@ -30,6 +30,10 @@ ${prefixName} `LAST_MODIFIED_BY_CODE`
 ${prefixName} `LAST_MODIFIED_DATE`
 <#assign prefixName = ','>
 </#if>
+<#if (insert_name??) && (insert_name_value??)>
+${prefixName} `NAME`
+<#assign prefixName = ','>
+</#if>
 <#if (insert_permissionCodes??) && (insert_permissionCodes_value??)>
 ${prefixName} `PERMISSION_CODES`
 <#assign prefixName = ','>
@@ -40,10 +44,6 @@ ${prefixName} `PROVINCE_CODE`
 </#if>
 <#if (insert_provinceId??) && (insert_provinceId_value??)>
 ${prefixName} `PROVINCE_ID`
-<#assign prefixName = ','>
-</#if>
-<#if (insert_provinceName??) && (insert_provinceName_value??)>
-${prefixName} `PROVINCE_NAME`
 <#assign prefixName = ','>
 </#if>
 <#if (insert_roleCodes??) && (insert_roleCodes_value??)>
@@ -93,6 +93,10 @@ ${prefixName} :insert_lastModifiedByCode_value
 ${prefixName} :insert_lastModifiedDate_value
 <#assign prefixName = ','>
 </#if>
+<#if (insert_name??) && (insert_name_value??)>
+${prefixName} :insert_name_value
+<#assign prefixName = ','>
+</#if>
 <#if (insert_permissionCodes??) && (insert_permissionCodes_value??)>
 ${prefixName} :insert_permissionCodes_value
 <#assign prefixName = ','>
@@ -103,10 +107,6 @@ ${prefixName} :insert_provinceCode_value
 </#if>
 <#if (insert_provinceId??) && (insert_provinceId_value??)>
 ${prefixName} :insert_provinceId_value
-<#assign prefixName = ','>
-</#if>
-<#if (insert_provinceName??) && (insert_provinceName_value??)>
-${prefixName} :insert_provinceName_value
 <#assign prefixName = ','>
 </#if>
 <#if (insert_roleCodes??) && (insert_roleCodes_value??)>
@@ -183,6 +183,14 @@ ${prefixName} E.LAST_MODIFIED_DATE IS NULL
 </#if>
 <#assign prefixName = 'AND'>
 </#if>
+<#if (where_and_eq_name??)>
+<#if (where_and_eq_name_value??)>
+${prefixName} E.NAME = :where_and_eq_name_value
+<#else>
+${prefixName} E.NAME IS NULL
+</#if>
+<#assign prefixName = 'AND'>
+</#if>
 <#if (where_and_eq_permissionCodes??)>
 <#if (where_and_eq_permissionCodes_value??)>
 ${prefixName} E.PERMISSION_CODES = :where_and_eq_permissionCodes_value
@@ -204,14 +212,6 @@ ${prefixName} E.PROVINCE_CODE IS NULL
 ${prefixName} E.PROVINCE_ID = :where_and_eq_provinceId_value
 <#else>
 ${prefixName} E.PROVINCE_ID IS NULL
-</#if>
-<#assign prefixName = 'AND'>
-</#if>
-<#if (where_and_eq_provinceName??)>
-<#if (where_and_eq_provinceName_value??)>
-${prefixName} E.PROVINCE_NAME = :where_and_eq_provinceName_value
-<#else>
-${prefixName} E.PROVINCE_NAME IS NULL
 </#if>
 <#assign prefixName = 'AND'>
 </#if>

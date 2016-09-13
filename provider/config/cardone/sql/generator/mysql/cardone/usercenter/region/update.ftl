@@ -36,6 +36,10 @@ ${prefixName} `LAST_MODIFIED_BY_CODE` = :update_lastModifiedByCode_value
 ${prefixName} `LAST_MODIFIED_DATE` = :update_lastModifiedDate_value
 <#assign prefixName = ','>
 </#if>
+<#if (update_name??)>
+${prefixName} `NAME` = :update_name_value
+<#assign prefixName = ','>
+</#if>
 <#if (update_parentCode??)>
 ${prefixName} `PARENT_CODE` = :update_parentCode_value
 <#assign prefixName = ','>
@@ -62,10 +66,6 @@ ${prefixName} `REGION_CODE` = :update_regionCode_value
 </#if>
 <#if (update_regionId??)>
 ${prefixName} `REGION_ID` = :update_regionId_value
-<#assign prefixName = ','>
-</#if>
-<#if (update_regionName??)>
-${prefixName} `REGION_NAME` = :update_regionName_value
 <#assign prefixName = ','>
 </#if>
 <#if (update_roleCodes??)>

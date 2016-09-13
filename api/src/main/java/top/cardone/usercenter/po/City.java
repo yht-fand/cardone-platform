@@ -32,13 +32,6 @@ public class City implements java.io.Serializable {
     protected String cityId;
 
     /**
-     * 城市名称
-     */
-    @lombok.Getter
-    @lombok.Setter
-    protected String cityName;
-
-    /**
      * 创建人代码
      */
     @lombok.Getter
@@ -81,11 +74,25 @@ public class City implements java.io.Serializable {
     protected Date lastModifiedDate;
 
     /**
+     * 名称
+     */
+    @lombok.Getter
+    @lombok.Setter
+    protected String name;
+
+    /**
      * 许可代码集合
      */
     @lombok.Getter
     @lombok.Setter
     protected String permissionCodes;
+
+    /**
+     * 省份代码
+     */
+    @lombok.Getter
+    @lombok.Setter
+    protected String provinceCode;
 
     /**
      * 角色代码集合

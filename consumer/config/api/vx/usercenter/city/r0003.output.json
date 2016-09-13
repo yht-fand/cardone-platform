@@ -8,9 +8,6 @@
   "CITY_ID": {
     "newName": "cityId"
   },
-  "CITY_NAME": {
-    "newName": "cityName"
-  },
   "CREATED_BY_CODE": {
     "newName": "createdByCode"
   },
@@ -29,8 +26,14 @@
   "LAST_MODIFIED_DATE": {
     "newName": "lastModifiedDate"
   },
+  "NAME": {
+    "newName": "name"
+  },
   "PERMISSION_CODES": {
     "newName": "permissionCodes"
+  },
+  "PROVINCE_CODE": {
+    "newName": "provinceCode"
   },
   "ROLE_CODES": {
     "newName": "roleCodes"

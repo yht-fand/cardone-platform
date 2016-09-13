@@ -37,6 +37,10 @@ ${prefixName} `LAST_MODIFIED_BY_CODE`
 ${prefixName} `LAST_MODIFIED_DATE`
 <#assign prefixName = ','>
 </#if>
+<#if (insert_name??) && (insert_name_value??)>
+${prefixName} `NAME`
+<#assign prefixName = ','>
+</#if>
 <#if (insert_parentCode??) && (insert_parentCode_value??)>
 ${prefixName} `PARENT_CODE`
 <#assign prefixName = ','>
@@ -63,10 +67,6 @@ ${prefixName} `REGION_CODE`
 </#if>
 <#if (insert_regionId??) && (insert_regionId_value??)>
 ${prefixName} `REGION_ID`
-<#assign prefixName = ','>
-</#if>
-<#if (insert_regionName??) && (insert_regionName_value??)>
-${prefixName} `REGION_NAME`
 <#assign prefixName = ','>
 </#if>
 <#if (insert_roleCodes??) && (insert_roleCodes_value??)>
@@ -124,6 +124,10 @@ ${prefixName} :insert_lastModifiedByCode_value
 ${prefixName} :insert_lastModifiedDate_value
 <#assign prefixName = ','>
 </#if>
+<#if (insert_name??) && (insert_name_value??)>
+${prefixName} :insert_name_value
+<#assign prefixName = ','>
+</#if>
 <#if (insert_parentCode??) && (insert_parentCode_value??)>
 ${prefixName} :insert_parentCode_value
 <#assign prefixName = ','>
@@ -150,10 +154,6 @@ ${prefixName} :insert_regionCode_value
 </#if>
 <#if (insert_regionId??) && (insert_regionId_value??)>
 ${prefixName} :insert_regionId_value
-<#assign prefixName = ','>
-</#if>
-<#if (insert_regionName??) && (insert_regionName_value??)>
-${prefixName} :insert_regionName_value
 <#assign prefixName = ','>
 </#if>
 <#if (insert_roleCodes??) && (insert_roleCodes_value??)>

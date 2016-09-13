@@ -27,6 +27,10 @@
     "newName": "lastModifiedDate",
     "funcBeanIds": "escapeSqlFunc"
   },
+  "name": {
+    "newName": "name",
+    "funcBeanIds": "escapeSqlFunc"
+  },
   "permissionCodes": {
     "newName": "permissionCodes",
     "funcBeanIds": "escapeSqlFunc"
@@ -37,10 +41,6 @@
   },
   "provinceId": {
     "newName": "provinceId",
-    "funcBeanIds": "escapeSqlFunc"
-  },
-  "provinceName": {
-    "newName": "provinceName",
     "funcBeanIds": "escapeSqlFunc"
   },
   "roleCodes": {

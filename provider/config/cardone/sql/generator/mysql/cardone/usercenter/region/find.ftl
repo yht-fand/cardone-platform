@@ -36,6 +36,10 @@ ${prefixName} `LAST_MODIFIED_BY_CODE`
 ${prefixName} `LAST_MODIFIED_DATE`
 <#assign prefixName = ','>
 </#if>
+<#if (select_name??)>
+${prefixName} `NAME`
+<#assign prefixName = ','>
+</#if>
 <#if (select_parentCode??)>
 ${prefixName} `PARENT_CODE`
 <#assign prefixName = ','>
@@ -64,10 +68,6 @@ ${prefixName} `REGION_CODE`
 ${prefixName} `REGION_ID`
 <#assign prefixName = ','>
 </#if>
-<#if (select_regionName??)>
-${prefixName} `REGION_NAME`
-<#assign prefixName = ','>
-</#if>
 <#if (select_roleCodes??)>
 ${prefixName} `ROLE_CODES`
 <#assign prefixName = ','>
@@ -94,6 +94,7 @@ ${prefixName} `WF_ID`
 , `END_DATE`
 , `LAST_MODIFIED_BY_CODE`
 , `LAST_MODIFIED_DATE`
+, `NAME`
 , `PARENT_CODE`
 , `PARENT_TREE_CODE`
 , `PARENT_TREE_NAME`
@@ -101,7 +102,6 @@ ${prefixName} `WF_ID`
 , `PROVINCE_CODE`
 , `REGION_CODE`
 , `REGION_ID`
-, `REGION_NAME`
 , `ROLE_CODES`
 , `STATE_CODE`
 , `VERSION_`
@@ -146,6 +146,10 @@ ${prefixName} `LAST_MODIFIED_BY_CODE` ${order_by_lastModifiedByCode_value!}
 ${prefixName} `LAST_MODIFIED_DATE` ${order_by_lastModifiedDate_value!}
 <#assign prefixName = ','>
 </#if>
+<#if (order_by_name??)>
+${prefixName} `NAME` ${order_by_name_value!}
+<#assign prefixName = ','>
+</#if>
 <#if (order_by_parentCode??)>
 ${prefixName} `PARENT_CODE` ${order_by_parentCode_value!}
 <#assign prefixName = ','>
@@ -172,10 +176,6 @@ ${prefixName} `REGION_CODE` ${order_by_regionCode_value!}
 </#if>
 <#if (order_by_regionId??)>
 ${prefixName} `REGION_ID` ${order_by_regionId_value!}
-<#assign prefixName = ','>
-</#if>
-<#if (order_by_regionName??)>
-${prefixName} `REGION_NAME` ${order_by_regionName_value!}
 <#assign prefixName = ','>
 </#if>
 <#if (order_by_roleCodes??)>

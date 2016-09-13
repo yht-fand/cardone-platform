@@ -5,9 +5,6 @@
   "AREA_ID": {
     "newName": "areaId"
   },
-  "AREA_NAME": {
-    "newName": "areaName"
-  },
   "BEGIN_DATE": {
     "newName": "beginDate"
   },
@@ -32,8 +29,14 @@
   "LAST_MODIFIED_DATE": {
     "newName": "lastModifiedDate"
   },
+  "NAME": {
+    "newName": "name"
+  },
   "PERMISSION_CODES": {
     "newName": "permissionCodes"
+  },
+  "PROVINCE_CODE": {
+    "newName": "provinceCode"
   },
   "ROLE_CODES": {
     "newName": "roleCodes"

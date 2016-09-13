@@ -21,6 +21,9 @@ LAST_MODIFIED_BY_CODE AS lastModifiedByCode
 <#case "lastModifiedDate">
 LAST_MODIFIED_DATE AS lastModifiedDate
 <#break>
+<#case "name">
+NAME AS name
+<#break>
 <#case "permissionCodes">
 PERMISSION_CODES AS permissionCodes
 <#break>
@@ -29,9 +32,6 @@ PROVINCE_CODE AS provinceCode
 <#break>
 <#case "provinceId">
 PROVINCE_ID AS provinceId
-<#break>
-<#case "provinceName">
-PROVINCE_NAME AS provinceName
 <#break>
 <#case "roleCodes">
 ROLE_CODES AS roleCodes

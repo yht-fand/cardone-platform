@@ -38,6 +38,10 @@ ${prefixName} `LAST_MODIFIED_BY_CODE`
 ${prefixName} `LAST_MODIFIED_DATE`
 <#assign prefixName = ','>
 </#if>
+<#if (insert_name??) && (insert_name_value??)>
+${prefixName} `NAME`
+<#assign prefixName = ','>
+</#if>
 <#if (insert_parentCode??) && (insert_parentCode_value??)>
 ${prefixName} `PARENT_CODE`
 <#assign prefixName = ','>
@@ -64,10 +68,6 @@ ${prefixName} `REGION_CODE`
 </#if>
 <#if (insert_regionId??) && (insert_regionId_value??)>
 ${prefixName} `REGION_ID`
-<#assign prefixName = ','>
-</#if>
-<#if (insert_regionName??) && (insert_regionName_value??)>
-${prefixName} `REGION_NAME`
 <#assign prefixName = ','>
 </#if>
 <#if (insert_roleCodes??) && (insert_roleCodes_value??)>
@@ -125,6 +125,10 @@ ${prefixName} :insert_lastModifiedByCode_value
 ${prefixName} :insert_lastModifiedDate_value
 <#assign prefixName = ','>
 </#if>
+<#if (insert_name??) && (insert_name_value??)>
+${prefixName} :insert_name_value
+<#assign prefixName = ','>
+</#if>
 <#if (insert_parentCode??) && (insert_parentCode_value??)>
 ${prefixName} :insert_parentCode_value
 <#assign prefixName = ','>
@@ -151,10 +155,6 @@ ${prefixName} :insert_regionCode_value
 </#if>
 <#if (insert_regionId??) && (insert_regionId_value??)>
 ${prefixName} :insert_regionId_value
-<#assign prefixName = ','>
-</#if>
-<#if (insert_regionName??) && (insert_regionName_value??)>
-${prefixName} :insert_regionName_value
 <#assign prefixName = ','>
 </#if>
 <#if (insert_roleCodes??) && (insert_roleCodes_value??)>
@@ -247,6 +247,14 @@ ${prefixName} E.LAST_MODIFIED_DATE IS NULL
 </#if>
 <#assign prefixName = 'AND'>
 </#if>
+<#if (where_and_eq_name??)>
+<#if (where_and_eq_name_value??)>
+${prefixName} E.NAME = :where_and_eq_name_value
+<#else>
+${prefixName} E.NAME IS NULL
+</#if>
+<#assign prefixName = 'AND'>
+</#if>
 <#if (where_and_eq_parentCode??)>
 <#if (where_and_eq_parentCode_value??)>
 ${prefixName} E.PARENT_CODE = :where_and_eq_parentCode_value
@@ -300,14 +308,6 @@ ${prefixName} E.REGION_CODE IS NULL
 ${prefixName} E.REGION_ID = :where_and_eq_regionId_value
 <#else>
 ${prefixName} E.REGION_ID IS NULL
-</#if>
-<#assign prefixName = 'AND'>
-</#if>
-<#if (where_and_eq_regionName??)>
-<#if (where_and_eq_regionName_value??)>
-${prefixName} E.REGION_NAME = :where_and_eq_regionName_value
-<#else>
-${prefixName} E.REGION_NAME IS NULL
 </#if>
 <#assign prefixName = 'AND'>
 </#if>

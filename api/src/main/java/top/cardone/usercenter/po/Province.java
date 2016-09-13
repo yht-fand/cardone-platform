@@ -60,6 +60,13 @@ public class Province implements java.io.Serializable {
     protected Date lastModifiedDate;
 
     /**
+     * 名称
+     */
+    @lombok.Getter
+    @lombok.Setter
+    protected String name;
+
+    /**
      * 许可代码集合
      */
     @lombok.Getter
@@ -79,13 +86,6 @@ public class Province implements java.io.Serializable {
     @lombok.Getter
     @lombok.Setter
     protected String provinceId;
-
-    /**
-     * 省份名称
-     */
-    @lombok.Getter
-    @lombok.Setter
-    protected String provinceName;
 
     /**
      * 角色代码集合

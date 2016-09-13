@@ -9,10 +9,6 @@ ${prefixName} `AREA_CODE`
 ${prefixName} `AREA_ID`
 <#assign prefixName = ','>
 </#if>
-<#if (insert_areaName??) && (insert_areaName_value??)>
-${prefixName} `AREA_NAME`
-<#assign prefixName = ','>
-</#if>
 <#if (insert_beginDate??) && (insert_beginDate_value??)>
 ${prefixName} `BEGIN_DATE`
 <#assign prefixName = ','>
@@ -45,8 +41,16 @@ ${prefixName} `LAST_MODIFIED_BY_CODE`
 ${prefixName} `LAST_MODIFIED_DATE`
 <#assign prefixName = ','>
 </#if>
+<#if (insert_name??) && (insert_name_value??)>
+${prefixName} `NAME`
+<#assign prefixName = ','>
+</#if>
 <#if (insert_permissionCodes??) && (insert_permissionCodes_value??)>
 ${prefixName} `PERMISSION_CODES`
+<#assign prefixName = ','>
+</#if>
+<#if (insert_provinceCode??) && (insert_provinceCode_value??)>
+${prefixName} `PROVINCE_CODE`
 <#assign prefixName = ','>
 </#if>
 <#if (insert_roleCodes??) && (insert_roleCodes_value??)>
@@ -74,10 +78,6 @@ ${prefixName} :insert_areaCode_value
 </#if>
 <#if (insert_areaId??) && (insert_areaId_value??)>
 ${prefixName} :insert_areaId_value
-<#assign prefixName = ','>
-</#if>
-<#if (insert_areaName??) && (insert_areaName_value??)>
-${prefixName} :insert_areaName_value
 <#assign prefixName = ','>
 </#if>
 <#if (insert_beginDate??) && (insert_beginDate_value??)>
@@ -112,8 +112,16 @@ ${prefixName} :insert_lastModifiedByCode_value
 ${prefixName} :insert_lastModifiedDate_value
 <#assign prefixName = ','>
 </#if>
+<#if (insert_name??) && (insert_name_value??)>
+${prefixName} :insert_name_value
+<#assign prefixName = ','>
+</#if>
 <#if (insert_permissionCodes??) && (insert_permissionCodes_value??)>
 ${prefixName} :insert_permissionCodes_value
+<#assign prefixName = ','>
+</#if>
+<#if (insert_provinceCode??) && (insert_provinceCode_value??)>
+${prefixName} :insert_provinceCode_value
 <#assign prefixName = ','>
 </#if>
 <#if (insert_roleCodes??) && (insert_roleCodes_value??)>

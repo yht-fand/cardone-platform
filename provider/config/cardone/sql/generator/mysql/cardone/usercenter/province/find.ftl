@@ -28,6 +28,10 @@ ${prefixName} `LAST_MODIFIED_BY_CODE`
 ${prefixName} `LAST_MODIFIED_DATE`
 <#assign prefixName = ','>
 </#if>
+<#if (select_name??)>
+${prefixName} `NAME`
+<#assign prefixName = ','>
+</#if>
 <#if (select_permissionCodes??)>
 ${prefixName} `PERMISSION_CODES`
 <#assign prefixName = ','>
@@ -38,10 +42,6 @@ ${prefixName} `PROVINCE_CODE`
 </#if>
 <#if (select_provinceId??)>
 ${prefixName} `PROVINCE_ID`
-<#assign prefixName = ','>
-</#if>
-<#if (select_provinceName??)>
-${prefixName} `PROVINCE_NAME`
 <#assign prefixName = ','>
 </#if>
 <#if (select_roleCodes??)>
@@ -68,10 +68,10 @@ ${prefixName} `WF_ID`
 , `END_DATE`
 , `LAST_MODIFIED_BY_CODE`
 , `LAST_MODIFIED_DATE`
+, `NAME`
 , `PERMISSION_CODES`
 , `PROVINCE_CODE`
 , `PROVINCE_ID`
-, `PROVINCE_NAME`
 , `ROLE_CODES`
 , `STATE_CODE`
 , `VERSION_`
@@ -108,6 +108,10 @@ ${prefixName} `LAST_MODIFIED_BY_CODE` ${order_by_lastModifiedByCode_value!}
 ${prefixName} `LAST_MODIFIED_DATE` ${order_by_lastModifiedDate_value!}
 <#assign prefixName = ','>
 </#if>
+<#if (order_by_name??)>
+${prefixName} `NAME` ${order_by_name_value!}
+<#assign prefixName = ','>
+</#if>
 <#if (order_by_permissionCodes??)>
 ${prefixName} `PERMISSION_CODES` ${order_by_permissionCodes_value!}
 <#assign prefixName = ','>
@@ -118,10 +122,6 @@ ${prefixName} `PROVINCE_CODE` ${order_by_provinceCode_value!}
 </#if>
 <#if (order_by_provinceId??)>
 ${prefixName} `PROVINCE_ID` ${order_by_provinceId_value!}
-<#assign prefixName = ','>
-</#if>
-<#if (order_by_provinceName??)>
-${prefixName} `PROVINCE_NAME` ${order_by_provinceName_value!}
 <#assign prefixName = ','>
 </#if>
 <#if (order_by_roleCodes??)>

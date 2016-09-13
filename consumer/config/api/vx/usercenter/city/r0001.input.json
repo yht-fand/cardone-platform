@@ -11,10 +11,6 @@
     "newName": "cityId",
     "funcBeanIds": "escapeSqlFunc"
   },
-  "cityName": {
-    "newName": "cityName",
-    "funcBeanIds": "escapeSqlFunc"
-  },
   "createdByCode": {
     "newName": "createdByCode",
     "funcBeanIds": "escapeSqlFunc"
@@ -39,8 +35,16 @@
     "newName": "lastModifiedDate",
     "funcBeanIds": "escapeSqlFunc"
   },
+  "name": {
+    "newName": "name",
+    "funcBeanIds": "escapeSqlFunc"
+  },
   "permissionCodes": {
     "newName": "permissionCodes",
+    "funcBeanIds": "escapeSqlFunc"
+  },
+  "provinceCode": {
+    "newName": "provinceCode",
     "funcBeanIds": "escapeSqlFunc"
   },
   "roleCodes": {

@@ -12,10 +12,6 @@ ${prefixName} `CITY_CODE`
 ${prefixName} `CITY_ID`
 <#assign prefixName = ','>
 </#if>
-<#if (select_cityName??)>
-${prefixName} `CITY_NAME`
-<#assign prefixName = ','>
-</#if>
 <#if (select_createdByCode??)>
 ${prefixName} `CREATED_BY_CODE`
 <#assign prefixName = ','>
@@ -40,8 +36,16 @@ ${prefixName} `LAST_MODIFIED_BY_CODE`
 ${prefixName} `LAST_MODIFIED_DATE`
 <#assign prefixName = ','>
 </#if>
+<#if (select_name??)>
+${prefixName} `NAME`
+<#assign prefixName = ','>
+</#if>
 <#if (select_permissionCodes??)>
 ${prefixName} `PERMISSION_CODES`
+<#assign prefixName = ','>
+</#if>
+<#if (select_provinceCode??)>
+${prefixName} `PROVINCE_CODE`
 <#assign prefixName = ','>
 </#if>
 <#if (select_roleCodes??)>
@@ -64,14 +68,15 @@ ${prefixName} `WF_ID`
   `BEGIN_DATE`
 , `CITY_CODE`
 , `CITY_ID`
-, `CITY_NAME`
 , `CREATED_BY_CODE`
 , `CREATED_DATE`
 , `DATA_STATE_CODE`
 , `END_DATE`
 , `LAST_MODIFIED_BY_CODE`
 , `LAST_MODIFIED_DATE`
+, `NAME`
 , `PERMISSION_CODES`
+, `PROVINCE_CODE`
 , `ROLE_CODES`
 , `STATE_CODE`
 , `VERSION_`
@@ -90,10 +95,6 @@ ${prefixName} `CITY_CODE` ${order_by_cityCode_value!}
 </#if>
 <#if (order_by_cityId??)>
 ${prefixName} `CITY_ID` ${order_by_cityId_value!}
-<#assign prefixName = ','>
-</#if>
-<#if (order_by_cityName??)>
-${prefixName} `CITY_NAME` ${order_by_cityName_value!}
 <#assign prefixName = ','>
 </#if>
 <#if (order_by_createdByCode??)>
@@ -120,8 +121,16 @@ ${prefixName} `LAST_MODIFIED_BY_CODE` ${order_by_lastModifiedByCode_value!}
 ${prefixName} `LAST_MODIFIED_DATE` ${order_by_lastModifiedDate_value!}
 <#assign prefixName = ','>
 </#if>
+<#if (order_by_name??)>
+${prefixName} `NAME` ${order_by_name_value!}
+<#assign prefixName = ','>
+</#if>
 <#if (order_by_permissionCodes??)>
 ${prefixName} `PERMISSION_CODES` ${order_by_permissionCodes_value!}
+<#assign prefixName = ','>
+</#if>
+<#if (order_by_provinceCode??)>
+${prefixName} `PROVINCE_CODE` ${order_by_provinceCode_value!}
 <#assign prefixName = ','>
 </#if>
 <#if (order_by_roleCodes??)>

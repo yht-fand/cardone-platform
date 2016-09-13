@@ -55,6 +55,14 @@ ${prefixName} `LAST_MODIFIED_DATE` IS NULL
 </#if>
 <#assign prefixName = 'AND'>
 </#if>
+<#if (where_and_eq_name??)>
+<#if (where_and_eq_name_value??)>
+${prefixName} `NAME` = :where_and_eq_name_value
+<#else>
+${prefixName} `NAME` IS NULL
+</#if>
+<#assign prefixName = 'AND'>
+</#if>
 <#if (where_and_eq_permissionCodes??)>
 <#if (where_and_eq_permissionCodes_value??)>
 ${prefixName} `PERMISSION_CODES` = :where_and_eq_permissionCodes_value
@@ -76,14 +84,6 @@ ${prefixName} `PROVINCE_CODE` IS NULL
 ${prefixName} `PROVINCE_ID` = :where_and_eq_provinceId_value
 <#else>
 ${prefixName} `PROVINCE_ID` IS NULL
-</#if>
-<#assign prefixName = 'AND'>
-</#if>
-<#if (where_and_eq_provinceName??)>
-<#if (where_and_eq_provinceName_value??)>
-${prefixName} `PROVINCE_NAME` = :where_and_eq_provinceName_value
-<#else>
-${prefixName} `PROVINCE_NAME` IS NULL
 </#if>
 <#assign prefixName = 'AND'>
 </#if>

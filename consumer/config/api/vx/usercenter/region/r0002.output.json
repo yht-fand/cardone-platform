@@ -26,6 +26,9 @@
   "LAST_MODIFIED_DATE": {
     "newName": "lastModifiedDate"
   },
+  "NAME": {
+    "newName": "name"
+  },
   "PARENT_CODE": {
     "newName": "parentCode"
   },
@@ -46,9 +49,6 @@
   },
   "REGION_ID": {
     "newName": "regionId"
-  },
-  "REGION_NAME": {
-    "newName": "regionName"
   },
   "ROLE_CODES": {
     "newName": "roleCodes"

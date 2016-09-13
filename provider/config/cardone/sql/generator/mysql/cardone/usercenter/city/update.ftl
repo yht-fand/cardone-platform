@@ -12,10 +12,6 @@ ${prefixName} `CITY_CODE` = :update_cityCode_value
 ${prefixName} `CITY_ID` = :update_cityId_value
 <#assign prefixName = ','>
 </#if>
-<#if (update_cityName??)>
-${prefixName} `CITY_NAME` = :update_cityName_value
-<#assign prefixName = ','>
-</#if>
 <#if (update_createdByCode??)>
 ${prefixName} `CREATED_BY_CODE` = :update_createdByCode_value
 <#assign prefixName = ','>
@@ -40,8 +36,16 @@ ${prefixName} `LAST_MODIFIED_BY_CODE` = :update_lastModifiedByCode_value
 ${prefixName} `LAST_MODIFIED_DATE` = :update_lastModifiedDate_value
 <#assign prefixName = ','>
 </#if>
+<#if (update_name??)>
+${prefixName} `NAME` = :update_name_value
+<#assign prefixName = ','>
+</#if>
 <#if (update_permissionCodes??)>
 ${prefixName} `PERMISSION_CODES` = :update_permissionCodes_value
+<#assign prefixName = ','>
+</#if>
+<#if (update_provinceCode??)>
+${prefixName} `PROVINCE_CODE` = :update_provinceCode_value
 <#assign prefixName = ','>
 </#if>
 <#if (update_roleCodes??)>

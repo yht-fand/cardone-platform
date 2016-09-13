@@ -13,10 +13,6 @@ ${prefixName} `CITY_CODE`
 ${prefixName} `CITY_ID`
 <#assign prefixName = ','>
 </#if>
-<#if (insert_cityName??) && (insert_cityName_value??)>
-${prefixName} `CITY_NAME`
-<#assign prefixName = ','>
-</#if>
 <#if (insert_createdByCode??) && (insert_createdByCode_value??)>
 ${prefixName} `CREATED_BY_CODE`
 <#assign prefixName = ','>
@@ -41,8 +37,16 @@ ${prefixName} `LAST_MODIFIED_BY_CODE`
 ${prefixName} `LAST_MODIFIED_DATE`
 <#assign prefixName = ','>
 </#if>
+<#if (insert_name??) && (insert_name_value??)>
+${prefixName} `NAME`
+<#assign prefixName = ','>
+</#if>
 <#if (insert_permissionCodes??) && (insert_permissionCodes_value??)>
 ${prefixName} `PERMISSION_CODES`
+<#assign prefixName = ','>
+</#if>
+<#if (insert_provinceCode??) && (insert_provinceCode_value??)>
+${prefixName} `PROVINCE_CODE`
 <#assign prefixName = ','>
 </#if>
 <#if (insert_roleCodes??) && (insert_roleCodes_value??)>
@@ -76,10 +80,6 @@ ${prefixName} :insert_cityCode_value
 ${prefixName} :insert_cityId_value
 <#assign prefixName = ','>
 </#if>
-<#if (insert_cityName??) && (insert_cityName_value??)>
-${prefixName} :insert_cityName_value
-<#assign prefixName = ','>
-</#if>
 <#if (insert_createdByCode??) && (insert_createdByCode_value??)>
 ${prefixName} :insert_createdByCode_value
 <#assign prefixName = ','>
@@ -104,8 +104,16 @@ ${prefixName} :insert_lastModifiedByCode_value
 ${prefixName} :insert_lastModifiedDate_value
 <#assign prefixName = ','>
 </#if>
+<#if (insert_name??) && (insert_name_value??)>
+${prefixName} :insert_name_value
+<#assign prefixName = ','>
+</#if>
 <#if (insert_permissionCodes??) && (insert_permissionCodes_value??)>
 ${prefixName} :insert_permissionCodes_value
+<#assign prefixName = ','>
+</#if>
+<#if (insert_provinceCode??) && (insert_provinceCode_value??)>
+${prefixName} :insert_provinceCode_value
 <#assign prefixName = ','>
 </#if>
 <#if (insert_roleCodes??) && (insert_roleCodes_value??)>

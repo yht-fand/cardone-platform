@@ -35,6 +35,10 @@
     "newName": "lastModifiedDate",
     "funcBeanIds": "escapeSqlFunc"
   },
+  "name": {
+    "newName": "name",
+    "funcBeanIds": "escapeSqlFunc"
+  },
   "parentCode": {
     "newName": "parentCode",
     "funcBeanIds": "escapeSqlFunc"
@@ -61,10 +65,6 @@
   },
   "regionId": {
     "newName": "regionId",
-    "funcBeanIds": "escapeSqlFunc"
-  },
-  "regionName": {
-    "newName": "regionName",
     "funcBeanIds": "escapeSqlFunc"
   },
   "roleCodes": {

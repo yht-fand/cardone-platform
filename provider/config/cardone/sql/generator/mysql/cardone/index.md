@@ -161,10 +161,10 @@ DATA_STATE_CODE|YES|String(255)|数据状态代码
 END_DATE|YES|Date(19)|结束时间
 LAST_MODIFIED_BY_CODE|YES|String(255)|最后修改人代码
 LAST_MODIFIED_DATE|YES|Date(19)|最后修改时间
+NAME|NO|String(255)|名称
 PERMISSION_CODES|YES|String(1023)|许可代码集合
 PROVINCE_CODE|NO|String(255)|省份代码
 PROVINCE_ID|NO|String(255)|省份标识
-PROVINCE_NAME|NO|String(255)|省份名称
 ROLE_CODES|YES|String(1023)|角色代码集合
 STATE_CODE|YES|String(255)|状态代码
 VERSION_|YES|Long(10)|版本
@@ -177,14 +177,15 @@ WF_ID|YES|String(255)|工作流标识
 BEGIN_DATE|YES|Date(19)|开始时间
 CITY_CODE|NO|String(255)|城市代码
 CITY_ID|NO|String(255)|城市标识
-CITY_NAME|NO|String(255)|城市名称
 CREATED_BY_CODE|YES|String(255)|创建人代码
 CREATED_DATE|YES|Date(19)|创建时间
 DATA_STATE_CODE|YES|String(255)|数据状态代码
 END_DATE|YES|Date(19)|结束时间
 LAST_MODIFIED_BY_CODE|YES|String(255)|最后修改人代码
 LAST_MODIFIED_DATE|YES|Date(19)|最后修改时间
+NAME|NO|String(255)|名称
 PERMISSION_CODES|YES|String(1023)|许可代码集合
+PROVINCE_CODE|NO|String(255)|省份代码
 ROLE_CODES|YES|String(1023)|角色代码集合
 STATE_CODE|YES|String(255)|状态代码
 VERSION_|YES|Long(10)|版本
@@ -196,7 +197,6 @@ WF_ID|YES|String(255)|工作流标识
 ---|---|---|---
 AREA_CODE|NO|String(255)|地区代码
 AREA_ID|NO|String(255)|地区标识
-AREA_NAME|NO|String(255)|地区名称
 BEGIN_DATE|YES|Date(19)|开始时间
 CITY_CODE|YES|String(255)|城市代码
 CREATED_BY_CODE|YES|String(255)|创建人代码
@@ -205,7 +205,9 @@ DATA_STATE_CODE|YES|String(255)|数据状态代码
 END_DATE|YES|Date(19)|结束时间
 LAST_MODIFIED_BY_CODE|YES|String(255)|最后修改人代码
 LAST_MODIFIED_DATE|YES|Date(19)|最后修改时间
+NAME|NO|String(255)|名称
 PERMISSION_CODES|YES|String(1023)|许可代码集合
+PROVINCE_CODE|NO|String(255)|省份代码
 ROLE_CODES|YES|String(1023)|角色代码集合
 STATE_CODE|YES|String(255)|状态代码
 VERSION_|YES|Long(10)|版本
@@ -224,6 +226,7 @@ DATA_STATE_CODE|YES|String(255)|数据状态代码
 END_DATE|YES|Date(19)|结束时间
 LAST_MODIFIED_BY_CODE|YES|String(255)|最后修改人代码
 LAST_MODIFIED_DATE|YES|Date(19)|最后修改时间
+NAME|NO|String(255)|名称
 PARENT_CODE|YES|String(255)|父级代码
 PARENT_TREE_CODE|YES|String(1023)|父级树代码
 PARENT_TREE_NAME|YES|String(1023)|父级树名称
@@ -231,7 +234,6 @@ PERMISSION_CODES|YES|String(1023)|许可代码集合
 PROVINCE_CODE|YES|String(255)|省份代码
 REGION_CODE|NO|String(255)|区域代码
 REGION_ID|NO|String(255)|区域标识
-REGION_NAME|NO|String(255)|区域名称
 ROLE_CODES|YES|String(1023)|角色代码集合
 STATE_CODE|YES|String(255)|状态代码
 VERSION_|YES|Long(10)|版本
