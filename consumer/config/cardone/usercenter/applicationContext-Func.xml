@@ -44,4 +44,9 @@
           class="top.cardone.usercenter.func.GenerateRegionTreeFunc"/>
 
     <alias name="top.cardone.usercenter.func.GenerateRegionTreeFunc" alias="generateRegionTreeFunc"/>
+
+    <bean name="top.cardone.usercenter.func.FindListRegionForTreeFunc"
+          class="top.cardone.usercenter.func.FindListRegionForTreeFunc"/>
+
+    <alias name="top.cardone.usercenter.func.FindListRegionForTreeFunc" alias="findListRegionForTreeFunc"/>
 </beans>

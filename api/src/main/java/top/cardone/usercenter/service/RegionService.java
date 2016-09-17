@@ -190,4 +190,6 @@ public interface RegionService extends PageService {
      * @return
      */
     List<Map<String, Object>> findListByName(Map<String, Object> findList);
+
+    List<Map<String, Object>> findListByRegionCode(String regionCode);
 }

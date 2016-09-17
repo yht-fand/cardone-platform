@@ -25,4 +25,15 @@ public class RegionDaoImpl extends PageDaoImpl implements top.cardone.usercenter
 
         return this.findList(findOneSqlFilePath, findList);
     }
+
+    @Override
+    public List<Map<String, Object>> findListByRegionCode(String regionCode) {
+        String findOneSqlFilePath = this.getSqlFilePath("findListByRegionCode");
+
+        Map<String, Object> findList = Maps.newHashMap();
+
+        findList.put("regionCode", regionCode);
+
+        return this.findList(findOneSqlFilePath, findList);
+    }
 }
