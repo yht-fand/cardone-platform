@@ -1,1 +1,1 @@
-UPDATE c1_open_user SET END_DATE = NOW() WHERE INSTR(:ids, openUserId) > 0
+UPDATE c1_open_user SET END_DATE = NOW(), DATA_STATE_CODE = '0' WHERE INSTR(:openUserIds, OPEN_USER_ID) > 0

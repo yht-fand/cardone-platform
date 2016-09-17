@@ -1,1 +1,1 @@
-UPDATE c1_area SET END_DATE = NOW() WHERE INSTR(:ids, areaId) > 0
+UPDATE c1_area SET END_DATE = NOW(), DATA_STATE_CODE = '0' WHERE INSTR(:areaIds, AREA_ID) > 0

@@ -1,4 +1,4 @@
 SELECT
-COUNT(1) AS COUNT_
-FROM c1_user_department
+COUNT(1)
+FROM c1_user_department t
 <#include "page.where.ftl">

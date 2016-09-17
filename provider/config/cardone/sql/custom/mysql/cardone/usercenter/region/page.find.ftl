@@ -40,6 +40,6 @@ WHERE t.REGION_id =:regionId
     <#include "page.where.ftl">
 ORDER BY t.`PARENT_CODE`,
 t.`REGION_CODE`,
-t.`CREATED_BY_CODE`
+t.`CREATED_BY_DATE`
 limit <#if offset??>:offset<#else>0</#if> , <#if pageSize??>:pageSize<#else>10</#if>
 </#if>

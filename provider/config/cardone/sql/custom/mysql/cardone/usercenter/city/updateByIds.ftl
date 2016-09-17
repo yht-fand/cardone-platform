@@ -1,1 +1,1 @@
-UPDATE c1_city SET END_DATE = NOW() WHERE INSTR(:ids, cityId) > 0
+UPDATE c1_city SET END_DATE = NOW(), DATA_STATE_CODE = '0' WHERE INSTR(:cityIds, CITY_ID) > 0

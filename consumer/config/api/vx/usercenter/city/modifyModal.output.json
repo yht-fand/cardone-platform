@@ -1,0 +1,50 @@
+{
+  "BEGIN_DATE": {
+    "newName": "beginDate"
+  },
+  "CITY_CODE": {
+    "newName": "cityCode"
+  },
+  "CITY_ID": {
+    "newName": "cityId"
+  },
+  "CREATED_BY_CODE": {
+    "newName": "createdByCode"
+  },
+  "CREATED_DATE": {
+    "newName": "createdDate"
+  },
+  "DATA_STATE_CODE": {
+    "newName": "dataStateCode"
+  },
+  "END_DATE": {
+    "newName": "endDate"
+  },
+  "LAST_MODIFIED_BY_CODE": {
+    "newName": "lastModifiedByCode"
+  },
+  "LAST_MODIFIED_DATE": {
+    "newName": "lastModifiedDate"
+  },
+  "NAME": {
+    "newName": "name"
+  },
+  "PERMISSION_CODES": {
+    "newName": "permissionCodes"
+  },
+  "PROVINCE_CODE": {
+    "newName": "provinceCode"
+  },
+  "ROLE_CODES": {
+    "newName": "roleCodes"
+  },
+  "STATE_CODE": {
+    "newName": "stateCode"
+  },
+  "VERSION_": {
+    "newName": "version"
+  },
+  "WF_ID": {
+    "newName": "wfId"
+  }
+}

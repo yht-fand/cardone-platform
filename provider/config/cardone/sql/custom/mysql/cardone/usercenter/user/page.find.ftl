@@ -16,6 +16,6 @@ WHERE t.user_id = :userId
     <#include "page.where.ftl">
 ORDER BY t.`DEPARTMENT_CODE`,
 t.`USER_CODE`,
-t.`CREATED_BY_CODE`
+t.`CREATED_BY_DATE`
 limit <#if offset??>:offset<#else>0</#if> , <#if pageSize??>:pageSize<#else>10</#if>
 </#if>

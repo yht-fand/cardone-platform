@@ -1,0 +1,146 @@
+{
+  "ADDRESS": {
+    "newName": "address"
+  },
+  "AGE": {
+    "newName": "age"
+  },
+  "AREA_CODE": {
+    "newName": "areaCode"
+  },
+  "BEGIN_DATE": {
+    "newName": "beginDate"
+  },
+  "BIRTHDAY": {
+    "newName": "birthday"
+  },
+  "CALL_NAME": {
+    "newName": "callName"
+  },
+  "CITY_CODE": {
+    "newName": "cityCode"
+  },
+  "COMPANY_NAME": {
+    "newName": "companyName"
+  },
+  "CONTACT": {
+    "newName": "contact"
+  },
+  "COUNTRY_CODE": {
+    "newName": "countryCode"
+  },
+  "CREATED_BY_CODE": {
+    "newName": "createdByCode"
+  },
+  "CREATED_DATE": {
+    "newName": "createdDate"
+  },
+  "DATA_STATE_CODE": {
+    "newName": "dataStateCode"
+  },
+  "DEPARTMENT_CODE": {
+    "newName": "departmentCode"
+  },
+  "DIPLOMA_CODE": {
+    "newName": "diplomaCode"
+  },
+  "EMAIL": {
+    "newName": "email"
+  },
+  "END_DATE": {
+    "newName": "endDate"
+  },
+  "FLAG_CODE": {
+    "newName": "flagCode"
+  },
+  "FOLK_CODE": {
+    "newName": "folkCode"
+  },
+  "ID_CARD_CODE": {
+    "newName": "idCardCode"
+  },
+  "ID_CARD_NO": {
+    "newName": "idCardNo"
+  },
+  "INTRO": {
+    "newName": "intro"
+  },
+  "LAST_MODIFIED_BY_CODE": {
+    "newName": "lastModifiedByCode"
+  },
+  "LAST_MODIFIED_DATE": {
+    "newName": "lastModifiedDate"
+  },
+  "LOCUS": {
+    "newName": "locus"
+  },
+  "MARRY_STATE_CODE": {
+    "newName": "marryStateCode"
+  },
+  "MOBILE_PHONE": {
+    "newName": "mobilePhone"
+  },
+  "NAME": {
+    "newName": "name"
+  },
+  "ORG_CODE": {
+    "newName": "orgCode"
+  },
+  "PASSWORD_": {
+    "newName": "password"
+  },
+  "PASSWORD_SALT": {
+    "newName": "passwordSalt"
+  },
+  "PERMISSION_CODES": {
+    "newName": "permissionCodes"
+  },
+  "PORTRAIT_URL": {
+    "newName": "portraitUrl"
+  },
+  "PRIVATE_PASSWORD": {
+    "newName": "privatePassword"
+  },
+  "PRIVATE_PASSWORD_SALT": {
+    "newName": "privatePasswordSalt"
+  },
+  "PROFESSION_CODE": {
+    "newName": "professionCode"
+  },
+  "PROVINCE_CODE": {
+    "newName": "provinceCode"
+  },
+  "QQ": {
+    "newName": "qq"
+  },
+  "REGION_CODE2": {
+    "newName": "regionCode2"
+  },
+  "REMARK": {
+    "newName": "remark"
+  },
+  "ROLE_CODES": {
+    "newName": "roleCodes"
+  },
+  "SEX_CODE": {
+    "newName": "sexCode"
+  },
+  "STATE_CODE": {
+    "newName": "stateCode"
+  },
+  "TELEPHONE": {
+    "newName": "telephone"
+  },
+  "USER_CODE": {
+    "newName": "userCode"
+  },
+  "USER_ID": {
+    "newName": "userId"
+  },
+  "VERSION_": {
+    "newName": "version"
+  },
+  "WF_ID": {
+    "newName": "wfId"
+  }
+}

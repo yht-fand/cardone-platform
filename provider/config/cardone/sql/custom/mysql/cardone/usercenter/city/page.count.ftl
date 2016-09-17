@@ -1,4 +1,4 @@
 SELECT
-COUNT(1) AS COUNT_
-FROM c1_city
+COUNT(1)
+FROM c1_city t
 <#include "page.where.ftl">
