@@ -152,8 +152,8 @@ ${prefixName} `PROVINCE_CODE`
 ${prefixName} `QQ`
 <#assign prefixName = ','>
 </#if>
-<#if (select_regionCode2??)>
-${prefixName} `REGION_CODE2`
+<#if (select_regionCode??)>
+${prefixName} `REGION_CODE`
 <#assign prefixName = ','>
 </#if>
 <#if (select_remark??)>
@@ -231,7 +231,7 @@ ${prefixName} `WF_ID`
 , `PROFESSION_CODE`
 , `PROVINCE_CODE`
 , `QQ`
-, `REGION_CODE2`
+, `REGION_CODE`
 , `REMARK`
 , `ROLE_CODES`
 , `SEX_CODE`
@@ -397,8 +397,8 @@ ${prefixName} `PROVINCE_CODE` ${order_by_provinceCode_value!}
 ${prefixName} `QQ` ${order_by_qq_value!}
 <#assign prefixName = ','>
 </#if>
-<#if (order_by_regionCode2??)>
-${prefixName} `REGION_CODE2` ${order_by_regionCode2_value!}
+<#if (order_by_regionCode??)>
+${prefixName} `REGION_CODE` ${order_by_regionCode_value!}
 <#assign prefixName = ','>
 </#if>
 <#if (order_by_remark??)>

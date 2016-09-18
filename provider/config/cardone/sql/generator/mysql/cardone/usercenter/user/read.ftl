@@ -114,8 +114,8 @@ PROVINCE_CODE AS provinceCode
 <#case "qq">
 QQ AS qq
 <#break>
-<#case "regionCode2">
-REGION_CODE2 AS regionCode2
+<#case "regionCode">
+REGION_CODE AS regionCode
 <#break>
 <#case "remark">
 REMARK AS remark

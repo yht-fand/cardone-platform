@@ -153,8 +153,8 @@ ${prefixName} `PROVINCE_CODE`
 ${prefixName} `QQ`
 <#assign prefixName = ','>
 </#if>
-<#if (insert_regionCode2??) && (insert_regionCode2_value??)>
-${prefixName} `REGION_CODE2`
+<#if (insert_regionCode??) && (insert_regionCode_value??)>
+${prefixName} `REGION_CODE`
 <#assign prefixName = ','>
 </#if>
 <#if (insert_remark??) && (insert_remark_value??)>
@@ -348,8 +348,8 @@ ${prefixName} :insert_provinceCode_value
 ${prefixName} :insert_qq_value
 <#assign prefixName = ','>
 </#if>
-<#if (insert_regionCode2??) && (insert_regionCode2_value??)>
-${prefixName} :insert_regionCode2_value
+<#if (insert_regionCode??) && (insert_regionCode_value??)>
+${prefixName} :insert_regionCode_value
 <#assign prefixName = ','>
 </#if>
 <#if (insert_remark??) && (insert_remark_value??)>

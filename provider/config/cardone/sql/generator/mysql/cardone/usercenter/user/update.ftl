@@ -152,8 +152,8 @@ ${prefixName} `PROVINCE_CODE` = :update_provinceCode_value
 ${prefixName} `QQ` = :update_qq_value
 <#assign prefixName = ','>
 </#if>
-<#if (update_regionCode2??)>
-${prefixName} `REGION_CODE2` = :update_regionCode2_value
+<#if (update_regionCode??)>
+${prefixName} `REGION_CODE` = :update_regionCode_value
 <#assign prefixName = ','>
 </#if>
 <#if (update_remark??)>

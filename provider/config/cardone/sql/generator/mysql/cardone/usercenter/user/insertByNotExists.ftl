@@ -154,8 +154,8 @@ ${prefixName} `PROVINCE_CODE`
 ${prefixName} `QQ`
 <#assign prefixName = ','>
 </#if>
-<#if (insert_regionCode2??) && (insert_regionCode2_value??)>
-${prefixName} `REGION_CODE2`
+<#if (insert_regionCode??) && (insert_regionCode_value??)>
+${prefixName} `REGION_CODE`
 <#assign prefixName = ','>
 </#if>
 <#if (insert_remark??) && (insert_remark_value??)>
@@ -349,8 +349,8 @@ ${prefixName} :insert_provinceCode_value
 ${prefixName} :insert_qq_value
 <#assign prefixName = ','>
 </#if>
-<#if (insert_regionCode2??) && (insert_regionCode2_value??)>
-${prefixName} :insert_regionCode2_value
+<#if (insert_regionCode??) && (insert_regionCode_value??)>
+${prefixName} :insert_regionCode_value
 <#assign prefixName = ','>
 </#if>
 <#if (insert_remark??) && (insert_remark_value??)>
@@ -695,11 +695,11 @@ ${prefixName} E.QQ IS NULL
 </#if>
 <#assign prefixName = 'AND'>
 </#if>
-<#if (where_and_eq_regionCode2??)>
-<#if (where_and_eq_regionCode2_value??)>
-${prefixName} E.REGION_CODE2 = :where_and_eq_regionCode2_value
+<#if (where_and_eq_regionCode??)>
+<#if (where_and_eq_regionCode_value??)>
+${prefixName} E.REGION_CODE = :where_and_eq_regionCode_value
 <#else>
-${prefixName} E.REGION_CODE2 IS NULL
+${prefixName} E.REGION_CODE IS NULL
 </#if>
 <#assign prefixName = 'AND'>
 </#if>

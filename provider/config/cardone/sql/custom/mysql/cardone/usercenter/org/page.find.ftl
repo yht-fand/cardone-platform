@@ -40,6 +40,6 @@ WHERE t.ORG_id =:orgId
     <#include "page.where.ftl">
 ORDER BY t.`PARENT_CODE`,
 t.`ORG_CODE`,
-t.`CREATED_BY_DATE`
+t.`CREATED_DATE`
 limit <#if offset??>:offset<#else>0</#if> , <#if pageSize??>:pageSize<#else>10</#if>
 </#if>

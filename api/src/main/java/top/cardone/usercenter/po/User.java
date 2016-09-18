@@ -281,7 +281,7 @@ public class User implements java.io.Serializable {
      */
     @lombok.Getter
     @lombok.Setter
-    protected String regionCode2;
+    protected String regionCode;
 
     /**
      * 备注

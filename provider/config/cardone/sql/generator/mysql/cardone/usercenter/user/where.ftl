@@ -303,11 +303,11 @@ ${prefixName} `QQ` IS NULL
 </#if>
 <#assign prefixName = 'AND'>
 </#if>
-<#if (where_and_eq_regionCode2??)>
-<#if (where_and_eq_regionCode2_value??)>
-${prefixName} `REGION_CODE2` = :where_and_eq_regionCode2_value
+<#if (where_and_eq_regionCode??)>
+<#if (where_and_eq_regionCode_value??)>
+${prefixName} `REGION_CODE` = :where_and_eq_regionCode_value
 <#else>
-${prefixName} `REGION_CODE2` IS NULL
+${prefixName} `REGION_CODE` IS NULL
 </#if>
 <#assign prefixName = 'AND'>
 </#if>

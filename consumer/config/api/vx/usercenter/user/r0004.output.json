@@ -113,8 +113,8 @@
   "QQ": {
     "newName": "qq"
   },
-  "REGION_CODE2": {
-    "newName": "regionCode2"
+  "REGION_CODE": {
+    "newName": "regionCode"
   },
   "REMARK": {
     "newName": "remark"
