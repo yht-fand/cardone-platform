@@ -29,7 +29,7 @@ public class ReadOneCreatedByIdFunc extends ReadPrincipalFunc {
     }
 
     @Override
-    public String func(Map<String, Object> stringObjectMap) {
+    public String func(Object object) {
         return this.func();
     }
 }
