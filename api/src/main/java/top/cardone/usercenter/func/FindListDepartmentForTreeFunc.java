@@ -3,6 +3,7 @@ package top.cardone.usercenter.func;
 import com.google.common.collect.Lists;
 import com.google.common.collect.Maps;
 import lombok.Setter;
+import org.apache.commons.lang3.BooleanUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.shiro.SecurityUtils;
 import top.cardone.context.ApplicationContextHolder;
@@ -21,17 +22,26 @@ public class FindListDepartmentForTreeFunc implements Func1<List<Map<String, Obj
     @Setter
     private String departmentCodeKeyName = "departmentCode";
 
+    @Setter
+    private String isFindListAllKeyName = "isFindListAll";
+
     @Override
     public List<Map<String, Object>> func(Map<String, Object> params) {
-        String departmentCode = MapUtils.getString(params, departmentCodeKeyName);
+        String departmentCode = StringUtils.EMPTY;
 
-        if (StringUtils.isBlank(departmentCode)) {
+        String isFindListAll = MapUtils.getString(params, isFindListAllKeyName);
+
+        if (!BooleanUtils.isTrue(BooleanUtils.toBoolean(isFindListAll))) {
+            departmentCode = MapUtils.getString(params, departmentCodeKeyName);
+
+            if (StringUtils.isBlank(departmentCode)) {
             Map<String, Object> inputs = Maps.newHashMap();
 
             inputs.put("userCode", SecurityUtils.getSubject().getPrincipal());
             inputs.put("object_id", "departmentCode");
 
             departmentCode = ApplicationContextHolder.getBean(UserService.class).readOneCache(String.class, inputs);
+            }
         }
 
         List<Map<String, Object>> departmentList = ApplicationContextHolder.getBean(DepartmentService.class).findListByDepartmentCode(departmentCode);
