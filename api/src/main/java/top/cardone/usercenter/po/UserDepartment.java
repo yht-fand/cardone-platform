@@ -32,7 +32,7 @@ public class UserDepartment implements java.io.Serializable {
     protected Date createdDate;
 
     /**
-     * 数据状态代码
+     * 数据状态代码(数据字典)
      */
     @lombok.Getter
     @lombok.Setter
@@ -53,6 +53,27 @@ public class UserDepartment implements java.io.Serializable {
     protected Date endDate;
 
     /**
+     * 标记代码(数据字典：工作流、同步、生成、录入、审批)
+     */
+    @lombok.Getter
+    @lombok.Setter
+    protected String flagCode;
+
+    /**
+     * 标识对象代码(工作流：工作流标识、同步：批次号、生成：操作者编号、录入：操作者编号、审批：操作者编号)
+     */
+    @lombok.Getter
+    @lombok.Setter
+    protected String flagObjectCode;
+
+    /**
+     * JSON数据
+     */
+    @lombok.Getter
+    @lombok.Setter
+    protected String jsonData;
+
+    /**
      * 最后修改人代码
      */
     @lombok.Getter
@@ -67,6 +88,13 @@ public class UserDepartment implements java.io.Serializable {
     protected Date lastModifiedDate;
 
     /**
+     * 排序
+     */
+    @lombok.Getter
+    @lombok.Setter
+    protected Long order;
+
+    /**
      * 组织代码
      */
     @lombok.Getter
@@ -74,25 +102,25 @@ public class UserDepartment implements java.io.Serializable {
     protected String orgCode;
 
     /**
-     * 许可代码集合
+     * 站点代码
      */
     @lombok.Getter
     @lombok.Setter
-    protected String permissionCodes;
+    protected String siteCode;
 
     /**
-     * 角色代码集合
-     */
-    @lombok.Getter
-    @lombok.Setter
-    protected String roleCodes;
-
-    /**
-     * 状态代码
+     * 状态代码(数据字典)
      */
     @lombok.Getter
     @lombok.Setter
     protected String stateCode;
+
+    /**
+     * 系统信息代码
+     */
+    @lombok.Getter
+    @lombok.Setter
+    protected String systemInfoCode;
 
     /**
      * 用户代码
@@ -113,12 +141,5 @@ public class UserDepartment implements java.io.Serializable {
      */
     @lombok.Getter
     @lombok.Setter
-    protected Long version;
-
-    /**
-     * 工作流标识
-     */
-    @lombok.Getter
-    @lombok.Setter
-    protected String wfId;
+    protected Integer version;
 }

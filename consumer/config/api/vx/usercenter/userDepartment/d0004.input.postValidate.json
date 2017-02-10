@@ -1,0 +1,12 @@
+{
+  "rules": {
+    "userDepartmentIds": {
+      "required": true
+    }
+  },
+  "messages": {
+    "userDepartmentIds": {
+      "required": "用户与部门标识集合不能为空值!"
+    }
+  }
+}

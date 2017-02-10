@@ -1,0 +1,1 @@
+DELETE FROM c1_user_address WHERE INSTR(:userAddressIds, USER_ADDRESS_ID) > 0

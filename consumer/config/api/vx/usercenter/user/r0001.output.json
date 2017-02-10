@@ -1,146 +1,54 @@
 {
-  "ADDRESS": {
-    "newName": "address"
-  },
-  "AGE": {
-    "newName": "age"
-  },
-  "AREA_CODE": {
-    "newName": "areaCode"
-  },
-  "BEGIN_DATE": {
-    "newName": "beginDate"
-  },
-  "BIRTHDAY": {
-    "newName": "birthday"
-  },
-  "CALL_NAME": {
-    "newName": "callName"
-  },
-  "CITY_CODE": {
-    "newName": "cityCode"
-  },
-  "COMPANY_NAME": {
-    "newName": "companyName"
-  },
-  "CONTACT": {
-    "newName": "contact"
-  },
-  "COUNTRY_CODE": {
-    "newName": "countryCode"
-  },
-  "CREATED_BY_CODE": {
-    "newName": "createdByCode"
-  },
-  "CREATED_DATE": {
-    "newName": "createdDate"
-  },
-  "DATA_STATE_CODE": {
-    "newName": "dataStateCode"
-  },
-  "DEPARTMENT_CODE": {
-    "newName": "departmentCode"
-  },
-  "DIPLOMA_CODE": {
-    "newName": "diplomaCode"
-  },
-  "EMAIL": {
-    "newName": "email"
-  },
-  "END_DATE": {
-    "newName": "endDate"
-  },
-  "FLAG_CODE": {
-    "newName": "flagCode"
-  },
-  "FOLK_CODE": {
-    "newName": "folkCode"
-  },
-  "ID_CARD_CODE": {
-    "newName": "idCardCode"
-  },
-  "ID_CARD_NO": {
-    "newName": "idCardNo"
-  },
-  "INTRO": {
-    "newName": "intro"
-  },
-  "LAST_MODIFIED_BY_CODE": {
-    "newName": "lastModifiedByCode"
-  },
-  "LAST_MODIFIED_DATE": {
-    "newName": "lastModifiedDate"
-  },
-  "LOCUS": {
-    "newName": "locus"
-  },
-  "MARRY_STATE_CODE": {
-    "newName": "marryStateCode"
-  },
-  "MOBILE_PHONE": {
-    "newName": "mobilePhone"
-  },
-  "NAME": {
-    "newName": "name"
-  },
-  "ORG_CODE": {
-    "newName": "orgCode"
-  },
-  "PASSWORD_": {
-    "newName": "password"
-  },
-  "PASSWORD_SALT": {
-    "newName": "passwordSalt"
-  },
-  "PERMISSION_CODES": {
-    "newName": "permissionCodes"
-  },
-  "PORTRAIT_URL": {
-    "newName": "portraitUrl"
-  },
-  "PRIVATE_PASSWORD": {
-    "newName": "privatePassword"
-  },
-  "PRIVATE_PASSWORD_SALT": {
-    "newName": "privatePasswordSalt"
-  },
-  "PROFESSION_CODE": {
-    "newName": "professionCode"
-  },
-  "PROVINCE_CODE": {
-    "newName": "provinceCode"
-  },
-  "QQ": {
-    "newName": "qq"
-  },
-  "REGION_CODE": {
-    "newName": "regionCode"
-  },
-  "REMARK": {
-    "newName": "remark"
-  },
-  "ROLE_CODES": {
-    "newName": "roleCodes"
-  },
-  "SEX_CODE": {
-    "newName": "sexCode"
-  },
-  "STATE_CODE": {
-    "newName": "stateCode"
-  },
-  "TELEPHONE": {
-    "newName": "telephone"
-  },
-  "USER_CODE": {
-    "newName": "userCode"
-  },
-  "USER_ID": {
-    "newName": "userId"
-  },
-  "VERSION_": {
-    "newName": "version"
-  },
-  "WF_ID": {
-    "newName": "wfId"
-  }
+  "address": "ADDRESS",
+  "age": "AGE",
+  "aliasName": "ALIAS_NAME",
+  "areaCode": "AREA_CODE",
+  "beginDate": "BEGIN_DATE",
+  "birthday": "BIRTHDAY",
+  "callName": "CALL_NAME",
+  "cityCode": "CITY_CODE",
+  "companyName": "COMPANY_NAME",
+  "contact": "CONTACT",
+  "countryCode": "COUNTRY_CODE",
+  "createdByCode": "CREATED_BY_CODE",
+  "createdDate": "CREATED_DATE",
+  "dataStateCode": "DATA_STATE_CODE",
+  "departmentCode": "DEPARTMENT_CODE",
+  "diplomaCode": "DIPLOMA_CODE",
+  "email": "EMAIL",
+  "endDate": "END_DATE",
+  "flagCode": "FLAG_CODE",
+  "flagObjectCode": "FLAG_OBJECT_CODE",
+  "folkCode": "FOLK_CODE",
+  "idCardCode": "ID_CARD_CODE",
+  "idCardNo": "ID_CARD_NO",
+  "intro": "INTRO",
+  "jsonData": "JSON_DATA",
+  "lastModifiedByCode": "LAST_MODIFIED_BY_CODE",
+  "lastModifiedDate": "LAST_MODIFIED_DATE",
+  "locus": "LOCUS",
+  "marryStateCode": "MARRY_STATE_CODE",
+  "mobilePhone": "MOBILE_PHONE",
+  "name": "NAME",
+  "namePinyin": "NAME_PINYIN",
+  "order": "ORDER_",
+  "orgCode": "ORG_CODE",
+  "password": "PASSWORD_",
+  "passwordSalt": "PASSWORD_SALT",
+  "portraitUrl": "PORTRAIT_URL",
+  "privatePassword": "PRIVATE_PASSWORD",
+  "privatePasswordSalt": "PRIVATE_PASSWORD_SALT",
+  "professionCode": "PROFESSION_CODE",
+  "provinceCode": "PROVINCE_CODE",
+  "qq": "QQ",
+  "regionCode": "REGION_CODE",
+  "remark": "REMARK",
+  "sexCode": "SEX_CODE",
+  "siteCode": "SITE_CODE",
+  "stateCode": "STATE_CODE",
+  "systemInfoCode": "SYSTEM_INFO_CODE",
+  "telephone": "TELEPHONE",
+  "userCode": "USER_CODE",
+  "userId": "USER_ID",
+  "version": "VERSION_"
 }

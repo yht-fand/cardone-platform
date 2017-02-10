@@ -1,0 +1,12 @@
+{
+  "rules": {
+    "userIds": {
+      "required": true
+    }
+  },
+  "messages": {
+    "userIds": {
+      "required": "用户标识集合不能为空值!"
+    }
+  }
+}

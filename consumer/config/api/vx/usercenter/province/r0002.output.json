@@ -1,47 +1,23 @@
 {
-  "BEGIN_DATE": {
-    "newName": "beginDate"
-  },
-  "CREATED_BY_CODE": {
-    "newName": "createdByCode"
-  },
-  "CREATED_DATE": {
-    "newName": "createdDate"
-  },
-  "DATA_STATE_CODE": {
-    "newName": "dataStateCode"
-  },
-  "END_DATE": {
-    "newName": "endDate"
-  },
-  "LAST_MODIFIED_BY_CODE": {
-    "newName": "lastModifiedByCode"
-  },
-  "LAST_MODIFIED_DATE": {
-    "newName": "lastModifiedDate"
-  },
-  "NAME": {
-    "newName": "name"
-  },
-  "PERMISSION_CODES": {
-    "newName": "permissionCodes"
-  },
-  "PROVINCE_CODE": {
-    "newName": "provinceCode"
-  },
-  "PROVINCE_ID": {
-    "newName": "provinceId"
-  },
-  "ROLE_CODES": {
-    "newName": "roleCodes"
-  },
-  "STATE_CODE": {
-    "newName": "stateCode"
-  },
-  "VERSION_": {
-    "newName": "version"
-  },
-  "WF_ID": {
-    "newName": "wfId"
-  }
+  "beginDate": "BEGIN_DATE",
+  "countryCode": "COUNTRY_CODE",
+  "createdByCode": "CREATED_BY_CODE",
+  "createdDate": "CREATED_DATE",
+  "dataStateCode": "DATA_STATE_CODE",
+  "departmentCode": "DEPARTMENT_CODE",
+  "endDate": "END_DATE",
+  "flagCode": "FLAG_CODE",
+  "flagObjectCode": "FLAG_OBJECT_CODE",
+  "jsonData": "JSON_DATA",
+  "lastModifiedByCode": "LAST_MODIFIED_BY_CODE",
+  "lastModifiedDate": "LAST_MODIFIED_DATE",
+  "name": "NAME",
+  "order": "ORDER_",
+  "orgCode": "ORG_CODE",
+  "provinceCode": "PROVINCE_CODE",
+  "provinceId": "PROVINCE_ID",
+  "siteCode": "SITE_CODE",
+  "stateCode": "STATE_CODE",
+  "systemInfoCode": "SYSTEM_INFO_CODE",
+  "version": "VERSION_"
 }

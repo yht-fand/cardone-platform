@@ -12,6 +12,10 @@ ${prefixName} `CITY_CODE`
 ${prefixName} `CITY_ID`
 <#assign prefixName = ','>
 </#if>
+<#if (select_countryCode??)>
+${prefixName} `COUNTRY_CODE`
+<#assign prefixName = ','>
+</#if>
 <#if (select_createdByCode??)>
 ${prefixName} `CREATED_BY_CODE`
 <#assign prefixName = ','>
@@ -24,8 +28,24 @@ ${prefixName} `CREATED_DATE`
 ${prefixName} `DATA_STATE_CODE`
 <#assign prefixName = ','>
 </#if>
+<#if (select_departmentCode??)>
+${prefixName} `DEPARTMENT_CODE`
+<#assign prefixName = ','>
+</#if>
 <#if (select_endDate??)>
 ${prefixName} `END_DATE`
+<#assign prefixName = ','>
+</#if>
+<#if (select_flagCode??)>
+${prefixName} `FLAG_CODE`
+<#assign prefixName = ','>
+</#if>
+<#if (select_flagObjectCode??)>
+${prefixName} `FLAG_OBJECT_CODE`
+<#assign prefixName = ','>
+</#if>
+<#if (select_jsonData??)>
+${prefixName} `JSON_DATA`
 <#assign prefixName = ','>
 </#if>
 <#if (select_lastModifiedByCode??)>
@@ -40,47 +60,36 @@ ${prefixName} `LAST_MODIFIED_DATE`
 ${prefixName} `NAME`
 <#assign prefixName = ','>
 </#if>
-<#if (select_permissionCodes??)>
-${prefixName} `PERMISSION_CODES`
+<#if (select_order??)>
+${prefixName} `ORDER_`
+<#assign prefixName = ','>
+</#if>
+<#if (select_orgCode??)>
+${prefixName} `ORG_CODE`
 <#assign prefixName = ','>
 </#if>
 <#if (select_provinceCode??)>
 ${prefixName} `PROVINCE_CODE`
 <#assign prefixName = ','>
 </#if>
-<#if (select_roleCodes??)>
-${prefixName} `ROLE_CODES`
+<#if (select_siteCode??)>
+${prefixName} `SITE_CODE`
 <#assign prefixName = ','>
 </#if>
 <#if (select_stateCode??)>
 ${prefixName} `STATE_CODE`
 <#assign prefixName = ','>
 </#if>
+<#if (select_systemInfoCode??)>
+${prefixName} `SYSTEM_INFO_CODE`
+<#assign prefixName = ','>
+</#if>
 <#if (select_version??)>
 ${prefixName} `VERSION_`
 <#assign prefixName = ','>
 </#if>
-<#if (select_wfId??)>
-${prefixName} `WF_ID`
-<#assign prefixName = ','>
-</#if>
 <#if prefixName ==  ' '>
-  `BEGIN_DATE`
-, `CITY_CODE`
-, `CITY_ID`
-, `CREATED_BY_CODE`
-, `CREATED_DATE`
-, `DATA_STATE_CODE`
-, `END_DATE`
-, `LAST_MODIFIED_BY_CODE`
-, `LAST_MODIFIED_DATE`
-, `NAME`
-, `PERMISSION_CODES`
-, `PROVINCE_CODE`
-, `ROLE_CODES`
-, `STATE_CODE`
-, `VERSION_`
-, `WF_ID`
+*
 </#if>
 FROM c1_city
 <#include "where.ftl">
@@ -97,6 +106,10 @@ ${prefixName} `CITY_CODE` ${order_by_cityCode_value!}
 ${prefixName} `CITY_ID` ${order_by_cityId_value!}
 <#assign prefixName = ','>
 </#if>
+<#if (order_by_countryCode??)>
+${prefixName} `COUNTRY_CODE` ${order_by_countryCode_value!}
+<#assign prefixName = ','>
+</#if>
 <#if (order_by_createdByCode??)>
 ${prefixName} `CREATED_BY_CODE` ${order_by_createdByCode_value!}
 <#assign prefixName = ','>
@@ -109,8 +122,24 @@ ${prefixName} `CREATED_DATE` ${order_by_createdDate_value!}
 ${prefixName} `DATA_STATE_CODE` ${order_by_dataStateCode_value!}
 <#assign prefixName = ','>
 </#if>
+<#if (order_by_departmentCode??)>
+${prefixName} `DEPARTMENT_CODE` ${order_by_departmentCode_value!}
+<#assign prefixName = ','>
+</#if>
 <#if (order_by_endDate??)>
 ${prefixName} `END_DATE` ${order_by_endDate_value!}
+<#assign prefixName = ','>
+</#if>
+<#if (order_by_flagCode??)>
+${prefixName} `FLAG_CODE` ${order_by_flagCode_value!}
+<#assign prefixName = ','>
+</#if>
+<#if (order_by_flagObjectCode??)>
+${prefixName} `FLAG_OBJECT_CODE` ${order_by_flagObjectCode_value!}
+<#assign prefixName = ','>
+</#if>
+<#if (order_by_jsonData??)>
+${prefixName} `JSON_DATA` ${order_by_jsonData_value!}
 <#assign prefixName = ','>
 </#if>
 <#if (order_by_lastModifiedByCode??)>
@@ -125,27 +154,31 @@ ${prefixName} `LAST_MODIFIED_DATE` ${order_by_lastModifiedDate_value!}
 ${prefixName} `NAME` ${order_by_name_value!}
 <#assign prefixName = ','>
 </#if>
-<#if (order_by_permissionCodes??)>
-${prefixName} `PERMISSION_CODES` ${order_by_permissionCodes_value!}
+<#if (order_by_order??)>
+${prefixName} `ORDER_` ${order_by_order_value!}
+<#assign prefixName = ','>
+</#if>
+<#if (order_by_orgCode??)>
+${prefixName} `ORG_CODE` ${order_by_orgCode_value!}
 <#assign prefixName = ','>
 </#if>
 <#if (order_by_provinceCode??)>
 ${prefixName} `PROVINCE_CODE` ${order_by_provinceCode_value!}
 <#assign prefixName = ','>
 </#if>
-<#if (order_by_roleCodes??)>
-${prefixName} `ROLE_CODES` ${order_by_roleCodes_value!}
+<#if (order_by_siteCode??)>
+${prefixName} `SITE_CODE` ${order_by_siteCode_value!}
 <#assign prefixName = ','>
 </#if>
 <#if (order_by_stateCode??)>
 ${prefixName} `STATE_CODE` ${order_by_stateCode_value!}
 <#assign prefixName = ','>
 </#if>
-<#if (order_by_version??)>
-${prefixName} `VERSION_` ${order_by_version_value!}
+<#if (order_by_systemInfoCode??)>
+${prefixName} `SYSTEM_INFO_CODE` ${order_by_systemInfoCode_value!}
 <#assign prefixName = ','>
 </#if>
-<#if (order_by_wfId??)>
-${prefixName} `WF_ID` ${order_by_wfId_value!}
+<#if (order_by_version??)>
+${prefixName} `VERSION_` ${order_by_version_value!}
 <#assign prefixName = ','>
 </#if>

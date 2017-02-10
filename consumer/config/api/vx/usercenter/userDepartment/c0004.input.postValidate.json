@@ -1,0 +1,12 @@
+{
+  "rules": {
+    "userDepartmentCode": {
+      "required": true
+    }
+  },
+  "messages": {
+    "userDepartmentCode": {
+      "required": "用户与部门编号不能为空值!"
+    }
+  }
+}

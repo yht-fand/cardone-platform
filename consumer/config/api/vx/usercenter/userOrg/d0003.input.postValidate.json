@@ -1,0 +1,12 @@
+{
+  "rules": {
+    "userOrgIds": {
+      "required": true
+    }
+  },
+  "messages": {
+    "userOrgIds": {
+      "required": "用户与组织标识集合不能为空值!"
+    }
+  }
+}

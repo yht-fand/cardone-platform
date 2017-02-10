@@ -1,0 +1,12 @@
+{
+  "rules": {
+    "regionCode": {
+      "required": true
+    }
+  },
+  "messages": {
+    "regionCode": {
+      "required": "区域编号不能为空值!"
+    }
+  }
+}

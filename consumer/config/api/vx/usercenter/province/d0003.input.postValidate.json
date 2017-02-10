@@ -1,0 +1,12 @@
+{
+  "rules": {
+    "provinceIds": {
+      "required": true
+    }
+  },
+  "messages": {
+    "provinceIds": {
+      "required": "省份标识集合不能为空值!"
+    }
+  }
+}

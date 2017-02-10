@@ -6,6 +6,9 @@ ADDRESS AS address
 <#case "age">
 AGE AS age
 <#break>
+<#case "aliasName">
+ALIAS_NAME AS aliasName
+<#break>
 <#case "areaCode">
 AREA_CODE AS areaCode
 <#break>
@@ -54,6 +57,9 @@ END_DATE AS endDate
 <#case "flagCode">
 FLAG_CODE AS flagCode
 <#break>
+<#case "flagObjectCode">
+FLAG_OBJECT_CODE AS flagObjectCode
+<#break>
 <#case "folkCode">
 FOLK_CODE AS folkCode
 <#break>
@@ -65,6 +71,9 @@ ID_CARD_NO AS idCardNo
 <#break>
 <#case "intro">
 INTRO AS intro
+<#break>
+<#case "jsonData">
+JSON_DATA AS jsonData
 <#break>
 <#case "lastModifiedByCode">
 LAST_MODIFIED_BY_CODE AS lastModifiedByCode
@@ -84,6 +93,12 @@ MOBILE_PHONE AS mobilePhone
 <#case "name">
 NAME AS name
 <#break>
+<#case "namePinyin">
+NAME_PINYIN AS namePinyin
+<#break>
+<#case "order">
+ORDER_ AS order
+<#break>
 <#case "orgCode">
 ORG_CODE AS orgCode
 <#break>
@@ -92,9 +107,6 @@ PASSWORD_ AS password
 <#break>
 <#case "passwordSalt">
 PASSWORD_SALT AS passwordSalt
-<#break>
-<#case "permissionCodes">
-PERMISSION_CODES AS permissionCodes
 <#break>
 <#case "portraitUrl">
 PORTRAIT_URL AS portraitUrl
@@ -120,14 +132,17 @@ REGION_CODE AS regionCode
 <#case "remark">
 REMARK AS remark
 <#break>
-<#case "roleCodes">
-ROLE_CODES AS roleCodes
-<#break>
 <#case "sexCode">
 SEX_CODE AS sexCode
 <#break>
+<#case "siteCode">
+SITE_CODE AS siteCode
+<#break>
 <#case "stateCode">
 STATE_CODE AS stateCode
+<#break>
+<#case "systemInfoCode">
+SYSTEM_INFO_CODE AS systemInfoCode
 <#break>
 <#case "telephone">
 TELEPHONE AS telephone
@@ -140,9 +155,6 @@ USER_ID AS userId
 <#break>
 <#case "version">
 VERSION_ AS version
-<#break>
-<#case "wfId">
-WF_ID AS wfId
 <#break>
 <#default>
 COUNT(1) AS COUNT_

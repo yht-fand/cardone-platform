@@ -1,0 +1,12 @@
+{
+  "rules": {
+    "userOrgCode": {
+      "required": true
+    }
+  },
+  "messages": {
+    "userOrgCode": {
+      "required": "用户与组织编号不能为空值!"
+    }
+  }
+}

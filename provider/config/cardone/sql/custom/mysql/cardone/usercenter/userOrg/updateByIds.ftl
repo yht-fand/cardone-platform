@@ -1,0 +1,1 @@
+UPDATE c1_user_org SET END_DATE = NOW(), DATA_STATE_CODE = '0' WHERE INSTR(:userOrgIds, USER_ORG_ID) > 0

@@ -1,0 +1,12 @@
+{
+  "rules": {
+    "openUserId": {
+      "required": true
+    }
+  },
+  "messages": {
+    "openUserId": {
+      "required": "开放用户标识不能为空值!"
+    }
+  }
+}

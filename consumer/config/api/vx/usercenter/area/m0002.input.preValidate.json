@@ -1,0 +1,12 @@
+{
+  "rules": {
+    "areaId": {
+      "required": true
+    }
+  },
+  "messages": {
+    "areaId": {
+      "required": "地区标识不能为空值!"
+    }
+  }
+}

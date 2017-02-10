@@ -1,0 +1,12 @@
+{
+  "rules": {
+    "orgIds": {
+      "required": true
+    }
+  },
+  "messages": {
+    "orgIds": {
+      "required": "组织标识集合不能为空值!"
+    }
+  }
+}

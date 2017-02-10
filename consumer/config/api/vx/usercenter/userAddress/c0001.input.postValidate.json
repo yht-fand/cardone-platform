@@ -1,0 +1,12 @@
+{
+  "rules": {
+    "userAddressCode": {
+      "required": true
+    }
+  },
+  "messages": {
+    "userAddressCode": {
+      "required": "用户与地址编号不能为空值!"
+    }
+  }
+}

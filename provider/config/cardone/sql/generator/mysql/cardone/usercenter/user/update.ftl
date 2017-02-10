@@ -8,6 +8,10 @@ ${prefixName} `ADDRESS` = :update_address_value
 ${prefixName} `AGE` = :update_age_value
 <#assign prefixName = ','>
 </#if>
+<#if (update_aliasName??)>
+${prefixName} `ALIAS_NAME` = :update_aliasName_value
+<#assign prefixName = ','>
+</#if>
 <#if (update_areaCode??)>
 ${prefixName} `AREA_CODE` = :update_areaCode_value
 <#assign prefixName = ','>
@@ -72,6 +76,10 @@ ${prefixName} `END_DATE` = :update_endDate_value
 ${prefixName} `FLAG_CODE` = :update_flagCode_value
 <#assign prefixName = ','>
 </#if>
+<#if (update_flagObjectCode??)>
+${prefixName} `FLAG_OBJECT_CODE` = :update_flagObjectCode_value
+<#assign prefixName = ','>
+</#if>
 <#if (update_folkCode??)>
 ${prefixName} `FOLK_CODE` = :update_folkCode_value
 <#assign prefixName = ','>
@@ -86,6 +94,10 @@ ${prefixName} `ID_CARD_NO` = :update_idCardNo_value
 </#if>
 <#if (update_intro??)>
 ${prefixName} `INTRO` = :update_intro_value
+<#assign prefixName = ','>
+</#if>
+<#if (update_jsonData??)>
+${prefixName} `JSON_DATA` = :update_jsonData_value
 <#assign prefixName = ','>
 </#if>
 <#if (update_lastModifiedByCode??)>
@@ -112,6 +124,14 @@ ${prefixName} `MOBILE_PHONE` = :update_mobilePhone_value
 ${prefixName} `NAME` = :update_name_value
 <#assign prefixName = ','>
 </#if>
+<#if (update_namePinyin??)>
+${prefixName} `NAME_PINYIN` = :update_namePinyin_value
+<#assign prefixName = ','>
+</#if>
+<#if (update_order??)>
+${prefixName} `ORDER_` = :update_order_value
+<#assign prefixName = ','>
+</#if>
 <#if (update_orgCode??)>
 ${prefixName} `ORG_CODE` = :update_orgCode_value
 <#assign prefixName = ','>
@@ -122,10 +142,6 @@ ${prefixName} `PASSWORD_` = :update_password_value
 </#if>
 <#if (update_passwordSalt??)>
 ${prefixName} `PASSWORD_SALT` = :update_passwordSalt_value
-<#assign prefixName = ','>
-</#if>
-<#if (update_permissionCodes??)>
-${prefixName} `PERMISSION_CODES` = :update_permissionCodes_value
 <#assign prefixName = ','>
 </#if>
 <#if (update_portraitUrl??)>
@@ -160,16 +176,20 @@ ${prefixName} `REGION_CODE` = :update_regionCode_value
 ${prefixName} `REMARK` = :update_remark_value
 <#assign prefixName = ','>
 </#if>
-<#if (update_roleCodes??)>
-${prefixName} `ROLE_CODES` = :update_roleCodes_value
-<#assign prefixName = ','>
-</#if>
 <#if (update_sexCode??)>
 ${prefixName} `SEX_CODE` = :update_sexCode_value
 <#assign prefixName = ','>
 </#if>
+<#if (update_siteCode??)>
+${prefixName} `SITE_CODE` = :update_siteCode_value
+<#assign prefixName = ','>
+</#if>
 <#if (update_stateCode??)>
 ${prefixName} `STATE_CODE` = :update_stateCode_value
+<#assign prefixName = ','>
+</#if>
+<#if (update_systemInfoCode??)>
+${prefixName} `SYSTEM_INFO_CODE` = :update_systemInfoCode_value
 <#assign prefixName = ','>
 </#if>
 <#if (update_telephone??)>
@@ -186,10 +206,6 @@ ${prefixName} `USER_ID` = :update_userId_value
 </#if>
 <#if (update_version??)>
 ${prefixName} `VERSION_` = :update_version_value
-<#assign prefixName = ','>
-</#if>
-<#if (update_wfId??)>
-${prefixName} `WF_ID` = :update_wfId_value
 <#assign prefixName = ','>
 </#if>
 <#include "where.ftl">

@@ -23,6 +23,14 @@ ${prefixName} `CITY_CODE` IS NULL
 </#if>
 <#assign prefixName = 'AND'>
 </#if>
+<#if (where_and_eq_countryCode??)>
+<#if (where_and_eq_countryCode_value??)>
+${prefixName} `COUNTRY_CODE` = :where_and_eq_countryCode_value
+<#else>
+${prefixName} `COUNTRY_CODE` IS NULL
+</#if>
+<#assign prefixName = 'AND'>
+</#if>
 <#if (where_and_eq_createdByCode??)>
 <#if (where_and_eq_createdByCode_value??)>
 ${prefixName} `CREATED_BY_CODE` = :where_and_eq_createdByCode_value
@@ -47,11 +55,43 @@ ${prefixName} `DATA_STATE_CODE` IS NULL
 </#if>
 <#assign prefixName = 'AND'>
 </#if>
+<#if (where_and_eq_departmentCode??)>
+<#if (where_and_eq_departmentCode_value??)>
+${prefixName} `DEPARTMENT_CODE` = :where_and_eq_departmentCode_value
+<#else>
+${prefixName} `DEPARTMENT_CODE` IS NULL
+</#if>
+<#assign prefixName = 'AND'>
+</#if>
 <#if (where_and_eq_endDate??)>
 <#if (where_and_eq_endDate_value??)>
 ${prefixName} `END_DATE` = :where_and_eq_endDate_value
 <#else>
 ${prefixName} `END_DATE` IS NULL
+</#if>
+<#assign prefixName = 'AND'>
+</#if>
+<#if (where_and_eq_flagCode??)>
+<#if (where_and_eq_flagCode_value??)>
+${prefixName} `FLAG_CODE` = :where_and_eq_flagCode_value
+<#else>
+${prefixName} `FLAG_CODE` IS NULL
+</#if>
+<#assign prefixName = 'AND'>
+</#if>
+<#if (where_and_eq_flagObjectCode??)>
+<#if (where_and_eq_flagObjectCode_value??)>
+${prefixName} `FLAG_OBJECT_CODE` = :where_and_eq_flagObjectCode_value
+<#else>
+${prefixName} `FLAG_OBJECT_CODE` IS NULL
+</#if>
+<#assign prefixName = 'AND'>
+</#if>
+<#if (where_and_eq_jsonData??)>
+<#if (where_and_eq_jsonData_value??)>
+${prefixName} `JSON_DATA` = :where_and_eq_jsonData_value
+<#else>
+${prefixName} `JSON_DATA` IS NULL
 </#if>
 <#assign prefixName = 'AND'>
 </#if>
@@ -79,6 +119,22 @@ ${prefixName} `NAME` IS NULL
 </#if>
 <#assign prefixName = 'AND'>
 </#if>
+<#if (where_and_eq_order??)>
+<#if (where_and_eq_order_value??)>
+${prefixName} `ORDER_` = :where_and_eq_order_value
+<#else>
+${prefixName} `ORDER_` IS NULL
+</#if>
+<#assign prefixName = 'AND'>
+</#if>
+<#if (where_and_eq_orgCode??)>
+<#if (where_and_eq_orgCode_value??)>
+${prefixName} `ORG_CODE` = :where_and_eq_orgCode_value
+<#else>
+${prefixName} `ORG_CODE` IS NULL
+</#if>
+<#assign prefixName = 'AND'>
+</#if>
 <#if (where_and_eq_parentCode??)>
 <#if (where_and_eq_parentCode_value??)>
 ${prefixName} `PARENT_CODE` = :where_and_eq_parentCode_value
@@ -100,14 +156,6 @@ ${prefixName} `PARENT_TREE_CODE` IS NULL
 ${prefixName} `PARENT_TREE_NAME` = :where_and_eq_parentTreeName_value
 <#else>
 ${prefixName} `PARENT_TREE_NAME` IS NULL
-</#if>
-<#assign prefixName = 'AND'>
-</#if>
-<#if (where_and_eq_permissionCodes??)>
-<#if (where_and_eq_permissionCodes_value??)>
-${prefixName} `PERMISSION_CODES` = :where_and_eq_permissionCodes_value
-<#else>
-${prefixName} `PERMISSION_CODES` IS NULL
 </#if>
 <#assign prefixName = 'AND'>
 </#if>
@@ -135,11 +183,11 @@ ${prefixName} `REGION_ID` IS NULL
 </#if>
 <#assign prefixName = 'AND'>
 </#if>
-<#if (where_and_eq_roleCodes??)>
-<#if (where_and_eq_roleCodes_value??)>
-${prefixName} `ROLE_CODES` = :where_and_eq_roleCodes_value
+<#if (where_and_eq_siteCode??)>
+<#if (where_and_eq_siteCode_value??)>
+${prefixName} `SITE_CODE` = :where_and_eq_siteCode_value
 <#else>
-${prefixName} `ROLE_CODES` IS NULL
+${prefixName} `SITE_CODE` IS NULL
 </#if>
 <#assign prefixName = 'AND'>
 </#if>
@@ -151,19 +199,19 @@ ${prefixName} `STATE_CODE` IS NULL
 </#if>
 <#assign prefixName = 'AND'>
 </#if>
+<#if (where_and_eq_systemInfoCode??)>
+<#if (where_and_eq_systemInfoCode_value??)>
+${prefixName} `SYSTEM_INFO_CODE` = :where_and_eq_systemInfoCode_value
+<#else>
+${prefixName} `SYSTEM_INFO_CODE` IS NULL
+</#if>
+<#assign prefixName = 'AND'>
+</#if>
 <#if (where_and_eq_version??)>
 <#if (where_and_eq_version_value??)>
 ${prefixName} `VERSION_` = :where_and_eq_version_value
 <#else>
 ${prefixName} `VERSION_` IS NULL
-</#if>
-<#assign prefixName = 'AND'>
-</#if>
-<#if (where_and_eq_wfId??)>
-<#if (where_and_eq_wfId_value??)>
-${prefixName} `WF_ID` = :where_and_eq_wfId_value
-<#else>
-${prefixName} `WF_ID` IS NULL
 </#if>
 <#assign prefixName = 'AND'>
 </#if>

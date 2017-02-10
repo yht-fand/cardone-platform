@@ -1,0 +1,12 @@
+{
+  "rules": {
+    "departmentId": {
+      "required": true
+    }
+  },
+  "messages": {
+    "departmentId": {
+      "required": "部门标识不能为空值!"
+    }
+  }
+}

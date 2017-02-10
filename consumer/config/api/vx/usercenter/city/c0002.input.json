@@ -1,66 +1,24 @@
 {
-  "beginDate": {
-    "newName": "beginDate",
-    "funcBeanIds": "escapeSqlFunc"
-  },
-  "cityCode": {
-    "newName": "cityCode",
-    "funcBeanIds": "escapeSqlFunc"
-  },
-  "cityId": {
-    "newName": "cityId",
-    "funcBeanIds": "escapeSqlFunc"
-  },
-  "createdByCode": {
-    "newName": "createdByCode",
-    "funcBeanIds": "escapeSqlFunc"
-  },
-  "createdDate": {
-    "newName": "createdDate",
-    "funcBeanIds": "escapeSqlFunc"
-  },
-  "dataStateCode": {
-    "newName": "dataStateCode",
-    "funcBeanIds": "escapeSqlFunc"
-  },
-  "endDate": {
-    "newName": "endDate",
-    "funcBeanIds": "escapeSqlFunc"
-  },
-  "lastModifiedByCode": {
-    "newName": "lastModifiedByCode",
-    "funcBeanIds": "escapeSqlFunc"
-  },
-  "lastModifiedDate": {
-    "newName": "lastModifiedDate",
-    "funcBeanIds": "escapeSqlFunc"
-  },
-  "name": {
-    "newName": "name",
-    "funcBeanIds": "escapeSqlFunc"
-  },
-  "permissionCodes": {
-    "newName": "permissionCodes",
-    "funcBeanIds": "escapeSqlFunc"
-  },
-  "provinceCode": {
-    "newName": "provinceCode",
-    "funcBeanIds": "escapeSqlFunc"
-  },
-  "roleCodes": {
-    "newName": "roleCodes",
-    "funcBeanIds": "escapeSqlFunc"
-  },
-  "stateCode": {
-    "newName": "stateCode",
-    "funcBeanIds": "escapeSqlFunc"
-  },
-  "version": {
-    "newName": "version",
-    "funcBeanIds": "escapeSqlFunc"
-  },
-  "wfId": {
-    "newName": "wfId",
-    "funcBeanIds": "escapeSqlFunc"
-  }
+  "beginDate": "beginDate",
+  "cityCode": "cityCode",
+  "cityId": "cityId",
+  "countryCode": "countryCode",
+  "createdByCode": "createdByCode",
+  "createdDate": "createdDate",
+  "dataStateCode": "dataStateCode",
+  "departmentCode": "departmentCode",
+  "endDate": "endDate",
+  "flagCode": "flagCode",
+  "flagObjectCode": "flagObjectCode",
+  "jsonData": "jsonData",
+  "lastModifiedByCode": "lastModifiedByCode",
+  "lastModifiedDate": "lastModifiedDate",
+  "name": "name",
+  "order": "order",
+  "orgCode": "orgCode",
+  "provinceCode": "provinceCode",
+  "siteCode": "siteCode",
+  "stateCode": "stateCode",
+  "systemInfoCode": "systemInfoCode",
+  "version": "version"
 }

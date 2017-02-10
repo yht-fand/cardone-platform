@@ -8,6 +8,10 @@ ${prefixName} `ADDRESS`
 ${prefixName} `AGE`
 <#assign prefixName = ','>
 </#if>
+<#if (select_aliasName??)>
+${prefixName} `ALIAS_NAME`
+<#assign prefixName = ','>
+</#if>
 <#if (select_areaCode??)>
 ${prefixName} `AREA_CODE`
 <#assign prefixName = ','>
@@ -72,6 +76,10 @@ ${prefixName} `END_DATE`
 ${prefixName} `FLAG_CODE`
 <#assign prefixName = ','>
 </#if>
+<#if (select_flagObjectCode??)>
+${prefixName} `FLAG_OBJECT_CODE`
+<#assign prefixName = ','>
+</#if>
 <#if (select_folkCode??)>
 ${prefixName} `FOLK_CODE`
 <#assign prefixName = ','>
@@ -86,6 +94,10 @@ ${prefixName} `ID_CARD_NO`
 </#if>
 <#if (select_intro??)>
 ${prefixName} `INTRO`
+<#assign prefixName = ','>
+</#if>
+<#if (select_jsonData??)>
+${prefixName} `JSON_DATA`
 <#assign prefixName = ','>
 </#if>
 <#if (select_lastModifiedByCode??)>
@@ -112,6 +124,14 @@ ${prefixName} `MOBILE_PHONE`
 ${prefixName} `NAME`
 <#assign prefixName = ','>
 </#if>
+<#if (select_namePinyin??)>
+${prefixName} `NAME_PINYIN`
+<#assign prefixName = ','>
+</#if>
+<#if (select_order??)>
+${prefixName} `ORDER_`
+<#assign prefixName = ','>
+</#if>
 <#if (select_orgCode??)>
 ${prefixName} `ORG_CODE`
 <#assign prefixName = ','>
@@ -122,10 +142,6 @@ ${prefixName} `PASSWORD_`
 </#if>
 <#if (select_passwordSalt??)>
 ${prefixName} `PASSWORD_SALT`
-<#assign prefixName = ','>
-</#if>
-<#if (select_permissionCodes??)>
-${prefixName} `PERMISSION_CODES`
 <#assign prefixName = ','>
 </#if>
 <#if (select_portraitUrl??)>
@@ -160,16 +176,20 @@ ${prefixName} `REGION_CODE`
 ${prefixName} `REMARK`
 <#assign prefixName = ','>
 </#if>
-<#if (select_roleCodes??)>
-${prefixName} `ROLE_CODES`
-<#assign prefixName = ','>
-</#if>
 <#if (select_sexCode??)>
 ${prefixName} `SEX_CODE`
 <#assign prefixName = ','>
 </#if>
+<#if (select_siteCode??)>
+${prefixName} `SITE_CODE`
+<#assign prefixName = ','>
+</#if>
 <#if (select_stateCode??)>
 ${prefixName} `STATE_CODE`
+<#assign prefixName = ','>
+</#if>
+<#if (select_systemInfoCode??)>
+${prefixName} `SYSTEM_INFO_CODE`
 <#assign prefixName = ','>
 </#if>
 <#if (select_telephone??)>
@@ -188,59 +208,8 @@ ${prefixName} `USER_ID`
 ${prefixName} `VERSION_`
 <#assign prefixName = ','>
 </#if>
-<#if (select_wfId??)>
-${prefixName} `WF_ID`
-<#assign prefixName = ','>
-</#if>
 <#if prefixName ==  ' '>
-  `ADDRESS`
-, `AGE`
-, `AREA_CODE`
-, `BEGIN_DATE`
-, `BIRTHDAY`
-, `CALL_NAME`
-, `CITY_CODE`
-, `COMPANY_NAME`
-, `CONTACT`
-, `COUNTRY_CODE`
-, `CREATED_BY_CODE`
-, `CREATED_DATE`
-, `DATA_STATE_CODE`
-, `DEPARTMENT_CODE`
-, `DIPLOMA_CODE`
-, `EMAIL`
-, `END_DATE`
-, `FLAG_CODE`
-, `FOLK_CODE`
-, `ID_CARD_CODE`
-, `ID_CARD_NO`
-, `INTRO`
-, `LAST_MODIFIED_BY_CODE`
-, `LAST_MODIFIED_DATE`
-, `LOCUS`
-, `MARRY_STATE_CODE`
-, `MOBILE_PHONE`
-, `NAME`
-, `ORG_CODE`
-, `PASSWORD_`
-, `PASSWORD_SALT`
-, `PERMISSION_CODES`
-, `PORTRAIT_URL`
-, `PRIVATE_PASSWORD`
-, `PRIVATE_PASSWORD_SALT`
-, `PROFESSION_CODE`
-, `PROVINCE_CODE`
-, `QQ`
-, `REGION_CODE`
-, `REMARK`
-, `ROLE_CODES`
-, `SEX_CODE`
-, `STATE_CODE`
-, `TELEPHONE`
-, `USER_CODE`
-, `USER_ID`
-, `VERSION_`
-, `WF_ID`
+*
 </#if>
 FROM c1_user
 <#include "where.ftl">
@@ -251,6 +220,10 @@ ${prefixName} `ADDRESS` ${order_by_address_value!}
 </#if>
 <#if (order_by_age??)>
 ${prefixName} `AGE` ${order_by_age_value!}
+<#assign prefixName = ','>
+</#if>
+<#if (order_by_aliasName??)>
+${prefixName} `ALIAS_NAME` ${order_by_aliasName_value!}
 <#assign prefixName = ','>
 </#if>
 <#if (order_by_areaCode??)>
@@ -317,6 +290,10 @@ ${prefixName} `END_DATE` ${order_by_endDate_value!}
 ${prefixName} `FLAG_CODE` ${order_by_flagCode_value!}
 <#assign prefixName = ','>
 </#if>
+<#if (order_by_flagObjectCode??)>
+${prefixName} `FLAG_OBJECT_CODE` ${order_by_flagObjectCode_value!}
+<#assign prefixName = ','>
+</#if>
 <#if (order_by_folkCode??)>
 ${prefixName} `FOLK_CODE` ${order_by_folkCode_value!}
 <#assign prefixName = ','>
@@ -331,6 +308,10 @@ ${prefixName} `ID_CARD_NO` ${order_by_idCardNo_value!}
 </#if>
 <#if (order_by_intro??)>
 ${prefixName} `INTRO` ${order_by_intro_value!}
+<#assign prefixName = ','>
+</#if>
+<#if (order_by_jsonData??)>
+${prefixName} `JSON_DATA` ${order_by_jsonData_value!}
 <#assign prefixName = ','>
 </#if>
 <#if (order_by_lastModifiedByCode??)>
@@ -357,6 +338,14 @@ ${prefixName} `MOBILE_PHONE` ${order_by_mobilePhone_value!}
 ${prefixName} `NAME` ${order_by_name_value!}
 <#assign prefixName = ','>
 </#if>
+<#if (order_by_namePinyin??)>
+${prefixName} `NAME_PINYIN` ${order_by_namePinyin_value!}
+<#assign prefixName = ','>
+</#if>
+<#if (order_by_order??)>
+${prefixName} `ORDER_` ${order_by_order_value!}
+<#assign prefixName = ','>
+</#if>
 <#if (order_by_orgCode??)>
 ${prefixName} `ORG_CODE` ${order_by_orgCode_value!}
 <#assign prefixName = ','>
@@ -367,10 +356,6 @@ ${prefixName} `PASSWORD_` ${order_by_password_value!}
 </#if>
 <#if (order_by_passwordSalt??)>
 ${prefixName} `PASSWORD_SALT` ${order_by_passwordSalt_value!}
-<#assign prefixName = ','>
-</#if>
-<#if (order_by_permissionCodes??)>
-${prefixName} `PERMISSION_CODES` ${order_by_permissionCodes_value!}
 <#assign prefixName = ','>
 </#if>
 <#if (order_by_portraitUrl??)>
@@ -405,16 +390,20 @@ ${prefixName} `REGION_CODE` ${order_by_regionCode_value!}
 ${prefixName} `REMARK` ${order_by_remark_value!}
 <#assign prefixName = ','>
 </#if>
-<#if (order_by_roleCodes??)>
-${prefixName} `ROLE_CODES` ${order_by_roleCodes_value!}
-<#assign prefixName = ','>
-</#if>
 <#if (order_by_sexCode??)>
 ${prefixName} `SEX_CODE` ${order_by_sexCode_value!}
 <#assign prefixName = ','>
 </#if>
+<#if (order_by_siteCode??)>
+${prefixName} `SITE_CODE` ${order_by_siteCode_value!}
+<#assign prefixName = ','>
+</#if>
 <#if (order_by_stateCode??)>
 ${prefixName} `STATE_CODE` ${order_by_stateCode_value!}
+<#assign prefixName = ','>
+</#if>
+<#if (order_by_systemInfoCode??)>
+${prefixName} `SYSTEM_INFO_CODE` ${order_by_systemInfoCode_value!}
 <#assign prefixName = ','>
 </#if>
 <#if (order_by_telephone??)>
@@ -431,9 +420,5 @@ ${prefixName} `USER_ID` ${order_by_userId_value!}
 </#if>
 <#if (order_by_version??)>
 ${prefixName} `VERSION_` ${order_by_version_value!}
-<#assign prefixName = ','>
-</#if>
-<#if (order_by_wfId??)>
-${prefixName} `WF_ID` ${order_by_wfId_value!}
 <#assign prefixName = ','>
 </#if>

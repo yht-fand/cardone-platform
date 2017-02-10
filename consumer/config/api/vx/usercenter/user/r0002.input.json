@@ -1,200 +1,56 @@
 {
-  "address": {
-    "newName": "address",
-    "funcBeanIds": "escapeSqlFunc"
-  },
-  "age": {
-    "newName": "age",
-    "funcBeanIds": "escapeSqlFunc"
-  },
-  "areaCode": {
-    "newName": "areaCode",
-    "funcBeanIds": "escapeSqlFunc"
-  },
-  "beginDate": {
-    "newName": "beginDate",
-    "funcBeanIds": "escapeSqlFunc"
-  },
-  "birthday": {
-    "newName": "birthday",
-    "funcBeanIds": "escapeSqlFunc"
-  },
-  "callName": {
-    "newName": "callName",
-    "funcBeanIds": "escapeSqlFunc"
-  },
-  "cityCode": {
-    "newName": "cityCode",
-    "funcBeanIds": "escapeSqlFunc"
-  },
-  "companyName": {
-    "newName": "companyName",
-    "funcBeanIds": "escapeSqlFunc"
-  },
-  "contact": {
-    "newName": "contact",
-    "funcBeanIds": "escapeSqlFunc"
-  },
-  "countryCode": {
-    "newName": "countryCode",
-    "funcBeanIds": "escapeSqlFunc"
-  },
-  "createdByCode": {
-    "newName": "createdByCode",
-    "funcBeanIds": "escapeSqlFunc"
-  },
-  "createdDate": {
-    "newName": "createdDate",
-    "funcBeanIds": "escapeSqlFunc"
-  },
-  "dataStateCode": {
-    "newName": "dataStateCode",
-    "funcBeanIds": "escapeSqlFunc"
-  },
-  "departmentCode": {
-    "newName": "departmentCode",
-    "funcBeanIds": "escapeSqlFunc"
-  },
-  "diplomaCode": {
-    "newName": "diplomaCode",
-    "funcBeanIds": "escapeSqlFunc"
-  },
-  "email": {
-    "newName": "email",
-    "funcBeanIds": "escapeSqlFunc"
-  },
-  "endDate": {
-    "newName": "endDate",
-    "funcBeanIds": "escapeSqlFunc"
-  },
-  "flagCode": {
-    "newName": "flagCode",
-    "funcBeanIds": "escapeSqlFunc"
-  },
-  "folkCode": {
-    "newName": "folkCode",
-    "funcBeanIds": "escapeSqlFunc"
-  },
-  "idCardCode": {
-    "newName": "idCardCode",
-    "funcBeanIds": "escapeSqlFunc"
-  },
-  "idCardNo": {
-    "newName": "idCardNo",
-    "funcBeanIds": "escapeSqlFunc"
-  },
-  "intro": {
-    "newName": "intro",
-    "funcBeanIds": "escapeSqlFunc"
-  },
-  "lastModifiedByCode": {
-    "newName": "lastModifiedByCode",
-    "funcBeanIds": "escapeSqlFunc"
-  },
-  "lastModifiedDate": {
-    "newName": "lastModifiedDate",
-    "funcBeanIds": "escapeSqlFunc"
-  },
-  "locus": {
-    "newName": "locus",
-    "funcBeanIds": "escapeSqlFunc"
-  },
-  "marryStateCode": {
-    "newName": "marryStateCode",
-    "funcBeanIds": "escapeSqlFunc"
-  },
-  "mobilePhone": {
-    "newName": "mobilePhone",
-    "funcBeanIds": "escapeSqlFunc"
-  },
-  "name": {
-    "newName": "name",
-    "funcBeanIds": "escapeSqlFunc"
-  },
-  "orgCode": {
-    "newName": "orgCode",
-    "funcBeanIds": "escapeSqlFunc"
-  },
-  "password": {
-    "newName": "password",
-    "funcBeanIds": "escapeSqlFunc"
-  },
-  "passwordSalt": {
-    "newName": "passwordSalt",
-    "funcBeanIds": "escapeSqlFunc"
-  },
-  "permissionCodes": {
-    "newName": "permissionCodes",
-    "funcBeanIds": "escapeSqlFunc"
-  },
-  "portraitUrl": {
-    "newName": "portraitUrl",
-    "funcBeanIds": "escapeSqlFunc"
-  },
-  "privatePassword": {
-    "newName": "privatePassword",
-    "funcBeanIds": "escapeSqlFunc"
-  },
-  "privatePasswordSalt": {
-    "newName": "privatePasswordSalt",
-    "funcBeanIds": "escapeSqlFunc"
-  },
-  "professionCode": {
-    "newName": "professionCode",
-    "funcBeanIds": "escapeSqlFunc"
-  },
-  "provinceCode": {
-    "newName": "provinceCode",
-    "funcBeanIds": "escapeSqlFunc"
-  },
-  "qq": {
-    "newName": "qq",
-    "funcBeanIds": "escapeSqlFunc"
-  },
-  "regionCode": {
-    "newName": "regionCode",
-    "funcBeanIds": "escapeSqlFunc"
-  },
-  "remark": {
-    "newName": "remark",
-    "funcBeanIds": "escapeSqlFunc"
-  },
-  "roleCodes": {
-    "newName": "roleCodes",
-    "funcBeanIds": "escapeSqlFunc"
-  },
-  "sexCode": {
-    "newName": "sexCode",
-    "funcBeanIds": "escapeSqlFunc"
-  },
-  "stateCode": {
-    "newName": "stateCode",
-    "funcBeanIds": "escapeSqlFunc"
-  },
-  "telephone": {
-    "newName": "telephone",
-    "funcBeanIds": "escapeSqlFunc"
-  },
-  "userCode": {
-    "newName": "userCode",
-    "funcBeanIds": "escapeSqlFunc"
-  },
-  "userId": {
-    "newName": "userId",
-    "funcBeanIds": "escapeSqlFunc"
-  },
-  "version": {
-    "newName": "version",
-    "funcBeanIds": "escapeSqlFunc"
-  },
-  "wfId": {
-    "newName": "wfId",
-    "funcBeanIds": "escapeSqlFunc"
-  },
-  "pageSize": {
-    "newName": "pageSize"
-  },
-  "pageNumber": {
-    "newName": "pageNumber"
-  }
+  "address": "address",
+  "age": "age",
+  "aliasName": "aliasName",
+  "areaCode": "areaCode",
+  "beginDate": "beginDate",
+  "birthday": "birthday",
+  "callName": "callName",
+  "cityCode": "cityCode",
+  "companyName": "companyName",
+  "contact": "contact",
+  "countryCode": "countryCode",
+  "createdByCode": "createdByCode",
+  "createdDate": "createdDate",
+  "dataStateCode": "dataStateCode",
+  "departmentCode": "departmentCode",
+  "diplomaCode": "diplomaCode",
+  "email": "email",
+  "endDate": "endDate",
+  "flagCode": "flagCode",
+  "flagObjectCode": "flagObjectCode",
+  "folkCode": "folkCode",
+  "idCardCode": "idCardCode",
+  "idCardNo": "idCardNo",
+  "intro": "intro",
+  "jsonData": "jsonData",
+  "lastModifiedByCode": "lastModifiedByCode",
+  "lastModifiedDate": "lastModifiedDate",
+  "locus": "locus",
+  "marryStateCode": "marryStateCode",
+  "mobilePhone": "mobilePhone",
+  "name": "name",
+  "namePinyin": "namePinyin",
+  "order": "order",
+  "orgCode": "orgCode",
+  "password": "password",
+  "passwordSalt": "passwordSalt",
+  "portraitUrl": "portraitUrl",
+  "privatePassword": "privatePassword",
+  "privatePasswordSalt": "privatePasswordSalt",
+  "professionCode": "professionCode",
+  "provinceCode": "provinceCode",
+  "qq": "qq",
+  "regionCode": "regionCode",
+  "remark": "remark",
+  "sexCode": "sexCode",
+  "siteCode": "siteCode",
+  "stateCode": "stateCode",
+  "systemInfoCode": "systemInfoCode",
+  "telephone": "telephone",
+  "userCode": "userCode",
+  "userId": "userId",
+  "version": "version",
+  "pageSize": "pageSize",
+  "pageNumber": "pageNumber"
 }

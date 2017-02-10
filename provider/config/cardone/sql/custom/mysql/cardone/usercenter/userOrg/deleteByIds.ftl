@@ -1,0 +1,1 @@
+DELETE FROM c1_user_org WHERE INSTR(:userOrgIds, USER_ORG_ID) > 0

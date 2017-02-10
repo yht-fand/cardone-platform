@@ -1,0 +1,12 @@
+{
+  "rules": {
+    "cityId": {
+      "required": true
+    }
+  },
+  "messages": {
+    "cityId": {
+      "required": "城市标识不能为空值!"
+    }
+  }
+}

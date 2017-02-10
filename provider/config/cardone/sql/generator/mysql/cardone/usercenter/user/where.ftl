@@ -15,6 +15,14 @@ ${prefixName} `AGE` IS NULL
 </#if>
 <#assign prefixName = 'AND'>
 </#if>
+<#if (where_and_eq_aliasName??)>
+<#if (where_and_eq_aliasName_value??)>
+${prefixName} `ALIAS_NAME` = :where_and_eq_aliasName_value
+<#else>
+${prefixName} `ALIAS_NAME` IS NULL
+</#if>
+<#assign prefixName = 'AND'>
+</#if>
 <#if (where_and_eq_areaCode??)>
 <#if (where_and_eq_areaCode_value??)>
 ${prefixName} `AREA_CODE` = :where_and_eq_areaCode_value
@@ -143,6 +151,14 @@ ${prefixName} `FLAG_CODE` IS NULL
 </#if>
 <#assign prefixName = 'AND'>
 </#if>
+<#if (where_and_eq_flagObjectCode??)>
+<#if (where_and_eq_flagObjectCode_value??)>
+${prefixName} `FLAG_OBJECT_CODE` = :where_and_eq_flagObjectCode_value
+<#else>
+${prefixName} `FLAG_OBJECT_CODE` IS NULL
+</#if>
+<#assign prefixName = 'AND'>
+</#if>
 <#if (where_and_eq_folkCode??)>
 <#if (where_and_eq_folkCode_value??)>
 ${prefixName} `FOLK_CODE` = :where_and_eq_folkCode_value
@@ -172,6 +188,14 @@ ${prefixName} `ID_CARD_NO` IS NULL
 ${prefixName} `INTRO` = :where_and_eq_intro_value
 <#else>
 ${prefixName} `INTRO` IS NULL
+</#if>
+<#assign prefixName = 'AND'>
+</#if>
+<#if (where_and_eq_jsonData??)>
+<#if (where_and_eq_jsonData_value??)>
+${prefixName} `JSON_DATA` = :where_and_eq_jsonData_value
+<#else>
+${prefixName} `JSON_DATA` IS NULL
 </#if>
 <#assign prefixName = 'AND'>
 </#if>
@@ -223,6 +247,22 @@ ${prefixName} `NAME` IS NULL
 </#if>
 <#assign prefixName = 'AND'>
 </#if>
+<#if (where_and_eq_namePinyin??)>
+<#if (where_and_eq_namePinyin_value??)>
+${prefixName} `NAME_PINYIN` = :where_and_eq_namePinyin_value
+<#else>
+${prefixName} `NAME_PINYIN` IS NULL
+</#if>
+<#assign prefixName = 'AND'>
+</#if>
+<#if (where_and_eq_order??)>
+<#if (where_and_eq_order_value??)>
+${prefixName} `ORDER_` = :where_and_eq_order_value
+<#else>
+${prefixName} `ORDER_` IS NULL
+</#if>
+<#assign prefixName = 'AND'>
+</#if>
 <#if (where_and_eq_orgCode??)>
 <#if (where_and_eq_orgCode_value??)>
 ${prefixName} `ORG_CODE` = :where_and_eq_orgCode_value
@@ -244,14 +284,6 @@ ${prefixName} `PASSWORD_` IS NULL
 ${prefixName} `PASSWORD_SALT` = :where_and_eq_passwordSalt_value
 <#else>
 ${prefixName} `PASSWORD_SALT` IS NULL
-</#if>
-<#assign prefixName = 'AND'>
-</#if>
-<#if (where_and_eq_permissionCodes??)>
-<#if (where_and_eq_permissionCodes_value??)>
-${prefixName} `PERMISSION_CODES` = :where_and_eq_permissionCodes_value
-<#else>
-${prefixName} `PERMISSION_CODES` IS NULL
 </#if>
 <#assign prefixName = 'AND'>
 </#if>
@@ -319,14 +351,6 @@ ${prefixName} `REMARK` IS NULL
 </#if>
 <#assign prefixName = 'AND'>
 </#if>
-<#if (where_and_eq_roleCodes??)>
-<#if (where_and_eq_roleCodes_value??)>
-${prefixName} `ROLE_CODES` = :where_and_eq_roleCodes_value
-<#else>
-${prefixName} `ROLE_CODES` IS NULL
-</#if>
-<#assign prefixName = 'AND'>
-</#if>
 <#if (where_and_eq_sexCode??)>
 <#if (where_and_eq_sexCode_value??)>
 ${prefixName} `SEX_CODE` = :where_and_eq_sexCode_value
@@ -335,11 +359,27 @@ ${prefixName} `SEX_CODE` IS NULL
 </#if>
 <#assign prefixName = 'AND'>
 </#if>
+<#if (where_and_eq_siteCode??)>
+<#if (where_and_eq_siteCode_value??)>
+${prefixName} `SITE_CODE` = :where_and_eq_siteCode_value
+<#else>
+${prefixName} `SITE_CODE` IS NULL
+</#if>
+<#assign prefixName = 'AND'>
+</#if>
 <#if (where_and_eq_stateCode??)>
 <#if (where_and_eq_stateCode_value??)>
 ${prefixName} `STATE_CODE` = :where_and_eq_stateCode_value
 <#else>
 ${prefixName} `STATE_CODE` IS NULL
+</#if>
+<#assign prefixName = 'AND'>
+</#if>
+<#if (where_and_eq_systemInfoCode??)>
+<#if (where_and_eq_systemInfoCode_value??)>
+${prefixName} `SYSTEM_INFO_CODE` = :where_and_eq_systemInfoCode_value
+<#else>
+${prefixName} `SYSTEM_INFO_CODE` IS NULL
 </#if>
 <#assign prefixName = 'AND'>
 </#if>
@@ -372,14 +412,6 @@ ${prefixName} `USER_ID` IS NULL
 ${prefixName} `VERSION_` = :where_and_eq_version_value
 <#else>
 ${prefixName} `VERSION_` IS NULL
-</#if>
-<#assign prefixName = 'AND'>
-</#if>
-<#if (where_and_eq_wfId??)>
-<#if (where_and_eq_wfId_value??)>
-${prefixName} `WF_ID` = :where_and_eq_wfId_value
-<#else>
-${prefixName} `WF_ID` IS NULL
 </#if>
 <#assign prefixName = 'AND'>
 </#if>

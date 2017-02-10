@@ -10,6 +10,10 @@ ${prefixName} `ADDRESS`
 ${prefixName} `AGE`
 <#assign prefixName = ','>
 </#if>
+<#if (insert_aliasName??) && (insert_aliasName_value??)>
+${prefixName} `ALIAS_NAME`
+<#assign prefixName = ','>
+</#if>
 <#if (insert_areaCode??) && (insert_areaCode_value??)>
 ${prefixName} `AREA_CODE`
 <#assign prefixName = ','>
@@ -74,6 +78,10 @@ ${prefixName} `END_DATE`
 ${prefixName} `FLAG_CODE`
 <#assign prefixName = ','>
 </#if>
+<#if (insert_flagObjectCode??) && (insert_flagObjectCode_value??)>
+${prefixName} `FLAG_OBJECT_CODE`
+<#assign prefixName = ','>
+</#if>
 <#if (insert_folkCode??) && (insert_folkCode_value??)>
 ${prefixName} `FOLK_CODE`
 <#assign prefixName = ','>
@@ -88,6 +96,10 @@ ${prefixName} `ID_CARD_NO`
 </#if>
 <#if (insert_intro??) && (insert_intro_value??)>
 ${prefixName} `INTRO`
+<#assign prefixName = ','>
+</#if>
+<#if (insert_jsonData??) && (insert_jsonData_value??)>
+${prefixName} `JSON_DATA`
 <#assign prefixName = ','>
 </#if>
 <#if (insert_lastModifiedByCode??) && (insert_lastModifiedByCode_value??)>
@@ -114,6 +126,14 @@ ${prefixName} `MOBILE_PHONE`
 ${prefixName} `NAME`
 <#assign prefixName = ','>
 </#if>
+<#if (insert_namePinyin??) && (insert_namePinyin_value??)>
+${prefixName} `NAME_PINYIN`
+<#assign prefixName = ','>
+</#if>
+<#if (insert_order??) && (insert_order_value??)>
+${prefixName} `ORDER_`
+<#assign prefixName = ','>
+</#if>
 <#if (insert_orgCode??) && (insert_orgCode_value??)>
 ${prefixName} `ORG_CODE`
 <#assign prefixName = ','>
@@ -124,10 +144,6 @@ ${prefixName} `PASSWORD_`
 </#if>
 <#if (insert_passwordSalt??) && (insert_passwordSalt_value??)>
 ${prefixName} `PASSWORD_SALT`
-<#assign prefixName = ','>
-</#if>
-<#if (insert_permissionCodes??) && (insert_permissionCodes_value??)>
-${prefixName} `PERMISSION_CODES`
 <#assign prefixName = ','>
 </#if>
 <#if (insert_portraitUrl??) && (insert_portraitUrl_value??)>
@@ -162,16 +178,20 @@ ${prefixName} `REGION_CODE`
 ${prefixName} `REMARK`
 <#assign prefixName = ','>
 </#if>
-<#if (insert_roleCodes??) && (insert_roleCodes_value??)>
-${prefixName} `ROLE_CODES`
-<#assign prefixName = ','>
-</#if>
 <#if (insert_sexCode??) && (insert_sexCode_value??)>
 ${prefixName} `SEX_CODE`
 <#assign prefixName = ','>
 </#if>
+<#if (insert_siteCode??) && (insert_siteCode_value??)>
+${prefixName} `SITE_CODE`
+<#assign prefixName = ','>
+</#if>
 <#if (insert_stateCode??) && (insert_stateCode_value??)>
 ${prefixName} `STATE_CODE`
+<#assign prefixName = ','>
+</#if>
+<#if (insert_systemInfoCode??) && (insert_systemInfoCode_value??)>
+${prefixName} `SYSTEM_INFO_CODE`
 <#assign prefixName = ','>
 </#if>
 <#if (insert_telephone??) && (insert_telephone_value??)>
@@ -190,10 +210,6 @@ ${prefixName} `USER_ID`
 ${prefixName} `VERSION_`
 <#assign prefixName = ','>
 </#if>
-<#if (insert_wfId??) && (insert_wfId_value??)>
-${prefixName} `WF_ID`
-<#assign prefixName = ','>
-</#if>
 )
 (SELECT
 <#assign prefixName = ' '>
@@ -203,6 +219,10 @@ ${prefixName} :insert_address_value
 </#if>
 <#if (insert_age??) && (insert_age_value??)>
 ${prefixName} :insert_age_value
+<#assign prefixName = ','>
+</#if>
+<#if (insert_aliasName??) && (insert_aliasName_value??)>
+${prefixName} :insert_aliasName_value
 <#assign prefixName = ','>
 </#if>
 <#if (insert_areaCode??) && (insert_areaCode_value??)>
@@ -269,6 +289,10 @@ ${prefixName} :insert_endDate_value
 ${prefixName} :insert_flagCode_value
 <#assign prefixName = ','>
 </#if>
+<#if (insert_flagObjectCode??) && (insert_flagObjectCode_value??)>
+${prefixName} :insert_flagObjectCode_value
+<#assign prefixName = ','>
+</#if>
 <#if (insert_folkCode??) && (insert_folkCode_value??)>
 ${prefixName} :insert_folkCode_value
 <#assign prefixName = ','>
@@ -283,6 +307,10 @@ ${prefixName} :insert_idCardNo_value
 </#if>
 <#if (insert_intro??) && (insert_intro_value??)>
 ${prefixName} :insert_intro_value
+<#assign prefixName = ','>
+</#if>
+<#if (insert_jsonData??) && (insert_jsonData_value??)>
+${prefixName} :insert_jsonData_value
 <#assign prefixName = ','>
 </#if>
 <#if (insert_lastModifiedByCode??) && (insert_lastModifiedByCode_value??)>
@@ -309,6 +337,14 @@ ${prefixName} :insert_mobilePhone_value
 ${prefixName} :insert_name_value
 <#assign prefixName = ','>
 </#if>
+<#if (insert_namePinyin??) && (insert_namePinyin_value??)>
+${prefixName} :insert_namePinyin_value
+<#assign prefixName = ','>
+</#if>
+<#if (insert_order??) && (insert_order_value??)>
+${prefixName} :insert_order_value
+<#assign prefixName = ','>
+</#if>
 <#if (insert_orgCode??) && (insert_orgCode_value??)>
 ${prefixName} :insert_orgCode_value
 <#assign prefixName = ','>
@@ -319,10 +355,6 @@ ${prefixName} :insert_password_value
 </#if>
 <#if (insert_passwordSalt??) && (insert_passwordSalt_value??)>
 ${prefixName} :insert_passwordSalt_value
-<#assign prefixName = ','>
-</#if>
-<#if (insert_permissionCodes??) && (insert_permissionCodes_value??)>
-${prefixName} :insert_permissionCodes_value
 <#assign prefixName = ','>
 </#if>
 <#if (insert_portraitUrl??) && (insert_portraitUrl_value??)>
@@ -357,16 +389,20 @@ ${prefixName} :insert_regionCode_value
 ${prefixName} :insert_remark_value
 <#assign prefixName = ','>
 </#if>
-<#if (insert_roleCodes??) && (insert_roleCodes_value??)>
-${prefixName} :insert_roleCodes_value
-<#assign prefixName = ','>
-</#if>
 <#if (insert_sexCode??) && (insert_sexCode_value??)>
 ${prefixName} :insert_sexCode_value
 <#assign prefixName = ','>
 </#if>
+<#if (insert_siteCode??) && (insert_siteCode_value??)>
+${prefixName} :insert_siteCode_value
+<#assign prefixName = ','>
+</#if>
 <#if (insert_stateCode??) && (insert_stateCode_value??)>
 ${prefixName} :insert_stateCode_value
+<#assign prefixName = ','>
+</#if>
+<#if (insert_systemInfoCode??) && (insert_systemInfoCode_value??)>
+${prefixName} :insert_systemInfoCode_value
 <#assign prefixName = ','>
 </#if>
 <#if (insert_telephone??) && (insert_telephone_value??)>
@@ -385,10 +421,6 @@ ${prefixName} :insert_userId_value
 ${prefixName} :insert_version_value
 <#assign prefixName = ','>
 </#if>
-<#if (insert_wfId??) && (insert_wfId_value??)>
-${prefixName} :insert_wfId_value
-<#assign prefixName = ','>
-</#if>
 FROM DUAL WHERE NOT EXISTS (SELECT 1 FROM c1_user E
 <#assign prefixName = 'WHERE'>
 <#if (where_and_eq_address??)>
@@ -404,6 +436,14 @@ ${prefixName} E.ADDRESS IS NULL
 ${prefixName} E.AGE = :where_and_eq_age_value
 <#else>
 ${prefixName} E.AGE IS NULL
+</#if>
+<#assign prefixName = 'AND'>
+</#if>
+<#if (where_and_eq_aliasName??)>
+<#if (where_and_eq_aliasName_value??)>
+${prefixName} E.ALIAS_NAME = :where_and_eq_aliasName_value
+<#else>
+${prefixName} E.ALIAS_NAME IS NULL
 </#if>
 <#assign prefixName = 'AND'>
 </#if>
@@ -535,6 +575,14 @@ ${prefixName} E.FLAG_CODE IS NULL
 </#if>
 <#assign prefixName = 'AND'>
 </#if>
+<#if (where_and_eq_flagObjectCode??)>
+<#if (where_and_eq_flagObjectCode_value??)>
+${prefixName} E.FLAG_OBJECT_CODE = :where_and_eq_flagObjectCode_value
+<#else>
+${prefixName} E.FLAG_OBJECT_CODE IS NULL
+</#if>
+<#assign prefixName = 'AND'>
+</#if>
 <#if (where_and_eq_folkCode??)>
 <#if (where_and_eq_folkCode_value??)>
 ${prefixName} E.FOLK_CODE = :where_and_eq_folkCode_value
@@ -564,6 +612,14 @@ ${prefixName} E.ID_CARD_NO IS NULL
 ${prefixName} E.INTRO = :where_and_eq_intro_value
 <#else>
 ${prefixName} E.INTRO IS NULL
+</#if>
+<#assign prefixName = 'AND'>
+</#if>
+<#if (where_and_eq_jsonData??)>
+<#if (where_and_eq_jsonData_value??)>
+${prefixName} E.JSON_DATA = :where_and_eq_jsonData_value
+<#else>
+${prefixName} E.JSON_DATA IS NULL
 </#if>
 <#assign prefixName = 'AND'>
 </#if>
@@ -615,6 +671,22 @@ ${prefixName} E.NAME IS NULL
 </#if>
 <#assign prefixName = 'AND'>
 </#if>
+<#if (where_and_eq_namePinyin??)>
+<#if (where_and_eq_namePinyin_value??)>
+${prefixName} E.NAME_PINYIN = :where_and_eq_namePinyin_value
+<#else>
+${prefixName} E.NAME_PINYIN IS NULL
+</#if>
+<#assign prefixName = 'AND'>
+</#if>
+<#if (where_and_eq_order??)>
+<#if (where_and_eq_order_value??)>
+${prefixName} E.ORDER_ = :where_and_eq_order_value
+<#else>
+${prefixName} E.ORDER_ IS NULL
+</#if>
+<#assign prefixName = 'AND'>
+</#if>
 <#if (where_and_eq_orgCode??)>
 <#if (where_and_eq_orgCode_value??)>
 ${prefixName} E.ORG_CODE = :where_and_eq_orgCode_value
@@ -636,14 +708,6 @@ ${prefixName} E.PASSWORD_ IS NULL
 ${prefixName} E.PASSWORD_SALT = :where_and_eq_passwordSalt_value
 <#else>
 ${prefixName} E.PASSWORD_SALT IS NULL
-</#if>
-<#assign prefixName = 'AND'>
-</#if>
-<#if (where_and_eq_permissionCodes??)>
-<#if (where_and_eq_permissionCodes_value??)>
-${prefixName} E.PERMISSION_CODES = :where_and_eq_permissionCodes_value
-<#else>
-${prefixName} E.PERMISSION_CODES IS NULL
 </#if>
 <#assign prefixName = 'AND'>
 </#if>
@@ -711,14 +775,6 @@ ${prefixName} E.REMARK IS NULL
 </#if>
 <#assign prefixName = 'AND'>
 </#if>
-<#if (where_and_eq_roleCodes??)>
-<#if (where_and_eq_roleCodes_value??)>
-${prefixName} E.ROLE_CODES = :where_and_eq_roleCodes_value
-<#else>
-${prefixName} E.ROLE_CODES IS NULL
-</#if>
-<#assign prefixName = 'AND'>
-</#if>
 <#if (where_and_eq_sexCode??)>
 <#if (where_and_eq_sexCode_value??)>
 ${prefixName} E.SEX_CODE = :where_and_eq_sexCode_value
@@ -727,11 +783,27 @@ ${prefixName} E.SEX_CODE IS NULL
 </#if>
 <#assign prefixName = 'AND'>
 </#if>
+<#if (where_and_eq_siteCode??)>
+<#if (where_and_eq_siteCode_value??)>
+${prefixName} E.SITE_CODE = :where_and_eq_siteCode_value
+<#else>
+${prefixName} E.SITE_CODE IS NULL
+</#if>
+<#assign prefixName = 'AND'>
+</#if>
 <#if (where_and_eq_stateCode??)>
 <#if (where_and_eq_stateCode_value??)>
 ${prefixName} E.STATE_CODE = :where_and_eq_stateCode_value
 <#else>
 ${prefixName} E.STATE_CODE IS NULL
+</#if>
+<#assign prefixName = 'AND'>
+</#if>
+<#if (where_and_eq_systemInfoCode??)>
+<#if (where_and_eq_systemInfoCode_value??)>
+${prefixName} E.SYSTEM_INFO_CODE = :where_and_eq_systemInfoCode_value
+<#else>
+${prefixName} E.SYSTEM_INFO_CODE IS NULL
 </#if>
 <#assign prefixName = 'AND'>
 </#if>
@@ -764,14 +836,6 @@ ${prefixName} E.USER_ID IS NULL
 ${prefixName} E.VERSION_ = :where_and_eq_version_value
 <#else>
 ${prefixName} E.VERSION_ IS NULL
-</#if>
-<#assign prefixName = 'AND'>
-</#if>
-<#if (where_and_eq_wfId??)>
-<#if (where_and_eq_wfId_value??)>
-${prefixName} E.WF_ID = :where_and_eq_wfId_value
-<#else>
-${prefixName} E.WF_ID IS NULL
 </#if>
 <#assign prefixName = 'AND'>
 </#if>

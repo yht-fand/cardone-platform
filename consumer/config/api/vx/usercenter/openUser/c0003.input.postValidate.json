@@ -1,0 +1,12 @@
+{
+  "rules": {
+    "openUserCode": {
+      "required": true
+    }
+  },
+  "messages": {
+    "openUserCode": {
+      "required": "开放用户编号不能为空值!"
+    }
+  }
+}
