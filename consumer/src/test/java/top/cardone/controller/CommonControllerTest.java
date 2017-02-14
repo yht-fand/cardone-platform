@@ -7,7 +7,7 @@ import com.google.common.collect.Table;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.boot.test.SpringApplicationConfiguration;
+import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.core.io.Resource;
 import org.springframework.data.domain.Page;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
@@ -23,7 +23,7 @@ import java.util.Map;
  * Created by cardone-home-001 on 2016/4/22.
  */
 @RunWith(SpringJUnit4ClassRunner.class)
-@SpringApplicationConfiguration(classes = ConsumerApplication.class)
+@SpringBootTest(classes = ConsumerApplication.class)
 public class CommonControllerTest {
     @Value("${app.root:}/config/template/department.xls")
     private String excelFilePath;
