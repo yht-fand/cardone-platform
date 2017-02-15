@@ -1,1 +1,43 @@
-{}
+{
+  "input": {
+    "address": "address",
+    "areaCode": "areaCode",
+    "beginDate": "beginDate",
+    "cityCode": "cityCode",
+    "createdByCode": "createdByCode",
+    "createdDate": "createdDate",
+    "dataStateCode": "dataStateCode",
+    "departmentCode": "departmentCode",
+    "endDate": "endDate",
+    "flagCode": "flagCode",
+    "flagObjectCode": "flagObjectCode",
+    "jsonData": "jsonData",
+    "lastModifiedByCode": "lastModifiedByCode",
+    "lastModifiedDate": "lastModifiedDate",
+    "name": "name",
+    "order": "order",
+    "orgCode": "orgCode",
+    "orgId": "orgId",
+    "parentCode": "parentCode",
+    "parentTreeCode": "parentTreeCode",
+    "parentTreeName": "parentTreeName",
+    "provinceCode": "provinceCode",
+    "regionCode": "regionCode",
+    "siteCode": "siteCode",
+    "stateCode": "stateCode",
+    "systemInfoCode": "systemInfoCode",
+    "version": "version"
+  },
+  "validation": {
+    "rules": {
+      "orgCode": {
+        "required": true
+      }
+    },
+    "messages": {
+      "orgCode": {
+        "required": "组织编号不能为空值!"
+      }
+    }
+  }
+}

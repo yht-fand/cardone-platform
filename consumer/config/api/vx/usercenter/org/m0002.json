@@ -1,1 +1,46 @@
-{}
+{
+  "input": {
+    "orgId": "orgId"
+  },
+  "validation": {
+    "rules": {
+      "orgId": {
+        "required": true
+      }
+    },
+    "messages": {
+      "orgId": {
+        "required": "组织标识不能为空值!"
+      }
+    }
+  },
+  "output": {
+    "address": "ADDRESS",
+    "areaCode": "AREA_CODE",
+    "beginDate": "BEGIN_DATE",
+    "cityCode": "CITY_CODE",
+    "createdByCode": "CREATED_BY_CODE",
+    "createdDate": "CREATED_DATE",
+    "dataStateCode": "DATA_STATE_CODE",
+    "departmentCode": "DEPARTMENT_CODE",
+    "endDate": "END_DATE",
+    "flagCode": "FLAG_CODE",
+    "flagObjectCode": "FLAG_OBJECT_CODE",
+    "jsonData": "JSON_DATA",
+    "lastModifiedByCode": "LAST_MODIFIED_BY_CODE",
+    "lastModifiedDate": "LAST_MODIFIED_DATE",
+    "name": "NAME",
+    "order": "ORDER_",
+    "orgCode": "ORG_CODE",
+    "orgId": "ORG_ID",
+    "parentCode": "PARENT_CODE",
+    "parentTreeCode": "PARENT_TREE_CODE",
+    "parentTreeName": "PARENT_TREE_NAME",
+    "provinceCode": "PROVINCE_CODE",
+    "regionCode": "REGION_CODE",
+    "siteCode": "SITE_CODE",
+    "stateCode": "STATE_CODE",
+    "systemInfoCode": "SYSTEM_INFO_CODE",
+    "version": "VERSION_"
+  }
+}

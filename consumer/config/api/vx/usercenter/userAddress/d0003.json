@@ -1,1 +1,17 @@
-{}
+{
+  "input": {
+    "userAddressIds": "userAddressIds"
+  },
+  "validation": {
+    "rules": {
+      "userAddressIds": {
+        "required": true
+      }
+    },
+    "messages": {
+      "userAddressIds": {
+        "required": "用户与地址标识集合不能为空值!"
+      }
+    }
+  }
+}

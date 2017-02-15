@@ -1,1 +1,59 @@
-{}
+{
+  "output": {
+    "datas": {
+      "newArrayListFunc": {
+        "key": "content",
+        "output": {
+          "areaCode": "AREA_CODE",
+          "beginDate": "BEGIN_DATE",
+          "cityCode": "CITY_CODE",
+          "countryCode": "COUNTRY_CODE",
+          "createdByCode": "CREATED_BY_CODE",
+          "createdDate": "CREATED_DATE",
+          "dataStateCode": "DATA_STATE_CODE",
+          "departmentCode": "DEPARTMENT_CODE",
+          "endDate": "END_DATE",
+          "flagCode": "FLAG_CODE",
+          "flagObjectCode": "FLAG_OBJECT_CODE",
+          "jsonData": "JSON_DATA",
+          "lastModifiedByCode": "LAST_MODIFIED_BY_CODE",
+          "lastModifiedDate": "LAST_MODIFIED_DATE",
+          "name": "NAME",
+          "order": "ORDER_",
+          "orgCode": "ORG_CODE",
+          "parentCode": "PARENT_CODE",
+          "parentTreeCode": "PARENT_TREE_CODE",
+          "parentTreeName": "PARENT_TREE_NAME",
+          "provinceCode": "PROVINCE_CODE",
+          "regionCode": "REGION_CODE",
+          "regionId": "REGION_ID",
+          "siteCode": "SITE_CODE",
+          "stateCode": "STATE_CODE",
+          "systemInfoCode": "SYSTEM_INFO_CODE",
+          "version": "VERSION_"
+        }
+      }
+    },
+    "totalElements": "totalElements",
+    "totalPages": "totalPages",
+    "hasPrevious": {
+      "readPageablePageNumberFunc": {
+        "key": "previousPageable"
+      }
+    },
+    "previous": "previous",
+    "hasNext": "hasNext",
+    "next": {
+      "readPageablePageNumberFunc": {
+        "key": "nextPageable"
+      }
+    },
+    "pages": {
+      "caclPagesFunc": {
+        "number": "number",
+        "totalPages": "totalPages"
+      }
+    },
+    "page": "number"
+  }
+}

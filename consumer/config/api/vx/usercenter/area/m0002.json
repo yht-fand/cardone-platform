@@ -1,1 +1,42 @@
-{}
+{
+  "input": {
+    "areaId": "areaId"
+  },
+  "validation": {
+    "rules": {
+      "areaId": {
+        "required": true
+      }
+    },
+    "messages": {
+      "areaId": {
+        "required": "地区标识不能为空值!"
+      }
+    }
+  },
+  "output": {
+    "areaCode": "AREA_CODE",
+    "areaId": "AREA_ID",
+    "beginDate": "BEGIN_DATE",
+    "cityCode": "CITY_CODE",
+    "countryCode": "COUNTRY_CODE",
+    "createdByCode": "CREATED_BY_CODE",
+    "createdDate": "CREATED_DATE",
+    "dataStateCode": "DATA_STATE_CODE",
+    "departmentCode": "DEPARTMENT_CODE",
+    "endDate": "END_DATE",
+    "flagCode": "FLAG_CODE",
+    "flagObjectCode": "FLAG_OBJECT_CODE",
+    "jsonData": "JSON_DATA",
+    "lastModifiedByCode": "LAST_MODIFIED_BY_CODE",
+    "lastModifiedDate": "LAST_MODIFIED_DATE",
+    "name": "NAME",
+    "order": "ORDER_",
+    "orgCode": "ORG_CODE",
+    "provinceCode": "PROVINCE_CODE",
+    "siteCode": "SITE_CODE",
+    "stateCode": "STATE_CODE",
+    "systemInfoCode": "SYSTEM_INFO_CODE",
+    "version": "VERSION_"
+  }
+}

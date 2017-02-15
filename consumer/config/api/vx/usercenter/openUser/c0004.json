@@ -1,1 +1,36 @@
-{}
+{
+  "input": {
+    "beginDate": "beginDate",
+    "clientId": "clientId",
+    "createdByCode": "createdByCode",
+    "createdDate": "createdDate",
+    "dataStateCode": "dataStateCode",
+    "departmentCode": "departmentCode",
+    "endDate": "endDate",
+    "flagCode": "flagCode",
+    "flagObjectCode": "flagObjectCode",
+    "jsonData": "jsonData",
+    "lastModifiedByCode": "lastModifiedByCode",
+    "lastModifiedDate": "lastModifiedDate",
+    "openUserId": "openUserId",
+    "order": "order",
+    "orgCode": "orgCode",
+    "siteCode": "siteCode",
+    "stateCode": "stateCode",
+    "systemInfoCode": "systemInfoCode",
+    "userCode": "userCode",
+    "version": "version"
+  },
+  "validation": {
+    "rules": {
+      "openUserCode": {
+        "required": true
+      }
+    },
+    "messages": {
+      "openUserCode": {
+        "required": "开放用户编号不能为空值!"
+      }
+    }
+  }
+}

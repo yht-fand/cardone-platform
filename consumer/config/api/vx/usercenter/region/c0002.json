@@ -1,1 +1,43 @@
-{}
+{
+  "input": {
+    "areaCode": "areaCode",
+    "beginDate": "beginDate",
+    "cityCode": "cityCode",
+    "countryCode": "countryCode",
+    "createdByCode": "createdByCode",
+    "createdDate": "createdDate",
+    "dataStateCode": "dataStateCode",
+    "departmentCode": "departmentCode",
+    "endDate": "endDate",
+    "flagCode": "flagCode",
+    "flagObjectCode": "flagObjectCode",
+    "jsonData": "jsonData",
+    "lastModifiedByCode": "lastModifiedByCode",
+    "lastModifiedDate": "lastModifiedDate",
+    "name": "name",
+    "order": "order",
+    "orgCode": "orgCode",
+    "parentCode": "parentCode",
+    "parentTreeCode": "parentTreeCode",
+    "parentTreeName": "parentTreeName",
+    "provinceCode": "provinceCode",
+    "regionCode": "regionCode",
+    "regionId": "regionId",
+    "siteCode": "siteCode",
+    "stateCode": "stateCode",
+    "systemInfoCode": "systemInfoCode",
+    "version": "version"
+  },
+  "validation": {
+    "rules": {
+      "regionCode": {
+        "required": true
+      }
+    },
+    "messages": {
+      "regionCode": {
+        "required": "区域编号不能为空值!"
+      }
+    }
+  }
+}
