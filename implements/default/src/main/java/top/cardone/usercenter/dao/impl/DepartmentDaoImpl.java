@@ -47,4 +47,11 @@ public class DepartmentDaoImpl extends PageDaoImpl implements top.cardone.userce
             this.update(sql, null);
         }
     }
+
+    @Override
+    public List<Map<String, Object>> findListByKeyword(Map<String, Object> findList) {
+        String findListSqlFilePath = this.getSqlFilePath("findListByKeyword");
+
+        return this.findList(findListSqlFilePath, findList);
+    }
 }

@@ -32,4 +32,12 @@ public interface DepartmentDao extends PageDao {
      * 同步旧数据
      */
     void syncOldData();
+
+    /**
+     * 查询部门列表
+     *
+     * @param findList 关键字
+     * @return
+     */
+    List<Map<String, Object>> findListByKeyword(Map<String, Object> findList);
 }

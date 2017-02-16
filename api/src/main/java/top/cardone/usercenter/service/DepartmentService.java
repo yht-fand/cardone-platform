@@ -177,6 +177,14 @@ public interface DepartmentService extends PageService {
     List<Map<String, Object>> findListByDepartmentCode(String deptCode);
 
     /**
+     * 查询部门列表
+     *
+     * @param findList 关键字
+     * @return
+     */
+    List<Map<String, Object>> findListByKeyword(Map<String, Object> findList);
+
+    /**
      * 同步旧数据
      */
     void syncOldData();
