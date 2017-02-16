@@ -13,8 +13,8 @@ public interface OpenUserDao extends PageDao {
     /**
      * 查询开放用户对象
      *
-     * @param openUserId 开放用户标识
+     * @param findOne 开放用户标识
      * @return 开放用户对象
      */
-    Map<String, Object> findOneByOpenUserId(Object openUserId);
+    Map<String, Object> findOneByOpenUserId(Map<String, Object> findOne);
 }

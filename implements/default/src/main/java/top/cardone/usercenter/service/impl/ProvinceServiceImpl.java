@@ -136,9 +136,9 @@ public class ProvinceServiceImpl extends PageServiceImpl<ProvinceDao> implements
     public int[][] saveListCache(List<Object> saveList) {
         return this.saveList(saveList);
     }
-
+	
     @Override
-    public Map<String, Object> findOneByProvinceId(Object provinceId) {
-        return this.dao.findOneByProvinceId(provinceId);
+    public Map<String, Object> findOneByProvinceId(Map<String, Object> findOne) {
+        return this.dao.findOneByProvinceId(findOne);
     }
 }

@@ -17,10 +17,10 @@ public class UserDaoImpl extends PageDaoImpl implements top.cardone.usercenter.d
     private String syncOldSql;
 
     @Override
-    public Map<String, Object> findOneByUserId(Map<String, Object> findOneMap) {
+    public Map<String, Object> findOneByUserId(Map<String, Object> findOne) {
         String findOneSqlFilePath = this.getSqlFilePath("page.find");
 
-        return this.findOne(findOneSqlFilePath, findOneMap);
+        return this.findOne(findOneSqlFilePath, findOne);
     }
 
     @Override

@@ -12,13 +12,9 @@ import java.util.Map;
  */
 public class UserDepartmentDaoImpl extends PageDaoImpl implements top.cardone.usercenter.dao.UserDepartmentDao {
     @Override
-    public Map<String, Object> findOneByUserDepartmentId(Object userDepartmentId) {
-        Map<String, Object> inputMap = Maps.newHashMap();
-
-        inputMap.put("userDepartmentId", userDepartmentId);
-
+    public Map<String, Object> findOneByUserDepartmentId(Map<String, Object> findOne) {
         String findOneSqlFilePath = this.getSqlFilePath("page.find");
-
-        return this.findOne(findOneSqlFilePath, inputMap);
+		
+        return this.findOne(findOneSqlFilePath, findOne);
     }
 }

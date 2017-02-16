@@ -13,8 +13,8 @@ public interface CityDao extends PageDao {
     /**
      * 查询城市对象
      *
-     * @param cityId 城市标识
+     * @param findOne 城市标识
      * @return 城市对象
      */
-    Map<String, Object> findOneByCityId(Object cityId);
+    Map<String, Object> findOneByCityId(Map<String, Object> findOne);
 }

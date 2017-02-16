@@ -132,7 +132,13 @@ public class OpenUserServiceImpl extends PageServiceImpl<OpenUserDao> implements
     }
 
     @Override
-    public Map<String, Object> findOneByOpenUserId(Object openUserId) {
-        return this.dao.findOneByOpenUserId(openUserId);
+    @Transactional
+    public int[][] saveListCache(List<Object> saveList) {
+        return this.saveList(saveList);
+    }
+	
+    @Override
+    public Map<String, Object> findOneByOpenUserId(Map<String, Object> findOne) {
+        return this.dao.findOneByOpenUserId(findOne);
     }
 }

@@ -136,8 +136,8 @@ public class DepartmentServiceImpl extends PageServiceImpl<DepartmentDao> implem
 		return this.updateList(updateList);
 	}
 
-	public Map<String, Object> findOneByDepartmentId(Map<String, Object> findOneMap) {
-		return this.dao.findOneByDepartmentId(findOneMap);
+	public Map<String, Object> findOneByDepartmentId(Map<String, Object> findOne) {
+		return this.dao.findOneByDepartmentId(findOne);
 	}
 
 	@Override

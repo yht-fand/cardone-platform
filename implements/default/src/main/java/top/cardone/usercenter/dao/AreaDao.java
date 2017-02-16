@@ -13,8 +13,8 @@ public interface AreaDao extends PageDao {
     /**
      * 查询地区对象
      *
-     * @param areaId 地区标识
+     * @param findOne 地区标识
      * @return 地区对象
      */
-    Map<String, Object> findOneByAreaId(Object areaId);
+    Map<String, Object> findOneByAreaId(Map<String, Object> findOne);
 }

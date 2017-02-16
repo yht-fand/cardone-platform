@@ -136,9 +136,9 @@ public class CityServiceImpl extends PageServiceImpl<CityDao> implements top.car
     public int[][] saveListCache(List<Object> saveList) {
         return this.saveList(saveList);
     }
-
+	
     @Override
-    public Map<String, Object> findOneByCityId(Object cityId) {
-        return this.dao.findOneByCityId(cityId);
+    public Map<String, Object> findOneByCityId(Map<String, Object> findOne) {
+        return this.dao.findOneByCityId(findOne);
     }
 }

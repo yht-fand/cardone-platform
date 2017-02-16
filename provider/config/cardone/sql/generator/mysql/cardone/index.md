@@ -58,7 +58,7 @@ FLAG_OBJECT_CODE|YES|String(255)|标识对象代码(工作流：工作流标识�
 JSON_DATA|YES|String()|JSON数据
 LAST_MODIFIED_BY_CODE|YES|String(255)|最后修改人代码
 LAST_MODIFIED_DATE|YES|Date(19)|最后修改时间
-NAME|NO|String(255)|名称
+NAME|YES|String(255)|名称
 ORDER_|YES|Long(19)|排序
 ORG_CODE|YES|String(255)|组织代码
 PARENT_CODE|YES|String(255)|父级代码

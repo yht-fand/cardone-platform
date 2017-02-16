@@ -15,10 +15,10 @@ public interface UserDao extends PageDao {
     /**
      * 查询对象
      *
-     * @param findOneMap 用户标识
+     * @param findOne 用户标识
      * @return 对象用户对象
      */
-    Map<String, Object> findOneByUserId(Map<String, Object> findOneMap);
+    Map<String, Object> findOneByUserId(Map<String, Object> findOne);
 
     <R> R readOneByCondition(Class<R> requiredType, Map<String, Object> inputMap);
 

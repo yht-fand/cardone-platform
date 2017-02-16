@@ -136,9 +136,9 @@ public class AreaServiceImpl extends PageServiceImpl<AreaDao> implements top.car
     public int[][] saveListCache(List<Object> saveList) {
         return this.saveList(saveList);
     }
-
+	
     @Override
-    public Map<String, Object> findOneByAreaId(Object areaId) {
-        return this.dao.findOneByAreaId(areaId);
+    public Map<String, Object> findOneByAreaId(Map<String, Object> findOne) {
+        return this.dao.findOneByAreaId(findOne);
     }
 }

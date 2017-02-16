@@ -3,7 +3,6 @@ package top.cardone.usercenter.dao.impl;
 import com.google.common.collect.Maps;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.data.domain.Page;
 import top.cardone.data.jdbc.dao.impl.PageDaoImpl;
 
 import java.util.List;
@@ -19,10 +18,10 @@ public class DepartmentDaoImpl extends PageDaoImpl implements top.cardone.userce
     private String syncOldSql;
 
     @Override
-    public Map<String, Object> findOneByDepartmentId(Map<String, Object> findOneMap) {
+    public Map<String, Object> findOneByDepartmentId(Map<String, Object> findOne) {
         String findOneSqlFilePath = this.getSqlFilePath("page.find");
 
-        return this.findOne(findOneSqlFilePath, findOneMap);
+        return this.findOne(findOneSqlFilePath, findOne);
     }
 
     @Override

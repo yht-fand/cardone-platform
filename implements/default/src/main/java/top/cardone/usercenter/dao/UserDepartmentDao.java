@@ -13,8 +13,8 @@ public interface UserDepartmentDao extends PageDao {
     /**
      * 查询用户与部门对象
      *
-     * @param userDepartmentId 用户与部门标识
+     * @param findOne 用户与部门标识
      * @return 用户与部门对象
      */
-    Map<String, Object> findOneByUserDepartmentId(Object userDepartmentId);
+    Map<String, Object> findOneByUserDepartmentId(Map<String, Object> findOne);
 }

@@ -12,13 +12,9 @@ import java.util.Map;
  */
 public class AreaDaoImpl extends PageDaoImpl implements top.cardone.usercenter.dao.AreaDao {
     @Override
-    public Map<String, Object> findOneByAreaId(Object areaId) {
-        Map<String, Object> inputMap = Maps.newHashMap();
-
-        inputMap.put("areaId", areaId);
-
+    public Map<String, Object> findOneByAreaId(Map<String, Object> findOne) {
         String findOneSqlFilePath = this.getSqlFilePath("page.find");
-
-        return this.findOne(findOneSqlFilePath, inputMap);
+		
+        return this.findOne(findOneSqlFilePath, findOne);
     }
 }
