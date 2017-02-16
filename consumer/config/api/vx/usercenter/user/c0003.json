@@ -1,0 +1,82 @@
+{
+  "input": {
+    "address": "address",
+    "age": "age",
+    "aliasName": "aliasName",
+    "areaCode": "areaCode",
+    "beginDate": "beginDate",
+    "birthday": "birthday",
+    "callName": "callName",
+    "cityCode": "cityCode",
+    "companyName": "companyName",
+    "contact": "contact",
+    "countryCode": "countryCode",
+    "createdByCode": "createdByCode",
+    "createdDate": "createdDate",
+    "dataStateCode": "dataStateCode",
+    "departmentCode": "departmentCode",
+    "diplomaCode": "diplomaCode",
+    "email": "email",
+    "endDate": "endDate",
+    "flagCode": "flagCode",
+    "flagObjectCode": "flagObjectCode",
+    "folkCode": "folkCode",
+    "idCardCode": "idCardCode",
+    "idCardNo": "idCardNo",
+    "intro": "intro",
+    "jsonData": "jsonData",
+    "lastModifiedByCode": "lastModifiedByCode",
+    "lastModifiedDate": "lastModifiedDate",
+    "locus": "locus",
+    "marryStateCode": "marryStateCode",
+    "mobilePhone": "mobilePhone",
+    "name": "name",
+    "namePinyin": "namePinyin",
+    "order": "order",
+    "orgCode": "orgCode",
+    "password": "password",
+    "passwordSalt": "passwordSalt",
+    "portraitUrl": "portraitUrl",
+    "privatePassword": "privatePassword",
+    "privatePasswordSalt": "privatePasswordSalt",
+    "professionCode": "professionCode",
+    "provinceCode": "provinceCode",
+    "qq": "qq",
+    "regionCode": "regionCode",
+    "remark": "remark",
+    "sexCode": "sexCode",
+    "siteCode": "siteCode",
+    "stateCode": "stateCode",
+    "systemInfoCode": "systemInfoCode",
+    "telephone": "telephone",
+    "userCode": "userCode",
+    "userId": "userId",
+    "version": "version"
+  },
+  "validation": {
+    "rules": {
+      "userCode": {
+        "required": true,
+        "minlength": 4,
+        "maxlength": 255
+      },
+      "name": {
+        "required": true,
+        "minlength": 4,
+        "maxlength": 255
+      }
+    },
+    "messages": {
+      "userCode": {
+        "required": "必填",
+        "minlength": "需3个字符以上",
+        "maxlength": "需小于255个字符"
+      },
+      "name": {
+        "required": "名称不能为空值!",
+        "minlength": "需3个字符以上",
+        "maxlength": "需小于255个字符"
+      }
+    }
+  }
+}

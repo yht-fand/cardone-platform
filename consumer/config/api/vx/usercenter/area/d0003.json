@@ -1,0 +1,17 @@
+{
+  "input": {
+    "areaIds": "areaIds"
+  },
+  "validation": {
+    "rules": {
+      "areaIds": {
+        "required": true
+      }
+    },
+    "messages": {
+      "areaIds": {
+        "required": "地区标识集合不能为空值!"
+      }
+    }
+  }
+}
