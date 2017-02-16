@@ -23,13 +23,13 @@ import java.io.IOException;
 @RunWith(SpringJUnit4ClassRunner.class)
 @SpringBootTest(classes = ConsumerApplication.class, value = {"spring.profiles.active=test"}, webEnvironment = SpringBootTest.WebEnvironment.DEFINED_PORT)
 public class R0002FuncTest {
-    @Value("http://localhost:${server.port:8765}${server.context-path:}/v1/usercenter/openUser/r0002.json")
+    @Value("http://localhost:${server.port:8765}${server.context-path:}/vx/usercenter/openUser/r0002.json")
     private String funcUrl;
 
-    @Value("${app.root}/src/test/resources/top/cardone/func/v1/usercenter/openUser/R0002FuncTest.func.input.json")
+    @Value("${app.root}/src/test/resources/top/cardone/func/vx/usercenter/openUser/R0002FuncTest.func.input.json")
     private Resource funcInputResource;
 
-    @Value("${app.root}/src/test/resources/top/cardone/func/v1/usercenter/openUser/R0002FuncTest.func.output.json")
+    @Value("${app.root}/src/test/resources/top/cardone/func/vx/usercenter/openUser/R0002FuncTest.func.output.json")
     private Resource funcOutputResource;
 
     private HttpHeaders headers;

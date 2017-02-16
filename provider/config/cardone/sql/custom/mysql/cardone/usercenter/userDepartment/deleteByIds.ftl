@@ -1,1 +1,1 @@
-DELETE FROM c1_user_department WHERE INSTR(:userDepartmentIds, USER_DEPARTMENT_ID) > 0
+DELETE FROM c1_user_department WHERE FIND_IN_SET(USER_DEPARTMENT_ID, :userDepartmentIds)

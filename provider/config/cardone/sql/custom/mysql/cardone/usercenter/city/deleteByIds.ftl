@@ -1,1 +1,1 @@
-DELETE FROM c1_city WHERE INSTR(:cityIds, CITY_ID) > 0
+DELETE FROM c1_city WHERE FIND_IN_SET(CITY_ID, :cityIds)

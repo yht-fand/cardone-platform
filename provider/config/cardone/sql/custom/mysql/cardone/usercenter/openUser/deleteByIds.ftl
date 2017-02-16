@@ -1,1 +1,1 @@
-DELETE FROM c1_open_user WHERE INSTR(:openUserIds, OPEN_USER_ID) > 0
+DELETE FROM c1_open_user WHERE FIND_IN_SET(OPEN_USER_ID, :openUserIds)
