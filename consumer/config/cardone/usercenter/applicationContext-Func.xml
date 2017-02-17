@@ -25,25 +25,37 @@
 
     <alias name="top.cardone.usercenter.func.ReadOneCreatedByIdFunc" alias="readLastModifiedByIdFunc"/>
 
-    <bean id="top.cardone.usercenter.func.GenerateDepartmentTreeFunc"
-          class="top.cardone.usercenter.func.GenerateDepartmentTreeFunc"/>
-
-    <alias name="top.cardone.usercenter.func.GenerateDepartmentTreeFunc" alias="generateDepartmentTreeFunc"/>
-
     <bean name="top.cardone.usercenter.func.FindListOrgForTreeFunc"
           class="top.cardone.usercenter.func.FindListOrgForTreeFunc"/>
 
     <alias name="top.cardone.usercenter.func.FindListOrgForTreeFunc" alias="findListOrgForTreeFunc"/>
 
-    <bean id="top.cardone.usercenter.func.GenerateOrgTreeFunc"
-          class="top.cardone.usercenter.func.GenerateOrgTreeFunc"/>
+    <bean id="generateOrgTreeFunc"
+          class="top.cardone.data.func.GenerateTreeFunc">
+        <property name="codePutKey" value="orgCode"/>
+        <property name="codeGetKey" value="ORG_CODE"/>
+        <property name="pkPutKey" value="orgId"/>
+        <property name="pkGetKey" value="ORG_ID"/>
+        <property name="service" ref="top.cardone.usercenter.service.OrgService"/>
+    </bean>
 
-    <alias name="top.cardone.usercenter.func.GenerateOrgTreeFunc" alias="generateOrgTreeFunc"/>
+    <bean id="generateRegionTreeFunc"
+          class="top.cardone.data.func.GenerateTreeFunc">
+        <property name="codePutKey" value="regionCode"/>
+        <property name="codeGetKey" value="REGION_CODE"/>
+        <property name="pkPutKey" value="regionId"/>
+        <property name="pkGetKey" value="REGION_ID"/>
+        <property name="service" ref="top.cardone.usercenter.service.RegionService"/>
+    </bean>
 
-    <bean id="top.cardone.usercenter.func.GenerateRegionTreeFunc"
-          class="top.cardone.usercenter.func.GenerateRegionTreeFunc"/>
-
-    <alias name="top.cardone.usercenter.func.GenerateRegionTreeFunc" alias="generateRegionTreeFunc"/>
+    <bean id="generateDepartmentTreeFunc"
+          class="top.cardone.data.func.GenerateTreeFunc">
+        <property name="codePutKey" value="departmentCode"/>
+        <property name="codeGetKey" value="DEPARTMENT_CODE"/>
+        <property name="pkPutKey" value="departmentId"/>
+        <property name="pkGetKey" value="DEPARTMENT_ID"/>
+        <property name="service" ref="top.cardone.usercenter.service.DepartmentService"/>
+    </bean>
 
     <bean name="top.cardone.usercenter.func.FindListRegionForTreeFunc"
           class="top.cardone.usercenter.func.FindListRegionForTreeFunc"/>
