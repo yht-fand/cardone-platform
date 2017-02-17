@@ -300,4 +300,9 @@ public class DepartmentServiceImpl extends PageServiceImpl<DepartmentDao> implem
     public List<Map<String, Object>> findListByKeyword(Map<String, Object> findList) {
         return this.dao.findListByKeyword(findList);
     }
+
+    @Override
+    public List<Map<String, Object>> findListForTree(Map<String, Object> findList) {
+        return this.dao.findListForTree(findList);
+    }
 }

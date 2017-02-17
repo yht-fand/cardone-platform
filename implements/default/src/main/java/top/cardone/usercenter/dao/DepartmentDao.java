@@ -40,4 +40,12 @@ public interface DepartmentDao extends PageDao {
      * @return
      */
     List<Map<String, Object>> findListByKeyword(Map<String, Object> findList);
+
+    /**
+     * 查询部门树
+     *
+     * @param findList 关键字
+     * @return
+     */
+    List<Map<String, Object>> findListForTree(Map<String, Object> findList);
 }
