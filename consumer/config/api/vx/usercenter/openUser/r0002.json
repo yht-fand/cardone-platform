@@ -1,13 +1,6 @@
 {
   "output": {
-    "datas": {
-      "newArrayListFunc": {
-        "key": "datas",
-        "output": {
-          "label": "NAME",
-          "value": "OPENUSER_CODE"
-        }
-      }
-    }
+    "label": "NAME",
+    "value": "OPENUSER_CODE"
   }
 }

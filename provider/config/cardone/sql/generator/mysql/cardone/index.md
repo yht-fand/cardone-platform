@@ -188,7 +188,7 @@ NAME|NO|String(255)|名称
 NAME_PINYIN|YES|String(255)|拼音
 ORDER_|YES|Long(19)|排序
 ORG_CODE|YES|String(255)|组织代码
-PASSWORD_|NO|String(255)|密码
+PASSWORD_|YES|String(255)|密码
 PASSWORD_SALT|YES|String(255)|密码盐
 PORTRAIT_URL|YES|String(255)|肖像路径
 PRIVATE_PASSWORD|YES|String(255)|隐私密码

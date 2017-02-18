@@ -1,10 +1,13 @@
 package top.cardone.controller.vx.usercenter;
 
+import com.google.common.collect.Maps;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import top.cardone.context.ApplicationContextHolder;
+import top.cardone.context.util.MapUtils;
+import top.cardone.core.CodeException;
 import top.cardone.core.util.func.Func1;
 import top.cardone.usercenter.service.UserDepartmentService;
 import top.cardone.web.support.WebSupport;
@@ -26,7 +29,19 @@ public class UserDepartmentController {
     @ResponseBody
     public Object c0001Json(HttpServletRequest request) {
         return ApplicationContextHolder.getBean(WebSupport.class).func(request,
-                (Func1<Object, Map<String, Object>>) input -> ApplicationContextHolder.getBean(UserDepartmentService.class).insertByNotExistsCache(input));
+                (Func1<Object, Map<String, Object>>) input -> {
+                    Map<String, Object> readOne = Maps.newHashMap();
+
+                    readOne.put("userDepartmentCode", MapUtils.getString(input, "userDepartmentCode"));
+
+                    int count = ApplicationContextHolder.getBean(UserDepartmentService.class).readOne(Integer.class, readOne);
+
+                    if (count > 0) {
+                        throw new CodeException("该用户与部门编号已经存在");
+                    }
+
+                    return ApplicationContextHolder.getBean(UserDepartmentService.class).insertByNotExistsCache(input);
+                });
     }
     /** /c0001.json end **/
 
