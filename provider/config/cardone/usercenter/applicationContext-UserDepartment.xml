@@ -18,7 +18,7 @@
                 <entry key="insert">
                     <map>
                         <entry key="userDepartmentId" value="readRandomUUIDFunc"/>
-                        <entry key="createdByCode" value="readCreatedByCodeFunc"/>
+                        <entry key="createdByCode" value="readOneCreatedByIdFunc"/>
                         <entry key="createdDate" value="readCreatedDateFunc"/>
                     </map>
                 </entry>
