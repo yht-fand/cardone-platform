@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns="http://www.springframework.org/schema/beans"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <bean class="top.cardone.context.action.Actions" init-method="action">
+        <property name="actions">
+            <list>
+                <bean class="top.cardone.data.action.InitDataAction">
+                    <property name="serviceBeanId" value="top.cardone.usercenter.service.UserService"/>
+                    <property name="jsonFiles" value="${app.root}/config/cardone/usercenter/init-data/user-*.json"/>
+                </bean>
+            </list>
+        </property>
+    </bean>
+</beans>
