@@ -141,4 +141,9 @@ public class UserOrgServiceImpl extends PageServiceImpl<UserOrgDao> implements t
     public Map<String, Object> findOneByUserOrgId(Map<String, Object> findOne) {
         return this.dao.findOneByUserOrgId(findOne);
     }
+
+    @Override
+    public List<Map<String, Object>> findListByKeyword(Map<String, Object> findList) {
+        return this.dao.findListByKeyword(findList);
+    }
 }

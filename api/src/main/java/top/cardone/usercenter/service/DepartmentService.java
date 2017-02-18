@@ -177,10 +177,10 @@ public interface DepartmentService extends PageService {
     List<Map<String, Object>> findListByDepartmentCode(String deptCode);
 
     /**
-     * 查询部门列表
+     * 查询部门下拉列表
      *
      * @param findList 关键字
-     * @return
+     * @return 部门下拉列表
      */
     List<Map<String, Object>> findListByKeyword(Map<String, Object> findList);
 
@@ -196,16 +196,4 @@ public interface DepartmentService extends PageService {
      * 同步旧数据
      */
     void syncOldData();
-
-    /**
-     * 生成树信息
-     */
-    @CacheEvict(value = "top.cardone.usercenter.service.DepartmentService", allEntries = true)
-    void generateTreeInfo();
-
-    /**
-     * 修正树信息
-     */
-    @CacheEvict(value = "top.cardone.usercenter.service.DepartmentService", allEntries = true)
-    int fixTreeInfo();
 }

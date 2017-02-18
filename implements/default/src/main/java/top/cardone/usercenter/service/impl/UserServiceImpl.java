@@ -152,4 +152,9 @@ public class UserServiceImpl extends PageServiceImpl<UserDao> implements top.car
     public void syncOldData() {
         this.dao.syncOldData();
     }
+
+    @Override
+    public List<Map<String, Object>> findListByKeyword(Map<String, Object> findList) {
+        return this.dao.findListByKeyword(findList);
+    }
 }

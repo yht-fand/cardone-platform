@@ -141,4 +141,9 @@ public class CityServiceImpl extends PageServiceImpl<CityDao> implements top.car
     public Map<String, Object> findOneByCityId(Map<String, Object> findOne) {
         return this.dao.findOneByCityId(findOne);
     }
+
+    @Override
+    public List<Map<String, Object>> findListByKeyword(Map<String, Object> findList) {
+        return this.dao.findListByKeyword(findList);
+    }
 }

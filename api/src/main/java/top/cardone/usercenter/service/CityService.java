@@ -154,4 +154,12 @@ public interface CityService extends PageService {
      * @return 城市对象
      */
     Map<String, Object> findOneByCityId(Map<String, Object> findOne);
+	
+    /**
+     * 查询城市下拉列表
+     *
+     * @param findList 关键字
+     * @return 城市下拉列表
+     */
+    List<Map<String, Object>> findListByKeyword(Map<String, Object> findList);
 }

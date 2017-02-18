@@ -158,21 +158,17 @@ public interface OrgService extends PageService {
     List<Map<String,Object>> findListByOrgCode(String orgCode);
 
     /**
-     * 生成树信息
-     */
-    @CacheEvict(value = "top.cardone.usercenter.service.OrgService", allEntries = true)
-    void generateTreeInfo();
-
-    /**
-     * 修正树信息
-     */
-    @CacheEvict(value = "top.cardone.usercenter.service.OrgService", allEntries = true)
-    int fixTreeInfo();
-
-    /**
      * 查询
      * @param findList
      * @return
      */
     List<Map<String,Object>> findListByName(Map<String,Object> findList);
+
+    /**
+     * 查询组织下拉列表
+     *
+     * @param findList 关键字
+     * @return 组织下拉列表
+     */
+    List<Map<String, Object>> findListByKeyword(Map<String, Object> findList);
 }

@@ -167,4 +167,12 @@ public interface UserService extends PageService {
      * 同步旧数据
      */
     void syncOldData();
+
+    /**
+     * 查询用户下拉列表
+     *
+     * @param findList 关键字
+     * @return 用户列表
+     */
+    List<Map<String, Object>> findListByKeyword(Map<String, Object> findList);
 }

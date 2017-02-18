@@ -34,4 +34,12 @@ public interface UserDao extends PageDao {
      * @return 对象用户对象
      */
     List<Map<String, Object>> findListByName(Map<String, Object> findListMap);
+
+    /**
+     * 查询用户下拉列表
+     *
+     * @param findList 关键字
+     * @return 用户下拉列表
+     */
+    List<Map<String, Object>> findListByKeyword(Map<String, Object> findList);
 }

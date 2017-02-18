@@ -141,4 +141,9 @@ public class UserDepartmentServiceImpl extends PageServiceImpl<UserDepartmentDao
     public Map<String, Object> findOneByUserDepartmentId(Map<String, Object> findOne) {
         return this.dao.findOneByUserDepartmentId(findOne);
     }
+
+    @Override
+    public List<Map<String, Object>> findListByKeyword(Map<String, Object> findList) {
+        return this.dao.findListByKeyword(findList);
+    }
 }

@@ -1,80 +1,13 @@
 {
-  "input-temp:特殊情况再用": {
-    "beginDate": "beginDate",
-    "cityCode": "cityCode",
-    "cityId": "cityId",
-    "countryCode": "countryCode",
-    "createdByCode": "createdByCode",
-    "createdDate": "createdDate",
-    "dataStateCode": "dataStateCode",
-    "departmentCode": "departmentCode",
-    "endDate": "endDate",
-    "flagCode": "flagCode",
-    "flagObjectCode": "flagObjectCode",
-    "jsonData": "jsonData",
-    "lastModifiedByCode": "lastModifiedByCode",
-    "lastModifiedDate": "lastModifiedDate",
-    "name": "name",
-    "order": "order",
-    "orgCode": "orgCode",
-    "provinceCode": "provinceCode",
-    "siteCode": "siteCode",
-    "stateCode": "stateCode",
-    "systemInfoCode": "systemInfoCode",
-    "version": "version",
-    "pageSize": "pageSize",
-    "pageNumber": "pageNumber"
-  },
   "output": {
     "datas": {
       "newArrayListFunc": {
+        "key": "datas",
         "output": {
-          "beginDate": "BEGIN_DATE",
-          "cityCode": "CITY_CODE",
-          "cityId": "CITY_ID",
-          "countryCode": "COUNTRY_CODE",
-          "createdByCode": "CREATED_BY_CODE",
-          "createdDate": "CREATED_DATE",
-          "dataStateCode": "DATA_STATE_CODE",
-          "departmentCode": "DEPARTMENT_CODE",
-          "endDate": "END_DATE",
-          "flagCode": "FLAG_CODE",
-          "flagObjectCode": "FLAG_OBJECT_CODE",
-          "jsonData": "JSON_DATA",
-          "lastModifiedByCode": "LAST_MODIFIED_BY_CODE",
-          "lastModifiedDate": "LAST_MODIFIED_DATE",
-          "name": "NAME",
-          "order": "ORDER_",
-          "orgCode": "ORG_CODE",
-          "provinceCode": "PROVINCE_CODE",
-          "siteCode": "SITE_CODE",
-          "stateCode": "STATE_CODE",
-          "systemInfoCode": "SYSTEM_INFO_CODE",
-          "version": "VERSION_"
+          "label": "NAME",
+          "value": "CITY_CODE"
         }
       }
-    },
-    "totalElements": "total",
-    "totalPages": {
-      "readTotalPagesForPageFunc": null
-    },
-    "hasPrevious": {
-      "readHasPreviousForPageFunc": null
-    },
-    "previous": {
-      "readPreviousForPageFunc": null
-    },
-    "hasNext": {
-      "readHasNextForPageFunc": null
-    },
-    "next": {
-      "readNextForPageFunc": null
-    },
-    "pages": {
-      "caclPagesForPageFunc": null
-    },
-    "page": {
-      "readPageForPageFunc": null
     }
   }
 }

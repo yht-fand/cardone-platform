@@ -148,145 +148,6 @@ public class RegionServiceImpl extends PageServiceImpl<RegionDao> implements top
     }
 
     @Override
-    @Transactional
-    public int fixTreeInfo() {
-        Map<String, Object> findListMap = Maps.newHashMap();
-
-        findListMap.put("order_by_parentCode", "1");
-
-        List<Map<String, Object>> items = this.dao.findList(findListMap);
-
-        int updateCount = 0;
-
-        for (Map<String, Object> item : items) {
-            String itemParentCode = MapUtils.getString(item, "PARENT_CODE");
-
-            if (StringUtils.isBlank(itemParentCode)) {
-                itemParentCode = null;
-            }
-
-            String itemDepartmentCode = MapUtils.getString(item, "REGION_CODE");
-
-            Map<String, Object> update = Maps.newHashMap();
-
-            if (StringUtils.equals(itemParentCode, itemDepartmentCode)) {
-                update.put("regionId", MapUtils.getString(item, "REGION_ID"));
-            } else if (StringUtils.isNotBlank(itemParentCode)) {
-                Map<String, Object> findOne = Maps.newHashMap();
-
-                findOne.put("regionCode", itemParentCode);
-
-                Map<String, Object> parent = this.dao.findOne(findOne);
-
-                if (MapUtils.isEmpty(parent)) {
-                    update.put("regionId", MapUtils.getString(item, "REGION_ID"));
-                } else {
-                    String[] parentTreeCodes = StringUtils.split(MapUtils.getString(parent, "PARENT_TREE_CODE", MapUtils.getString(parent, "PARENT_CODE")), ",");
-
-                    if (ArrayUtils.contains(parentTreeCodes, itemDepartmentCode)) {
-                        update.put("regionId", MapUtils.getString(item, "REGION_ID"));
-                    }
-                }
-            }
-
-            if (!MapUtils.isEmpty(update)) {
-                update.put("parentCode", null);
-                update.put("parentTreeCode", null);
-                update.put("parentTreeName", null);
-
-                updateCount += this.dao.update(update);
-            }
-        }
-
-        return updateCount;
-    }
-
-    @Override
-    @Transactional
-    public void generateTreeInfo() {
-        for (int i = 0; i < 99; i++) {
-            int updateCount = this.fixTreeInfo();
-
-            if (updateCount < 1) {
-                break;
-            }
-        }
-
-        for (int i = 0; i < 99; i++) {
-            Map<String, Object> findListMap = Maps.newHashMap();
-
-            findListMap.put("order_by_parentCode", "1");
-
-            List<Map<String, Object>> items = this.dao.findList(findListMap);
-
-            generateTreeInfo(null, items, 9);
-
-            boolean isReGenerateTreeInfo = true;
-
-            for (int j = 0; j < 99; j++) {
-                int updateCount = this.fixTreeInfo();
-
-                if (updateCount < 1) {
-                    break;
-                }
-
-                isReGenerateTreeInfo = true;
-            }
-
-            if (!isReGenerateTreeInfo) {
-                break;
-            }
-        }
-    }
-
-    private void generateTreeInfo(Map<String, Object> parent, List<Map<String, Object>> items, int dept) {
-        String parentTreeCode = null;
-        String parentTreeName = null;
-
-        if (parent != null) {
-            parentTreeCode = MapUtils.getString(parent, "PARENT_TREE_CODE");
-            parentTreeName = MapUtils.getString(parent, "PARENT_TREE_NAME");
-
-            Map<String, Object> update = Maps.newHashMap();
-
-            update.put("parentCode", MapUtils.getString(parent, "PARENT_CODE"));
-            update.put("parentTreeCode", parentTreeCode);
-            update.put("parentTreeName", parentTreeName);
-            update.put("regionId", MapUtils.getString(parent, "REGION_ID"));
-
-            this.dao.update(update);
-        }
-
-        if (CollectionUtils.isEmpty(items) || dept < 1) {
-            return;
-        }
-
-        String parentCode = MapUtils.getString(parent, "REGION_CODE");
-
-        for (Map<String, Object> item : items) {
-            String itemParentCode = MapUtils.getString(item, "PARENT_CODE");
-
-            if (StringUtils.isBlank(itemParentCode)) {
-                itemParentCode = null;
-            }
-
-            if (!StringUtils.equals(parentCode, itemParentCode)) {
-                continue;
-            }
-
-            if (org.apache.commons.lang3.StringUtils.isNotBlank(parentTreeCode)) {
-                item.put("PARENT_TREE_CODE", parentTreeCode + "," + parentCode);
-                item.put("PARENT_TREE_NAME", parentTreeName + "," + MapUtils.getString(parent, "NAME"));
-            } else {
-                item.put("PARENT_TREE_CODE", parentCode);
-                item.put("PARENT_TREE_NAME", MapUtils.getString(parent, "NAME"));
-            }
-
-            this.generateTreeInfo(item, items, (dept - 1));
-        }
-    }
-
-    @Override
     public List<Map<String, Object>> findListByName(Map<String, Object> findList) {
         return this.dao.findListByName(findList);
     }
@@ -294,5 +155,10 @@ public class RegionServiceImpl extends PageServiceImpl<RegionDao> implements top
     @Override
     public List<Map<String, Object>> findListByRegionCode(String regionCode) {
         return this.dao.findListByRegionCode(regionCode);
+    }
+
+    @Override
+    public List<Map<String, Object>> findListByKeyword(Map<String, Object> findList) {
+        return this.dao.findListByKeyword(findList);
     }
 }

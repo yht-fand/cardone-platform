@@ -49,4 +49,9 @@ public class UserDaoImpl extends PageDaoImpl implements top.cardone.usercenter.d
 
         return this.findList(findListSqlFilePath, findListMap);
     }
+
+    @Override
+    public List<Map<String, Object>> findListByKeyword(Map<String, Object> findList) {
+        return null;
+    }
 }

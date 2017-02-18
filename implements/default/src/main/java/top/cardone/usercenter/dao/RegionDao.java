@@ -27,4 +27,12 @@ public interface RegionDao extends PageDao {
     List<Map<String,Object>> findListByName(Map<String,Object> findList);
 
     List<Map<String, Object>> findListByRegionCode(String regionCode);
+
+    /**
+     * 查询区域下拉列表
+     *
+     * @param findList 关键字
+     * @return 区域下拉列表
+     */
+    List<Map<String, Object>> findListByKeyword(Map<String, Object> findList);
 }

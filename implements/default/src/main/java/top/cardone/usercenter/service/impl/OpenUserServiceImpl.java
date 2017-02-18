@@ -141,4 +141,9 @@ public class OpenUserServiceImpl extends PageServiceImpl<OpenUserDao> implements
     public Map<String, Object> findOneByOpenUserId(Map<String, Object> findOne) {
         return this.dao.findOneByOpenUserId(findOne);
     }
+
+    @Override
+    public List<Map<String, Object>> findListByKeyword(Map<String, Object> findList) {
+        return this.dao.findListByKeyword(findList);
+    }
 }

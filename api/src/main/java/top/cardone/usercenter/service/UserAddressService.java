@@ -154,4 +154,12 @@ public interface UserAddressService extends PageService {
      * @return 用户与地址对象
      */
     Map<String, Object> findOneByUserAddressId(Map<String, Object> findOne);
+	
+    /**
+     * 查询用户与地址下拉列表
+     *
+     * @param findList 关键字
+     * @return 用户与地址下拉列表
+     */
+    List<Map<String, Object>> findListByKeyword(Map<String, Object> findList);
 }
