@@ -2,33 +2,15 @@
 <beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xmlns="http://www.springframework.org/schema/beans"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
-    <bean name="top.cardone.usercenter.func.FindListDepartmentForTreeFunc"
-          class="top.cardone.usercenter.func.FindListDepartmentForTreeFunc"/>
-
-    <alias name="top.cardone.usercenter.func.FindListDepartmentForTreeFunc" alias="findListDepartmentForTreeFunc"/>
-
-    <alias name="top.cardone.usercenter.func.FindListDepartmentForTreeFunc" alias="departmentTreeFunc"/>
-
     <bean id="top.cardone.usercenter.func.FindOneUserByPrincipalFunc"
           class="top.cardone.usercenter.func.FindOneUserByPrincipalFunc"/>
 
     <alias name="top.cardone.usercenter.func.FindOneUserByPrincipalFunc" alias="findOneUserByPrincipalFunc"/>
 
-    <bean id="top.cardone.usercenter.func.ReadOneCreatedByIdFunc"
-          class="top.cardone.usercenter.func.ReadOneCreatedByIdFunc"/>
+    <bean id="top.cardone.usercenter.func.ReadOneUserIdFunc"
+          class="top.cardone.usercenter.func.ReadOneUserIdFunc"/>
 
-    <alias name="top.cardone.usercenter.func.ReadOneCreatedByIdFunc" alias="readOneCreatedByIdFunc"/>
-
-    <alias name="top.cardone.usercenter.func.ReadOneCreatedByIdFunc" alias="readCreatedByIdFunc"/>
-
-    <alias name="top.cardone.usercenter.func.ReadOneCreatedByIdFunc" alias="readOneLastModifiedByIdFunc"/>
-
-    <alias name="top.cardone.usercenter.func.ReadOneCreatedByIdFunc" alias="readLastModifiedByIdFunc"/>
-
-    <bean name="top.cardone.usercenter.func.FindListOrgForTreeFunc"
-          class="top.cardone.usercenter.func.FindListOrgForTreeFunc"/>
-
-    <alias name="top.cardone.usercenter.func.FindListOrgForTreeFunc" alias="findListOrgForTreeFunc"/>
+    <alias name="top.cardone.usercenter.func.ReadOneUserIdFunc" alias="readOneUserIdFunc"/>
 
     <bean id="generateOrgTreeFunc"
           class="top.cardone.data.func.GenerateTreeFunc">
@@ -56,9 +38,4 @@
         <property name="pkGetKey" value="DEPARTMENT_ID"/>
         <property name="service" ref="top.cardone.usercenter.service.DepartmentService"/>
     </bean>
-
-    <bean name="top.cardone.usercenter.func.FindListRegionForTreeFunc"
-          class="top.cardone.usercenter.func.FindListRegionForTreeFunc"/>
-
-    <alias name="top.cardone.usercenter.func.FindListRegionForTreeFunc" alias="findListRegionForTreeFunc"/>
 </beans>

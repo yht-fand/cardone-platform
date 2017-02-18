@@ -11,11 +11,7 @@
 
     <bean id="readRandomUUIDFunc" class="top.cardone.data.func.ReadRandomUUIDFunc"/>
 
-    <bean id="readCreatedByCodeFunc" class="top.cardone.security.shiro.func.ReadPrincipalFunc"/>
+    <bean id="readPrincipalFunc" class="top.cardone.security.shiro.func.ReadPrincipalFunc"/>
 
-    <bean id="readCreatedDateFunc" class="top.cardone.data.func.ReadDateFunc"/>
-
-    <bean id="readLastModifiedByCodeFunc" class="top.cardone.security.shiro.func.ReadPrincipalFunc"/>
-
-    <bean id="readLastModifiedDateFunc" class="top.cardone.data.func.ReadDateFunc"/>
+    <bean id="readOneDateFunc" class="top.cardone.data.func.ReadOneDateFunc"/>
 </beans>

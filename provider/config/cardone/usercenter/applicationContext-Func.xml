@@ -7,16 +7,10 @@
 
     <alias name="top.cardone.usercenter.func.FindOneUserByPrincipalFunc" alias="findOneUserByPrincipalFunc"/>
 
-    <bean id="top.cardone.usercenter.func.ReadOneCreatedByIdFunc"
-          class="top.cardone.usercenter.func.ReadOneCreatedByIdFunc"/>
+    <bean id="top.cardone.usercenter.func.ReadOneUserIdFunc"
+          class="top.cardone.usercenter.func.ReadOneUserIdFunc"/>
 
-    <alias name="top.cardone.usercenter.func.ReadOneCreatedByIdFunc" alias="readOneCreatedByIdFunc"/>
-
-    <alias name="top.cardone.usercenter.func.ReadOneCreatedByIdFunc" alias="readCreatedByIdFunc"/>
-
-    <alias name="top.cardone.usercenter.func.ReadOneCreatedByIdFunc" alias="readOneLastModifiedByIdFunc"/>
-
-    <alias name="top.cardone.usercenter.func.ReadOneCreatedByIdFunc" alias="readLastModifiedByIdFunc"/>
+    <alias name="top.cardone.usercenter.func.ReadOneUserIdFunc" alias="readOneUserIdFunc"/>
 
     <bean id="generateOrgTreeFunc"
           class="top.cardone.data.func.GenerateTreeFunc">
