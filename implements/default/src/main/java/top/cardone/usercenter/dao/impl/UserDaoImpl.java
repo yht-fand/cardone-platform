@@ -12,6 +12,13 @@ import java.util.Map;
  */
 public class UserDaoImpl extends PageDaoImpl implements top.cardone.usercenter.dao.UserDao {
     @Override
+    public int updateByUserIds(Map<String, Object> update) {
+        String updateByUserIdsSqlFilePath = this.getSqlFilePath("updateByUserIds");
+
+        return this.update(updateByUserIdsSqlFilePath, update);
+    }
+
+    @Override
     public Map<String, Object> findOneByUserId(Map<String, Object> findOne) {
         String findOneSqlFilePath = this.getSqlFilePath("page.find");
 

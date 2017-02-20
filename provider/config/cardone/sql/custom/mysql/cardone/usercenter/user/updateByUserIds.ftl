@@ -1,0 +1,1 @@
+UPDATE c1_user SET PASSWORD_ = :password, PASSWORD_SALT = :passwordSalt WHERE FIND_IN_SET(USER_ID, :userIds)

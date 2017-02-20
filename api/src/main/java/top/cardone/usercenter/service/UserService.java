@@ -148,6 +148,12 @@ public interface UserService extends PageService {
     int[][] saveListCache(List<Object> saveList);
 
     /**
+     * @see top.cardone.usercenter.service.UserService#updateList
+     */
+    @CacheEvict(value = "top.cardone.usercenter.service.UserService", allEntries = true)
+    int updateByUserIdsCache(Map<String, Object> update);
+
+    /**
      * 查询对象
      *
      * @param findOneMap 用户标识

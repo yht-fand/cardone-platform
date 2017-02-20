@@ -11,6 +11,8 @@ import java.util.Map;
  * @author yao hai tao
  */
 public interface UserDao extends PageDao {
+    int updateByUserIds(Map<String, Object> update);
+
     /**
      * 查询对象
      *

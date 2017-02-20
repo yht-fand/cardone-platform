@@ -267,7 +267,7 @@ public class UserController {
 
     /**
      * /modifyModal.json begin
-     **xx/
+     **/
     @RequestMapping("/modifyModal.json")
     @ResponseBody
     public Object modifyModalJson(HttpServletRequest request) {
