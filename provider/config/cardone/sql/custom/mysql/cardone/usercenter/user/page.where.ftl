@@ -11,10 +11,10 @@ AND t.`USER_CODE` = :userCode
 AND (LOCATE(:name, t.`USER_CODE`) OR LOCATE(:name, t.`NAME`))
 </#if>
 <#if StringUtils.isNotBlank(startTime)>
-AND ((t.`BEGIN_DATE` is null OR DATE_FORMAT(t.`BEGIN_DATE`, '%Y-%m-%d') >= :startTime) OR (t.`END_DATE` is null OR DATE_FORMAT(t.`END_DATE`, '%Y-%m-%d') >= :startTime))
+AND ((t.`BEGIN_DATE` is null OR t.`BEGIN_DATE` >= :startTime) OR (t.`END_DATE` is null OR t.`END_DATE` >= :startTime))
 </#if>
 <#if StringUtils.isNotBlank(endTime)>
-AND ((t.`BEGIN_DATE` is null OR DATE_FORMAT(t.`BEGIN_DATE`, '%Y-%m-%d') <= :endTime) OR (t.`END_DATE` is null OR DATE_FORMAT(t.`END_DATE`, '%Y-%m-%d') <= :endTime))
+AND ((t.`BEGIN_DATE` is null OR t.`BEGIN_DATE` <= CONCAT(:endTime, ' 59:59:59')) OR (t.`END_DATE` is null OR t.`END_DATE` <= CONCAT(:endTime, ' 59:59:59')))
 </#if>
 <#if StringUtils.isNotBlank(flagCode)>
 AND t.`FLAG_CODE` = :flagCode
