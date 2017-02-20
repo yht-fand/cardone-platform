@@ -132,25 +132,14 @@ public class UserServiceImpl extends PageServiceImpl<UserDao> implements top.car
     }
 
     @Override
-    public Map<String, Object> findOneByUserId(Map<String, Object> findOneMap) {
-        return this.dao.findOneByUserId(findOneMap);
-    }
-
-    @Override
-    public List<Map<String, Object>> findListByName(Map<String, Object> findListMap) {
-        return this.dao.findListByName(findListMap);
-    }
-
-    @Override
     @Transactional
     public int[][] saveListCache(List<Object> saveList) {
         return this.saveList(saveList);
     }
 
     @Override
-    @Transactional
-    public void syncOldData() {
-        this.dao.syncOldData();
+    public Map<String, Object> findOneByUserId(Map<String, Object> findOneMap) {
+        return this.dao.findOneByUserId(findOneMap);
     }
 
     @Override

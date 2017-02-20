@@ -156,19 +156,6 @@ public interface UserService extends PageService {
     Map<String, Object> findOneByUserId(Map<String, Object> findOneMap);
 
     /**
-     * 查询对象集合
-     *
-     * @param findListMap 用户标识
-     * @return 对象用户对象
-     */
-    List<Map<String, Object>> findListByName(Map<String, Object> findListMap);
-
-    /**
-     * 同步旧数据
-     */
-    void syncOldData();
-
-    /**
      * 查询用户下拉列表
      *
      * @param findList 关键字

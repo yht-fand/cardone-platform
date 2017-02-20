@@ -1,7 +1,7 @@
 <#assign StringUtils = beansWrapperFn.getStaticModels()["org.apache.commons.lang3.StringUtils"]>
-SELECT d.USERADDRESS_CODE  ,d.NAME FROM c1_user_address d
+SELECT t.USER_CODE  ,t.NAME FROM c1_user t
 <#if StringUtils.isNotBlank(term)>
-WHERE LOCATE(:term, d.`NAME`) OR LOCATE(:term, d.`USERADDRESS_CODE`)
+WHERE LOCATE(:term, t.`NAME`) OR LOCATE(:term, t.`USER_CODE`)
 </#if>
-ORDER BY d.ORDER_, d.USERADDRESS_CODE
+ORDER BY t.ORDER_, t.USER_CODE
 LIMIT 20

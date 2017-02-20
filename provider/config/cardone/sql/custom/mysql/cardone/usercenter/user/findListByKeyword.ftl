@@ -1,7 +1,12 @@
 <#assign StringUtils = beansWrapperFn.getStaticModels()["org.apache.commons.lang3.StringUtils"]>
-SELECT d.DEPARTMENT_CODE  ,d.NAME FROM c1_department d
-<#if StringUtils.isNotBlank(term)>
-WHERE FIND_IN_SET(:term, d.`PARENT_TREE_CODE`) OR LOCATE(:term, d.`NAME`) OR LOCATE(:term, d.`DEPARTMENT_CODE`)
+SELECT t.USER_CODE, t.NAME
+FROM
+`c1_user` t
+LEFT JOIN `c1_department` d ON(d.`DEPARTMENT_CODE` = t.`DEPARTMENT_CODE`)
+<#if StringUtils.isNotBlank(name)>
+WHERE t.`USER_CODE` LIKE CONCAT('%', :name, "%") OR t.`NAME` LIKE CONCAT('%', :name, "%")
 </#if>
-ORDER BY d.ORDER_, d.DEPARTMENT_CODE
+ORDER BY t.`DEPARTMENT_CODE`,
+t.`USER_CODE`,
+t.`CREATED_DATE`
 LIMIT 20
