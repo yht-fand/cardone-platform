@@ -4,6 +4,7 @@ t.`DEPARTMENT_ID`,
 t.`DEPARTMENT_CODE`,
 t.`NAME`,
 t.`PARENT_CODE`,
+p.`NAME` AS PARENT_NAME,
 t.`PARENT_TREE_NAME`,
 t.`PARENT_TREE_CODE`,
 t.CREATED_BY_CODE,
@@ -22,6 +23,7 @@ IFNULL((SELECT s.`NAME` FROM `c1_dictionary` s WHERE s.DICTIONARY_TYPE_CODE = 'd
 t.DATA_STATE_CODE
 FROM
 `c1_department` t
+left join `c1_department` p on (p.`DEPARTMENT_CODE` = t.`DEPARTMENT_CODE`)
 <#if StringUtils.isNotBlank(departmentId)>
 WHERE t.department_id =:departmentId
 <#else>
