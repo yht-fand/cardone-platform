@@ -9,12 +9,10 @@ import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.core.io.Resource;
-import org.springframework.data.domain.Page;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import top.cardone.ConsumerApplication;
 import top.cardone.context.ApplicationContextHolder;
 import top.cardone.data.support.ExcelSupport;
-import top.cardone.usercenter.service.DepartmentService;
 
 import java.util.List;
 import java.util.Map;
@@ -60,8 +58,7 @@ public class CommonControllerTest {
 //    }
 
 
-
-   //导出
+    //导出
     @Test
     public void testWriteExcel() throws Exception {
         Resource resource = ApplicationContextHolder.getApplicationContext().getResource(excelFilePath);

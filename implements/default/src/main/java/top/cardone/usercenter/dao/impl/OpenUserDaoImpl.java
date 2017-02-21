@@ -14,7 +14,7 @@ public class OpenUserDaoImpl extends PageDaoImpl implements top.cardone.usercent
     @Override
     public Map<String, Object> findOneByOpenUserId(Map<String, Object> findOne) {
         String findOneSqlFilePath = this.getSqlFilePath("page.find");
-		
+
         return this.findOne(findOneSqlFilePath, findOne);
     }
 

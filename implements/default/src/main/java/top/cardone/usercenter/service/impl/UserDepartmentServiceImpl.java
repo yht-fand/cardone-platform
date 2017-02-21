@@ -136,7 +136,7 @@ public class UserDepartmentServiceImpl extends PageServiceImpl<UserDepartmentDao
     public int[][] saveListCache(List<Object> saveList) {
         return this.saveList(saveList);
     }
-	
+
     @Override
     public Map<String, Object> findOneByUserDepartmentId(Map<String, Object> findOne) {
         return this.dao.findOneByUserDepartmentId(findOne);

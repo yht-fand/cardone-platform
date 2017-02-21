@@ -14,7 +14,7 @@ public class UserDepartmentDaoImpl extends PageDaoImpl implements top.cardone.us
     @Override
     public Map<String, Object> findOneByUserDepartmentId(Map<String, Object> findOne) {
         String findOneSqlFilePath = this.getSqlFilePath("page.find");
-		
+
         return this.findOne(findOneSqlFilePath, findOne);
     }
 

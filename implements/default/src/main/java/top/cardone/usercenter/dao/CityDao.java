@@ -18,7 +18,7 @@ public interface CityDao extends PageDao {
      * @return 城市对象
      */
     Map<String, Object> findOneByCityId(Map<String, Object> findOne);
-	
+
     /**
      * 查询城市下拉列表
      *

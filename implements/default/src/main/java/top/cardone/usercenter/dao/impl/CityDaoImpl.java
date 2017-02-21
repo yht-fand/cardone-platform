@@ -14,7 +14,7 @@ public class CityDaoImpl extends PageDaoImpl implements top.cardone.usercenter.d
     @Override
     public Map<String, Object> findOneByCityId(Map<String, Object> findOne) {
         String findOneSqlFilePath = this.getSqlFilePath("page.find");
-		
+
         return this.findOne(findOneSqlFilePath, findOne);
     }
 

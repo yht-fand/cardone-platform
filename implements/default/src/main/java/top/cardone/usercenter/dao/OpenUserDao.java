@@ -18,7 +18,7 @@ public interface OpenUserDao extends PageDao {
      * @return 开放用户对象
      */
     Map<String, Object> findOneByOpenUserId(Map<String, Object> findOne);
-	
+
     /**
      * 查询开放用户下拉列表
      *

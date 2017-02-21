@@ -136,7 +136,7 @@ public class UserOrgServiceImpl extends PageServiceImpl<UserOrgDao> implements t
     public int[][] saveListCache(List<Object> saveList) {
         return this.saveList(saveList);
     }
-	
+
     @Override
     public Map<String, Object> findOneByUserOrgId(Map<String, Object> findOne) {
         return this.dao.findOneByUserOrgId(findOne);

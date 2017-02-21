@@ -18,7 +18,7 @@ public interface UserOrgDao extends PageDao {
      * @return 用户与组织对象
      */
     Map<String, Object> findOneByUserOrgId(Map<String, Object> findOne);
-	
+
     /**
      * 查询用户与组织下拉列表
      *

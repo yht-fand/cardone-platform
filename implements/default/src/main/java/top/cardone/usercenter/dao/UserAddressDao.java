@@ -18,7 +18,7 @@ public interface UserAddressDao extends PageDao {
      * @return 用户与地址对象
      */
     Map<String, Object> findOneByUserAddressId(Map<String, Object> findOne);
-	
+
     /**
      * 查询用户与地址下拉列表
      *

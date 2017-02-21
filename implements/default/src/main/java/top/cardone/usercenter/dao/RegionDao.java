@@ -21,10 +21,11 @@ public interface RegionDao extends PageDao {
 
     /**
      * 查询
+     *
      * @param findList
      * @return
      */
-    List<Map<String,Object>> findListByName(Map<String,Object> findList);
+    List<Map<String, Object>> findListByName(Map<String, Object> findList);
 
     List<Map<String, Object>> findListByRegionCode(String regionCode);
 

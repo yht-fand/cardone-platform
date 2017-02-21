@@ -1,6 +1,5 @@
 package top.cardone.usercenter.dao;
 
-import org.springframework.data.domain.Page;
 import top.cardone.data.dao.PageDao;
 
 import java.util.List;

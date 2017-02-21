@@ -14,7 +14,7 @@ public class UserAddressDaoImpl extends PageDaoImpl implements top.cardone.userc
     @Override
     public Map<String, Object> findOneByUserAddressId(Map<String, Object> findOne) {
         String findOneSqlFilePath = this.getSqlFilePath("page.find");
-		
+
         return this.findOne(findOneSqlFilePath, findOne);
     }
 

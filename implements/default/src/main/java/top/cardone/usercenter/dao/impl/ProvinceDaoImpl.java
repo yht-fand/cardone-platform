@@ -14,7 +14,7 @@ public class ProvinceDaoImpl extends PageDaoImpl implements top.cardone.usercent
     @Override
     public Map<String, Object> findOneByProvinceId(Map<String, Object> findOne) {
         String findOneSqlFilePath = this.getSqlFilePath("page.find");
-		
+
         return this.findOne(findOneSqlFilePath, findOne);
     }
 

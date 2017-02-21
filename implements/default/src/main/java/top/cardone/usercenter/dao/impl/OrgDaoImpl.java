@@ -15,7 +15,7 @@ public class OrgDaoImpl extends PageDaoImpl implements top.cardone.usercenter.da
     @Override
     public Map<String, Object> findOneByOrgId(Map<String, Object> findOne) {
         String findOneSqlFilePath = this.getSqlFilePath("page.find");
-		
+
         return this.findOne(findOneSqlFilePath, findOne);
     }
 

@@ -14,7 +14,7 @@ public class AreaDaoImpl extends PageDaoImpl implements top.cardone.usercenter.d
     @Override
     public Map<String, Object> findOneByAreaId(Map<String, Object> findOne) {
         String findOneSqlFilePath = this.getSqlFilePath("page.find");
-		
+
         return this.findOne(findOneSqlFilePath, findOne);
     }
 

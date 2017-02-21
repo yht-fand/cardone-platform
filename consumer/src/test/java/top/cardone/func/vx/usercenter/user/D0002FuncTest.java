@@ -41,7 +41,7 @@ public class D0002FuncTest {
         headers.set("Accept", MediaType.APPLICATION_JSON_UTF8_VALUE);
         headers.set("token", (String) ApplicationContextHolder.getBean(Func1.class, "readCredentialsForAesFunc").func("admin"));
         headers.set("username", "admin");
-		
+
         if (!funcInputResource.exists()) {
             try {
                 FileUtils.write(funcInputResource.getFile(), "{}", Charsets.UTF_8);

@@ -18,7 +18,7 @@ public interface ProvinceDao extends PageDao {
      * @return 省份对象
      */
     Map<String, Object> findOneByProvinceId(Map<String, Object> findOne);
-	
+
     /**
      * 查询省份下拉列表
      *

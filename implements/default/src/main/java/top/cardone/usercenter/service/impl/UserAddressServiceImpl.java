@@ -136,7 +136,7 @@ public class UserAddressServiceImpl extends PageServiceImpl<UserAddressDao> impl
     public int[][] saveListCache(List<Object> saveList) {
         return this.saveList(saveList);
     }
-	
+
     @Override
     public Map<String, Object> findOneByUserAddressId(Map<String, Object> findOne) {
         return this.dao.findOneByUserAddressId(findOne);

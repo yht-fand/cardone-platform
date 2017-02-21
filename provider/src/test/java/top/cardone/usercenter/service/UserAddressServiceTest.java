@@ -1,13 +1,12 @@
 package top.cardone.usercenter.service;
 
-import top.cardone.ProviderApplication;
 import lombok.extern.log4j.Log4j2;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.WebIntegrationTest;
+import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
-import top.cardone.context.ApplicationContextHolder;
+import top.cardone.ProviderApplication;
 
 @Log4j2
 @RunWith(SpringJUnit4ClassRunner.class)
