@@ -7,7 +7,7 @@
             <list>
                 <bean class="top.cardone.data.action.InitDataAction">
                     <property name="serviceBeanId" value="top.cardone.usercenter.service.UserService"/>
-                    <property name="jsonFiles" value="${app.root}/config/cardone/usercenter/init-data/user-*.json"/>
+                    <property name="jsonFiles" value="${app.root}/config/*/usercenter/init-data/user-*.json"/>
                 </bean>
             </list>
         </property>
