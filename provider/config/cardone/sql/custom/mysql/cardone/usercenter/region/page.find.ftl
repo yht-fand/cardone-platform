@@ -1,4 +1,3 @@
-<#assign StringUtils = beansWrapperFn.getStaticModels()["org.apache.commons.lang3.StringUtils"]>
 SELECT
 t.`REGION_CODE` AS ID,
 t.`REGION_ID`,
@@ -34,7 +33,7 @@ t.`LAST_MODIFIED_DATE`,
 ) AS LAST_MODIFIED_DATE
 FROM
 `c1_region` t
-<#if StringUtils.isNotBlank(regionId)>
+<#if cardone.StringUtils.isNotBlank(regionId)>
 WHERE t.REGION_id =:regionId
 <#else>
     <#include "page.where.ftl">

@@ -1,4 +1,3 @@
-<#assign StringUtils = beansWrapperFn.getStaticModels()["org.apache.commons.lang3.StringUtils"]>
 SELECT
 t.`ORG_CODE` AS ID,
 t.`ORG_ID`,
@@ -34,7 +33,7 @@ t.`LAST_MODIFIED_DATE`,
 ) AS LAST_MODIFIED_DATE
 FROM
 `c1_org` t
-<#if StringUtils.isNotBlank(orgId)>
+<#if cardone.StringUtils.isNotBlank(orgId)>
 WHERE t.ORG_id =:orgId
 <#else>
     <#include "page.where.ftl">

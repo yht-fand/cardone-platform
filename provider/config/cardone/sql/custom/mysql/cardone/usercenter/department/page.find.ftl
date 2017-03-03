@@ -1,4 +1,3 @@
-<#assign StringUtils = beansWrapperFn.getStaticModels()["org.apache.commons.lang3.StringUtils"]>
 SELECT
 t.`DEPARTMENT_ID`,
 t.`DEPARTMENT_CODE`,
@@ -24,7 +23,7 @@ t.DATA_STATE_CODE
 FROM
 `c1_department` t
 left join `c1_department` p on (p.`DEPARTMENT_CODE` = t.`PARENT_CODE`)
-<#if StringUtils.isNotBlank(departmentId)>
+<#if cardone.StringUtils.isNotBlank(departmentId)>
 WHERE t.department_id =:departmentId
 <#else>
     <#include "page.where.ftl">
