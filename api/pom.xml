@@ -32,6 +32,11 @@
             <groupId>top.cardone</groupId>
             <artifactId>cardone-security-implements-shiro-oauth2-core</artifactId>
         </dependency>
+
+        <dependency>
+            <groupId>top.cardone</groupId>
+            <artifactId>cardone-mapper-api</artifactId>
+        </dependency>
     </dependencies>
 </project>
 

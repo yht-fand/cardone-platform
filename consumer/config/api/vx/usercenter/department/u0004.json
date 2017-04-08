@@ -1,0 +1,53 @@
+{
+  "input": {
+    "address": "address",
+    "areaCode": "areaCode",
+    "beginDate": "beginDate",
+    "cityCode": "cityCode",
+    "createdByCode": "createdByCode",
+    "createdDate": "createdDate",
+    "dataStateCode": "dataStateCode",
+    "departmentCode": "departmentCode",
+    "departmentId": "departmentId",
+    "endDate": "endDate",
+    "flagCode": "flagCode",
+    "flagObjectCode": "flagObjectCode",
+    "jsonData": "jsonData",
+    "lastModifiedByCode": "lastModifiedByCode",
+    "lastModifiedDate": "lastModifiedDate",
+    "name": "name",
+    "order": "order",
+    "orgCode": "orgCode",
+    "parentCode": "parentCode",
+    "parentTreeCode": "parentTreeCode",
+    "parentTreeName": "parentTreeName",
+    "provinceCode": "provinceCode",
+    "regionCode": "regionCode",
+    "siteCode": "siteCode",
+    "stateCode": "stateCode",
+    "systemInfoCode": "systemInfoCode",
+    "version": "version"
+  },
+  "validation": {
+    "rules": {
+      "departmentId": {
+        "required": true
+      },
+      "name": {
+        "required": true,
+        "minlength": 4,
+        "maxlength": 255
+      }
+    },
+    "messages": {
+      "departmentId": {
+        "required": "必填"
+      },
+      "name": {
+        "required": "名称不能为空值!",
+        "minlength": "需3个字符以上",
+        "maxlength": "需小于255个字符"
+      }
+    }
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "input": {
+    "cityIds": "cityIds"
+  },
+  "validation": {
+    "rules": {
+      "cityIds": {
+        "required": true
+      }
+    },
+    "messages": {
+      "cityIds": {
+        "required": "城市标识集合不能为空值!"
+      }
+    }
+  }
+}

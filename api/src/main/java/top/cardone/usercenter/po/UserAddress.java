@@ -99,7 +99,7 @@ public class UserAddress implements java.io.Serializable {
      */
     @lombok.Getter
     @lombok.Setter
-    protected String jsonData;
+    protected Object jsonData;
 
     /**
      * 最后修改人代码
