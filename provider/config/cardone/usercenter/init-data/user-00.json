@@ -9,6 +9,7 @@
     "userCode": "test",
     "name": "测试",
     "password": "Q75Uu4jZ7maRStx2bc1qbw==",
-    "passwordSalt": "9-b645b191-5fba9"
+    "passwordSalt": "9-b645b191-5fba9",
+    "flagCode": "init"
   }
 ]

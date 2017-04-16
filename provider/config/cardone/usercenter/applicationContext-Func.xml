@@ -12,6 +12,16 @@
 
     <alias name="top.cardone.usercenter.func.ReadOneUserIdFunc" alias="readOneUserIdFunc"/>
 
+    <bean name="readOneDepartmentFunc"
+          class="top.cardone.data.func.ReadOneFunc">
+        <property name="serviceBeanName" value="top.cardone.usercenter.service.DepartmentService"/>
+    </bean>
+
+    <bean name="readOneUserFunc"
+          class="top.cardone.data.func.ReadOneFunc">
+        <property name="serviceBeanName" value="top.cardone.usercenter.service.UserService"/>
+    </bean>
+
     <bean id="generateOrgTreeFunc"
           class="top.cardone.data.func.GenerateTreeFunc">
         <property name="codePutKey" value="orgCode"/>
