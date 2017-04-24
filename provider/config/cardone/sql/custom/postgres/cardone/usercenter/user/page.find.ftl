@@ -19,9 +19,9 @@ t.STATE_CODE,
 t.DATA_STATE_CODE
 FROM
 c1_user t
-LEFT JOIN c1_department d ON(d.DEPARTMENT_CODE = t.DEPARTMENT_CODE)
+LEFT JOIN c1_department d ON (d.DEPARTMENT_CODE = t.DEPARTMENT_CODE)
 <#if cardone.StringUtils.isNotBlank(userId)>
-WHERE t.user_id =:userId
+WHERE t.user_id = :userId
 <#else>
     <#include "page.where.ftl">
 ORDER BY t.DEPARTMENT_CODE,

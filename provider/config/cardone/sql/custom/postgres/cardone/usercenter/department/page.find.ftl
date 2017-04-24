@@ -17,7 +17,7 @@ t.DATA_STATE_CODE
 FROM
 c1_department t
 <#if cardone.StringUtils.isNotBlank(departmentId)>
-WHERE t.department_id =:departmentId
+WHERE t.department_id = :departmentId
 <#else>
     <#include "page.where.ftl">
 ORDER BY t.PARENT_CODE,

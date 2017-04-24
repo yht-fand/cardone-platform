@@ -24,7 +24,7 @@ FROM
 `c1_department` t
 left join `c1_department` p on (p.`DEPARTMENT_CODE` = t.`PARENT_CODE`)
 <#if cardone.StringUtils.isNotBlank(departmentId)>
-WHERE t.department_id =:departmentId
+WHERE t.department_id = :departmentId
 <#else>
     <#include "page.where.ftl">
 ORDER BY t.`PARENT_CODE`,

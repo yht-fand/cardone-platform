@@ -34,7 +34,7 @@ t.`LAST_MODIFIED_DATE`,
 FROM
 `c1_region` t
 <#if cardone.StringUtils.isNotBlank(regionId)>
-WHERE t.REGION_id =:regionId
+WHERE t.REGION_id = :regionId
 <#else>
     <#include "page.where.ftl">
 ORDER BY t.`PARENT_CODE`,

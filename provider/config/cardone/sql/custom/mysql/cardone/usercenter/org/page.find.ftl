@@ -34,7 +34,7 @@ t.`LAST_MODIFIED_DATE`,
 FROM
 `c1_org` t
 <#if cardone.StringUtils.isNotBlank(orgId)>
-WHERE t.ORG_id =:orgId
+WHERE t.ORG_id = :orgId
 <#else>
     <#include "page.where.ftl">
 ORDER BY t.`PARENT_CODE`,
