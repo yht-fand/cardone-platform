@@ -79,7 +79,7 @@ user_code AS userCode
 version_ AS version
 <#break>
 <#default>
-COUNT(1) AS COUNT_
+COUNT(*) AS COUNT_
 </#switch>
 FROM c1_user_address
 <#include "where.ftl">

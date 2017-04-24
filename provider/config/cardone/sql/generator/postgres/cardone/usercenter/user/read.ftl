@@ -54,6 +54,9 @@ email AS email
 <#case "endDate">
 end_date AS endDate
 <#break>
+<#case "firstName">
+first_name AS firstName
+<#break>
 <#case "flagCode">
 flag_code AS flagCode
 <#break>
@@ -80,6 +83,9 @@ last_modified_by_code AS lastModifiedByCode
 <#break>
 <#case "lastModifiedDate">
 last_modified_date AS lastModifiedDate
+<#break>
+<#case "lastName">
+last_name AS lastName
 <#break>
 <#case "locus">
 locus AS locus
@@ -157,7 +163,7 @@ user_id AS userId
 version_ AS version
 <#break>
 <#default>
-COUNT(1) AS COUNT_
+COUNT(*) AS COUNT_
 </#switch>
 FROM c1_user
 <#include "where.ftl">

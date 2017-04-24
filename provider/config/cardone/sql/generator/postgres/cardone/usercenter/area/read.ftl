@@ -70,7 +70,7 @@ system_info_code AS systemInfoCode
 version_ AS version
 <#break>
 <#default>
-COUNT(1) AS COUNT_
+COUNT(*) AS COUNT_
 </#switch>
 FROM c1_area
 <#include "where.ftl">

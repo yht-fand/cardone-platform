@@ -137,6 +137,13 @@ public class User implements java.io.Serializable {
     protected Date endDate;
 
     /**
+     * 名字
+     */
+    @lombok.Getter
+    @lombok.Setter
+    protected String firstName;
+
+    /**
      * 标记代码(数据字典：工作流、同步、生成、录入、审批)
      */
     @lombok.Getter
@@ -198,6 +205,13 @@ public class User implements java.io.Serializable {
     @lombok.Getter
     @lombok.Setter
     protected Date lastModifiedDate;
+
+    /**
+     * 姓氏
+     */
+    @lombok.Getter
+    @lombok.Setter
+    protected String lastName;
 
     /**
      * 现居住地

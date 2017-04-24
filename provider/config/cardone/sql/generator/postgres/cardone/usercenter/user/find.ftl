@@ -72,6 +72,10 @@ ${prefixName} email
 ${prefixName} end_date
 <#assign prefixName = ','>
 </#if>
+<#if (select_firstName??)>
+${prefixName} first_name
+<#assign prefixName = ','>
+</#if>
 <#if (select_flagCode??)>
 ${prefixName} flag_code
 <#assign prefixName = ','>
@@ -106,6 +110,10 @@ ${prefixName} last_modified_by_code
 </#if>
 <#if (select_lastModifiedDate??)>
 ${prefixName} last_modified_date
+<#assign prefixName = ','>
+</#if>
+<#if (select_lastName??)>
+${prefixName} last_name
 <#assign prefixName = ','>
 </#if>
 <#if (select_locus??)>
@@ -286,6 +294,10 @@ ${prefixName} email ${order_by_email_value!}
 ${prefixName} end_date ${order_by_endDate_value!}
 <#assign prefixName = ','>
 </#if>
+<#if (order_by_firstName??)>
+${prefixName} first_name ${order_by_firstName_value!}
+<#assign prefixName = ','>
+</#if>
 <#if (order_by_flagCode??)>
 ${prefixName} flag_code ${order_by_flagCode_value!}
 <#assign prefixName = ','>
@@ -320,6 +332,10 @@ ${prefixName} last_modified_by_code ${order_by_lastModifiedByCode_value!}
 </#if>
 <#if (order_by_lastModifiedDate??)>
 ${prefixName} last_modified_date ${order_by_lastModifiedDate_value!}
+<#assign prefixName = ','>
+</#if>
+<#if (order_by_lastName??)>
+${prefixName} last_name ${order_by_lastName_value!}
 <#assign prefixName = ','>
 </#if>
 <#if (order_by_locus??)>

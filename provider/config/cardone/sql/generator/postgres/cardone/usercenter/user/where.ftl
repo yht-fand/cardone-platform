@@ -143,6 +143,14 @@ ${prefixName} end_date IS NULL
 </#if>
 <#assign prefixName = 'AND'>
 </#if>
+<#if (where_and_eq_firstName??)>
+<#if (where_and_eq_firstName_value??)>
+${prefixName} first_name = :where_and_eq_firstName_value
+<#else>
+${prefixName} first_name IS NULL
+</#if>
+<#assign prefixName = 'AND'>
+</#if>
 <#if (where_and_eq_flagCode??)>
 <#if (where_and_eq_flagCode_value??)>
 ${prefixName} flag_code = :where_and_eq_flagCode_value
@@ -212,6 +220,14 @@ ${prefixName} last_modified_by_code IS NULL
 ${prefixName} last_modified_date = :where_and_eq_lastModifiedDate_value
 <#else>
 ${prefixName} last_modified_date IS NULL
+</#if>
+<#assign prefixName = 'AND'>
+</#if>
+<#if (where_and_eq_lastName??)>
+<#if (where_and_eq_lastName_value??)>
+${prefixName} last_name = :where_and_eq_lastName_value
+<#else>
+${prefixName} last_name IS NULL
 </#if>
 <#assign prefixName = 'AND'>
 </#if>

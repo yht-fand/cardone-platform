@@ -172,6 +172,7 @@ department_code|YES|String(255)|部门代码
 diploma_code|YES|String(255)|学历/文凭代码(数据字典)
 email|YES|String(255)|邮箱
 end_date|YES|Date(13)|结束时间
+first_name|YES|String(255)|名字
 flag_code|YES|String(255)|标记代码(数据字典：工作流、同步、生成、录入、审批)
 flag_object_code|YES|String(255)|标识对象代码(工作流：工作流标识、同步：批次号、生成：操作者编号、录入：操作者编号、审批：操作者编号)
 folk_code|YES|String(255)|民族代码(数据字典)
@@ -181,6 +182,7 @@ intro|YES|String(2147483647)|简介
 json_data|YES|Object(2147483647)|JSON数据
 last_modified_by_code|YES|String(255)|最后修改人代码
 last_modified_date|YES|Date(13)|最后修改时间
+last_name|YES|String(255)|姓氏
 locus|YES|String(255)|现居住地
 marry_state_code|YES|String(255)|婚姻状态代码(数据字典)
 mobile_phone|YES|String(255)|手机
@@ -188,7 +190,7 @@ name|NO|String(255)|名称
 name_pinyin|YES|String(255)|拼音
 order_|YES|Long(19)|排序
 org_code|YES|String(255)|组织代码
-password_|NO|String(255)|密码
+password_|YES|String(255)|密码
 password_salt|YES|String(255)|密码盐
 portrait_url|YES|String(255)|肖像路径
 private_password|YES|String(255)|隐私密码

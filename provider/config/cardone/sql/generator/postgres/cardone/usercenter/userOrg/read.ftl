@@ -58,7 +58,7 @@ user_org_id AS userOrgId
 version_ AS version
 <#break>
 <#default>
-COUNT(1) AS COUNT_
+COUNT(*) AS COUNT_
 </#switch>
 FROM c1_user_org
 <#include "where.ftl">

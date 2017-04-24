@@ -58,7 +58,7 @@ user_department_id AS userDepartmentId
 version_ AS version
 <#break>
 <#default>
-COUNT(1) AS COUNT_
+COUNT(*) AS COUNT_
 </#switch>
 FROM c1_user_department
 <#include "where.ftl">

@@ -72,6 +72,10 @@ ${prefixName} email = :update_email_value
 ${prefixName} end_date = :update_endDate_value
 <#assign prefixName = ','>
 </#if>
+<#if (update_firstName??)>
+${prefixName} first_name = :update_firstName_value
+<#assign prefixName = ','>
+</#if>
 <#if (update_flagCode??)>
 ${prefixName} flag_code = :update_flagCode_value
 <#assign prefixName = ','>
@@ -106,6 +110,10 @@ ${prefixName} last_modified_by_code = :update_lastModifiedByCode_value
 </#if>
 <#if (update_lastModifiedDate??)>
 ${prefixName} last_modified_date = :update_lastModifiedDate_value
+<#assign prefixName = ','>
+</#if>
+<#if (update_lastName??)>
+${prefixName} last_name = :update_lastName_value
 <#assign prefixName = ','>
 </#if>
 <#if (update_locus??)>

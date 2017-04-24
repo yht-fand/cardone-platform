@@ -73,6 +73,10 @@ ${prefixName} email
 ${prefixName} end_date
 <#assign prefixName = ','>
 </#if>
+<#if (insert_firstName??) && (insert_firstName_value??)>
+${prefixName} first_name
+<#assign prefixName = ','>
+</#if>
 <#if (insert_flagCode??) && (insert_flagCode_value??)>
 ${prefixName} flag_code
 <#assign prefixName = ','>
@@ -107,6 +111,10 @@ ${prefixName} last_modified_by_code
 </#if>
 <#if (insert_lastModifiedDate??) && (insert_lastModifiedDate_value??)>
 ${prefixName} last_modified_date
+<#assign prefixName = ','>
+</#if>
+<#if (insert_lastName??) && (insert_lastName_value??)>
+${prefixName} last_name
 <#assign prefixName = ','>
 </#if>
 <#if (insert_locus??) && (insert_locus_value??)>
@@ -284,6 +292,10 @@ ${prefixName} :insert_email_value
 ${prefixName} :insert_endDate_value
 <#assign prefixName = ','>
 </#if>
+<#if (insert_firstName??) && (insert_firstName_value??)>
+${prefixName} :insert_firstName_value
+<#assign prefixName = ','>
+</#if>
 <#if (insert_flagCode??) && (insert_flagCode_value??)>
 ${prefixName} :insert_flagCode_value
 <#assign prefixName = ','>
@@ -318,6 +330,10 @@ ${prefixName} :insert_lastModifiedByCode_value
 </#if>
 <#if (insert_lastModifiedDate??) && (insert_lastModifiedDate_value??)>
 ${prefixName} :insert_lastModifiedDate_value
+<#assign prefixName = ','>
+</#if>
+<#if (insert_lastName??) && (insert_lastName_value??)>
+${prefixName} :insert_lastName_value
 <#assign prefixName = ','>
 </#if>
 <#if (insert_locus??) && (insert_locus_value??)>
