@@ -1,4 +1,4 @@
-SELECT d.REGION_CODE  ,d.NAME FROM c1_region d
+SELECT d.REGION_CODE, d.NAME FROM c1_region d
 <#if cardone.StringUtils.isNotBlank(term)>
 WHERE LOCATE(:term, d.`NAME`) OR LOCATE(:term, d.`REGION_CODE`)
 </#if>

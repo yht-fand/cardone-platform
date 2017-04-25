@@ -1,4 +1,4 @@
-SELECT d.CITY_CODE  ,d.NAME FROM c1_city d
+SELECT d.CITY_CODE, d.NAME FROM c1_city d
 <#if cardone.StringUtils.isNotBlank(term)>
 WHERE strpos(d.NAME, :term) > 0 OR strpos(d.CITY_CODE, :term) > 0
 </#if>
