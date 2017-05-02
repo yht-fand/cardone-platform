@@ -16,6 +16,10 @@ ${prefixName} alias_name = :update_aliasName_value
 ${prefixName} area_code = :update_areaCode_value
 <#assign prefixName = ','>
 </#if>
+<#if (update_batchNo??)>
+${prefixName} batch_no = :update_batchNo_value
+<#assign prefixName = ','>
+</#if>
 <#if (update_beginDate??)>
 ${prefixName} begin_date = :update_beginDate_value
 <#assign prefixName = ','>
@@ -136,8 +140,8 @@ ${prefixName} name = :update_name_value
 ${prefixName} name_pinyin = :update_namePinyin_value
 <#assign prefixName = ','>
 </#if>
-<#if (update_order??)>
-${prefixName} order_ = :update_order_value
+<#if (update_orderBy??)>
+${prefixName} order_by_ = :update_orderBy_value
 <#assign prefixName = ','>
 </#if>
 <#if (update_orgCode??)>
@@ -150,6 +154,10 @@ ${prefixName} password_ = :update_password_value
 </#if>
 <#if (update_passwordSalt??)>
 ${prefixName} password_salt = :update_passwordSalt_value
+<#assign prefixName = ','>
+</#if>
+<#if (update_personalCode??)>
+${prefixName} personal_code = :update_personalCode_value
 <#assign prefixName = ','>
 </#if>
 <#if (update_portraitUrl??)>

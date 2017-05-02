@@ -12,6 +12,9 @@ alias_name AS aliasName
 <#case "areaCode">
 area_code AS areaCode
 <#break>
+<#case "batchNo">
+batch_no AS batchNo
+<#break>
 <#case "beginDate">
 begin_date AS beginDate
 <#break>
@@ -102,8 +105,8 @@ name AS name
 <#case "namePinyin">
 name_pinyin AS namePinyin
 <#break>
-<#case "order">
-order_ AS order
+<#case "orderBy">
+order_by_ AS orderBy
 <#break>
 <#case "orgCode">
 org_code AS orgCode
@@ -113,6 +116,9 @@ password_ AS password
 <#break>
 <#case "passwordSalt">
 password_salt AS passwordSalt
+<#break>
+<#case "personalCode">
+personal_code AS personalCode
 <#break>
 <#case "portraitUrl">
 portrait_url AS portraitUrl

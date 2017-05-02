@@ -1,5 +1,8 @@
 SELECT
 <#switch (object_id!)>
+<#case "batchNo">
+batch_no AS batchNo
+<#break>
 <#case "beginDate">
 begin_date AS beginDate
 <#break>
@@ -39,11 +42,14 @@ last_modified_date AS lastModifiedDate
 <#case "openUserId">
 open_user_id AS openUserId
 <#break>
-<#case "order">
-order_ AS order
+<#case "orderBy">
+order_by_ AS orderBy
 <#break>
 <#case "orgCode">
 org_code AS orgCode
+<#break>
+<#case "personalCode">
+personal_code AS personalCode
 <#break>
 <#case "siteCode">
 site_code AS siteCode

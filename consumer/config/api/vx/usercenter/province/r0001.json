@@ -1,5 +1,6 @@
 {
   "input-temp:特殊情况再用": {
+    "batchNo": "batchNo",
     "beginDate": "beginDate",
     "countryCode": "countryCode",
     "createdByCode": "createdByCode",
@@ -13,8 +14,9 @@
     "lastModifiedByCode": "lastModifiedByCode",
     "lastModifiedDate": "lastModifiedDate",
     "name": "name",
-    "order": "order",
+    "orderBy": "orderBy",
     "orgCode": "orgCode",
+    "personalCode": "personalCode",
     "provinceCode": "provinceCode",
     "provinceId": "provinceId",
     "siteCode": "siteCode",
@@ -28,6 +30,7 @@
     "datas": {
       "newArrayListFunc": {
         "output": {
+          "batchNo": "batch_no",
           "beginDate": "begin_date",
           "countryCode": "country_code",
           "createdByCode": "created_by_code",
@@ -41,8 +44,9 @@
           "lastModifiedByCode": "last_modified_by_code",
           "lastModifiedDate": "last_modified_date",
           "name": "name",
-          "order": "order_",
+          "orderBy": "order_by_",
           "orgCode": "org_code",
+          "personalCode": "personal_code",
           "provinceCode": "province_code",
           "provinceId": "province_id",
           "siteCode": "site_code",

@@ -6,6 +6,9 @@ area_code AS areaCode
 <#case "areaId">
 area_id AS areaId
 <#break>
+<#case "batchNo">
+batch_no AS batchNo
+<#break>
 <#case "beginDate">
 begin_date AS beginDate
 <#break>
@@ -48,11 +51,14 @@ last_modified_date AS lastModifiedDate
 <#case "name">
 name AS name
 <#break>
-<#case "order">
-order_ AS order
+<#case "orderBy">
+order_by_ AS orderBy
 <#break>
 <#case "orgCode">
 org_code AS orgCode
+<#break>
+<#case "personalCode">
+personal_code AS personalCode
 <#break>
 <#case "provinceCode">
 province_code AS provinceCode

@@ -1,6 +1,7 @@
 {
   "input-temp:特殊情况再用": {
     "areaCode": "areaCode",
+    "batchNo": "batchNo",
     "beginDate": "beginDate",
     "cityCode": "cityCode",
     "countryCode": "countryCode",
@@ -15,11 +16,12 @@
     "lastModifiedByCode": "lastModifiedByCode",
     "lastModifiedDate": "lastModifiedDate",
     "name": "name",
-    "order": "order",
+    "orderBy": "orderBy",
     "orgCode": "orgCode",
     "parentCode": "parentCode",
     "parentTreeCode": "parentTreeCode",
     "parentTreeName": "parentTreeName",
+    "personalCode": "personalCode",
     "provinceCode": "provinceCode",
     "regionCode": "regionCode",
     "regionId": "regionId",
@@ -35,6 +37,7 @@
       "newArrayListFunc": {
         "output": {
           "areaCode": "area_code",
+          "batchNo": "batch_no",
           "beginDate": "begin_date",
           "cityCode": "city_code",
           "countryCode": "country_code",
@@ -49,11 +52,12 @@
           "lastModifiedByCode": "last_modified_by_code",
           "lastModifiedDate": "last_modified_date",
           "name": "name",
-          "order": "order_",
+          "orderBy": "order_by_",
           "orgCode": "org_code",
           "parentCode": "parent_code",
           "parentTreeCode": "parent_tree_code",
           "parentTreeName": "parent_tree_name",
+          "personalCode": "personal_code",
           "provinceCode": "province_code",
           "regionCode": "region_code",
           "regionId": "region_id",

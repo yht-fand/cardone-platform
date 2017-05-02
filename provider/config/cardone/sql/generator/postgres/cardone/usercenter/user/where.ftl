@@ -31,6 +31,14 @@ ${prefixName} area_code IS NULL
 </#if>
 <#assign prefixName = 'AND'>
 </#if>
+<#if (where_and_eq_batchNo??)>
+<#if (where_and_eq_batchNo_value??)>
+${prefixName} batch_no = :where_and_eq_batchNo_value
+<#else>
+${prefixName} batch_no IS NULL
+</#if>
+<#assign prefixName = 'AND'>
+</#if>
 <#if (where_and_eq_beginDate??)>
 <#if (where_and_eq_beginDate_value??)>
 ${prefixName} begin_date = :where_and_eq_beginDate_value
@@ -271,11 +279,11 @@ ${prefixName} name_pinyin IS NULL
 </#if>
 <#assign prefixName = 'AND'>
 </#if>
-<#if (where_and_eq_order??)>
-<#if (where_and_eq_order_value??)>
-${prefixName} order_ = :where_and_eq_order_value
+<#if (where_and_eq_orderBy??)>
+<#if (where_and_eq_orderBy_value??)>
+${prefixName} order_by_ = :where_and_eq_orderBy_value
 <#else>
-${prefixName} order_ IS NULL
+${prefixName} order_by_ IS NULL
 </#if>
 <#assign prefixName = 'AND'>
 </#if>
@@ -300,6 +308,14 @@ ${prefixName} password_ IS NULL
 ${prefixName} password_salt = :where_and_eq_passwordSalt_value
 <#else>
 ${prefixName} password_salt IS NULL
+</#if>
+<#assign prefixName = 'AND'>
+</#if>
+<#if (where_and_eq_personalCode??)>
+<#if (where_and_eq_personalCode_value??)>
+${prefixName} personal_code = :where_and_eq_personalCode_value
+<#else>
+${prefixName} personal_code IS NULL
 </#if>
 <#assign prefixName = 'AND'>
 </#if>

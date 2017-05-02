@@ -1,5 +1,6 @@
 {
   "input": {
+    "batchNo": "batchNo",
     "beginDate": "beginDate",
     "cityCode": "cityCode",
     "cityId": "cityId",
@@ -15,8 +16,9 @@
     "lastModifiedByCode": "lastModifiedByCode",
     "lastModifiedDate": "lastModifiedDate",
     "name": "name",
-    "order": "order",
+    "orderBy": "orderBy",
     "orgCode": "orgCode",
+    "personalCode": "personalCode",
     "provinceCode": "provinceCode",
     "siteCode": "siteCode",
     "stateCode": "stateCode",

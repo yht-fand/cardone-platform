@@ -8,6 +8,10 @@ ${prefixName} address = :update_address_value
 ${prefixName} area_code = :update_areaCode_value
 <#assign prefixName = ','>
 </#if>
+<#if (update_batchNo??)>
+${prefixName} batch_no = :update_batchNo_value
+<#assign prefixName = ','>
+</#if>
 <#if (update_beginDate??)>
 ${prefixName} begin_date = :update_beginDate_value
 <#assign prefixName = ','>
@@ -60,8 +64,8 @@ ${prefixName} last_modified_date = :update_lastModifiedDate_value
 ${prefixName} name = :update_name_value
 <#assign prefixName = ','>
 </#if>
-<#if (update_order??)>
-${prefixName} order_ = :update_order_value
+<#if (update_orderBy??)>
+${prefixName} order_by_ = :update_orderBy_value
 <#assign prefixName = ','>
 </#if>
 <#if (update_orgCode??)>
@@ -82,6 +86,10 @@ ${prefixName} parent_tree_code = :update_parentTreeCode_value
 </#if>
 <#if (update_parentTreeName??)>
 ${prefixName} parent_tree_name = :update_parentTreeName_value
+<#assign prefixName = ','>
+</#if>
+<#if (update_personalCode??)>
+${prefixName} personal_code = :update_personalCode_value
 <#assign prefixName = ','>
 </#if>
 <#if (update_provinceCode??)>

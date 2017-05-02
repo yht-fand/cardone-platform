@@ -5,6 +5,10 @@ INTO c1_region
 ${prefixName} area_code
 <#assign prefixName = ','>
 </#if>
+<#if (insert_batchNo??) && (insert_batchNo_value??)>
+${prefixName} batch_no
+<#assign prefixName = ','>
+</#if>
 <#if (insert_beginDate??) && (insert_beginDate_value??)>
 ${prefixName} begin_date
 <#assign prefixName = ','>
@@ -61,8 +65,8 @@ ${prefixName} last_modified_date
 ${prefixName} name
 <#assign prefixName = ','>
 </#if>
-<#if (insert_order??) && (insert_order_value??)>
-${prefixName} order_
+<#if (insert_orderBy??) && (insert_orderBy_value??)>
+${prefixName} order_by_
 <#assign prefixName = ','>
 </#if>
 <#if (insert_orgCode??) && (insert_orgCode_value??)>
@@ -79,6 +83,10 @@ ${prefixName} parent_tree_code
 </#if>
 <#if (insert_parentTreeName??) && (insert_parentTreeName_value??)>
 ${prefixName} parent_tree_name
+<#assign prefixName = ','>
+</#if>
+<#if (insert_personalCode??) && (insert_personalCode_value??)>
+${prefixName} personal_code
 <#assign prefixName = ','>
 </#if>
 <#if (insert_provinceCode??) && (insert_provinceCode_value??)>
@@ -114,6 +122,10 @@ VALUES
 (<#assign prefixName = ' '>
 <#if (insert_areaCode??) && (insert_areaCode_value??)>
 ${prefixName} :insert_areaCode_value
+<#assign prefixName = ','>
+</#if>
+<#if (insert_batchNo??) && (insert_batchNo_value??)>
+${prefixName} :insert_batchNo_value
 <#assign prefixName = ','>
 </#if>
 <#if (insert_beginDate??) && (insert_beginDate_value??)>
@@ -172,8 +184,8 @@ ${prefixName} :insert_lastModifiedDate_value
 ${prefixName} :insert_name_value
 <#assign prefixName = ','>
 </#if>
-<#if (insert_order??) && (insert_order_value??)>
-${prefixName} :insert_order_value
+<#if (insert_orderBy??) && (insert_orderBy_value??)>
+${prefixName} :insert_orderBy_value
 <#assign prefixName = ','>
 </#if>
 <#if (insert_orgCode??) && (insert_orgCode_value??)>
@@ -190,6 +202,10 @@ ${prefixName} :insert_parentTreeCode_value
 </#if>
 <#if (insert_parentTreeName??) && (insert_parentTreeName_value??)>
 ${prefixName} :insert_parentTreeName_value
+<#assign prefixName = ','>
+</#if>
+<#if (insert_personalCode??) && (insert_personalCode_value??)>
+${prefixName} :insert_personalCode_value
 <#assign prefixName = ','>
 </#if>
 <#if (insert_provinceCode??) && (insert_provinceCode_value??)>

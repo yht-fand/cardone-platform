@@ -96,7 +96,7 @@ NAME AS name
 <#case "namePinyin">
 NAME_PINYIN AS namePinyin
 <#break>
-<#case "order">
+<#case "orderBy">
 ORDER_ AS order
 <#break>
 <#case "orgCode">

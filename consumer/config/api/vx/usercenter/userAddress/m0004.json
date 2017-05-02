@@ -1,6 +1,7 @@
 {
   "input": {
     "areaCode": "areaCode",
+    "batchNo": "batchNo",
     "beginDate": "beginDate",
     "cityCode": "cityCode",
     "countryCode": "countryCode",
@@ -15,8 +16,9 @@
     "jsonData": "jsonData",
     "lastModifiedByCode": "lastModifiedByCode",
     "lastModifiedDate": "lastModifiedDate",
-    "order": "order",
+    "orderBy": "orderBy",
     "orgCode": "orgCode",
+    "personalCode": "personalCode",
     "provinceCode": "provinceCode",
     "regionCode": "regionCode",
     "siteCode": "siteCode",
@@ -55,6 +57,7 @@
   },
   "output": {
     "areaCode": "area_code",
+    "batchNo": "batch_no",
     "beginDate": "begin_date",
     "cityCode": "city_code",
     "countryCode": "country_code",
@@ -69,8 +72,9 @@
     "jsonData": "json_data",
     "lastModifiedByCode": "last_modified_by_code",
     "lastModifiedDate": "last_modified_date",
-    "order": "order_",
+    "orderBy": "order_by_",
     "orgCode": "org_code",
+    "personalCode": "personal_code",
     "provinceCode": "province_code",
     "regionCode": "region_code",
     "siteCode": "site_code",

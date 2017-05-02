@@ -16,6 +16,10 @@ ${prefixName} alias_name
 ${prefixName} area_code
 <#assign prefixName = ','>
 </#if>
+<#if (select_batchNo??)>
+${prefixName} batch_no
+<#assign prefixName = ','>
+</#if>
 <#if (select_beginDate??)>
 ${prefixName} begin_date
 <#assign prefixName = ','>
@@ -136,8 +140,8 @@ ${prefixName} name
 ${prefixName} name_pinyin
 <#assign prefixName = ','>
 </#if>
-<#if (select_order??)>
-${prefixName} order_
+<#if (select_orderBy??)>
+${prefixName} order_by_
 <#assign prefixName = ','>
 </#if>
 <#if (select_orgCode??)>
@@ -150,6 +154,10 @@ ${prefixName} password_
 </#if>
 <#if (select_passwordSalt??)>
 ${prefixName} password_salt
+<#assign prefixName = ','>
+</#if>
+<#if (select_personalCode??)>
+${prefixName} personal_code
 <#assign prefixName = ','>
 </#if>
 <#if (select_portraitUrl??)>
@@ -236,6 +244,10 @@ ${prefixName} alias_name ${order_by_aliasName_value!}
 </#if>
 <#if (order_by_areaCode??)>
 ${prefixName} area_code ${order_by_areaCode_value!}
+<#assign prefixName = ','>
+</#if>
+<#if (order_by_batchNo??)>
+${prefixName} batch_no ${order_by_batchNo_value!}
 <#assign prefixName = ','>
 </#if>
 <#if (order_by_beginDate??)>
@@ -358,8 +370,8 @@ ${prefixName} name ${order_by_name_value!}
 ${prefixName} name_pinyin ${order_by_namePinyin_value!}
 <#assign prefixName = ','>
 </#if>
-<#if (order_by_order??)>
-${prefixName} order_ ${order_by_order_value!}
+<#if (order_by_orderBy??)>
+${prefixName} order_by_ ${order_by_orderBy_value!}
 <#assign prefixName = ','>
 </#if>
 <#if (order_by_orgCode??)>
@@ -372,6 +384,10 @@ ${prefixName} password_ ${order_by_password_value!}
 </#if>
 <#if (order_by_passwordSalt??)>
 ${prefixName} password_salt ${order_by_passwordSalt_value!}
+<#assign prefixName = ','>
+</#if>
+<#if (order_by_personalCode??)>
+${prefixName} personal_code ${order_by_personalCode_value!}
 <#assign prefixName = ','>
 </#if>
 <#if (order_by_portraitUrl??)>

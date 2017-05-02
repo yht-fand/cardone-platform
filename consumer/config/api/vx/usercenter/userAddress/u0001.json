@@ -1,6 +1,7 @@
 {
   "input": {
     "areaCode": "areaCode",
+    "batchNo": "batchNo",
     "beginDate": "beginDate",
     "cityCode": "cityCode",
     "countryCode": "countryCode",
@@ -15,8 +16,9 @@
     "jsonData": "jsonData",
     "lastModifiedByCode": "lastModifiedByCode",
     "lastModifiedDate": "lastModifiedDate",
-    "order": "order",
+    "orderBy": "orderBy",
     "orgCode": "orgCode",
+    "personalCode": "personalCode",
     "provinceCode": "provinceCode",
     "regionCode": "regionCode",
     "siteCode": "siteCode",

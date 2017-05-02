@@ -39,7 +39,7 @@ LAST_MODIFIED_DATE AS lastModifiedDate
 <#case "openUserId">
 OPEN_USER_ID AS openUserId
 <#break>
-<#case "order">
+<#case "orderBy">
 ORDER_ AS order
 <#break>
 <#case "orgCode">
