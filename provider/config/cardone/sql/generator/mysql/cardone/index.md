@@ -26,7 +26,7 @@ JSON_DATA|YES|String()|JSON数据
 LAST_MODIFIED_BY_CODE|YES|String(255)|最后修改人代码
 LAST_MODIFIED_DATE|YES|Date(19)|最后修改时间
 NAME|YES|String(255)|名称
-ORDER_|YES|Long(19)|排序
+ORDER_BY_|YES|Long(19)|排序
 ORG_CODE|YES|String(255)|组织代码
 ORG_ID|NO|String(255)|组织标识
 PARENT_CODE|YES|String(255)|父级代码
@@ -59,7 +59,7 @@ JSON_DATA|YES|String()|JSON数据
 LAST_MODIFIED_BY_CODE|YES|String(255)|最后修改人代码
 LAST_MODIFIED_DATE|YES|Date(19)|最后修改时间
 NAME|YES|String(255)|名称
-ORDER_|YES|Long(19)|排序
+ORDER_BY_|YES|Long(19)|排序
 ORG_CODE|YES|String(255)|组织代码
 PARENT_CODE|YES|String(255)|父级代码
 PARENT_TREE_CODE|YES|String(1023)|父级树代码
@@ -86,7 +86,7 @@ FLAG_OBJECT_CODE|YES|String(255)|标识对象代码(工作流：工作流标识�
 JSON_DATA|YES|String()|JSON数据
 LAST_MODIFIED_BY_CODE|YES|String(255)|最后修改人代码
 LAST_MODIFIED_DATE|YES|Date(19)|最后修改时间
-ORDER_|YES|Long(19)|排序
+ORDER_BY_|YES|Long(19)|排序
 ORG_CODE|YES|String(255)|组织代码
 SITE_CODE|YES|String(255)|站点代码
 STATE_CODE|YES|String(255)|状态代码(数据字典)
@@ -110,7 +110,7 @@ FLAG_OBJECT_CODE|YES|String(255)|标识对象代码(工作流：工作流标识�
 JSON_DATA|YES|String()|JSON数据
 LAST_MODIFIED_BY_CODE|YES|String(255)|最后修改人代码
 LAST_MODIFIED_DATE|YES|Date(19)|最后修改时间
-ORDER_|YES|Long(19)|排序
+ORDER_BY_|YES|Long(19)|排序
 ORG_CODE|YES|String(255)|组织代码
 SITE_CODE|YES|String(255)|站点代码
 STATE_CODE|YES|String(255)|状态代码(数据字典)
@@ -138,7 +138,7 @@ IS_DEFAULT|YES|String(255)|是否默认(数据字典)
 JSON_DATA|YES|String()|JSON数据
 LAST_MODIFIED_BY_CODE|YES|String(255)|最后修改人代码
 LAST_MODIFIED_DATE|YES|Date(19)|最后修改时间
-ORDER_|YES|Long(19)|排序
+ORDER_BY_|YES|Long(19)|排序
 ORG_CODE|YES|String(255)|组织代码
 PROVINCE_CODE|YES|String(255)|省份代码
 REGION_CODE|YES|String(255)|区域代码
@@ -186,7 +186,7 @@ MARRY_STATE_CODE|YES|String(255)|婚姻状态代码(数据字典)
 MOBILE_PHONE|YES|String(255)|手机
 NAME|NO|String(255)|名称
 NAME_PINYIN|YES|String(255)|拼音
-ORDER_|YES|Long(19)|排序
+ORDER_BY_|YES|Long(19)|排序
 ORG_CODE|YES|String(255)|组织代码
 PASSWORD_|YES|String(255)|密码
 PASSWORD_SALT|YES|String(255)|密码盐
@@ -224,7 +224,7 @@ JSON_DATA|YES|String()|JSON数据
 LAST_MODIFIED_BY_CODE|YES|String(255)|最后修改人代码
 LAST_MODIFIED_DATE|YES|Date(19)|最后修改时间
 OPEN_USER_ID|NO|String(255)|开放用户标识
-ORDER_|YES|Long(19)|排序
+ORDER_BY_|YES|Long(19)|排序
 ORG_CODE|YES|String(255)|组织代码
 SITE_CODE|YES|String(255)|站点代码
 STATE_CODE|YES|String(255)|状态代码(数据字典)
@@ -249,7 +249,7 @@ JSON_DATA|YES|String()|JSON数据
 LAST_MODIFIED_BY_CODE|YES|String(255)|最后修改人代码
 LAST_MODIFIED_DATE|YES|Date(19)|最后修改时间
 NAME|NO|String(255)|名称
-ORDER_|YES|Long(19)|排序
+ORDER_BY_|YES|Long(19)|排序
 ORG_CODE|YES|String(255)|组织代码
 PROVINCE_CODE|NO|String(255)|省份代码
 PROVINCE_ID|NO|String(255)|省份标识
@@ -277,7 +277,7 @@ JSON_DATA|YES|String()|JSON数据
 LAST_MODIFIED_BY_CODE|YES|String(255)|最后修改人代码
 LAST_MODIFIED_DATE|YES|Date(19)|最后修改时间
 NAME|NO|String(255)|名称
-ORDER_|YES|Long(19)|排序
+ORDER_BY_|YES|Long(19)|排序
 ORG_CODE|YES|String(255)|组织代码
 PROVINCE_CODE|YES|String(255)|省份代码
 SITE_CODE|YES|String(255)|站点代码
@@ -305,7 +305,7 @@ JSON_DATA|YES|String()|JSON数据
 LAST_MODIFIED_BY_CODE|YES|String(255)|最后修改人代码
 LAST_MODIFIED_DATE|YES|Date(19)|最后修改时间
 NAME|NO|String(255)|名称
-ORDER_|YES|Long(19)|排序
+ORDER_BY_|YES|Long(19)|排序
 ORG_CODE|YES|String(255)|组织代码
 PROVINCE_CODE|YES|String(255)|省份代码
 SITE_CODE|YES|String(255)|站点代码
@@ -332,7 +332,7 @@ JSON_DATA|YES|String()|JSON数据
 LAST_MODIFIED_BY_CODE|YES|String(255)|最后修改人代码
 LAST_MODIFIED_DATE|YES|Date(19)|最后修改时间
 NAME|NO|String(255)|名称
-ORDER_|YES|Long(19)|排序
+ORDER_BY_|YES|Long(19)|排序
 ORG_CODE|YES|String(255)|组织代码
 PARENT_CODE|YES|String(255)|父级代码
 PARENT_TREE_CODE|YES|String(1023)|父级树代码

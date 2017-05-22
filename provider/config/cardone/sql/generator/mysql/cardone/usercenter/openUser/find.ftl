@@ -53,7 +53,7 @@ ${prefixName} `OPEN_USER_ID`
 <#assign prefixName = ','>
 </#if>
 <#if (select_order??)>
-${prefixName} `ORDER_`
+${prefixName} `ORDER_BY_`
 <#assign prefixName = ','>
 </#if>
 <#if (select_orgCode??)>
@@ -139,7 +139,7 @@ ${prefixName} `OPEN_USER_ID` ${order_by_openUserId_value!}
 <#assign prefixName = ','>
 </#if>
 <#if (order_by_order??)>
-${prefixName} `ORDER_` ${order_by_order_value!}
+${prefixName} `ORDER_BY_` ${order_by_order_by_value!}
 <#assign prefixName = ','>
 </#if>
 <#if (order_by_orgCode??)>

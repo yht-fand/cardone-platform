@@ -130,8 +130,8 @@ ${prefixName} `NAME`
 ${prefixName} `NAME_PINYIN`
 <#assign prefixName = ','>
 </#if>
-<#if (insert_order??) && (insert_order_value??)>
-${prefixName} `ORDER_`
+<#if (insert_order??) && (insert_order_by_value??)>
+${prefixName} `ORDER_BY_`
 <#assign prefixName = ','>
 </#if>
 <#if (insert_orgCode??) && (insert_orgCode_value??)>
@@ -341,8 +341,8 @@ ${prefixName} :insert_name_value
 ${prefixName} :insert_namePinyin_value
 <#assign prefixName = ','>
 </#if>
-<#if (insert_order??) && (insert_order_value??)>
-${prefixName} :insert_order_value
+<#if (insert_order??) && (insert_order_by_value??)>
+${prefixName} :insert_order_by_value
 <#assign prefixName = ','>
 </#if>
 <#if (insert_orgCode??) && (insert_orgCode_value??)>
@@ -680,10 +680,10 @@ ${prefixName} E.NAME_PINYIN IS NULL
 <#assign prefixName = 'AND'>
 </#if>
 <#if (where_and_eq_order??)>
-<#if (where_and_eq_order_value??)>
-${prefixName} E.ORDER_ = :where_and_eq_order_value
+<#if (where_and_eq_order_by_value??)>
+${prefixName} E.ORDER_BY_ = :where_and_eq_order_by_value
 <#else>
-${prefixName} E.ORDER_ IS NULL
+${prefixName} E.ORDER_BY_ IS NULL
 </#if>
 <#assign prefixName = 'AND'>
 </#if>
