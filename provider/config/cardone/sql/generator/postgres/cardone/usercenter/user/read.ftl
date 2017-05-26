@@ -1,172 +1,172 @@
 SELECT
 <#switch (object_id!)>
 <#case "address">
-address AS address
+"address"
 <#break>
 <#case "age">
-age AS age
+"age"
 <#break>
 <#case "aliasName">
-alias_name AS aliasName
+"alias_name"
 <#break>
 <#case "areaCode">
-area_code AS areaCode
+"area_code"
 <#break>
 <#case "batchNo">
-batch_no AS batchNo
+"batch_no"
 <#break>
 <#case "beginDate">
-begin_date AS beginDate
+"begin_date"
 <#break>
 <#case "birthday">
-birthday AS birthday
+"birthday"
 <#break>
 <#case "callName">
-call_name AS callName
+"call_name"
 <#break>
 <#case "cityCode">
-city_code AS cityCode
+"city_code"
 <#break>
 <#case "companyName">
-company_name AS companyName
+"company_name"
 <#break>
 <#case "contact">
-contact AS contact
+"contact"
 <#break>
 <#case "countryCode">
-country_code AS countryCode
+"country_code"
 <#break>
 <#case "createdByCode">
-created_by_code AS createdByCode
+"created_by_code"
 <#break>
 <#case "createdDate">
-created_date AS createdDate
+"created_date"
 <#break>
 <#case "dataStateCode">
-data_state_code AS dataStateCode
+"data_state_code"
 <#break>
 <#case "departmentCode">
-department_code AS departmentCode
+"department_code"
 <#break>
 <#case "diplomaCode">
-diploma_code AS diplomaCode
+"diploma_code"
 <#break>
 <#case "email">
-email AS email
+"email"
 <#break>
 <#case "endDate">
-end_date AS endDate
+"end_date"
 <#break>
 <#case "firstName">
-first_name AS firstName
+"first_name"
 <#break>
 <#case "flagCode">
-flag_code AS flagCode
+"flag_code"
 <#break>
 <#case "flagObjectCode">
-flag_object_code AS flagObjectCode
+"flag_object_code"
 <#break>
 <#case "folkCode">
-folk_code AS folkCode
+"folk_code"
 <#break>
 <#case "idCardCode">
-id_card_code AS idCardCode
+"id_card_code"
 <#break>
 <#case "idCardNo">
-id_card_no AS idCardNo
+"id_card_no"
 <#break>
 <#case "intro">
-intro AS intro
+"intro"
 <#break>
 <#case "jsonData">
-json_data AS jsonData
+"json_data"
 <#break>
 <#case "lastModifiedByCode">
-last_modified_by_code AS lastModifiedByCode
+"last_modified_by_code"
 <#break>
 <#case "lastModifiedDate">
-last_modified_date AS lastModifiedDate
+"last_modified_date"
 <#break>
 <#case "lastName">
-last_name AS lastName
+"last_name"
 <#break>
 <#case "locus">
-locus AS locus
+"locus"
 <#break>
 <#case "marryStateCode">
-marry_state_code AS marryStateCode
+"marry_state_code"
 <#break>
 <#case "mobilePhone">
-mobile_phone AS mobilePhone
+"mobile_phone"
 <#break>
 <#case "name">
-name AS name
+"name"
 <#break>
 <#case "namePinyin">
-name_pinyin AS namePinyin
+"name_pinyin"
 <#break>
 <#case "orderBy">
-order_by_ AS orderBy
+"order_by_"
 <#break>
 <#case "orgCode">
-org_code AS orgCode
+"org_code"
 <#break>
 <#case "password">
-password_ AS password
+"password_"
 <#break>
 <#case "passwordSalt">
-password_salt AS passwordSalt
+"password_salt"
 <#break>
 <#case "personalCode">
-personal_code AS personalCode
+"personal_code"
 <#break>
 <#case "portraitUrl">
-portrait_url AS portraitUrl
+"portrait_url"
 <#break>
 <#case "privatePassword">
-private_password AS privatePassword
+"private_password"
 <#break>
 <#case "privatePasswordSalt">
-private_password_salt AS privatePasswordSalt
+"private_password_salt"
 <#break>
 <#case "professionCode">
-profession_code AS professionCode
+"profession_code"
 <#break>
 <#case "provinceCode">
-province_code AS provinceCode
+"province_code"
 <#break>
 <#case "qq">
-qq AS qq
+"qq"
 <#break>
 <#case "regionCode">
-region_code AS regionCode
+"region_code"
 <#break>
 <#case "remark">
-remark AS remark
+"remark"
 <#break>
 <#case "sexCode">
-sex_code AS sexCode
+"sex_code"
 <#break>
 <#case "siteCode">
-site_code AS siteCode
+"site_code"
 <#break>
 <#case "stateCode">
-state_code AS stateCode
+"state_code"
 <#break>
 <#case "systemInfoCode">
-system_info_code AS systemInfoCode
+"system_info_code"
 <#break>
 <#case "telephone">
-telephone AS telephone
+"telephone"
 <#break>
 <#case "userCode">
-user_code AS userCode
+"user_code"
 <#break>
 <#case "userId">
-user_id AS userId
+"user_id"
 <#break>
 <#case "version">
-version_ AS version
+"version_"
 <#break>
 <#default>
 COUNT(*) AS COUNT_

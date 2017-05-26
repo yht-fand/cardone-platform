@@ -197,7 +197,7 @@ last_name|YES|String(255)|姓氏
 locus|YES|String(255)|现居住地
 marry_state_code|YES|String(255)|婚姻状态代码(数据字典)
 mobile_phone|YES|String(255)|手机
-name|NO|String(255)|名称
+name|YES|String(255)|名称
 name_pinyin|YES|String(255)|拼音
 order_by_|YES|Long(19)|排序
 org_code|YES|String(255)|组织代码
