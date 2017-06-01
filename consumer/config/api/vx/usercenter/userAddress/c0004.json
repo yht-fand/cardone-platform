@@ -44,14 +44,32 @@
     },
     "messages": {
       "userAddressCode": {
-        "required": "必填",
-        "minlength": "需3个字符以上",
-        "maxlength": "需小于255个字符"
+        "required": {
+          "code": "userAddressCode required",
+          "defaultMessage": "用户与地址编号必填"
+        },
+        "minlength": {
+          "code": "userAddressCode minlength",
+          "defaultMessage": "用户与地址编号需{0}个字符以上"
+        },
+        "maxlength": {
+          "code": "userAddressCode maxlength",
+          "defaultMessage": "用户与地址编号需小于{0}个字符"
+        }
       },
       "name": {
-        "required": "名称不能为空值!",
-        "minlength": "需3个字符以上",
-        "maxlength": "需小于255个字符"
+        "required": {
+          "code": "name required",
+          "defaultMessage": "用户与地址名称必填"
+        },
+        "minlength": {
+          "code": "name minlength",
+          "defaultMessage": "用户与地址名称需{0}个字符以上"
+        },
+        "maxlength": {
+          "code": "name maxlength",
+          "defaultMessage": "用户与地址名称需小于{0}个字符"
+        }
       }
     }
   }

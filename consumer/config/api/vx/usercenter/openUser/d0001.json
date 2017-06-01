@@ -10,7 +10,10 @@
     },
     "messages": {
       "openUserIds": {
-        "required": "开放用户标识集合不能为空值!"
+        "required": {
+          "code": "openUserIds required",
+          "defaultMessage": "开放用户标识集合必填"
+        }
       }
     }
   }

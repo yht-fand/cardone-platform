@@ -40,14 +40,32 @@
     },
     "messages": {
       "cityCode": {
-        "required": "必填",
-        "minlength": "需3个字符以上",
-        "maxlength": "需小于255个字符"
+        "required": {
+          "code": "cityCode required",
+          "defaultMessage": "城市编号必填"
+        },
+        "minlength": {
+          "code": "cityCode minlength",
+          "defaultMessage": "城市编号需{0}个字符以上"
+        },
+        "maxlength": {
+          "code": "cityCode maxlength",
+          "defaultMessage": "城市编号需小于{0}个字符"
+        }
       },
       "name": {
-        "required": "名称不能为空值!",
-        "minlength": "需3个字符以上",
-        "maxlength": "需小于255个字符"
+        "required": {
+          "code": "name required",
+          "defaultMessage": "城市名称必填"
+        },
+        "minlength": {
+          "code": "name minlength",
+          "defaultMessage": "城市名称需{0}个字符以上"
+        },
+        "maxlength": {
+          "code": "name maxlength",
+          "defaultMessage": "城市名称需小于{0}个字符"
+        }
       }
     }
   }

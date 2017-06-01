@@ -10,7 +10,10 @@
     },
     "messages": {
       "regionIds": {
-        "required": "区域标识集合不能为空值!"
+        "required": {
+          "code": "regionIds required",
+          "defaultMessage": "区域标识集合必填"
+        }
       }
     }
   }

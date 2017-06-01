@@ -25,7 +25,7 @@ public class Region implements java.io.Serializable {
     protected String batchNo;
 
     /**
-     * 开始时间
+     * 开始日期
      */
     @lombok.Getter
     @lombok.Setter
@@ -53,7 +53,7 @@ public class Region implements java.io.Serializable {
     protected String createdByCode;
 
     /**
-     * 创建时间
+     * 创建日期
      */
     @lombok.Getter
     @lombok.Setter
@@ -74,7 +74,7 @@ public class Region implements java.io.Serializable {
     protected String departmentCode;
 
     /**
-     * 结束时间
+     * 结束日期
      */
     @lombok.Getter
     @lombok.Setter
@@ -109,7 +109,7 @@ public class Region implements java.io.Serializable {
     protected String lastModifiedByCode;
 
     /**
-     * 最后修改时间
+     * 最后修改日期
      */
     @lombok.Getter
     @lombok.Setter

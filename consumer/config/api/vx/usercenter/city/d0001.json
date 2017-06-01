@@ -10,7 +10,10 @@
     },
     "messages": {
       "cityIds": {
-        "required": "城市标识集合不能为空值!"
+        "required": {
+          "code": "cityIds required",
+          "defaultMessage": "城市标识集合必填"
+        }
       }
     }
   }

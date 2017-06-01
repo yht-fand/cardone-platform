@@ -10,7 +10,10 @@
     },
     "messages": {
       "provinceIds": {
-        "required": "省份标识集合不能为空值!"
+        "required": {
+          "code": "provinceIds required",
+          "defaultMessage": "省份标识集合必填"
+        }
       }
     }
   }

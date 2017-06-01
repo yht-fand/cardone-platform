@@ -10,7 +10,10 @@
     },
     "messages": {
       "orgIds": {
-        "required": "组织标识集合不能为空值!"
+        "required": {
+          "code": "orgIds required",
+          "defaultMessage": "组织标识集合必填"
+        }
       }
     }
   }

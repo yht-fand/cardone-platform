@@ -10,7 +10,10 @@
     },
     "messages": {
       "userAddressIds": {
-        "required": "用户与地址标识集合不能为空值!"
+        "required": {
+          "code": "userAddressIds required",
+          "defaultMessage": "用户与地址标识集合必填"
+        }
       }
     }
   }

@@ -10,7 +10,10 @@
     },
     "messages": {
       "departmentIds": {
-        "required": "部门标识集合不能为空值!"
+        "required": {
+          "code": "departmentIds required",
+          "defaultMessage": "部门标识集合必填"
+        }
       }
     }
   }

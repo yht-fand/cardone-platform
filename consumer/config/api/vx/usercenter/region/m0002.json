@@ -45,14 +45,32 @@
     },
     "messages": {
       "regionCode": {
-        "required": "必填",
-        "minlength": "需3个字符以上",
-        "maxlength": "需小于255个字符"
+        "required": {
+          "code": "regionCode required",
+          "defaultMessage": "区域编号必填"
+        },
+        "minlength": {
+          "code": "regionCode minlength",
+          "defaultMessage": "区域编号需{0}个字符以上"
+        },
+        "maxlength": {
+          "code": "regionCode maxlength",
+          "defaultMessage": "区域编号需小于{0}个字符"
+        }
       },
       "name": {
-        "required": "名称不能为空值!",
-        "minlength": "需3个字符以上",
-        "maxlength": "需小于255个字符"
+        "required": {
+          "code": "name required",
+          "defaultMessage": "区域名称必填"
+        },
+        "minlength": {
+          "code": "name minlength",
+          "defaultMessage": "区域名称需{0}个字符以上"
+        },
+        "maxlength": {
+          "code": "name maxlength",
+          "defaultMessage": "区域名称需小于{0}个字符"
+        }
       }
     }
   },
