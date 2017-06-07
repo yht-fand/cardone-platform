@@ -1,6 +1,13 @@
 {
   "input": {
-    "userDepartmentIds": "userDepartmentIds"
+    "userDepartmentIds": {
+      "stringToListFunc": {
+        "idName": "userDepartmentId",
+        "map": {
+          "dataStateCode": "0"
+        }
+      }
+    }
   },
   "validation": {
     "rules": {
@@ -10,10 +17,7 @@
     },
     "messages": {
       "userDepartmentIds": {
-        "required": {
-          "code": "userDepartmentIds required",
-          "defaultMessage": "用户与部门标识集合必填"
-        }
+        "required": "用户与部门标识集合必填"
       }
     }
   }

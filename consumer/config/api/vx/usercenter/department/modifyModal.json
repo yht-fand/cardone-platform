@@ -10,10 +10,7 @@
     },
     "messages": {
       "departmentId": {
-        "required": {
-          "code": "departmentId required",
-          "defaultMessage": "部门标识必填"
-        }
+        "required": "部门标识必填"
       }
     }
   },

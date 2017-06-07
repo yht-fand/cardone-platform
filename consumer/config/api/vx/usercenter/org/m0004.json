@@ -45,32 +45,14 @@
     },
     "messages": {
       "orgCode": {
-        "required": {
-          "code": "orgCode required",
-          "defaultMessage": "组织编号必填"
-        },
-        "minlength": {
-          "code": "orgCode minlength",
-          "defaultMessage": "组织编号需{0}个字符以上"
-        },
-        "maxlength": {
-          "code": "orgCode maxlength",
-          "defaultMessage": "组织编号需小于{0}个字符"
-        }
+        "required": "组织编号必填",
+        "minlength": "组织编号需{0}个字符以上",
+        "maxlength": "组织编号需小于{0}个字符"
       },
       "name": {
-        "required": {
-          "code": "name required",
-          "defaultMessage": "组织名称必填"
-        },
-        "minlength": {
-          "code": "name minlength",
-          "defaultMessage": "组织名称需{0}个字符以上"
-        },
-        "maxlength": {
-          "code": "name maxlength",
-          "defaultMessage": "组织名称需小于{0}个字符"
-        }
+        "required": "组织名称必填",
+        "minlength": "组织名称需{0}个字符以上",
+        "maxlength": "组织名称需小于{0}个字符"
       }
     }
   },

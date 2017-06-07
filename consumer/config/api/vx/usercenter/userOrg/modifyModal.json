@@ -10,10 +10,7 @@
     },
     "messages": {
       "userOrgId": {
-        "required": {
-          "code": "userOrgId required",
-          "defaultMessage": "用户与组织标识必填"
-        }
+        "required": "用户与组织标识必填"
       }
     }
   },

@@ -1,6 +1,10 @@
 {
   "input": {
-    "userIds": "userIds"
+    "userIds": {
+      "stringToListFunc": {
+        "idName": "userId"
+      }
+    }
   },
   "validation": {
     "rules": {
@@ -10,10 +14,7 @@
     },
     "messages": {
       "userIds": {
-        "required": {
-          "code": "userIds required",
-          "defaultMessage": "用户标识集合必填"
-        }
+        "required": "用户标识集合必填"
       }
     }
   }

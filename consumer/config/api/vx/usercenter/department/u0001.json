@@ -43,24 +43,12 @@
     },
     "messages": {
       "departmentId": {
-        "required": {
-          "code": "departmentId required",
-          "defaultMessage": "部门标识必填"
-        }
+        "required": "部门标识必填"
       },
       "name": {
-        "required": {
-          "code": "name required",
-          "defaultMessage": "部门名称必填"
-        },
-        "minlength": {
-          "code": "name minlength",
-          "defaultMessage": "部门名称需{0}个字符以上"
-        },
-        "maxlength": {
-          "code": "name maxlength",
-          "defaultMessage": "部门名称需小于{0}个字符"
-        }
+        "required": "部门名称必填",
+        "minlength": "部门名称需{0}个字符以上",
+        "maxlength": "部门名称需小于{0}个字符"
       }
     }
   }

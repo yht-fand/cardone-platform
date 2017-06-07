@@ -1,6 +1,13 @@
 {
   "input": {
-    "userIds": "userIds"
+    "userIds": {
+      "stringToListFunc": {
+        "idName": "userId",
+        "map": {
+          "dataStateCode": "0"
+        }
+      }
+    }
   },
   "validation": {
     "rules": {
@@ -10,10 +17,7 @@
     },
     "messages": {
       "userIds": {
-        "required": {
-          "code": "userIds required",
-          "defaultMessage": "用户标识集合必填"
-        }
+        "required": "用户标识集合必填"
       }
     }
   }

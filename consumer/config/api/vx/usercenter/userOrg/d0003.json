@@ -1,6 +1,13 @@
 {
   "input": {
-    "userOrgIds": "userOrgIds"
+    "userOrgIds": {
+      "stringToListFunc": {
+        "idName": "userOrgId",
+        "map": {
+          "dataStateCode": "0"
+        }
+      }
+    }
   },
   "validation": {
     "rules": {
@@ -10,10 +17,7 @@
     },
     "messages": {
       "userOrgIds": {
-        "required": {
-          "code": "userOrgIds required",
-          "defaultMessage": "用户与组织标识集合必填"
-        }
+        "required": "用户与组织标识集合必填"
       }
     }
   }

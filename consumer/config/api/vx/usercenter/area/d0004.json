@@ -1,6 +1,13 @@
 {
   "input": {
-    "areaIds": "areaIds"
+    "areaIds": {
+      "stringToListFunc": {
+        "idName": "areaId",
+        "map": {
+          "dataStateCode": "0"
+        }
+      }
+    }
   },
   "validation": {
     "rules": {
@@ -10,10 +17,7 @@
     },
     "messages": {
       "areaIds": {
-        "required": {
-          "code": "areaIds required",
-          "defaultMessage": "地区标识集合必填"
-        }
+        "required": "地区标识集合必填"
       }
     }
   }

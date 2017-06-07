@@ -38,24 +38,12 @@
     },
     "messages": {
       "cityId": {
-        "required": {
-          "code": "cityId required",
-          "defaultMessage": "城市标识必填",
-        }
+        "required": "城市标识必填"
       },
       "name": {
-        "required": {
-          "code": "name required",
-          "defaultMessage": "城市名称必填",
-        },
-        "minlength": {
-          "code": "name minlength",
-          "defaultMessage": "城市名称需{0}个字符以上",
-        },
-        "maxlength": {
-          "code": "name maxlength",
-          "defaultMessage": "城市名称需小于{0}个字符"
-        }
+        "required": "城市名称必填",
+        "minlength": "城市名称需{0}个字符以上",
+        "maxlength": "城市名称需小于{0}个字符"
       }
     }
   }

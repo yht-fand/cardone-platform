@@ -10,10 +10,7 @@
     },
     "messages": {
       "userId": {
-        "required": {
-          "code": "userId required",
-          "defaultMessage": "用户标识必填"
-        }
+        "required": "用户标识必填"
       }
     }
   },

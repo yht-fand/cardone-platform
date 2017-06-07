@@ -1,6 +1,10 @@
 {
   "input": {
-    "openUserIds": "openUserIds"
+    "openUserIds": {
+      "stringToListFunc": {
+        "idName": "openUserId"
+      }
+    }
   },
   "validation": {
     "rules": {
@@ -10,10 +14,7 @@
     },
     "messages": {
       "openUserIds": {
-        "required": {
-          "code": "openUserIds required",
-          "defaultMessage": "开放用户标识集合必填"
-        }
+        "required": "开放用户标识集合必填"
       }
     }
   }

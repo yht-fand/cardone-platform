@@ -1,6 +1,13 @@
 {
   "input": {
-    "cityIds": "cityIds"
+    "cityIds": {
+      "stringToListFunc": {
+        "idName": "cityId",
+        "map": {
+          "dataStateCode": "0"
+        }
+      }
+    }
   },
   "validation": {
     "rules": {
@@ -10,10 +17,7 @@
     },
     "messages": {
       "cityIds": {
-        "required": {
-          "code": "cityIds required",
-          "defaultMessage": "城市标识集合必填"
-        }
+        "required": "城市标识集合必填"
       }
     }
   }

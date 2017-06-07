@@ -1,6 +1,10 @@
 {
   "input": {
-    "provinceIds": "provinceIds"
+    "provinceIds": {
+      "stringToListFunc": {
+        "idName": "provinceId"
+      }
+    }
   },
   "validation": {
     "rules": {
@@ -10,10 +14,7 @@
     },
     "messages": {
       "provinceIds": {
-        "required": {
-          "code": "provinceIds required",
-          "defaultMessage": "省份标识集合必填"
-        }
+        "required": "省份标识集合必填"
       }
     }
   }

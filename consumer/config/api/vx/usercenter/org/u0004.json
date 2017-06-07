@@ -43,24 +43,12 @@
     },
     "messages": {
       "orgId": {
-        "required": {
-          "code": "orgId required",
-          "defaultMessage": "组织标识必填",
-        }
+        "required": "组织标识必填"
       },
       "name": {
-        "required": {
-          "code": "name required",
-          "defaultMessage": "组织名称必填",
-        },
-        "minlength": {
-          "code": "name minlength",
-          "defaultMessage": "组织名称需{0}个字符以上",
-        },
-        "maxlength": {
-          "code": "name maxlength",
-          "defaultMessage": "组织名称需小于{0}个字符"
-        }
+        "required": "组织名称必填",
+        "minlength": "组织名称需{0}个字符以上",
+        "maxlength": "组织名称需小于{0}个字符"
       }
     }
   }

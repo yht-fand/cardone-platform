@@ -10,10 +10,7 @@
     },
     "messages": {
       "areaId": {
-        "required": {
-          "code": "areaId required",
-          "defaultMessage": "地区标识必填"
-        }
+        "required": "地区标识必填"
       }
     }
   },

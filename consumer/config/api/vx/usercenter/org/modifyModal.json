@@ -10,10 +10,7 @@
     },
     "messages": {
       "orgId": {
-        "required": {
-          "code": "orgId required",
-          "defaultMessage": "组织标识必填"
-        }
+        "required": "组织标识必填"
       }
     }
   },

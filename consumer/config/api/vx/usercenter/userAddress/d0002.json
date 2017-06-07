@@ -1,6 +1,10 @@
 {
   "input": {
-    "userAddressIds": "userAddressIds"
+    "userAddressIds": {
+      "stringToListFunc": {
+        "idName": "userAddressId"
+      }
+    }
   },
   "validation": {
     "rules": {
@@ -10,10 +14,7 @@
     },
     "messages": {
       "userAddressIds": {
-        "required": {
-          "code": "userAddressIds required",
-          "defaultMessage": "用户与地址标识集合必填"
-        }
+        "required": "用户与地址标识集合必填"
       }
     }
   }

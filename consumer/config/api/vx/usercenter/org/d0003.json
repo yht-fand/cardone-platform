@@ -1,6 +1,13 @@
 {
   "input": {
-    "orgIds": "orgIds"
+    "orgIds": {
+      "stringToListFunc": {
+        "idName": "orgId",
+        "map": {
+          "dataStateCode": "0"
+        }
+      }
+    }
   },
   "validation": {
     "rules": {
@@ -10,10 +17,7 @@
     },
     "messages": {
       "orgIds": {
-        "required": {
-          "code": "orgIds required",
-          "defaultMessage": "组织标识集合必填"
-        }
+        "required": "组织标识集合必填"
       }
     }
   }

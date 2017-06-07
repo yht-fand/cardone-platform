@@ -10,10 +10,7 @@
     },
     "messages": {
       "cityId": {
-        "required": {
-          "code": "cityId required",
-          "defaultMessage": "城市标识必填"
-        }
+        "required": "城市标识必填"
       }
     }
   },

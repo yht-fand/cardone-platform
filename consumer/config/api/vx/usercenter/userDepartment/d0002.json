@@ -1,6 +1,10 @@
 {
   "input": {
-    "userDepartmentIds": "userDepartmentIds"
+    "userDepartmentIds": {
+      "stringToListFunc": {
+        "idName": "userDepartmentId"
+      }
+    }
   },
   "validation": {
     "rules": {
@@ -10,10 +14,7 @@
     },
     "messages": {
       "userDepartmentIds": {
-        "required": {
-          "code": "userDepartmentIds required",
-          "defaultMessage": "用户与部门标识集合必填"
-        }
+        "required": "用户与部门标识集合必填"
       }
     }
   }

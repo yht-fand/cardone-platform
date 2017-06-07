@@ -10,10 +10,7 @@
     },
     "messages": {
       "openUserId": {
-        "required": {
-          "code": "openUserId required",
-          "defaultMessage": "开放用户标识必填"
-        }
+        "required": "开放用户标识必填"
       }
     }
   },

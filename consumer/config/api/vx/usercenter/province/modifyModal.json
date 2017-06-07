@@ -10,10 +10,7 @@
     },
     "messages": {
       "provinceId": {
-        "required": {
-          "code": "provinceId required",
-          "defaultMessage": "省份标识必填"
-        }
+        "required": "省份标识必填"
       }
     }
   },

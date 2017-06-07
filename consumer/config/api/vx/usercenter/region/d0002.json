@@ -1,6 +1,10 @@
 {
   "input": {
-    "regionIds": "regionIds"
+    "regionIds": {
+      "stringToListFunc": {
+        "idName": "regionId"
+      }
+    }
   },
   "validation": {
     "rules": {
@@ -10,10 +14,7 @@
     },
     "messages": {
       "regionIds": {
-        "required": {
-          "code": "regionIds required",
-          "defaultMessage": "区域标识集合必填"
-        }
+        "required": "区域标识集合必填"
       }
     }
   }
