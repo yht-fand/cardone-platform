@@ -61,12 +61,12 @@
     "rules": {
       "userCode": {
         "required": true,
-        "minlength": 4,
+        "minlength": 1,
         "maxlength": 255
       },
       "name": {
         "required": true,
-        "minlength": 4,
+        "minlength": 1,
         "maxlength": 255
       }
     },
