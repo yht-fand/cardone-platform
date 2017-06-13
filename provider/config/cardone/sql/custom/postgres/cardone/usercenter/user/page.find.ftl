@@ -21,7 +21,7 @@ FROM
 c1_user t
 LEFT JOIN c1_department d ON (d.DEPARTMENT_CODE = t.DEPARTMENT_CODE)
 <#if cardone.StringUtils.isNotBlank(userId)>
-WHERE t.user_id = :userId
+WHERE t.user_id = :userId or t.user_code = :userId
 <#else>
     <#include "page.where.ftl">
 ORDER BY t.DEPARTMENT_CODE,
