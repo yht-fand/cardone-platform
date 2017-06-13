@@ -3,6 +3,7 @@ package top.cardone.usercenter.service;
 import org.springframework.cache.annotation.CacheEvict;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.data.domain.Page;
+import org.springframework.transaction.annotation.Transactional;
 import top.cardone.cache.Caches;
 import top.cardone.data.service.PageService;
 
@@ -160,6 +161,18 @@ public interface UserService extends PageService {
      * @return 对象用户对象
      */
     Map<String, Object> findOneByUserId(Map<String, Object> findOneMap);
+
+    /**
+     * 查询对象
+     *
+     * @param findOneMap 用户标识
+     * @return 对象用户对象
+     */
+    @Transactional(readOnly = true)
+    @Cacheable(value = "top.cardone.usercenter.service.UserService", key = Caches.KEY_1)
+    default Map<String, Object> findOneByUserIdCache(Map<String, Object> findOneMap) {
+        return this.findOneByUserId(findOneMap);
+    }
 
     /**
      * 查询用户下拉列表
