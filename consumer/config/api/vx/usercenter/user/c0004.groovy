@@ -108,6 +108,6 @@ class c0004 {
     }
 
     def output(output) {
-		['data': output]        
+		['insertCount': output]
     }
 }
