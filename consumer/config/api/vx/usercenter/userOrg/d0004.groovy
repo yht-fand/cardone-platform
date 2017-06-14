@@ -5,7 +5,7 @@ import top.cardone.usercenter.service.UserOrgService
 import top.cardone.context.ApplicationContextHolder
 import top.cardone.core.CodeException
 
-class d0001 {
+class d0001 implements java.io.Serializable {
     def input(input) {
         def userOrgIds = input?.userOrgIds?.split(",")
 

@@ -5,7 +5,7 @@ import top.cardone.usercenter.service.UserDepartmentService
 import top.cardone.context.ApplicationContextHolder
 import top.cardone.core.CodeException
 
-class modifyModal {
+class modifyModal implements java.io.Serializable {
     def input(input) {
         ["userDepartmentId": input.userDepartmentId]
     }
