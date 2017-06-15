@@ -16,7 +16,7 @@ class d0001 implements java.io.Serializable {
         def provinceIdList = []
 
         for (def provinceId : provinceIds) {
-            provinceIdList.add(["provinceId": provinceId, "dataStateCode": "0", "endDate": new Date()])
+            provinceIdList.add(["provinceId": provinceId, "flagCode": "input", "dataStateCode": "0", "endDate": new Date()])
         }
 
         ["provinceIds": provinceIdList]

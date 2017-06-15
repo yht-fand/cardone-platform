@@ -16,7 +16,7 @@ class d0001 implements java.io.Serializable {
         def userOrgIdList = []
 
         for (def userOrgId : userOrgIds) {
-            userOrgIdList.add(["userOrgId": userOrgId, "dataStateCode": "0", "endDate": new Date()])
+            userOrgIdList.add(["userOrgId": userOrgId, "flagCode": "input", "dataStateCode": "0", "endDate": new Date()])
         }
 
         ["userOrgIds": userOrgIdList]

@@ -16,7 +16,7 @@ class d0001 implements java.io.Serializable {
         def userDepartmentIdList = []
 
         for (def userDepartmentId : userDepartmentIds) {
-            userDepartmentIdList.add(["userDepartmentId": userDepartmentId, "dataStateCode": "0", "endDate": new Date()])
+            userDepartmentIdList.add(["userDepartmentId": userDepartmentId, "flagCode": "input", "dataStateCode": "0", "endDate": new Date()])
         }
 
         ["userDepartmentIds": userDepartmentIdList]
