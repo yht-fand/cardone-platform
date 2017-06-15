@@ -1,4 +1,4 @@
-package api.vx.usercenter.user
+package top.cardone.api.vx.usercenter.user
 
 import org.apache.commons.lang3.StringUtils
 import top.cardone.usercenter.service.UserService

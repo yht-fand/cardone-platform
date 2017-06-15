@@ -1,14 +1,4 @@
 {
-  "input": {
-    "areaIds": {
-      "stringToListFunc": {
-        "idName": "areaId",
-        "map": {
-          "dataStateCode": "0"
-        }
-      }
-    }
-  },
   "validation": {
     "rules": {
       "areaIds": {

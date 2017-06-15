@@ -1,4 +1,4 @@
-package api.vx.usercenter.region
+package top.cardone.api.vx.usercenter.region
 
 import org.apache.commons.lang3.StringUtils
 import top.cardone.usercenter.service.RegionService

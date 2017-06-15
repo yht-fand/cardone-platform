@@ -1,4 +1,4 @@
-package api.vx.usercenter.city
+package top.cardone.api.vx.usercenter.city
 
 import org.apache.commons.lang3.StringUtils
 import top.cardone.usercenter.service.CityService
@@ -9,30 +9,32 @@ class c0002 implements java.io.Serializable {
     def input(input) {
         def newInput = [:]
 
-		newInput['batchNo'] = input['batchNo']
-		newInput['beginDate'] = input['beginDate']
-		newInput['cityCode'] = input['cityCode']
-		newInput['cityId'] = input['cityId']
-		newInput['countryCode'] = input['countryCode']
-		newInput['createdByCode'] = input['createdByCode']
-		newInput['createdDate'] = input['createdDate']
-		newInput['dataStateCode'] = input['dataStateCode']
-		newInput['departmentCode'] = input['departmentCode']
-		newInput['endDate'] = input['endDate']
-		newInput['flagCode'] = input['flagCode']
-		newInput['flagObjectCode'] = input['flagObjectCode']
-		newInput['jsonData'] = input['jsonData']
-		newInput['lastModifiedByCode'] = input['lastModifiedByCode']
-		newInput['lastModifiedDate'] = input['lastModifiedDate']
-		newInput['name'] = input['name']
-		newInput['orderBy'] = input['orderBy']
-		newInput['orgCode'] = input['orgCode']
-		newInput['personalCode'] = input['personalCode']
-		newInput['provinceCode'] = input['provinceCode']
-		newInput['siteCode'] = input['siteCode']
-		newInput['stateCode'] = input['stateCode']
-		newInput['systemInfoCode'] = input['systemInfoCode']
-		newInput['version'] = input['version']
+		newInput?.batchNo = input?.batchNo
+		newInput?.beginDate = input?.beginDate
+		newInput?.cityCode = input?.cityCode
+		newInput?.cityId = input?.cityId
+		newInput?.countryCode = input?.countryCode
+		newInput?.createdByCode = input?.createdByCode
+		newInput?.createdDate = input?.createdDate
+		newInput?.dataStateCode = input?.dataStateCode
+		newInput?.departmentCode = input?.departmentCode
+		newInput?.endDate = input?.endDate
+		newInput?.flagCode = input?.flagCode
+		newInput?.flagObjectCode = input?.flagObjectCode
+		newInput?.jsonData = input?.jsonData
+		newInput?.lastModifiedByCode = input?.lastModifiedByCode
+		newInput?.lastModifiedDate = input?.lastModifiedDate
+		newInput?.name = input?.name
+		newInput?.orderBy = input?.orderBy
+		newInput?.orgCode = input?.orgCode
+		newInput?.personalCode = input?.personalCode
+		newInput?.provinceCode = input?.provinceCode
+		newInput?.siteCode = input?.siteCode
+		newInput?.stateCode = input?.stateCode
+		newInput?.systemInfoCode = input?.systemInfoCode
+		newInput?.version = input?.version
+
+        newInput.flagCode = StringUtils.defaultIfBlank(input.flagCode, "input")
 
         newInput
     }
@@ -62,7 +64,7 @@ class c0002 implements java.io.Serializable {
 //          throw new CodeException("name maxlength", "城市名称需小于{0}个字符", 255)
 //      }
 		
-		def readOne = ['cityCode': input.cityCode]
+		def readOne = ['cityCode': input.cityCode, "dataStateCode": "1"]
 
 		def count = ApplicationContextHolder.getBean(CityService.class).readOne(Integer.class, readOne)
 
@@ -76,6 +78,6 @@ class c0002 implements java.io.Serializable {
     }
 
     def output(output) {
-		['insertCount': output]
+		['insertCount': output]        
     }
 }

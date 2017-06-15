@@ -1,4 +1,4 @@
-package api.vx.usercenter.region
+package top.cardone.api.vx.usercenter.region
 
 import org.apache.commons.lang3.time.DateFormatUtils
 import org.apache.shiro.SecurityUtils

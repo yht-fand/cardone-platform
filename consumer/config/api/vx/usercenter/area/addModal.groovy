@@ -1,4 +1,4 @@
-package api.vx.usercenter.area
+package top.cardone.api.vx.usercenter.area
 
 import org.apache.commons.lang3.StringUtils
 import top.cardone.usercenter.service.AreaService

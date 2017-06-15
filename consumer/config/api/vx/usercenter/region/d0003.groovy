@@ -1,4 +1,4 @@
-package api.vx.usercenter.region
+package top.cardone.api.vx.usercenter.region
 
 import org.apache.commons.lang3.StringUtils
 import top.cardone.usercenter.service.RegionService
@@ -26,10 +26,10 @@ class d0001 implements java.io.Serializable {
     }
 
     def func(input) {
-        ['deleteCounts': ApplicationContextHolder.getBean(RegionService.class).updateListCache(input?.regionIds)]
+        ApplicationContextHolder.getBean(RegionService.class).updateListCache(input?.regionIds)
     }
 
     def output(output) {
-        output
+        ['deleteCounts': output]
     }
 }

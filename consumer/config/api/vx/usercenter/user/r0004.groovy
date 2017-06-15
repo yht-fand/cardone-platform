@@ -1,4 +1,4 @@
-package api.vx.usercenter.user
+package top.cardone.api.vx.usercenter.user
 
 import top.cardone.configuration.service.DictionaryService
 import top.cardone.context.ApplicationContextHolder

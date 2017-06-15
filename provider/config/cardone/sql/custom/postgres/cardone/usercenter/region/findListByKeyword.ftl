@@ -1,6 +1,9 @@
-SELECT d.REGION_CODE, d.NAME FROM c1_region d
-<#if cardone.StringUtils.isNotBlank(term)>
-WHERE strpos(d.NAME, :term) > 0 OR strpos(d.REGION_CODE, :term) > 0
+SELECT t.REGION_CODE, t.NAME FROM c1_region t
+where t.state_code ='1' and t.data_state_code = '1'
+<#if cardone.StringUtils.isBlank(notTerm) >
+    <#if cardone.StringUtils.isNotBlank(term)>
+    and (strpos(t.NAME, :term) > 0 OR strpos(t.REGION_CODE, :term) > 0)
+    </#if>
 </#if>
-ORDER BY d.ORDER_BY_, d.REGION_CODE
+ORDER BY t.ORDER_, t.REGION_CODE
 LIMIT 20

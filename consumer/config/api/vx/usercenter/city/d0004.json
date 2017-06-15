@@ -1,14 +1,4 @@
 {
-  "input": {
-    "cityIds": {
-      "stringToListFunc": {
-        "idName": "cityId",
-        "map": {
-          "dataStateCode": "0"
-        }
-      }
-    }
-  },
   "validation": {
     "rules": {
       "cityIds": {

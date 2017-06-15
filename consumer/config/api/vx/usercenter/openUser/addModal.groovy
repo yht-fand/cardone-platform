@@ -1,4 +1,4 @@
-package api.vx.usercenter.openUser
+package top.cardone.api.vx.usercenter.openUser
 
 import org.apache.commons.lang3.StringUtils
 import top.cardone.usercenter.service.OpenUserService

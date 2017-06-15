@@ -1,4 +1,4 @@
-package api.vx.usercenter.area
+package top.cardone.api.vx.usercenter.area
 
 import org.apache.commons.lang3.StringUtils
 import top.cardone.usercenter.service.AreaService
@@ -26,10 +26,10 @@ class d0001 implements java.io.Serializable {
     }
 
     def func(input) {
-        ['deleteCounts': ApplicationContextHolder.getBean(AreaService.class).deleteListCache(input?.areaIds)]
+        ApplicationContextHolder.getBean(AreaService.class).updateListCache(input?.areaIds)
     }
 
     def output(output) {
-        output
+        ['deleteCounts': output]
     }
 }

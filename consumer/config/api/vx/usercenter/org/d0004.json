@@ -1,14 +1,4 @@
 {
-  "input": {
-    "orgIds": {
-      "stringToListFunc": {
-        "idName": "orgId",
-        "map": {
-          "dataStateCode": "0"
-        }
-      }
-    }
-  },
   "validation": {
     "rules": {
       "orgIds": {

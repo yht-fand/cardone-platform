@@ -1,4 +1,4 @@
-package api.vx.usercenter.city
+package top.cardone.api.vx.usercenter.city
 
 import org.apache.commons.lang3.StringUtils
 import top.cardone.usercenter.service.CityService

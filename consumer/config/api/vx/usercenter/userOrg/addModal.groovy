@@ -1,4 +1,4 @@
-package api.vx.usercenter.userOrg
+package top.cardone.api.vx.usercenter.userOrg
 
 import org.apache.commons.lang3.StringUtils
 import top.cardone.usercenter.service.UserOrgService

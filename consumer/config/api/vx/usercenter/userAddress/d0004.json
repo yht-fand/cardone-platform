@@ -1,14 +1,4 @@
 {
-  "input": {
-    "userAddressIds": {
-      "stringToListFunc": {
-        "idName": "userAddressId",
-        "map": {
-          "dataStateCode": "0"
-        }
-      }
-    }
-  },
   "validation": {
     "rules": {
       "userAddressIds": {

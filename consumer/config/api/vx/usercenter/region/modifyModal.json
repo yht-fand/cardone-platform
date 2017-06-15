@@ -1,7 +1,4 @@
 {
-  "input": {
-    "regionId": "regionId"
-  },
   "validation": {
     "rules": {
       "regionId": {
@@ -13,36 +10,5 @@
         "required": "区域标识必填"
       }
     }
-  },
-  "output": {
-    "areaCode": "area_code",
-    "batchNo": "batch_no",
-    "beginDate": "begin_date",
-    "cityCode": "city_code",
-    "countryCode": "country_code",
-    "createdByCode": "created_by_code",
-    "createdDate": "created_date",
-    "dataStateCode": "data_state_code",
-    "departmentCode": "department_code",
-    "endDate": "end_date",
-    "flagCode": "flag_code",
-    "flagObjectCode": "flag_object_code",
-    "jsonData": "json_data",
-    "lastModifiedByCode": "last_modified_by_code",
-    "lastModifiedDate": "last_modified_date",
-    "name": "name",
-    "orderBy": "order_by_",
-    "orgCode": "org_code",
-    "parentCode": "parent_code",
-    "parentTreeCode": "parent_tree_code",
-    "parentTreeName": "parent_tree_name",
-    "personalCode": "personal_code",
-    "provinceCode": "province_code",
-    "regionCode": "region_code",
-    "regionId": "region_id",
-    "siteCode": "site_code",
-    "stateCode": "state_code",
-    "systemInfoCode": "system_info_code",
-    "version": "version_"
   }
 }

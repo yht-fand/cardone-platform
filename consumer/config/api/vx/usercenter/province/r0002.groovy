@@ -1,4 +1,4 @@
-package api.vx.usercenter.province
+package top.cardone.api.vx.usercenter.province
 
 import org.apache.commons.lang3.StringUtils
 import top.cardone.usercenter.service.ProvinceService

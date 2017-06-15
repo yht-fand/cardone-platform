@@ -1,14 +1,4 @@
 {
-  "input": {
-    "departmentIds": {
-      "stringToListFunc": {
-        "idName": "departmentId",
-        "map": {
-          "dataStateCode": "0"
-        }
-      }
-    }
-  },
   "validation": {
     "rules": {
       "departmentIds": {

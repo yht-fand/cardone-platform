@@ -1,14 +1,4 @@
 {
-  "input": {
-    "openUserIds": {
-      "stringToListFunc": {
-        "idName": "openUserId",
-        "map": {
-          "dataStateCode": "0"
-        }
-      }
-    }
-  },
   "validation": {
     "rules": {
       "openUserIds": {

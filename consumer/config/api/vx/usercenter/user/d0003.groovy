@@ -1,4 +1,4 @@
-package api.vx.usercenter.user
+package top.cardone.api.vx.usercenter.user
 
 import org.apache.commons.lang3.StringUtils
 import top.cardone.usercenter.service.UserService
@@ -26,10 +26,10 @@ class d0001 implements java.io.Serializable {
     }
 
     def func(input) {
-        ['deleteCounts': ApplicationContextHolder.getBean(UserService.class).updateListCache(input?.userIds)]
+        ApplicationContextHolder.getBean(UserService.class).updateListCache(input?.userIds)
     }
 
     def output(output) {
-        output
+        ['deleteCounts': output]
     }
 }

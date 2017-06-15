@@ -1,4 +1,4 @@
-package api.vx.usercenter.department
+package top.cardone.api.vx.usercenter.department
 
 import org.apache.commons.lang3.StringUtils
 import top.cardone.usercenter.service.DepartmentService
@@ -9,35 +9,37 @@ class u0001 implements java.io.Serializable {
     def input(input) {
         def newInput = [:]
 
-		newInput['address'] = input['address']
-		newInput['areaCode'] = input['areaCode']
-		newInput['batchNo'] = input['batchNo']
-		newInput['beginDate'] = input['beginDate']
-		newInput['cityCode'] = input['cityCode']
-		newInput['createdByCode'] = input['createdByCode']
-		newInput['createdDate'] = input['createdDate']
-		newInput['dataStateCode'] = input['dataStateCode']
-		newInput['departmentCode'] = input['departmentCode']
-		newInput['departmentId'] = input['departmentId']
-		newInput['endDate'] = input['endDate']
-		newInput['flagCode'] = input['flagCode']
-		newInput['flagObjectCode'] = input['flagObjectCode']
-		newInput['jsonData'] = input['jsonData']
-		newInput['lastModifiedByCode'] = input['lastModifiedByCode']
-		newInput['lastModifiedDate'] = input['lastModifiedDate']
-		newInput['name'] = input['name']
-		newInput['orderBy'] = input['orderBy']
-		newInput['orgCode'] = input['orgCode']
-		newInput['parentCode'] = input['parentCode']
-		newInput['parentTreeCode'] = input['parentTreeCode']
-		newInput['parentTreeName'] = input['parentTreeName']
-		newInput['personalCode'] = input['personalCode']
-		newInput['provinceCode'] = input['provinceCode']
-		newInput['regionCode'] = input['regionCode']
-		newInput['siteCode'] = input['siteCode']
-		newInput['stateCode'] = input['stateCode']
-		newInput['systemInfoCode'] = input['systemInfoCode']
-		newInput['version'] = input['version']
+		newInput?.address = input?.address
+		newInput?.areaCode = input?.areaCode
+		newInput?.batchNo = input?.batchNo
+		newInput?.beginDate = input?.beginDate
+		newInput?.cityCode = input?.cityCode
+		newInput?.createdByCode = input?.createdByCode
+		newInput?.createdDate = input?.createdDate
+		newInput?.dataStateCode = input?.dataStateCode
+		newInput?.departmentCode = input?.departmentCode
+		newInput?.departmentId = input?.departmentId
+		newInput?.endDate = input?.endDate
+		newInput?.flagCode = input?.flagCode
+		newInput?.flagObjectCode = input?.flagObjectCode
+		newInput?.jsonData = input?.jsonData
+		newInput?.lastModifiedByCode = input?.lastModifiedByCode
+		newInput?.lastModifiedDate = input?.lastModifiedDate
+		newInput?.name = input?.name
+		newInput?.orderBy = input?.orderBy
+		newInput?.orgCode = input?.orgCode
+		newInput?.parentCode = input?.parentCode
+		newInput?.parentTreeCode = input?.parentTreeCode
+		newInput?.parentTreeName = input?.parentTreeName
+		newInput?.personalCode = input?.personalCode
+		newInput?.provinceCode = input?.provinceCode
+		newInput?.regionCode = input?.regionCode
+		newInput?.siteCode = input?.siteCode
+		newInput?.stateCode = input?.stateCode
+		newInput?.systemInfoCode = input?.systemInfoCode
+		newInput?.version = input?.version
+
+        newInput.flagCode = StringUtils.defaultIfBlank(input.flagCode, "input")
 
         newInput
     }
@@ -59,7 +61,7 @@ class u0001 implements java.io.Serializable {
 //          throw new CodeException("name maxlength", "部门名称需小于{0}个字符", 255)
 //      }
 
-		def readOne = ["departmentCode": input.departmentCode, "object_id": "departmentId"]
+		def readOne = ["departmentCode": input.departmentCode, "object_id": "departmentId", "dataStateCode": "1"]
 
 		String dbDepartmentId = ApplicationContextHolder.getBean(DepartmentService.class).readOne(String.class, readOne)
 
@@ -73,6 +75,6 @@ class u0001 implements java.io.Serializable {
     }
 
     def output(output) {
-		['updateCount': output]
+		['updateCount': output]        
     }
 }

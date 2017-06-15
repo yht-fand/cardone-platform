@@ -1,4 +1,4 @@
-package api.vx.usercenter.org
+package top.cardone.api.vx.usercenter.org
 
 import org.apache.commons.lang3.StringUtils
 import top.cardone.usercenter.service.OrgService
@@ -9,35 +9,37 @@ class c0001 implements java.io.Serializable {
     def input(input) {
         def newInput = [:]
 
-		newInput['address'] = input['address']
-		newInput['areaCode'] = input['areaCode']
-		newInput['batchNo'] = input['batchNo']
-		newInput['beginDate'] = input['beginDate']
-		newInput['cityCode'] = input['cityCode']
-		newInput['createdByCode'] = input['createdByCode']
-		newInput['createdDate'] = input['createdDate']
-		newInput['dataStateCode'] = input['dataStateCode']
-		newInput['departmentCode'] = input['departmentCode']
-		newInput['endDate'] = input['endDate']
-		newInput['flagCode'] = input['flagCode']
-		newInput['flagObjectCode'] = input['flagObjectCode']
-		newInput['jsonData'] = input['jsonData']
-		newInput['lastModifiedByCode'] = input['lastModifiedByCode']
-		newInput['lastModifiedDate'] = input['lastModifiedDate']
-		newInput['name'] = input['name']
-		newInput['orderBy'] = input['orderBy']
-		newInput['orgCode'] = input['orgCode']
-		newInput['orgId'] = input['orgId']
-		newInput['parentCode'] = input['parentCode']
-		newInput['parentTreeCode'] = input['parentTreeCode']
-		newInput['parentTreeName'] = input['parentTreeName']
-		newInput['personalCode'] = input['personalCode']
-		newInput['provinceCode'] = input['provinceCode']
-		newInput['regionCode'] = input['regionCode']
-		newInput['siteCode'] = input['siteCode']
-		newInput['stateCode'] = input['stateCode']
-		newInput['systemInfoCode'] = input['systemInfoCode']
-		newInput['version'] = input['version']
+		newInput?.address = input?.address
+		newInput?.areaCode = input?.areaCode
+		newInput?.batchNo = input?.batchNo
+		newInput?.beginDate = input?.beginDate
+		newInput?.cityCode = input?.cityCode
+		newInput?.createdByCode = input?.createdByCode
+		newInput?.createdDate = input?.createdDate
+		newInput?.dataStateCode = input?.dataStateCode
+		newInput?.departmentCode = input?.departmentCode
+		newInput?.endDate = input?.endDate
+		newInput?.flagCode = input?.flagCode
+		newInput?.flagObjectCode = input?.flagObjectCode
+		newInput?.jsonData = input?.jsonData
+		newInput?.lastModifiedByCode = input?.lastModifiedByCode
+		newInput?.lastModifiedDate = input?.lastModifiedDate
+		newInput?.name = input?.name
+		newInput?.orderBy = input?.orderBy
+		newInput?.orgCode = input?.orgCode
+		newInput?.orgId = input?.orgId
+		newInput?.parentCode = input?.parentCode
+		newInput?.parentTreeCode = input?.parentTreeCode
+		newInput?.parentTreeName = input?.parentTreeName
+		newInput?.personalCode = input?.personalCode
+		newInput?.provinceCode = input?.provinceCode
+		newInput?.regionCode = input?.regionCode
+		newInput?.siteCode = input?.siteCode
+		newInput?.stateCode = input?.stateCode
+		newInput?.systemInfoCode = input?.systemInfoCode
+		newInput?.version = input?.version
+
+        newInput.flagCode = StringUtils.defaultIfBlank(input.flagCode, "input")
 
         newInput
     }
@@ -67,7 +69,7 @@ class c0001 implements java.io.Serializable {
 //          throw new CodeException("name maxlength", "组织名称需小于{0}个字符", 255)
 //      }
 		
-		def readOne = ['orgCode': input.orgCode]
+		def readOne = ['orgCode': input.orgCode, "dataStateCode": "1"]
 
 		def count = ApplicationContextHolder.getBean(OrgService.class).readOne(Integer.class, readOne)
 
@@ -81,6 +83,6 @@ class c0001 implements java.io.Serializable {
     }
 
     def output(output) {
-		['insertCount': output]
+		['insertCount': output]        
     }
 }

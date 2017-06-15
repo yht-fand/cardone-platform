@@ -1,6 +1,9 @@
-SELECT d.USER_CODE, d.NAME, d.first_name, d.last_name FROM c1_user d
-<#if cardone.StringUtils.isNotBlank(term)>
-WHERE strpos(d.NAME, :term) > 0 OR strpos(d.first_name, :term) > 0 OR strpos(d.last_name, :term) > 0 OR strpos(d.USER_CODE, :term) > 0
+SELECT t.USER_CODE, t.NAME, t.first_name, t.last_name FROM c1_user t
+where t.state_code ='1' and t.data_state_code = '1'
+<#if cardone.StringUtils.isBlank(notTerm) >
+    <#if cardone.StringUtils.isNotBlank(term)>
+    and (strpos(t.NAME, :term) > 0 OR strpos(t.first_name, :term) > 0 OR strpos(t.last_name, :term) > 0 OR strpos(t.USER_CODE, :term) > 0)
+    </#if>
 </#if>
-ORDER BY d.ORDER_BY_, d.DEPARTMENT_CODE, d.USER_CODE, d.CREATED_DATE
+ORDER BY t.ORDER_BY_, t.DEPARTMENT_CODE, t.USER_CODE, t.CREATED_DATE
 LIMIT 20

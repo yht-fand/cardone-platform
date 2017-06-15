@@ -1,14 +1,4 @@
 {
-  "input": {
-    "regionIds": {
-      "stringToListFunc": {
-        "idName": "regionId",
-        "map": {
-          "dataStateCode": "0"
-        }
-      }
-    }
-  },
   "validation": {
     "rules": {
       "regionIds": {

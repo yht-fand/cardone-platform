@@ -1,4 +1,4 @@
-package api.vx.usercenter.province
+package top.cardone.api.vx.usercenter.province
 
 import org.apache.commons.lang3.StringUtils
 import top.cardone.usercenter.service.ProvinceService
@@ -26,10 +26,10 @@ class d0001 implements java.io.Serializable {
     }
 
     def func(input) {
-        ['deleteCounts': ApplicationContextHolder.getBean(ProvinceService.class).updateListCache(input?.provinceIds)]
+        ApplicationContextHolder.getBean(ProvinceService.class).updateListCache(input?.provinceIds)
     }
 
     def output(output) {
-        output
+        ['deleteCounts': output]
     }
 }

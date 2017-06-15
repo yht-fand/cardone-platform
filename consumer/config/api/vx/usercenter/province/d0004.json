@@ -1,14 +1,4 @@
 {
-  "input": {
-    "provinceIds": {
-      "stringToListFunc": {
-        "idName": "provinceId",
-        "map": {
-          "dataStateCode": "0"
-        }
-      }
-    }
-  },
   "validation": {
     "rules": {
       "provinceIds": {
