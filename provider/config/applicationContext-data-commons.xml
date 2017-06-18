@@ -14,4 +14,11 @@
     <bean id="readPrincipalFunc" class="top.cardone.security.shiro.func.ReadPrincipalFunc"/>
 
     <bean id="readOneDateFunc" class="top.cardone.data.func.ReadOneDateFunc"/>
+
+    <bean name="endDateDefaultValueFunc" class="top.cardone.context.func.DefaultValueFunc">
+        <property name="defaultValue" value="9999-01-01"/>
+        <property name="converter">
+            <bean class="top.cardone.context.func.StringToDateFunc"/>
+        </property>
+    </bean>
 </beans>
