@@ -1,455 +1,455 @@
 INSERT
 INTO c1_user
-(<#assign prefixName = ' '>
+(<#assign prefixName = true>
 <#if (insert_address??) && (insert_address_value??)>
-${prefixName} "address"
-<#assign prefixName = ','>
+${prefixName?string('  ', ', ')}"address"
+<#assign prefixName = false>
 </#if>
 <#if (insert_age??) && (insert_age_value??)>
-${prefixName} "age"
-<#assign prefixName = ','>
+${prefixName?string('  ', ', ')}"age"
+<#assign prefixName = false>
 </#if>
 <#if (insert_aliasName??) && (insert_aliasName_value??)>
-${prefixName} "alias_name"
-<#assign prefixName = ','>
+${prefixName?string('  ', ', ')}"alias_name"
+<#assign prefixName = false>
 </#if>
 <#if (insert_areaCode??) && (insert_areaCode_value??)>
-${prefixName} "area_code"
-<#assign prefixName = ','>
+${prefixName?string('  ', ', ')}"area_code"
+<#assign prefixName = false>
 </#if>
 <#if (insert_batchNo??) && (insert_batchNo_value??)>
-${prefixName} "batch_no"
-<#assign prefixName = ','>
+${prefixName?string('  ', ', ')}"batch_no"
+<#assign prefixName = false>
 </#if>
 <#if (insert_beginDate??) && (insert_beginDate_value??)>
-${prefixName} "begin_date"
-<#assign prefixName = ','>
+${prefixName?string('  ', ', ')}"begin_date"
+<#assign prefixName = false>
 </#if>
 <#if (insert_birthday??) && (insert_birthday_value??)>
-${prefixName} "birthday"
-<#assign prefixName = ','>
+${prefixName?string('  ', ', ')}"birthday"
+<#assign prefixName = false>
 </#if>
 <#if (insert_callName??) && (insert_callName_value??)>
-${prefixName} "call_name"
-<#assign prefixName = ','>
+${prefixName?string('  ', ', ')}"call_name"
+<#assign prefixName = false>
 </#if>
 <#if (insert_cityCode??) && (insert_cityCode_value??)>
-${prefixName} "city_code"
-<#assign prefixName = ','>
+${prefixName?string('  ', ', ')}"city_code"
+<#assign prefixName = false>
 </#if>
 <#if (insert_companyName??) && (insert_companyName_value??)>
-${prefixName} "company_name"
-<#assign prefixName = ','>
+${prefixName?string('  ', ', ')}"company_name"
+<#assign prefixName = false>
 </#if>
 <#if (insert_contact??) && (insert_contact_value??)>
-${prefixName} "contact"
-<#assign prefixName = ','>
+${prefixName?string('  ', ', ')}"contact"
+<#assign prefixName = false>
 </#if>
 <#if (insert_countryCode??) && (insert_countryCode_value??)>
-${prefixName} "country_code"
-<#assign prefixName = ','>
+${prefixName?string('  ', ', ')}"country_code"
+<#assign prefixName = false>
 </#if>
 <#if (insert_createdByCode??) && (insert_createdByCode_value??)>
-${prefixName} "created_by_code"
-<#assign prefixName = ','>
+${prefixName?string('  ', ', ')}"created_by_code"
+<#assign prefixName = false>
 </#if>
 <#if (insert_createdDate??) && (insert_createdDate_value??)>
-${prefixName} "created_date"
-<#assign prefixName = ','>
+${prefixName?string('  ', ', ')}"created_date"
+<#assign prefixName = false>
 </#if>
 <#if (insert_dataStateCode??) && (insert_dataStateCode_value??)>
-${prefixName} "data_state_code"
-<#assign prefixName = ','>
+${prefixName?string('  ', ', ')}"data_state_code"
+<#assign prefixName = false>
 </#if>
 <#if (insert_departmentCode??) && (insert_departmentCode_value??)>
-${prefixName} "department_code"
-<#assign prefixName = ','>
+${prefixName?string('  ', ', ')}"department_code"
+<#assign prefixName = false>
 </#if>
 <#if (insert_diplomaCode??) && (insert_diplomaCode_value??)>
-${prefixName} "diploma_code"
-<#assign prefixName = ','>
+${prefixName?string('  ', ', ')}"diploma_code"
+<#assign prefixName = false>
 </#if>
 <#if (insert_email??) && (insert_email_value??)>
-${prefixName} "email"
-<#assign prefixName = ','>
+${prefixName?string('  ', ', ')}"email"
+<#assign prefixName = false>
 </#if>
 <#if (insert_endDate??) && (insert_endDate_value??)>
-${prefixName} "end_date"
-<#assign prefixName = ','>
+${prefixName?string('  ', ', ')}"end_date"
+<#assign prefixName = false>
 </#if>
 <#if (insert_firstName??) && (insert_firstName_value??)>
-${prefixName} "first_name"
-<#assign prefixName = ','>
+${prefixName?string('  ', ', ')}"first_name"
+<#assign prefixName = false>
 </#if>
 <#if (insert_flagCode??) && (insert_flagCode_value??)>
-${prefixName} "flag_code"
-<#assign prefixName = ','>
+${prefixName?string('  ', ', ')}"flag_code"
+<#assign prefixName = false>
 </#if>
 <#if (insert_flagObjectCode??) && (insert_flagObjectCode_value??)>
-${prefixName} "flag_object_code"
-<#assign prefixName = ','>
+${prefixName?string('  ', ', ')}"flag_object_code"
+<#assign prefixName = false>
 </#if>
 <#if (insert_folkCode??) && (insert_folkCode_value??)>
-${prefixName} "folk_code"
-<#assign prefixName = ','>
+${prefixName?string('  ', ', ')}"folk_code"
+<#assign prefixName = false>
 </#if>
 <#if (insert_idCardCode??) && (insert_idCardCode_value??)>
-${prefixName} "id_card_code"
-<#assign prefixName = ','>
+${prefixName?string('  ', ', ')}"id_card_code"
+<#assign prefixName = false>
 </#if>
 <#if (insert_idCardNo??) && (insert_idCardNo_value??)>
-${prefixName} "id_card_no"
-<#assign prefixName = ','>
+${prefixName?string('  ', ', ')}"id_card_no"
+<#assign prefixName = false>
 </#if>
 <#if (insert_intro??) && (insert_intro_value??)>
-${prefixName} "intro"
-<#assign prefixName = ','>
+${prefixName?string('  ', ', ')}"intro"
+<#assign prefixName = false>
 </#if>
 <#if (insert_jsonData??) && (insert_jsonData_value??)>
-${prefixName} "json_data"
-<#assign prefixName = ','>
+${prefixName?string('  ', ', ')}"json_data"
+<#assign prefixName = false>
 </#if>
 <#if (insert_lastModifiedByCode??) && (insert_lastModifiedByCode_value??)>
-${prefixName} "last_modified_by_code"
-<#assign prefixName = ','>
+${prefixName?string('  ', ', ')}"last_modified_by_code"
+<#assign prefixName = false>
 </#if>
 <#if (insert_lastModifiedDate??) && (insert_lastModifiedDate_value??)>
-${prefixName} "last_modified_date"
-<#assign prefixName = ','>
+${prefixName?string('  ', ', ')}"last_modified_date"
+<#assign prefixName = false>
 </#if>
 <#if (insert_lastName??) && (insert_lastName_value??)>
-${prefixName} "last_name"
-<#assign prefixName = ','>
+${prefixName?string('  ', ', ')}"last_name"
+<#assign prefixName = false>
 </#if>
 <#if (insert_locus??) && (insert_locus_value??)>
-${prefixName} "locus"
-<#assign prefixName = ','>
+${prefixName?string('  ', ', ')}"locus"
+<#assign prefixName = false>
 </#if>
 <#if (insert_marryStateCode??) && (insert_marryStateCode_value??)>
-${prefixName} "marry_state_code"
-<#assign prefixName = ','>
+${prefixName?string('  ', ', ')}"marry_state_code"
+<#assign prefixName = false>
 </#if>
 <#if (insert_mobilePhone??) && (insert_mobilePhone_value??)>
-${prefixName} "mobile_phone"
-<#assign prefixName = ','>
+${prefixName?string('  ', ', ')}"mobile_phone"
+<#assign prefixName = false>
 </#if>
 <#if (insert_name??) && (insert_name_value??)>
-${prefixName} "name"
-<#assign prefixName = ','>
+${prefixName?string('  ', ', ')}"name"
+<#assign prefixName = false>
 </#if>
 <#if (insert_namePinyin??) && (insert_namePinyin_value??)>
-${prefixName} "name_pinyin"
-<#assign prefixName = ','>
+${prefixName?string('  ', ', ')}"name_pinyin"
+<#assign prefixName = false>
 </#if>
 <#if (insert_orderBy??) && (insert_orderBy_value??)>
-${prefixName} "order_by_"
-<#assign prefixName = ','>
+${prefixName?string('  ', ', ')}"order_by_"
+<#assign prefixName = false>
 </#if>
 <#if (insert_orgCode??) && (insert_orgCode_value??)>
-${prefixName} "org_code"
-<#assign prefixName = ','>
+${prefixName?string('  ', ', ')}"org_code"
+<#assign prefixName = false>
 </#if>
 <#if (insert_password??) && (insert_password_value??)>
-${prefixName} "password_"
-<#assign prefixName = ','>
+${prefixName?string('  ', ', ')}"password_"
+<#assign prefixName = false>
 </#if>
 <#if (insert_passwordSalt??) && (insert_passwordSalt_value??)>
-${prefixName} "password_salt"
-<#assign prefixName = ','>
+${prefixName?string('  ', ', ')}"password_salt"
+<#assign prefixName = false>
 </#if>
 <#if (insert_personalCode??) && (insert_personalCode_value??)>
-${prefixName} "personal_code"
-<#assign prefixName = ','>
+${prefixName?string('  ', ', ')}"personal_code"
+<#assign prefixName = false>
 </#if>
 <#if (insert_portraitUrl??) && (insert_portraitUrl_value??)>
-${prefixName} "portrait_url"
-<#assign prefixName = ','>
+${prefixName?string('  ', ', ')}"portrait_url"
+<#assign prefixName = false>
 </#if>
 <#if (insert_privatePassword??) && (insert_privatePassword_value??)>
-${prefixName} "private_password"
-<#assign prefixName = ','>
+${prefixName?string('  ', ', ')}"private_password"
+<#assign prefixName = false>
 </#if>
 <#if (insert_privatePasswordSalt??) && (insert_privatePasswordSalt_value??)>
-${prefixName} "private_password_salt"
-<#assign prefixName = ','>
+${prefixName?string('  ', ', ')}"private_password_salt"
+<#assign prefixName = false>
 </#if>
 <#if (insert_professionCode??) && (insert_professionCode_value??)>
-${prefixName} "profession_code"
-<#assign prefixName = ','>
+${prefixName?string('  ', ', ')}"profession_code"
+<#assign prefixName = false>
 </#if>
 <#if (insert_provinceCode??) && (insert_provinceCode_value??)>
-${prefixName} "province_code"
-<#assign prefixName = ','>
+${prefixName?string('  ', ', ')}"province_code"
+<#assign prefixName = false>
 </#if>
 <#if (insert_qq??) && (insert_qq_value??)>
-${prefixName} "qq"
-<#assign prefixName = ','>
+${prefixName?string('  ', ', ')}"qq"
+<#assign prefixName = false>
 </#if>
 <#if (insert_regionCode??) && (insert_regionCode_value??)>
-${prefixName} "region_code"
-<#assign prefixName = ','>
+${prefixName?string('  ', ', ')}"region_code"
+<#assign prefixName = false>
 </#if>
 <#if (insert_remark??) && (insert_remark_value??)>
-${prefixName} "remark"
-<#assign prefixName = ','>
+${prefixName?string('  ', ', ')}"remark"
+<#assign prefixName = false>
 </#if>
 <#if (insert_sexCode??) && (insert_sexCode_value??)>
-${prefixName} "sex_code"
-<#assign prefixName = ','>
+${prefixName?string('  ', ', ')}"sex_code"
+<#assign prefixName = false>
 </#if>
 <#if (insert_siteCode??) && (insert_siteCode_value??)>
-${prefixName} "site_code"
-<#assign prefixName = ','>
+${prefixName?string('  ', ', ')}"site_code"
+<#assign prefixName = false>
 </#if>
 <#if (insert_stateCode??) && (insert_stateCode_value??)>
-${prefixName} "state_code"
-<#assign prefixName = ','>
+${prefixName?string('  ', ', ')}"state_code"
+<#assign prefixName = false>
 </#if>
 <#if (insert_systemInfoCode??) && (insert_systemInfoCode_value??)>
-${prefixName} "system_info_code"
-<#assign prefixName = ','>
+${prefixName?string('  ', ', ')}"system_info_code"
+<#assign prefixName = false>
 </#if>
 <#if (insert_telephone??) && (insert_telephone_value??)>
-${prefixName} "telephone"
-<#assign prefixName = ','>
+${prefixName?string('  ', ', ')}"telephone"
+<#assign prefixName = false>
 </#if>
 <#if (insert_userCode??) && (insert_userCode_value??)>
-${prefixName} "user_code"
-<#assign prefixName = ','>
+${prefixName?string('  ', ', ')}"user_code"
+<#assign prefixName = false>
 </#if>
 <#if (insert_userId??) && (insert_userId_value??)>
-${prefixName} "user_id"
-<#assign prefixName = ','>
+${prefixName?string('  ', ', ')}"user_id"
+<#assign prefixName = false>
 </#if>
 <#if (insert_version??) && (insert_version_value??)>
-${prefixName} "version_"
-<#assign prefixName = ','>
+${prefixName?string('  ', ', ')}"version_"
+<#assign prefixName = false>
 </#if>
 )
 VALUES
-(<#assign prefixName = ' '>
+(<#assign prefixName = true>
 <#if (insert_address??) && (insert_address_value??)>
-${prefixName} :insert_address_value
-<#assign prefixName = ','>
+${prefixName?string('  ', ', ')}:insert_address_value
+<#assign prefixName = false>
 </#if>
 <#if (insert_age??) && (insert_age_value??)>
-${prefixName} :insert_age_value
-<#assign prefixName = ','>
+${prefixName?string('  ', ', ')}:insert_age_value
+<#assign prefixName = false>
 </#if>
 <#if (insert_aliasName??) && (insert_aliasName_value??)>
-${prefixName} :insert_aliasName_value
-<#assign prefixName = ','>
+${prefixName?string('  ', ', ')}:insert_aliasName_value
+<#assign prefixName = false>
 </#if>
 <#if (insert_areaCode??) && (insert_areaCode_value??)>
-${prefixName} :insert_areaCode_value
-<#assign prefixName = ','>
+${prefixName?string('  ', ', ')}:insert_areaCode_value
+<#assign prefixName = false>
 </#if>
 <#if (insert_batchNo??) && (insert_batchNo_value??)>
-${prefixName} :insert_batchNo_value
-<#assign prefixName = ','>
+${prefixName?string('  ', ', ')}:insert_batchNo_value
+<#assign prefixName = false>
 </#if>
 <#if (insert_beginDate??) && (insert_beginDate_value??)>
-${prefixName} :insert_beginDate_value
-<#assign prefixName = ','>
+${prefixName?string('  ', ', ')}:insert_beginDate_value
+<#assign prefixName = false>
 </#if>
 <#if (insert_birthday??) && (insert_birthday_value??)>
-${prefixName} :insert_birthday_value
-<#assign prefixName = ','>
+${prefixName?string('  ', ', ')}:insert_birthday_value
+<#assign prefixName = false>
 </#if>
 <#if (insert_callName??) && (insert_callName_value??)>
-${prefixName} :insert_callName_value
-<#assign prefixName = ','>
+${prefixName?string('  ', ', ')}:insert_callName_value
+<#assign prefixName = false>
 </#if>
 <#if (insert_cityCode??) && (insert_cityCode_value??)>
-${prefixName} :insert_cityCode_value
-<#assign prefixName = ','>
+${prefixName?string('  ', ', ')}:insert_cityCode_value
+<#assign prefixName = false>
 </#if>
 <#if (insert_companyName??) && (insert_companyName_value??)>
-${prefixName} :insert_companyName_value
-<#assign prefixName = ','>
+${prefixName?string('  ', ', ')}:insert_companyName_value
+<#assign prefixName = false>
 </#if>
 <#if (insert_contact??) && (insert_contact_value??)>
-${prefixName} :insert_contact_value
-<#assign prefixName = ','>
+${prefixName?string('  ', ', ')}:insert_contact_value
+<#assign prefixName = false>
 </#if>
 <#if (insert_countryCode??) && (insert_countryCode_value??)>
-${prefixName} :insert_countryCode_value
-<#assign prefixName = ','>
+${prefixName?string('  ', ', ')}:insert_countryCode_value
+<#assign prefixName = false>
 </#if>
 <#if (insert_createdByCode??) && (insert_createdByCode_value??)>
-${prefixName} :insert_createdByCode_value
-<#assign prefixName = ','>
+${prefixName?string('  ', ', ')}:insert_createdByCode_value
+<#assign prefixName = false>
 </#if>
 <#if (insert_createdDate??) && (insert_createdDate_value??)>
-${prefixName} :insert_createdDate_value
-<#assign prefixName = ','>
+${prefixName?string('  ', ', ')}:insert_createdDate_value
+<#assign prefixName = false>
 </#if>
 <#if (insert_dataStateCode??) && (insert_dataStateCode_value??)>
-${prefixName} :insert_dataStateCode_value
-<#assign prefixName = ','>
+${prefixName?string('  ', ', ')}:insert_dataStateCode_value
+<#assign prefixName = false>
 </#if>
 <#if (insert_departmentCode??) && (insert_departmentCode_value??)>
-${prefixName} :insert_departmentCode_value
-<#assign prefixName = ','>
+${prefixName?string('  ', ', ')}:insert_departmentCode_value
+<#assign prefixName = false>
 </#if>
 <#if (insert_diplomaCode??) && (insert_diplomaCode_value??)>
-${prefixName} :insert_diplomaCode_value
-<#assign prefixName = ','>
+${prefixName?string('  ', ', ')}:insert_diplomaCode_value
+<#assign prefixName = false>
 </#if>
 <#if (insert_email??) && (insert_email_value??)>
-${prefixName} :insert_email_value
-<#assign prefixName = ','>
+${prefixName?string('  ', ', ')}:insert_email_value
+<#assign prefixName = false>
 </#if>
 <#if (insert_endDate??) && (insert_endDate_value??)>
-${prefixName} :insert_endDate_value
-<#assign prefixName = ','>
+${prefixName?string('  ', ', ')}:insert_endDate_value
+<#assign prefixName = false>
 </#if>
 <#if (insert_firstName??) && (insert_firstName_value??)>
-${prefixName} :insert_firstName_value
-<#assign prefixName = ','>
+${prefixName?string('  ', ', ')}:insert_firstName_value
+<#assign prefixName = false>
 </#if>
 <#if (insert_flagCode??) && (insert_flagCode_value??)>
-${prefixName} :insert_flagCode_value
-<#assign prefixName = ','>
+${prefixName?string('  ', ', ')}:insert_flagCode_value
+<#assign prefixName = false>
 </#if>
 <#if (insert_flagObjectCode??) && (insert_flagObjectCode_value??)>
-${prefixName} :insert_flagObjectCode_value
-<#assign prefixName = ','>
+${prefixName?string('  ', ', ')}:insert_flagObjectCode_value
+<#assign prefixName = false>
 </#if>
 <#if (insert_folkCode??) && (insert_folkCode_value??)>
-${prefixName} :insert_folkCode_value
-<#assign prefixName = ','>
+${prefixName?string('  ', ', ')}:insert_folkCode_value
+<#assign prefixName = false>
 </#if>
 <#if (insert_idCardCode??) && (insert_idCardCode_value??)>
-${prefixName} :insert_idCardCode_value
-<#assign prefixName = ','>
+${prefixName?string('  ', ', ')}:insert_idCardCode_value
+<#assign prefixName = false>
 </#if>
 <#if (insert_idCardNo??) && (insert_idCardNo_value??)>
-${prefixName} :insert_idCardNo_value
-<#assign prefixName = ','>
+${prefixName?string('  ', ', ')}:insert_idCardNo_value
+<#assign prefixName = false>
 </#if>
 <#if (insert_intro??) && (insert_intro_value??)>
-${prefixName} :insert_intro_value
-<#assign prefixName = ','>
+${prefixName?string('  ', ', ')}:insert_intro_value
+<#assign prefixName = false>
 </#if>
 <#if (insert_jsonData??) && (insert_jsonData_value??)>
-${prefixName} :insert_jsonData_value
-<#assign prefixName = ','>
+${prefixName?string('  ', ', ')}:insert_jsonData_value
+<#assign prefixName = false>
 </#if>
 <#if (insert_lastModifiedByCode??) && (insert_lastModifiedByCode_value??)>
-${prefixName} :insert_lastModifiedByCode_value
-<#assign prefixName = ','>
+${prefixName?string('  ', ', ')}:insert_lastModifiedByCode_value
+<#assign prefixName = false>
 </#if>
 <#if (insert_lastModifiedDate??) && (insert_lastModifiedDate_value??)>
-${prefixName} :insert_lastModifiedDate_value
-<#assign prefixName = ','>
+${prefixName?string('  ', ', ')}:insert_lastModifiedDate_value
+<#assign prefixName = false>
 </#if>
 <#if (insert_lastName??) && (insert_lastName_value??)>
-${prefixName} :insert_lastName_value
-<#assign prefixName = ','>
+${prefixName?string('  ', ', ')}:insert_lastName_value
+<#assign prefixName = false>
 </#if>
 <#if (insert_locus??) && (insert_locus_value??)>
-${prefixName} :insert_locus_value
-<#assign prefixName = ','>
+${prefixName?string('  ', ', ')}:insert_locus_value
+<#assign prefixName = false>
 </#if>
 <#if (insert_marryStateCode??) && (insert_marryStateCode_value??)>
-${prefixName} :insert_marryStateCode_value
-<#assign prefixName = ','>
+${prefixName?string('  ', ', ')}:insert_marryStateCode_value
+<#assign prefixName = false>
 </#if>
 <#if (insert_mobilePhone??) && (insert_mobilePhone_value??)>
-${prefixName} :insert_mobilePhone_value
-<#assign prefixName = ','>
+${prefixName?string('  ', ', ')}:insert_mobilePhone_value
+<#assign prefixName = false>
 </#if>
 <#if (insert_name??) && (insert_name_value??)>
-${prefixName} :insert_name_value
-<#assign prefixName = ','>
+${prefixName?string('  ', ', ')}:insert_name_value
+<#assign prefixName = false>
 </#if>
 <#if (insert_namePinyin??) && (insert_namePinyin_value??)>
-${prefixName} :insert_namePinyin_value
-<#assign prefixName = ','>
+${prefixName?string('  ', ', ')}:insert_namePinyin_value
+<#assign prefixName = false>
 </#if>
 <#if (insert_orderBy??) && (insert_orderBy_value??)>
-${prefixName} :insert_orderBy_value
-<#assign prefixName = ','>
+${prefixName?string('  ', ', ')}:insert_orderBy_value
+<#assign prefixName = false>
 </#if>
 <#if (insert_orgCode??) && (insert_orgCode_value??)>
-${prefixName} :insert_orgCode_value
-<#assign prefixName = ','>
+${prefixName?string('  ', ', ')}:insert_orgCode_value
+<#assign prefixName = false>
 </#if>
 <#if (insert_password??) && (insert_password_value??)>
-${prefixName} :insert_password_value
-<#assign prefixName = ','>
+${prefixName?string('  ', ', ')}:insert_password_value
+<#assign prefixName = false>
 </#if>
 <#if (insert_passwordSalt??) && (insert_passwordSalt_value??)>
-${prefixName} :insert_passwordSalt_value
-<#assign prefixName = ','>
+${prefixName?string('  ', ', ')}:insert_passwordSalt_value
+<#assign prefixName = false>
 </#if>
 <#if (insert_personalCode??) && (insert_personalCode_value??)>
-${prefixName} :insert_personalCode_value
-<#assign prefixName = ','>
+${prefixName?string('  ', ', ')}:insert_personalCode_value
+<#assign prefixName = false>
 </#if>
 <#if (insert_portraitUrl??) && (insert_portraitUrl_value??)>
-${prefixName} :insert_portraitUrl_value
-<#assign prefixName = ','>
+${prefixName?string('  ', ', ')}:insert_portraitUrl_value
+<#assign prefixName = false>
 </#if>
 <#if (insert_privatePassword??) && (insert_privatePassword_value??)>
-${prefixName} :insert_privatePassword_value
-<#assign prefixName = ','>
+${prefixName?string('  ', ', ')}:insert_privatePassword_value
+<#assign prefixName = false>
 </#if>
 <#if (insert_privatePasswordSalt??) && (insert_privatePasswordSalt_value??)>
-${prefixName} :insert_privatePasswordSalt_value
-<#assign prefixName = ','>
+${prefixName?string('  ', ', ')}:insert_privatePasswordSalt_value
+<#assign prefixName = false>
 </#if>
 <#if (insert_professionCode??) && (insert_professionCode_value??)>
-${prefixName} :insert_professionCode_value
-<#assign prefixName = ','>
+${prefixName?string('  ', ', ')}:insert_professionCode_value
+<#assign prefixName = false>
 </#if>
 <#if (insert_provinceCode??) && (insert_provinceCode_value??)>
-${prefixName} :insert_provinceCode_value
-<#assign prefixName = ','>
+${prefixName?string('  ', ', ')}:insert_provinceCode_value
+<#assign prefixName = false>
 </#if>
 <#if (insert_qq??) && (insert_qq_value??)>
-${prefixName} :insert_qq_value
-<#assign prefixName = ','>
+${prefixName?string('  ', ', ')}:insert_qq_value
+<#assign prefixName = false>
 </#if>
 <#if (insert_regionCode??) && (insert_regionCode_value??)>
-${prefixName} :insert_regionCode_value
-<#assign prefixName = ','>
+${prefixName?string('  ', ', ')}:insert_regionCode_value
+<#assign prefixName = false>
 </#if>
 <#if (insert_remark??) && (insert_remark_value??)>
-${prefixName} :insert_remark_value
-<#assign prefixName = ','>
+${prefixName?string('  ', ', ')}:insert_remark_value
+<#assign prefixName = false>
 </#if>
 <#if (insert_sexCode??) && (insert_sexCode_value??)>
-${prefixName} :insert_sexCode_value
-<#assign prefixName = ','>
+${prefixName?string('  ', ', ')}:insert_sexCode_value
+<#assign prefixName = false>
 </#if>
 <#if (insert_siteCode??) && (insert_siteCode_value??)>
-${prefixName} :insert_siteCode_value
-<#assign prefixName = ','>
+${prefixName?string('  ', ', ')}:insert_siteCode_value
+<#assign prefixName = false>
 </#if>
 <#if (insert_stateCode??) && (insert_stateCode_value??)>
-${prefixName} :insert_stateCode_value
-<#assign prefixName = ','>
+${prefixName?string('  ', ', ')}:insert_stateCode_value
+<#assign prefixName = false>
 </#if>
 <#if (insert_systemInfoCode??) && (insert_systemInfoCode_value??)>
-${prefixName} :insert_systemInfoCode_value
-<#assign prefixName = ','>
+${prefixName?string('  ', ', ')}:insert_systemInfoCode_value
+<#assign prefixName = false>
 </#if>
 <#if (insert_telephone??) && (insert_telephone_value??)>
-${prefixName} :insert_telephone_value
-<#assign prefixName = ','>
+${prefixName?string('  ', ', ')}:insert_telephone_value
+<#assign prefixName = false>
 </#if>
 <#if (insert_userCode??) && (insert_userCode_value??)>
-${prefixName} :insert_userCode_value
-<#assign prefixName = ','>
+${prefixName?string('  ', ', ')}:insert_userCode_value
+<#assign prefixName = false>
 </#if>
 <#if (insert_userId??) && (insert_userId_value??)>
-${prefixName} :insert_userId_value
-<#assign prefixName = ','>
+${prefixName?string('  ', ', ')}:insert_userId_value
+<#assign prefixName = false>
 </#if>
 <#if (insert_version??) && (insert_version_value??)>
-${prefixName} :insert_version_value
-<#assign prefixName = ','>
+${prefixName?string('  ', ', ')}:insert_version_value
+<#assign prefixName = false>
 </#if>
 )

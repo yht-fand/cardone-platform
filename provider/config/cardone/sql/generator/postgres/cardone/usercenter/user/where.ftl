@@ -3,7 +3,7 @@
 <#if (where_and_eq_address_value??)>
 ${prefixName?string('WHERE ', 'AND ')}"address" = :where_and_eq_address_value
 <#else>
-${prefixName?string('WHERE ', 'AND ')}"address" IS NULL
+${prefixName?string('WHERE ', 'AND ')}("address" IS NULL OR "address" = '')
 </#if>
 <#assign prefixName = false>
 </#if>
@@ -19,7 +19,7 @@ ${prefixName?string('WHERE ', 'AND ')}"age" IS NULL
 <#if (where_and_eq_aliasName_value??)>
 ${prefixName?string('WHERE ', 'AND ')}"alias_name" = :where_and_eq_aliasName_value
 <#else>
-${prefixName?string('WHERE ', 'AND ')}"alias_name" IS NULL
+${prefixName?string('WHERE ', 'AND ')}("alias_name" IS NULL OR "alias_name" = '')
 </#if>
 <#assign prefixName = false>
 </#if>
@@ -27,7 +27,7 @@ ${prefixName?string('WHERE ', 'AND ')}"alias_name" IS NULL
 <#if (where_and_eq_areaCode_value??)>
 ${prefixName?string('WHERE ', 'AND ')}"area_code" = :where_and_eq_areaCode_value
 <#else>
-${prefixName?string('WHERE ', 'AND ')}"area_code" IS NULL
+${prefixName?string('WHERE ', 'AND ')}("area_code" IS NULL OR "area_code" = '')
 </#if>
 <#assign prefixName = false>
 </#if>
@@ -35,7 +35,7 @@ ${prefixName?string('WHERE ', 'AND ')}"area_code" IS NULL
 <#if (where_and_eq_batchNo_value??)>
 ${prefixName?string('WHERE ', 'AND ')}"batch_no" = :where_and_eq_batchNo_value
 <#else>
-${prefixName?string('WHERE ', 'AND ')}"batch_no" IS NULL
+${prefixName?string('WHERE ', 'AND ')}("batch_no" IS NULL OR "batch_no" = '')
 </#if>
 <#assign prefixName = false>
 </#if>
@@ -59,7 +59,7 @@ ${prefixName?string('WHERE ', 'AND ')}"birthday" IS NULL
 <#if (where_and_eq_callName_value??)>
 ${prefixName?string('WHERE ', 'AND ')}"call_name" = :where_and_eq_callName_value
 <#else>
-${prefixName?string('WHERE ', 'AND ')}"call_name" IS NULL
+${prefixName?string('WHERE ', 'AND ')}("call_name" IS NULL OR "call_name" = '')
 </#if>
 <#assign prefixName = false>
 </#if>
@@ -67,7 +67,7 @@ ${prefixName?string('WHERE ', 'AND ')}"call_name" IS NULL
 <#if (where_and_eq_cityCode_value??)>
 ${prefixName?string('WHERE ', 'AND ')}"city_code" = :where_and_eq_cityCode_value
 <#else>
-${prefixName?string('WHERE ', 'AND ')}"city_code" IS NULL
+${prefixName?string('WHERE ', 'AND ')}("city_code" IS NULL OR "city_code" = '')
 </#if>
 <#assign prefixName = false>
 </#if>
@@ -75,7 +75,7 @@ ${prefixName?string('WHERE ', 'AND ')}"city_code" IS NULL
 <#if (where_and_eq_companyName_value??)>
 ${prefixName?string('WHERE ', 'AND ')}"company_name" = :where_and_eq_companyName_value
 <#else>
-${prefixName?string('WHERE ', 'AND ')}"company_name" IS NULL
+${prefixName?string('WHERE ', 'AND ')}("company_name" IS NULL OR "company_name" = '')
 </#if>
 <#assign prefixName = false>
 </#if>
@@ -83,7 +83,7 @@ ${prefixName?string('WHERE ', 'AND ')}"company_name" IS NULL
 <#if (where_and_eq_contact_value??)>
 ${prefixName?string('WHERE ', 'AND ')}"contact" = :where_and_eq_contact_value
 <#else>
-${prefixName?string('WHERE ', 'AND ')}"contact" IS NULL
+${prefixName?string('WHERE ', 'AND ')}("contact" IS NULL OR "contact" = '')
 </#if>
 <#assign prefixName = false>
 </#if>
@@ -91,7 +91,7 @@ ${prefixName?string('WHERE ', 'AND ')}"contact" IS NULL
 <#if (where_and_eq_countryCode_value??)>
 ${prefixName?string('WHERE ', 'AND ')}"country_code" = :where_and_eq_countryCode_value
 <#else>
-${prefixName?string('WHERE ', 'AND ')}"country_code" IS NULL
+${prefixName?string('WHERE ', 'AND ')}("country_code" IS NULL OR "country_code" = '')
 </#if>
 <#assign prefixName = false>
 </#if>
@@ -99,7 +99,7 @@ ${prefixName?string('WHERE ', 'AND ')}"country_code" IS NULL
 <#if (where_and_eq_createdByCode_value??)>
 ${prefixName?string('WHERE ', 'AND ')}"created_by_code" = :where_and_eq_createdByCode_value
 <#else>
-${prefixName?string('WHERE ', 'AND ')}"created_by_code" IS NULL
+${prefixName?string('WHERE ', 'AND ')}("created_by_code" IS NULL OR "created_by_code" = '')
 </#if>
 <#assign prefixName = false>
 </#if>
@@ -115,7 +115,7 @@ ${prefixName?string('WHERE ', 'AND ')}"created_date" IS NULL
 <#if (where_and_eq_dataStateCode_value??)>
 ${prefixName?string('WHERE ', 'AND ')}"data_state_code" = :where_and_eq_dataStateCode_value
 <#else>
-${prefixName?string('WHERE ', 'AND ')}"data_state_code" IS NULL
+${prefixName?string('WHERE ', 'AND ')}("data_state_code" IS NULL OR "data_state_code" = '')
 </#if>
 <#assign prefixName = false>
 </#if>
@@ -123,7 +123,7 @@ ${prefixName?string('WHERE ', 'AND ')}"data_state_code" IS NULL
 <#if (where_and_eq_departmentCode_value??)>
 ${prefixName?string('WHERE ', 'AND ')}"department_code" = :where_and_eq_departmentCode_value
 <#else>
-${prefixName?string('WHERE ', 'AND ')}"department_code" IS NULL
+${prefixName?string('WHERE ', 'AND ')}("department_code" IS NULL OR "department_code" = '')
 </#if>
 <#assign prefixName = false>
 </#if>
@@ -131,7 +131,7 @@ ${prefixName?string('WHERE ', 'AND ')}"department_code" IS NULL
 <#if (where_and_eq_diplomaCode_value??)>
 ${prefixName?string('WHERE ', 'AND ')}"diploma_code" = :where_and_eq_diplomaCode_value
 <#else>
-${prefixName?string('WHERE ', 'AND ')}"diploma_code" IS NULL
+${prefixName?string('WHERE ', 'AND ')}("diploma_code" IS NULL OR "diploma_code" = '')
 </#if>
 <#assign prefixName = false>
 </#if>
@@ -139,7 +139,7 @@ ${prefixName?string('WHERE ', 'AND ')}"diploma_code" IS NULL
 <#if (where_and_eq_email_value??)>
 ${prefixName?string('WHERE ', 'AND ')}"email" = :where_and_eq_email_value
 <#else>
-${prefixName?string('WHERE ', 'AND ')}"email" IS NULL
+${prefixName?string('WHERE ', 'AND ')}("email" IS NULL OR "email" = '')
 </#if>
 <#assign prefixName = false>
 </#if>
@@ -155,7 +155,7 @@ ${prefixName?string('WHERE ', 'AND ')}"end_date" IS NULL
 <#if (where_and_eq_firstName_value??)>
 ${prefixName?string('WHERE ', 'AND ')}"first_name" = :where_and_eq_firstName_value
 <#else>
-${prefixName?string('WHERE ', 'AND ')}"first_name" IS NULL
+${prefixName?string('WHERE ', 'AND ')}("first_name" IS NULL OR "first_name" = '')
 </#if>
 <#assign prefixName = false>
 </#if>
@@ -163,7 +163,7 @@ ${prefixName?string('WHERE ', 'AND ')}"first_name" IS NULL
 <#if (where_and_eq_flagCode_value??)>
 ${prefixName?string('WHERE ', 'AND ')}"flag_code" = :where_and_eq_flagCode_value
 <#else>
-${prefixName?string('WHERE ', 'AND ')}"flag_code" IS NULL
+${prefixName?string('WHERE ', 'AND ')}("flag_code" IS NULL OR "flag_code" = '')
 </#if>
 <#assign prefixName = false>
 </#if>
@@ -171,7 +171,7 @@ ${prefixName?string('WHERE ', 'AND ')}"flag_code" IS NULL
 <#if (where_and_eq_flagObjectCode_value??)>
 ${prefixName?string('WHERE ', 'AND ')}"flag_object_code" = :where_and_eq_flagObjectCode_value
 <#else>
-${prefixName?string('WHERE ', 'AND ')}"flag_object_code" IS NULL
+${prefixName?string('WHERE ', 'AND ')}("flag_object_code" IS NULL OR "flag_object_code" = '')
 </#if>
 <#assign prefixName = false>
 </#if>
@@ -179,7 +179,7 @@ ${prefixName?string('WHERE ', 'AND ')}"flag_object_code" IS NULL
 <#if (where_and_eq_folkCode_value??)>
 ${prefixName?string('WHERE ', 'AND ')}"folk_code" = :where_and_eq_folkCode_value
 <#else>
-${prefixName?string('WHERE ', 'AND ')}"folk_code" IS NULL
+${prefixName?string('WHERE ', 'AND ')}("folk_code" IS NULL OR "folk_code" = '')
 </#if>
 <#assign prefixName = false>
 </#if>
@@ -187,7 +187,7 @@ ${prefixName?string('WHERE ', 'AND ')}"folk_code" IS NULL
 <#if (where_and_eq_idCardCode_value??)>
 ${prefixName?string('WHERE ', 'AND ')}"id_card_code" = :where_and_eq_idCardCode_value
 <#else>
-${prefixName?string('WHERE ', 'AND ')}"id_card_code" IS NULL
+${prefixName?string('WHERE ', 'AND ')}("id_card_code" IS NULL OR "id_card_code" = '')
 </#if>
 <#assign prefixName = false>
 </#if>
@@ -195,7 +195,7 @@ ${prefixName?string('WHERE ', 'AND ')}"id_card_code" IS NULL
 <#if (where_and_eq_idCardNo_value??)>
 ${prefixName?string('WHERE ', 'AND ')}"id_card_no" = :where_and_eq_idCardNo_value
 <#else>
-${prefixName?string('WHERE ', 'AND ')}"id_card_no" IS NULL
+${prefixName?string('WHERE ', 'AND ')}("id_card_no" IS NULL OR "id_card_no" = '')
 </#if>
 <#assign prefixName = false>
 </#if>
@@ -203,7 +203,7 @@ ${prefixName?string('WHERE ', 'AND ')}"id_card_no" IS NULL
 <#if (where_and_eq_intro_value??)>
 ${prefixName?string('WHERE ', 'AND ')}"intro" = :where_and_eq_intro_value
 <#else>
-${prefixName?string('WHERE ', 'AND ')}"intro" IS NULL
+${prefixName?string('WHERE ', 'AND ')}("intro" IS NULL OR "intro" = '')
 </#if>
 <#assign prefixName = false>
 </#if>
@@ -219,7 +219,7 @@ ${prefixName?string('WHERE ', 'AND ')}"json_data" IS NULL
 <#if (where_and_eq_lastModifiedByCode_value??)>
 ${prefixName?string('WHERE ', 'AND ')}"last_modified_by_code" = :where_and_eq_lastModifiedByCode_value
 <#else>
-${prefixName?string('WHERE ', 'AND ')}"last_modified_by_code" IS NULL
+${prefixName?string('WHERE ', 'AND ')}("last_modified_by_code" IS NULL OR "last_modified_by_code" = '')
 </#if>
 <#assign prefixName = false>
 </#if>
@@ -235,7 +235,7 @@ ${prefixName?string('WHERE ', 'AND ')}"last_modified_date" IS NULL
 <#if (where_and_eq_lastName_value??)>
 ${prefixName?string('WHERE ', 'AND ')}"last_name" = :where_and_eq_lastName_value
 <#else>
-${prefixName?string('WHERE ', 'AND ')}"last_name" IS NULL
+${prefixName?string('WHERE ', 'AND ')}("last_name" IS NULL OR "last_name" = '')
 </#if>
 <#assign prefixName = false>
 </#if>
@@ -243,7 +243,7 @@ ${prefixName?string('WHERE ', 'AND ')}"last_name" IS NULL
 <#if (where_and_eq_locus_value??)>
 ${prefixName?string('WHERE ', 'AND ')}"locus" = :where_and_eq_locus_value
 <#else>
-${prefixName?string('WHERE ', 'AND ')}"locus" IS NULL
+${prefixName?string('WHERE ', 'AND ')}("locus" IS NULL OR "locus" = '')
 </#if>
 <#assign prefixName = false>
 </#if>
@@ -251,7 +251,7 @@ ${prefixName?string('WHERE ', 'AND ')}"locus" IS NULL
 <#if (where_and_eq_marryStateCode_value??)>
 ${prefixName?string('WHERE ', 'AND ')}"marry_state_code" = :where_and_eq_marryStateCode_value
 <#else>
-${prefixName?string('WHERE ', 'AND ')}"marry_state_code" IS NULL
+${prefixName?string('WHERE ', 'AND ')}("marry_state_code" IS NULL OR "marry_state_code" = '')
 </#if>
 <#assign prefixName = false>
 </#if>
@@ -259,7 +259,7 @@ ${prefixName?string('WHERE ', 'AND ')}"marry_state_code" IS NULL
 <#if (where_and_eq_mobilePhone_value??)>
 ${prefixName?string('WHERE ', 'AND ')}"mobile_phone" = :where_and_eq_mobilePhone_value
 <#else>
-${prefixName?string('WHERE ', 'AND ')}"mobile_phone" IS NULL
+${prefixName?string('WHERE ', 'AND ')}("mobile_phone" IS NULL OR "mobile_phone" = '')
 </#if>
 <#assign prefixName = false>
 </#if>
@@ -267,7 +267,7 @@ ${prefixName?string('WHERE ', 'AND ')}"mobile_phone" IS NULL
 <#if (where_and_eq_name_value??)>
 ${prefixName?string('WHERE ', 'AND ')}"name" = :where_and_eq_name_value
 <#else>
-${prefixName?string('WHERE ', 'AND ')}"name" IS NULL
+${prefixName?string('WHERE ', 'AND ')}("name" IS NULL OR "name" = '')
 </#if>
 <#assign prefixName = false>
 </#if>
@@ -275,7 +275,7 @@ ${prefixName?string('WHERE ', 'AND ')}"name" IS NULL
 <#if (where_and_eq_namePinyin_value??)>
 ${prefixName?string('WHERE ', 'AND ')}"name_pinyin" = :where_and_eq_namePinyin_value
 <#else>
-${prefixName?string('WHERE ', 'AND ')}"name_pinyin" IS NULL
+${prefixName?string('WHERE ', 'AND ')}("name_pinyin" IS NULL OR "name_pinyin" = '')
 </#if>
 <#assign prefixName = false>
 </#if>
@@ -291,7 +291,7 @@ ${prefixName?string('WHERE ', 'AND ')}"order_by_" IS NULL
 <#if (where_and_eq_orgCode_value??)>
 ${prefixName?string('WHERE ', 'AND ')}"org_code" = :where_and_eq_orgCode_value
 <#else>
-${prefixName?string('WHERE ', 'AND ')}"org_code" IS NULL
+${prefixName?string('WHERE ', 'AND ')}("org_code" IS NULL OR "org_code" = '')
 </#if>
 <#assign prefixName = false>
 </#if>
@@ -299,7 +299,7 @@ ${prefixName?string('WHERE ', 'AND ')}"org_code" IS NULL
 <#if (where_and_eq_password_value??)>
 ${prefixName?string('WHERE ', 'AND ')}"password_" = :where_and_eq_password_value
 <#else>
-${prefixName?string('WHERE ', 'AND ')}"password_" IS NULL
+${prefixName?string('WHERE ', 'AND ')}("password_" IS NULL OR "password_" = '')
 </#if>
 <#assign prefixName = false>
 </#if>
@@ -307,7 +307,7 @@ ${prefixName?string('WHERE ', 'AND ')}"password_" IS NULL
 <#if (where_and_eq_passwordSalt_value??)>
 ${prefixName?string('WHERE ', 'AND ')}"password_salt" = :where_and_eq_passwordSalt_value
 <#else>
-${prefixName?string('WHERE ', 'AND ')}"password_salt" IS NULL
+${prefixName?string('WHERE ', 'AND ')}("password_salt" IS NULL OR "password_salt" = '')
 </#if>
 <#assign prefixName = false>
 </#if>
@@ -315,7 +315,7 @@ ${prefixName?string('WHERE ', 'AND ')}"password_salt" IS NULL
 <#if (where_and_eq_personalCode_value??)>
 ${prefixName?string('WHERE ', 'AND ')}"personal_code" = :where_and_eq_personalCode_value
 <#else>
-${prefixName?string('WHERE ', 'AND ')}"personal_code" IS NULL
+${prefixName?string('WHERE ', 'AND ')}("personal_code" IS NULL OR "personal_code" = '')
 </#if>
 <#assign prefixName = false>
 </#if>
@@ -323,7 +323,7 @@ ${prefixName?string('WHERE ', 'AND ')}"personal_code" IS NULL
 <#if (where_and_eq_portraitUrl_value??)>
 ${prefixName?string('WHERE ', 'AND ')}"portrait_url" = :where_and_eq_portraitUrl_value
 <#else>
-${prefixName?string('WHERE ', 'AND ')}"portrait_url" IS NULL
+${prefixName?string('WHERE ', 'AND ')}("portrait_url" IS NULL OR "portrait_url" = '')
 </#if>
 <#assign prefixName = false>
 </#if>
@@ -331,7 +331,7 @@ ${prefixName?string('WHERE ', 'AND ')}"portrait_url" IS NULL
 <#if (where_and_eq_privatePassword_value??)>
 ${prefixName?string('WHERE ', 'AND ')}"private_password" = :where_and_eq_privatePassword_value
 <#else>
-${prefixName?string('WHERE ', 'AND ')}"private_password" IS NULL
+${prefixName?string('WHERE ', 'AND ')}("private_password" IS NULL OR "private_password" = '')
 </#if>
 <#assign prefixName = false>
 </#if>
@@ -339,7 +339,7 @@ ${prefixName?string('WHERE ', 'AND ')}"private_password" IS NULL
 <#if (where_and_eq_privatePasswordSalt_value??)>
 ${prefixName?string('WHERE ', 'AND ')}"private_password_salt" = :where_and_eq_privatePasswordSalt_value
 <#else>
-${prefixName?string('WHERE ', 'AND ')}"private_password_salt" IS NULL
+${prefixName?string('WHERE ', 'AND ')}("private_password_salt" IS NULL OR "private_password_salt" = '')
 </#if>
 <#assign prefixName = false>
 </#if>
@@ -347,7 +347,7 @@ ${prefixName?string('WHERE ', 'AND ')}"private_password_salt" IS NULL
 <#if (where_and_eq_professionCode_value??)>
 ${prefixName?string('WHERE ', 'AND ')}"profession_code" = :where_and_eq_professionCode_value
 <#else>
-${prefixName?string('WHERE ', 'AND ')}"profession_code" IS NULL
+${prefixName?string('WHERE ', 'AND ')}("profession_code" IS NULL OR "profession_code" = '')
 </#if>
 <#assign prefixName = false>
 </#if>
@@ -355,7 +355,7 @@ ${prefixName?string('WHERE ', 'AND ')}"profession_code" IS NULL
 <#if (where_and_eq_provinceCode_value??)>
 ${prefixName?string('WHERE ', 'AND ')}"province_code" = :where_and_eq_provinceCode_value
 <#else>
-${prefixName?string('WHERE ', 'AND ')}"province_code" IS NULL
+${prefixName?string('WHERE ', 'AND ')}("province_code" IS NULL OR "province_code" = '')
 </#if>
 <#assign prefixName = false>
 </#if>
@@ -363,7 +363,7 @@ ${prefixName?string('WHERE ', 'AND ')}"province_code" IS NULL
 <#if (where_and_eq_qq_value??)>
 ${prefixName?string('WHERE ', 'AND ')}"qq" = :where_and_eq_qq_value
 <#else>
-${prefixName?string('WHERE ', 'AND ')}"qq" IS NULL
+${prefixName?string('WHERE ', 'AND ')}("qq" IS NULL OR "qq" = '')
 </#if>
 <#assign prefixName = false>
 </#if>
@@ -371,7 +371,7 @@ ${prefixName?string('WHERE ', 'AND ')}"qq" IS NULL
 <#if (where_and_eq_regionCode_value??)>
 ${prefixName?string('WHERE ', 'AND ')}"region_code" = :where_and_eq_regionCode_value
 <#else>
-${prefixName?string('WHERE ', 'AND ')}"region_code" IS NULL
+${prefixName?string('WHERE ', 'AND ')}("region_code" IS NULL OR "region_code" = '')
 </#if>
 <#assign prefixName = false>
 </#if>
@@ -379,7 +379,7 @@ ${prefixName?string('WHERE ', 'AND ')}"region_code" IS NULL
 <#if (where_and_eq_remark_value??)>
 ${prefixName?string('WHERE ', 'AND ')}"remark" = :where_and_eq_remark_value
 <#else>
-${prefixName?string('WHERE ', 'AND ')}"remark" IS NULL
+${prefixName?string('WHERE ', 'AND ')}("remark" IS NULL OR "remark" = '')
 </#if>
 <#assign prefixName = false>
 </#if>
@@ -387,7 +387,7 @@ ${prefixName?string('WHERE ', 'AND ')}"remark" IS NULL
 <#if (where_and_eq_sexCode_value??)>
 ${prefixName?string('WHERE ', 'AND ')}"sex_code" = :where_and_eq_sexCode_value
 <#else>
-${prefixName?string('WHERE ', 'AND ')}"sex_code" IS NULL
+${prefixName?string('WHERE ', 'AND ')}("sex_code" IS NULL OR "sex_code" = '')
 </#if>
 <#assign prefixName = false>
 </#if>
@@ -395,7 +395,7 @@ ${prefixName?string('WHERE ', 'AND ')}"sex_code" IS NULL
 <#if (where_and_eq_siteCode_value??)>
 ${prefixName?string('WHERE ', 'AND ')}"site_code" = :where_and_eq_siteCode_value
 <#else>
-${prefixName?string('WHERE ', 'AND ')}"site_code" IS NULL
+${prefixName?string('WHERE ', 'AND ')}("site_code" IS NULL OR "site_code" = '')
 </#if>
 <#assign prefixName = false>
 </#if>
@@ -403,7 +403,7 @@ ${prefixName?string('WHERE ', 'AND ')}"site_code" IS NULL
 <#if (where_and_eq_stateCode_value??)>
 ${prefixName?string('WHERE ', 'AND ')}"state_code" = :where_and_eq_stateCode_value
 <#else>
-${prefixName?string('WHERE ', 'AND ')}"state_code" IS NULL
+${prefixName?string('WHERE ', 'AND ')}("state_code" IS NULL OR "state_code" = '')
 </#if>
 <#assign prefixName = false>
 </#if>
@@ -411,7 +411,7 @@ ${prefixName?string('WHERE ', 'AND ')}"state_code" IS NULL
 <#if (where_and_eq_systemInfoCode_value??)>
 ${prefixName?string('WHERE ', 'AND ')}"system_info_code" = :where_and_eq_systemInfoCode_value
 <#else>
-${prefixName?string('WHERE ', 'AND ')}"system_info_code" IS NULL
+${prefixName?string('WHERE ', 'AND ')}("system_info_code" IS NULL OR "system_info_code" = '')
 </#if>
 <#assign prefixName = false>
 </#if>
@@ -419,7 +419,7 @@ ${prefixName?string('WHERE ', 'AND ')}"system_info_code" IS NULL
 <#if (where_and_eq_telephone_value??)>
 ${prefixName?string('WHERE ', 'AND ')}"telephone" = :where_and_eq_telephone_value
 <#else>
-${prefixName?string('WHERE ', 'AND ')}"telephone" IS NULL
+${prefixName?string('WHERE ', 'AND ')}("telephone" IS NULL OR "telephone" = '')
 </#if>
 <#assign prefixName = false>
 </#if>
@@ -427,7 +427,7 @@ ${prefixName?string('WHERE ', 'AND ')}"telephone" IS NULL
 <#if (where_and_eq_userCode_value??)>
 ${prefixName?string('WHERE ', 'AND ')}"user_code" = :where_and_eq_userCode_value
 <#else>
-${prefixName?string('WHERE ', 'AND ')}"user_code" IS NULL
+${prefixName?string('WHERE ', 'AND ')}("user_code" IS NULL OR "user_code" = '')
 </#if>
 <#assign prefixName = false>
 </#if>
@@ -435,7 +435,7 @@ ${prefixName?string('WHERE ', 'AND ')}"user_code" IS NULL
 <#if (where_and_eq_userId_value??)>
 ${prefixName?string('WHERE ', 'AND ')}"user_id" = :where_and_eq_userId_value
 <#else>
-${prefixName?string('WHERE ', 'AND ')}"user_id" IS NULL
+${prefixName?string('WHERE ', 'AND ')}("user_id" IS NULL OR "user_id" = '')
 </#if>
 <#assign prefixName = false>
 </#if>
