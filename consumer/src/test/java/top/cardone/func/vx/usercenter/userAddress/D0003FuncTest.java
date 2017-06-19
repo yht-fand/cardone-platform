@@ -19,6 +19,7 @@ import org.springframework.scheduling.support.TaskUtils;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.util.StopWatch;
 import top.cardone.context.ApplicationContextHolder;
+import top.cardone.core.util.func.Func1;
 
 import java.io.IOException;
 
@@ -56,37 +57,15 @@ public class D0003FuncTest {
 
     @Test
     public void func() throws Exception {
-        this.func(1000, true);
+        this.func(100);
     }
 
-    private void func(int count, boolean isTaskExecutor) throws Exception {
+    private void func(int count) throws Exception {
         String input = FileUtils.readFileToString(funcInputResource.getFile(), Charsets.UTF_8);
 
         HttpEntity<String> httpEntity = new HttpEntity<>(input, headers);
 
-        if (isTaskExecutor) {
-            for (int i = 0; i < count; i++) {
-                ApplicationContextHolder.getBean(TaskExecutor.class).execute(TaskUtils.decorateTaskWithErrorHandler(() -> {
-                    val sw = new StopWatch();
-
-                    sw.start("test");
-
-                    String output = new org.springframework.boot.test.web.client.TestRestTemplate().postForObject(funcUrl, httpEntity, String.class);
-
-                    sw.stop();
-
-                    log.debug(sw.prettyPrint());
-
-                    try {
-                        FileUtils.write(funcOutputResource.getFile(), output, Charsets.UTF_8);
-                    } catch (IOException e) {
-                        log.debug(e);
-                    }
-                }, null, true));
-            }
-        }
-
-        for (int i = 0; i < count; i++) {
+        Runnable runnable = () -> {
             val sw = new StopWatch();
 
             sw.start("test");
@@ -102,6 +81,16 @@ public class D0003FuncTest {
             } catch (IOException e) {
                 log.debug(e);
             }
+        };
+
+        for (int i = 0; i < count; i++) {
+            ApplicationContextHolder.getBean(TaskExecutor.class).execute(TaskUtils.decorateTaskWithErrorHandler(() -> {
+                for (int j = 0; j < count; j++) {
+                    ApplicationContextHolder.getBean(TaskExecutor.class).execute(TaskUtils.decorateTaskWithErrorHandler(runnable, null, true));
+                }
+            }, null, true));
         }
+
+        Thread.sleep(3000 * count);
     }
 }
