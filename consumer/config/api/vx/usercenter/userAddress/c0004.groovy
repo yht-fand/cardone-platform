@@ -9,6 +9,7 @@ class c0004 implements java.io.Serializable {
     def input(input) {
         def newInput = [:]
 
+		newInput?.address = input?.address
 		newInput?.areaCode = input?.areaCode
 		newInput?.batchNo = input?.batchNo
 		newInput?.beginDate = input?.beginDate

@@ -23,6 +23,7 @@ class modifyModal implements java.io.Serializable {
     def output(output) {
         def newOutput = [:]
 
+		newOutput?.address = output?.address
 		newOutput?.areaCode = output?.area_code
 		newOutput?.batchNo = output?.batch_no
 		newOutput?.beginDate = output?.begin_date

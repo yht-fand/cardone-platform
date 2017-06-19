@@ -80,6 +80,8 @@ class r0003 implements java.io.Serializable {
         for (def contentItem : output.getContent()) {
 			def data = [:]
 
+            data['address'] = contentItem['address']
+
             data['areaCode'] = contentItem['area_code']
 
             data['batchNo'] = contentItem['batch_no']

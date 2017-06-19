@@ -2,6 +2,10 @@ INSERT
 INTO
 c1_user_address
 (<#assign prefixName = ' '>
+<#if (insert_address??) && (insert_address_value??)>
+${prefixName} "address"
+<#assign prefixName = ','>
+</#if>
 <#if (insert_areaCode??) && (insert_areaCode_value??)>
 ${prefixName} "area_code"
 <#assign prefixName = ','>
@@ -117,6 +121,10 @@ ${prefixName} "version_"
 )
 (SELECT
 <#assign prefixName = ' '>
+<#if (insert_address??) && (insert_address_value??)>
+${prefixName} :insert_address_value
+<#assign prefixName = ','>
+</#if>
 <#if (insert_areaCode??) && (insert_areaCode_value??)>
 ${prefixName} :insert_areaCode_value
 <#assign prefixName = ','>
@@ -231,6 +239,14 @@ ${prefixName} :insert_version_value
 </#if>
 WHERE NOT EXISTS (SELECT 1 FROM c1_user_address E
 <#assign prefixName = 'WHERE'>
+<#if (where_and_eq_address??)>
+<#if (where_and_eq_address_value??)>
+${prefixName} E."address" = :where_and_eq_address_value
+<#else>
+${prefixName} E."address" IS NULL
+</#if>
+<#assign prefixName = 'AND'>
+</#if>
 <#if (where_and_eq_areaCode??)>
 <#if (where_and_eq_areaCode_value??)>
 ${prefixName} E."area_code" = :where_and_eq_areaCode_value

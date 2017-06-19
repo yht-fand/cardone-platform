@@ -9,6 +9,7 @@ class m0001 implements java.io.Serializable {
     def input(input) {
         def newInput = [:]
 
+		newInput?.address = input?.address
 		newInput?.areaCode = input?.areaCode
 		newInput?.batchNo = input?.batchNo
 		newInput?.beginDate = input?.beginDate
@@ -82,6 +83,7 @@ class m0001 implements java.io.Serializable {
     def output(output) {
         def newOutput = [:]
 
+		newOutput?.address = output?.address
 		newOutput?.areaCode = output?.area_code
 		newOutput?.batchNo = output?.batch_no
 		newOutput?.beginDate = output?.begin_date

@@ -1,5 +1,9 @@
 SELECT
 <#assign prefixName = ' '>
+<#if (select_address??)>
+${prefixName} "address"
+<#assign prefixName = ','>
+</#if>
 <#if (select_areaCode??)>
 ${prefixName} "area_code"
 <#assign prefixName = ','>
@@ -118,6 +122,10 @@ ${prefixName} "version_"
 FROM c1_user_address
 <#include "where.ftl">
 <#assign prefixName = 'ORDER BY'>
+<#if (order_by_address??)>
+${prefixName} "address" ${order_by_address_value!}
+<#assign prefixName = ','>
+</#if>
 <#if (order_by_areaCode??)>
 ${prefixName} "area_code" ${order_by_areaCode_value!}
 <#assign prefixName = ','>

@@ -1,4 +1,12 @@
 <#assign prefixName = true>
+<#if (where_and_eq_address??)>
+<#if (where_and_eq_address_value??)>
+${prefixName?string('WHERE ', 'AND ')}"address" = :where_and_eq_address_value
+<#else>
+${prefixName?string('WHERE ', 'AND ')}"address" IS NULL
+</#if>
+<#assign prefixName = false>
+</#if>
 <#if (where_and_eq_areaCode??)>
 <#if (where_and_eq_areaCode_value??)>
 ${prefixName?string('WHERE ', 'AND ')}"area_code" = :where_and_eq_areaCode_value

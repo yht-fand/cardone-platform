@@ -1,5 +1,8 @@
 SELECT
 <#switch (object_id!)>
+<#case "address">
+"address"
+<#break>
 <#case "areaCode">
 "area_code"
 <#break>

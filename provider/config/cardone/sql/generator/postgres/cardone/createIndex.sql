@@ -280,6 +280,9 @@ create index IF NOT EXISTS idx_c1_user_org_user_org_id ON c1_user_org ("user_org
 
 -- 用户与地址（c1_user_address）
 
+--地址
+drop index IF EXISTS idx_c1_user_address_address;
+create index IF NOT EXISTS idx_c1_user_address_address ON c1_user_address ("address" varchar_pattern_ops);
 --地区代码
 drop index IF EXISTS idx_c1_user_address_area_code;
 create index IF NOT EXISTS idx_c1_user_address_area_code ON c1_user_address ("area_code" varchar_pattern_ops);

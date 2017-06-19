@@ -11,6 +11,13 @@ import java.util.Date;
 public class UserAddress implements java.io.Serializable {
 
     /**
+     * 地址
+     */
+    @lombok.Getter
+    @lombok.Setter
+    protected String address;
+
+    /**
      * 地区代码
      */
     @lombok.Getter

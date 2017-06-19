@@ -21,7 +21,7 @@ class r0002 implements java.io.Serializable {
         def newOutput = []
 		
         for (def outputItem : output) {
-			newOutput.add(['label': outputItem['name'], 'value': outputItem['department_code']])
+			newOutput.add(['label': outputItem['name'], 'value': outputItem['c1_department_code']])
         }
 
         newOutput

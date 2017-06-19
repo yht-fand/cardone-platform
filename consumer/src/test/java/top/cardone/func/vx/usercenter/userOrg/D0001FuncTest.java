@@ -1,7 +1,9 @@
 package top.cardone.func.vx.usercenter.userOrg;
 
 import com.google.common.base.Charsets;
+import top.cardone.ConsumerApplication;
 import lombok.extern.log4j.Log4j2;
+import lombok.val;
 import org.apache.commons.io.FileUtils;
 import org.junit.Before;
 import org.junit.Test;
@@ -9,13 +11,14 @@ import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.core.io.Resource;
+import org.springframework.core.task.TaskExecutor;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.MediaType;
+import org.springframework.scheduling.support.TaskUtils;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
-import top.cardone.ConsumerApplication;
+import org.springframework.util.StopWatch;
 import top.cardone.context.ApplicationContextHolder;
-import top.cardone.core.util.func.Func1;
 
 import java.io.IOException;
 
@@ -53,18 +56,52 @@ public class D0001FuncTest {
 
     @Test
     public void func() throws Exception {
+        this.func(1000, true);
+    }
+
+    private void func(int count, boolean isTaskExecutor) throws Exception {
         String input = FileUtils.readFileToString(funcInputResource.getFile(), Charsets.UTF_8);
 
         HttpEntity<String> httpEntity = new HttpEntity<>(input, headers);
 
-        String output = new org.springframework.boot.test.web.client.TestRestTemplate().postForObject(funcUrl, httpEntity, String.class);
+        if (isTaskExecutor) {
+            for (int i = 0; i < count; i++) {
+                ApplicationContextHolder.getBean(TaskExecutor.class).execute(TaskUtils.decorateTaskWithErrorHandler(() -> {
+                    val sw = new StopWatch();
 
-        log.debug(output);
+                    sw.start("test");
 
-        try {
-            FileUtils.write(funcOutputResource.getFile(), output, Charsets.UTF_8);
-        } catch (IOException e) {
-            log.debug(e);
+                    String output = new org.springframework.boot.test.web.client.TestRestTemplate().postForObject(funcUrl, httpEntity, String.class);
+
+                    sw.stop();
+
+                    log.debug(sw.prettyPrint());
+
+                    try {
+                        FileUtils.write(funcOutputResource.getFile(), output, Charsets.UTF_8);
+                    } catch (IOException e) {
+                        log.debug(e);
+                    }
+                }, null, true));
+            }
+        }
+
+        for (int i = 0; i < count; i++) {
+            val sw = new StopWatch();
+
+            sw.start("test");
+
+            String output = new org.springframework.boot.test.web.client.TestRestTemplate().postForObject(funcUrl, httpEntity, String.class);
+
+            sw.stop();
+
+            log.debug(sw.prettyPrint());
+
+            try {
+                FileUtils.write(funcOutputResource.getFile(), output, Charsets.UTF_8);
+            } catch (IOException e) {
+                log.debug(e);
+            }
         }
     }
 }

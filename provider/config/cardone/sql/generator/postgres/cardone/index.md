@@ -131,6 +131,7 @@ version_|YES|Integer(10)|版本
 
 字段名|可为空|类型及范围|说明
 ---|---|---|---
+address|YES|String(255)|地址
 area_code|YES|String(255)|地区代码
 batch_no|YES|String(255)|批次编号
 begin_date|YES|Date(29)|开始日期

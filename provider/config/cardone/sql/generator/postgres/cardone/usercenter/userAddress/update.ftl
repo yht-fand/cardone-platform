@@ -1,5 +1,9 @@
 UPDATE c1_user_address
 <#assign prefixName = 'SET'>
+<#if (update_address??)>
+${prefixName} "address" = :update_address_value
+<#assign prefixName = ','>
+</#if>
 <#if (update_areaCode??)>
 ${prefixName} "area_code" = :update_areaCode_value
 <#assign prefixName = ','>

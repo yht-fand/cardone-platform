@@ -1,6 +1,10 @@
 INSERT
 INTO c1_user_address
 (<#assign prefixName = ' '>
+<#if (insert_address??) && (insert_address_value??)>
+${prefixName} "address"
+<#assign prefixName = ','>
+</#if>
 <#if (insert_areaCode??) && (insert_areaCode_value??)>
 ${prefixName} "area_code"
 <#assign prefixName = ','>
@@ -116,6 +120,10 @@ ${prefixName} "version_"
 )
 VALUES
 (<#assign prefixName = ' '>
+<#if (insert_address??) && (insert_address_value??)>
+${prefixName} :insert_address_value
+<#assign prefixName = ','>
+</#if>
 <#if (insert_areaCode??) && (insert_areaCode_value??)>
 ${prefixName} :insert_areaCode_value
 <#assign prefixName = ','>
