@@ -224,6 +224,7 @@ ${prefixName?string('  ', ', ')}"user_id"
 ${prefixName?string('  ', ', ')}"version_"
 <#assign prefixName = false>
 </#if>
+<#if prefixName>
 *
 </#if>
 FROM c1_user

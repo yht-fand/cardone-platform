@@ -84,6 +84,7 @@ ${prefixName?string('  ', ', ')}"user_department_id"
 ${prefixName?string('  ', ', ')}"version_"
 <#assign prefixName = false>
 </#if>
+<#if prefixName>
 *
 </#if>
 FROM c1_user_department
