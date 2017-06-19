@@ -18,7 +18,7 @@
     <bean name="endDateDefaultValueFunc" class="top.cardone.context.func.DefaultValueFunc">
         <property name="defaultValue" value="9999-01-01"/>
         <property name="converter">
-            <bean class="top.cardone.context.func.StringToDateFunc"/>
+            <bean class="top.cardone.core.convert.support.StringToDateConverter"/>
         </property>
     </bean>
 </beans>
