@@ -487,7 +487,7 @@ create index IF NOT EXISTS idx_c1_user_profession_code ON c1_user ("profession_c
 --省份代码
 drop index IF EXISTS idx_c1_user_province_code;
 create index IF NOT EXISTS idx_c1_user_province_code ON c1_user ("province_code" varchar_pattern_ops);
---QQ号码
+--qq号码
 drop index IF EXISTS idx_c1_user_qq;
 create index IF NOT EXISTS idx_c1_user_qq ON c1_user ("qq" varchar_pattern_ops);
 --区域代码

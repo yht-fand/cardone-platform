@@ -193,7 +193,7 @@ public class User implements java.io.Serializable {
     protected String intro;
 
     /**
-     * JSON数据
+     * json数据
      */
     @lombok.Getter
     @lombok.Setter
@@ -326,7 +326,7 @@ public class User implements java.io.Serializable {
     protected String provinceCode;
 
     /**
-     * QQ号码
+     * qq号码
      */
     @lombok.Getter
     @lombok.Setter

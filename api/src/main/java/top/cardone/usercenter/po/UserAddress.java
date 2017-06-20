@@ -109,7 +109,7 @@ public class UserAddress implements java.io.Serializable {
     protected String isDefault;
 
     /**
-     * JSON数据
+     * json数据
      */
     @lombok.Getter
     @lombok.Setter

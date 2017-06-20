@@ -23,7 +23,7 @@ department_code|YES|String(255)|部门代码
 end_date|YES|Date(29)|结束日期
 flag_code|YES|String(255)|标记代码(数据字典：工作流、同步、生成、录入、审批)
 flag_object_code|YES|String(255)|标识对象代码(工作流：工作流标识、同步：批次号、生成：操作者编号、录入：操作者编号、审批：操作者编号)
-json_data|YES|Object(2147483647)|JSON数据
+json_data|YES|Object(2147483647)|json数据
 last_modified_by_code|YES|String(255)|最后修改人代码
 last_modified_date|YES|Date(29)|最后修改日期
 name|YES|String(255)|名称
@@ -58,7 +58,7 @@ department_id|NO|String(255)|部门标识
 end_date|YES|Date(29)|结束日期
 flag_code|YES|String(255)|标记代码(数据字典：工作流、同步、生成、录入、审批)
 flag_object_code|YES|String(255)|标识对象代码(工作流：工作流标识、同步：批次号、生成：操作者编号、录入：操作者编号、审批：操作者编号)
-json_data|YES|Object(2147483647)|JSON数据
+json_data|YES|Object(2147483647)|json数据
 last_modified_by_code|YES|String(255)|最后修改人代码
 last_modified_date|YES|Date(29)|最后修改日期
 name|NO|String(255)|名称
@@ -88,7 +88,7 @@ department_code|YES|String(255)|部门代码
 end_date|YES|Date(29)|结束日期
 flag_code|YES|String(255)|标记代码(数据字典：工作流、同步、生成、录入、审批)
 flag_object_code|YES|String(255)|标识对象代码(工作流：工作流标识、同步：批次号、生成：操作者编号、录入：操作者编号、审批：操作者编号)
-json_data|YES|Object(2147483647)|JSON数据
+json_data|YES|Object(2147483647)|json数据
 last_modified_by_code|YES|String(255)|最后修改人代码
 last_modified_date|YES|Date(29)|最后修改日期
 order_by_|YES|Long(19)|排序
@@ -114,7 +114,7 @@ department_code|YES|String(255)|部门代码
 end_date|YES|Date(29)|结束日期
 flag_code|YES|String(255)|标记代码(数据字典：工作流、同步、生成、录入、审批)
 flag_object_code|YES|String(255)|标识对象代码(工作流：工作流标识、同步：批次号、生成：操作者编号、录入：操作者编号、审批：操作者编号)
-json_data|YES|Object(2147483647)|JSON数据
+json_data|YES|Object(2147483647)|json数据
 last_modified_by_code|YES|String(255)|最后修改人代码
 last_modified_date|YES|Date(29)|最后修改日期
 order_by_|YES|Long(19)|排序
@@ -145,7 +145,7 @@ end_date|YES|Date(29)|结束日期
 flag_code|YES|String(255)|标记代码(数据字典：工作流、同步、生成、录入、审批)
 flag_object_code|YES|String(255)|标识对象代码(工作流：工作流标识、同步：批次号、生成：操作者编号、录入：操作者编号、审批：操作者编号)
 is_default|YES|String(255)|是否默认(数据字典)
-json_data|YES|Object(2147483647)|JSON数据
+json_data|YES|Object(2147483647)|json数据
 last_modified_by_code|YES|String(255)|最后修改人代码
 last_modified_date|YES|Date(29)|最后修改日期
 order_by_|YES|Long(19)|排序
@@ -191,7 +191,7 @@ folk_code|YES|String(255)|民族代码(数据字典)
 id_card_code|YES|String(255)|证件类型代码
 id_card_no|YES|String(255)|证件号
 intro|YES|String(2147483647)|简介
-json_data|YES|Object(2147483647)|JSON数据
+json_data|YES|Object(2147483647)|json数据
 last_modified_by_code|YES|String(255)|最后修改人代码
 last_modified_date|YES|Date(29)|最后修改日期
 last_name|YES|String(255)|姓氏
@@ -210,7 +210,7 @@ private_password|YES|String(255)|隐私密码
 private_password_salt|YES|String(255)|隐私密码盐
 profession_code|YES|String(255)|职业代码
 province_code|YES|String(255)|省份代码
-qq|YES|String(255)|QQ号码
+qq|YES|String(255)|qq号码
 region_code|YES|String(255)|区域代码
 remark|YES|String(511)|备注
 sex_code|YES|String(255)|性别代码(数据字典)
@@ -236,7 +236,7 @@ department_code|YES|String(255)|部门代码
 end_date|YES|Date(29)|结束日期
 flag_code|YES|String(255)|标记代码(数据字典：工作流、同步、生成、录入、审批)
 flag_object_code|YES|String(255)|标识对象代码(工作流：工作流标识、同步：批次号、生成：操作者编号、录入：操作者编号、审批：操作者编号)
-json_data|YES|Object(2147483647)|JSON数据
+json_data|YES|Object(2147483647)|json数据
 last_modified_by_code|YES|String(255)|最后修改人代码
 last_modified_date|YES|Date(29)|最后修改日期
 open_user_id|NO|String(255)|开放用户标识
@@ -263,7 +263,7 @@ department_code|YES|String(255)|部门代码
 end_date|YES|Date(29)|结束日期
 flag_code|YES|String(255)|标记代码(数据字典：工作流、同步、生成、录入、审批)
 flag_object_code|YES|String(255)|标识对象代码(工作流：工作流标识、同步：批次号、生成：操作者编号、录入：操作者编号、审批：操作者编号)
-json_data|YES|Object(2147483647)|JSON数据
+json_data|YES|Object(2147483647)|json数据
 last_modified_by_code|YES|String(255)|最后修改人代码
 last_modified_date|YES|Date(29)|最后修改日期
 name|NO|String(255)|名称
@@ -293,7 +293,7 @@ department_code|YES|String(255)|部门代码
 end_date|YES|Date(29)|结束日期
 flag_code|YES|String(255)|标记代码(数据字典：工作流、同步、生成、录入、审批)
 flag_object_code|YES|String(255)|标识对象代码(工作流：工作流标识、同步：批次号、生成：操作者编号、录入：操作者编号、审批：操作者编号)
-json_data|YES|Object(2147483647)|JSON数据
+json_data|YES|Object(2147483647)|json数据
 last_modified_by_code|YES|String(255)|最后修改人代码
 last_modified_date|YES|Date(29)|最后修改日期
 name|NO|String(255)|名称
@@ -323,7 +323,7 @@ department_code|YES|String(255)|部门代码
 end_date|YES|Date(29)|结束日期
 flag_code|YES|String(255)|标记代码(数据字典：工作流、同步、生成、录入、审批)
 flag_object_code|YES|String(255)|标识对象代码(工作流：工作流标识、同步：批次号、生成：操作者编号、录入：操作者编号、审批：操作者编号)
-json_data|YES|Object(2147483647)|JSON数据
+json_data|YES|Object(2147483647)|json数据
 last_modified_by_code|YES|String(255)|最后修改人代码
 last_modified_date|YES|Date(29)|最后修改日期
 name|NO|String(255)|名称
@@ -352,7 +352,7 @@ department_code|YES|String(255)|部门代码
 end_date|YES|Date(29)|结束日期
 flag_code|YES|String(255)|标记代码(数据字典：工作流、同步、生成、录入、审批)
 flag_object_code|YES|String(255)|标识对象代码(工作流：工作流标识、同步：批次号、生成：操作者编号、录入：操作者编号、审批：操作者编号)
-json_data|YES|Object(2147483647)|JSON数据
+json_data|YES|Object(2147483647)|json数据
 last_modified_by_code|YES|String(255)|最后修改人代码
 last_modified_date|YES|Date(29)|最后修改日期
 name|NO|String(255)|名称
