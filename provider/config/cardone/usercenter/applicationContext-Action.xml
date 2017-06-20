@@ -9,6 +9,10 @@
                     <property name="serviceBeanId" value="top.cardone.usercenter.service.UserService"/>
                     <property name="jsonFiles" value="${app.root}/config/*/usercenter/init-data/user-*.json"/>
                 </bean>
+                <bean class="top.cardone.data.action.InitDataAction">
+                    <property name="serviceBeanId" value="top.cardone.usercenter.service.DepartmentService"/>
+                    <property name="jsonFiles" value="${app.root}/config/*/usercenter/init-data/department-*.json"/>
+                </bean>
             </list>
         </property>
     </bean>
