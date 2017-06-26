@@ -1,1 +1,0 @@
-DELETE FROM c1_area WHERE FIND_IN_SET(AREA_ID, :areaIds)

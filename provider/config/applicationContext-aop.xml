@@ -9,7 +9,7 @@
     <bean id="funcAnnotationFunc" class="top.cardone.context.func.FuncAnnotationFunc"/>
 
     <aop:config>
-        <aop:pointcut id="service-pointcut" expression="execution(* *..service.*.*(..))"/>
+        <aop:pointcut id="service-pointcut" expression="execution(* *..service.*Service.*.*(..))"/>
 
         <aop:aspect order="-900" ref="funcAspect">
             <aop:around pointcut-ref="service-pointcut" method="func"/>

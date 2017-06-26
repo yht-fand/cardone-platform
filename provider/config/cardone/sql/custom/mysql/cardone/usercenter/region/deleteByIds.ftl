@@ -1,1 +1,0 @@
-DELETE FROM c1_region WHERE FIND_IN_SET(REGION_ID, :regionIds)

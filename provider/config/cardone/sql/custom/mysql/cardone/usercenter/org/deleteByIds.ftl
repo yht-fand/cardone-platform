@@ -1,1 +1,0 @@
-DELETE FROM c1_org WHERE FIND_IN_SET(ORG_ID, :orgIds)

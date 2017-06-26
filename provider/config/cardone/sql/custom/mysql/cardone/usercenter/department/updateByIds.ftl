@@ -1,1 +1,0 @@
-UPDATE c1_department SET END_DATE = NOW(), DATA_STATE_CODE = '0' WHERE INSTR(:departmentIds, DEPARTMENT_ID) > 0

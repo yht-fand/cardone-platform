@@ -1,1 +1,0 @@
-DELETE FROM c1_open_user WHERE FIND_IN_SET(OPEN_USER_ID, :openUserIds)

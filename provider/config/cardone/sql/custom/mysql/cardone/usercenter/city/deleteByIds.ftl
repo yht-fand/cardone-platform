@@ -1,1 +1,0 @@
-DELETE FROM c1_city WHERE FIND_IN_SET(CITY_ID, :cityIds)

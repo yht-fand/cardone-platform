@@ -1,1 +1,0 @@
-UPDATE c1_province SET END_DATE = NOW(), DATA_STATE_CODE = '0' WHERE INSTR(:provinceIds, PROVINCE_ID) > 0

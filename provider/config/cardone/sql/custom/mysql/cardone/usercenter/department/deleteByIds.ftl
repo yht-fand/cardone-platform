@@ -1,1 +1,0 @@
-DELETE FROM c1_department WHERE FIND_IN_SET(DEPARTMENT_ID, :departmentIds)
