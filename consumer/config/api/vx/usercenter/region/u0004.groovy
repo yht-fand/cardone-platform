@@ -63,9 +63,9 @@ class u0004 implements java.io.Serializable {
 
 		def readOne = ["regionCode": input.regionCode, "object_id": "regionId", "dataStateCode": "1"]
 
-		String dbRegionId = ApplicationContextHolder.getBean(RegionService.class).readOne(String.class, readOne)
+		def dbRegionId = ApplicationContextHolder.getBean(RegionService.class).readOne(String.class, readOne)
 
-		if ((dbRegionId != null) && !StringUtils.equals(dbRegionId, input.regionId)) {
+		if (!StringUtils.equals(dbRegionId, input.regionId)) {
 			throw new CodeException("regionId already exists", "区域编号已经存在")
 		}
     }

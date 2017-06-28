@@ -56,9 +56,9 @@ class u0002 implements java.io.Serializable {
 
 		def readOne = ["openUserCode": input.openUserCode, "object_id": "openUserId", "dataStateCode": "1"]
 
-		String dbOpenUserId = ApplicationContextHolder.getBean(OpenUserService.class).readOne(String.class, readOne)
+		def dbOpenUserId = ApplicationContextHolder.getBean(OpenUserService.class).readOne(String.class, readOne)
 
-		if ((dbOpenUserId != null) && !StringUtils.equals(dbOpenUserId, input.openUserId)) {
+		if (!StringUtils.equals(dbOpenUserId, input.openUserId)) {
 			throw new CodeException("openUserId already exists", "开放用户编号已经存在")
 		}
     }
