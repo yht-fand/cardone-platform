@@ -127,7 +127,7 @@ public interface AreaService extends PageService {
      * @see top.cardone.usercenter.service.AreaService#save
      */
     @CacheEvict(value = "top.cardone.usercenter.service.AreaService", allEntries = true)
-    Integer saveCache(Object save);
+    int saveCache(Object save);
 
     /**
      * @see top.cardone.usercenter.service.AreaService#update

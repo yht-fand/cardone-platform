@@ -127,7 +127,7 @@ public interface OrgService extends PageService {
      * @see top.cardone.usercenter.service.OrgService#save
      */
     @CacheEvict(value = "top.cardone.usercenter.service.OrgService", allEntries = true)
-    Integer saveCache(Object save);
+    int saveCache(Object save);
 
     /**
      * @see top.cardone.usercenter.service.OrgService#update

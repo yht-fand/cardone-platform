@@ -115,7 +115,7 @@ public class DepartmentServiceImpl extends PageServiceImpl<DepartmentDao> implem
 
     @Override
     @Transactional
-    public Integer saveCache(Object save) {
+    public int saveCache(Object save) {
         return this.save(save);
     }
 
@@ -125,12 +125,6 @@ public class DepartmentServiceImpl extends PageServiceImpl<DepartmentDao> implem
         return this.update(update);
     }
 
-    @Override
-    @Transactional
-    public int[] updateListCache(List<Object> updateList) {
-        return this.updateList(updateList);
-    }
-
     public Map<String, Object> findOneByDepartmentId(Map<String, Object> findOne) {
         return this.dao.findOneByDepartmentId(findOne);
     }
@@ -138,12 +132,6 @@ public class DepartmentServiceImpl extends PageServiceImpl<DepartmentDao> implem
     @Override
     public List<Map<String, Object>> findListByDepartmentCode(String deptCode) {
         return this.dao.findListByDepartmentCode(deptCode);
-    }
-
-    @Override
-    @Transactional
-    public int[][] saveListCache(List<Object> saveList) {
-        return this.saveList(saveList);
     }
 
     @Override

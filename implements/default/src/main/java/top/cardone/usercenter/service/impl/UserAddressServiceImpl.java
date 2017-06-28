@@ -115,7 +115,7 @@ public class UserAddressServiceImpl extends PageServiceImpl<UserAddressDao> impl
 
     @Override
     @Transactional
-    public Integer saveCache(Object save) {
+    public int saveCache(Object save) {
         return this.save(save);
     }
 

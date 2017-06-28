@@ -127,7 +127,7 @@ public interface UserAddressService extends PageService {
      * @see top.cardone.usercenter.service.UserAddressService#save
      */
     @CacheEvict(value = "top.cardone.usercenter.service.UserAddressService", allEntries = true)
-    Integer saveCache(Object save);
+    int saveCache(Object save);
 
     /**
      * @see top.cardone.usercenter.service.UserAddressService#update

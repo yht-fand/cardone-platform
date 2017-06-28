@@ -115,7 +115,7 @@ public class CityServiceImpl extends PageServiceImpl<CityDao> implements top.car
 
     @Override
     @Transactional
-    public Integer saveCache(Object save) {
+    public int saveCache(Object save) {
         return this.save(save);
     }
 

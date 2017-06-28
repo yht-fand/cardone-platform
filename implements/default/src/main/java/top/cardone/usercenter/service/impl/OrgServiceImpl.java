@@ -115,7 +115,7 @@ public class OrgServiceImpl extends PageServiceImpl<OrgDao> implements top.cardo
 
     @Override
     @Transactional
-    public Integer saveCache(Object save) {
+    public int saveCache(Object save) {
         return this.save(save);
     }
 

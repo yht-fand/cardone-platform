@@ -127,7 +127,7 @@ public interface UserDepartmentService extends PageService {
      * @see top.cardone.usercenter.service.UserDepartmentService#save
      */
     @CacheEvict(value = "top.cardone.usercenter.service.UserDepartmentService", allEntries = true)
-    Integer saveCache(Object save);
+    int saveCache(Object save);
 
     /**
      * @see top.cardone.usercenter.service.UserDepartmentService#update

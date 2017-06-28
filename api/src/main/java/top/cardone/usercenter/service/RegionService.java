@@ -139,7 +139,7 @@ public interface RegionService extends PageService {
      */
     @CacheEvict(value = "top.cardone.usercenter.service.RegionService", allEntries = true)
     @Func(beanId = "funcAnnotationFunc", value = "{\"afterBeanIds\": \"generateRegionTreeFunc\"}")
-    Integer saveCache(Object save);
+    int saveCache(Object save);
 
     /**
      * @see top.cardone.usercenter.service.RegionService#update

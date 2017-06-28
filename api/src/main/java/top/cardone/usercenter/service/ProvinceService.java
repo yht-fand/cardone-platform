@@ -127,7 +127,7 @@ public interface ProvinceService extends PageService {
      * @see top.cardone.usercenter.service.ProvinceService#save
      */
     @CacheEvict(value = "top.cardone.usercenter.service.ProvinceService", allEntries = true)
-    Integer saveCache(Object save);
+    int saveCache(Object save);
 
     /**
      * @see top.cardone.usercenter.service.ProvinceService#update
