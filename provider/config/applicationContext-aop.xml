@@ -4,15 +4,17 @@
        xmlns="http://www.springframework.org/schema/beans"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
            http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd">
-    <bean id="funcAspect" class="top.cardone.context.aspect.FuncAspect"/>
+    <bean class="top.cardone.context.event.SimpleEventsListener"/>
 
-    <bean id="funcAnnotationFunc" class="top.cardone.context.func.FuncAnnotationFunc"/>
+    <bean id="routingDataSourceAspect" class="top.cardone.data.jdbc.datasource.looku.impl.RoutingDataSourceAspectImpl"/>
 
     <aop:config>
-        <aop:pointcut id="service-pointcut" expression="execution(* *..service.*Service.*.*(..))"/>
+        <aop:pointcut id="service-pointcut-1" expression="execution(* *..service.*Service.*(..))"/>
+        <aop:pointcut id="service-pointcut-2" expression="execution(* *..service.impl.*ServiceImpl.*(..))"/>
 
-        <aop:aspect order="-900" ref="funcAspect">
-            <aop:around pointcut-ref="service-pointcut" method="func"/>
+        <aop:aspect order="800" ref="routingDataSourceAspect">
+            <aop:around pointcut-ref="service-pointcut-1" method="postProcessBeforeSetTargetDataSource"/>
+            <aop:around pointcut-ref="service-pointcut-2" method="postProcessBeforeSetTargetDataSource"/>
         </aop:aspect>
     </aop:config>
 

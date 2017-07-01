@@ -6,7 +6,10 @@ import org.springframework.cache.annotation.Cacheable;
 import org.springframework.data.domain.Page;
 import org.springframework.transaction.annotation.Transactional;
 import top.cardone.cache.Caches;
+import top.cardone.context.annotation.Event;
+import top.cardone.context.annotation.Events;
 import top.cardone.context.annotation.Func;
+import top.cardone.context.event.SimpleEvent;
 import top.cardone.data.service.PageService;
 
 import java.util.List;
@@ -59,28 +62,28 @@ public interface DepartmentService extends PageService {
      * @see top.cardone.usercenter.service.DepartmentService#delete
      */
     @CacheEvict(allEntries = true)
-    @Func(beanId = "funcAnnotationFunc", value = "{\"afterBeanIds\": \"generateDepartmentTreeFunc\"}")
+    @Events({@Event(applicationEvent = SimpleEvent.class, config = "func0BeanName:generateDepartmentTreeFunc")})
     int deleteCache(Object delete);
 
     /**
      * @see top.cardone.usercenter.service.DepartmentService#deleteAll
      */
     @CacheEvict(allEntries = true)
-    @Func(beanId = "funcAnnotationFunc", value = "{\"afterBeanIds\": \"generateDepartmentTreeFunc\"}")
+    @Events({@Event(applicationEvent = SimpleEvent.class, config = "func0BeanName:generateDepartmentTreeFunc")})
     int deleteAllCache();
 
     /**
      * @see top.cardone.usercenter.service.DepartmentService#deleteByIds
      */
     @CacheEvict(allEntries = true)
-    @Func(beanId = "funcAnnotationFunc", value = "{\"afterBeanIds\": \"generateDepartmentTreeFunc\"}")
+    @Events({@Event(applicationEvent = SimpleEvent.class, config = "func0BeanName:generateDepartmentTreeFunc")})
     int deleteByIdsCache(Object ids);
 
     /**
      * @see top.cardone.usercenter.service.DepartmentService#deleteList
      */
     @CacheEvict(allEntries = true)
-    @Func(beanId = "funcAnnotationFunc", value = "{\"afterBeanIds\": \"generateDepartmentTreeFunc\"}")
+    @Events({@Event(applicationEvent = SimpleEvent.class, config = "func0BeanName:generateDepartmentTreeFunc")})
     int[] deleteListCache(List<Object> deleteList);
 
     /**
@@ -99,28 +102,28 @@ public interface DepartmentService extends PageService {
      * @see top.cardone.usercenter.service.DepartmentService#insert
      */
     @CacheEvict(allEntries = true)
-    @Func(beanId = "funcAnnotationFunc", value = "{\"afterBeanIds\": \"generateDepartmentTreeFunc\"}")
+    @Events({@Event(applicationEvent = SimpleEvent.class, config = "func0BeanName:generateDepartmentTreeFunc")})
     int insertCache(Object insert);
 
     /**
      * @see top.cardone.usercenter.service.DepartmentService#insertByNotExists
      */
     @CacheEvict(allEntries = true)
-    @Func(beanId = "funcAnnotationFunc", value = "{\"afterBeanIds\": \"generateDepartmentTreeFunc\"}")
+    @Events({@Event(applicationEvent = SimpleEvent.class, config = "func0BeanName:generateDepartmentTreeFunc")})
     int insertByNotExistsCache(Object insert);
 
     /**
      * @see top.cardone.usercenter.service.DepartmentService#insertList
      */
     @CacheEvict(allEntries = true)
-    @Func(beanId = "funcAnnotationFunc", value = "{\"afterBeanIds\": \"generateDepartmentTreeFunc\"}")
+    @Events({@Event(applicationEvent = SimpleEvent.class, config = "func0BeanName:generateDepartmentTreeFunc")})
     int[] insertListCache(List<Object> insertList);
 
     /**
      * @see top.cardone.usercenter.service.DepartmentService#insertListByNotExists
      */
     @CacheEvict(allEntries = true)
-    @Func(beanId = "funcAnnotationFunc", value = "{\"afterBeanIds\": \"generateDepartmentTreeFunc\"}")
+    @Events({@Event(applicationEvent = SimpleEvent.class, config = "func0BeanName:generateDepartmentTreeFunc")})
     int[] insertListByNotExistsCache(List<Object> insertList);
 
     /**
@@ -139,21 +142,21 @@ public interface DepartmentService extends PageService {
      * @see top.cardone.usercenter.service.DepartmentService#save
      */
     @CacheEvict(allEntries = true)
-    @Func(beanId = "funcAnnotationFunc", value = "{\"afterBeanIds\": \"generateDepartmentTreeFunc\"}")
+    @Events({@Event(applicationEvent = SimpleEvent.class, config = "func0BeanName:generateDepartmentTreeFunc")})
     int saveCache(Object save);
 
     /**
      * @see top.cardone.usercenter.service.DepartmentService#update
      */
     @CacheEvict(allEntries = true)
-    @Func(beanId = "funcAnnotationFunc", value = "{\"afterBeanIds\": \"generateDepartmentTreeFunc\"}")
+    @Events({@Event(applicationEvent = SimpleEvent.class, config = "func0BeanName:generateDepartmentTreeFunc")})
     int updateCache(Object update);
 
     /**
      * @see top.cardone.usercenter.service.DepartmentService#updateList
      */
     @CacheEvict(allEntries = true)
-    @Func(beanId = "funcAnnotationFunc", value = "{\"afterBeanIds\": \"generateDepartmentTreeFunc\"}")
+    @Events({@Event(applicationEvent = SimpleEvent.class, config = "func0BeanName:generateDepartmentTreeFunc")})
     @Transactional
     default int[] updateListCache(List<Object> updateList) {
         return this.updateList(updateList);
@@ -163,7 +166,7 @@ public interface DepartmentService extends PageService {
      * @see top.cardone.usercenter.service.DepartmentService#saveList
      */
     @CacheEvict(allEntries = true)
-    @Func(beanId = "funcAnnotationFunc", value = "{\"afterBeanIds\": \"generateDepartmentTreeFunc\"}")
+    @Events({@Event(applicationEvent = SimpleEvent.class, config = "func0BeanName:generateDepartmentTreeFunc")})
     @Transactional
     default int[][] saveListCache(List<Object> saveList) {
         return this.saveList(saveList);
