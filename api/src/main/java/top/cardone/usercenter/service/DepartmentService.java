@@ -8,6 +8,7 @@ import org.springframework.transaction.annotation.Transactional;
 import top.cardone.cache.Caches;
 import top.cardone.context.annotation.Event;
 import top.cardone.context.annotation.Events;
+import top.cardone.context.event.SimpleErrorEvent;
 import top.cardone.context.event.SimpleEvent;
 import top.cardone.data.service.PageService;
 
@@ -25,36 +26,48 @@ public interface DepartmentService extends PageService {
      * @see top.cardone.usercenter.service.DepartmentService#page
      */
     @Cacheable(key = Caches.KEY_1)
+    @Events({@Event(applicationEvent = SimpleErrorEvent.class, configs = {"insertOperateLogAction"}),
+            @Event(applicationEvent = SimpleEvent.class, configs = {"insertOperateLogAction"})})
     Page<Map<String, Object>> pageCache(Object page);
 
     /**
      * @see top.cardone.usercenter.service.DepartmentService#page
      */
     @Cacheable(key = Caches.KEY_2)
+    @Events({@Event(applicationEvent = SimpleErrorEvent.class, configs = {"insertOperateLogAction"}),
+            @Event(applicationEvent = SimpleEvent.class, configs = {"insertOperateLogAction"})})
     <P> Page<P> pageCache(Class<P> mappedClass, Object page);
 
     /**
      * @see top.cardone.usercenter.service.DepartmentService#findList
      */
     @Cacheable(key = Caches.KEY_2)
+    @Events({@Event(applicationEvent = SimpleErrorEvent.class, configs = {"insertOperateLogAction"}),
+            @Event(applicationEvent = SimpleEvent.class, configs = {"insertOperateLogAction"})})
     <P> List<P> findListCache(Class<P> mappedClass, Object findList);
 
     /**
      * @see top.cardone.usercenter.service.DepartmentService#findOne
      */
     @Cacheable(key = Caches.KEY_2)
+    @Events({@Event(applicationEvent = SimpleErrorEvent.class, configs = {"insertOperateLogAction"}),
+            @Event(applicationEvent = SimpleEvent.class, configs = {"insertOperateLogAction"})})
     <P> P findOneCache(Class<P> mappedClass, Object findOne);
 
     /**
      * @see top.cardone.usercenter.service.DepartmentService#readList
      */
     @Cacheable(key = Caches.KEY_2)
+    @Events({@Event(applicationEvent = SimpleErrorEvent.class, configs = {"insertOperateLogAction"}),
+            @Event(applicationEvent = SimpleEvent.class, configs = {"insertOperateLogAction"})})
     <R> List<R> readListCache(Class<R> requiredType, Object readList);
 
     /**
      * @see top.cardone.usercenter.service.DepartmentService#readOne
      */
     @Cacheable(key = Caches.KEY_2)
+    @Events({@Event(applicationEvent = SimpleErrorEvent.class, configs = {"insertOperateLogAction"}),
+            @Event(applicationEvent = SimpleEvent.class, configs = {"insertOperateLogAction"})})
     <R> R readOneCache(Class<R> requiredType, Object readOne);
 
     /**
@@ -75,7 +88,9 @@ public interface DepartmentService extends PageService {
      * @see top.cardone.usercenter.service.DepartmentService#deleteByIds
      */
     @CacheEvict(allEntries = true)
-    @Events({@Event(applicationEvent = SimpleEvent.class, configs = "generateDepartmentTreeFunc")})
+    @Events({@Event(applicationEvent = SimpleEvent.class, configs = "generateDepartmentTreeFunc"),
+            @Event(applicationEvent = SimpleErrorEvent.class, configs = {"insertOperateLogAction"}),
+            @Event(applicationEvent = SimpleEvent.class, configs = {"insertOperateLogAction"})})
     int deleteByIdsCache(Object ids);
 
     /**
@@ -201,10 +216,14 @@ public interface DepartmentService extends PageService {
      * @param findList 关键字
      * @return
      */
+    @Events({@Event(applicationEvent = SimpleErrorEvent.class, configs = {"insertOperateLogAction"}),
+            @Event(applicationEvent = SimpleEvent.class, configs = {"insertOperateLogAction"})})
     List<Map<String, Object>> findListForTree(Map<String, Object> findList);
 
     /**
      * 同步旧数据
      */
+    @Events({@Event(applicationEvent = SimpleErrorEvent.class, configs = {"insertOperateLogAction"}),
+            @Event(applicationEvent = SimpleEvent.class, configs = {"insertOperateLogAction"})})
     void syncOldData();
 }
