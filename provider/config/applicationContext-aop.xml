@@ -14,11 +14,9 @@
 
     <aop:config>
         <aop:pointcut id="service-pointcut-1" expression="execution(* *..service.*Service.*(..))"/>
-        <aop:pointcut id="service-pointcut-2" expression="execution(* *..service.impl.*ServiceImpl.*(..))"/>
 
         <aop:aspect order="800" ref="routingDataSourceAspect">
             <aop:around pointcut-ref="service-pointcut-1" method="postProcessBeforeSetTargetDataSource"/>
-            <aop:around pointcut-ref="service-pointcut-2" method="postProcessBeforeSetTargetDataSource"/>
         </aop:aspect>
     </aop:config>
 
