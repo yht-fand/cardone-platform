@@ -20,84 +20,77 @@ import java.util.Map;
  *
  * @author yao hai tao
  */
+@Transactional(readOnly = true)
 @CacheConfig(cacheNames = {"top.cardone.usercenter.service.DepartmentService"})
+@Events({@Event(applicationEvent = SimpleErrorEvent.class, configs = {"insertOperateLogAction"}),
+        @Event(applicationEvent = SimpleEvent.class, configs = {"insertOperateLogAction"})})
 public interface DepartmentService extends PageService {
     /**
      * @see top.cardone.usercenter.service.DepartmentService#page
      */
     @Cacheable(key = Caches.KEY_1)
-    @Events({@Event(applicationEvent = SimpleErrorEvent.class, configs = {"insertOperateLogAction"}),
-            @Event(applicationEvent = SimpleEvent.class, configs = {"insertOperateLogAction"})})
     Page<Map<String, Object>> pageCache(Object page);
 
     /**
      * @see top.cardone.usercenter.service.DepartmentService#page
      */
     @Cacheable(key = Caches.KEY_2)
-    @Events({@Event(applicationEvent = SimpleErrorEvent.class, configs = {"insertOperateLogAction"}),
-            @Event(applicationEvent = SimpleEvent.class, configs = {"insertOperateLogAction"})})
     <P> Page<P> pageCache(Class<P> mappedClass, Object page);
 
     /**
      * @see top.cardone.usercenter.service.DepartmentService#findList
      */
     @Cacheable(key = Caches.KEY_2)
-    @Events({@Event(applicationEvent = SimpleErrorEvent.class, configs = {"insertOperateLogAction"}),
-            @Event(applicationEvent = SimpleEvent.class, configs = {"insertOperateLogAction"})})
     <P> List<P> findListCache(Class<P> mappedClass, Object findList);
 
     /**
      * @see top.cardone.usercenter.service.DepartmentService#findOne
      */
     @Cacheable(key = Caches.KEY_2)
-    @Events({@Event(applicationEvent = SimpleErrorEvent.class, configs = {"insertOperateLogAction"}),
-            @Event(applicationEvent = SimpleEvent.class, configs = {"insertOperateLogAction"})})
     <P> P findOneCache(Class<P> mappedClass, Object findOne);
 
     /**
      * @see top.cardone.usercenter.service.DepartmentService#readList
      */
     @Cacheable(key = Caches.KEY_2)
-    @Events({@Event(applicationEvent = SimpleErrorEvent.class, configs = {"insertOperateLogAction"}),
-            @Event(applicationEvent = SimpleEvent.class, configs = {"insertOperateLogAction"})})
     <R> List<R> readListCache(Class<R> requiredType, Object readList);
 
     /**
      * @see top.cardone.usercenter.service.DepartmentService#readOne
      */
     @Cacheable(key = Caches.KEY_2)
-    @Events({@Event(applicationEvent = SimpleErrorEvent.class, configs = {"insertOperateLogAction"}),
-            @Event(applicationEvent = SimpleEvent.class, configs = {"insertOperateLogAction"})})
     <R> R readOneCache(Class<R> requiredType, Object readOne);
 
     /**
      * @see top.cardone.usercenter.service.DepartmentService#delete
      */
     @CacheEvict(allEntries = true)
-    @Events({@Event(applicationEvent = SimpleEvent.class, configs = "generateDepartmentTreeFunc")})
+    @Events({@Event(applicationEvent = SimpleEvent.class, configs = "generateDepartmentTreeAction")})
+    @Transactional
     int deleteCache(Object delete);
 
     /**
      * @see top.cardone.usercenter.service.DepartmentService#deleteAll
      */
     @CacheEvict(allEntries = true)
-    @Events({@Event(applicationEvent = SimpleEvent.class, configs = "generateDepartmentTreeFunc")})
+    @Events({@Event(applicationEvent = SimpleEvent.class, configs = "generateDepartmentTreeAction")})
+    @Transactional
     int deleteAllCache();
 
     /**
      * @see top.cardone.usercenter.service.DepartmentService#deleteByIds
      */
     @CacheEvict(allEntries = true)
-    @Events({@Event(applicationEvent = SimpleEvent.class, configs = "generateDepartmentTreeFunc"),
-            @Event(applicationEvent = SimpleErrorEvent.class, configs = {"insertOperateLogAction"}),
-            @Event(applicationEvent = SimpleEvent.class, configs = {"insertOperateLogAction"})})
+    @Events({@Event(applicationEvent = SimpleEvent.class, configs = "generateDepartmentTreeAction")})
+    @Transactional
     int deleteByIdsCache(Object ids);
 
     /**
      * @see top.cardone.usercenter.service.DepartmentService#deleteList
      */
     @CacheEvict(allEntries = true)
-    @Events({@Event(applicationEvent = SimpleEvent.class, configs = "generateDepartmentTreeFunc")})
+    @Events({@Event(applicationEvent = SimpleEvent.class, configs = "generateDepartmentTreeAction")})
+    @Transactional
     int[] deleteListCache(List<Object> deleteList);
 
     /**
@@ -116,28 +109,32 @@ public interface DepartmentService extends PageService {
      * @see top.cardone.usercenter.service.DepartmentService#insert
      */
     @CacheEvict(allEntries = true)
-    @Events({@Event(applicationEvent = SimpleEvent.class, configs = "generateDepartmentTreeFunc")})
+    @Events({@Event(applicationEvent = SimpleEvent.class, configs = "generateDepartmentTreeAction")})
+    @Transactional
     int insertCache(Object insert);
 
     /**
      * @see top.cardone.usercenter.service.DepartmentService#insertByNotExists
      */
     @CacheEvict(allEntries = true)
-    @Events({@Event(applicationEvent = SimpleEvent.class, configs = "generateDepartmentTreeFunc")})
+    @Events({@Event(applicationEvent = SimpleEvent.class, configs = "generateDepartmentTreeAction")})
+    @Transactional
     int insertByNotExistsCache(Object insert);
 
     /**
      * @see top.cardone.usercenter.service.DepartmentService#insertList
      */
     @CacheEvict(allEntries = true)
-    @Events({@Event(applicationEvent = SimpleEvent.class, configs = "generateDepartmentTreeFunc")})
+    @Events({@Event(applicationEvent = SimpleEvent.class, configs = "generateDepartmentTreeAction")})
+    @Transactional
     int[] insertListCache(List<Object> insertList);
 
     /**
      * @see top.cardone.usercenter.service.DepartmentService#insertListByNotExists
      */
     @CacheEvict(allEntries = true)
-    @Events({@Event(applicationEvent = SimpleEvent.class, configs = "generateDepartmentTreeFunc")})
+    @Events({@Event(applicationEvent = SimpleEvent.class, configs = "generateDepartmentTreeAction")})
+    @Transactional
     int[] insertListByNotExistsCache(List<Object> insertList);
 
     /**
@@ -156,21 +153,23 @@ public interface DepartmentService extends PageService {
      * @see top.cardone.usercenter.service.DepartmentService#save
      */
     @CacheEvict(allEntries = true)
-    @Events({@Event(applicationEvent = SimpleEvent.class, configs = "generateDepartmentTreeFunc")})
+    @Events({@Event(applicationEvent = SimpleEvent.class, configs = "generateDepartmentTreeAction")})
+    @Transactional
     int saveCache(Object save);
 
     /**
      * @see top.cardone.usercenter.service.DepartmentService#update
      */
     @CacheEvict(allEntries = true)
-    @Events({@Event(applicationEvent = SimpleEvent.class, configs = "generateDepartmentTreeFunc")})
+    @Events({@Event(applicationEvent = SimpleEvent.class, configs = "generateDepartmentTreeAction")})
+    @Transactional
     int updateCache(Object update);
 
     /**
      * @see top.cardone.usercenter.service.DepartmentService#updateList
      */
     @CacheEvict(allEntries = true)
-    @Events({@Event(applicationEvent = SimpleEvent.class, configs = "generateDepartmentTreeFunc")})
+    @Events({@Event(applicationEvent = SimpleEvent.class, configs = "generateDepartmentTreeAction")})
     @Transactional
     default int[] updateListCache(List<Object> updateList) {
         return this.updateList(updateList);
@@ -180,7 +179,7 @@ public interface DepartmentService extends PageService {
      * @see top.cardone.usercenter.service.DepartmentService#saveList
      */
     @CacheEvict(allEntries = true)
-    @Events({@Event(applicationEvent = SimpleEvent.class, configs = "generateDepartmentTreeFunc")})
+    @Events({@Event(applicationEvent = SimpleEvent.class, configs = "generateDepartmentTreeAction")})
     @Transactional
     default int[][] saveListCache(List<Object> saveList) {
         return this.saveList(saveList);
@@ -216,14 +215,11 @@ public interface DepartmentService extends PageService {
      * @param findList 关键字
      * @return
      */
-    @Events({@Event(applicationEvent = SimpleErrorEvent.class, configs = {"insertOperateLogAction"}),
-            @Event(applicationEvent = SimpleEvent.class, configs = {"insertOperateLogAction"})})
     List<Map<String, Object>> findListForTree(Map<String, Object> findList);
 
     /**
      * 同步旧数据
      */
-    @Events({@Event(applicationEvent = SimpleErrorEvent.class, configs = {"insertOperateLogAction"}),
-            @Event(applicationEvent = SimpleEvent.class, configs = {"insertOperateLogAction"})})
+    @Transactional
     void syncOldData();
 }

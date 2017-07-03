@@ -58,28 +58,28 @@ public interface RegionService extends PageService {
      * @see top.cardone.usercenter.service.RegionService#delete
      */
     @CacheEvict(value = "top.cardone.usercenter.service.RegionService", allEntries = true)
-    @Events({@Event(applicationEvent = SimpleEvent.class, configs = "generateRegionTreeFunc")})
+    @Events({@Event(applicationEvent = SimpleEvent.class, configs = "generateRegionTreeAction")})
     int deleteCache(Object delete);
 
     /**
      * @see top.cardone.usercenter.service.RegionService#deleteAll
      */
     @CacheEvict(value = "top.cardone.usercenter.service.RegionService", allEntries = true)
-    @Events({@Event(applicationEvent = SimpleEvent.class, configs = "generateRegionTreeFunc")})
+    @Events({@Event(applicationEvent = SimpleEvent.class, configs = "generateRegionTreeAction")})
     int deleteAllCache();
 
     /**
      * @see top.cardone.usercenter.service.RegionService#deleteByIds
      */
     @CacheEvict(value = "top.cardone.usercenter.service.RegionService", allEntries = true)
-    @Events({@Event(applicationEvent = SimpleEvent.class, configs = "generateRegionTreeFunc")})
+    @Events({@Event(applicationEvent = SimpleEvent.class, configs = "generateRegionTreeAction")})
     int deleteByIdsCache(Object ids);
 
     /**
      * @see top.cardone.usercenter.service.RegionService#deleteList
      */
     @CacheEvict(value = "top.cardone.usercenter.service.RegionService", allEntries = true)
-    @Events({@Event(applicationEvent = SimpleEvent.class, configs = "generateRegionTreeFunc")})
+    @Events({@Event(applicationEvent = SimpleEvent.class, configs = "generateRegionTreeAction")})
     int[] deleteListCache(List<Object> deleteList);
 
     /**
@@ -98,70 +98,70 @@ public interface RegionService extends PageService {
      * @see top.cardone.usercenter.service.RegionService#insert
      */
     @CacheEvict(value = "top.cardone.usercenter.service.RegionService", allEntries = true)
-    @Events({@Event(applicationEvent = SimpleEvent.class, configs = "generateRegionTreeFunc")})
+    @Events({@Event(applicationEvent = SimpleEvent.class, configs = "generateRegionTreeAction")})
     int insertCache(Object insert);
 
     /**
      * @see top.cardone.usercenter.service.RegionService#insertByNotExists
      */
     @CacheEvict(value = "top.cardone.usercenter.service.RegionService", allEntries = true)
-    @Events({@Event(applicationEvent = SimpleEvent.class, configs = "generateRegionTreeFunc")})
+    @Events({@Event(applicationEvent = SimpleEvent.class, configs = "generateRegionTreeAction")})
     int insertByNotExistsCache(Object insert);
 
     /**
      * @see top.cardone.usercenter.service.RegionService#insertList
      */
     @CacheEvict(value = "top.cardone.usercenter.service.RegionService", allEntries = true)
-    @Events({@Event(applicationEvent = SimpleEvent.class, configs = "generateRegionTreeFunc")})
+    @Events({@Event(applicationEvent = SimpleEvent.class, configs = "generateRegionTreeAction")})
     int[] insertListCache(List<Object> insertList);
 
     /**
      * @see top.cardone.usercenter.service.RegionService#insertListByNotExists
      */
     @CacheEvict(value = "top.cardone.usercenter.service.RegionService", allEntries = true)
-    @Events({@Event(applicationEvent = SimpleEvent.class, configs = "generateRegionTreeFunc")})
+    @Events({@Event(applicationEvent = SimpleEvent.class, configs = "generateRegionTreeAction")})
     int[] insertListByNotExistsCache(List<Object> insertList);
 
     /**
      * @see top.cardone.usercenter.service.RegionService#readList
      */
     @Cacheable(value = "top.cardone.usercenter.service.RegionService", key = Caches.KEY_1)
-    @Events({@Event(applicationEvent = SimpleEvent.class, configs = "generateRegionTreeFunc")})
+    @Events({@Event(applicationEvent = SimpleEvent.class, configs = "generateRegionTreeAction")})
     List<Object> readListCache(Object readList);
 
     /**
      * @see top.cardone.usercenter.service.RegionService#readOne
      */
     @Cacheable(value = "top.cardone.usercenter.service.RegionService", key = Caches.KEY_1)
-    @Events({@Event(applicationEvent = SimpleEvent.class, configs = "generateRegionTreeFunc")})
+    @Events({@Event(applicationEvent = SimpleEvent.class, configs = "generateRegionTreeAction")})
     Object readOneCache(Object readOne);
 
     /**
      * @see top.cardone.usercenter.service.RegionService#save
      */
     @CacheEvict(value = "top.cardone.usercenter.service.RegionService", allEntries = true)
-    @Events({@Event(applicationEvent = SimpleEvent.class, configs = "generateRegionTreeFunc")})
+    @Events({@Event(applicationEvent = SimpleEvent.class, configs = "generateRegionTreeAction")})
     int saveCache(Object save);
 
     /**
      * @see top.cardone.usercenter.service.RegionService#update
      */
     @CacheEvict(value = "top.cardone.usercenter.service.RegionService", allEntries = true)
-    @Events({@Event(applicationEvent = SimpleEvent.class, configs = "generateRegionTreeFunc")})
+    @Events({@Event(applicationEvent = SimpleEvent.class, configs = "generateRegionTreeAction")})
     int updateCache(Object update);
 
     /**
      * @see top.cardone.usercenter.service.RegionService#updateList
      */
     @CacheEvict(value = "top.cardone.usercenter.service.RegionService", allEntries = true)
-    @Events({@Event(applicationEvent = SimpleEvent.class, configs = "generateRegionTreeFunc")})
+    @Events({@Event(applicationEvent = SimpleEvent.class, configs = "generateRegionTreeAction")})
     int[] updateListCache(List<Object> updateList);
 
     /**
      * @see top.cardone.usercenter.service.RegionService#saveList
      */
     @CacheEvict(value = "top.cardone.usercenter.service.RegionService", allEntries = true)
-    @Events({@Event(applicationEvent = SimpleEvent.class, configs = "generateRegionTreeFunc")})
+    @Events({@Event(applicationEvent = SimpleEvent.class, configs = "generateRegionTreeAction")})
     int[][] saveListCache(List<Object> saveList);
 
     /**
