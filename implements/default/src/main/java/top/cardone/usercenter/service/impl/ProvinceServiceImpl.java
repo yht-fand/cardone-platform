@@ -141,9 +141,4 @@ public class ProvinceServiceImpl extends PageServiceImpl<ProvinceDao> implements
     public Map<String, Object> findOneByProvinceId(Map<String, Object> findOne) {
         return this.dao.findOneByProvinceId(findOne);
     }
-
-    @Override
-    public List<Map<String, Object>> findListByKeyword(Map<String, Object> findList) {
-        return this.dao.findListByKeyword(findList);
-    }
 }

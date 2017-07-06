@@ -17,11 +17,4 @@ public class CityDaoImpl extends PageDaoImpl implements top.cardone.usercenter.d
 
         return this.findOne(findOneSqlFilePath, findOne);
     }
-
-    @Override
-    public List<Map<String, Object>> findListByKeyword(Map<String, Object> findList) {
-        String findListByKeywordSqlFilePath = this.getSqlFilePath("findListByKeyword");
-
-        return this.findList(findListByKeywordSqlFilePath, findList);
-    }
 }

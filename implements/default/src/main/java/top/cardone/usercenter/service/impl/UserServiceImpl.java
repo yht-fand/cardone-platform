@@ -147,9 +147,4 @@ public class UserServiceImpl extends PageServiceImpl<UserDao> implements top.car
     public int updateByUserIdsCache(Map<String, Object> update) {
         return this.dao.updateByUserIds(update);
     }
-
-    @Override
-    public List<Map<String, Object>> findListByKeyword(Map<String, Object> findList) {
-        return this.dao.findListByKeyword(findList);
-    }
 }

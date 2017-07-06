@@ -154,12 +154,4 @@ public interface AreaService extends PageService {
      * @return 地区对象
      */
     Map<String, Object> findOneByAreaId(Map<String, Object> findOne);
-
-    /**
-     * 查询地区下拉列表
-     *
-     * @param findList 关键字
-     * @return 地区下拉列表
-     */
-    List<Map<String, Object>> findListByKeyword(Map<String, Object> findList);
 }

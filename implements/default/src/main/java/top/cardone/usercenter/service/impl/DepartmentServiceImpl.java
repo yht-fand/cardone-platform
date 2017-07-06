@@ -135,18 +135,13 @@ public class DepartmentServiceImpl extends PageServiceImpl<DepartmentDao> implem
     }
 
     @Override
+    public List<Map<String, Object>> findListForTree(Map<String, Object> findList) {
+        return this.dao.findListForTree(findList);
+    }
+
+    @Override
     @Transactional
     public void syncOldData() {
         this.dao.syncOldData();
-    }
-
-    @Override
-    public List<Map<String, Object>> findListByKeyword(Map<String, Object> findList) {
-        return this.dao.findListByKeyword(findList);
-    }
-
-    @Override
-    public List<Map<String, Object>> findListForTree(Map<String, Object> findList) {
-        return this.dao.findListForTree(findList);
     }
 }

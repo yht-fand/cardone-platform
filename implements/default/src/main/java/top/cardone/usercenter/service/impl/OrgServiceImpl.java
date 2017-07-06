@@ -151,9 +151,4 @@ public class OrgServiceImpl extends PageServiceImpl<OrgDao> implements top.cardo
     public List<Map<String, Object>> findListByName(Map<String, Object> findList) {
         return this.dao.findListByName(findList);
     }
-
-    @Override
-    public List<Map<String, Object>> findListByKeyword(Map<String, Object> findList) {
-        return this.dao.findListByKeyword(findList);
-    }
 }

@@ -141,9 +141,4 @@ public class AreaServiceImpl extends PageServiceImpl<AreaDao> implements top.car
     public Map<String, Object> findOneByAreaId(Map<String, Object> findOne) {
         return this.dao.findOneByAreaId(findOne);
     }
-
-    @Override
-    public List<Map<String, Object>> findListByKeyword(Map<String, Object> findList) {
-        return this.dao.findListByKeyword(findList);
-    }
 }

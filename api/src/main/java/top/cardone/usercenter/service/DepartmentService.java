@@ -202,14 +202,6 @@ public interface DepartmentService extends PageService {
     List<Map<String, Object>> findListByDepartmentCode(String deptCode);
 
     /**
-     * 查询部门下拉列表
-     *
-     * @param findList 关键字
-     * @return 部门下拉列表
-     */
-    List<Map<String, Object>> findListByKeyword(Map<String, Object> findList);
-
-    /**
      * 查询部门树
      *
      * @param findList 关键字

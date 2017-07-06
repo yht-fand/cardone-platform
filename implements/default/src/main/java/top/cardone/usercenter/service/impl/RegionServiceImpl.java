@@ -151,9 +151,4 @@ public class RegionServiceImpl extends PageServiceImpl<RegionDao> implements top
     public List<Map<String, Object>> findListByRegionCode(String regionCode) {
         return this.dao.findListByRegionCode(regionCode);
     }
-
-    @Override
-    public List<Map<String, Object>> findListByKeyword(Map<String, Object> findList) {
-        return this.dao.findListByKeyword(findList);
-    }
 }

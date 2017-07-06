@@ -141,9 +141,4 @@ public class UserAddressServiceImpl extends PageServiceImpl<UserAddressDao> impl
     public Map<String, Object> findOneByUserAddressId(Map<String, Object> findOne) {
         return this.dao.findOneByUserAddressId(findOne);
     }
-
-    @Override
-    public List<Map<String, Object>> findListByKeyword(Map<String, Object> findList) {
-        return this.dao.findListByKeyword(findList);
-    }
 }
