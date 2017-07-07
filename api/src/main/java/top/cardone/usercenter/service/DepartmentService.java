@@ -78,6 +78,7 @@ public interface DepartmentService extends PageService {
      */
     @CacheEvict(allEntries = true)
     @Transactional
+    @Events({@Event(applicationEvent = SimpleEvent.class, configs = "generateDepartmentTreeAction")})
     default int deleteCache(Object delete) {
         return this.delete(delete);
     }
@@ -87,6 +88,7 @@ public interface DepartmentService extends PageService {
      */
     @CacheEvict(allEntries = true)
     @Transactional
+    @Events({@Event(applicationEvent = SimpleEvent.class, configs = "generateDepartmentTreeAction")})
     default int deleteAllCache() {
         return this.deleteAll();
     }
@@ -96,6 +98,7 @@ public interface DepartmentService extends PageService {
      */
     @CacheEvict(allEntries = true)
     @Transactional
+    @Events({@Event(applicationEvent = SimpleEvent.class, configs = "generateDepartmentTreeAction")})
     default int deleteByIdsCache(Object ids) {
         return this.deleteByIds(ids);
     }
@@ -105,6 +108,7 @@ public interface DepartmentService extends PageService {
      */
     @CacheEvict(allEntries = true)
     @Transactional
+    @Events({@Event(applicationEvent = SimpleEvent.class, configs = "generateDepartmentTreeAction")})
     default int[] deleteListCache(List<Object> deleteList) {
         return this.deleteList(deleteList);
     }
@@ -130,6 +134,7 @@ public interface DepartmentService extends PageService {
      */
     @CacheEvict(allEntries = true)
     @Transactional
+    @Events({@Event(applicationEvent = SimpleEvent.class, configs = "generateDepartmentTreeAction")})
     default int insertCache(Object insert) {
         return this.insert(insert);
     }
@@ -139,6 +144,7 @@ public interface DepartmentService extends PageService {
      */
     @CacheEvict(allEntries = true)
     @Transactional
+    @Events({@Event(applicationEvent = SimpleEvent.class, configs = "generateDepartmentTreeAction")})
     default int insertByNotExistsCache(Object insert) {
         return this.insertByNotExists(insert);
     }
@@ -148,6 +154,7 @@ public interface DepartmentService extends PageService {
      */
     @CacheEvict(allEntries = true)
     @Transactional
+    @Events({@Event(applicationEvent = SimpleEvent.class, configs = "generateDepartmentTreeAction")})
     default int[] insertListCache(List<Object> insertList) {
         return this.insertList(insertList);
     }
@@ -157,6 +164,7 @@ public interface DepartmentService extends PageService {
      */
     @CacheEvict(allEntries = true)
     @Transactional
+    @Events({@Event(applicationEvent = SimpleEvent.class, configs = "generateDepartmentTreeAction")})
     default int[] insertListByNotExistsCache(List<Object> insertList) {
         return this.insertListByNotExists(insertList);
     }
@@ -182,6 +190,7 @@ public interface DepartmentService extends PageService {
      */
     @CacheEvict(allEntries = true)
     @Transactional
+    @Events({@Event(applicationEvent = SimpleEvent.class, configs = "generateDepartmentTreeAction")})
     default int saveCache(Object save) {
         return this.save(save);
     }
@@ -191,6 +200,7 @@ public interface DepartmentService extends PageService {
      */
     @CacheEvict(allEntries = true)
     @Transactional
+    @Events({@Event(applicationEvent = SimpleEvent.class, configs = "generateDepartmentTreeAction")})
     default int updateCache(Object update) {
         return this.update(update);
     }
@@ -200,6 +210,7 @@ public interface DepartmentService extends PageService {
      */
     @CacheEvict(allEntries = true)
     @Transactional
+    @Events({@Event(applicationEvent = SimpleEvent.class, configs = "generateDepartmentTreeAction")})
     default int[] updateListCache(List<Object> updateList) {
         return this.updateList(updateList);
     }
@@ -209,6 +220,7 @@ public interface DepartmentService extends PageService {
      */
     @CacheEvict(allEntries = true)
     @Transactional
+    @Events({@Event(applicationEvent = SimpleEvent.class, configs = "generateDepartmentTreeAction")})
     default int[][] saveListCache(List<Object> saveList) {
         return this.saveList(saveList);
     }
