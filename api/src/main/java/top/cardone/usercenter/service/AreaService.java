@@ -1,9 +1,15 @@
 package top.cardone.usercenter.service;
 
+import org.springframework.cache.annotation.CacheConfig;
 import org.springframework.cache.annotation.CacheEvict;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.data.domain.Page;
+import org.springframework.transaction.annotation.Transactional;
 import top.cardone.cache.Caches;
+import top.cardone.context.annotation.Event;
+import top.cardone.context.annotation.Events;
+import top.cardone.context.event.SimpleErrorEvent;
+import top.cardone.context.event.SimpleEvent;
 import top.cardone.data.service.PageService;
 
 import java.util.List;
@@ -14,139 +20,199 @@ import java.util.Map;
  *
  * @author yao hai tao
  */
+@Transactional(readOnly = true)
+@CacheConfig(cacheNames = {"top.cardone.usercenter.service.AreaService"})
+@Events({@Event(applicationEvent = SimpleErrorEvent.class, configs = {"insertOperateLogAction"}),
+        @Event(applicationEvent = SimpleEvent.class, configs = {"insertOperateLogAction"})})
 public interface AreaService extends PageService {
-    /**
-     * @see top.cardone.usercenter.service.AreaService#page
+	/**
+     * @see AreaService#page
      */
-    @Cacheable(value = "top.cardone.usercenter.service.AreaService", key = Caches.KEY_1)
-    Page<Map<String, Object>> pageCache(Object page);
+    @Cacheable(key = Caches.KEY_1)
+    default Page<Map<String, Object>> pageCache(Object page) {
+        return this.page(page);
+    }
 
-    /**
-     * @see top.cardone.usercenter.service.AreaService#page
+	/**
+     * @see AreaService#page
      */
-    @Cacheable(value = "top.cardone.usercenter.service.AreaService", key = Caches.KEY_2)
-    <P> Page<P> pageCache(Class<P> mappedClass, Object page);
+    @Cacheable(key = Caches.KEY_2)
+    default <P> Page<P> pageCache(Class<P> mappedClass, Object page) {
+        return this.page(mappedClass, page);
+    }
 
-    /**
-     * @see top.cardone.usercenter.service.AreaService#findList
+	/**
+     * @see AreaService#findList
      */
-    @Cacheable(value = "top.cardone.usercenter.service.AreaService", key = Caches.KEY_2)
-    <P> List<P> findListCache(Class<P> mappedClass, Object findList);
+    @Cacheable(key = Caches.KEY_2)
+    default <P> List<P> findListCache(Class<P> mappedClass, Object findList) {
+        return this.findList(mappedClass, findList);
+    }
 
-    /**
-     * @see top.cardone.usercenter.service.AreaService#findOne
+	/**
+     * @see AreaService#findOne
      */
-    @Cacheable(value = "top.cardone.usercenter.service.AreaService", key = Caches.KEY_2)
-    <P> P findOneCache(Class<P> mappedClass, Object findOne);
+    @Cacheable(key = Caches.KEY_2)
+    default <P> P findOneCache(Class<P> mappedClass, Object findOne) {
+        return this.findOne(mappedClass, findOne);
+    }
 
-    /**
-     * @see top.cardone.usercenter.service.AreaService#readList
+	/**
+     * @see AreaService#readList
      */
-    @Cacheable(value = "top.cardone.usercenter.service.AreaService", key = Caches.KEY_2)
-    <R> List<R> readListCache(Class<R> requiredType, Object readList);
+    @Cacheable(key = Caches.KEY_2)
+    default <R> List<R> readListCache(Class<R> requiredType, Object readList) {
+        return this.readList(requiredType, readList);
+    }
 
-    /**
-     * @see top.cardone.usercenter.service.AreaService#readOne
+	/**
+     * @see AreaService#readOne
      */
-    @Cacheable(value = "top.cardone.usercenter.service.AreaService", key = Caches.KEY_2)
-    <R> R readOneCache(Class<R> requiredType, Object readOne);
+    @Cacheable(key = Caches.KEY_2)
+    default <R> R readOneCache(Class<R> requiredType, Object readOne) {
+        return this.readOne(requiredType, readOne);
+    }
 
-    /**
-     * @see top.cardone.usercenter.service.AreaService#delete
+	/**
+     * @see AreaService#delete
      */
-    @CacheEvict(value = "top.cardone.usercenter.service.AreaService", allEntries = true)
-    int deleteCache(Object delete);
+    @CacheEvict(allEntries = true)
+    @Transactional
+    default int deleteCache(Object delete) {
+        return this.delete(delete);
+    }
 
-    /**
-     * @see top.cardone.usercenter.service.AreaService#deleteAll
+	/**
+     * @see AreaService#deleteAll
      */
-    @CacheEvict(value = "top.cardone.usercenter.service.AreaService", allEntries = true)
-    int deleteAllCache();
+    @CacheEvict(allEntries = true)
+    @Transactional
+    default int deleteAllCache() {
+        return this.deleteAll();
+    }
 
-    /**
-     * @see top.cardone.usercenter.service.AreaService#deleteByIds
+	/**
+     * @see AreaService#deleteByIds
      */
-    @CacheEvict(value = "top.cardone.usercenter.service.AreaService", allEntries = true)
-    int deleteByIdsCache(Object ids);
+    @CacheEvict(allEntries = true)
+    @Transactional
+    default int deleteByIdsCache(Object ids) {
+        return this.deleteByIds(ids);
+    }
 
-    /**
-     * @see top.cardone.usercenter.service.AreaService#deleteList
+	/**
+     * @see AreaService#deleteList
      */
-    @CacheEvict(value = "top.cardone.usercenter.service.AreaService", allEntries = true)
-    int[] deleteListCache(List<Object> deleteList);
+    @CacheEvict(allEntries = true)
+    @Transactional
+    default int[] deleteListCache(List<Object> deleteList) {
+        return this.deleteList(deleteList);
+    }
 
-    /**
-     * @see top.cardone.usercenter.service.AreaService#findList
+	/**
+     * @see AreaService#findList
      */
-    @Cacheable(value = "top.cardone.usercenter.service.AreaService", key = Caches.KEY_1)
-    List<Map<String, Object>> findListCache(Object findList);
+    @Cacheable(key = Caches.KEY_1)
+    default List<Map<String, Object>> findListCache(Object findList) {
+        return this.findList(findList);
+    }
 
-    /**
-     * @see top.cardone.usercenter.service.AreaService#findOne
+	/**
+     * @see AreaService#findOne
      */
-    @Cacheable(value = "top.cardone.usercenter.service.AreaService", key = Caches.KEY_1)
-    Map<String, Object> findOneCache(Object findOne);
+    @Cacheable(key = Caches.KEY_1)
+    default Map<String, Object> findOneCache(Object findOne) {
+        return this.findOne(findOne);
+    }
 
-    /**
-     * @see top.cardone.usercenter.service.AreaService#insert
+	/**
+     * @see AreaService#insert
      */
-    @CacheEvict(value = "top.cardone.usercenter.service.AreaService", allEntries = true)
-    int insertCache(Object insert);
+    @CacheEvict(allEntries = true)
+    @Transactional
+    default int insertCache(Object insert) {
+        return this.insert(insert);
+    }
 
-    /**
-     * @see top.cardone.usercenter.service.AreaService#insertByNotExists
+	/**
+     * @see AreaService#insertByNotExists
      */
-    @CacheEvict(value = "top.cardone.usercenter.service.AreaService", allEntries = true)
-    int insertByNotExistsCache(Object insert);
+    @CacheEvict(allEntries = true)
+    @Transactional
+    default int insertByNotExistsCache(Object insert) {
+        return this.insertByNotExists(insert);
+    }
 
-    /**
-     * @see top.cardone.usercenter.service.AreaService#insertList
+	/**
+     * @see AreaService#insertList
      */
-    @CacheEvict(value = "top.cardone.usercenter.service.AreaService", allEntries = true)
-    int[] insertListCache(List<Object> insertList);
+    @CacheEvict(allEntries = true)
+    @Transactional
+    default int[] insertListCache(List<Object> insertList) {
+        return this.insertList(insertList);
+    }
 
-    /**
-     * @see top.cardone.usercenter.service.AreaService#insertListByNotExists
+	/**
+     * @see AreaService#insertListByNotExists
      */
-    @CacheEvict(value = "top.cardone.usercenter.service.AreaService", allEntries = true)
-    int[] insertListByNotExistsCache(List<Object> insertList);
+    @CacheEvict(allEntries = true)
+    @Transactional
+    default int[] insertListByNotExistsCache(List<Object> insertList) {
+        return this.insertListByNotExists(insertList);
+    }
 
-    /**
-     * @see top.cardone.usercenter.service.AreaService#readList
+	/**
+     * @see AreaService#readList
      */
-    @Cacheable(value = "top.cardone.usercenter.service.AreaService", key = Caches.KEY_1)
-    List<Object> readListCache(Object readList);
+    @Cacheable(key = Caches.KEY_1)
+    default List<Object> readListCache(Object readList) {
+        return this.readList(readList);
+    }
 
-    /**
-     * @see top.cardone.usercenter.service.AreaService#readOne
+	/**
+     * @see AreaService#readOne
      */
-    @Cacheable(value = "top.cardone.usercenter.service.AreaService", key = Caches.KEY_1)
-    Object readOneCache(Object readOne);
+    @Cacheable(key = Caches.KEY_1)
+    default Object readOneCache(Object readOne) {
+        return this.readOne(readOne);
+    }
 
-    /**
-     * @see top.cardone.usercenter.service.AreaService#save
+	/**
+     * @see AreaService#save
      */
-    @CacheEvict(value = "top.cardone.usercenter.service.AreaService", allEntries = true)
-    int saveCache(Object save);
+    @CacheEvict(allEntries = true)
+    @Transactional
+    default int saveCache(Object save) {
+        return this.save(save);
+    }
 
-    /**
-     * @see top.cardone.usercenter.service.AreaService#update
+	/**
+     * @see AreaService#update
      */
-    @CacheEvict(value = "top.cardone.usercenter.service.AreaService", allEntries = true)
-    int updateCache(Object update);
+    @CacheEvict(allEntries = true)
+    @Transactional
+    default int updateCache(Object update) {
+        return this.update(update);
+    }
 
-    /**
-     * @see top.cardone.usercenter.service.AreaService#updateList
+	/**
+     * @see AreaService#updateList
      */
-    @CacheEvict(value = "top.cardone.usercenter.service.AreaService", allEntries = true)
-    int[] updateListCache(List<Object> updateList);
+    @CacheEvict(allEntries = true)
+    @Transactional
+    default int[] updateListCache(List<Object> updateList) {
+        return this.updateList(updateList);
+    }
 
-    /**
-     * @see top.cardone.usercenter.service.AreaService#saveList
+	/**
+     * @see AreaService#saveList
      */
-    @CacheEvict(value = "top.cardone.usercenter.service.AreaService", allEntries = true)
-    int[][] saveListCache(List<Object> saveList);
-
+    @CacheEvict(allEntries = true)
+    @Transactional
+    default int[][] saveListCache(List<Object> saveList) {
+        return this.saveList(saveList);
+    }
+	
     /**
      * 查询地区对象
      *
@@ -154,4 +220,25 @@ public interface AreaService extends PageService {
      * @return 地区对象
      */
     Map<String, Object> findOneByAreaId(Map<String, Object> findOne);
+	
+    /**
+     * 查询地区对象
+     *
+     * @param findOne 地区标识
+     * @return 地区对象
+     */
+    default Map<String, Object> findOneByAreaIdCache(Map<String, Object> findOne) {
+        return this.findOneByAreaId(findOne);
+    }
+	
+    /**
+     * 查询地区下拉列表
+     *
+     * @param findList 关键字
+     * @return 地区下拉列表
+     */
+    @Cacheable(key = Caches.KEY_1)
+    default List<Map<String, Object>> findListByKeywordCache(Map<String, Object> findList) {
+        return this.findListByKeyword(findList);
+    }
 }

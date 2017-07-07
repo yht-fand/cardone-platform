@@ -22,10 +22,10 @@ public interface DepartmentDao extends PageDao {
     /**
      * 查询部门列表
      *
-     * @param deptCode 部门代码
+     * @param departmentCode 部门代码
      * @return
      */
-    List<Map<String, Object>> findListByDepartmentCode(String deptCode);
+    List<Map<String, Object>> findListByDepartmentCode(String departmentCode);
 
     /**
      * 同步旧数据
