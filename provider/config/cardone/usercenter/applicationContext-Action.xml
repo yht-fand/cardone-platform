@@ -16,31 +16,4 @@
             </list>
         </property>
     </bean>
-
-    <bean id="generateOrgTreeAction"
-          class="top.cardone.data.action.GenerateTreeAction">
-        <property name="codePutKey" value="orgCode"/>
-        <property name="codeGetKey" value="ORG_CODE"/>
-        <property name="pkPutKey" value="orgId"/>
-        <property name="pkGetKey" value="ORG_ID"/>
-        <property name="service" ref="top.cardone.usercenter.service.OrgService"/>
-    </bean>
-
-    <bean id="generateRegionTreeAction"
-          class="top.cardone.data.action.GenerateTreeAction">
-        <property name="codePutKey" value="regionCode"/>
-        <property name="codeGetKey" value="REGION_CODE"/>
-        <property name="pkPutKey" value="regionId"/>
-        <property name="pkGetKey" value="REGION_ID"/>
-        <property name="service" ref="top.cardone.usercenter.service.RegionService"/>
-    </bean>
-
-    <bean id="generateDepartmentTreeAction"
-          class="top.cardone.data.action.GenerateTreeAction">
-        <property name="codePutKey" value="departmentCode"/>
-        <property name="codeGetKey" value="DEPARTMENT_CODE"/>
-        <property name="pkPutKey" value="departmentId"/>
-        <property name="pkGetKey" value="DEPARTMENT_ID"/>
-        <property name="service" ref="top.cardone.usercenter.service.DepartmentService"/>
-    </bean>
 </beans>
