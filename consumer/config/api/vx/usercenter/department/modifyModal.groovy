@@ -46,6 +46,7 @@ class modifyModal implements java.io.Serializable {
 		newOutput?.orgCode = output?.org_code
 		newOutput?.orgId = output?.org_id
 		newOutput?.parentCode = output?.parent_code
+		newOutput?.parentId = output?.parent_id
 		newOutput?.parentTreeCode = output?.parent_tree_code
 		newOutput?.parentTreeId = output?.parent_tree_id
 		newOutput?.parentTreeName = output?.parent_tree_name

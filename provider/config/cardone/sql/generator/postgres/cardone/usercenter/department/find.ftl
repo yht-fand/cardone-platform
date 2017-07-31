@@ -92,6 +92,10 @@ ${prefixName?string('  ', ', ')}"org_id"
 ${prefixName?string('  ', ', ')}"parent_code"
 <#assign prefixName = false>
 </#if>
+<#if (select_parentId??)>
+${prefixName?string('  ', ', ')}"parent_id"
+<#assign prefixName = false>
+</#if>
 <#if (select_parentTreeCode??)>
 ${prefixName?string('  ', ', ')}"parent_tree_code"
 <#assign prefixName = false>
@@ -232,6 +236,10 @@ ${prefixName?string('ORDER BY ', ', ')}"org_id" ${order_by_orgId_value!}
 </#if>
 <#if (order_by_parentCode??)>
 ${prefixName?string('ORDER BY ', ', ')}"parent_code" ${order_by_parentCode_value!}
+<#assign prefixName = false>
+</#if>
+<#if (order_by_parentId??)>
+${prefixName?string('ORDER BY ', ', ')}"parent_id" ${order_by_parentId_value!}
 <#assign prefixName = false>
 </#if>
 <#if (order_by_parentTreeCode??)>

@@ -93,6 +93,10 @@ ${prefixName?string('  ', ', ')}"org_id"
 ${prefixName?string('  ', ', ')}"parent_code"
 <#assign prefixName = false>
 </#if>
+<#if (insert_parentId??) && (insert_parentId_value??)>
+${prefixName?string('  ', ', ')}"parent_id"
+<#assign prefixName = false>
+</#if>
 <#if (insert_parentTreeCode??) && (insert_parentTreeCode_value??)>
 ${prefixName?string('  ', ', ')}"parent_tree_code"
 <#assign prefixName = false>
@@ -230,6 +234,10 @@ ${prefixName?string('  ', ', ')}:insert_orgId_value
 </#if>
 <#if (insert_parentCode??) && (insert_parentCode_value??)>
 ${prefixName?string('  ', ', ')}:insert_parentCode_value
+<#assign prefixName = false>
+</#if>
+<#if (insert_parentId??) && (insert_parentId_value??)>
+${prefixName?string('  ', ', ')}:insert_parentId_value
 <#assign prefixName = false>
 </#if>
 <#if (insert_parentTreeCode??) && (insert_parentTreeCode_value??)>

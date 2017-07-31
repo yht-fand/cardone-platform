@@ -165,11 +165,25 @@ public class Org implements java.io.Serializable {
     protected String parentCode;
 
     /**
+     * 父级标识
+     */
+    @lombok.Getter
+    @lombok.Setter
+    protected String parentId;
+
+    /**
      * 父级树编号
      */
     @lombok.Getter
     @lombok.Setter
     protected String parentTreeCode;
+
+    /**
+     * 父级树标识
+     */
+    @lombok.Getter
+    @lombok.Setter
+    protected String parentTreeId;
 
     /**
      * 父级树名称

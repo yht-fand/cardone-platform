@@ -64,9 +64,15 @@ create index IF NOT EXISTS idx_c1_org_org_id ON c1_org ("org_id" varchar_pattern
 --父级编号
 drop index IF EXISTS idx_c1_org_parent_code;
 create index IF NOT EXISTS idx_c1_org_parent_code ON c1_org ("parent_code" varchar_pattern_ops);
+--父级标识
+drop index IF EXISTS idx_c1_org_parent_id;
+create index IF NOT EXISTS idx_c1_org_parent_id ON c1_org ("parent_id" varchar_pattern_ops);
 --父级树编号
 drop index IF EXISTS idx_c1_org_parent_tree_code;
 create index IF NOT EXISTS idx_c1_org_parent_tree_code ON c1_org ("parent_tree_code" varchar_pattern_ops);
+--父级树标识
+drop index IF EXISTS idx_c1_org_parent_tree_id;
+create index IF NOT EXISTS idx_c1_org_parent_tree_id ON c1_org ("parent_tree_id" varchar_pattern_ops);
 --父级树名称
 drop index IF EXISTS idx_c1_org_parent_tree_name;
 create index IF NOT EXISTS idx_c1_org_parent_tree_name ON c1_org ("parent_tree_name" varchar_pattern_ops);
@@ -157,6 +163,9 @@ create index IF NOT EXISTS idx_c1_department_org_id ON c1_department ("org_id" v
 --父级编号
 drop index IF EXISTS idx_c1_department_parent_code;
 create index IF NOT EXISTS idx_c1_department_parent_code ON c1_department ("parent_code" varchar_pattern_ops);
+--父级标识
+drop index IF EXISTS idx_c1_department_parent_id;
+create index IF NOT EXISTS idx_c1_department_parent_id ON c1_department ("parent_id" varchar_pattern_ops);
 --父级树编号
 drop index IF EXISTS idx_c1_department_parent_tree_code;
 create index IF NOT EXISTS idx_c1_department_parent_tree_code ON c1_department ("parent_tree_code" varchar_pattern_ops);
@@ -976,6 +985,9 @@ create index IF NOT EXISTS idx_c1_region_org_code ON c1_region ("org_code" varch
 --父级编号
 drop index IF EXISTS idx_c1_region_parent_code;
 create index IF NOT EXISTS idx_c1_region_parent_code ON c1_region ("parent_code" varchar_pattern_ops);
+--父级标识
+drop index IF EXISTS idx_c1_region_parent_id;
+create index IF NOT EXISTS idx_c1_region_parent_id ON c1_region ("parent_id" varchar_pattern_ops);
 --父级树编号
 drop index IF EXISTS idx_c1_region_parent_tree_code;
 create index IF NOT EXISTS idx_c1_region_parent_tree_code ON c1_region ("parent_tree_code" varchar_pattern_ops);

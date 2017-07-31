@@ -94,6 +94,10 @@ ${prefixName?string('  ', ', ')}"org_code"
 ${prefixName?string('  ', ', ')}"parent_code"
 <#assign prefixName = false>
 </#if>
+<#if (insert_parentId??) && (insert_parentId_value??)>
+${prefixName?string('  ', ', ')}"parent_id"
+<#assign prefixName = false>
+</#if>
 <#if (insert_parentTreeCode??) && (insert_parentTreeCode_value??)>
 ${prefixName?string('  ', ', ')}"parent_tree_code"
 <#assign prefixName = false>
@@ -239,6 +243,10 @@ ${prefixName?string('  ', ', ')}:insert_orgCode_value
 </#if>
 <#if (insert_parentCode??) && (insert_parentCode_value??)>
 ${prefixName?string('  ', ', ')}:insert_parentCode_value
+<#assign prefixName = false>
+</#if>
+<#if (insert_parentId??) && (insert_parentId_value??)>
+${prefixName?string('  ', ', ')}:insert_parentId_value
 <#assign prefixName = false>
 </#if>
 <#if (insert_parentTreeCode??) && (insert_parentTreeCode_value??)>
@@ -476,6 +484,14 @@ ${prefixName?string('WHERE ', 'AND ')}(E."org_code" IS NULL OR E."org_code" = ''
 ${prefixName?string('WHERE ', 'AND ')}E."parent_code" = :where_and_eq_parentCode_value
 <#else>
 ${prefixName?string('WHERE ', 'AND ')}(E."parent_code" IS NULL OR E."parent_code" = '')
+</#if>
+<#assign prefixName = false>
+</#if>
+<#if (where_and_eq_parentId??)>
+<#if (where_and_eq_parentId_value??)>
+${prefixName?string('WHERE ', 'AND ')}E."parent_id" = :where_and_eq_parentId_value
+<#else>
+${prefixName?string('WHERE ', 'AND ')}(E."parent_id" IS NULL OR E."parent_id" = '')
 </#if>
 <#assign prefixName = false>
 </#if>

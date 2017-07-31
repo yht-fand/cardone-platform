@@ -89,8 +89,16 @@ ${prefixName?string('  ', ', ')}"org_id"
 ${prefixName?string('  ', ', ')}"parent_code"
 <#assign prefixName = false>
 </#if>
+<#if (insert_parentId??) && (insert_parentId_value??)>
+${prefixName?string('  ', ', ')}"parent_id"
+<#assign prefixName = false>
+</#if>
 <#if (insert_parentTreeCode??) && (insert_parentTreeCode_value??)>
 ${prefixName?string('  ', ', ')}"parent_tree_code"
+<#assign prefixName = false>
+</#if>
+<#if (insert_parentTreeId??) && (insert_parentTreeId_value??)>
+${prefixName?string('  ', ', ')}"parent_tree_id"
 <#assign prefixName = false>
 </#if>
 <#if (insert_parentTreeName??) && (insert_parentTreeName_value??)>
@@ -220,8 +228,16 @@ ${prefixName?string('  ', ', ')}:insert_orgId_value
 ${prefixName?string('  ', ', ')}:insert_parentCode_value
 <#assign prefixName = false>
 </#if>
+<#if (insert_parentId??) && (insert_parentId_value??)>
+${prefixName?string('  ', ', ')}:insert_parentId_value
+<#assign prefixName = false>
+</#if>
 <#if (insert_parentTreeCode??) && (insert_parentTreeCode_value??)>
 ${prefixName?string('  ', ', ')}:insert_parentTreeCode_value
+<#assign prefixName = false>
+</#if>
+<#if (insert_parentTreeId??) && (insert_parentTreeId_value??)>
+${prefixName?string('  ', ', ')}:insert_parentTreeId_value
 <#assign prefixName = false>
 </#if>
 <#if (insert_parentTreeName??) && (insert_parentTreeName_value??)>
