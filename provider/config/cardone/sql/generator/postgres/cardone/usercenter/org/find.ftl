@@ -24,6 +24,10 @@ ${prefixName?string('  ', ', ')}"city_code"
 ${prefixName?string('  ', ', ')}"created_by_code"
 <#assign prefixName = false>
 </#if>
+<#if (select_createdById??)>
+${prefixName?string('  ', ', ')}"created_by_id"
+<#assign prefixName = false>
+</#if>
 <#if (select_createdDate??)>
 ${prefixName?string('  ', ', ')}"created_date"
 <#assign prefixName = false>
@@ -54,6 +58,10 @@ ${prefixName?string('  ', ', ')}"json_data"
 </#if>
 <#if (select_lastModifiedByCode??)>
 ${prefixName?string('  ', ', ')}"last_modified_by_code"
+<#assign prefixName = false>
+</#if>
+<#if (select_lastModifiedById??)>
+${prefixName?string('  ', ', ')}"last_modified_by_id"
 <#assign prefixName = false>
 </#if>
 <#if (select_lastModifiedDate??)>
@@ -90,6 +98,10 @@ ${prefixName?string('  ', ', ')}"parent_tree_name"
 </#if>
 <#if (select_personalCode??)>
 ${prefixName?string('  ', ', ')}"personal_code"
+<#assign prefixName = false>
+</#if>
+<#if (select_personalId??)>
+${prefixName?string('  ', ', ')}"personal_id"
 <#assign prefixName = false>
 </#if>
 <#if (select_provinceCode??)>
@@ -146,6 +158,10 @@ ${prefixName?string('ORDER BY ', ', ')}"city_code" ${order_by_cityCode_value!}
 ${prefixName?string('ORDER BY ', ', ')}"created_by_code" ${order_by_createdByCode_value!}
 <#assign prefixName = false>
 </#if>
+<#if (order_by_createdById??)>
+${prefixName?string('ORDER BY ', ', ')}"created_by_id" ${order_by_createdById_value!}
+<#assign prefixName = false>
+</#if>
 <#if (order_by_createdDate??)>
 ${prefixName?string('ORDER BY ', ', ')}"created_date" ${order_by_createdDate_value!}
 <#assign prefixName = false>
@@ -176,6 +192,10 @@ ${prefixName?string('ORDER BY ', ', ')}"json_data" ${order_by_jsonData_value!}
 </#if>
 <#if (order_by_lastModifiedByCode??)>
 ${prefixName?string('ORDER BY ', ', ')}"last_modified_by_code" ${order_by_lastModifiedByCode_value!}
+<#assign prefixName = false>
+</#if>
+<#if (order_by_lastModifiedById??)>
+${prefixName?string('ORDER BY ', ', ')}"last_modified_by_id" ${order_by_lastModifiedById_value!}
 <#assign prefixName = false>
 </#if>
 <#if (order_by_lastModifiedDate??)>
@@ -212,6 +232,10 @@ ${prefixName?string('ORDER BY ', ', ')}"parent_tree_name" ${order_by_parentTreeN
 </#if>
 <#if (order_by_personalCode??)>
 ${prefixName?string('ORDER BY ', ', ')}"personal_code" ${order_by_personalCode_value!}
+<#assign prefixName = false>
+</#if>
+<#if (order_by_personalId??)>
+${prefixName?string('ORDER BY ', ', ')}"personal_id" ${order_by_personalId_value!}
 <#assign prefixName = false>
 </#if>
 <#if (order_by_provinceCode??)>

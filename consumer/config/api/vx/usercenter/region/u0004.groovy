@@ -10,11 +10,14 @@ class u0004 implements java.io.Serializable {
         def newInput = [:]
 
 		newInput?.areaCode = input?.areaCode
+		newInput?.areaId = input?.areaId
 		newInput?.batchNo = input?.batchNo
 		newInput?.beginDate = input?.beginDate
 		newInput?.cityCode = input?.cityCode
+		newInput?.cityId = input?.cityId
 		newInput?.countryCode = input?.countryCode
 		newInput?.createdByCode = input?.createdByCode
+		newInput?.createdById = input?.createdById
 		newInput?.createdDate = input?.createdDate
 		newInput?.dataStateCode = input?.dataStateCode
 		newInput?.departmentCode = input?.departmentCode
@@ -23,15 +26,19 @@ class u0004 implements java.io.Serializable {
 		newInput?.flagObjectCode = input?.flagObjectCode
 		newInput?.jsonData = input?.jsonData
 		newInput?.lastModifiedByCode = input?.lastModifiedByCode
+		newInput?.lastModifiedById = input?.lastModifiedById
 		newInput?.lastModifiedDate = input?.lastModifiedDate
 		newInput?.name = input?.name
 		newInput?.orderBy = input?.orderBy
 		newInput?.orgCode = input?.orgCode
 		newInput?.parentCode = input?.parentCode
 		newInput?.parentTreeCode = input?.parentTreeCode
+		newInput?.parentTreeId = input?.parentTreeId
 		newInput?.parentTreeName = input?.parentTreeName
 		newInput?.personalCode = input?.personalCode
+		newInput?.personalId = input?.personalId
 		newInput?.provinceCode = input?.provinceCode
+		newInput?.provinceId = input?.provinceId
 		newInput?.regionCode = input?.regionCode
 		newInput?.regionId = input?.regionId
 		newInput?.siteCode = input?.siteCode

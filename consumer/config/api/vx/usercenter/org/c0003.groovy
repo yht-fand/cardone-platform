@@ -15,6 +15,7 @@ class c0003 implements java.io.Serializable {
 		newInput?.beginDate = input?.beginDate
 		newInput?.cityCode = input?.cityCode
 		newInput?.createdByCode = input?.createdByCode
+		newInput?.createdById = input?.createdById
 		newInput?.createdDate = input?.createdDate
 		newInput?.dataStateCode = input?.dataStateCode
 		newInput?.departmentCode = input?.departmentCode
@@ -23,6 +24,7 @@ class c0003 implements java.io.Serializable {
 		newInput?.flagObjectCode = input?.flagObjectCode
 		newInput?.jsonData = input?.jsonData
 		newInput?.lastModifiedByCode = input?.lastModifiedByCode
+		newInput?.lastModifiedById = input?.lastModifiedById
 		newInput?.lastModifiedDate = input?.lastModifiedDate
 		newInput?.name = input?.name
 		newInput?.orderBy = input?.orderBy
@@ -32,6 +34,7 @@ class c0003 implements java.io.Serializable {
 		newInput?.parentTreeCode = input?.parentTreeCode
 		newInput?.parentTreeName = input?.parentTreeName
 		newInput?.personalCode = input?.personalCode
+		newInput?.personalId = input?.personalId
 		newInput?.provinceCode = input?.provinceCode
 		newInput?.regionCode = input?.regionCode
 		newInput?.siteCode = input?.siteCode

@@ -22,12 +22,20 @@ ${prefixName?string('  ', ', ')}"begin_date"
 ${prefixName?string('  ', ', ')}"city_code"
 <#assign prefixName = false>
 </#if>
+<#if (insert_cityId??) && (insert_cityId_value??)>
+${prefixName?string('  ', ', ')}"city_id"
+<#assign prefixName = false>
+</#if>
 <#if (insert_countryCode??) && (insert_countryCode_value??)>
 ${prefixName?string('  ', ', ')}"country_code"
 <#assign prefixName = false>
 </#if>
 <#if (insert_createdByCode??) && (insert_createdByCode_value??)>
 ${prefixName?string('  ', ', ')}"created_by_code"
+<#assign prefixName = false>
+</#if>
+<#if (insert_createdById??) && (insert_createdById_value??)>
+${prefixName?string('  ', ', ')}"created_by_id"
 <#assign prefixName = false>
 </#if>
 <#if (insert_createdDate??) && (insert_createdDate_value??)>
@@ -62,6 +70,10 @@ ${prefixName?string('  ', ', ')}"json_data"
 ${prefixName?string('  ', ', ')}"last_modified_by_code"
 <#assign prefixName = false>
 </#if>
+<#if (insert_lastModifiedById??) && (insert_lastModifiedById_value??)>
+${prefixName?string('  ', ', ')}"last_modified_by_id"
+<#assign prefixName = false>
+</#if>
 <#if (insert_lastModifiedDate??) && (insert_lastModifiedDate_value??)>
 ${prefixName?string('  ', ', ')}"last_modified_date"
 <#assign prefixName = false>
@@ -82,8 +94,16 @@ ${prefixName?string('  ', ', ')}"org_code"
 ${prefixName?string('  ', ', ')}"personal_code"
 <#assign prefixName = false>
 </#if>
+<#if (insert_personalId??) && (insert_personalId_value??)>
+${prefixName?string('  ', ', ')}"personal_id"
+<#assign prefixName = false>
+</#if>
 <#if (insert_provinceCode??) && (insert_provinceCode_value??)>
 ${prefixName?string('  ', ', ')}"province_code"
+<#assign prefixName = false>
+</#if>
+<#if (insert_provinceId??) && (insert_provinceId_value??)>
+${prefixName?string('  ', ', ')}"province_id"
 <#assign prefixName = false>
 </#if>
 <#if (insert_siteCode??) && (insert_siteCode_value??)>
@@ -125,12 +145,20 @@ ${prefixName?string('  ', ', ')}:insert_beginDate_value
 ${prefixName?string('  ', ', ')}:insert_cityCode_value
 <#assign prefixName = false>
 </#if>
+<#if (insert_cityId??) && (insert_cityId_value??)>
+${prefixName?string('  ', ', ')}:insert_cityId_value
+<#assign prefixName = false>
+</#if>
 <#if (insert_countryCode??) && (insert_countryCode_value??)>
 ${prefixName?string('  ', ', ')}:insert_countryCode_value
 <#assign prefixName = false>
 </#if>
 <#if (insert_createdByCode??) && (insert_createdByCode_value??)>
 ${prefixName?string('  ', ', ')}:insert_createdByCode_value
+<#assign prefixName = false>
+</#if>
+<#if (insert_createdById??) && (insert_createdById_value??)>
+${prefixName?string('  ', ', ')}:insert_createdById_value
 <#assign prefixName = false>
 </#if>
 <#if (insert_createdDate??) && (insert_createdDate_value??)>
@@ -165,6 +193,10 @@ ${prefixName?string('  ', ', ')}:insert_jsonData_value
 ${prefixName?string('  ', ', ')}:insert_lastModifiedByCode_value
 <#assign prefixName = false>
 </#if>
+<#if (insert_lastModifiedById??) && (insert_lastModifiedById_value??)>
+${prefixName?string('  ', ', ')}:insert_lastModifiedById_value
+<#assign prefixName = false>
+</#if>
 <#if (insert_lastModifiedDate??) && (insert_lastModifiedDate_value??)>
 ${prefixName?string('  ', ', ')}:insert_lastModifiedDate_value
 <#assign prefixName = false>
@@ -185,8 +217,16 @@ ${prefixName?string('  ', ', ')}:insert_orgCode_value
 ${prefixName?string('  ', ', ')}:insert_personalCode_value
 <#assign prefixName = false>
 </#if>
+<#if (insert_personalId??) && (insert_personalId_value??)>
+${prefixName?string('  ', ', ')}:insert_personalId_value
+<#assign prefixName = false>
+</#if>
 <#if (insert_provinceCode??) && (insert_provinceCode_value??)>
 ${prefixName?string('  ', ', ')}:insert_provinceCode_value
+<#assign prefixName = false>
+</#if>
+<#if (insert_provinceId??) && (insert_provinceId_value??)>
+${prefixName?string('  ', ', ')}:insert_provinceId_value
 <#assign prefixName = false>
 </#if>
 <#if (insert_siteCode??) && (insert_siteCode_value??)>
@@ -247,6 +287,14 @@ ${prefixName?string('WHERE ', 'AND ')}(E."city_code" IS NULL OR E."city_code" = 
 </#if>
 <#assign prefixName = false>
 </#if>
+<#if (where_and_eq_cityId??)>
+<#if (where_and_eq_cityId_value??)>
+${prefixName?string('WHERE ', 'AND ')}E."city_id" = :where_and_eq_cityId_value
+<#else>
+${prefixName?string('WHERE ', 'AND ')}(E."city_id" IS NULL OR E."city_id" = '')
+</#if>
+<#assign prefixName = false>
+</#if>
 <#if (where_and_eq_countryCode??)>
 <#if (where_and_eq_countryCode_value??)>
 ${prefixName?string('WHERE ', 'AND ')}E."country_code" = :where_and_eq_countryCode_value
@@ -260,6 +308,14 @@ ${prefixName?string('WHERE ', 'AND ')}(E."country_code" IS NULL OR E."country_co
 ${prefixName?string('WHERE ', 'AND ')}E."created_by_code" = :where_and_eq_createdByCode_value
 <#else>
 ${prefixName?string('WHERE ', 'AND ')}(E."created_by_code" IS NULL OR E."created_by_code" = '')
+</#if>
+<#assign prefixName = false>
+</#if>
+<#if (where_and_eq_createdById??)>
+<#if (where_and_eq_createdById_value??)>
+${prefixName?string('WHERE ', 'AND ')}E."created_by_id" = :where_and_eq_createdById_value
+<#else>
+${prefixName?string('WHERE ', 'AND ')}(E."created_by_id" IS NULL OR E."created_by_id" = '')
 </#if>
 <#assign prefixName = false>
 </#if>
@@ -327,6 +383,14 @@ ${prefixName?string('WHERE ', 'AND ')}(E."last_modified_by_code" IS NULL OR E."l
 </#if>
 <#assign prefixName = false>
 </#if>
+<#if (where_and_eq_lastModifiedById??)>
+<#if (where_and_eq_lastModifiedById_value??)>
+${prefixName?string('WHERE ', 'AND ')}E."last_modified_by_id" = :where_and_eq_lastModifiedById_value
+<#else>
+${prefixName?string('WHERE ', 'AND ')}(E."last_modified_by_id" IS NULL OR E."last_modified_by_id" = '')
+</#if>
+<#assign prefixName = false>
+</#if>
 <#if (where_and_eq_lastModifiedDate??)>
 <#if (where_and_eq_lastModifiedDate_value??)>
 ${prefixName?string('WHERE ', 'AND ')}E."last_modified_date" = :where_and_eq_lastModifiedDate_value
@@ -367,11 +431,27 @@ ${prefixName?string('WHERE ', 'AND ')}(E."personal_code" IS NULL OR E."personal_
 </#if>
 <#assign prefixName = false>
 </#if>
+<#if (where_and_eq_personalId??)>
+<#if (where_and_eq_personalId_value??)>
+${prefixName?string('WHERE ', 'AND ')}E."personal_id" = :where_and_eq_personalId_value
+<#else>
+${prefixName?string('WHERE ', 'AND ')}(E."personal_id" IS NULL OR E."personal_id" = '')
+</#if>
+<#assign prefixName = false>
+</#if>
 <#if (where_and_eq_provinceCode??)>
 <#if (where_and_eq_provinceCode_value??)>
 ${prefixName?string('WHERE ', 'AND ')}E."province_code" = :where_and_eq_provinceCode_value
 <#else>
 ${prefixName?string('WHERE ', 'AND ')}(E."province_code" IS NULL OR E."province_code" = '')
+</#if>
+<#assign prefixName = false>
+</#if>
+<#if (where_and_eq_provinceId??)>
+<#if (where_and_eq_provinceId_value??)>
+${prefixName?string('WHERE ', 'AND ')}E."province_id" = :where_and_eq_provinceId_value
+<#else>
+${prefixName?string('WHERE ', 'AND ')}(E."province_id" IS NULL OR E."province_id" = '')
 </#if>
 <#assign prefixName = false>
 </#if>

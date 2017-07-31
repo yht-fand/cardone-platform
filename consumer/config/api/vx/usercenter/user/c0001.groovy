@@ -22,6 +22,7 @@ class c0001 implements java.io.Serializable {
 		newInput?.contact = input?.contact
 		newInput?.countryCode = input?.countryCode
 		newInput?.createdByCode = input?.createdByCode
+		newInput?.createdById = input?.createdById
 		newInput?.createdDate = input?.createdDate
 		newInput?.dataStateCode = input?.dataStateCode
 		newInput?.departmentCode = input?.departmentCode
@@ -37,6 +38,7 @@ class c0001 implements java.io.Serializable {
 		newInput?.intro = input?.intro
 		newInput?.jsonData = input?.jsonData
 		newInput?.lastModifiedByCode = input?.lastModifiedByCode
+		newInput?.lastModifiedById = input?.lastModifiedById
 		newInput?.lastModifiedDate = input?.lastModifiedDate
 		newInput?.lastName = input?.lastName
 		newInput?.locus = input?.locus
@@ -49,6 +51,7 @@ class c0001 implements java.io.Serializable {
 		newInput?.password = input?.password
 		newInput?.passwordSalt = input?.passwordSalt
 		newInput?.personalCode = input?.personalCode
+		newInput?.personalId = input?.personalId
 		newInput?.portraitUrl = input?.portraitUrl
 		newInput?.privatePassword = input?.privatePassword
 		newInput?.privatePasswordSalt = input?.privatePasswordSalt

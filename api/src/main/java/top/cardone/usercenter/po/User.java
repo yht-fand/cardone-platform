@@ -32,7 +32,7 @@ public class User implements java.io.Serializable {
     protected String aliasName;
 
     /**
-     * 地区代码
+     * 地区编号
      */
     @lombok.Getter
     @lombok.Setter
@@ -67,7 +67,7 @@ public class User implements java.io.Serializable {
     protected String callName;
 
     /**
-     * 城市代码
+     * 城市编号
      */
     @lombok.Getter
     @lombok.Setter
@@ -88,18 +88,25 @@ public class User implements java.io.Serializable {
     protected String contact;
 
     /**
-     * 国家代码(数据字典)
+     * 国家编号(数据字典)
      */
     @lombok.Getter
     @lombok.Setter
     protected String countryCode;
 
     /**
-     * 创建人代码
+     * 创建人编号
      */
     @lombok.Getter
     @lombok.Setter
     protected String createdByCode;
+
+    /**
+     * 创建人标识
+     */
+    @lombok.Getter
+    @lombok.Setter
+    protected String createdById;
 
     /**
      * 创建日期
@@ -109,21 +116,21 @@ public class User implements java.io.Serializable {
     protected Date createdDate;
 
     /**
-     * 数据状态代码(数据字典)
+     * 数据状态编号(数据字典)
      */
     @lombok.Getter
     @lombok.Setter
     protected String dataStateCode;
 
     /**
-     * 部门代码
+     * 部门编号
      */
     @lombok.Getter
     @lombok.Setter
     protected String departmentCode;
 
     /**
-     * 学历/文凭代码(数据字典)
+     * 学历/文凭编号(数据字典)
      */
     @lombok.Getter
     @lombok.Setter
@@ -151,28 +158,28 @@ public class User implements java.io.Serializable {
     protected String firstName;
 
     /**
-     * 标记代码(数据字典：工作流、同步、生成、录入、审批)
+     * 标记编号(数据字典：工作流、同步、生成、录入、审批)
      */
     @lombok.Getter
     @lombok.Setter
     protected String flagCode;
 
     /**
-     * 标识对象代码(工作流：工作流标识、同步：批次号、生成：操作者编号、录入：操作者编号、审批：操作者编号)
+     * 标识对象编号(工作流：工作流标识、同步：批次号、生成：操作者编号、录入：操作者编号、审批：操作者编号)
      */
     @lombok.Getter
     @lombok.Setter
     protected String flagObjectCode;
 
     /**
-     * 民族代码(数据字典)
+     * 民族编号(数据字典)
      */
     @lombok.Getter
     @lombok.Setter
     protected String folkCode;
 
     /**
-     * 证件类型代码
+     * 证件类型编号
      */
     @lombok.Getter
     @lombok.Setter
@@ -200,11 +207,18 @@ public class User implements java.io.Serializable {
     protected Object jsonData;
 
     /**
-     * 最后修改人代码
+     * 最后修改人编号
      */
     @lombok.Getter
     @lombok.Setter
     protected String lastModifiedByCode;
+
+    /**
+     * 最后修改人标识
+     */
+    @lombok.Getter
+    @lombok.Setter
+    protected String lastModifiedById;
 
     /**
      * 最后修改日期
@@ -228,7 +242,7 @@ public class User implements java.io.Serializable {
     protected String locus;
 
     /**
-     * 婚姻状态代码(数据字典)
+     * 婚姻状态编号(数据字典)
      */
     @lombok.Getter
     @lombok.Setter
@@ -263,7 +277,7 @@ public class User implements java.io.Serializable {
     protected Long orderBy;
 
     /**
-     * 组织代码
+     * 组织编号
      */
     @lombok.Getter
     @lombok.Setter
@@ -284,11 +298,18 @@ public class User implements java.io.Serializable {
     protected String passwordSalt;
 
     /**
-     * 个人代码
+     * 个人编号
      */
     @lombok.Getter
     @lombok.Setter
     protected String personalCode;
+
+    /**
+     * 个人标识
+     */
+    @lombok.Getter
+    @lombok.Setter
+    protected String personalId;
 
     /**
      * 肖像路径
@@ -312,14 +333,14 @@ public class User implements java.io.Serializable {
     protected String privatePasswordSalt;
 
     /**
-     * 职业代码
+     * 职业编号
      */
     @lombok.Getter
     @lombok.Setter
     protected String professionCode;
 
     /**
-     * 省份代码
+     * 省份编号
      */
     @lombok.Getter
     @lombok.Setter
@@ -333,7 +354,7 @@ public class User implements java.io.Serializable {
     protected String qq;
 
     /**
-     * 区域代码
+     * 区域编号
      */
     @lombok.Getter
     @lombok.Setter
@@ -347,28 +368,28 @@ public class User implements java.io.Serializable {
     protected String remark;
 
     /**
-     * 性别代码(数据字典)
+     * 性别编号(数据字典)
      */
     @lombok.Getter
     @lombok.Setter
     protected String sexCode;
 
     /**
-     * 站点代码
+     * 站点编号
      */
     @lombok.Getter
     @lombok.Setter
     protected String siteCode;
 
     /**
-     * 状态代码(数据字典)
+     * 状态编号(数据字典)
      */
     @lombok.Getter
     @lombok.Setter
     protected String stateCode;
 
     /**
-     * 系统信息代码
+     * 系统信息编号
      */
     @lombok.Getter
     @lombok.Setter
@@ -382,7 +403,7 @@ public class User implements java.io.Serializable {
     protected String telephone;
 
     /**
-     * 用户代码
+     * 用户编号
      */
     @lombok.Getter
     @lombok.Setter

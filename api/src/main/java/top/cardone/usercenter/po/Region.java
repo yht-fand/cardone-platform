@@ -11,11 +11,18 @@ import java.util.Date;
 public class Region implements java.io.Serializable {
 
     /**
-     * 地区代码
+     * 地区编号
      */
     @lombok.Getter
     @lombok.Setter
     protected String areaCode;
+
+    /**
+     * 地区标识
+     */
+    @lombok.Getter
+    @lombok.Setter
+    protected String areaId;
 
     /**
      * 批次编号
@@ -32,25 +39,39 @@ public class Region implements java.io.Serializable {
     protected Date beginDate;
 
     /**
-     * 城市代码
+     * 城市编号
      */
     @lombok.Getter
     @lombok.Setter
     protected String cityCode;
 
     /**
-     * 国家代码(数据字典)
+     * 城市标识
+     */
+    @lombok.Getter
+    @lombok.Setter
+    protected String cityId;
+
+    /**
+     * 国家编号(数据字典)
      */
     @lombok.Getter
     @lombok.Setter
     protected String countryCode;
 
     /**
-     * 创建人代码
+     * 创建人编号
      */
     @lombok.Getter
     @lombok.Setter
     protected String createdByCode;
+
+    /**
+     * 创建人标识
+     */
+    @lombok.Getter
+    @lombok.Setter
+    protected String createdById;
 
     /**
      * 创建日期
@@ -60,14 +81,14 @@ public class Region implements java.io.Serializable {
     protected Date createdDate;
 
     /**
-     * 数据状态代码(数据字典)
+     * 数据状态编号(数据字典)
      */
     @lombok.Getter
     @lombok.Setter
     protected String dataStateCode;
 
     /**
-     * 部门代码
+     * 部门编号
      */
     @lombok.Getter
     @lombok.Setter
@@ -81,14 +102,14 @@ public class Region implements java.io.Serializable {
     protected Date endDate;
 
     /**
-     * 标记代码(数据字典：工作流、同步、生成、录入、审批)
+     * 标记编号(数据字典：工作流、同步、生成、录入、审批)
      */
     @lombok.Getter
     @lombok.Setter
     protected String flagCode;
 
     /**
-     * 标识对象代码(工作流：工作流标识、同步：批次号、生成：操作者编号、录入：操作者编号、审批：操作者编号)
+     * 标识对象编号(工作流：工作流标识、同步：批次号、生成：操作者编号、录入：操作者编号、审批：操作者编号)
      */
     @lombok.Getter
     @lombok.Setter
@@ -102,11 +123,18 @@ public class Region implements java.io.Serializable {
     protected Object jsonData;
 
     /**
-     * 最后修改人代码
+     * 最后修改人编号
      */
     @lombok.Getter
     @lombok.Setter
     protected String lastModifiedByCode;
+
+    /**
+     * 最后修改人标识
+     */
+    @lombok.Getter
+    @lombok.Setter
+    protected String lastModifiedById;
 
     /**
      * 最后修改日期
@@ -130,25 +158,32 @@ public class Region implements java.io.Serializable {
     protected Long orderBy;
 
     /**
-     * 组织代码
+     * 组织编号
      */
     @lombok.Getter
     @lombok.Setter
     protected String orgCode;
 
     /**
-     * 父级代码
+     * 父级编号
      */
     @lombok.Getter
     @lombok.Setter
     protected String parentCode;
 
     /**
-     * 父级树代码
+     * 父级树编号
      */
     @lombok.Getter
     @lombok.Setter
     protected String parentTreeCode;
+
+    /**
+     * 父级树标识
+     */
+    @lombok.Getter
+    @lombok.Setter
+    protected String parentTreeId;
 
     /**
      * 父级树名称
@@ -158,21 +193,35 @@ public class Region implements java.io.Serializable {
     protected String parentTreeName;
 
     /**
-     * 个人代码
+     * 个人编号
      */
     @lombok.Getter
     @lombok.Setter
     protected String personalCode;
 
     /**
-     * 省份代码
+     * 个人标识
+     */
+    @lombok.Getter
+    @lombok.Setter
+    protected String personalId;
+
+    /**
+     * 省份编号
      */
     @lombok.Getter
     @lombok.Setter
     protected String provinceCode;
 
     /**
-     * 区域代码
+     * 省份标识
+     */
+    @lombok.Getter
+    @lombok.Setter
+    protected String provinceId;
+
+    /**
+     * 区域编号
      */
     @lombok.Getter
     @lombok.Setter
@@ -186,21 +235,21 @@ public class Region implements java.io.Serializable {
     protected String regionId;
 
     /**
-     * 站点代码
+     * 站点编号
      */
     @lombok.Getter
     @lombok.Setter
     protected String siteCode;
 
     /**
-     * 状态代码(数据字典)
+     * 状态编号(数据字典)
      */
     @lombok.Getter
     @lombok.Setter
     protected String stateCode;
 
     /**
-     * 系统信息代码
+     * 系统信息编号
      */
     @lombok.Getter
     @lombok.Setter

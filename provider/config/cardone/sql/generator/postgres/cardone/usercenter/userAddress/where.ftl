@@ -15,6 +15,14 @@ ${prefixName?string('WHERE ', 'AND ')}("area_code" IS NULL OR "area_code" = '')
 </#if>
 <#assign prefixName = false>
 </#if>
+<#if (where_and_eq_areaId??)>
+<#if (where_and_eq_areaId_value??)>
+${prefixName?string('WHERE ', 'AND ')}"area_id" = :where_and_eq_areaId_value
+<#else>
+${prefixName?string('WHERE ', 'AND ')}("area_id" IS NULL OR "area_id" = '')
+</#if>
+<#assign prefixName = false>
+</#if>
 <#if (where_and_eq_batchNo??)>
 <#if (where_and_eq_batchNo_value??)>
 ${prefixName?string('WHERE ', 'AND ')}"batch_no" = :where_and_eq_batchNo_value
@@ -39,6 +47,14 @@ ${prefixName?string('WHERE ', 'AND ')}("city_code" IS NULL OR "city_code" = '')
 </#if>
 <#assign prefixName = false>
 </#if>
+<#if (where_and_eq_cityId??)>
+<#if (where_and_eq_cityId_value??)>
+${prefixName?string('WHERE ', 'AND ')}"city_id" = :where_and_eq_cityId_value
+<#else>
+${prefixName?string('WHERE ', 'AND ')}("city_id" IS NULL OR "city_id" = '')
+</#if>
+<#assign prefixName = false>
+</#if>
 <#if (where_and_eq_countryCode??)>
 <#if (where_and_eq_countryCode_value??)>
 ${prefixName?string('WHERE ', 'AND ')}"country_code" = :where_and_eq_countryCode_value
@@ -52,6 +68,14 @@ ${prefixName?string('WHERE ', 'AND ')}("country_code" IS NULL OR "country_code" 
 ${prefixName?string('WHERE ', 'AND ')}"created_by_code" = :where_and_eq_createdByCode_value
 <#else>
 ${prefixName?string('WHERE ', 'AND ')}("created_by_code" IS NULL OR "created_by_code" = '')
+</#if>
+<#assign prefixName = false>
+</#if>
+<#if (where_and_eq_createdById??)>
+<#if (where_and_eq_createdById_value??)>
+${prefixName?string('WHERE ', 'AND ')}"created_by_id" = :where_and_eq_createdById_value
+<#else>
+${prefixName?string('WHERE ', 'AND ')}("created_by_id" IS NULL OR "created_by_id" = '')
 </#if>
 <#assign prefixName = false>
 </#if>
@@ -127,6 +151,14 @@ ${prefixName?string('WHERE ', 'AND ')}("last_modified_by_code" IS NULL OR "last_
 </#if>
 <#assign prefixName = false>
 </#if>
+<#if (where_and_eq_lastModifiedById??)>
+<#if (where_and_eq_lastModifiedById_value??)>
+${prefixName?string('WHERE ', 'AND ')}"last_modified_by_id" = :where_and_eq_lastModifiedById_value
+<#else>
+${prefixName?string('WHERE ', 'AND ')}("last_modified_by_id" IS NULL OR "last_modified_by_id" = '')
+</#if>
+<#assign prefixName = false>
+</#if>
 <#if (where_and_eq_lastModifiedDate??)>
 <#if (where_and_eq_lastModifiedDate_value??)>
 ${prefixName?string('WHERE ', 'AND ')}"last_modified_date" = :where_and_eq_lastModifiedDate_value
@@ -159,6 +191,14 @@ ${prefixName?string('WHERE ', 'AND ')}("personal_code" IS NULL OR "personal_code
 </#if>
 <#assign prefixName = false>
 </#if>
+<#if (where_and_eq_personalId??)>
+<#if (where_and_eq_personalId_value??)>
+${prefixName?string('WHERE ', 'AND ')}"personal_id" = :where_and_eq_personalId_value
+<#else>
+${prefixName?string('WHERE ', 'AND ')}("personal_id" IS NULL OR "personal_id" = '')
+</#if>
+<#assign prefixName = false>
+</#if>
 <#if (where_and_eq_provinceCode??)>
 <#if (where_and_eq_provinceCode_value??)>
 ${prefixName?string('WHERE ', 'AND ')}"province_code" = :where_and_eq_provinceCode_value
@@ -167,11 +207,27 @@ ${prefixName?string('WHERE ', 'AND ')}("province_code" IS NULL OR "province_code
 </#if>
 <#assign prefixName = false>
 </#if>
+<#if (where_and_eq_provinceId??)>
+<#if (where_and_eq_provinceId_value??)>
+${prefixName?string('WHERE ', 'AND ')}"province_id" = :where_and_eq_provinceId_value
+<#else>
+${prefixName?string('WHERE ', 'AND ')}("province_id" IS NULL OR "province_id" = '')
+</#if>
+<#assign prefixName = false>
+</#if>
 <#if (where_and_eq_regionCode??)>
 <#if (where_and_eq_regionCode_value??)>
 ${prefixName?string('WHERE ', 'AND ')}"region_code" = :where_and_eq_regionCode_value
 <#else>
 ${prefixName?string('WHERE ', 'AND ')}("region_code" IS NULL OR "region_code" = '')
+</#if>
+<#assign prefixName = false>
+</#if>
+<#if (where_and_eq_regionId??)>
+<#if (where_and_eq_regionId_value??)>
+${prefixName?string('WHERE ', 'AND ')}"region_id" = :where_and_eq_regionId_value
+<#else>
+${prefixName?string('WHERE ', 'AND ')}("region_id" IS NULL OR "region_id" = '')
 </#if>
 <#assign prefixName = false>
 </#if>
@@ -220,6 +276,14 @@ ${prefixName?string('WHERE ', 'AND ')}("user_address_id" IS NULL OR "user_addres
 ${prefixName?string('WHERE ', 'AND ')}"user_code" = :where_and_eq_userCode_value
 <#else>
 ${prefixName?string('WHERE ', 'AND ')}("user_code" IS NULL OR "user_code" = '')
+</#if>
+<#assign prefixName = false>
+</#if>
+<#if (where_and_eq_userId??)>
+<#if (where_and_eq_userId_value??)>
+${prefixName?string('WHERE ', 'AND ')}"user_id" = :where_and_eq_userId_value
+<#else>
+${prefixName?string('WHERE ', 'AND ')}("user_id" IS NULL OR "user_id" = '')
 </#if>
 <#assign prefixName = false>
 </#if>

@@ -78,15 +78,21 @@ class r0003 implements java.io.Serializable {
 
             data['areaCode'] = contentItem['area_code']
 
+            data['areaId'] = contentItem['area_id']
+
             data['batchNo'] = contentItem['batch_no']
 
             data['beginDate'] = contentItem['begin_date']
 
             data['cityCode'] = contentItem['city_code']
 
+            data['cityId'] = contentItem['city_id']
+
             data['countryCode'] = contentItem['country_code']
 
             data['createdByCode'] = contentItem['created_by_code']
+
+            data['createdById'] = contentItem['created_by_id']
 
             data['createdDate'] = contentItem['created_date']
 
@@ -106,6 +112,8 @@ class r0003 implements java.io.Serializable {
 
             data['lastModifiedByCode'] = contentItem['last_modified_by_code']
 
+            data['lastModifiedById'] = contentItem['last_modified_by_id']
+
             data['lastModifiedDate'] = contentItem['last_modified_date']
 
             data['orderBy'] = contentItem['order_by_']
@@ -114,9 +122,15 @@ class r0003 implements java.io.Serializable {
 
             data['personalCode'] = contentItem['personal_code']
 
+            data['personalId'] = contentItem['personal_id']
+
             data['provinceCode'] = contentItem['province_code']
 
+            data['provinceId'] = contentItem['province_id']
+
             data['regionCode'] = contentItem['region_code']
+
+            data['regionId'] = contentItem['region_id']
 
             data['siteCode'] = contentItem['site_code']
 
@@ -129,6 +143,8 @@ class r0003 implements java.io.Serializable {
             data['userAddressId'] = contentItem['user_address_id']
 
             data['userCode'] = contentItem['user_code']
+
+            data['userId'] = contentItem['user_id']
 
             data['version'] = contentItem['version_']
 

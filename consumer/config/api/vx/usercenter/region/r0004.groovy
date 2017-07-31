@@ -76,15 +76,21 @@ class r0004 implements java.io.Serializable {
 
             data['areaCode'] = contentItem['area_code']
 
+            data['areaId'] = contentItem['area_id']
+
             data['batchNo'] = contentItem['batch_no']
 
             data['beginDate'] = contentItem['begin_date']
 
             data['cityCode'] = contentItem['city_code']
 
+            data['cityId'] = contentItem['city_id']
+
             data['countryCode'] = contentItem['country_code']
 
             data['createdByCode'] = contentItem['created_by_code']
+
+            data['createdById'] = contentItem['created_by_id']
 
             data['createdDate'] = contentItem['created_date']
 
@@ -102,6 +108,8 @@ class r0004 implements java.io.Serializable {
 
             data['lastModifiedByCode'] = contentItem['last_modified_by_code']
 
+            data['lastModifiedById'] = contentItem['last_modified_by_id']
+
             data['lastModifiedDate'] = contentItem['last_modified_date']
 
             data['name'] = contentItem['name']
@@ -114,11 +122,17 @@ class r0004 implements java.io.Serializable {
 
             data['parentTreeCode'] = contentItem['parent_tree_code']
 
+            data['parentTreeId'] = contentItem['parent_tree_id']
+
             data['parentTreeName'] = contentItem['parent_tree_name']
 
             data['personalCode'] = contentItem['personal_code']
 
+            data['personalId'] = contentItem['personal_id']
+
             data['provinceCode'] = contentItem['province_code']
+
+            data['provinceId'] = contentItem['province_id']
 
             data['regionCode'] = contentItem['region_code']
 

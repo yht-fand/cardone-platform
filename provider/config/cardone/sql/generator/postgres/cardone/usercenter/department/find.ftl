@@ -24,6 +24,10 @@ ${prefixName?string('  ', ', ')}"city_code"
 ${prefixName?string('  ', ', ')}"created_by_code"
 <#assign prefixName = false>
 </#if>
+<#if (select_createdById??)>
+${prefixName?string('  ', ', ')}"created_by_id"
+<#assign prefixName = false>
+</#if>
 <#if (select_createdDate??)>
 ${prefixName?string('  ', ', ')}"created_date"
 <#assign prefixName = false>
@@ -60,6 +64,10 @@ ${prefixName?string('  ', ', ')}"json_data"
 ${prefixName?string('  ', ', ')}"last_modified_by_code"
 <#assign prefixName = false>
 </#if>
+<#if (select_lastModifiedById??)>
+${prefixName?string('  ', ', ')}"last_modified_by_id"
+<#assign prefixName = false>
+</#if>
 <#if (select_lastModifiedDate??)>
 ${prefixName?string('  ', ', ')}"last_modified_date"
 <#assign prefixName = false>
@@ -76,6 +84,10 @@ ${prefixName?string('  ', ', ')}"order_by_"
 ${prefixName?string('  ', ', ')}"org_code"
 <#assign prefixName = false>
 </#if>
+<#if (select_orgId??)>
+${prefixName?string('  ', ', ')}"org_id"
+<#assign prefixName = false>
+</#if>
 <#if (select_parentCode??)>
 ${prefixName?string('  ', ', ')}"parent_code"
 <#assign prefixName = false>
@@ -84,12 +96,20 @@ ${prefixName?string('  ', ', ')}"parent_code"
 ${prefixName?string('  ', ', ')}"parent_tree_code"
 <#assign prefixName = false>
 </#if>
+<#if (select_parentTreeId??)>
+${prefixName?string('  ', ', ')}"parent_tree_id"
+<#assign prefixName = false>
+</#if>
 <#if (select_parentTreeName??)>
 ${prefixName?string('  ', ', ')}"parent_tree_name"
 <#assign prefixName = false>
 </#if>
 <#if (select_personalCode??)>
 ${prefixName?string('  ', ', ')}"personal_code"
+<#assign prefixName = false>
+</#if>
+<#if (select_personalId??)>
+${prefixName?string('  ', ', ')}"personal_id"
 <#assign prefixName = false>
 </#if>
 <#if (select_provinceCode??)>
@@ -146,6 +166,10 @@ ${prefixName?string('ORDER BY ', ', ')}"city_code" ${order_by_cityCode_value!}
 ${prefixName?string('ORDER BY ', ', ')}"created_by_code" ${order_by_createdByCode_value!}
 <#assign prefixName = false>
 </#if>
+<#if (order_by_createdById??)>
+${prefixName?string('ORDER BY ', ', ')}"created_by_id" ${order_by_createdById_value!}
+<#assign prefixName = false>
+</#if>
 <#if (order_by_createdDate??)>
 ${prefixName?string('ORDER BY ', ', ')}"created_date" ${order_by_createdDate_value!}
 <#assign prefixName = false>
@@ -182,6 +206,10 @@ ${prefixName?string('ORDER BY ', ', ')}"json_data" ${order_by_jsonData_value!}
 ${prefixName?string('ORDER BY ', ', ')}"last_modified_by_code" ${order_by_lastModifiedByCode_value!}
 <#assign prefixName = false>
 </#if>
+<#if (order_by_lastModifiedById??)>
+${prefixName?string('ORDER BY ', ', ')}"last_modified_by_id" ${order_by_lastModifiedById_value!}
+<#assign prefixName = false>
+</#if>
 <#if (order_by_lastModifiedDate??)>
 ${prefixName?string('ORDER BY ', ', ')}"last_modified_date" ${order_by_lastModifiedDate_value!}
 <#assign prefixName = false>
@@ -198,6 +226,10 @@ ${prefixName?string('ORDER BY ', ', ')}"order_by_" ${order_by_orderBy_value!}
 ${prefixName?string('ORDER BY ', ', ')}"org_code" ${order_by_orgCode_value!}
 <#assign prefixName = false>
 </#if>
+<#if (order_by_orgId??)>
+${prefixName?string('ORDER BY ', ', ')}"org_id" ${order_by_orgId_value!}
+<#assign prefixName = false>
+</#if>
 <#if (order_by_parentCode??)>
 ${prefixName?string('ORDER BY ', ', ')}"parent_code" ${order_by_parentCode_value!}
 <#assign prefixName = false>
@@ -206,12 +238,20 @@ ${prefixName?string('ORDER BY ', ', ')}"parent_code" ${order_by_parentCode_value
 ${prefixName?string('ORDER BY ', ', ')}"parent_tree_code" ${order_by_parentTreeCode_value!}
 <#assign prefixName = false>
 </#if>
+<#if (order_by_parentTreeId??)>
+${prefixName?string('ORDER BY ', ', ')}"parent_tree_id" ${order_by_parentTreeId_value!}
+<#assign prefixName = false>
+</#if>
 <#if (order_by_parentTreeName??)>
 ${prefixName?string('ORDER BY ', ', ')}"parent_tree_name" ${order_by_parentTreeName_value!}
 <#assign prefixName = false>
 </#if>
 <#if (order_by_personalCode??)>
 ${prefixName?string('ORDER BY ', ', ')}"personal_code" ${order_by_personalCode_value!}
+<#assign prefixName = false>
+</#if>
+<#if (order_by_personalId??)>
+${prefixName?string('ORDER BY ', ', ')}"personal_id" ${order_by_personalId_value!}
 <#assign prefixName = false>
 </#if>
 <#if (order_by_provinceCode??)>

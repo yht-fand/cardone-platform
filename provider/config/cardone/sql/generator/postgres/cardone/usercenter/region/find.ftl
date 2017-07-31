@@ -4,6 +4,10 @@ SELECT
 ${prefixName?string('  ', ', ')}"area_code"
 <#assign prefixName = false>
 </#if>
+<#if (select_areaId??)>
+${prefixName?string('  ', ', ')}"area_id"
+<#assign prefixName = false>
+</#if>
 <#if (select_batchNo??)>
 ${prefixName?string('  ', ', ')}"batch_no"
 <#assign prefixName = false>
@@ -16,12 +20,20 @@ ${prefixName?string('  ', ', ')}"begin_date"
 ${prefixName?string('  ', ', ')}"city_code"
 <#assign prefixName = false>
 </#if>
+<#if (select_cityId??)>
+${prefixName?string('  ', ', ')}"city_id"
+<#assign prefixName = false>
+</#if>
 <#if (select_countryCode??)>
 ${prefixName?string('  ', ', ')}"country_code"
 <#assign prefixName = false>
 </#if>
 <#if (select_createdByCode??)>
 ${prefixName?string('  ', ', ')}"created_by_code"
+<#assign prefixName = false>
+</#if>
+<#if (select_createdById??)>
+${prefixName?string('  ', ', ')}"created_by_id"
 <#assign prefixName = false>
 </#if>
 <#if (select_createdDate??)>
@@ -56,6 +68,10 @@ ${prefixName?string('  ', ', ')}"json_data"
 ${prefixName?string('  ', ', ')}"last_modified_by_code"
 <#assign prefixName = false>
 </#if>
+<#if (select_lastModifiedById??)>
+${prefixName?string('  ', ', ')}"last_modified_by_id"
+<#assign prefixName = false>
+</#if>
 <#if (select_lastModifiedDate??)>
 ${prefixName?string('  ', ', ')}"last_modified_date"
 <#assign prefixName = false>
@@ -80,6 +96,10 @@ ${prefixName?string('  ', ', ')}"parent_code"
 ${prefixName?string('  ', ', ')}"parent_tree_code"
 <#assign prefixName = false>
 </#if>
+<#if (select_parentTreeId??)>
+${prefixName?string('  ', ', ')}"parent_tree_id"
+<#assign prefixName = false>
+</#if>
 <#if (select_parentTreeName??)>
 ${prefixName?string('  ', ', ')}"parent_tree_name"
 <#assign prefixName = false>
@@ -88,8 +108,16 @@ ${prefixName?string('  ', ', ')}"parent_tree_name"
 ${prefixName?string('  ', ', ')}"personal_code"
 <#assign prefixName = false>
 </#if>
+<#if (select_personalId??)>
+${prefixName?string('  ', ', ')}"personal_id"
+<#assign prefixName = false>
+</#if>
 <#if (select_provinceCode??)>
 ${prefixName?string('  ', ', ')}"province_code"
+<#assign prefixName = false>
+</#if>
+<#if (select_provinceId??)>
+${prefixName?string('  ', ', ')}"province_id"
 <#assign prefixName = false>
 </#if>
 <#if (select_regionCode??)>
@@ -126,6 +154,10 @@ FROM c1_region
 ${prefixName?string('ORDER BY ', ', ')}"area_code" ${order_by_areaCode_value!}
 <#assign prefixName = false>
 </#if>
+<#if (order_by_areaId??)>
+${prefixName?string('ORDER BY ', ', ')}"area_id" ${order_by_areaId_value!}
+<#assign prefixName = false>
+</#if>
 <#if (order_by_batchNo??)>
 ${prefixName?string('ORDER BY ', ', ')}"batch_no" ${order_by_batchNo_value!}
 <#assign prefixName = false>
@@ -138,12 +170,20 @@ ${prefixName?string('ORDER BY ', ', ')}"begin_date" ${order_by_beginDate_value!}
 ${prefixName?string('ORDER BY ', ', ')}"city_code" ${order_by_cityCode_value!}
 <#assign prefixName = false>
 </#if>
+<#if (order_by_cityId??)>
+${prefixName?string('ORDER BY ', ', ')}"city_id" ${order_by_cityId_value!}
+<#assign prefixName = false>
+</#if>
 <#if (order_by_countryCode??)>
 ${prefixName?string('ORDER BY ', ', ')}"country_code" ${order_by_countryCode_value!}
 <#assign prefixName = false>
 </#if>
 <#if (order_by_createdByCode??)>
 ${prefixName?string('ORDER BY ', ', ')}"created_by_code" ${order_by_createdByCode_value!}
+<#assign prefixName = false>
+</#if>
+<#if (order_by_createdById??)>
+${prefixName?string('ORDER BY ', ', ')}"created_by_id" ${order_by_createdById_value!}
 <#assign prefixName = false>
 </#if>
 <#if (order_by_createdDate??)>
@@ -178,6 +218,10 @@ ${prefixName?string('ORDER BY ', ', ')}"json_data" ${order_by_jsonData_value!}
 ${prefixName?string('ORDER BY ', ', ')}"last_modified_by_code" ${order_by_lastModifiedByCode_value!}
 <#assign prefixName = false>
 </#if>
+<#if (order_by_lastModifiedById??)>
+${prefixName?string('ORDER BY ', ', ')}"last_modified_by_id" ${order_by_lastModifiedById_value!}
+<#assign prefixName = false>
+</#if>
 <#if (order_by_lastModifiedDate??)>
 ${prefixName?string('ORDER BY ', ', ')}"last_modified_date" ${order_by_lastModifiedDate_value!}
 <#assign prefixName = false>
@@ -202,6 +246,10 @@ ${prefixName?string('ORDER BY ', ', ')}"parent_code" ${order_by_parentCode_value
 ${prefixName?string('ORDER BY ', ', ')}"parent_tree_code" ${order_by_parentTreeCode_value!}
 <#assign prefixName = false>
 </#if>
+<#if (order_by_parentTreeId??)>
+${prefixName?string('ORDER BY ', ', ')}"parent_tree_id" ${order_by_parentTreeId_value!}
+<#assign prefixName = false>
+</#if>
 <#if (order_by_parentTreeName??)>
 ${prefixName?string('ORDER BY ', ', ')}"parent_tree_name" ${order_by_parentTreeName_value!}
 <#assign prefixName = false>
@@ -210,8 +258,16 @@ ${prefixName?string('ORDER BY ', ', ')}"parent_tree_name" ${order_by_parentTreeN
 ${prefixName?string('ORDER BY ', ', ')}"personal_code" ${order_by_personalCode_value!}
 <#assign prefixName = false>
 </#if>
+<#if (order_by_personalId??)>
+${prefixName?string('ORDER BY ', ', ')}"personal_id" ${order_by_personalId_value!}
+<#assign prefixName = false>
+</#if>
 <#if (order_by_provinceCode??)>
 ${prefixName?string('ORDER BY ', ', ')}"province_code" ${order_by_provinceCode_value!}
+<#assign prefixName = false>
+</#if>
+<#if (order_by_provinceId??)>
+${prefixName?string('ORDER BY ', ', ')}"province_id" ${order_by_provinceId_value!}
 <#assign prefixName = false>
 </#if>
 <#if (order_by_regionCode??)>

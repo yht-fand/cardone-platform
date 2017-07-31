@@ -18,6 +18,9 @@ SELECT
 <#case "createdByCode">
 "created_by_code"
 <#break>
+<#case "createdById">
+"created_by_id"
+<#break>
 <#case "createdDate">
 "created_date"
 <#break>
@@ -45,6 +48,9 @@ SELECT
 <#case "lastModifiedByCode">
 "last_modified_by_code"
 <#break>
+<#case "lastModifiedById">
+"last_modified_by_id"
+<#break>
 <#case "lastModifiedDate">
 "last_modified_date"
 <#break>
@@ -57,17 +63,26 @@ SELECT
 <#case "orgCode">
 "org_code"
 <#break>
+<#case "orgId">
+"org_id"
+<#break>
 <#case "parentCode">
 "parent_code"
 <#break>
 <#case "parentTreeCode">
 "parent_tree_code"
 <#break>
+<#case "parentTreeId">
+"parent_tree_id"
+<#break>
 <#case "parentTreeName">
 "parent_tree_name"
 <#break>
 <#case "personalCode">
 "personal_code"
+<#break>
+<#case "personalId">
+"personal_id"
 <#break>
 <#case "provinceCode">
 "province_code"

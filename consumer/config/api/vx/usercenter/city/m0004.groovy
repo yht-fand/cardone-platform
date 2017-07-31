@@ -15,6 +15,7 @@ class m0004 implements java.io.Serializable {
 		newInput?.cityId = input?.cityId
 		newInput?.countryCode = input?.countryCode
 		newInput?.createdByCode = input?.createdByCode
+		newInput?.createdById = input?.createdById
 		newInput?.createdDate = input?.createdDate
 		newInput?.dataStateCode = input?.dataStateCode
 		newInput?.departmentCode = input?.departmentCode
@@ -23,12 +24,15 @@ class m0004 implements java.io.Serializable {
 		newInput?.flagObjectCode = input?.flagObjectCode
 		newInput?.jsonData = input?.jsonData
 		newInput?.lastModifiedByCode = input?.lastModifiedByCode
+		newInput?.lastModifiedById = input?.lastModifiedById
 		newInput?.lastModifiedDate = input?.lastModifiedDate
 		newInput?.name = input?.name
 		newInput?.orderBy = input?.orderBy
 		newInput?.orgCode = input?.orgCode
 		newInput?.personalCode = input?.personalCode
+		newInput?.personalId = input?.personalId
 		newInput?.provinceCode = input?.provinceCode
+		newInput?.provinceId = input?.provinceId
 		newInput?.siteCode = input?.siteCode
 		newInput?.stateCode = input?.stateCode
 		newInput?.systemInfoCode = input?.systemInfoCode
@@ -84,6 +88,7 @@ class m0004 implements java.io.Serializable {
 		newOutput?.cityId = output?.city_id
 		newOutput?.countryCode = output?.country_code
 		newOutput?.createdByCode = output?.created_by_code
+		newOutput?.createdById = output?.created_by_id
 		newOutput?.createdDate = output?.created_date
 		newOutput?.dataStateCode = output?.data_state_code
 		newOutput?.departmentCode = output?.department_code
@@ -92,12 +97,15 @@ class m0004 implements java.io.Serializable {
 		newOutput?.flagObjectCode = output?.flag_object_code
 		newOutput?.jsonData = output?.json_data
 		newOutput?.lastModifiedByCode = output?.last_modified_by_code
+		newOutput?.lastModifiedById = output?.last_modified_by_id
 		newOutput?.lastModifiedDate = output?.last_modified_date
 		newOutput?.name = output?.name
 		newOutput?.orderBy = output?.order_by_
 		newOutput?.orgCode = output?.org_code
 		newOutput?.personalCode = output?.personal_code
+		newOutput?.personalId = output?.personal_id
 		newOutput?.provinceCode = output?.province_code
+		newOutput?.provinceId = output?.province_id
 		newOutput?.siteCode = output?.site_code
 		newOutput?.stateCode = output?.state_code
 		newOutput?.systemInfoCode = output?.system_info_code

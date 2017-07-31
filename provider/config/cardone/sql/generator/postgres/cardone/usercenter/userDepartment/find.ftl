@@ -8,8 +8,16 @@ ${prefixName?string('  ', ', ')}"batch_no"
 ${prefixName?string('  ', ', ')}"begin_date"
 <#assign prefixName = false>
 </#if>
+<#if (select_c1DepartmentCode??)>
+${prefixName?string('  ', ', ')}"c1__department_code"
+<#assign prefixName = false>
+</#if>
 <#if (select_createdByCode??)>
 ${prefixName?string('  ', ', ')}"created_by_code"
+<#assign prefixName = false>
+</#if>
+<#if (select_createdById??)>
+${prefixName?string('  ', ', ')}"created_by_id"
 <#assign prefixName = false>
 </#if>
 <#if (select_createdDate??)>
@@ -22,6 +30,10 @@ ${prefixName?string('  ', ', ')}"data_state_code"
 </#if>
 <#if (select_departmentCode??)>
 ${prefixName?string('  ', ', ')}"department_code"
+<#assign prefixName = false>
+</#if>
+<#if (select_departmentId??)>
+${prefixName?string('  ', ', ')}"department_id"
 <#assign prefixName = false>
 </#if>
 <#if (select_endDate??)>
@@ -44,6 +56,10 @@ ${prefixName?string('  ', ', ')}"json_data"
 ${prefixName?string('  ', ', ')}"last_modified_by_code"
 <#assign prefixName = false>
 </#if>
+<#if (select_lastModifiedById??)>
+${prefixName?string('  ', ', ')}"last_modified_by_id"
+<#assign prefixName = false>
+</#if>
 <#if (select_lastModifiedDate??)>
 ${prefixName?string('  ', ', ')}"last_modified_date"
 <#assign prefixName = false>
@@ -58,6 +74,10 @@ ${prefixName?string('  ', ', ')}"org_code"
 </#if>
 <#if (select_personalCode??)>
 ${prefixName?string('  ', ', ')}"personal_code"
+<#assign prefixName = false>
+</#if>
+<#if (select_personalId??)>
+${prefixName?string('  ', ', ')}"personal_id"
 <#assign prefixName = false>
 </#if>
 <#if (select_siteCode??)>
@@ -80,6 +100,10 @@ ${prefixName?string('  ', ', ')}"user_code"
 ${prefixName?string('  ', ', ')}"user_department_id"
 <#assign prefixName = false>
 </#if>
+<#if (select_userId??)>
+${prefixName?string('  ', ', ')}"user_id"
+<#assign prefixName = false>
+</#if>
 <#if (select_version??)>
 ${prefixName?string('  ', ', ')}"version_"
 <#assign prefixName = false>
@@ -98,8 +122,16 @@ ${prefixName?string('ORDER BY ', ', ')}"batch_no" ${order_by_batchNo_value!}
 ${prefixName?string('ORDER BY ', ', ')}"begin_date" ${order_by_beginDate_value!}
 <#assign prefixName = false>
 </#if>
+<#if (order_by_c1DepartmentCode??)>
+${prefixName?string('ORDER BY ', ', ')}"c1__department_code" ${order_by_c1DepartmentCode_value!}
+<#assign prefixName = false>
+</#if>
 <#if (order_by_createdByCode??)>
 ${prefixName?string('ORDER BY ', ', ')}"created_by_code" ${order_by_createdByCode_value!}
+<#assign prefixName = false>
+</#if>
+<#if (order_by_createdById??)>
+${prefixName?string('ORDER BY ', ', ')}"created_by_id" ${order_by_createdById_value!}
 <#assign prefixName = false>
 </#if>
 <#if (order_by_createdDate??)>
@@ -112,6 +144,10 @@ ${prefixName?string('ORDER BY ', ', ')}"data_state_code" ${order_by_dataStateCod
 </#if>
 <#if (order_by_departmentCode??)>
 ${prefixName?string('ORDER BY ', ', ')}"department_code" ${order_by_departmentCode_value!}
+<#assign prefixName = false>
+</#if>
+<#if (order_by_departmentId??)>
+${prefixName?string('ORDER BY ', ', ')}"department_id" ${order_by_departmentId_value!}
 <#assign prefixName = false>
 </#if>
 <#if (order_by_endDate??)>
@@ -134,6 +170,10 @@ ${prefixName?string('ORDER BY ', ', ')}"json_data" ${order_by_jsonData_value!}
 ${prefixName?string('ORDER BY ', ', ')}"last_modified_by_code" ${order_by_lastModifiedByCode_value!}
 <#assign prefixName = false>
 </#if>
+<#if (order_by_lastModifiedById??)>
+${prefixName?string('ORDER BY ', ', ')}"last_modified_by_id" ${order_by_lastModifiedById_value!}
+<#assign prefixName = false>
+</#if>
 <#if (order_by_lastModifiedDate??)>
 ${prefixName?string('ORDER BY ', ', ')}"last_modified_date" ${order_by_lastModifiedDate_value!}
 <#assign prefixName = false>
@@ -148,6 +188,10 @@ ${prefixName?string('ORDER BY ', ', ')}"org_code" ${order_by_orgCode_value!}
 </#if>
 <#if (order_by_personalCode??)>
 ${prefixName?string('ORDER BY ', ', ')}"personal_code" ${order_by_personalCode_value!}
+<#assign prefixName = false>
+</#if>
+<#if (order_by_personalId??)>
+${prefixName?string('ORDER BY ', ', ')}"personal_id" ${order_by_personalId_value!}
 <#assign prefixName = false>
 </#if>
 <#if (order_by_siteCode??)>
@@ -168,6 +212,10 @@ ${prefixName?string('ORDER BY ', ', ')}"user_code" ${order_by_userCode_value!}
 </#if>
 <#if (order_by_userDepartmentId??)>
 ${prefixName?string('ORDER BY ', ', ')}"user_department_id" ${order_by_userDepartmentId_value!}
+<#assign prefixName = false>
+</#if>
+<#if (order_by_userId??)>
+${prefixName?string('ORDER BY ', ', ')}"user_id" ${order_by_userId_value!}
 <#assign prefixName = false>
 </#if>
 <#if (order_by_version??)>

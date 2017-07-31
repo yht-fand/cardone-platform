@@ -22,6 +22,7 @@ class m0002 implements java.io.Serializable {
 		newInput?.contact = input?.contact
 		newInput?.countryCode = input?.countryCode
 		newInput?.createdByCode = input?.createdByCode
+		newInput?.createdById = input?.createdById
 		newInput?.createdDate = input?.createdDate
 		newInput?.dataStateCode = input?.dataStateCode
 		newInput?.departmentCode = input?.departmentCode
@@ -37,6 +38,7 @@ class m0002 implements java.io.Serializable {
 		newInput?.intro = input?.intro
 		newInput?.jsonData = input?.jsonData
 		newInput?.lastModifiedByCode = input?.lastModifiedByCode
+		newInput?.lastModifiedById = input?.lastModifiedById
 		newInput?.lastModifiedDate = input?.lastModifiedDate
 		newInput?.lastName = input?.lastName
 		newInput?.locus = input?.locus
@@ -49,6 +51,7 @@ class m0002 implements java.io.Serializable {
 		newInput?.password = input?.password
 		newInput?.passwordSalt = input?.passwordSalt
 		newInput?.personalCode = input?.personalCode
+		newInput?.personalId = input?.personalId
 		newInput?.portraitUrl = input?.portraitUrl
 		newInput?.privatePassword = input?.privatePassword
 		newInput?.privatePasswordSalt = input?.privatePasswordSalt
@@ -123,6 +126,7 @@ class m0002 implements java.io.Serializable {
 		newOutput?.contact = output?.contact
 		newOutput?.countryCode = output?.country_code
 		newOutput?.createdByCode = output?.created_by_code
+		newOutput?.createdById = output?.created_by_id
 		newOutput?.createdDate = output?.created_date
 		newOutput?.dataStateCode = output?.data_state_code
 		newOutput?.departmentCode = output?.department_code
@@ -138,6 +142,7 @@ class m0002 implements java.io.Serializable {
 		newOutput?.intro = output?.intro
 		newOutput?.jsonData = output?.json_data
 		newOutput?.lastModifiedByCode = output?.last_modified_by_code
+		newOutput?.lastModifiedById = output?.last_modified_by_id
 		newOutput?.lastModifiedDate = output?.last_modified_date
 		newOutput?.lastName = output?.last_name
 		newOutput?.locus = output?.locus
@@ -150,6 +155,7 @@ class m0002 implements java.io.Serializable {
 		newOutput?.password = output?.password_
 		newOutput?.passwordSalt = output?.password_salt
 		newOutput?.personalCode = output?.personal_code
+		newOutput?.personalId = output?.personal_id
 		newOutput?.portraitUrl = output?.portrait_url
 		newOutput?.privatePassword = output?.private_password
 		newOutput?.privatePasswordSalt = output?.private_password_salt

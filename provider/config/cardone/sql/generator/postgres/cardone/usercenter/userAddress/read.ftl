@@ -6,6 +6,9 @@ SELECT
 <#case "areaCode">
 "area_code"
 <#break>
+<#case "areaId">
+"area_id"
+<#break>
 <#case "batchNo">
 "batch_no"
 <#break>
@@ -15,11 +18,17 @@ SELECT
 <#case "cityCode">
 "city_code"
 <#break>
+<#case "cityId">
+"city_id"
+<#break>
 <#case "countryCode">
 "country_code"
 <#break>
 <#case "createdByCode">
 "created_by_code"
+<#break>
+<#case "createdById">
+"created_by_id"
 <#break>
 <#case "createdDate">
 "created_date"
@@ -48,6 +57,9 @@ SELECT
 <#case "lastModifiedByCode">
 "last_modified_by_code"
 <#break>
+<#case "lastModifiedById">
+"last_modified_by_id"
+<#break>
 <#case "lastModifiedDate">
 "last_modified_date"
 <#break>
@@ -60,11 +72,20 @@ SELECT
 <#case "personalCode">
 "personal_code"
 <#break>
+<#case "personalId">
+"personal_id"
+<#break>
 <#case "provinceCode">
 "province_code"
 <#break>
+<#case "provinceId">
+"province_id"
+<#break>
 <#case "regionCode">
 "region_code"
+<#break>
+<#case "regionId">
+"region_id"
 <#break>
 <#case "siteCode">
 "site_code"
@@ -83,6 +104,9 @@ SELECT
 <#break>
 <#case "userCode">
 "user_code"
+<#break>
+<#case "userId">
+"user_id"
 <#break>
 <#case "version">
 "version_"

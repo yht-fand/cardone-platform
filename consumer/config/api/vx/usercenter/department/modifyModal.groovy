@@ -29,6 +29,7 @@ class modifyModal implements java.io.Serializable {
 		newOutput?.beginDate = output?.begin_date
 		newOutput?.cityCode = output?.city_code
 		newOutput?.createdByCode = output?.created_by_code
+		newOutput?.createdById = output?.created_by_id
 		newOutput?.createdDate = output?.created_date
 		newOutput?.dataStateCode = output?.data_state_code
 		newOutput?.departmentCode = output?.department_code
@@ -38,14 +39,18 @@ class modifyModal implements java.io.Serializable {
 		newOutput?.flagObjectCode = output?.flag_object_code
 		newOutput?.jsonData = output?.json_data
 		newOutput?.lastModifiedByCode = output?.last_modified_by_code
+		newOutput?.lastModifiedById = output?.last_modified_by_id
 		newOutput?.lastModifiedDate = output?.last_modified_date
 		newOutput?.name = output?.name
 		newOutput?.orderBy = output?.order_by_
 		newOutput?.orgCode = output?.org_code
+		newOutput?.orgId = output?.org_id
 		newOutput?.parentCode = output?.parent_code
 		newOutput?.parentTreeCode = output?.parent_tree_code
+		newOutput?.parentTreeId = output?.parent_tree_id
 		newOutput?.parentTreeName = output?.parent_tree_name
 		newOutput?.personalCode = output?.personal_code
+		newOutput?.personalId = output?.personal_id
 		newOutput?.provinceCode = output?.province_code
 		newOutput?.regionCode = output?.region_code
 		newOutput?.siteCode = output?.site_code

@@ -15,11 +15,17 @@ SELECT
 <#case "cityCode">
 "city_code"
 <#break>
+<#case "cityId">
+"city_id"
+<#break>
 <#case "countryCode">
 "country_code"
 <#break>
 <#case "createdByCode">
 "created_by_code"
+<#break>
+<#case "createdById">
+"created_by_id"
 <#break>
 <#case "createdDate">
 "created_date"
@@ -45,6 +51,9 @@ SELECT
 <#case "lastModifiedByCode">
 "last_modified_by_code"
 <#break>
+<#case "lastModifiedById">
+"last_modified_by_id"
+<#break>
 <#case "lastModifiedDate">
 "last_modified_date"
 <#break>
@@ -60,8 +69,14 @@ SELECT
 <#case "personalCode">
 "personal_code"
 <#break>
+<#case "personalId">
+"personal_id"
+<#break>
 <#case "provinceCode">
 "province_code"
+<#break>
+<#case "provinceId">
+"province_id"
 <#break>
 <#case "siteCode">
 "site_code"

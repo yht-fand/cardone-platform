@@ -11,7 +11,9 @@ class u0002 implements java.io.Serializable {
 
 		newInput?.batchNo = input?.batchNo
 		newInput?.beginDate = input?.beginDate
+		newInput?.c1OrgCode = input?.c1OrgCode
 		newInput?.createdByCode = input?.createdByCode
+		newInput?.createdById = input?.createdById
 		newInput?.createdDate = input?.createdDate
 		newInput?.dataStateCode = input?.dataStateCode
 		newInput?.departmentCode = input?.departmentCode
@@ -20,14 +22,17 @@ class u0002 implements java.io.Serializable {
 		newInput?.flagObjectCode = input?.flagObjectCode
 		newInput?.jsonData = input?.jsonData
 		newInput?.lastModifiedByCode = input?.lastModifiedByCode
+		newInput?.lastModifiedById = input?.lastModifiedById
 		newInput?.lastModifiedDate = input?.lastModifiedDate
 		newInput?.orderBy = input?.orderBy
 		newInput?.orgCode = input?.orgCode
 		newInput?.personalCode = input?.personalCode
+		newInput?.personalId = input?.personalId
 		newInput?.siteCode = input?.siteCode
 		newInput?.stateCode = input?.stateCode
 		newInput?.systemInfoCode = input?.systemInfoCode
 		newInput?.userCode = input?.userCode
+		newInput?.userId = input?.userId
 		newInput?.userOrgId = input?.userOrgId
 		newInput?.version = input?.version
 

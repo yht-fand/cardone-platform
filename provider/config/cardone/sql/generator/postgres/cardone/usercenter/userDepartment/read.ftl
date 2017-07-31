@@ -6,8 +6,14 @@ SELECT
 <#case "beginDate">
 "begin_date"
 <#break>
+<#case "c1DepartmentCode">
+"c1__department_code"
+<#break>
 <#case "createdByCode">
 "created_by_code"
+<#break>
+<#case "createdById">
+"created_by_id"
 <#break>
 <#case "createdDate">
 "created_date"
@@ -17,6 +23,9 @@ SELECT
 <#break>
 <#case "departmentCode">
 "department_code"
+<#break>
+<#case "departmentId">
+"department_id"
 <#break>
 <#case "endDate">
 "end_date"
@@ -33,6 +42,9 @@ SELECT
 <#case "lastModifiedByCode">
 "last_modified_by_code"
 <#break>
+<#case "lastModifiedById">
+"last_modified_by_id"
+<#break>
 <#case "lastModifiedDate">
 "last_modified_date"
 <#break>
@@ -44,6 +56,9 @@ SELECT
 <#break>
 <#case "personalCode">
 "personal_code"
+<#break>
+<#case "personalId">
+"personal_id"
 <#break>
 <#case "siteCode">
 "site_code"
@@ -59,6 +74,9 @@ SELECT
 <#break>
 <#case "userDepartmentId">
 "user_department_id"
+<#break>
+<#case "userId">
+"user_id"
 <#break>
 <#case "version">
 "version_"
