@@ -9,9 +9,9 @@ FROM c1_department t
 WHERE t.state_code = '1' and t.data_state_code = '1'
 <#if cardone.StringUtils.isBlank(notId)>
     <#if cardone.StringUtils.isNotBlank(id)>
-    AND :id = ANY(string_to_array(t.PARENT_TREE_ID, ','))
+    AND t.PARENT_ID = :id
     <#else>
-    AND (t.PARENT_ID = '' OR t.PARENT_ID is null)
+    AND t.PARENT_ID = ''
     </#if>
 </#if>
 ORDER BY t.ORDER_BY_, t.DEPARTMENT_CODE
