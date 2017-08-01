@@ -26,6 +26,7 @@ class u0001 implements java.io.Serializable {
 		newInput?.createdDate = input?.createdDate
 		newInput?.dataStateCode = input?.dataStateCode
 		newInput?.departmentCode = input?.departmentCode
+		newInput?.departmentId = input?.departmentId
 		newInput?.diplomaCode = input?.diplomaCode
 		newInput?.email = input?.email
 		newInput?.endDate = input?.endDate

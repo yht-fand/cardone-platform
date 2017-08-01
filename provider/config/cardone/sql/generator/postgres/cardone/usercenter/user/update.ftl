@@ -68,6 +68,10 @@ ${prefixName?string('SET ', ', ')}"data_state_code" = :update_dataStateCode_valu
 ${prefixName?string('SET ', ', ')}"department_code" = :update_departmentCode_value
 <#assign prefixName = false>
 </#if>
+<#if (update_departmentId??)>
+${prefixName?string('SET ', ', ')}"department_id" = :update_departmentId_value
+<#assign prefixName = false>
+</#if>
 <#if (update_diplomaCode??)>
 ${prefixName?string('SET ', ', ')}"diploma_code" = :update_diplomaCode_value
 <#assign prefixName = false>

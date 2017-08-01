@@ -502,6 +502,9 @@ create index IF NOT EXISTS idx_c1_user_data_state_code ON c1_user ("data_state_c
 --部门编号
 drop index IF EXISTS idx_c1_user_department_code;
 create index IF NOT EXISTS idx_c1_user_department_code ON c1_user ("department_code" varchar_pattern_ops);
+--部门标识
+drop index IF EXISTS idx_c1_user_department_id;
+create index IF NOT EXISTS idx_c1_user_department_id ON c1_user ("department_id" varchar_pattern_ops);
 --学历/文凭编号(数据字典)
 drop index IF EXISTS idx_c1_user_diploma_code;
 create index IF NOT EXISTS idx_c1_user_diploma_code ON c1_user ("diploma_code" varchar_pattern_ops);

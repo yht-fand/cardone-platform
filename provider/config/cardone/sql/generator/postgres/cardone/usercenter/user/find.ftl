@@ -68,6 +68,10 @@ ${prefixName?string('  ', ', ')}"data_state_code"
 ${prefixName?string('  ', ', ')}"department_code"
 <#assign prefixName = false>
 </#if>
+<#if (select_departmentId??)>
+${prefixName?string('  ', ', ')}"department_id"
+<#assign prefixName = false>
+</#if>
 <#if (select_diplomaCode??)>
 ${prefixName?string('  ', ', ')}"diploma_code"
 <#assign prefixName = false>
@@ -308,6 +312,10 @@ ${prefixName?string('ORDER BY ', ', ')}"data_state_code" ${order_by_dataStateCod
 </#if>
 <#if (order_by_departmentCode??)>
 ${prefixName?string('ORDER BY ', ', ')}"department_code" ${order_by_departmentCode_value!}
+<#assign prefixName = false>
+</#if>
+<#if (order_by_departmentId??)>
+${prefixName?string('ORDER BY ', ', ')}"department_id" ${order_by_departmentId_value!}
 <#assign prefixName = false>
 </#if>
 <#if (order_by_diplomaCode??)>

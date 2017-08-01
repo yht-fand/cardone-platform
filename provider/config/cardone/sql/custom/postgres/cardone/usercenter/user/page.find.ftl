@@ -6,6 +6,7 @@ t.first_name,
 t.last_name,
 d.PARENT_TREE_CODE as DEPARTMENT_PARENT_TREE_CODE,
 d.PARENT_TREE_NAME as DEPARTMENT_PARENT_TREE_NAME,
+t.DEPARTMENT_ID,
 t.DEPARTMENT_CODE,
 d.NAME AS DEPARTMENT_NAME,
 t.CREATED_BY_CODE,
@@ -19,7 +20,7 @@ t.STATE_CODE,
 t.DATA_STATE_CODE
 FROM
 c1_user t
-LEFT JOIN c1_department d ON (d.DEPARTMENT_CODE = t.DEPARTMENT_CODE)
+LEFT JOIN c1_department d ON (d.DEPARTMENT_ID = t.DEPARTMENT_ID)
 <#if cardone.StringUtils.isNotBlank(userId)>
 WHERE t.user_id = :userId or t.user_code = :userId
 <#else>

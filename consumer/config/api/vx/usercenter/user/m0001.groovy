@@ -26,6 +26,7 @@ class m0001 implements java.io.Serializable {
 		newInput?.createdDate = input?.createdDate
 		newInput?.dataStateCode = input?.dataStateCode
 		newInput?.departmentCode = input?.departmentCode
+		newInput?.departmentId = input?.departmentId
 		newInput?.diplomaCode = input?.diplomaCode
 		newInput?.email = input?.email
 		newInput?.endDate = input?.endDate
@@ -130,6 +131,7 @@ class m0001 implements java.io.Serializable {
 		newOutput?.createdDate = output?.created_date
 		newOutput?.dataStateCode = output?.data_state_code
 		newOutput?.departmentCode = output?.department_code
+		newOutput?.departmentId = output?.department_id
 		newOutput?.diplomaCode = output?.diploma_code
 		newOutput?.email = output?.email
 		newOutput?.endDate = output?.end_date

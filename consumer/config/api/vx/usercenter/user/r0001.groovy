@@ -108,6 +108,8 @@ class r0001 implements java.io.Serializable {
 
             data['departmentCode'] = contentItem['department_code']
 
+            data['departmentId'] = contentItem['department_id']
+
             data['diplomaCode'] = contentItem['diploma_code']
 
             data['email'] = contentItem['email']

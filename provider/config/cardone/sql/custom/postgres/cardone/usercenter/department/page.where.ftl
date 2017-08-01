@@ -1,13 +1,13 @@
 <#assign prefixName = true>
-<#if cardone.StringUtils.isNotBlank(parentCode)>
-${prefixName?string('WHERE ', 'AND ')}:parentCode = ANY(string_to_array(t.parent_tree_code, ','))
+<#if cardone.StringUtils.isNotBlank(parentId)>
+${prefixName?string('WHERE ', 'AND ')}:parentId = ANY(string_to_array(t.parent_tree_id, ','))
     <#assign prefixName = false>
 <#elseif cardone.StringUtils.isNotBlank(parentTreeName)>
 ${prefixName?string('WHERE ', 'AND ')}(POSITION(:parentTreeName in t.PARENT_CODE) > 0 OR POSITION(:parentTreeName in t.PARENT_TREE_CODE) > 0 OR POSITION(:parentTreeName in t.PARENT_TREE_NAME) > 0)
     <#assign prefixName = false>
 </#if>
-<#if cardone.StringUtils.isNotBlank(departmentCode)>
-${prefixName?string('WHERE ', 'AND ')}t.DEPARTMENT_CODE = :departmentCode
+<#if cardone.StringUtils.isNotBlank(departmentId)>
+${prefixName?string('WHERE ', 'AND ')}t.DEPARTMENT_ID = :departmentId
     <#assign prefixName = false>
 <#elseif cardone.StringUtils.isNotBlank(name)>
 ${prefixName?string('WHERE ', 'AND ')}(POSITION(:name in t.DEPARTMENT_CODE) > 0 OR POSITION(:name in t.NAME) > 0)

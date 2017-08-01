@@ -135,6 +135,14 @@ ${prefixName?string('WHERE ', 'AND ')}("department_code" IS NULL OR "department_
 </#if>
 <#assign prefixName = false>
 </#if>
+<#if (where_and_eq_departmentId??)>
+<#if (where_and_eq_departmentId_value??)>
+${prefixName?string('WHERE ', 'AND ')}"department_id" = :where_and_eq_departmentId_value
+<#else>
+${prefixName?string('WHERE ', 'AND ')}("department_id" IS NULL OR "department_id" = '')
+</#if>
+<#assign prefixName = false>
+</#if>
 <#if (where_and_eq_diplomaCode??)>
 <#if (where_and_eq_diplomaCode_value??)>
 ${prefixName?string('WHERE ', 'AND ')}"diploma_code" = :where_and_eq_diplomaCode_value

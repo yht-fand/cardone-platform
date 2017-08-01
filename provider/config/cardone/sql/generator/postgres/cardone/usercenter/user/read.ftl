@@ -51,6 +51,9 @@ SELECT
 <#case "departmentCode">
 "department_code"
 <#break>
+<#case "departmentId">
+"department_id"
+<#break>
 <#case "diplomaCode">
 "diploma_code"
 <#break>

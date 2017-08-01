@@ -130,6 +130,13 @@ public class User implements java.io.Serializable {
     protected String departmentCode;
 
     /**
+     * 部门标识
+     */
+    @lombok.Getter
+    @lombok.Setter
+    protected String departmentId;
+
+    /**
      * 学历/文凭编号(数据字典)
      */
     @lombok.Getter

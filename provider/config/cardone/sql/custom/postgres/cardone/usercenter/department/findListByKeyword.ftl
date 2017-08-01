@@ -1,4 +1,7 @@
-SELECT t.DEPARTMENT_CODE, t.NAME FROM c1_department t
+SELECT t.DEPARTMENT_CODE
+, t.DEPARTMENT_ID
+, t.NAME
+FROM c1_department t
 where t.state_code ='1' and t.data_state_code = '1'
 <#if cardone.StringUtils.isBlank(notTerm) >
     <#if cardone.StringUtils.isNotBlank(term)>

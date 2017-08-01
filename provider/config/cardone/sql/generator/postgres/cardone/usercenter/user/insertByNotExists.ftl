@@ -70,6 +70,10 @@ ${prefixName?string('  ', ', ')}"data_state_code"
 ${prefixName?string('  ', ', ')}"department_code"
 <#assign prefixName = false>
 </#if>
+<#if (insert_departmentId??) && (insert_departmentId_value??)>
+${prefixName?string('  ', ', ')}"department_id"
+<#assign prefixName = false>
+</#if>
 <#if (insert_diplomaCode??) && (insert_diplomaCode_value??)>
 ${prefixName?string('  ', ', ')}"diploma_code"
 <#assign prefixName = false>
@@ -307,6 +311,10 @@ ${prefixName?string('  ', ', ')}:insert_dataStateCode_value
 </#if>
 <#if (insert_departmentCode??) && (insert_departmentCode_value??)>
 ${prefixName?string('  ', ', ')}:insert_departmentCode_value
+<#assign prefixName = false>
+</#if>
+<#if (insert_departmentId??) && (insert_departmentId_value??)>
+${prefixName?string('  ', ', ')}:insert_departmentId_value
 <#assign prefixName = false>
 </#if>
 <#if (insert_diplomaCode??) && (insert_diplomaCode_value??)>
@@ -612,6 +620,14 @@ ${prefixName?string('WHERE ', 'AND ')}(E."data_state_code" IS NULL OR E."data_st
 ${prefixName?string('WHERE ', 'AND ')}E."department_code" = :where_and_eq_departmentCode_value
 <#else>
 ${prefixName?string('WHERE ', 'AND ')}(E."department_code" IS NULL OR E."department_code" = '')
+</#if>
+<#assign prefixName = false>
+</#if>
+<#if (where_and_eq_departmentId??)>
+<#if (where_and_eq_departmentId_value??)>
+${prefixName?string('WHERE ', 'AND ')}E."department_id" = :where_and_eq_departmentId_value
+<#else>
+${prefixName?string('WHERE ', 'AND ')}(E."department_id" IS NULL OR E."department_id" = '')
 </#if>
 <#assign prefixName = false>
 </#if>

@@ -212,6 +212,7 @@ created_by_id|YES|String(255)|创建人标识
 created_date|YES|Date(29)|创建日期
 data_state_code|YES|String(255)|数据状态编号(数据字典)
 department_code|YES|String(255)|部门编号
+department_id|YES|String(255)|部门标识
 diploma_code|YES|String(255)|学历/文凭编号(数据字典)
 email|YES|String(255)|邮箱
 end_date|YES|Date(29)|结束日期

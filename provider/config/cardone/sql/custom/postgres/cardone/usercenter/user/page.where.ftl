@@ -1,9 +1,9 @@
 <#assign prefixName = true>
-<#if cardone.StringUtils.isNotBlank(departmentCode)>
-${prefixName?string('WHERE ', 'AND ')}(t.DEPARTMENT_CODE = :departmentCode OR Exists(select 1 from c1_department e where e.department_code = t.department_code and :departmentCode = ANY(string_to_array(e.parent_tree_code, ','))))
+<#if cardone.StringUtils.isNotBlank(departmentId)>
+${prefixName?string('WHERE ', 'AND ')}(t.DEPARTMENT_ID = :departmentId OR :departmentId = ANY(string_to_array(d.parent_tree_id, ',')))
     <#assign prefixName = false>
 <#elseif cardone.StringUtils.isNotBlank(departmentTreeName)>
-${prefixName?string('WHERE ', 'AND ')}(POSITION(:departmentTreeName in t.DEPARTMENT_CODE) > 0 OR Exists(select 1 from c1_department e where e.department_code = t.department_code and POSITION(:departmentTreeName in e.NAME) > 0))
+${prefixName?string('WHERE ', 'AND ')}(POSITION(:departmentTreeName in t.DEPARTMENT_CODE) > 0 OR POSITION(:departmentTreeName in d.NAME) > 0)
     <#assign prefixName = false>
 </#if>
 <#if cardone.StringUtils.isNotBlank(userCode)>
