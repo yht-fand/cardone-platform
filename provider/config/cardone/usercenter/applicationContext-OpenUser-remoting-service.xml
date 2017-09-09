@@ -19,7 +19,6 @@
     <bean id="top.cardone.usercenter.service.OpenUserServiceExporter" parent="remoteInvocationExecutorParnet">
         <property name="serviceInterface" value="top.cardone.usercenter.service.OpenUserService"/>
         <property name="service" ref="top.cardone.usercenter.service.OpenUserService"/>
-        <property name="amqpTemplate" ref="org.springframework.amqp.core.AmqpTemplate"/>
     </bean>
 
     <rabbit:listener-container acknowledge="none" max-concurrency="128" prefetch="10">
