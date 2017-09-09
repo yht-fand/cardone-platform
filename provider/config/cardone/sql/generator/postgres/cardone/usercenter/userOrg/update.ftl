@@ -68,6 +68,10 @@ ${prefixName?string('SET ', ', ')}"order_by_" = :update_orderBy_value
 ${prefixName?string('SET ', ', ')}"org_code" = :update_orgCode_value
 <#assign prefixName = false>
 </#if>
+<#if (update_orgId??)>
+${prefixName?string('SET ', ', ')}"org_id" = :update_orgId_value
+<#assign prefixName = false>
+</#if>
 <#if (update_personalCode??)>
 ${prefixName?string('SET ', ', ')}"personal_code" = :update_personalCode_value
 <#assign prefixName = false>

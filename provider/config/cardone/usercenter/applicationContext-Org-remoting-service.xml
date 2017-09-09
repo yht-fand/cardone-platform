@@ -16,8 +16,7 @@
     <rabbit:queue
             name="queue:cardone-usercenter-${cardone-usercenter-version}:top.cardone.usercenter.service.OrgService"/>
 
-    <bean id="top.cardone.usercenter.service.OrgServiceExporter"
-          class="org.springframework.amqp.remoting.service.AmqpInvokerServiceExporter">
+    <bean id="top.cardone.usercenter.service.OrgServiceExporter" parent="remoteInvocationExecutorParnet">
         <property name="serviceInterface" value="top.cardone.usercenter.service.OrgService"/>
         <property name="service" ref="top.cardone.usercenter.service.OrgService"/>
         <property name="amqpTemplate" ref="org.springframework.amqp.core.AmqpTemplate"/>

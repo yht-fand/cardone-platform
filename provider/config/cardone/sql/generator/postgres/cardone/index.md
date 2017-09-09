@@ -139,6 +139,7 @@ last_modified_by_id|YES|String(255)|最后修改人标识
 last_modified_date|YES|Date(29)|最后修改日期
 order_by_|YES|Long(19)|排序
 org_code|YES|String(255)|组织编号
+org_id|YES|String(255)|组织标识
 personal_code|YES|String(255)|个人编号
 personal_id|YES|String(255)|个人标识
 site_code|YES|String(255)|站点编号

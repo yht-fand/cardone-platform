@@ -69,6 +69,10 @@ ${prefixName?string('  ', ', ')}"order_by_"
 ${prefixName?string('  ', ', ')}"org_code"
 <#assign prefixName = false>
 </#if>
+<#if (insert_orgId??) && (insert_orgId_value??)>
+${prefixName?string('  ', ', ')}"org_id"
+<#assign prefixName = false>
+</#if>
 <#if (insert_personalCode??) && (insert_personalCode_value??)>
 ${prefixName?string('  ', ', ')}"personal_code"
 <#assign prefixName = false>
@@ -174,6 +178,10 @@ ${prefixName?string('  ', ', ')}:insert_orderBy_value
 </#if>
 <#if (insert_orgCode??) && (insert_orgCode_value??)>
 ${prefixName?string('  ', ', ')}:insert_orgCode_value
+<#assign prefixName = false>
+</#if>
+<#if (insert_orgId??) && (insert_orgId_value??)>
+${prefixName?string('  ', ', ')}:insert_orgId_value
 <#assign prefixName = false>
 </#if>
 <#if (insert_personalCode??) && (insert_personalCode_value??)>

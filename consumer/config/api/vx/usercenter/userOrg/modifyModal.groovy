@@ -40,6 +40,7 @@ class modifyModal implements java.io.Serializable {
 		newOutput?.lastModifiedDate = output?.last_modified_date
 		newOutput?.orderBy = output?.order_by_
 		newOutput?.orgCode = output?.org_code
+		newOutput?.orgId = output?.org_id
 		newOutput?.personalCode = output?.personal_code
 		newOutput?.personalId = output?.personal_id
 		newOutput?.siteCode = output?.site_code

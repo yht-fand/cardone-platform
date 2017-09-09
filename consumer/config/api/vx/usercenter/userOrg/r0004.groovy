@@ -108,6 +108,8 @@ class r0004 implements java.io.Serializable {
 
             data['orgCode'] = contentItem['org_code']
 
+            data['orgId'] = contentItem['org_id']
+
             data['personalCode'] = contentItem['personal_code']
 
             data['personalId'] = contentItem['personal_id']

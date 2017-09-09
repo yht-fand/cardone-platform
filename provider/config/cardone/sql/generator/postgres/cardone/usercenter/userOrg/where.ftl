@@ -135,6 +135,14 @@ ${prefixName?string('WHERE ', 'AND ')}("org_code" IS NULL OR "org_code" = '')
 </#if>
 <#assign prefixName = false>
 </#if>
+<#if (where_and_eq_orgId??)>
+<#if (where_and_eq_orgId_value??)>
+${prefixName?string('WHERE ', 'AND ')}"org_id" = :where_and_eq_orgId_value
+<#else>
+${prefixName?string('WHERE ', 'AND ')}("org_id" IS NULL OR "org_id" = '')
+</#if>
+<#assign prefixName = false>
+</#if>
 <#if (where_and_eq_personalCode??)>
 <#if (where_and_eq_personalCode_value??)>
 ${prefixName?string('WHERE ', 'AND ')}"personal_code" = :where_and_eq_personalCode_value

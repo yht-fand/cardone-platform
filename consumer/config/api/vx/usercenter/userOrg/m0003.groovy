@@ -26,6 +26,7 @@ class m0003 implements java.io.Serializable {
 		newInput?.lastModifiedDate = input?.lastModifiedDate
 		newInput?.orderBy = input?.orderBy
 		newInput?.orgCode = input?.orgCode
+		newInput?.orgId = input?.orgId
 		newInput?.personalCode = input?.personalCode
 		newInput?.personalId = input?.personalId
 		newInput?.siteCode = input?.siteCode
@@ -97,6 +98,7 @@ class m0003 implements java.io.Serializable {
 		newOutput?.lastModifiedDate = output?.last_modified_date
 		newOutput?.orderBy = output?.order_by_
 		newOutput?.orgCode = output?.org_code
+		newOutput?.orgId = output?.org_id
 		newOutput?.personalCode = output?.personal_code
 		newOutput?.personalId = output?.personal_id
 		newOutput?.siteCode = output?.site_code

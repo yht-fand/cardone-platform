@@ -26,6 +26,7 @@ class u0003 implements java.io.Serializable {
 		newInput?.lastModifiedDate = input?.lastModifiedDate
 		newInput?.orderBy = input?.orderBy
 		newInput?.orgCode = input?.orgCode
+		newInput?.orgId = input?.orgId
 		newInput?.personalCode = input?.personalCode
 		newInput?.personalId = input?.personalId
 		newInput?.siteCode = input?.siteCode

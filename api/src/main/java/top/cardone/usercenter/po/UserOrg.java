@@ -130,6 +130,13 @@ public class UserOrg implements java.io.Serializable {
     protected String orgCode;
 
     /**
+     * 组织标识
+     */
+    @lombok.Getter
+    @lombok.Setter
+    protected String orgId;
+
+    /**
      * 个人编号
      */
     @lombok.Getter

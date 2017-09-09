@@ -70,6 +70,10 @@ ${prefixName?string('  ', ', ')}"order_by_"
 ${prefixName?string('  ', ', ')}"org_code"
 <#assign prefixName = false>
 </#if>
+<#if (insert_orgId??) && (insert_orgId_value??)>
+${prefixName?string('  ', ', ')}"org_id"
+<#assign prefixName = false>
+</#if>
 <#if (insert_personalCode??) && (insert_personalCode_value??)>
 ${prefixName?string('  ', ', ')}"personal_code"
 <#assign prefixName = false>
@@ -175,6 +179,10 @@ ${prefixName?string('  ', ', ')}:insert_orderBy_value
 </#if>
 <#if (insert_orgCode??) && (insert_orgCode_value??)>
 ${prefixName?string('  ', ', ')}:insert_orgCode_value
+<#assign prefixName = false>
+</#if>
+<#if (insert_orgId??) && (insert_orgId_value??)>
+${prefixName?string('  ', ', ')}:insert_orgId_value
 <#assign prefixName = false>
 </#if>
 <#if (insert_personalCode??) && (insert_personalCode_value??)>
@@ -348,6 +356,14 @@ ${prefixName?string('WHERE ', 'AND ')}E."order_by_" IS NULL
 ${prefixName?string('WHERE ', 'AND ')}E."org_code" = :where_and_eq_orgCode_value
 <#else>
 ${prefixName?string('WHERE ', 'AND ')}(E."org_code" IS NULL OR E."org_code" = '')
+</#if>
+<#assign prefixName = false>
+</#if>
+<#if (where_and_eq_orgId??)>
+<#if (where_and_eq_orgId_value??)>
+${prefixName?string('WHERE ', 'AND ')}E."org_id" = :where_and_eq_orgId_value
+<#else>
+${prefixName?string('WHERE ', 'AND ')}(E."org_id" IS NULL OR E."org_id" = '')
 </#if>
 <#assign prefixName = false>
 </#if>

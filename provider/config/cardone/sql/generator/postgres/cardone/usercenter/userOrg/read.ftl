@@ -51,6 +51,9 @@ SELECT
 <#case "orgCode">
 "org_code"
 <#break>
+<#case "orgId">
+"org_id"
+<#break>
 <#case "personalCode">
 "personal_code"
 <#break>
