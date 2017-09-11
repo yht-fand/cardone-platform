@@ -242,6 +242,11 @@ public interface DepartmentService extends PageService {
         return this.findListByKeyword(findList);
     }
 
+    @Cacheable(key = Caches.KEY_1)
+    default List<Map<String, Object>> findListByDepartmentCodeCache(String departmentCode) {
+        return this.findListByDepartmentCode(departmentCode);
+    }
+
     /**
      * 查询部门列表
      *
