@@ -20,4 +20,12 @@ public interface UserDao extends PageDao {
      * @return 对象用户对象
      */
     Map<String, Object> findOneByUserId(Map<String, Object> findOne);
+
+    /**
+     * 查询用户对象
+     *
+     * @param findOne
+     * @return 用户对象
+     */
+    Map<String, Object> findOneByUserCode(Map<String, Object> findOne);
 }

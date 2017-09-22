@@ -24,4 +24,11 @@ public class UserDaoImpl extends PageDaoImpl implements top.cardone.usercenter.d
 
         return this.findOne(findOneSqlFilePath, findOne);
     }
+
+    @Override
+    public Map<String, Object> findOneByUserCode(Map<String, Object> findOne) {
+        String findOneSqlFilePath = this.getSqlFilePath("findOneByUserCode");
+
+        return this.findOne(findOneSqlFilePath, findOne);
+    }
 }

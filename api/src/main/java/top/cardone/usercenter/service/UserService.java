@@ -241,4 +241,22 @@ public interface UserService extends PageService {
     default List<Map<String, Object>> findListByKeywordCache(Map<String, Object> findList) {
         return this.findListByKeyword(findList);
     }
+
+    /**
+     * 查询用户对象
+     *
+     * @param findOne
+     * @return 用户对象
+     */
+    Map<String, Object> findOneByUserCode(Map<String, Object> findOne);
+
+    /**
+     * 查询用户对象
+     *
+     * @param findOne
+     * @return 用户对象
+     */
+    default Map<String, Object> findOneByUserCodeCache(Map<String, Object> findOne) {
+        return this.findOneByUserCode(findOne);
+    }
 }
