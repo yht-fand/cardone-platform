@@ -23,7 +23,9 @@ public class FindOneUserByPrincipalFunc implements Func0<Map<String, Object>> {
         Map<String, Object> findOneUser = Maps.newHashMap();
 
         findOneUser.put("userCode", principal);
+        findOneUser.put("dataStateCode", "1");
+        findOneUser.put("stateCode", "1");
 
-        return ApplicationContextHolder.getBean(UserService.class).findOneByUserCode(findOneUser);
+        return ApplicationContextHolder.getBean(UserService.class).findOne(findOneUser);
     }
 }
