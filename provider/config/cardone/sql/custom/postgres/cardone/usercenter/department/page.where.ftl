@@ -47,4 +47,5 @@
 ${prefixName?string('WHERE ', 'AND ')}t.DATA_STATE_CODE = :dataStateCode
     <#assign prefixName = false>
 </#if>
+
 <@cardone.permissionSql prefixName=false permission_departments=permission_departments  departmentColumnName="t.department_code" permission_users=permission_users userColumnName="t.personal_code" />

@@ -14,4 +14,5 @@ WHERE t.state_code = '1' and t.data_state_code = '1'
     AND t.PARENT_ID = ''
     </#if>
 </#if>
+<@cardone.permissionSql prefixName=false permission_departments=permission_departments  departmentColumnName="t.department_code" permission_users=permission_users userColumnName="t.personal_code" />
 ORDER BY t.ORDER_BY_, t.DEPARTMENT_CODE
