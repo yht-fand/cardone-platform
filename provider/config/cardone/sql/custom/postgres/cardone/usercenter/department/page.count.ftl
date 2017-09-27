@@ -1,4 +1,5 @@
 SELECT
 COUNT(1)
-FROM c1_department t
+c1_department t
+left join c1_department p on (p.DEPARTMENT_ID = t.PARENT_ID)
 <#include "page.where.ftl">
