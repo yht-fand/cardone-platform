@@ -1,7 +1,11 @@
 <#assign prefixName = true>
 
 <#if cardone.StringUtils.isNotBlank(departmentId)>
+    <#if cardone.StringUtils.isNotBlank(fuzzyQuery)>
     ${prefixName?string('WHERE ', 'AND ')}(t.DEPARTMENT_ID = :departmentId OR :departmentId = ANY(string_to_array(d.parent_tree_id, ',')))
+    <#else>
+    ${prefixName?string('WHERE ', 'AND ')}t.DEPARTMENT_ID = :departmentId
+    </#if>
     <#assign prefixName = false>
 <#elseif cardone.StringUtils.isNotBlank(departmentTreeName)>
     <#if cardone.StringUtils.isNotBlank(fuzzyQuery)>
