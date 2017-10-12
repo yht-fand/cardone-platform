@@ -28,12 +28,12 @@
 </#if>
 
 <#if cardone.ObjectUtils.anyNotNull(startTime)>
-    ${prefixName?string('WHERE ', 'AND ')}(t.BEGIN_DATE >= :startTime OR t.END_DATE >= :startTime)
+    ${prefixName?string('WHERE ', 'AND ')}t.BEGIN_DATE >= :startTime
     <#assign prefixName = false>
 </#if>
 
 <#if cardone.ObjectUtils.anyNotNull(endTime)>
-    ${prefixName?string('WHERE ', 'AND ')}(t.BEGIN_DATE < :endTime OR t.END_DATE < :endTime)
+    ${prefixName?string('WHERE ', 'AND ')}t.BEGIN_DATE < :endTime
     <#assign prefixName = false>
 </#if>
 
