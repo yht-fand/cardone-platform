@@ -25,7 +25,6 @@ LEFT JOIN c1_department d ON (d.DEPARTMENT_ID = t.DEPARTMENT_ID)
 WHERE t.user_id = :userId or t.user_code = :userId
 <#else>
     <#include "page.where.ftl">
-    <@cardone.permissionSql prefixName=prefixName permission_departments=permission_departments permission_users=permission_users permissions=permissions permissionColumnName="t.user_CODE"/>
 ORDER BY t.DEPARTMENT_CODE,
 t.USER_CODE,
 t.CREATED_DATE
