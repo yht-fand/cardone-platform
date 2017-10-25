@@ -2,27 +2,59 @@
 <beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xmlns="http://www.springframework.org/schema/beans"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
-    <bean class="top.cardone.data.listener.GenerateTreeListener">
-        <property name="codePutKey" value="orgCode"/>
-        <property name="codeGetKey" value="ORG_CODE"/>
-        <property name="pkPutKey" value="orgId"/>
-        <property name="pkGetKey" value="ORG_ID"/>
+    <bean class="top.cardone.data.listener.GenerateListener">
         <property name="serviceBeanId" value="top.cardone.usercenter.service.OrgService"/>
+        <property name="saveListActionBeanId" value="saveListDictionaryFunc"/>
+        <property name="saveList">
+            <list>
+                <map>
+                    <entry key="dictionaryTypeCode" value="generate"/>
+                    <entry key="dictionaryCode" value="orgTree"/>
+                    <entry key="value" value="yes"/>
+                </map>
+            </list>
+        </property>
     </bean>
 
-    <bean class="top.cardone.data.listener.GenerateTreeListener">
-        <property name="codePutKey" value="regionCode"/>
-        <property name="codeGetKey" value="REGION_CODE"/>
-        <property name="pkPutKey" value="regionId"/>
-        <property name="pkGetKey" value="REGION_ID"/>
+    <bean class="top.cardone.data.listener.GenerateListener">
         <property name="serviceBeanId" value="top.cardone.usercenter.service.RegionService"/>
+        <property name="saveListActionBeanId" value="saveListDictionaryFunc"/>
+        <property name="saveList">
+            <list>
+                <map>
+                    <entry key="dictionaryTypeCode" value="generate"/>
+                    <entry key="dictionaryCode" value="regionTree"/>
+                    <entry key="value" value="yes"/>
+                </map>
+            </list>
+        </property>
     </bean>
 
-    <bean class="top.cardone.data.listener.GenerateTreeListener">
-        <property name="codePutKey" value="departmentCode"/>
-        <property name="codeGetKey" value="DEPARTMENT_CODE"/>
-        <property name="pkPutKey" value="departmentId"/>
-        <property name="pkGetKey" value="DEPARTMENT_ID"/>
+    <bean class="top.cardone.data.listener.GenerateListener">
         <property name="serviceBeanId" value="top.cardone.usercenter.service.DepartmentService"/>
+        <property name="saveListActionBeanId" value="saveListDictionaryFunc"/>
+        <property name="saveList">
+            <list>
+                <map>
+                    <entry key="dictionaryTypeCode" value="generate"/>
+                    <entry key="dictionaryCode" value="departmentTree"/>
+                    <entry key="value" value="yes"/>
+                </map>
+            </list>
+        </property>
+    </bean>
+
+    <bean class="top.cardone.data.listener.GenerateListener">
+        <property name="serviceBeanId" value="top.cardone.usercenter.service.UserService"/>
+        <property name="saveListActionBeanId" value="saveListDictionaryFunc"/>
+        <property name="saveList">
+            <list>
+                <map>
+                    <entry key="dictionaryTypeCode" value="generate"/>
+                    <entry key="dictionaryCode" value="userGroup"/>
+                    <entry key="value" value="yes"/>
+                </map>
+            </list>
+        </property>
     </bean>
 </beans>
