@@ -21,7 +21,7 @@
         <property name="service" ref="top.cardone.usercenter.service.CityService"/>
     </bean>
 
-    <rabbit:listener-container acknowledge="none" max-concurrency="128" prefetch="10">
+    <rabbit:listener-container acknowledge="none" concurrency="128" prefetch="10">
         <rabbit:listener ref="top.cardone.usercenter.service.CityServiceExporter"
                          queue-names="queue:cardone-usercenter-${cardone-usercenter-version}:top.cardone.usercenter.service.CityService"/>
     </rabbit:listener-container>
