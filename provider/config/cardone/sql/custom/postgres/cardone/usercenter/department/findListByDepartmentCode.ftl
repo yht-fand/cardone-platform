@@ -6,4 +6,3 @@ and (:departmentId = ANY(string_to_array(d.PARENT_TREE_ID, ',')) OR (d.DEPARTMEN
 and (:departmentCode = ANY(string_to_array(d.PARENT_TREE_CODE, ',')) OR (d.DEPARTMENT_CODE = :departmentCode))
 </#if>
 <@cardone.permissionSql prefixName=false permission_departments=permission_departments  departmentColumnName="d.department_code" permission_users=permission_users userColumnName="d.personal_code" />
-ORDER BY d.DEPARTMENT_CODE
