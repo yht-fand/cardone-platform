@@ -21,7 +21,7 @@
         <property name="service" ref="top.cardone.usercenter.service.UserOrgService"/>
     </bean>
 
-    <rabbit:listener-container acknowledge="none" concurrency="100" prefetch="10">
+    <rabbit:listener-container acknowledge="none" concurrency="20" prefetch="5">
         <rabbit:listener ref="top.cardone.usercenter.service.UserOrgServiceExporter"
                          queue-names="queue:cardone-usercenter-${cardone-usercenter-version}:top.cardone.usercenter.service.UserOrgService"/>
     </rabbit:listener-container>
