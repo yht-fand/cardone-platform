@@ -21,7 +21,7 @@
         <property name="service" ref="top.cardone.usercenter.service.UserOrgService"/>
     </bean>
 
-    <rabbit:listener-container acknowledge="none" concurrency="2" prefetch="20">
+    <rabbit:listener-container acknowledge="none" concurrency="2" prefetch="20" task-executor="org.springframework.core.task.TaskExecutor">
         <rabbit:listener ref="top.cardone.usercenter.service.UserOrgServiceExporter"
                          queue-names="queue:cardone-usercenter-${cardone-usercenter-version}:top.cardone.usercenter.service.UserOrgService"/>
     </rabbit:listener-container>
