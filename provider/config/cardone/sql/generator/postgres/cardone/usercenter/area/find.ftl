@@ -123,7 +123,7 @@ ${prefixName?string('  ', ', ')}"version_"
 <#if prefixName>
 *
 </#if>
-FROM c1_area
+FROM "c1_area"
 <#include "where.ftl">
 <#assign prefixName = true>
 <#if (order_by_areaCode??)>

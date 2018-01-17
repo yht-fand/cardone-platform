@@ -12,10 +12,10 @@
           p:routingKey="queue:cardone-usercenter-${cardone-usercenter-version}:top.cardone.usercenter.service.DepartmentService"
           parent="invokerProxyFactoryParnet">
         <property name="amqpTemplate">
-            <rabbit:template connection-factory="rabbitConnectionFactory"
-                             message-converter="amqpMessageConverter"
-                             queue="queue:cardone-usercenter-${cardone-usercenter-version}:top.cardone.usercenter.service.DepartmentService"
-                             exchange="exchange:cardone-usercenter-${cardone-usercenter-version}:top.cardone.usercenter.service.DepartmentService" reply-timeout="${spring.rabbitmq.template.replyTimeout:60000}"/>
+            <bean parent="rabbitTemplateParnet">
+                <property name="queue" value="queue:cardone-usercenter-${cardone-usercenter-version}:top.cardone.usercenter.service.DepartmentService"/>
+                <property name="exchange" value="exchange:cardone-usercenter-${cardone-usercenter-version}:top.cardone.usercenter.service.DepartmentService"/>
+            </bean>
         </property>
     </bean>
 </beans>

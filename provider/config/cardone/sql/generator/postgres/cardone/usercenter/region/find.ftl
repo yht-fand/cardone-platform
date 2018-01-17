@@ -151,7 +151,7 @@ ${prefixName?string('  ', ', ')}"version_"
 <#if prefixName>
 *
 </#if>
-FROM c1_region
+FROM "c1_region"
 <#include "where.ftl">
 <#assign prefixName = true>
 <#if (order_by_areaCode??)>

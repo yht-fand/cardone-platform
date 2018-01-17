@@ -1,5 +1,5 @@
 INSERT
-INTO c1_department
+INTO "c1_department"
 (<#assign prefixName = true>
 <#if (insert_address??) && (insert_address_value??)>
 ${prefixName?string('  ', ', ')}"address"

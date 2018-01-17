@@ -1,5 +1,5 @@
 INSERT
-INTO c1_area
+INTO "c1_area"
 (<#assign prefixName = true>
 <#if (insert_areaCode??) && (insert_areaCode_value??)>
 ${prefixName?string('  ', ', ')}"area_code"

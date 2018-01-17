@@ -81,5 +81,5 @@ SELECT
 <#default>
 COUNT(*) AS COUNT_
 </#switch>
-FROM c1_province
+FROM "c1_province"
 <#include "where.ftl">

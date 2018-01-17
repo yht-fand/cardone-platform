@@ -114,5 +114,5 @@ SELECT
 <#default>
 COUNT(*) AS COUNT_
 </#switch>
-FROM c1_user_address
+FROM "c1_user_address"
 <#include "where.ftl">

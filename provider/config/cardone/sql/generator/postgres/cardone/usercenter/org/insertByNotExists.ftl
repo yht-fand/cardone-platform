@@ -1,6 +1,6 @@
 INSERT
 INTO
-c1_org
+"c1_org"
 (<#assign prefixName = true>
 <#if (insert_address??) && (insert_address_value??)>
 ${prefixName?string('  ', ', ')}"address"
@@ -277,7 +277,7 @@ ${prefixName?string('  ', ', ')}:insert_systemInfoCode_value
 ${prefixName?string('  ', ', ')}:insert_version_value
 <#assign prefixName = false>
 </#if>
-WHERE NOT EXISTS (SELECT 1 FROM c1_org E
+WHERE NOT EXISTS (SELECT 1 FROM "c1_org" E
 <#assign prefixName = true>
 <#if (where_and_eq_address??)>
 <#if (where_and_eq_address_value??)>

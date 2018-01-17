@@ -1,5 +1,5 @@
 INSERT
-INTO c1_user_department
+INTO "c1_user_department"
 (<#assign prefixName = true>
 <#if (insert_batchNo??) && (insert_batchNo_value??)>
 ${prefixName?string('  ', ', ')}"batch_no"

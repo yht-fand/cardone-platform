@@ -1,6 +1,6 @@
 INSERT
 INTO
-c1_area
+"c1_area"
 (<#assign prefixName = true>
 <#if (insert_areaCode??) && (insert_areaCode_value??)>
 ${prefixName?string('  ', ', ')}"area_code"
@@ -245,7 +245,7 @@ ${prefixName?string('  ', ', ')}:insert_systemInfoCode_value
 ${prefixName?string('  ', ', ')}:insert_version_value
 <#assign prefixName = false>
 </#if>
-WHERE NOT EXISTS (SELECT 1 FROM c1_area E
+WHERE NOT EXISTS (SELECT 1 FROM "c1_area" E
 <#assign prefixName = true>
 <#if (where_and_eq_areaCode??)>
 <#if (where_and_eq_areaCode_value??)>

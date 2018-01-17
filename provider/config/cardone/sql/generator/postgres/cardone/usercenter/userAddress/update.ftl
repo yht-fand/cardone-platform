@@ -1,4 +1,4 @@
-UPDATE c1_user_address
+UPDATE "c1_user_address"
 <#assign prefixName = true>
 <#if (update_address??)>
 ${prefixName?string('SET ', ', ')}"address" = :update_address_value

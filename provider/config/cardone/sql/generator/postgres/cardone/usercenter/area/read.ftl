@@ -93,5 +93,5 @@ SELECT
 <#default>
 COUNT(*) AS COUNT_
 </#switch>
-FROM c1_area
+FROM "c1_area"
 <#include "where.ftl">

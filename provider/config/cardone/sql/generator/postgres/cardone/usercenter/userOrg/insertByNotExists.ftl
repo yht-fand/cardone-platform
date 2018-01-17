@@ -1,6 +1,6 @@
 INSERT
 INTO
-c1_user_org
+"c1_user_org"
 (<#assign prefixName = true>
 <#if (insert_batchNo??) && (insert_batchNo_value??)>
 ${prefixName?string('  ', ', ')}"batch_no"
@@ -221,7 +221,7 @@ ${prefixName?string('  ', ', ')}:insert_userOrgId_value
 ${prefixName?string('  ', ', ')}:insert_version_value
 <#assign prefixName = false>
 </#if>
-WHERE NOT EXISTS (SELECT 1 FROM c1_user_org E
+WHERE NOT EXISTS (SELECT 1 FROM "c1_user_org" E
 <#assign prefixName = true>
 <#if (where_and_eq_batchNo??)>
 <#if (where_and_eq_batchNo_value??)>

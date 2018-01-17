@@ -108,5 +108,5 @@ SELECT
 <#default>
 COUNT(*) AS COUNT_
 </#switch>
-FROM c1_department
+FROM "c1_department"
 <#include "where.ftl">

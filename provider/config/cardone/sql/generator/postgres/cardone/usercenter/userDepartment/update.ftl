@@ -1,4 +1,4 @@
-UPDATE c1_user_department
+UPDATE "c1_user_department"
 <#assign prefixName = true>
 <#if (update_batchNo??)>
 ${prefixName?string('SET ', ', ')}"batch_no" = :update_batchNo_value

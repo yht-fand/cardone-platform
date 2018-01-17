@@ -1,4 +1,4 @@
-UPDATE c1_region
+UPDATE "c1_region"
 <#assign prefixName = true>
 <#if (update_areaCode??)>
 ${prefixName?string('SET ', ', ')}"area_code" = :update_areaCode_value

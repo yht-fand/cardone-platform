@@ -151,7 +151,7 @@ ${prefixName?string('  ', ', ')}"version_"
 <#if prefixName>
 *
 </#if>
-FROM c1_user_address
+FROM "c1_user_address"
 <#include "where.ftl">
 <#assign prefixName = true>
 <#if (order_by_address??)>

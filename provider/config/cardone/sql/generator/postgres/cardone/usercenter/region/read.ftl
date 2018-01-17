@@ -114,5 +114,5 @@ SELECT
 <#default>
 COUNT(*) AS COUNT_
 </#switch>
-FROM c1_region
+FROM "c1_region"
 <#include "where.ftl">
