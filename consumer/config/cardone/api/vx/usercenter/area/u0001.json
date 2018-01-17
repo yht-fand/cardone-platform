@@ -1,0 +1,24 @@
+{
+  "validation": {
+    "rules": {
+      "areaId": {
+        "required": true
+      },
+      "name": {
+        "required": true,
+        "minlength": 4,
+        "maxlength": 255
+      }
+    },
+    "messages": {
+      "areaId": {
+        "required": "地区标识必填"
+      },
+      "name": {
+        "required": "地区名称必填",
+        "minlength": "地区名称需{0}个字符以上",
+        "maxlength": "地区名称需小于{0}个字符"
+      }
+    }
+  }
+}

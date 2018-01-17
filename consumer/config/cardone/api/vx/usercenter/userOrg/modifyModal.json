@@ -1,0 +1,14 @@
+{
+  "validation": {
+    "rules": {
+      "userOrgId": {
+        "required": true
+      }
+    },
+    "messages": {
+      "userOrgId": {
+        "required": "用户与组织标识必填"
+      }
+    }
+  }
+}

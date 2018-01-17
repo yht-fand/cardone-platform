@@ -1,0 +1,14 @@
+{
+  "validation": {
+    "rules": {
+      "userAddressId": {
+        "required": true
+      }
+    },
+    "messages": {
+      "userAddressId": {
+        "required": "用户与地址标识必填"
+      }
+    }
+  }
+}
