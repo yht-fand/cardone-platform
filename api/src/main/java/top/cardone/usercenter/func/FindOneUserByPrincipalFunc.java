@@ -1,7 +1,6 @@
 package top.cardone.usercenter.func;
 
 import com.google.common.collect.Maps;
-import lombok.Synchronized;
 import top.cardone.context.ApplicationContextHolder;
 import top.cardone.context.util.StringUtils;
 import top.cardone.core.util.func.Func0;
