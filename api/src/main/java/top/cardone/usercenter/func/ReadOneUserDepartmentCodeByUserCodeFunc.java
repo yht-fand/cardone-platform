@@ -1,6 +1,7 @@
 package top.cardone.usercenter.func;
 
 import com.google.common.collect.Maps;
+import lombok.Synchronized;
 import top.cardone.context.ApplicationContextHolder;
 import top.cardone.context.util.MapUtils;
 import top.cardone.core.util.func.Func1;
@@ -13,6 +14,7 @@ import java.util.Map;
  */
 public class ReadOneUserDepartmentCodeByUserCodeFunc implements Func1<String, String> {
     @Override
+    @Synchronized
     public String func(String userCode) {
         Map<String, Object> readOne = Maps.newHashMap();
 

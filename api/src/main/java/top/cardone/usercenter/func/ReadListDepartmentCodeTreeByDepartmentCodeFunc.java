@@ -1,6 +1,7 @@
 package top.cardone.usercenter.func;
 
 import com.google.common.collect.Lists;
+import lombok.Synchronized;
 import top.cardone.context.ApplicationContextHolder;
 import top.cardone.context.util.MapUtils;
 import top.cardone.core.util.func.Func1;
@@ -14,6 +15,7 @@ import java.util.Map;
  */
 public class ReadListDepartmentCodeTreeByDepartmentCodeFunc implements Func1<List<String>, String> {
     @Override
+    @Synchronized
     public List<String> func(String departmentCode) {
         List<Map<String, Object>> departmentList = ApplicationContextHolder.getBean(DepartmentService.class).findListByDepartmentCodeCache(departmentCode);
 
