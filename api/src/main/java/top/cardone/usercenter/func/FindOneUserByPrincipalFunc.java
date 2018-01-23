@@ -1,6 +1,7 @@
 package top.cardone.usercenter.func;
 
 import com.google.common.collect.Maps;
+import lombok.Synchronized;
 import top.cardone.context.ApplicationContextHolder;
 import top.cardone.context.util.StringUtils;
 import top.cardone.core.util.func.Func0;
@@ -13,6 +14,7 @@ import java.util.Map;
  */
 public class FindOneUserByPrincipalFunc implements Func0<Map<String, Object>> {
     @Override
+    @Synchronized
     public Map<String, Object> func() {
         String principal = (String) ApplicationContextHolder.getBean(Func0.class, "readPrincipalFunc").func();
 
