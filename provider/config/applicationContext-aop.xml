@@ -9,7 +9,7 @@
     <aop:config>
         <aop:pointcut id="service-pointcut-1" expression="execution(* *..service.*Service.*(..))"/>
 
-        <aop:aspect order="800" ref="routingDataSourceAspect">
+        <aop:aspect order="1" ref="routingDataSourceAspect">
             <aop:around pointcut-ref="service-pointcut-1" method="postProcessBeforeSetTargetDataSource"/>
         </aop:aspect>
     </aop:config>
