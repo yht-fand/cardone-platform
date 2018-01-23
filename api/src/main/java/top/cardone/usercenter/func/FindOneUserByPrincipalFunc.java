@@ -14,7 +14,6 @@ import java.util.Map;
  */
 public class FindOneUserByPrincipalFunc implements Func0<Map<String, Object>> {
     @Override
-    @Synchronized
     public Map<String, Object> func() {
         String principal = (String) ApplicationContextHolder.getBean(Func0.class, "readPrincipalFunc").func();
 

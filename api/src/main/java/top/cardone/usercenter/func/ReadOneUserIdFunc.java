@@ -14,7 +14,6 @@ import java.util.Map;
  */
 public class ReadOneUserIdFunc extends ReadPrincipalFunc {
     @Override
-    @Synchronized
     public String func() {
         String userCode = super.func();
 

@@ -15,7 +15,6 @@ import java.util.Map;
  */
 public class ReadListDepartmentCodeTreeByDepartmentCodeFunc implements Func1<List<String>, String> {
     @Override
-    @Synchronized
     public List<String> func(String departmentCode) {
         List<Map<String, Object>> departmentList = ApplicationContextHolder.getBean(DepartmentService.class).findListByDepartmentCodeCache(departmentCode);
 
