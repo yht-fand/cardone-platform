@@ -14,7 +14,7 @@ import java.util.Map;
  */
 public class ReadOneUserDepartmentCodeByUserCodeFunc implements Func1<String, String> {
     @Override
-    @Synchronized
+
     public String func(String userCode) {
         Map<String, Object> readOne = Maps.newHashMap();
 
