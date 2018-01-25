@@ -1,13 +1,13 @@
 [
   {
     "userCode": "admin",
-    "name": "管理员",
+    "name": "administrator",
     "password": "Q75Uu4jZ7maRStx2bc1qbw==",
     "passwordSalt": "9-b645b191-5fba9"
   },
   {
     "userCode": "test",
-    "name": "测试",
+    "name": "test",
     "password": "Q75Uu4jZ7maRStx2bc1qbw==",
     "passwordSalt": "9-b645b191-5fba9",
     "flagCode": "init"
