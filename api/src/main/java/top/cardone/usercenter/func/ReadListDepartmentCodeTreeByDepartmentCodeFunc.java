@@ -11,7 +11,7 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * Created by Administrator on 2016/7/11.
+ * @author Administrator on 2016/7/11.
  */
 public class ReadListDepartmentCodeTreeByDepartmentCodeFunc implements Func1<List<String>, String> {
     @Override

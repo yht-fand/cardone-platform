@@ -18,7 +18,7 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * Created by cardone-home-001 on 2016/4/22.
+ * @author cardone-home-001 on 2016/4/22.
  */
 @RunWith(SpringJUnit4ClassRunner.class)
 @SpringBootTest(classes = ConsumerApplication.class)

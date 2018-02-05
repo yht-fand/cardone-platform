@@ -10,7 +10,7 @@ import top.cardone.usercenter.service.UserService;
 import java.util.Map;
 
 /**
- * Created by Administrator on 2016/7/11.
+ * @author Administrator on 2016/7/11.
  */
 public class ReadOneUserDepartmentCodeByUserCodeFunc implements Func1<String, String> {
     @Override
