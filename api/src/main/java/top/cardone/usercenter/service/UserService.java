@@ -259,6 +259,7 @@ public interface UserService extends PageService {
      * @param findOne
      * @return 用户对象
      */
+    @Cacheable(key = Caches.KEY_1)
     default Map<String, Object> findOneByUserCodeCache(Map<String, Object> findOne) {
         return this.findOneByUserCode(findOne);
     }
