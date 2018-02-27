@@ -12,18 +12,21 @@
         <property name="targetMethod" value="readOneUserId"/>
     </bean>
 
-    <bean name="readOneDepartmentFunc"
-          class="top.cardone.data.func.ReadOneFunc">
-        <property name="serviceBeanName" value="top.cardone.usercenter.service.DepartmentService"/>
-    </bean>
-
-    <bean name="readOneUserFunc"
-          class="top.cardone.data.func.ReadOneFunc">
-        <property name="serviceBeanName" value="top.cardone.usercenter.service.UserService"/>
+    <bean name="readOneUserDepartmentCodeByUserCodeFunc" class="top.cardone.context.action.MethodInvokerFunc1">
+        <property name="targetBeanName" value="top.cardone.usercenter.service.UserService"/>
+        <property name="targetMethod" value="readOneUserDepartmentCodeByUserCodeCache"/>
     </bean>
 
     <bean name="readListDepartmentCodeTreeByDepartmentCodeFunc" class="top.cardone.context.action.MethodInvokerFunc1">
         <property name="targetBeanName" value="top.cardone.usercenter.service.DepartmentService"/>
         <property name="targetMethod" value="readListDepartmentCodeTreeByDepartmentCodeCache"/>
+    </bean>
+
+    <bean name="readOneDepartmentFunc" class="top.cardone.data.func.ReadOneFunc">
+        <property name="serviceBeanName" value="top.cardone.usercenter.service.DepartmentService"/>
+    </bean>
+
+    <bean name="readOneUserFunc" class="top.cardone.data.func.ReadOneFunc">
+        <property name="serviceBeanName" value="top.cardone.usercenter.service.UserService"/>
     </bean>
 </beans>
