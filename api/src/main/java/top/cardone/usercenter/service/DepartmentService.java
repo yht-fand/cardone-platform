@@ -1,15 +1,19 @@
 package top.cardone.usercenter.service;
 
+import com.google.common.collect.Lists;
+import com.google.common.collect.Maps;
 import org.springframework.cache.annotation.CacheConfig;
 import org.springframework.cache.annotation.CacheEvict;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.data.domain.Page;
 import org.springframework.transaction.annotation.Transactional;
 import top.cardone.cache.Caches;
+import top.cardone.context.ApplicationContextHolder;
 import top.cardone.context.annotation.Event;
 import top.cardone.context.annotation.Events;
 import top.cardone.context.event.SimpleErrorEvent;
 import top.cardone.context.event.SimpleEvent;
+import top.cardone.context.util.MapUtils;
 import top.cardone.data.service.PageService;
 
 import java.util.List;
@@ -245,6 +249,19 @@ public interface DepartmentService extends PageService {
     @Cacheable(key = Caches.KEY_1)
     default List<Map<String, Object>> findListByDepartmentCodeCache(String departmentCode) {
         return this.findListByDepartmentCode(departmentCode);
+    }
+
+    @Cacheable(key = Caches.KEY_1)
+    default List<String> readListDepartmentCodeTreeByDepartmentCodeCache(String departmentCode) {
+        List<Map<String, Object>> departmentList = ApplicationContextHolder.getBean(DepartmentService.class).findListByDepartmentCodeCache(departmentCode);
+
+        List<String> departmentCodeList = Lists.newArrayList();
+
+        for (Map<String, Object> department : departmentList) {
+            departmentCodeList.add(MapUtils.getString(department, "DEPARTMENT_CODE"));
+        }
+
+        return departmentCodeList;
     }
 
     /**
