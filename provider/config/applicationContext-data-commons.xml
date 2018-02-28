@@ -13,9 +13,9 @@
 
     <bean id="readPrincipalFunc" class="top.cardone.security.shiro.func.ReadPrincipalFunc"/>
 
-    <bean id="readOneDateFunc" class="top.cardone.data.func.ReadOneDateFunc"/>
-
-
+    <bean name="readOneDateFunc" class="top.cardone.context.action.MethodInvokerFunc0">
+        <property name="staticMethod" value="top.cardone.context.util.DateUtils.now"/>
+    </bean>
 
     <bean name="endDateDefaultValueFunc" class="top.cardone.context.func.DefaultValueFunc">
         <property name="defaultValue" value="9999-01-01"/>

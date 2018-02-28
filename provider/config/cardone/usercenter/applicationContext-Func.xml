@@ -4,15 +4,11 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
     <bean name="readOneUserDepartmentCodeByUserCodeFunc" class="top.cardone.context.action.MethodInvokerFunc1">
         <property name="targetBeanName" value="top.cardone.usercenter.service.UserService"/>
-        <property name="targetMethod" value="readOneUserDepartmentCodeByUserCodeCache"/>
+        <property name="targetMethod" value="readOneDepartmentCodeByUserCodeCache"/>
     </bean>
 
     <bean name="readListDepartmentCodeTreeByDepartmentCodeFunc" class="top.cardone.context.action.MethodInvokerFunc1">
         <property name="targetBeanName" value="top.cardone.usercenter.service.DepartmentService"/>
         <property name="targetMethod" value="readListDepartmentCodeTreeByDepartmentCodeCache"/>
-    </bean>
-
-    <bean name="readOneDepartmentFunc" class="top.cardone.data.func.ReadOneFunc">
-        <property name="serviceBeanName" value="top.cardone.usercenter.service.DepartmentService"/>
     </bean>
 </beans>

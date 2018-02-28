@@ -264,7 +264,7 @@ public interface UserService extends PageService {
         return this.findOneByUserCode(findOne);
     }
 
-    default Map<String, Object> findOneUserByPrincipal() {
+    default Map<String, Object> findOneByPrincipal() {
         Object principal = SecurityUtils.getSubject().getPrincipal();
 
         if (principal == null) {
@@ -280,7 +280,7 @@ public interface UserService extends PageService {
         return ApplicationContextHolder.getBean(UserService.class).findOneCache(findOneUser);
     }
 
-    default String readOneUserId() {
+    default String readOneUserIdByPrincipal() {
         Object principal = SecurityUtils.getSubject().getPrincipal();
 
         if (principal == null) {
@@ -298,7 +298,7 @@ public interface UserService extends PageService {
     }
 
     @Cacheable(key = Caches.KEY_1)
-    default String readOneUserDepartmentCodeByUserCodeCache(String userCode) {
+    default String readOneDepartmentCodeByUserCodeCache(String userCode) {
         Map<String, Object> readOne = Maps.newHashMap();
 
         readOne.put("userCode", userCode);
@@ -310,7 +310,7 @@ public interface UserService extends PageService {
     }
 
     @Cacheable(key = Caches.KEY_1)
-    default String readOneUserDepartmentIdByUserCodeCache(String userCode) {
+    default String readOneDepartmentIdByUserCodeCache(String userCode) {
         Map<String, Object> readOne = Maps.newHashMap();
 
         readOne.put("userCode", userCode);
