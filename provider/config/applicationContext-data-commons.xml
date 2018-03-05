@@ -11,8 +11,6 @@
 
     <bean id="readRandomUUIDFunc" class="top.cardone.data.func.ReadRandomUUIDFunc"/>
 
-    <bean id="readPrincipalFunc" class="top.cardone.security.shiro.func.ReadPrincipalFunc"/>
-
     <bean name="readOneDateFunc" class="top.cardone.context.action.MethodInvokerFunc0">
         <property name="staticMethod" value="top.cardone.context.util.DateUtils.now"/>
     </bean>
