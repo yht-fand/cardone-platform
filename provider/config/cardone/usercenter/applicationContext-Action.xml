@@ -2,21 +2,6 @@
 <beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xmlns="http://www.springframework.org/schema/beans"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
-    <bean class="top.cardone.context.action.BatchAction0" init-method="action">
-        <property name="actions">
-            <list>
-                <bean class="top.cardone.data.action.InitDataAction">
-                    <property name="serviceBeanId" value="top.cardone.usercenter.service.UserService"/>
-                    <property name="jsonFiles" value="${app.root}/config/*/usercenter/init-data/user-*.json"/>
-                </bean>
-                <bean class="top.cardone.data.action.InitDataAction">
-                    <property name="serviceBeanId" value="top.cardone.usercenter.service.DepartmentService"/>
-                    <property name="jsonFiles" value="${app.root}/config/*/usercenter/init-data/department-*.json"/>
-                </bean>
-            </list>
-        </property>
-    </bean>
-
     <bean name="orgGenerateTreeAction" class="top.cardone.data.action.GenerateTreeAction">
         <property name="codePutKey" value="orgCode"/>
         <property name="codeGetKey" value="ORG_CODE"/>
