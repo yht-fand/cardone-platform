@@ -2,12 +2,12 @@
 <beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xmlns="http://www.springframework.org/schema/beans"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
-    <bean name="readOneUserDepartmentCodeByUserCodeFunc" class="top.cardone.context.action.MethodInvokerFunc1">
+    <bean name="readOneUserDepartmentCodeByUserCodeFunc" class="top.cardone.context.func.MethodInvokerFunc1">
         <property name="targetBeanName" value="top.cardone.usercenter.service.UserService"/>
         <property name="targetMethod" value="readOneDepartmentCodeByUserCodeCache"/>
     </bean>
 
-    <bean name="readListDepartmentCodeTreeByDepartmentCodeFunc" class="top.cardone.context.action.MethodInvokerFunc1">
+    <bean name="readListDepartmentCodeTreeByDepartmentCodeFunc" class="top.cardone.context.func.MethodInvokerFunc1">
         <property name="targetBeanName" value="top.cardone.usercenter.service.DepartmentService"/>
         <property name="targetMethod" value="readListDepartmentCodeTreeByDepartmentCodeCache"/>
     </bean>
