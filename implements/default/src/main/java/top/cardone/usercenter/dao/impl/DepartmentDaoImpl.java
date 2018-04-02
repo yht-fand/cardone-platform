@@ -50,8 +50,8 @@ public class DepartmentDaoImpl extends PageDaoImpl implements top.cardone.userce
 
     @Override
     public List<Map<String, Object>> findListForTree(Map<String, Object> findList) {
-        String findListSqlFilePath = this.getSqlFilePath("findListForTree");
+        String findListForTreeSqlFilePath = this.getSqlFilePath("findListForTree");
 
-        return this.findList(findListSqlFilePath, this.toMap(findList, "select"));
+        return this.findList(findListForTreeSqlFilePath, this.toMap(findList, "select"));
     }
 }
