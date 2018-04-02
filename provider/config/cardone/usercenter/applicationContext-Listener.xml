@@ -37,6 +37,10 @@
                     <entry key="variableCode" value="departmentTree"/>
                     <entry key="value" value="yes"/>
                 </map>
+                <map>
+                    <entry key="variableCode" value="userGroup"/>
+                    <entry key="value" value="yes"/>
+                </map>
             </list>
         </property>
     </bean>
