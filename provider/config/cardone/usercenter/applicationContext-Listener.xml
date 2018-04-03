@@ -4,7 +4,6 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
     <bean class="top.cardone.data.listener.GenerateListener">
         <property name="serviceBeanId" value="top.cardone.usercenter.service.OrgService"/>
-        <property name="saveListFuncBeanId" value="saveListVariableFunc"/>
         <property name="saveList">
             <list>
                 <map>
@@ -17,7 +16,6 @@
 
     <bean class="top.cardone.data.listener.GenerateListener">
         <property name="serviceBeanId" value="top.cardone.usercenter.service.RegionService"/>
-        <property name="saveListFuncBeanId" value="saveListVariableFunc"/>
         <property name="saveList">
             <list>
                 <map>
@@ -30,7 +28,6 @@
 
     <bean class="top.cardone.data.listener.GenerateListener">
         <property name="serviceBeanId" value="top.cardone.usercenter.service.DepartmentService"/>
-        <property name="saveListFuncBeanId" value="saveListVariableFunc"/>
         <property name="saveList">
             <list>
                 <map>
@@ -47,7 +44,6 @@
 
     <bean class="top.cardone.data.listener.GenerateListener">
         <property name="serviceBeanId" value="top.cardone.usercenter.service.UserService"/>
-        <property name="saveListFuncBeanId" value="saveListVariableFunc"/>
         <property name="saveList">
             <list>
                 <map>
