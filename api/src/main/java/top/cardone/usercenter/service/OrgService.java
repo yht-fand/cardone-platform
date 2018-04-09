@@ -1,9 +1,7 @@
 package top.cardone.usercenter.service;
 
 import org.springframework.cache.annotation.CacheConfig;
-import org.springframework.cache.annotation.CacheEvict;
 import org.springframework.cache.annotation.Cacheable;
-import org.springframework.data.domain.Page;
 import org.springframework.transaction.annotation.Transactional;
 import top.cardone.cache.Caches;
 import top.cardone.context.annotation.Event;
@@ -12,7 +10,6 @@ import top.cardone.context.event.SimpleErrorEvent;
 import top.cardone.context.event.SimpleEvent;
 import top.cardone.data.service.PageService;
 
-import java.util.List;
 import java.util.Map;
 
 /**
@@ -32,7 +29,7 @@ public interface OrgService extends PageService {
      * @return 组织对象
      */
     Map<String, Object> findOneByOrgId(Map<String, Object> findOne);
-	
+
     /**
      * 查询组织对象
      *

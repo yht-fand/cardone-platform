@@ -2,7 +2,6 @@ package top.cardone.usercenter.dao.impl;
 
 import top.cardone.data.jdbc.dao.impl.PageDaoImpl;
 
-import java.util.List;
 import java.util.Map;
 
 /**

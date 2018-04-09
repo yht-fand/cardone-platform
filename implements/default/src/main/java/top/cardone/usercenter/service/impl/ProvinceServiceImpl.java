@@ -1,11 +1,9 @@
 package top.cardone.usercenter.service.impl;
 
-import org.springframework.data.domain.Page;
 import org.springframework.transaction.annotation.Transactional;
 import top.cardone.data.service.impl.PageServiceImpl;
 import top.cardone.usercenter.dao.ProvinceDao;
 
-import java.util.List;
 import java.util.Map;
 
 /**
