@@ -4,7 +4,6 @@ import com.google.common.collect.Lists;
 import org.springframework.cache.annotation.CacheConfig;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.transaction.annotation.Transactional;
-import top.cardone.cache.Caches;
 import top.cardone.context.ApplicationContextHolder;
 import top.cardone.context.annotation.Event;
 import top.cardone.context.annotation.Events;
