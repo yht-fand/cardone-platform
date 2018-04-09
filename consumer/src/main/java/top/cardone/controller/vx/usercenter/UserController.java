@@ -161,7 +161,7 @@ public class UserController {
     /** /m0003.json end **/
 	
 
-    //@Value("${app.root}/upload")
+    //@Value("file:upload")
     //private String uploadPath;
 
     /**

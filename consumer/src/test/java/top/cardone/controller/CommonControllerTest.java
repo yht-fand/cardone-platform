@@ -29,7 +29,7 @@ public class CommonControllerTest {
 //    //导入
 //    @Test
 //    public void testReadExcel() throws Exception {
-//        Resource resource = ApplicationContextHolder.getApplicationContext().getResource("${app.root}/config/template/test.xls");
+//        Resource resource = ApplicationContextHolder.getApplicationContext().getResource("file:config/template/test.xls");
 //
 //        if (!resource.exists()) {
 //            return;
