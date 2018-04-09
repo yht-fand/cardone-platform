@@ -36,7 +36,7 @@ public interface AreaService extends PageService {
      * @param findOne 地区标识
      * @return 地区对象
      */
-    @Cacheable(key = Caches.KEY_1)
+    @Cacheable
     default Map<String, Object> findOneByAreaIdCache(Map<String, Object> findOne) {
         return this.findOneByAreaId(findOne);
     }

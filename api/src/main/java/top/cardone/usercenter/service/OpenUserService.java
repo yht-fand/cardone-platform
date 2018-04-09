@@ -36,7 +36,7 @@ public interface OpenUserService extends PageService {
      * @param findOne 开放用户标识
      * @return 开放用户对象
      */
-    @Cacheable(key = Caches.KEY_1)
+    @Cacheable
     default Map<String, Object> findOneByOpenUserIdCache(Map<String, Object> findOne) {
         return this.findOneByOpenUserId(findOne);
     }

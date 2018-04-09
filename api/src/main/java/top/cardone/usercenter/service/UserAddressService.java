@@ -36,7 +36,7 @@ public interface UserAddressService extends PageService {
      * @param findOne 用户与地址标识
      * @return 用户与地址对象
      */
-    @Cacheable(key = Caches.KEY_1)
+    @Cacheable
     default Map<String, Object> findOneByUserAddressIdCache(Map<String, Object> findOne) {
         return this.findOneByUserAddressId(findOne);
     }

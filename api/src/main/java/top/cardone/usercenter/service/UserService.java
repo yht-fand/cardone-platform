@@ -39,7 +39,7 @@ public interface UserService extends PageService {
      * @param findOne 用户标识
      * @return 用户对象
      */
-    @Cacheable(key = Caches.KEY_1)
+    @Cacheable
     default Map<String, Object> findOneByUserIdCache(Map<String, Object> findOne) {
         return this.findOneByUserId(findOne);
     }
@@ -58,7 +58,7 @@ public interface UserService extends PageService {
      * @param findOne
      * @return 用户对象
      */
-    @Cacheable(key = Caches.KEY_1)
+    @Cacheable
     default Map<String, Object> findOneByUserCodeCache(Map<String, Object> findOne) {
         return this.findOneByUserCode(findOne);
     }
@@ -96,7 +96,7 @@ public interface UserService extends PageService {
         return ApplicationContextHolder.getBean(UserService.class).readOneCache(String.class, readOne);
     }
 
-    @Cacheable(key = Caches.KEY_1)
+    @Cacheable
     default String readOneDepartmentCodeByUserCodeCache(String userCode) {
         Map<String, Object> readOne = Maps.newHashMap();
 
@@ -108,7 +108,7 @@ public interface UserService extends PageService {
         return this.readOne(String.class, readOne);
     }
 
-    @Cacheable(key = Caches.KEY_1)
+    @Cacheable
     default String readOneDepartmentIdByUserCodeCache(String userCode) {
         Map<String, Object> readOne = Maps.newHashMap();
 

@@ -36,7 +36,7 @@ public interface UserOrgService extends PageService {
      * @param findOne 用户与组织标识
      * @return 用户与组织对象
      */
-    @Cacheable(key = Caches.KEY_1)
+    @Cacheable
     default Map<String, Object> findOneByUserOrgIdCache(Map<String, Object> findOne) {
         return this.findOneByUserOrgId(findOne);
     }

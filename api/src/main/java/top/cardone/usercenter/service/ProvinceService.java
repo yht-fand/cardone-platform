@@ -36,7 +36,7 @@ public interface ProvinceService extends PageService {
      * @param findOne 省份标识
      * @return 省份对象
      */
-    @Cacheable(key = Caches.KEY_1)
+    @Cacheable
     default Map<String, Object> findOneByProvinceIdCache(Map<String, Object> findOne) {
         return this.findOneByProvinceId(findOne);
     }

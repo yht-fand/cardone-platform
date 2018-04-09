@@ -36,7 +36,7 @@ public interface CityService extends PageService {
      * @param findOne 城市标识
      * @return 城市对象
      */
-    @Cacheable(key = Caches.KEY_1)
+    @Cacheable
     default Map<String, Object> findOneByCityIdCache(Map<String, Object> findOne) {
         return this.findOneByCityId(findOne);
     }

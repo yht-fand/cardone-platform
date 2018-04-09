@@ -36,7 +36,7 @@ public interface UserDepartmentService extends PageService {
      * @param findOne 用户与部门标识
      * @return 用户与部门对象
      */
-    @Cacheable(key = Caches.KEY_1)
+    @Cacheable
     default Map<String, Object> findOneByUserDepartmentIdCache(Map<String, Object> findOne) {
         return this.findOneByUserDepartmentId(findOne);
     }

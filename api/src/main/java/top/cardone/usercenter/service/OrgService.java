@@ -36,7 +36,7 @@ public interface OrgService extends PageService {
      * @param findOne 组织标识
      * @return 组织对象
      */
-    @Cacheable(key = Caches.KEY_1)
+    @Cacheable
     default Map<String, Object> findOneByOrgIdCache(Map<String, Object> findOne) {
         return this.findOneByOrgId(findOne);
     }

@@ -40,17 +40,17 @@ public interface DepartmentService extends PageService {
      * @param findOne 部门标识
      * @return 部门对象
      */
-    @Cacheable(key = Caches.KEY_1)
+    @Cacheable
     default Map<String, Object> findOneByDepartmentIdCache(Map<String, Object> findOne) {
         return this.findOneByDepartmentId(findOne);
     }
 
-    @Cacheable(key = Caches.KEY_1)
+    @Cacheable
     default List<Map<String, Object>> findListByDepartmentCodeCache(String departmentCode) {
         return this.findListByDepartmentCode(departmentCode);
     }
 
-    @Cacheable(key = Caches.KEY_1)
+    @Cacheable
     default List<String> readListDepartmentCodeTreeByDepartmentCodeCache(String departmentCode) {
         List<Map<String, Object>> departmentList = ApplicationContextHolder.getBean(DepartmentService.class).findListByDepartmentCodeCache(departmentCode);
 
@@ -79,7 +79,7 @@ public interface DepartmentService extends PageService {
      */
     List<Map<String, Object>> findListForTree(Map<String, Object> findList);
 
-    @Cacheable(key = Caches.KEY_1)
+    @Cacheable
     default List<Map<String, Object>> findListForTreeCache(Map<String, Object> findList) {
         return this.findListForTree(findList);
     }
