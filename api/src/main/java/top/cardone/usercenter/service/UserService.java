@@ -12,6 +12,7 @@ import top.cardone.context.event.SimpleErrorEvent;
 import top.cardone.context.event.SimpleEvent;
 import top.cardone.data.service.PageService;
 
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -117,5 +118,43 @@ public interface UserService extends PageService {
         readOne.put("object_id", "departmentId");
 
         return this.readOne(String.class, readOne);
+    }
+
+    /**
+     * 模糊查询用户标识集合
+     *
+     * @param userName 用户名称（或用户编号）
+     * @return 用户标识集合
+     */
+    List<String> readListUserIdLikeUserName(String userName);
+
+    /**
+     * 模糊查询用户标识集合
+     *
+     * @param userName 用户名称（或用户编号）
+     * @return 用户标识集合
+     */
+    @Cacheable
+    default List<String> readListUserIdLikeUserNameCache(String userName) {
+        return this.readListUserIdLikeUserName(userName);
+    }
+
+    /**
+     * 模糊查询用户集合
+     *
+     * @param userName 用户名称（或用户编号）
+     * @return 用户集合
+     */
+    List<Map<String, Object>> findListUserIdLikeUserName(String userName);
+
+    /**
+     * 模糊查询用户集合
+     *
+     * @param userName 用户名称（或用户编号）
+     * @return 用户集合
+     */
+    @Cacheable
+    default List<Map<String, Object>> findListUserIdLikeUserNameCache(String userName) {
+        return this.findListUserIdLikeUserName(userName);
     }
 }

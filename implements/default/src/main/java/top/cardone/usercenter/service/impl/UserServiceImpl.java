@@ -4,6 +4,7 @@ import org.springframework.transaction.annotation.Transactional;
 import top.cardone.data.service.impl.PageServiceImpl;
 import top.cardone.usercenter.dao.UserDao;
 
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -21,5 +22,15 @@ public class UserServiceImpl extends PageServiceImpl<UserDao> implements top.car
     @Override
     public Map<String, Object> findOneByUserCode(Map<String, Object> findOne) {
         return this.dao.findOneByUserCode(findOne);
+    }
+
+    @Override
+    public List<String> readListUserIdLikeUserName(String userName) {
+        return this.dao.readListUserIdLikeUserName(userName);
+    }
+
+    @Override
+    public List<Map<String, Object>> findListUserIdLikeUserName(String userName) {
+        return this.dao.findListUserIdLikeUserName(userName);
     }
 }
