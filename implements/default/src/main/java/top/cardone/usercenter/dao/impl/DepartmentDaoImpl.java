@@ -18,13 +18,6 @@ public class DepartmentDaoImpl extends PageDaoImpl implements top.cardone.userce
     private String syncOldSql;
 
     @Override
-    public Map<String, Object> findOneByDepartmentId(Map<String, Object> findOne) {
-        String findOneSqlFilePath = this.getSqlFilePath("page.find");
-
-        return this.findOne(findOneSqlFilePath, findOne);
-    }
-
-    @Override
     public List<Map<String, Object>> findListByDepartmentCode(String departmentCode) {
         String findListSqlFilePath = this.getSqlFilePath("findListByDepartmentCode");
 
@@ -46,12 +39,5 @@ public class DepartmentDaoImpl extends PageDaoImpl implements top.cardone.userce
         for (String sql : syncOldSqls) {
             this.update(sql, null);
         }
-    }
-
-    @Override
-    public List<Map<String, Object>> findListForTree(Map<String, Object> findList) {
-        String findListForTreeSqlFilePath = this.getSqlFilePath("findListForTree");
-
-        return this.findList(findListForTreeSqlFilePath, this.toMap(findList, "select"));
     }
 }

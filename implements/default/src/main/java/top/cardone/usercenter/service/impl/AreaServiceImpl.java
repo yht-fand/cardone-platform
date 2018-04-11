@@ -15,6 +15,6 @@ import java.util.Map;
 public class AreaServiceImpl extends PageServiceImpl<AreaDao> implements top.cardone.usercenter.service.AreaService {
     @Override
     public Map<String, Object> findOneByAreaId(Map<String, Object> findOne) {
-        return this.dao.findOneByAreaId(findOne);
+        return this.dao.findOneBySqlFileName("page.find", findOne);
     }
 }

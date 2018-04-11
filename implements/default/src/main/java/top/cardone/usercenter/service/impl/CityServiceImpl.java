@@ -15,6 +15,6 @@ import java.util.Map;
 public class CityServiceImpl extends PageServiceImpl<CityDao> implements top.cardone.usercenter.service.CityService {
     @Override
     public Map<String, Object> findOneByCityId(Map<String, Object> findOne) {
-        return this.dao.findOneByCityId(findOne);
+        return this.dao.findOneBySqlFileName("page.find", findOne);
     }
 }

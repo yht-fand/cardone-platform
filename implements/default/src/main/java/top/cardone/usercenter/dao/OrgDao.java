@@ -11,14 +11,6 @@ import java.util.Map;
  * @author yao hai tao
  */
 public interface OrgDao extends PageDao {
-    /**
-     * 查询组织对象
-     *
-     * @param findOne 组织标识
-     * @return 组织对象
-     */
-    Map<String, Object> findOneByOrgId(Map<String, Object> findOne);
-
     List<Map<String, Object>> findListByOrgCode(String orgCode);
 
     /**

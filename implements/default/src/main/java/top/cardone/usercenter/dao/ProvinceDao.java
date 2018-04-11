@@ -10,11 +10,4 @@ import java.util.Map;
  * @author yao hai tao
  */
 public interface ProvinceDao extends PageDao {
-    /**
-     * 查询省份对象
-     *
-     * @param findOne 省份标识
-     * @return 省份对象
-     */
-    Map<String, Object> findOneByProvinceId(Map<String, Object> findOne);
 }

@@ -15,8 +15,8 @@ import java.util.Map;
 @Transactional(readOnly = true)
 public class UserServiceImpl extends PageServiceImpl<UserDao> implements top.cardone.usercenter.service.UserService {
     @Override
-    public Map<String, Object> findOneByUserId(Map<String, Object> findOneMap) {
-        return this.dao.findOneByUserId(findOneMap);
+    public Map<String, Object> findOneByUserId(Map<String, Object> findOne) {
+        return this.dao.findOneBySqlFileName("page.find", findOne);
     }
 
     @Override

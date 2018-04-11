@@ -12,14 +12,6 @@ import java.util.Map;
  */
 public interface DepartmentDao extends PageDao {
     /**
-     * 根据部门标志查询部门对象
-     *
-     * @param departmentId
-     * @return
-     */
-    Map<String, Object> findOneByDepartmentId(Map<String, Object> findOne);
-
-    /**
      * 查询部门列表
      *
      * @param departmentCode 部门代码
@@ -31,12 +23,4 @@ public interface DepartmentDao extends PageDao {
      * 同步旧数据
      */
     void syncOldData();
-
-    /**
-     * 查询部门树
-     *
-     * @param findList 关键字
-     * @return
-     */
-    List<Map<String, Object>> findListForTree(Map<String, Object> findList);
 }

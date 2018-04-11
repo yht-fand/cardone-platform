@@ -15,6 +15,6 @@ import java.util.Map;
 public class UserDepartmentServiceImpl extends PageServiceImpl<UserDepartmentDao> implements top.cardone.usercenter.service.UserDepartmentService {
     @Override
     public Map<String, Object> findOneByUserDepartmentId(Map<String, Object> findOne) {
-        return this.dao.findOneByUserDepartmentId(findOne);
+        return this.dao.findOneBySqlFileName("page.find", findOne);
     }
 }

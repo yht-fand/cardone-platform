@@ -15,6 +15,6 @@ import java.util.Map;
 public class RegionServiceImpl extends PageServiceImpl<RegionDao> implements top.cardone.usercenter.service.RegionService {
     @Override
     public Map<String, Object> findOneByRegionId(Map<String, Object> findOne) {
-        return this.dao.findOneByRegionId(findOne);
+        return this.dao.findOneBySqlFileName("page.find", findOne);
     }
 }

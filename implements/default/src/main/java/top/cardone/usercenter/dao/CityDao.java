@@ -10,11 +10,4 @@ import java.util.Map;
  * @author yao hai tao
  */
 public interface CityDao extends PageDao {
-    /**
-     * 查询城市对象
-     *
-     * @param findOne 城市标识
-     * @return 城市对象
-     */
-    Map<String, Object> findOneByCityId(Map<String, Object> findOne);
 }

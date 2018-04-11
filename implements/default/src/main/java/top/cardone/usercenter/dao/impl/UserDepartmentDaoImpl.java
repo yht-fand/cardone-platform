@@ -10,10 +10,4 @@ import java.util.Map;
  * @author yao hai tao
  */
 public class UserDepartmentDaoImpl extends PageDaoImpl implements top.cardone.usercenter.dao.UserDepartmentDao {
-    @Override
-    public Map<String, Object> findOneByUserDepartmentId(Map<String, Object> findOne) {
-        String findOneSqlFilePath = this.getSqlFilePath("page.find");
-
-        return this.findOne(findOneSqlFilePath, findOne);
-    }
 }

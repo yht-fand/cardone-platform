@@ -15,6 +15,6 @@ import java.util.Map;
 public class OpenUserServiceImpl extends PageServiceImpl<OpenUserDao> implements top.cardone.usercenter.service.OpenUserService {
     @Override
     public Map<String, Object> findOneByOpenUserId(Map<String, Object> findOne) {
-        return this.dao.findOneByOpenUserId(findOne);
+        return this.dao.findOneBySqlFileName("page.find", findOne);
     }
 }

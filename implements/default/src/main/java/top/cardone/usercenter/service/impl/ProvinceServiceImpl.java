@@ -15,6 +15,6 @@ import java.util.Map;
 public class ProvinceServiceImpl extends PageServiceImpl<ProvinceDao> implements top.cardone.usercenter.service.ProvinceService {
     @Override
     public Map<String, Object> findOneByProvinceId(Map<String, Object> findOne) {
-        return this.dao.findOneByProvinceId(findOne);
+        return this.dao.findOneBySqlFileName("page.find", findOne);
     }
 }

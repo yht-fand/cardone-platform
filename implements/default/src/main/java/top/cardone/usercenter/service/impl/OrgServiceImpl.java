@@ -15,6 +15,6 @@ import java.util.Map;
 public class OrgServiceImpl extends PageServiceImpl<OrgDao> implements top.cardone.usercenter.service.OrgService {
     @Override
     public Map<String, Object> findOneByOrgId(Map<String, Object> findOne) {
-        return this.dao.findOneByOrgId(findOne);
+        return this.dao.findOneBySqlFileName("page.find", findOne);
     }
 }

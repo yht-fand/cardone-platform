@@ -14,8 +14,9 @@ import java.util.Map;
  */
 @Transactional(readOnly = true)
 public class DepartmentServiceImpl extends PageServiceImpl<DepartmentDao> implements top.cardone.usercenter.service.DepartmentService {
+    @Override
     public Map<String, Object> findOneByDepartmentId(Map<String, Object> findOne) {
-        return this.dao.findOneByDepartmentId(findOne);
+        return this.dao.findOneBySqlFileName("page.find", findOne);
     }
 
     @Override
@@ -25,7 +26,7 @@ public class DepartmentServiceImpl extends PageServiceImpl<DepartmentDao> implem
 
     @Override
     public List<Map<String, Object>> findListForTree(Map<String, Object> findList) {
-        return this.dao.findListForTree(findList);
+        return this.dao.findListBySqlFileName("findListForTree", findList);
     }
 
     @Override

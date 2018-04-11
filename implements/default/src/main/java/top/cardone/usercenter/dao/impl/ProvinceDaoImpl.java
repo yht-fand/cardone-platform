@@ -10,10 +10,4 @@ import java.util.Map;
  * @author yao hai tao
  */
 public class ProvinceDaoImpl extends PageDaoImpl implements top.cardone.usercenter.dao.ProvinceDao {
-    @Override
-    public Map<String, Object> findOneByProvinceId(Map<String, Object> findOne) {
-        String findOneSqlFilePath = this.getSqlFilePath("page.find");
-
-        return this.findOne(findOneSqlFilePath, findOne);
-    }
 }

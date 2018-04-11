@@ -12,14 +12,6 @@ import java.util.Map;
  */
 public interface RegionDao extends PageDao {
     /**
-     * 查询区域对象
-     *
-     * @param findOne 区域标识
-     * @return 区域对象
-     */
-    Map<String, Object> findOneByRegionId(Map<String, Object> findOne);
-
-    /**
      * 查询
      *
      * @param findList

@@ -14,14 +14,6 @@ public interface UserDao extends PageDao {
     int updateByUserIds(Map<String, Object> update);
 
     /**
-     * 查询对象
-     *
-     * @param findOne 用户标识
-     * @return 对象用户对象
-     */
-    Map<String, Object> findOneByUserId(Map<String, Object> findOne);
-
-    /**
      * 查询用户对象
      *
      * @param findOne

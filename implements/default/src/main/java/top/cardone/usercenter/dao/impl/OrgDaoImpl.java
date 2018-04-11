@@ -13,13 +13,6 @@ import java.util.Map;
  */
 public class OrgDaoImpl extends PageDaoImpl implements top.cardone.usercenter.dao.OrgDao {
     @Override
-    public Map<String, Object> findOneByOrgId(Map<String, Object> findOne) {
-        String findOneSqlFilePath = this.getSqlFilePath("page.find");
-
-        return this.findOne(findOneSqlFilePath, findOne);
-    }
-
-    @Override
     public List<Map<String, Object>> findListByOrgCode(String orgCode) {
         String findOneSqlFilePath = this.getSqlFilePath("findListByOrgCode");
 
