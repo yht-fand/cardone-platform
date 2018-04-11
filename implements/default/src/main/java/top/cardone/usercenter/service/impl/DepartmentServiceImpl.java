@@ -1,5 +1,6 @@
 package top.cardone.usercenter.service.impl;
 
+import com.google.common.collect.Maps;
 import org.springframework.transaction.annotation.Transactional;
 import top.cardone.data.service.impl.PageServiceImpl;
 import top.cardone.usercenter.dao.DepartmentDao;
@@ -21,7 +22,11 @@ public class DepartmentServiceImpl extends PageServiceImpl<DepartmentDao> implem
 
     @Override
     public List<Map<String, Object>> findListByDepartmentCode(String departmentCode) {
-        return this.dao.findListByDepartmentCode(departmentCode);
+        Map<String, Object> findList = Maps.newHashMap();
+
+        findList.put("departmentCode", departmentCode);
+
+        return this.dao.findListBySqlFileName("findListByDepartmentCode", findList);
     }
 
     @Override

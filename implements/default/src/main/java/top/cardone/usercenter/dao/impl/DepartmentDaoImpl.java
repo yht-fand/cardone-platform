@@ -18,17 +18,6 @@ public class DepartmentDaoImpl extends PageDaoImpl implements top.cardone.userce
     private String syncOldSql;
 
     @Override
-    public List<Map<String, Object>> findListByDepartmentCode(String departmentCode) {
-        String findListSqlFilePath = this.getSqlFilePath("findListByDepartmentCode");
-
-        Map<String, Object> inputMap = Maps.newHashMap();
-
-        inputMap.put("departmentCode", departmentCode);
-
-        return this.findList(findListSqlFilePath, inputMap);
-    }
-
-    @Override
     public void syncOldData() {
         if (StringUtils.isBlank(syncOldSql)) {
             return;

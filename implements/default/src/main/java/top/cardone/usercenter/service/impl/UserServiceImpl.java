@@ -1,5 +1,6 @@
 package top.cardone.usercenter.service.impl;
 
+import com.google.common.collect.Maps;
 import org.springframework.transaction.annotation.Transactional;
 import top.cardone.data.service.impl.PageServiceImpl;
 import top.cardone.usercenter.dao.UserDao;
@@ -21,16 +22,24 @@ public class UserServiceImpl extends PageServiceImpl<UserDao> implements top.car
 
     @Override
     public Map<String, Object> findOneByUserCode(Map<String, Object> findOne) {
-        return this.dao.findOneByUserCode(findOne);
+        return this.dao.findOneBySqlFileName("findOneByUserCode", findOne);
     }
 
     @Override
     public List<String> readListUserIdLikeUserName(String userName) {
-        return this.dao.readListUserIdLikeUserName(userName);
+        Map<String, Object> readList = Maps.newHashMap();
+
+        readList.put("userName", userName);
+
+        return this.dao.readListBySqlFileName(String.class, "readListUserIdLikeUserName", readList);
     }
 
     @Override
     public List<Map<String, Object>> findListUserIdLikeUserName(String userName) {
-        return this.dao.findListUserIdLikeUserName(userName);
+        Map<String, Object> findList = Maps.newHashMap();
+
+        findList.put("userName", userName);
+
+        return this.dao.findListBySqlFileName("findListUserIdLikeUserName", findList);
     }
 }
