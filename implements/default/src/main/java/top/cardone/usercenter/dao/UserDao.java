@@ -23,5 +23,5 @@ public interface UserDao extends PageDao {
 
     List<String> readListUserIdLikeUserName(String userName);
 
-    List<Map<String,Object>> findListUserIdLikeUserName(String userName);
+    List<Map<String, Object>> findListUserIdLikeUserName(String userName);
 }
