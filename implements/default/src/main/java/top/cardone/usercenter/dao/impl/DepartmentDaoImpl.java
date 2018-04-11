@@ -1,12 +1,8 @@
 package top.cardone.usercenter.dao.impl;
 
-import com.google.common.collect.Maps;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Value;
 import top.cardone.data.jdbc.dao.impl.PageDaoImpl;
-
-import java.util.List;
-import java.util.Map;
 
 /**
  * 部门
