@@ -5,6 +5,11 @@
 
     <!--Quartz本地Schduler -->
     <bean class="org.springframework.scheduling.quartz.SchedulerFactoryBean">
+        <property name="globalJobListeners">
+            <array>
+                <bean class="top.cardone.log.listener.QuartzJobListener"/>
+            </array>
+        </property>
         <!-- Triggers集成 -->
         <property name="triggers">
             <list>
