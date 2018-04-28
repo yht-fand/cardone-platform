@@ -2,7 +2,8 @@
 <beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xmlns="http://www.springframework.org/schema/beans"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
-    <bean class="top.cardone.data.listener.GenerateListener" lazy-init="${listener.OrgService.lazyInit:false}">
+    <bean class="top.cardone.data.listener.GenerateListener">
+        <property name="skip" value="${GenerateListener.OrgService.skip:false}"/>
         <property name="serviceBeanId" value="top.cardone.usercenter.service.OrgService"/>
         <property name="saveList">
             <list>
@@ -14,7 +15,8 @@
         </property>
     </bean>
 
-    <bean class="top.cardone.data.listener.GenerateListener" lazy-init="${listener.RegionService.lazyInit:false}">
+    <bean class="top.cardone.data.listener.GenerateListener">
+        <property name="skip" value="${GenerateListener.RegionService.skip:false}"/>
         <property name="serviceBeanId" value="top.cardone.usercenter.service.RegionService"/>
         <property name="saveList">
             <list>
@@ -26,7 +28,8 @@
         </property>
     </bean>
 
-    <bean class="top.cardone.data.listener.GenerateListener" lazy-init="${listener.DepartmentService.lazyInit:false}">
+    <bean class="top.cardone.data.listener.GenerateListener">
+        <property name="skip" value="${GenerateListener.DepartmentService.skip:false}"/>
         <property name="serviceBeanId" value="top.cardone.usercenter.service.DepartmentService"/>
         <property name="saveList">
             <list>
@@ -42,7 +45,8 @@
         </property>
     </bean>
 
-    <bean class="top.cardone.data.listener.GenerateListener" lazy-init="${listener.UserService.lazyInit:false}">
+    <bean class="top.cardone.data.listener.GenerateListener">
+        <property name="skip" value="${GenerateListener.UserService.skip:false}"/>
         <property name="serviceBeanId" value="top.cardone.usercenter.service.UserService"/>
         <property name="saveList">
             <list>
