@@ -21,7 +21,7 @@
         <property name="service" ref="top.cardone.usercenter.service.DepartmentService"/>
     </bean>
 
-    <rabbit:listener-container connection-factory="rabbitConnectionFactory" concurrency="16">
+    <rabbit:listener-container connection-factory="rabbitConnectionFactory" concurrency="32" prefetch="32">
         <rabbit:listener ref="top.cardone.usercenter.service.DepartmentServiceExporter"
                          queue-names="queue:cardone-usercenter-${cardone-usercenter-version}:top.cardone.usercenter.service.DepartmentService"/>
     </rabbit:listener-container>
