@@ -39,4 +39,32 @@ public class DepartmentServiceImpl extends PageServiceImpl<DepartmentDao> implem
     public void syncOldData() {
         this.dao.syncOldData();
     }
+
+    @Override
+    public List<String> readListDepartmentIdLikeDepartmentName(String departmentName, Boolean isLike) {
+        Map<String, Object> readList = Maps.newHashMap();
+
+        readList.put("departmentName", departmentName);
+        readList.put("isLike", isLike);
+
+        return this.dao.readListBySqlFileName(String.class, "readListDepartmentIdLikeDepartmentName", readList);
+    }
+
+    @Override
+    public List<String> readListDepartmentIdLikeDepartmentIdForTree(String departmentId) {
+        Map<String, Object> readList = Maps.newHashMap();
+
+        readList.put("departmentId", departmentId);
+
+        return this.dao.readListBySqlFileName(String.class, "readListDepartmentIdLikeDepartmentIdForTree", readList);
+    }
+
+    @Override
+    public List<String> readListDepartmentIdLikeDepartmentCodeForTree(String departmentCode) {
+        Map<String, Object> readList = Maps.newHashMap();
+
+        readList.put("departmentCode", departmentCode);
+
+        return this.dao.readListBySqlFileName(String.class, "readListDepartmentIdLikeDepartmentCodeForTree", readList);
+    }
 }

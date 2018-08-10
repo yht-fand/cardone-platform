@@ -126,7 +126,7 @@ public interface UserService extends PageService {
      * @param userName 用户名称（或用户编号）
      * @return 用户标识集合
      */
-    List<String> readListUserIdLikeUserName(String userName);
+    List<String> readListUserIdLikeUserName(String userName, Boolean isLike);
 
     /**
      * 模糊查询用户标识集合
@@ -135,8 +135,8 @@ public interface UserService extends PageService {
      * @return 用户标识集合
      */
     @Cacheable
-    default List<String> readListUserIdLikeUserNameCache(String userName) {
-        return this.readListUserIdLikeUserName(userName);
+    default List<String> readListUserIdLikeUserNameCache(String userName, Boolean isLike) {
+        return this.readListUserIdLikeUserName(userName, isLike);
     }
 
     /**
@@ -145,7 +145,7 @@ public interface UserService extends PageService {
      * @param userName 用户名称（或用户编号）
      * @return 用户集合
      */
-    List<Map<String, Object>> findListUserIdLikeUserName(String userName);
+    List<Map<String, Object>> findListLikeUserName(String userName, Boolean isLike);
 
     /**
      * 模糊查询用户集合
@@ -154,7 +154,7 @@ public interface UserService extends PageService {
      * @return 用户集合
      */
     @Cacheable
-    default List<Map<String, Object>> findListUserIdLikeUserNameCache(String userName) {
-        return this.findListUserIdLikeUserName(userName);
+    default List<Map<String, Object>> findListLikeUserNameCache(String userName, Boolean isLike) {
+        return this.findListLikeUserName(userName, isLike);
     }
 }

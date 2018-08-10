@@ -26,20 +26,22 @@ public class UserServiceImpl extends PageServiceImpl<UserDao> implements top.car
     }
 
     @Override
-    public List<String> readListUserIdLikeUserName(String userName) {
+    public List<String> readListUserIdLikeUserName(String userName, Boolean isLike) {
         Map<String, Object> readList = Maps.newHashMap();
 
         readList.put("userName", userName);
+        readList.put("isLike", isLike);
 
         return this.dao.readListBySqlFileName(String.class, "readListUserIdLikeUserName", readList);
     }
 
     @Override
-    public List<Map<String, Object>> findListUserIdLikeUserName(String userName) {
+    public List<Map<String, Object>> findListLikeUserName(String userName, Boolean isLike) {
         Map<String, Object> findList = Maps.newHashMap();
 
         findList.put("userName", userName);
+        findList.put("isLike", isLike);
 
-        return this.dao.findListBySqlFileName("findListUserIdLikeUserName", findList);
+        return this.dao.findListBySqlFileName("findListLikeUserName", findList);
     }
 }

@@ -88,4 +88,61 @@ public interface DepartmentService extends PageService {
      */
     @Transactional
     void syncOldData();
+
+    /**
+     * 模糊查询部门标识集合
+     *
+     * @param departmentName 部门名称（或部门编号）
+     * @return 部门标识集合
+     */
+    List<String> readListDepartmentIdLikeDepartmentName(String departmentName, Boolean isLike);
+
+    /**
+     * 模糊查询部门标识集合
+     *
+     * @param departmentName 部门名称（或部门编号）
+     * @return 部门标识集合
+     */
+    @Cacheable
+    default List<String> readListDepartmentIdLikeDepartmentNameCache(String departmentName, Boolean isLike) {
+        return this.readListDepartmentIdLikeDepartmentName(departmentName, isLike);
+    }
+
+    /**
+     * 模糊查询部门标识集合
+     *
+     * @param departmentId 部门标识
+     * @return 部门标识集合
+     */
+    List<String> readListDepartmentIdLikeDepartmentIdForTree(String departmentId);
+
+    /**
+     * 模糊查询部门标识集合
+     *
+     * @param departmentId 部门标识
+     * @return 部门标识集合
+     */
+    @Cacheable
+    default List<String> readListDepartmentIdLikeDepartmentIdForTreeCache(String departmentId) {
+        return this.readListDepartmentIdLikeDepartmentIdForTree(departmentId);
+    }
+
+    /**
+     * 模糊查询部门标识集合
+     *
+     * @param departmentCode 部门编号
+     * @return 部门标识集合
+     */
+    List<String> readListDepartmentIdLikeDepartmentCodeForTree(String departmentCode);
+
+    /**
+     * 模糊查询部门标识集合
+     *
+     * @param departmentCode 部门编号
+     * @return 部门标识集合
+     */
+    @Cacheable
+    default List<String> readListDepartmentIdLikeDepartmentCodeForTreeCache(String departmentCode) {
+        return this.readListDepartmentIdLikeDepartmentCodeForTree(departmentCode);
+    }
 }
