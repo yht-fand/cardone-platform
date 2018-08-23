@@ -56,5 +56,10 @@
                 </map>
             </list>
         </property>
+        <property name="actionBeanNames">
+            <list>
+                <value>top/cardone/usercenter/action/ChageUserAction</value>
+            </list>
+        </property>
     </bean>
 </beans>
