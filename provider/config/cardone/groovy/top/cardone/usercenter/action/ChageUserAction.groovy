@@ -7,6 +7,7 @@ import org.springframework.core.task.TaskExecutor
 import org.springframework.scheduling.support.TaskUtils
 import top.cardone.authority.service.UserPermissionService
 import top.cardone.authority.service.UserRoleService
+import top.cardone.cache.Cache
 import top.cardone.context.ApplicationContextHolder
 import top.cardone.context.event.SimpleEvent
 import top.cardone.core.util.action.Action1
@@ -51,6 +52,8 @@ class ChageUserAction implements Action1<SimpleEvent> {
         if (StringUtils.isNotBlank(userId)) {
             ApplicationContextHolder.getBean(UserRoleService.class).generateDataByUserId(userId)
             ApplicationContextHolder.getBean(UserPermissionService.class).generateDataByUserId(userId)
+            ApplicationContextHolder.getBean(Cache.class).clearBySkipNames("top.cardone.security.shiro.session.mgt.eis.impl.SessionDaoImpl")
+
 
             return
         }
@@ -60,6 +63,8 @@ class ChageUserAction implements Action1<SimpleEvent> {
         if (StringUtils.isNotBlank(userCode)) {
             ApplicationContextHolder.getBean(UserRoleService.class).generateDataByUserCode(userCode)
             ApplicationContextHolder.getBean(UserPermissionService.class).generateDataByUserCode(userCode)
+            ApplicationContextHolder.getBean(Cache.class).clearBySkipNames("top.cardone.security.shiro.session.mgt.eis.impl.SessionDaoImpl")
+
         }
     }
 }
