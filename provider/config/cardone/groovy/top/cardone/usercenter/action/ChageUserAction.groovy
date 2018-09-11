@@ -52,6 +52,9 @@ class ChageUserAction implements Action1<SimpleEvent> {
         if (StringUtils.isNotBlank(userId)) {
             ApplicationContextHolder.getBean(UserRoleService.class).generateDataByUserId(userId)
             ApplicationContextHolder.getBean(UserPermissionService.class).generateDataByUserId(userId)
+
+            Thread.sleep(3000)
+
             ApplicationContextHolder.getBean(Cache.class).clearBySkipNames("top.cardone.security.shiro.session.mgt.eis.impl.SessionDaoImpl")
 
             return
@@ -62,6 +65,9 @@ class ChageUserAction implements Action1<SimpleEvent> {
         if (StringUtils.isNotBlank(userCode)) {
             ApplicationContextHolder.getBean(UserRoleService.class).generateDataByUserCode(userCode)
             ApplicationContextHolder.getBean(UserPermissionService.class).generateDataByUserCode(userCode)
+
+            Thread.sleep(3000)
+
             ApplicationContextHolder.getBean(Cache.class).clearBySkipNames("top.cardone.security.shiro.session.mgt.eis.impl.SessionDaoImpl")
         }
     }
