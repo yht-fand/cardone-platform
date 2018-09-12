@@ -10,6 +10,7 @@ import top.cardone.context.annotation.Event;
 import top.cardone.context.annotation.Events;
 import top.cardone.context.event.SimpleErrorEvent;
 import top.cardone.context.event.SimpleEvent;
+import top.cardone.core.util.func.Func0;
 import top.cardone.data.service.PageService;
 
 import java.util.List;
@@ -64,7 +65,7 @@ public interface UserService extends PageService {
     }
 
     default Map<String, Object> findOneByPrincipal() {
-        Object principal = SecurityUtils.getSubject().getPrincipal();
+        Object principal = ApplicationContextHolder.func(Func0.class, func -> (String) func.func(), "readPrincipalFunc");
 
         if (principal == null) {
             return null;
@@ -80,7 +81,7 @@ public interface UserService extends PageService {
     }
 
     default String readOneUserIdByPrincipal() {
-        Object principal = SecurityUtils.getSubject().getPrincipal();
+        Object principal = ApplicationContextHolder.func(Func0.class, func -> (String) func.func(), "readPrincipalFunc");
 
         if (principal == null) {
             return null;
