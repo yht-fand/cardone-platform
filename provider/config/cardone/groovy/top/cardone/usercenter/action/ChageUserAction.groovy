@@ -58,7 +58,7 @@ class ChageUserAction implements Action1<SimpleEvent> {
             Thread.sleep(3000)
 
             if (StringUtils.isNotBlank(userCode)) {
-                ApplicationContextHolder.getBean(Action1.class, "top/cardone/usercenter/action/EvictUserCacheAction").action(MapUtils.getString(user, userCode))
+                ApplicationContextHolder.getBean(Action1.class, "top/cardone/usercenter/action/EvictUserCacheAction").action(userCode)
             }
 
             return
@@ -70,7 +70,7 @@ class ChageUserAction implements Action1<SimpleEvent> {
 
             Thread.sleep(3000)
 
-            ApplicationContextHolder.getBean(Action1.class, "top/cardone/usercenter/action/EvictUserCacheAction").action(MapUtils.getString(user, userCode))
+            ApplicationContextHolder.getBean(Action1.class, "top/cardone/usercenter/action/EvictUserCacheAction").action(userCode)
         }
     }
 
