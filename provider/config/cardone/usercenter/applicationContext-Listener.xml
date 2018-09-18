@@ -41,6 +41,10 @@
                     <entry key="variableCode" value="userGroup"/>
                     <entry key="value" value="yes"/>
                 </map>
+                <map>
+                    <entry key="variableCode" value="departmentSync"/>
+                    <entry key="value" value="yes"/>
+                </map>
             </list>
         </property>
     </bean>
@@ -52,6 +56,10 @@
             <list>
                 <map>
                     <entry key="variableCode" value="userGroup"/>
+                    <entry key="value" value="yes"/>
+                </map>
+                <map>
+                    <entry key="variableCode" value="userSync"/>
                     <entry key="value" value="yes"/>
                 </map>
             </list>
