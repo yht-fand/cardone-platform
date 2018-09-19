@@ -81,6 +81,10 @@ class EvictUserCacheAction implements Action1<String>, Action2<String, List<Stri
                 continue
             }
 
+            if (newUrls.contains(site.url)) {
+                continue
+            }
+
             newUrls.add(site.url)
 
             if (siteCode.equals(site.site_code)) {
@@ -88,6 +92,10 @@ class EvictUserCacheAction implements Action1<String>, Action2<String, List<Stri
             }
 
             siteUrls.add(site.url)
+        }
+
+        if (org.springframework.util.CollectionUtils.isEmpty(siteUrls)) {
+            return
         }
 
         String input = ApplicationContextHolder.getBean(Gson.class).toJson([
@@ -107,15 +115,9 @@ class EvictUserCacheAction implements Action1<String>, Action2<String, List<Stri
                 continue
             }
 
-            if (!CollectionUtils.isEmpty(urls)) {
-                if (urls.contains(siteUrl)) {
-                    continue
-                }
-            }
+            def url = org.apache.commons.lang3.StringUtils.join(siteUrl, "/xa-rdmp/v1/cache/clearByUserCode")
 
-            String url = org.apache.commons.lang3.StringUtils.join(siteUrl, "/xa-rdmp/v1/cache/clearByUserCode")
-
-            url = StringUtils.join("http://127.0.0.1/xa-rdmp/v1/cache/clearByUserCode")
+//            url = "http://127.0.0.1/xa-rdmp/v1/cache/clearByUserCode"
 
             try {
                 def json = ApplicationContextHolder.getBean(RestTemplate.class).postForObject(url, httpEntity, String.class)
