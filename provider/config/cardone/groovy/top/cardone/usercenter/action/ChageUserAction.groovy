@@ -7,10 +7,10 @@ import org.springframework.core.task.TaskExecutor
 import org.springframework.scheduling.support.TaskUtils
 import top.cardone.authority.service.UserPermissionService
 import top.cardone.authority.service.UserRoleService
-import top.cardone.cache.Cache
 import top.cardone.context.ApplicationContextHolder
 import top.cardone.context.event.SimpleEvent
 import top.cardone.core.util.action.Action1
+import top.cardone.core.util.action.Action2
 
 class ChageUserAction implements Action1<SimpleEvent> {
     @Override
@@ -58,7 +58,7 @@ class ChageUserAction implements Action1<SimpleEvent> {
             Thread.sleep(3000)
 
             if (StringUtils.isNotBlank(userCode)) {
-                ApplicationContextHolder.getBean(Action1.class, "top/cardone/usercenter/action/EvictUserCacheAction").action(userCode)
+                ApplicationContextHolder.getBean(Action2.class, "top/cardone/usercenter/action/EvictUserCacheAction").action(userCode, Lists.newArrayList())
             }
 
             return
@@ -70,9 +70,7 @@ class ChageUserAction implements Action1<SimpleEvent> {
 
             Thread.sleep(3000)
 
-            ApplicationContextHolder.getBean(Action1.class, "top/cardone/usercenter/action/EvictUserCacheAction").action(userCode)
+            ApplicationContextHolder.getBean(Action2.class, "top/cardone/usercenter/action/EvictUserCacheAction").action(userCode, Lists.newArrayList())
         }
     }
-
-
 }
