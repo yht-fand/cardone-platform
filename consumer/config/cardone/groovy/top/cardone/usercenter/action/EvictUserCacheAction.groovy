@@ -34,13 +34,6 @@ class EvictUserCacheAction implements Action1<String>, Action2<String, List<Stri
         ApplicationContextHolder.getBean(Cache.class).evict("com.xa.rdmp.authority.func.ReadListRoleCodeForMainSiteFunc",
                 userCode)
 
-        ApplicationContextHolder.getBean(Cache.class).evict("top.cardone.configuration.service.NavigationService",
-                "findListForTreeCache(" +
-                        org.springframework.util.StringUtils.arrayToCommaDelimitedString(["userCode": userCode, "notId": "notId", "appendConfigValueKey": "select"]) +
-                        ")")
-
-//        ApplicationContextHolder.getBean(Cache.class).clear("top.cardone.configuration.service.NavigationService")
-
         ApplicationContextHolder.getBean(Cache.class).evict(UserPermissionService.class.getName(), "navigation:view:," + userCode)
 
         ApplicationContextHolder.getBean(Cache.class).evict(UserPermissionService.class.getName(), "site:view:," + userCode)
@@ -48,6 +41,11 @@ class EvictUserCacheAction implements Action1<String>, Action2<String, List<Stri
         ApplicationContextHolder.getBean(Cache.class).evict(UserPermissionService.class.getName(), "department:view:," + userCode)
 
         ApplicationContextHolder.getBean(Cache.class).evict(UserPermissionService.class.getName(), "user:view:," + userCode)
+
+        ApplicationContextHolder.getBean(Cache.class).evict("top.cardone.configuration.service.NavigationService",
+                "findListForTreeCache(" +
+                        org.springframework.util.StringUtils.arrayToCommaDelimitedString(["userCode": userCode, "notId": "notId", "appendConfigValueKey": "select"]) +
+                        ")")
     }
 
     @Override
