@@ -3,9 +3,11 @@ package top.cardone.usercenter.action
 import com.google.gson.Gson
 import org.apache.commons.lang.StringUtils
 import org.apache.shiro.util.CollectionUtils
+import org.springframework.core.task.TaskExecutor
 import org.springframework.http.HttpEntity
 import org.springframework.http.HttpHeaders
 import org.springframework.http.MediaType
+import org.springframework.scheduling.support.TaskUtils
 import org.springframework.web.client.RestTemplate
 import top.cardone.authority.service.UserPermissionService
 import top.cardone.cache.Cache
@@ -117,10 +119,9 @@ class EvictUserCacheAction implements Action1<String>, Action2<String, List<Stri
 
 //            url = "http://127.0.0.1/xa-rdmp/v1/cache/clearByUserCode"
 
-            try {
-                def json = ApplicationContextHolder.getBean(RestTemplate.class).postForObject(url, httpEntity, String.class)
-            } catch (Exception ex) {
-            }
+            ApplicationContextHolder.getBean(TaskExecutor.class, "slowTaskExecutor").execute(TaskUtils.decorateTaskWithErrorHandler({
+                ApplicationContextHolder.getBean(RestTemplate.class).postForObject(url, httpEntity, String.class)
+            }, null, true))
         }
     }
 }
