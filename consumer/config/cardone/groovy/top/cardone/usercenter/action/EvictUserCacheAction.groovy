@@ -56,7 +56,7 @@ class EvictUserCacheAction implements Action1<String>, Action2<String, List<Stri
 
         def readOneDictionaryValue = ["dictionaryTypeCode": "siteType", "dictionaryCode": "localSiteCode", "object_id": "value"]
 
-        def siteCode = ApplicationContextHolder.getBean(DictionaryService.class).readOneCache(readOneDictionaryValue)
+        def siteCode = top.cardone.configuration.utils.DictionaryUtils.readOneCache(readOneDictionaryValue)
 
         if (org.apache.commons.lang3.StringUtils.isBlank(siteCode) || "localSiteCode".equals(siteCode)) {
             return
