@@ -23,7 +23,7 @@ import java.util.Map;
 @RunWith(SpringJUnit4ClassRunner.class)
 @SpringBootTest(classes = ConsumerApplication.class)
 public class CommonControllerTest {
-    @Value("${app.root:}/config/template/department.xls")
+    @Value("file:config/template/department.xls")
     private String excelFilePath;
 
 //    //导入
