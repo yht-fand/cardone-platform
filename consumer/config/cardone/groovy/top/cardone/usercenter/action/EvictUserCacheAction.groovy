@@ -11,7 +11,6 @@ import org.springframework.scheduling.support.TaskUtils
 import org.springframework.web.client.RestTemplate
 import top.cardone.authority.service.UserPermissionService
 import top.cardone.cache.Cache
-import top.cardone.configuration.service.DictionaryService
 import top.cardone.configuration.service.SiteService
 import top.cardone.context.ApplicationContextHolder
 import top.cardone.core.util.action.Action1
