@@ -1,7 +1,6 @@
 package top.cardone.usercenter.service;
 
 import com.google.common.collect.Maps;
-import org.apache.shiro.SecurityUtils;
 import org.springframework.cache.annotation.CacheConfig;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.transaction.annotation.Transactional;
@@ -77,7 +76,7 @@ public interface UserService extends PageService {
         findOneUser.put("dataStateCode", "1");
         findOneUser.put("stateCode", "1");
 
-        return ApplicationContextHolder.getBean(UserService.class).findOneCache(findOneUser);
+        return this.findOne(findOneUser);
     }
 
     default String readOneUserIdByPrincipal() {
@@ -94,7 +93,7 @@ public interface UserService extends PageService {
         readOne.put("dataStateCode", "1");
         readOne.put("object_id", "userId");
 
-        return ApplicationContextHolder.getBean(UserService.class).readOneCache(String.class, readOne);
+        return this.readOne(String.class, readOne);
     }
 
     @Cacheable
