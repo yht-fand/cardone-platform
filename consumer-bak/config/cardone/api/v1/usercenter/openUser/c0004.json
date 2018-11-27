@@ -1,0 +1,28 @@
+{
+  "validation": {
+    "rules": {
+      "openUserCode": {
+        "required": true,
+        "minlength": 4,
+        "maxlength": 255
+      },
+      "name": {
+        "required": true,
+        "minlength": 4,
+        "maxlength": 255
+      }
+    },
+    "messages": {
+      "openUserCode": {
+        "required": "开放用户编号必填",
+        "minlength": "开放用户编号需{0}个字符以上",
+        "maxlength": "开放用户编号需小于{0}个字符"
+      },
+      "name": {
+        "required": "开放用户名称必填",
+        "minlength": "开放用户名称需{0}个字符以上",
+        "maxlength": "开放用户名称需小于{0}个字符"
+      }
+    }
+  }
+}

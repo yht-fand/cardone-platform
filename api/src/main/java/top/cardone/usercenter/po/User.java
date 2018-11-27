@@ -389,6 +389,13 @@ public class User implements java.io.Serializable {
     protected String siteCode;
 
     /**
+     * 来源编号
+     */
+    @lombok.Getter
+    @lombok.Setter
+    protected String sourceCode;
+
+    /**
      * 状态编号(数据字典)
      */
     @lombok.Getter
@@ -408,6 +415,13 @@ public class User implements java.io.Serializable {
     @lombok.Getter
     @lombok.Setter
     protected String telephone;
+
+    /**
+     * 第三方编号
+     */
+    @lombok.Getter
+    @lombok.Setter
+    protected String thirdPartyCode;
 
     /**
      * 用户编号

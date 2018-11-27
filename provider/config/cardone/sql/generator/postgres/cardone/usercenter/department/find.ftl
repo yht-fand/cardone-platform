@@ -128,12 +128,20 @@ ${prefixName?string('  ', ', ')}"region_code"
 ${prefixName?string('  ', ', ')}"site_code"
 <#assign prefixName = false>
 </#if>
+<#if (select_sourceCode??)>
+${prefixName?string('  ', ', ')}"source_code"
+<#assign prefixName = false>
+</#if>
 <#if (select_stateCode??)>
 ${prefixName?string('  ', ', ')}"state_code"
 <#assign prefixName = false>
 </#if>
 <#if (select_systemInfoCode??)>
 ${prefixName?string('  ', ', ')}"system_info_code"
+<#assign prefixName = false>
+</#if>
+<#if (select_thirdPartyCode??)>
+${prefixName?string('  ', ', ')}"third_party_code"
 <#assign prefixName = false>
 </#if>
 <#if (select_version??)>
@@ -274,12 +282,20 @@ ${prefixName?string('ORDER BY ', ', ')}"region_code" ${order_by_regionCode_value
 ${prefixName?string('ORDER BY ', ', ')}"site_code" ${order_by_siteCode_value!}
 <#assign prefixName = false>
 </#if>
+<#if (order_by_sourceCode??)>
+${prefixName?string('ORDER BY ', ', ')}"source_code" ${order_by_sourceCode_value!}
+<#assign prefixName = false>
+</#if>
 <#if (order_by_stateCode??)>
 ${prefixName?string('ORDER BY ', ', ')}"state_code" ${order_by_stateCode_value!}
 <#assign prefixName = false>
 </#if>
 <#if (order_by_systemInfoCode??)>
 ${prefixName?string('ORDER BY ', ', ')}"system_info_code" ${order_by_systemInfoCode_value!}
+<#assign prefixName = false>
+</#if>
+<#if (order_by_thirdPartyCode??)>
+${prefixName?string('ORDER BY ', ', ')}"third_party_code" ${order_by_thirdPartyCode_value!}
 <#assign prefixName = false>
 </#if>
 <#if (order_by_version??)>

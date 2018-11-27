@@ -1,0 +1,28 @@
+{
+  "validation": {
+    "rules": {
+      "departmentCode": {
+        "required": true,
+        "minlength": 4,
+        "maxlength": 255
+      },
+      "name": {
+        "required": true,
+        "minlength": 4,
+        "maxlength": 255
+      }
+    },
+    "messages": {
+      "departmentCode": {
+        "required": "部门编号必填",
+        "minlength": "部门编号需{0}个字符以上",
+        "maxlength": "部门编号需小于{0}个字符"
+      },
+      "name": {
+        "required": "部门名称必填",
+        "minlength": "部门名称需{0}个字符以上",
+        "maxlength": "部门名称需小于{0}个字符"
+      }
+    }
+  }
+}

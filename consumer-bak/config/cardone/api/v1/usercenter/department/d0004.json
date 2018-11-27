@@ -1,0 +1,14 @@
+{
+  "validation": {
+    "rules": {
+      "departmentIds": {
+        "required": true
+      }
+    },
+    "messages": {
+      "departmentIds": {
+        "required": "部门标识集合必填"
+      }
+    }
+  }
+}

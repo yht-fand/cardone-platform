@@ -130,12 +130,20 @@ ${prefixName?string('  ', ', ')}"region_code"
 ${prefixName?string('  ', ', ')}"site_code"
 <#assign prefixName = false>
 </#if>
+<#if (insert_sourceCode??) && (insert_sourceCode_value??)>
+${prefixName?string('  ', ', ')}"source_code"
+<#assign prefixName = false>
+</#if>
 <#if (insert_stateCode??) && (insert_stateCode_value??)>
 ${prefixName?string('  ', ', ')}"state_code"
 <#assign prefixName = false>
 </#if>
 <#if (insert_systemInfoCode??) && (insert_systemInfoCode_value??)>
 ${prefixName?string('  ', ', ')}"system_info_code"
+<#assign prefixName = false>
+</#if>
+<#if (insert_thirdPartyCode??) && (insert_thirdPartyCode_value??)>
+${prefixName?string('  ', ', ')}"third_party_code"
 <#assign prefixName = false>
 </#if>
 <#if (insert_version??) && (insert_version_value??)>
@@ -273,12 +281,20 @@ ${prefixName?string('  ', ', ')}:insert_regionCode_value
 ${prefixName?string('  ', ', ')}:insert_siteCode_value
 <#assign prefixName = false>
 </#if>
+<#if (insert_sourceCode??) && (insert_sourceCode_value??)>
+${prefixName?string('  ', ', ')}:insert_sourceCode_value
+<#assign prefixName = false>
+</#if>
 <#if (insert_stateCode??) && (insert_stateCode_value??)>
 ${prefixName?string('  ', ', ')}:insert_stateCode_value
 <#assign prefixName = false>
 </#if>
 <#if (insert_systemInfoCode??) && (insert_systemInfoCode_value??)>
 ${prefixName?string('  ', ', ')}:insert_systemInfoCode_value
+<#assign prefixName = false>
+</#if>
+<#if (insert_thirdPartyCode??) && (insert_thirdPartyCode_value??)>
+${prefixName?string('  ', ', ')}:insert_thirdPartyCode_value
 <#assign prefixName = false>
 </#if>
 <#if (insert_version??) && (insert_version_value??)>
@@ -543,6 +559,14 @@ ${prefixName?string('WHERE ', 'AND ')}(E."site_code" IS NULL OR E."site_code" = 
 </#if>
 <#assign prefixName = false>
 </#if>
+<#if (where_and_eq_sourceCode??)>
+<#if (where_and_eq_sourceCode_value??)>
+${prefixName?string('WHERE ', 'AND ')}E."source_code" = :where_and_eq_sourceCode_value
+<#else>
+${prefixName?string('WHERE ', 'AND ')}(E."source_code" IS NULL OR E."source_code" = '')
+</#if>
+<#assign prefixName = false>
+</#if>
 <#if (where_and_eq_stateCode??)>
 <#if (where_and_eq_stateCode_value??)>
 ${prefixName?string('WHERE ', 'AND ')}E."state_code" = :where_and_eq_stateCode_value
@@ -556,6 +580,14 @@ ${prefixName?string('WHERE ', 'AND ')}(E."state_code" IS NULL OR E."state_code" 
 ${prefixName?string('WHERE ', 'AND ')}E."system_info_code" = :where_and_eq_systemInfoCode_value
 <#else>
 ${prefixName?string('WHERE ', 'AND ')}(E."system_info_code" IS NULL OR E."system_info_code" = '')
+</#if>
+<#assign prefixName = false>
+</#if>
+<#if (where_and_eq_thirdPartyCode??)>
+<#if (where_and_eq_thirdPartyCode_value??)>
+${prefixName?string('WHERE ', 'AND ')}E."third_party_code" = :where_and_eq_thirdPartyCode_value
+<#else>
+${prefixName?string('WHERE ', 'AND ')}(E."third_party_code" IS NULL OR E."third_party_code" = '')
 </#if>
 <#assign prefixName = false>
 </#if>

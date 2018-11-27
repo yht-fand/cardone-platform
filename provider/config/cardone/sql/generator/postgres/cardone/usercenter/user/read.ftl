@@ -162,6 +162,9 @@ SELECT
 <#case "siteCode">
 "site_code"
 <#break>
+<#case "sourceCode">
+"source_code"
+<#break>
 <#case "stateCode">
 "state_code"
 <#break>
@@ -170,6 +173,9 @@ SELECT
 <#break>
 <#case "telephone">
 "telephone"
+<#break>
+<#case "thirdPartyCode">
+"third_party_code"
 <#break>
 <#case "userCode">
 "user_code"

@@ -1,0 +1,14 @@
+{
+  "validation": {
+    "rules": {
+      "areaId": {
+        "required": true
+      }
+    },
+    "messages": {
+      "areaId": {
+        "required": "地区标识必填"
+      }
+    }
+  }
+}

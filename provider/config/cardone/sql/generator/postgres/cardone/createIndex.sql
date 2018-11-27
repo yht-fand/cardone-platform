@@ -196,12 +196,18 @@
 --站点编号
 --drop index IF EXISTS idx_c1_department_site_code;
 --create index IF NOT EXISTS idx_c1_department_site_code ON c1_department ("site_code" varchar_pattern_ops);
+--来源编号
+--drop index IF EXISTS idx_c1_department_source_code;
+--create index IF NOT EXISTS idx_c1_department_source_code ON c1_department ("source_code" varchar_pattern_ops);
 --状态编号(数据字典)
 --drop index IF EXISTS idx_c1_department_state_code;
 --create index IF NOT EXISTS idx_c1_department_state_code ON c1_department ("state_code" varchar_pattern_ops);
 --系统信息编号
 --drop index IF EXISTS idx_c1_department_system_info_code;
 --create index IF NOT EXISTS idx_c1_department_system_info_code ON c1_department ("system_info_code" varchar_pattern_ops);
+--第三方编号
+--drop index IF EXISTS idx_c1_department_third_party_code;
+--create index IF NOT EXISTS idx_c1_department_third_party_code ON c1_department ("third_party_code" varchar_pattern_ops);
 
 -- 用户与部门（c1_user_department）
 
@@ -215,8 +221,8 @@
 --drop index IF EXISTS idx_c1_user_department_begin_date;
 --create index IF NOT EXISTS idx_c1_user_department_begin_date ON c1_user_department ("begin_date");
 --父表_部门编号
---drop index IF EXISTS idx_c1_user_department_c1_department_code;
---create index IF NOT EXISTS idx_c1_user_department_c1_department_code ON c1_user_department ("c1_department_code" varchar_pattern_ops);
+--drop index IF EXISTS idx_c1_user_department_c1__department_code;
+--create index IF NOT EXISTS idx_c1_user_department_c1__department_code ON c1_user_department ("c1__department_code" varchar_pattern_ops);
 --创建人编号
 --drop index IF EXISTS idx_c1_user_department_created_by_code;
 --create index IF NOT EXISTS idx_c1_user_department_created_by_code ON c1_user_department ("created_by_code" varchar_pattern_ops);
@@ -293,8 +299,8 @@
 --drop index IF EXISTS idx_c1_user_org_begin_date;
 --create index IF NOT EXISTS idx_c1_user_org_begin_date ON c1_user_org ("begin_date");
 --父表_组织编号
---drop index IF EXISTS idx_c1_user_org_c1_org_code;
---create index IF NOT EXISTS idx_c1_user_org_c1_org_code ON c1_user_org ("c1_org_code" varchar_pattern_ops);
+--drop index IF EXISTS idx_c1_user_org_c1__org_code;
+--create index IF NOT EXISTS idx_c1_user_org_c1__org_code ON c1_user_org ("c1__org_code" varchar_pattern_ops);
 --创建人编号
 --drop index IF EXISTS idx_c1_user_org_created_by_code;
 --create index IF NOT EXISTS idx_c1_user_org_created_by_code ON c1_user_org ("created_by_code" varchar_pattern_ops);
@@ -622,6 +628,9 @@
 --站点编号
 --drop index IF EXISTS idx_c1_user_site_code;
 --create index IF NOT EXISTS idx_c1_user_site_code ON c1_user ("site_code" varchar_pattern_ops);
+--来源编号
+--drop index IF EXISTS idx_c1_user_source_code;
+--create index IF NOT EXISTS idx_c1_user_source_code ON c1_user ("source_code" varchar_pattern_ops);
 --状态编号(数据字典)
 --drop index IF EXISTS idx_c1_user_state_code;
 --create index IF NOT EXISTS idx_c1_user_state_code ON c1_user ("state_code" varchar_pattern_ops);
@@ -631,6 +640,9 @@
 --联系电话
 --drop index IF EXISTS idx_c1_user_telephone;
 --create index IF NOT EXISTS idx_c1_user_telephone ON c1_user ("telephone" varchar_pattern_ops);
+--第三方编号
+--drop index IF EXISTS idx_c1_user_third_party_code;
+--create index IF NOT EXISTS idx_c1_user_third_party_code ON c1_user ("third_party_code" varchar_pattern_ops);
 --用户编号
 --drop index IF EXISTS idx_c1_user_user_code;
 --create index IF NOT EXISTS idx_c1_user_user_code ON c1_user ("user_code" varchar_pattern_ops);
@@ -1063,5 +1075,53 @@
 --系统信息编号
 --drop index IF EXISTS idx_c1_region_system_info_code;
 --create index IF NOT EXISTS idx_c1_region_system_info_code ON c1_region ("system_info_code" varchar_pattern_ops);
+
+
+
+
+ALTER TABLE "c1_org" ALTER COLUMN "json_data" TYPE jsonb;
+
+--- sql end ---
+
+ALTER TABLE "c1_department" ALTER COLUMN "json_data" TYPE jsonb;
+
+--- sql end ---
+
+ALTER TABLE "c1_user_department" ALTER COLUMN "json_data" TYPE jsonb;
+
+--- sql end ---
+
+ALTER TABLE "c1_user_org" ALTER COLUMN "json_data" TYPE jsonb;
+
+--- sql end ---
+
+ALTER TABLE "c1_user_address" ALTER COLUMN "json_data" TYPE jsonb;
+
+--- sql end ---
+
+ALTER TABLE "c1_user" ALTER COLUMN "json_data" TYPE jsonb;
+
+--- sql end ---
+
+ALTER TABLE "c1_open_user" ALTER COLUMN "json_data" TYPE jsonb;
+
+--- sql end ---
+
+ALTER TABLE "c1_province" ALTER COLUMN "json_data" TYPE jsonb;
+
+--- sql end ---
+
+ALTER TABLE "c1_city" ALTER COLUMN "json_data" TYPE jsonb;
+
+--- sql end ---
+
+ALTER TABLE "c1_area" ALTER COLUMN "json_data" TYPE jsonb;
+
+--- sql end ---
+
+ALTER TABLE "c1_region" ALTER COLUMN "json_data" TYPE jsonb;
+
+--- sql end ---
+
 
 

@@ -129,12 +129,20 @@ ${prefixName?string('  ', ', ')}"region_code"
 ${prefixName?string('  ', ', ')}"site_code"
 <#assign prefixName = false>
 </#if>
+<#if (insert_sourceCode??) && (insert_sourceCode_value??)>
+${prefixName?string('  ', ', ')}"source_code"
+<#assign prefixName = false>
+</#if>
 <#if (insert_stateCode??) && (insert_stateCode_value??)>
 ${prefixName?string('  ', ', ')}"state_code"
 <#assign prefixName = false>
 </#if>
 <#if (insert_systemInfoCode??) && (insert_systemInfoCode_value??)>
 ${prefixName?string('  ', ', ')}"system_info_code"
+<#assign prefixName = false>
+</#if>
+<#if (insert_thirdPartyCode??) && (insert_thirdPartyCode_value??)>
+${prefixName?string('  ', ', ')}"third_party_code"
 <#assign prefixName = false>
 </#if>
 <#if (insert_version??) && (insert_version_value??)>
@@ -272,12 +280,20 @@ ${prefixName?string('  ', ', ')}:insert_regionCode_value
 ${prefixName?string('  ', ', ')}:insert_siteCode_value
 <#assign prefixName = false>
 </#if>
+<#if (insert_sourceCode??) && (insert_sourceCode_value??)>
+${prefixName?string('  ', ', ')}:insert_sourceCode_value
+<#assign prefixName = false>
+</#if>
 <#if (insert_stateCode??) && (insert_stateCode_value??)>
 ${prefixName?string('  ', ', ')}:insert_stateCode_value
 <#assign prefixName = false>
 </#if>
 <#if (insert_systemInfoCode??) && (insert_systemInfoCode_value??)>
 ${prefixName?string('  ', ', ')}:insert_systemInfoCode_value
+<#assign prefixName = false>
+</#if>
+<#if (insert_thirdPartyCode??) && (insert_thirdPartyCode_value??)>
+${prefixName?string('  ', ', ')}:insert_thirdPartyCode_value
 <#assign prefixName = false>
 </#if>
 <#if (insert_version??) && (insert_version_value??)>

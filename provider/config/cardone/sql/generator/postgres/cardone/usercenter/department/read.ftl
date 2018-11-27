@@ -96,11 +96,17 @@ SELECT
 <#case "siteCode">
 "site_code"
 <#break>
+<#case "sourceCode">
+"source_code"
+<#break>
 <#case "stateCode">
 "state_code"
 <#break>
 <#case "systemInfoCode">
 "system_info_code"
+<#break>
+<#case "thirdPartyCode">
+"third_party_code"
 <#break>
 <#case "version">
 "version_"

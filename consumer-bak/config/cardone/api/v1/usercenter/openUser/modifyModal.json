@@ -1,0 +1,14 @@
+{
+  "validation": {
+    "rules": {
+      "openUserId": {
+        "required": true
+      }
+    },
+    "messages": {
+      "openUserId": {
+        "required": "开放用户标识必填"
+      }
+    }
+  }
+}

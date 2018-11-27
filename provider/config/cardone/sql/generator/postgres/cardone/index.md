@@ -82,8 +82,10 @@ personal_id|YES|String(255)|个人标识
 province_code|YES|String(255)|省份编号
 region_code|YES|String(255)|区域编号
 site_code|YES|String(255)|站点编号
+source_code|YES|String(255)|来源编号
 state_code|YES|String(255)|状态编号(数据字典)
 system_info_code|YES|String(255)|系统信息编号
+third_party_code|YES|String(255)|第三方编号
 version_|YES|Integer(10)|版本
 
 ##### 用户与部门（c1_user_department）
@@ -250,9 +252,11 @@ region_code|YES|String(255)|区域编号
 remark|YES|String(511)|备注
 sex_code|YES|String(255)|性别编号(数据字典)
 site_code|YES|String(255)|站点编号
+source_code|YES|String(255)|来源编号
 state_code|YES|String(255)|状态编号(数据字典)
 system_info_code|YES|String(255)|系统信息编号
 telephone|YES|String(255)|联系电话
+third_party_code|YES|String(255)|第三方编号
 user_code|NO|String(255)|用户编号
 user_id|NO|String(255)|用户标识
 version_|YES|Integer(10)|版本

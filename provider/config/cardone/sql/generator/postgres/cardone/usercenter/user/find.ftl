@@ -216,6 +216,10 @@ ${prefixName?string('  ', ', ')}"sex_code"
 ${prefixName?string('  ', ', ')}"site_code"
 <#assign prefixName = false>
 </#if>
+<#if (select_sourceCode??)>
+${prefixName?string('  ', ', ')}"source_code"
+<#assign prefixName = false>
+</#if>
 <#if (select_stateCode??)>
 ${prefixName?string('  ', ', ')}"state_code"
 <#assign prefixName = false>
@@ -226,6 +230,10 @@ ${prefixName?string('  ', ', ')}"system_info_code"
 </#if>
 <#if (select_telephone??)>
 ${prefixName?string('  ', ', ')}"telephone"
+<#assign prefixName = false>
+</#if>
+<#if (select_thirdPartyCode??)>
+${prefixName?string('  ', ', ')}"third_party_code"
 <#assign prefixName = false>
 </#if>
 <#if (select_userCode??)>
@@ -462,6 +470,10 @@ ${prefixName?string('ORDER BY ', ', ')}"sex_code" ${order_by_sexCode_value!}
 ${prefixName?string('ORDER BY ', ', ')}"site_code" ${order_by_siteCode_value!}
 <#assign prefixName = false>
 </#if>
+<#if (order_by_sourceCode??)>
+${prefixName?string('ORDER BY ', ', ')}"source_code" ${order_by_sourceCode_value!}
+<#assign prefixName = false>
+</#if>
 <#if (order_by_stateCode??)>
 ${prefixName?string('ORDER BY ', ', ')}"state_code" ${order_by_stateCode_value!}
 <#assign prefixName = false>
@@ -472,6 +484,10 @@ ${prefixName?string('ORDER BY ', ', ')}"system_info_code" ${order_by_systemInfoC
 </#if>
 <#if (order_by_telephone??)>
 ${prefixName?string('ORDER BY ', ', ')}"telephone" ${order_by_telephone_value!}
+<#assign prefixName = false>
+</#if>
+<#if (order_by_thirdPartyCode??)>
+${prefixName?string('ORDER BY ', ', ')}"third_party_code" ${order_by_thirdPartyCode_value!}
 <#assign prefixName = false>
 </#if>
 <#if (order_by_userCode??)>

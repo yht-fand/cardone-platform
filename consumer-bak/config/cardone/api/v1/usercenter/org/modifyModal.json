@@ -1,0 +1,14 @@
+{
+  "validation": {
+    "rules": {
+      "orgId": {
+        "required": true
+      }
+    },
+    "messages": {
+      "orgId": {
+        "required": "组织标识必填"
+      }
+    }
+  }
+}

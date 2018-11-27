@@ -128,12 +128,20 @@ ${prefixName?string('SET ', ', ')}"region_code" = :update_regionCode_value
 ${prefixName?string('SET ', ', ')}"site_code" = :update_siteCode_value
 <#assign prefixName = false>
 </#if>
+<#if (update_sourceCode??)>
+${prefixName?string('SET ', ', ')}"source_code" = :update_sourceCode_value
+<#assign prefixName = false>
+</#if>
 <#if (update_stateCode??)>
 ${prefixName?string('SET ', ', ')}"state_code" = :update_stateCode_value
 <#assign prefixName = false>
 </#if>
 <#if (update_systemInfoCode??)>
 ${prefixName?string('SET ', ', ')}"system_info_code" = :update_systemInfoCode_value
+<#assign prefixName = false>
+</#if>
+<#if (update_thirdPartyCode??)>
+${prefixName?string('SET ', ', ')}"third_party_code" = :update_thirdPartyCode_value
 <#assign prefixName = false>
 </#if>
 <#if (update_version??)>
