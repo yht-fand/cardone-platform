@@ -112,7 +112,7 @@ class c0001 implements java.io.Serializable {
     }
 
     def func(input) {
-		ApplicationContextHolder.getBean(UserService.class).insertByNotExistsCache(input)
+		ApplicationContextHolder.getBean(UserService.class).insertOnConflictCache(input)
     }
 
     def output(output) {

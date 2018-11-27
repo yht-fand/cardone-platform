@@ -28,7 +28,7 @@ public class UserController {
      throw new CodeException("userCode already exists", "用户编号已经存在");
      }
 
-     return ApplicationContextHolder.getBean(UserService.class).insertByNotExistsCache(input);
+     return ApplicationContextHolder.getBean(UserService.class).insertOnConflictCache(input);
      });
      }
      /** /c0001.json end **/
@@ -39,7 +39,7 @@ public class UserController {
      @RequestMapping("/c0002.json")
      @ResponseBody public Object c0002Json(HttpServletRequest request) {
      return ApplicationContextHolder.getBean(WebSupport.class).func(request,
-     (Func1<Object, Map<String, Object>>) input -> ApplicationContextHolder.getBean(UserService.class).insertByNotExistsCache(input));
+     (Func1<Object, Map<String, Object>>) input -> ApplicationContextHolder.getBean(UserService.class).insertOnConflictCache(input));
      }
      /** /c0002.json end **/
 
@@ -49,7 +49,7 @@ public class UserController {
      @RequestMapping("/c0003.json")
      @ResponseBody public Object c0003Json(HttpServletRequest request) {
      return ApplicationContextHolder.getBean(WebSupport.class).func(request,
-     (Func1<Object, Map<String, Object>>) input -> ApplicationContextHolder.getBean(UserService.class).insertByNotExistsCache(input));
+     (Func1<Object, Map<String, Object>>) input -> ApplicationContextHolder.getBean(UserService.class).insertOnConflictCache(input));
      }
      /** /c0003.json end **/
 
@@ -59,7 +59,7 @@ public class UserController {
      @RequestMapping("/c0004.json")
      @ResponseBody public Object c0004Json(HttpServletRequest request) {
      return ApplicationContextHolder.getBean(WebSupport.class).func(request,
-     (Func1<Object, Map<String, Object>>) input -> ApplicationContextHolder.getBean(UserService.class).insertByNotExistsCache(input));
+     (Func1<Object, Map<String, Object>>) input -> ApplicationContextHolder.getBean(UserService.class).insertOnConflictCache(input));
      }
      /** /c0004.json end **/
 

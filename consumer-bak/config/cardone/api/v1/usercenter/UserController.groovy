@@ -21,7 +21,7 @@ class UserController {
     @RequestMapping("/c0001.json")
     @ResponseBody
     Object c0001Json(HttpServletRequest request) {
-        ApplicationContextHolder.getBean(WebSupport.class).func(request, { input -> ApplicationContextHolder.getBean(UserService.class).insertByNotExistsCache(input) })
+        ApplicationContextHolder.getBean(WebSupport.class).func(request, { input -> ApplicationContextHolder.getBean(UserService.class).insertOnConflictCache(input) })
     }
     /** /c0001.json end **/
 }
