@@ -70,8 +70,6 @@ class r0004 implements java.io.Serializable {
 
             data['beginDate'] = contentItem['begin_date']
 
-            data['c1OrgCode'] = contentItem['c1__org_code']
-
             data['createdByCode'] = contentItem['created_by_code']
 
             data['createdById'] = contentItem['created_by_id']

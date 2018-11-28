@@ -11,7 +11,6 @@ class m0002 implements java.io.Serializable {
 
 		newInput?.batchNo = input?.batchNo
 		newInput?.beginDate = input?.beginDate
-		newInput?.c1OrgCode = input?.c1OrgCode
 		newInput?.createdByCode = input?.createdByCode
 		newInput?.createdById = input?.createdById
 		newInput?.createdDate = input?.createdDate
@@ -83,7 +82,6 @@ class m0002 implements java.io.Serializable {
 
 		newOutput?.batchNo = output?.batch_no
 		newOutput?.beginDate = output?.begin_date
-		newOutput?.c1OrgCode = output?.c1__org_code
 		newOutput?.createdByCode = output?.created_by_code
 		newOutput?.createdById = output?.created_by_id
 		newOutput?.createdDate = output?.created_date

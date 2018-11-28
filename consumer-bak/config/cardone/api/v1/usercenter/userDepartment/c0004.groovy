@@ -11,7 +11,6 @@ class c0004 implements java.io.Serializable {
 
 		newInput?.batchNo = input?.batchNo
 		newInput?.beginDate = input?.beginDate
-		newInput?.c1DepartmentCode = input?.c1DepartmentCode
 		newInput?.createdByCode = input?.createdByCode
 		newInput?.createdById = input?.createdById
 		newInput?.createdDate = input?.createdDate

@@ -25,13 +25,6 @@ public class UserOrg implements java.io.Serializable {
     protected Date beginDate;
 
     /**
-     * 父表_组织编号
-     */
-    @lombok.Getter
-    @lombok.Setter
-    protected String c1OrgCode;
-
-    /**
      * 创建人编号
      */
     @lombok.Getter

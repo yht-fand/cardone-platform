@@ -25,13 +25,6 @@ public class UserDepartment implements java.io.Serializable {
     protected Date beginDate;
 
     /**
-     * 父表_部门编号
-     */
-    @lombok.Getter
-    @lombok.Setter
-    protected String c1DepartmentCode;
-
-    /**
      * 创建人编号
      */
     @lombok.Getter

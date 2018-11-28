@@ -220,9 +220,6 @@
 --开始日期
 --drop index IF EXISTS idx_c1_user_department_begin_date;
 --create index IF NOT EXISTS idx_c1_user_department_begin_date ON c1_user_department ("begin_date");
---父表_部门编号
---drop index IF EXISTS idx_c1_user_department_c1__department_code;
---create index IF NOT EXISTS idx_c1_user_department_c1__department_code ON c1_user_department ("c1__department_code" varchar_pattern_ops);
 --创建人编号
 --drop index IF EXISTS idx_c1_user_department_created_by_code;
 --create index IF NOT EXISTS idx_c1_user_department_created_by_code ON c1_user_department ("created_by_code" varchar_pattern_ops);
@@ -298,9 +295,6 @@
 --开始日期
 --drop index IF EXISTS idx_c1_user_org_begin_date;
 --create index IF NOT EXISTS idx_c1_user_org_begin_date ON c1_user_org ("begin_date");
---父表_组织编号
---drop index IF EXISTS idx_c1_user_org_c1__org_code;
---create index IF NOT EXISTS idx_c1_user_org_c1__org_code ON c1_user_org ("c1__org_code" varchar_pattern_ops);
 --创建人编号
 --drop index IF EXISTS idx_c1_user_org_created_by_code;
 --create index IF NOT EXISTS idx_c1_user_org_created_by_code ON c1_user_org ("created_by_code" varchar_pattern_ops);

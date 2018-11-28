@@ -8,10 +8,6 @@ ${prefixName?string('  ', ', ')}"batch_no"
 ${prefixName?string('  ', ', ')}"begin_date"
 <#assign prefixName = false>
 </#if>
-<#if (select_c1DepartmentCode??)>
-${prefixName?string('  ', ', ')}"c1__department_code"
-<#assign prefixName = false>
-</#if>
 <#if (select_createdByCode??)>
 ${prefixName?string('  ', ', ')}"created_by_code"
 <#assign prefixName = false>
@@ -120,10 +116,6 @@ ${prefixName?string('ORDER BY ', ', ')}"batch_no" ${order_by_batchNo_value!}
 </#if>
 <#if (order_by_beginDate??)>
 ${prefixName?string('ORDER BY ', ', ')}"begin_date" ${order_by_beginDate_value!}
-<#assign prefixName = false>
-</#if>
-<#if (order_by_c1DepartmentCode??)>
-${prefixName?string('ORDER BY ', ', ')}"c1__department_code" ${order_by_c1DepartmentCode_value!}
 <#assign prefixName = false>
 </#if>
 <#if (order_by_createdByCode??)>

@@ -8,10 +8,6 @@ ${prefixName?string('SET ', ', ')}"batch_no" = :update_batchNo_value
 ${prefixName?string('SET ', ', ')}"begin_date" = :update_beginDate_value
 <#assign prefixName = false>
 </#if>
-<#if (update_c1OrgCode??)>
-${prefixName?string('SET ', ', ')}"c1__org_code" = :update_c1OrgCode_value
-<#assign prefixName = false>
-</#if>
 <#if (update_createdByCode??)>
 ${prefixName?string('SET ', ', ')}"created_by_code" = :update_createdByCode_value
 <#assign prefixName = false>

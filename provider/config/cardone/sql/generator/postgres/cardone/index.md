@@ -94,7 +94,6 @@ version_|YES|Integer(10)|版本
 ---|---|---|---
 batch_no|YES|String(255)|批次编号
 begin_date|YES|Date(29)|开始日期
-c1__department_code|YES|String(255)|父表_部门编号
 created_by_code|YES|String(255)|创建人编号
 created_by_id|YES|String(255)|创建人标识
 created_date|YES|Date(29)|创建日期
@@ -126,7 +125,6 @@ version_|YES|Integer(10)|版本
 ---|---|---|---
 batch_no|YES|String(255)|批次编号
 begin_date|YES|Date(29)|开始日期
-c1__org_code|YES|String(255)|父表_组织编号
 created_by_code|YES|String(255)|创建人编号
 created_by_id|YES|String(255)|创建人标识
 created_date|YES|Date(29)|创建日期

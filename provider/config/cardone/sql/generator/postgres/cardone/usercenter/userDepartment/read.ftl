@@ -6,9 +6,6 @@ SELECT
 <#case "beginDate">
 "begin_date"
 <#break>
-<#case "c1DepartmentCode">
-"c1__department_code"
-<#break>
 <#case "createdByCode">
 "created_by_code"
 <#break>

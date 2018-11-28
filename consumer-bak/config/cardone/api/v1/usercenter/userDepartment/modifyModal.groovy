@@ -25,7 +25,6 @@ class modifyModal implements java.io.Serializable {
 
 		newOutput?.batchNo = output?.batch_no
 		newOutput?.beginDate = output?.begin_date
-		newOutput?.c1DepartmentCode = output?.c1__department_code
 		newOutput?.createdByCode = output?.created_by_code
 		newOutput?.createdById = output?.created_by_id
 		newOutput?.createdDate = output?.created_date

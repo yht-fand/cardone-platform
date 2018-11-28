@@ -10,10 +10,6 @@ ${prefixName?string('  ', ', ')}"batch_no"
 ${prefixName?string('  ', ', ')}"begin_date"
 <#assign prefixName = false>
 </#if>
-<#if (insert_c1OrgCode??) && (insert_c1OrgCode_value??)>
-${prefixName?string('  ', ', ')}"c1__org_code"
-<#assign prefixName = false>
-</#if>
 <#if (insert_createdByCode??) && (insert_createdByCode_value??)>
 ${prefixName?string('  ', ', ')}"created_by_code"
 <#assign prefixName = false>
@@ -119,10 +115,6 @@ ${prefixName?string('  ', ', ')}:insert_batchNo_value
 </#if>
 <#if (insert_beginDate??) && (insert_beginDate_value??)>
 ${prefixName?string('  ', ', ')}:insert_beginDate_value
-<#assign prefixName = false>
-</#if>
-<#if (insert_c1OrgCode??) && (insert_c1OrgCode_value??)>
-${prefixName?string('  ', ', ')}:insert_c1OrgCode_value
 <#assign prefixName = false>
 </#if>
 <#if (insert_createdByCode??) && (insert_createdByCode_value??)>
@@ -236,14 +228,6 @@ ${prefixName?string('WHERE ', 'AND ')}(E."batch_no" IS NULL OR E."batch_no" = ''
 ${prefixName?string('WHERE ', 'AND ')}E."begin_date" = :where_and_eq_beginDate_value
 <#else>
 ${prefixName?string('WHERE ', 'AND ')}E."begin_date" IS NULL
-</#if>
-<#assign prefixName = false>
-</#if>
-<#if (where_and_eq_c1OrgCode??)>
-<#if (where_and_eq_c1OrgCode_value??)>
-${prefixName?string('WHERE ', 'AND ')}E."c1__org_code" = :where_and_eq_c1OrgCode_value
-<#else>
-${prefixName?string('WHERE ', 'AND ')}(E."c1__org_code" IS NULL OR E."c1__org_code" = '')
 </#if>
 <#assign prefixName = false>
 </#if>

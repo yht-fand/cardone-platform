@@ -15,14 +15,6 @@ ${prefixName?string('WHERE ', 'AND ')}"begin_date" IS NULL
 </#if>
 <#assign prefixName = false>
 </#if>
-<#if (where_and_eq_c1OrgCode??)>
-<#if (where_and_eq_c1OrgCode_value??)>
-${prefixName?string('WHERE ', 'AND ')}"c1__org_code" = :where_and_eq_c1OrgCode_value
-<#else>
-${prefixName?string('WHERE ', 'AND ')}("c1__org_code" IS NULL OR "c1__org_code" = '')
-</#if>
-<#assign prefixName = false>
-</#if>
 <#if (where_and_eq_createdByCode??)>
 <#if (where_and_eq_createdByCode_value??)>
 ${prefixName?string('WHERE ', 'AND ')}"created_by_code" = :where_and_eq_createdByCode_value
