@@ -21,7 +21,7 @@
         <property name="service" ref="top.cardone.usercenter.service.UserService"/>
     </bean>
 
-    <rabbit:listener-container message-converter="amqpMessageConverter" connection-factory="rabbitConnectionFactory" concurrency="1" max-concurrency="10">
+    <rabbit:listener-container message-converter="amqpMessageConverter" connection-factory="rabbitConnectionFactory" concurrency="1" max-concurrency="1">
         <rabbit:listener ref="top.cardone.usercenter.service.UserServiceExporter"
                          queue-names="queue:cardone-usercenter-${cardone-usercenter-version}:top.cardone.usercenter.service.UserService"/>
     </rabbit:listener-container>
