@@ -3,8 +3,6 @@ package top.cardone.usercenter.action
 import com.google.common.collect.Lists
 import org.apache.commons.collections.MapUtils
 import org.apache.commons.lang.StringUtils
-import org.springframework.core.task.TaskExecutor
-import org.springframework.scheduling.support.TaskUtils
 import top.cardone.authority.service.UserPermissionService
 import top.cardone.authority.service.UserRoleService
 import top.cardone.context.ApplicationContextHolder
@@ -15,12 +13,6 @@ import top.cardone.core.util.action.Action2
 class ChageUserAction implements Action1<SimpleEvent> {
     @Override
     void action(SimpleEvent simpleEvent) {
-        ApplicationContextHolder.getBean(TaskExecutor.class, "slowTaskExecutor").execute(TaskUtils.decorateTaskWithErrorHandler({
-            taskAction(simpleEvent)
-        }, null, true))
-    }
-
-    void taskAction(SimpleEvent simpleEvent) {
         if (top.cardone.context.util.StringUtils.matchs(Lists.newArrayList("insertList*", "saveList*", "updateList*"), simpleEvent.getFlags()[1])) {
             def users = simpleEvent.getArgs()[0]
 

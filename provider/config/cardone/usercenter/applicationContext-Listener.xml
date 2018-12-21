@@ -1,73 +1,72 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-       xmlns="http://www.springframework.org/schema/beans"
-       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
-    <bean class="top.cardone.data.listener.GenerateListener">
-        <property name="skip" value="${GenerateListener.OrgService.skip:false}"/>
-        <property name="serviceBeanId" value="top.cardone.usercenter.service.OrgService"/>
-        <property name="saveList">
-            <list>
-                <map>
-                    <entry key="variableCode" value="orgTree"/>
-                    <entry key="value" value="yes"/>
-                </map>
-            </list>
-        </property>
-    </bean>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:lang="http://www.springframework.org/schema/lang"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+   		http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/lang http://www.springframework.org/schema/lang/spring-lang.xsd">
+    <lang:groovy id="top.cardone.usercenter.listener.OrgGenerateListener">
+        <lang:inline-script>
+            <![CDATA[
+            def environment = top.cardone.context.ApplicationContextHolder.applicationContext.environment
 
-    <bean class="top.cardone.data.listener.GenerateListener">
-        <property name="skip" value="${GenerateListener.RegionService.skip:false}"/>
-        <property name="serviceBeanId" value="top.cardone.usercenter.service.RegionService"/>
-        <property name="saveList">
-            <list>
-                <map>
-                    <entry key="variableCode" value="regionTree"/>
-                    <entry key="value" value="yes"/>
-                </map>
-            </list>
-        </property>
-    </bean>
+            if (!(environment.getProperty("cardone.generateListener.enable", Boolean.class, true) ||
+                    environment.getProperty("cardone.orgGenerateListener.enable", Boolean.class, false))) {
+                return "cardone.orgGenerateListener.enable:false"
+            }
 
-    <bean class="top.cardone.data.listener.GenerateListener">
-        <property name="skip" value="${GenerateListener.DepartmentService.skip:false}"/>
-        <property name="serviceBeanId" value="top.cardone.usercenter.service.DepartmentService"/>
-        <property name="saveList">
-            <list>
-                <map>
-                    <entry key="variableCode" value="departmentTree"/>
-                    <entry key="value" value="yes"/>
-                </map>
-                <map>
-                    <entry key="variableCode" value="userGroup"/>
-                    <entry key="value" value="yes"/>
-                </map>
-                <map>
-                    <entry key="variableCode" value="departmentSync"/>
-                    <entry key="value" value="yes"/>
-                </map>
-            </list>
-        </property>
-    </bean>
+            new top.cardone.data.listener.GenerateListener(serviceBeanId: "top.cardone.usercenter.service.OrgService",
+                    saveList: [[variableCode: "orgTree", value: "yes"]])
+            ]]>
+        </lang:inline-script>
+    </lang:groovy>
 
-    <bean class="top.cardone.data.listener.GenerateListener">
-        <property name="skip" value="${GenerateListener.UserService.skip:false}"/>
-        <property name="serviceBeanId" value="top.cardone.usercenter.service.UserService"/>
-        <property name="saveList">
-            <list>
-                <map>
-                    <entry key="variableCode" value="userGroup"/>
-                    <entry key="value" value="yes"/>
-                </map>
-                <map>
-                    <entry key="variableCode" value="userSync"/>
-                    <entry key="value" value="yes"/>
-                </map>
-            </list>
-        </property>
-        <property name="actionBeanNames">
-            <list>
-                <value>top/cardone/usercenter/action/ChageUserAction</value>
-            </list>
-        </property>
-    </bean>
+    <lang:groovy id="top.cardone.usercenter.listener.RegionGenerateListener">
+        <lang:inline-script>
+            <![CDATA[
+            def environment = top.cardone.context.ApplicationContextHolder.applicationContext.environment
+
+            if (!(environment.getProperty("cardone.generateListener.enable", Boolean.class, true) ||
+                    environment.getProperty("cardone.regionGenerateListener.enable", Boolean.class, false))) {
+                return "cardone.regionGenerateListener.enable:false"
+            }
+
+            new top.cardone.data.listener.GenerateListener(serviceBeanId: "top.cardone.usercenter.service.RegionService",
+                    saveList: [[variableCode: "regionTree", value: "yes"]])
+            ]]>
+        </lang:inline-script>
+    </lang:groovy>
+
+    <lang:groovy id="top.cardone.usercenter.listener.DepartmentGenerateListener">
+        <lang:inline-script>
+            <![CDATA[
+            def environment = top.cardone.context.ApplicationContextHolder.applicationContext.environment
+
+            if (!(environment.getProperty("cardone.generateListener.enable", Boolean.class, true) ||
+                    environment.getProperty("cardone.departmentGenerateListener.enable", Boolean.class, false))) {
+                return "cardone.departmentGenerateListener.enable:false"
+            }
+
+            new top.cardone.data.listener.GenerateListener(serviceBeanId: "top.cardone.usercenter.service.DepartmentService",
+                    saveList: [[variableCode: "departmentTree", value: "yes"], [variableCode: "departmentSync", value: "yes"]])
+            ]]>
+        </lang:inline-script>
+    </lang:groovy>
+
+    <lang:groovy id="top.cardone.usercenter.listener.UserGenerateListener">
+        <lang:inline-script>
+            <![CDATA[
+            def environment = top.cardone.context.ApplicationContextHolder.applicationContext.environment
+
+            if (!(environment.getProperty("cardone.generateListener.enable", Boolean.class, true) ||
+                    environment.getProperty("cardone.userGenerateListener.enable", Boolean.class, false))) {
+                return "cardone.userGenerateListener.enable:false"
+            }
+
+            new top.cardone.data.listener.GenerateListener(serviceBeanId: "top.cardone.usercenter.service.UserService",
+                    saveList: [[variableCode: "departmentTree", value: "yes"], [variableCode: "departmentSync", value: "yes"]],
+                    actionBeanNames: ["top/cardone/usercenter/action/ChageUserAction"]
+            )
+            ]]>
+        </lang:inline-script>
+    </lang:groovy>
 </beans>
