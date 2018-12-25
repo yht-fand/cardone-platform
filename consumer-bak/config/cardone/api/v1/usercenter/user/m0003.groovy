@@ -42,6 +42,7 @@ class m0003 implements java.io.Serializable {
 		newInput?.lastModifiedById = input?.lastModifiedById
 		newInput?.lastModifiedDate = input?.lastModifiedDate
 		newInput?.lastName = input?.lastName
+		newInput?.lastSyncTime = input?.lastSyncTime
 		newInput?.locus = input?.locus
 		newInput?.marryStateCode = input?.marryStateCode
 		newInput?.mobilePhone = input?.mobilePhone
@@ -50,6 +51,7 @@ class m0003 implements java.io.Serializable {
 		newInput?.orderBy = input?.orderBy
 		newInput?.orgCode = input?.orgCode
 		newInput?.password = input?.password
+		newInput?.password2 = input?.password2
 		newInput?.passwordSalt = input?.passwordSalt
 		newInput?.personalCode = input?.personalCode
 		newInput?.personalId = input?.personalId
@@ -65,6 +67,8 @@ class m0003 implements java.io.Serializable {
 		newInput?.siteCode = input?.siteCode
 		newInput?.sourceCode = input?.sourceCode
 		newInput?.stateCode = input?.stateCode
+		newInput?.syncReturnCode = input?.syncReturnCode
+		newInput?.syncReturnMessage = input?.syncReturnMessage
 		newInput?.systemInfoCode = input?.systemInfoCode
 		newInput?.telephone = input?.telephone
 		newInput?.thirdPartyCode = input?.thirdPartyCode
@@ -149,6 +153,7 @@ class m0003 implements java.io.Serializable {
 		newOutput?.lastModifiedById = output?.last_modified_by_id
 		newOutput?.lastModifiedDate = output?.last_modified_date
 		newOutput?.lastName = output?.last_name
+		newOutput?.lastSyncTime = output?.last_sync_time
 		newOutput?.locus = output?.locus
 		newOutput?.marryStateCode = output?.marry_state_code
 		newOutput?.mobilePhone = output?.mobile_phone
@@ -157,6 +162,7 @@ class m0003 implements java.io.Serializable {
 		newOutput?.orderBy = output?.order_by_
 		newOutput?.orgCode = output?.org_code
 		newOutput?.password = output?.password_
+		newOutput?.password2 = output?.password2
 		newOutput?.passwordSalt = output?.password_salt
 		newOutput?.personalCode = output?.personal_code
 		newOutput?.personalId = output?.personal_id
@@ -172,6 +178,8 @@ class m0003 implements java.io.Serializable {
 		newOutput?.siteCode = output?.site_code
 		newOutput?.sourceCode = output?.source_code
 		newOutput?.stateCode = output?.state_code
+		newOutput?.syncReturnCode = output?.sync_return_code
+		newOutput?.syncReturnMessage = output?.sync_return_message
 		newOutput?.systemInfoCode = output?.system_info_code
 		newOutput?.telephone = output?.telephone
 		newOutput?.thirdPartyCode = output?.third_party_code

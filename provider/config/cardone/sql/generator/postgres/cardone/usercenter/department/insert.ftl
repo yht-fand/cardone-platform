@@ -73,6 +73,10 @@ ${prefixName?string('  ', ', ')}"last_modified_by_id"
 ${prefixName?string('  ', ', ')}"last_modified_date"
 <#assign prefixName = false>
 </#if>
+<#if (insert_lastSyncTime??) && (insert_lastSyncTime_value??)>
+${prefixName?string('  ', ', ')}"last_sync_time"
+<#assign prefixName = false>
+</#if>
 <#if (insert_name??) && (insert_name_value??)>
 ${prefixName?string('  ', ', ')}"name"
 <#assign prefixName = false>
@@ -137,12 +141,24 @@ ${prefixName?string('  ', ', ')}"source_code"
 ${prefixName?string('  ', ', ')}"state_code"
 <#assign prefixName = false>
 </#if>
+<#if (insert_syncReturnCode??) && (insert_syncReturnCode_value??)>
+${prefixName?string('  ', ', ')}"sync_return_code"
+<#assign prefixName = false>
+</#if>
+<#if (insert_syncReturnMessage??) && (insert_syncReturnMessage_value??)>
+${prefixName?string('  ', ', ')}"sync_return_message"
+<#assign prefixName = false>
+</#if>
 <#if (insert_systemInfoCode??) && (insert_systemInfoCode_value??)>
 ${prefixName?string('  ', ', ')}"system_info_code"
 <#assign prefixName = false>
 </#if>
 <#if (insert_thirdPartyCode??) && (insert_thirdPartyCode_value??)>
 ${prefixName?string('  ', ', ')}"third_party_code"
+<#assign prefixName = false>
+</#if>
+<#if (insert_typeCode??) && (insert_typeCode_value??)>
+${prefixName?string('  ', ', ')}"type_code"
 <#assign prefixName = false>
 </#if>
 <#if (insert_version??) && (insert_version_value??)>
@@ -224,6 +240,10 @@ ${prefixName?string('  ', ', ')}:insert_lastModifiedById_value
 ${prefixName?string('  ', ', ')}:insert_lastModifiedDate_value
 <#assign prefixName = false>
 </#if>
+<#if (insert_lastSyncTime??) && (insert_lastSyncTime_value??)>
+${prefixName?string('  ', ', ')}:insert_lastSyncTime_value
+<#assign prefixName = false>
+</#if>
 <#if (insert_name??) && (insert_name_value??)>
 ${prefixName?string('  ', ', ')}:insert_name_value
 <#assign prefixName = false>
@@ -288,12 +308,24 @@ ${prefixName?string('  ', ', ')}:insert_sourceCode_value
 ${prefixName?string('  ', ', ')}:insert_stateCode_value
 <#assign prefixName = false>
 </#if>
+<#if (insert_syncReturnCode??) && (insert_syncReturnCode_value??)>
+${prefixName?string('  ', ', ')}:insert_syncReturnCode_value
+<#assign prefixName = false>
+</#if>
+<#if (insert_syncReturnMessage??) && (insert_syncReturnMessage_value??)>
+${prefixName?string('  ', ', ')}:insert_syncReturnMessage_value
+<#assign prefixName = false>
+</#if>
 <#if (insert_systemInfoCode??) && (insert_systemInfoCode_value??)>
 ${prefixName?string('  ', ', ')}:insert_systemInfoCode_value
 <#assign prefixName = false>
 </#if>
 <#if (insert_thirdPartyCode??) && (insert_thirdPartyCode_value??)>
 ${prefixName?string('  ', ', ')}:insert_thirdPartyCode_value
+<#assign prefixName = false>
+</#if>
+<#if (insert_typeCode??) && (insert_typeCode_value??)>
+${prefixName?string('  ', ', ')}:insert_typeCode_value
 <#assign prefixName = false>
 </#if>
 <#if (insert_version??) && (insert_version_value??)>

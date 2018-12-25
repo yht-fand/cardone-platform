@@ -263,6 +263,14 @@ ${prefixName?string('WHERE ', 'AND ')}("last_name" IS NULL OR "last_name" = '')
 </#if>
 <#assign prefixName = false>
 </#if>
+<#if (where_and_eq_lastSyncTime??)>
+<#if (where_and_eq_lastSyncTime_value??)>
+${prefixName?string('WHERE ', 'AND ')}"last_sync_time" = :where_and_eq_lastSyncTime_value
+<#else>
+${prefixName?string('WHERE ', 'AND ')}"last_sync_time" IS NULL
+</#if>
+<#assign prefixName = false>
+</#if>
 <#if (where_and_eq_locus??)>
 <#if (where_and_eq_locus_value??)>
 ${prefixName?string('WHERE ', 'AND ')}"locus" = :where_and_eq_locus_value
@@ -324,6 +332,14 @@ ${prefixName?string('WHERE ', 'AND ')}("org_code" IS NULL OR "org_code" = '')
 ${prefixName?string('WHERE ', 'AND ')}"password_" = :where_and_eq_password_value
 <#else>
 ${prefixName?string('WHERE ', 'AND ')}("password_" IS NULL OR "password_" = '')
+</#if>
+<#assign prefixName = false>
+</#if>
+<#if (where_and_eq_password2??)>
+<#if (where_and_eq_password2_value??)>
+${prefixName?string('WHERE ', 'AND ')}"password2" = :where_and_eq_password2_value
+<#else>
+${prefixName?string('WHERE ', 'AND ')}("password2" IS NULL OR "password2" = '')
 </#if>
 <#assign prefixName = false>
 </#if>
@@ -444,6 +460,22 @@ ${prefixName?string('WHERE ', 'AND ')}("source_code" IS NULL OR "source_code" = 
 ${prefixName?string('WHERE ', 'AND ')}"state_code" = :where_and_eq_stateCode_value
 <#else>
 ${prefixName?string('WHERE ', 'AND ')}("state_code" IS NULL OR "state_code" = '')
+</#if>
+<#assign prefixName = false>
+</#if>
+<#if (where_and_eq_syncReturnCode??)>
+<#if (where_and_eq_syncReturnCode_value??)>
+${prefixName?string('WHERE ', 'AND ')}"sync_return_code" = :where_and_eq_syncReturnCode_value
+<#else>
+${prefixName?string('WHERE ', 'AND ')}("sync_return_code" IS NULL OR "sync_return_code" = '')
+</#if>
+<#assign prefixName = false>
+</#if>
+<#if (where_and_eq_syncReturnMessage??)>
+<#if (where_and_eq_syncReturnMessage_value??)>
+${prefixName?string('WHERE ', 'AND ')}"sync_return_message" = :where_and_eq_syncReturnMessage_value
+<#else>
+${prefixName?string('WHERE ', 'AND ')}("sync_return_message" IS NULL OR "sync_return_message" = '')
 </#if>
 <#assign prefixName = false>
 </#if>

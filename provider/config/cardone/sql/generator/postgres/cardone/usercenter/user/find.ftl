@@ -132,6 +132,10 @@ ${prefixName?string('  ', ', ')}"last_modified_date"
 ${prefixName?string('  ', ', ')}"last_name"
 <#assign prefixName = false>
 </#if>
+<#if (select_lastSyncTime??)>
+${prefixName?string('  ', ', ')}"last_sync_time"
+<#assign prefixName = false>
+</#if>
 <#if (select_locus??)>
 ${prefixName?string('  ', ', ')}"locus"
 <#assign prefixName = false>
@@ -162,6 +166,10 @@ ${prefixName?string('  ', ', ')}"org_code"
 </#if>
 <#if (select_password??)>
 ${prefixName?string('  ', ', ')}"password_"
+<#assign prefixName = false>
+</#if>
+<#if (select_password2??)>
+${prefixName?string('  ', ', ')}"password2"
 <#assign prefixName = false>
 </#if>
 <#if (select_passwordSalt??)>
@@ -222,6 +230,14 @@ ${prefixName?string('  ', ', ')}"source_code"
 </#if>
 <#if (select_stateCode??)>
 ${prefixName?string('  ', ', ')}"state_code"
+<#assign prefixName = false>
+</#if>
+<#if (select_syncReturnCode??)>
+${prefixName?string('  ', ', ')}"sync_return_code"
+<#assign prefixName = false>
+</#if>
+<#if (select_syncReturnMessage??)>
+${prefixName?string('  ', ', ')}"sync_return_message"
 <#assign prefixName = false>
 </#if>
 <#if (select_systemInfoCode??)>
@@ -386,6 +402,10 @@ ${prefixName?string('ORDER BY ', ', ')}"last_modified_date" ${order_by_lastModif
 ${prefixName?string('ORDER BY ', ', ')}"last_name" ${order_by_lastName_value!}
 <#assign prefixName = false>
 </#if>
+<#if (order_by_lastSyncTime??)>
+${prefixName?string('ORDER BY ', ', ')}"last_sync_time" ${order_by_lastSyncTime_value!}
+<#assign prefixName = false>
+</#if>
 <#if (order_by_locus??)>
 ${prefixName?string('ORDER BY ', ', ')}"locus" ${order_by_locus_value!}
 <#assign prefixName = false>
@@ -416,6 +436,10 @@ ${prefixName?string('ORDER BY ', ', ')}"org_code" ${order_by_orgCode_value!}
 </#if>
 <#if (order_by_password??)>
 ${prefixName?string('ORDER BY ', ', ')}"password_" ${order_by_password_value!}
+<#assign prefixName = false>
+</#if>
+<#if (order_by_password2??)>
+${prefixName?string('ORDER BY ', ', ')}"password2" ${order_by_password2_value!}
 <#assign prefixName = false>
 </#if>
 <#if (order_by_passwordSalt??)>
@@ -476,6 +500,14 @@ ${prefixName?string('ORDER BY ', ', ')}"source_code" ${order_by_sourceCode_value
 </#if>
 <#if (order_by_stateCode??)>
 ${prefixName?string('ORDER BY ', ', ')}"state_code" ${order_by_stateCode_value!}
+<#assign prefixName = false>
+</#if>
+<#if (order_by_syncReturnCode??)>
+${prefixName?string('ORDER BY ', ', ')}"sync_return_code" ${order_by_syncReturnCode_value!}
+<#assign prefixName = false>
+</#if>
+<#if (order_by_syncReturnMessage??)>
+${prefixName?string('ORDER BY ', ', ')}"sync_return_message" ${order_by_syncReturnMessage_value!}
 <#assign prefixName = false>
 </#if>
 <#if (order_by_systemInfoCode??)>

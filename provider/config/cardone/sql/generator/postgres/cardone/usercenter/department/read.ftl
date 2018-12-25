@@ -54,6 +54,9 @@ SELECT
 <#case "lastModifiedDate">
 "last_modified_date"
 <#break>
+<#case "lastSyncTime">
+"last_sync_time"
+<#break>
 <#case "name">
 "name"
 <#break>
@@ -102,11 +105,20 @@ SELECT
 <#case "stateCode">
 "state_code"
 <#break>
+<#case "syncReturnCode">
+"sync_return_code"
+<#break>
+<#case "syncReturnMessage">
+"sync_return_message"
+<#break>
 <#case "systemInfoCode">
 "system_info_code"
 <#break>
 <#case "thirdPartyCode">
 "third_party_code"
+<#break>
+<#case "typeCode">
+"type_code"
 <#break>
 <#case "version">
 "version_"

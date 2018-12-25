@@ -137,6 +137,13 @@ public class Department implements java.io.Serializable {
     protected Date lastModifiedDate;
 
     /**
+     * 
+     */
+    @lombok.Getter
+    @lombok.Setter
+    protected Date lastSyncTime;
+
+    /**
      * 名称
      */
     @lombok.Getter
@@ -249,6 +256,20 @@ public class Department implements java.io.Serializable {
     protected String stateCode;
 
     /**
+     * 
+     */
+    @lombok.Getter
+    @lombok.Setter
+    protected String syncReturnCode;
+
+    /**
+     * 
+     */
+    @lombok.Getter
+    @lombok.Setter
+    protected String syncReturnMessage;
+
+    /**
      * 系统信息编号
      */
     @lombok.Getter
@@ -261,6 +282,13 @@ public class Department implements java.io.Serializable {
     @lombok.Getter
     @lombok.Setter
     protected String thirdPartyCode;
+
+    /**
+     * 
+     */
+    @lombok.Getter
+    @lombok.Setter
+    protected Short typeCode;
 
     /**
      * 版本

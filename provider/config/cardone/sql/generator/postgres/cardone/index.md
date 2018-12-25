@@ -67,7 +67,8 @@ flag_object_code|YES|String(255)|标识对象编号(工作流：工作流标识�
 json_data|YES|Object(2147483647)|json数据
 last_modified_by_code|YES|String(255)|最后修改人编号
 last_modified_by_id|YES|String(255)|最后修改人标识
-last_modified_date|YES|Date(29)|最后修改日期
+last_modified_date|YES|Date(26)|最后修改日期
+last_sync_time|YES|Date(29)|
 name|NO|String(255)|名称
 order_by_|YES|Long(19)|排序
 org_code|YES|String(255)|组织编号
@@ -84,8 +85,11 @@ region_code|YES|String(255)|区域编号
 site_code|YES|String(255)|站点编号
 source_code|YES|String(255)|来源编号
 state_code|YES|String(255)|状态编号(数据字典)
+sync_return_code|YES|String(128)|
+sync_return_message|YES|String(512)|
 system_info_code|YES|String(255)|系统信息编号
 third_party_code|YES|String(255)|第三方编号
+type_code|YES|Short(5)|
 version_|YES|Integer(10)|版本
 
 ##### 用户与部门（c1_user_department）
@@ -227,8 +231,9 @@ intro|YES|String(2147483647)|简介
 json_data|YES|Object(2147483647)|json数据
 last_modified_by_code|YES|String(255)|最后修改人编号
 last_modified_by_id|YES|String(255)|最后修改人标识
-last_modified_date|YES|Date(29)|最后修改日期
+last_modified_date|YES|Date(26)|最后修改日期
 last_name|YES|String(255)|姓氏
+last_sync_time|YES|Date(29)|
 locus|YES|String(255)|现居住地
 marry_state_code|YES|String(255)|婚姻状态编号(数据字典)
 mobile_phone|YES|String(255)|手机
@@ -237,6 +242,7 @@ name_pinyin|YES|String(255)|拼音
 order_by_|YES|Long(19)|排序
 org_code|YES|String(255)|组织编号
 password_|NO|String(255)|密码
+password2|YES|String(128)|
 password_salt|YES|String(255)|密码盐
 personal_code|YES|String(255)|个人编号
 personal_id|YES|String(255)|个人标识
@@ -252,6 +258,8 @@ sex_code|YES|String(255)|性别编号(数据字典)
 site_code|YES|String(255)|站点编号
 source_code|YES|String(255)|来源编号
 state_code|YES|String(255)|状态编号(数据字典)
+sync_return_code|YES|String(128)|
+sync_return_message|YES|String(512)|
 system_info_code|YES|String(255)|系统信息编号
 telephone|YES|String(255)|联系电话
 third_party_code|YES|String(255)|第三方编号

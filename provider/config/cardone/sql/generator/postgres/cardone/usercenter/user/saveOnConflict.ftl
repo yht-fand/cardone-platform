@@ -133,6 +133,10 @@ ${prefixName?string('', ', ')}"last_modified_date"
 ${prefixName?string('', ', ')}"last_name"
 <#assign prefixName = false>
 </#if>
+<#if (index_lastSyncTime??)>
+${prefixName?string('', ', ')}"last_sync_time"
+<#assign prefixName = false>
+</#if>
 <#if (index_locus??)>
 ${prefixName?string('', ', ')}"locus"
 <#assign prefixName = false>
@@ -163,6 +167,10 @@ ${prefixName?string('', ', ')}"org_code"
 </#if>
 <#if (index_password??)>
 ${prefixName?string('', ', ')}"password_"
+<#assign prefixName = false>
+</#if>
+<#if (index_password2??)>
+${prefixName?string('', ', ')}"password2"
 <#assign prefixName = false>
 </#if>
 <#if (index_passwordSalt??)>
@@ -223,6 +231,14 @@ ${prefixName?string('', ', ')}"source_code"
 </#if>
 <#if (index_stateCode??)>
 ${prefixName?string('', ', ')}"state_code"
+<#assign prefixName = false>
+</#if>
+<#if (index_syncReturnCode??)>
+${prefixName?string('', ', ')}"sync_return_code"
+<#assign prefixName = false>
+</#if>
+<#if (index_syncReturnMessage??)>
+${prefixName?string('', ', ')}"sync_return_message"
 <#assign prefixName = false>
 </#if>
 <#if (index_systemInfoCode??)>
@@ -383,6 +399,10 @@ ${prefixName?string('', ', ')}"last_modified_date" = :update_lastModifiedDate_va
 ${prefixName?string('', ', ')}"last_name" = :update_lastName_value
 <#assign prefixName = false>
 </#if>
+<#if (update_lastSyncTime??)>
+${prefixName?string('', ', ')}"last_sync_time" = :update_lastSyncTime_value
+<#assign prefixName = false>
+</#if>
 <#if (update_locus??)>
 ${prefixName?string('', ', ')}"locus" = :update_locus_value
 <#assign prefixName = false>
@@ -413,6 +433,10 @@ ${prefixName?string('', ', ')}"org_code" = :update_orgCode_value
 </#if>
 <#if (update_password??)>
 ${prefixName?string('', ', ')}"password_" = :update_password_value
+<#assign prefixName = false>
+</#if>
+<#if (update_password2??)>
+${prefixName?string('', ', ')}"password2" = :update_password2_value
 <#assign prefixName = false>
 </#if>
 <#if (update_passwordSalt??)>
@@ -473,6 +497,14 @@ ${prefixName?string('', ', ')}"source_code" = :update_sourceCode_value
 </#if>
 <#if (update_stateCode??)>
 ${prefixName?string('', ', ')}"state_code" = :update_stateCode_value
+<#assign prefixName = false>
+</#if>
+<#if (update_syncReturnCode??)>
+${prefixName?string('', ', ')}"sync_return_code" = :update_syncReturnCode_value
+<#assign prefixName = false>
+</#if>
+<#if (update_syncReturnMessage??)>
+${prefixName?string('', ', ')}"sync_return_message" = :update_syncReturnMessage_value
 <#assign prefixName = false>
 </#if>
 <#if (update_systemInfoCode??)>

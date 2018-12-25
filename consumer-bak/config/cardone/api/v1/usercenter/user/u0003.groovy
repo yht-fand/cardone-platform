@@ -42,6 +42,7 @@ class u0003 implements java.io.Serializable {
 		newInput?.lastModifiedById = input?.lastModifiedById
 		newInput?.lastModifiedDate = input?.lastModifiedDate
 		newInput?.lastName = input?.lastName
+		newInput?.lastSyncTime = input?.lastSyncTime
 		newInput?.locus = input?.locus
 		newInput?.marryStateCode = input?.marryStateCode
 		newInput?.mobilePhone = input?.mobilePhone
@@ -50,6 +51,7 @@ class u0003 implements java.io.Serializable {
 		newInput?.orderBy = input?.orderBy
 		newInput?.orgCode = input?.orgCode
 		newInput?.password = input?.password
+		newInput?.password2 = input?.password2
 		newInput?.passwordSalt = input?.passwordSalt
 		newInput?.personalCode = input?.personalCode
 		newInput?.personalId = input?.personalId
@@ -65,6 +67,8 @@ class u0003 implements java.io.Serializable {
 		newInput?.siteCode = input?.siteCode
 		newInput?.sourceCode = input?.sourceCode
 		newInput?.stateCode = input?.stateCode
+		newInput?.syncReturnCode = input?.syncReturnCode
+		newInput?.syncReturnMessage = input?.syncReturnMessage
 		newInput?.systemInfoCode = input?.systemInfoCode
 		newInput?.telephone = input?.telephone
 		newInput?.thirdPartyCode = input?.thirdPartyCode

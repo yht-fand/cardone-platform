@@ -99,6 +99,9 @@ SELECT
 <#case "lastName">
 "last_name"
 <#break>
+<#case "lastSyncTime">
+"last_sync_time"
+<#break>
 <#case "locus">
 "locus"
 <#break>
@@ -122,6 +125,9 @@ SELECT
 <#break>
 <#case "password">
 "password_"
+<#break>
+<#case "password2">
+"password2"
 <#break>
 <#case "passwordSalt">
 "password_salt"
@@ -167,6 +173,12 @@ SELECT
 <#break>
 <#case "stateCode">
 "state_code"
+<#break>
+<#case "syncReturnCode">
+"sync_return_code"
+<#break>
+<#case "syncReturnMessage">
+"sync_return_message"
 <#break>
 <#case "systemInfoCode">
 "system_info_code"

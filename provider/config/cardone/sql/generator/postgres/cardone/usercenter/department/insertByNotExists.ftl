@@ -74,6 +74,10 @@ ${prefixName?string('  ', ', ')}"last_modified_by_id"
 ${prefixName?string('  ', ', ')}"last_modified_date"
 <#assign prefixName = false>
 </#if>
+<#if (insert_lastSyncTime??) && (insert_lastSyncTime_value??)>
+${prefixName?string('  ', ', ')}"last_sync_time"
+<#assign prefixName = false>
+</#if>
 <#if (insert_name??) && (insert_name_value??)>
 ${prefixName?string('  ', ', ')}"name"
 <#assign prefixName = false>
@@ -138,12 +142,24 @@ ${prefixName?string('  ', ', ')}"source_code"
 ${prefixName?string('  ', ', ')}"state_code"
 <#assign prefixName = false>
 </#if>
+<#if (insert_syncReturnCode??) && (insert_syncReturnCode_value??)>
+${prefixName?string('  ', ', ')}"sync_return_code"
+<#assign prefixName = false>
+</#if>
+<#if (insert_syncReturnMessage??) && (insert_syncReturnMessage_value??)>
+${prefixName?string('  ', ', ')}"sync_return_message"
+<#assign prefixName = false>
+</#if>
 <#if (insert_systemInfoCode??) && (insert_systemInfoCode_value??)>
 ${prefixName?string('  ', ', ')}"system_info_code"
 <#assign prefixName = false>
 </#if>
 <#if (insert_thirdPartyCode??) && (insert_thirdPartyCode_value??)>
 ${prefixName?string('  ', ', ')}"third_party_code"
+<#assign prefixName = false>
+</#if>
+<#if (insert_typeCode??) && (insert_typeCode_value??)>
+${prefixName?string('  ', ', ')}"type_code"
 <#assign prefixName = false>
 </#if>
 <#if (insert_version??) && (insert_version_value??)>
@@ -225,6 +241,10 @@ ${prefixName?string('  ', ', ')}:insert_lastModifiedById_value
 ${prefixName?string('  ', ', ')}:insert_lastModifiedDate_value
 <#assign prefixName = false>
 </#if>
+<#if (insert_lastSyncTime??) && (insert_lastSyncTime_value??)>
+${prefixName?string('  ', ', ')}:insert_lastSyncTime_value
+<#assign prefixName = false>
+</#if>
 <#if (insert_name??) && (insert_name_value??)>
 ${prefixName?string('  ', ', ')}:insert_name_value
 <#assign prefixName = false>
@@ -289,12 +309,24 @@ ${prefixName?string('  ', ', ')}:insert_sourceCode_value
 ${prefixName?string('  ', ', ')}:insert_stateCode_value
 <#assign prefixName = false>
 </#if>
+<#if (insert_syncReturnCode??) && (insert_syncReturnCode_value??)>
+${prefixName?string('  ', ', ')}:insert_syncReturnCode_value
+<#assign prefixName = false>
+</#if>
+<#if (insert_syncReturnMessage??) && (insert_syncReturnMessage_value??)>
+${prefixName?string('  ', ', ')}:insert_syncReturnMessage_value
+<#assign prefixName = false>
+</#if>
 <#if (insert_systemInfoCode??) && (insert_systemInfoCode_value??)>
 ${prefixName?string('  ', ', ')}:insert_systemInfoCode_value
 <#assign prefixName = false>
 </#if>
 <#if (insert_thirdPartyCode??) && (insert_thirdPartyCode_value??)>
 ${prefixName?string('  ', ', ')}:insert_thirdPartyCode_value
+<#assign prefixName = false>
+</#if>
+<#if (insert_typeCode??) && (insert_typeCode_value??)>
+${prefixName?string('  ', ', ')}:insert_typeCode_value
 <#assign prefixName = false>
 </#if>
 <#if (insert_version??) && (insert_version_value??)>
@@ -447,6 +479,14 @@ ${prefixName?string('WHERE ', 'AND ')}E."last_modified_date" IS NULL
 </#if>
 <#assign prefixName = false>
 </#if>
+<#if (where_and_eq_lastSyncTime??)>
+<#if (where_and_eq_lastSyncTime_value??)>
+${prefixName?string('WHERE ', 'AND ')}E."last_sync_time" = :where_and_eq_lastSyncTime_value
+<#else>
+${prefixName?string('WHERE ', 'AND ')}E."last_sync_time" IS NULL
+</#if>
+<#assign prefixName = false>
+</#if>
 <#if (where_and_eq_name??)>
 <#if (where_and_eq_name_value??)>
 ${prefixName?string('WHERE ', 'AND ')}E."name" = :where_and_eq_name_value
@@ -575,6 +615,22 @@ ${prefixName?string('WHERE ', 'AND ')}(E."state_code" IS NULL OR E."state_code" 
 </#if>
 <#assign prefixName = false>
 </#if>
+<#if (where_and_eq_syncReturnCode??)>
+<#if (where_and_eq_syncReturnCode_value??)>
+${prefixName?string('WHERE ', 'AND ')}E."sync_return_code" = :where_and_eq_syncReturnCode_value
+<#else>
+${prefixName?string('WHERE ', 'AND ')}(E."sync_return_code" IS NULL OR E."sync_return_code" = '')
+</#if>
+<#assign prefixName = false>
+</#if>
+<#if (where_and_eq_syncReturnMessage??)>
+<#if (where_and_eq_syncReturnMessage_value??)>
+${prefixName?string('WHERE ', 'AND ')}E."sync_return_message" = :where_and_eq_syncReturnMessage_value
+<#else>
+${prefixName?string('WHERE ', 'AND ')}(E."sync_return_message" IS NULL OR E."sync_return_message" = '')
+</#if>
+<#assign prefixName = false>
+</#if>
 <#if (where_and_eq_systemInfoCode??)>
 <#if (where_and_eq_systemInfoCode_value??)>
 ${prefixName?string('WHERE ', 'AND ')}E."system_info_code" = :where_and_eq_systemInfoCode_value
@@ -588,6 +644,14 @@ ${prefixName?string('WHERE ', 'AND ')}(E."system_info_code" IS NULL OR E."system
 ${prefixName?string('WHERE ', 'AND ')}E."third_party_code" = :where_and_eq_thirdPartyCode_value
 <#else>
 ${prefixName?string('WHERE ', 'AND ')}(E."third_party_code" IS NULL OR E."third_party_code" = '')
+</#if>
+<#assign prefixName = false>
+</#if>
+<#if (where_and_eq_typeCode??)>
+<#if (where_and_eq_typeCode_value??)>
+${prefixName?string('WHERE ', 'AND ')}E."type_code" = :where_and_eq_typeCode_value
+<#else>
+${prefixName?string('WHERE ', 'AND ')}E."type_code" IS NULL
 </#if>
 <#assign prefixName = false>
 </#if>

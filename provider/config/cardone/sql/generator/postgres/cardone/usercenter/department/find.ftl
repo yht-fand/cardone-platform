@@ -72,6 +72,10 @@ ${prefixName?string('  ', ', ')}"last_modified_by_id"
 ${prefixName?string('  ', ', ')}"last_modified_date"
 <#assign prefixName = false>
 </#if>
+<#if (select_lastSyncTime??)>
+${prefixName?string('  ', ', ')}"last_sync_time"
+<#assign prefixName = false>
+</#if>
 <#if (select_name??)>
 ${prefixName?string('  ', ', ')}"name"
 <#assign prefixName = false>
@@ -136,12 +140,24 @@ ${prefixName?string('  ', ', ')}"source_code"
 ${prefixName?string('  ', ', ')}"state_code"
 <#assign prefixName = false>
 </#if>
+<#if (select_syncReturnCode??)>
+${prefixName?string('  ', ', ')}"sync_return_code"
+<#assign prefixName = false>
+</#if>
+<#if (select_syncReturnMessage??)>
+${prefixName?string('  ', ', ')}"sync_return_message"
+<#assign prefixName = false>
+</#if>
 <#if (select_systemInfoCode??)>
 ${prefixName?string('  ', ', ')}"system_info_code"
 <#assign prefixName = false>
 </#if>
 <#if (select_thirdPartyCode??)>
 ${prefixName?string('  ', ', ')}"third_party_code"
+<#assign prefixName = false>
+</#if>
+<#if (select_typeCode??)>
+${prefixName?string('  ', ', ')}"type_code"
 <#assign prefixName = false>
 </#if>
 <#if (select_version??)>
@@ -226,6 +242,10 @@ ${prefixName?string('ORDER BY ', ', ')}"last_modified_by_id" ${order_by_lastModi
 ${prefixName?string('ORDER BY ', ', ')}"last_modified_date" ${order_by_lastModifiedDate_value!}
 <#assign prefixName = false>
 </#if>
+<#if (order_by_lastSyncTime??)>
+${prefixName?string('ORDER BY ', ', ')}"last_sync_time" ${order_by_lastSyncTime_value!}
+<#assign prefixName = false>
+</#if>
 <#if (order_by_name??)>
 ${prefixName?string('ORDER BY ', ', ')}"name" ${order_by_name_value!}
 <#assign prefixName = false>
@@ -290,12 +310,24 @@ ${prefixName?string('ORDER BY ', ', ')}"source_code" ${order_by_sourceCode_value
 ${prefixName?string('ORDER BY ', ', ')}"state_code" ${order_by_stateCode_value!}
 <#assign prefixName = false>
 </#if>
+<#if (order_by_syncReturnCode??)>
+${prefixName?string('ORDER BY ', ', ')}"sync_return_code" ${order_by_syncReturnCode_value!}
+<#assign prefixName = false>
+</#if>
+<#if (order_by_syncReturnMessage??)>
+${prefixName?string('ORDER BY ', ', ')}"sync_return_message" ${order_by_syncReturnMessage_value!}
+<#assign prefixName = false>
+</#if>
 <#if (order_by_systemInfoCode??)>
 ${prefixName?string('ORDER BY ', ', ')}"system_info_code" ${order_by_systemInfoCode_value!}
 <#assign prefixName = false>
 </#if>
 <#if (order_by_thirdPartyCode??)>
 ${prefixName?string('ORDER BY ', ', ')}"third_party_code" ${order_by_thirdPartyCode_value!}
+<#assign prefixName = false>
+</#if>
+<#if (order_by_typeCode??)>
+${prefixName?string('ORDER BY ', ', ')}"type_code" ${order_by_typeCode_value!}
 <#assign prefixName = false>
 </#if>
 <#if (order_by_version??)>

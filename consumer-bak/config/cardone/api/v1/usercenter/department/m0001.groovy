@@ -27,6 +27,7 @@ class m0001 implements java.io.Serializable {
 		newInput?.lastModifiedByCode = input?.lastModifiedByCode
 		newInput?.lastModifiedById = input?.lastModifiedById
 		newInput?.lastModifiedDate = input?.lastModifiedDate
+		newInput?.lastSyncTime = input?.lastSyncTime
 		newInput?.name = input?.name
 		newInput?.orderBy = input?.orderBy
 		newInput?.orgCode = input?.orgCode
@@ -43,8 +44,11 @@ class m0001 implements java.io.Serializable {
 		newInput?.siteCode = input?.siteCode
 		newInput?.sourceCode = input?.sourceCode
 		newInput?.stateCode = input?.stateCode
+		newInput?.syncReturnCode = input?.syncReturnCode
+		newInput?.syncReturnMessage = input?.syncReturnMessage
 		newInput?.systemInfoCode = input?.systemInfoCode
 		newInput?.thirdPartyCode = input?.thirdPartyCode
+		newInput?.typeCode = input?.typeCode
 		newInput?.version = input?.version
 
         newInput
@@ -109,6 +113,7 @@ class m0001 implements java.io.Serializable {
 		newOutput?.lastModifiedByCode = output?.last_modified_by_code
 		newOutput?.lastModifiedById = output?.last_modified_by_id
 		newOutput?.lastModifiedDate = output?.last_modified_date
+		newOutput?.lastSyncTime = output?.last_sync_time
 		newOutput?.name = output?.name
 		newOutput?.orderBy = output?.order_by_
 		newOutput?.orgCode = output?.org_code
@@ -125,8 +130,11 @@ class m0001 implements java.io.Serializable {
 		newOutput?.siteCode = output?.site_code
 		newOutput?.sourceCode = output?.source_code
 		newOutput?.stateCode = output?.state_code
+		newOutput?.syncReturnCode = output?.sync_return_code
+		newOutput?.syncReturnMessage = output?.sync_return_message
 		newOutput?.systemInfoCode = output?.system_info_code
 		newOutput?.thirdPartyCode = output?.third_party_code
+		newOutput?.typeCode = output?.type_code
 		newOutput?.version = output?.version_
 
         newOutput

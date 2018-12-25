@@ -132,6 +132,10 @@ ${prefixName?string('SET ', ', ')}"last_modified_date" = :update_lastModifiedDat
 ${prefixName?string('SET ', ', ')}"last_name" = :update_lastName_value
 <#assign prefixName = false>
 </#if>
+<#if (update_lastSyncTime??)>
+${prefixName?string('SET ', ', ')}"last_sync_time" = :update_lastSyncTime_value
+<#assign prefixName = false>
+</#if>
 <#if (update_locus??)>
 ${prefixName?string('SET ', ', ')}"locus" = :update_locus_value
 <#assign prefixName = false>
@@ -162,6 +166,10 @@ ${prefixName?string('SET ', ', ')}"org_code" = :update_orgCode_value
 </#if>
 <#if (update_password??)>
 ${prefixName?string('SET ', ', ')}"password_" = :update_password_value
+<#assign prefixName = false>
+</#if>
+<#if (update_password2??)>
+${prefixName?string('SET ', ', ')}"password2" = :update_password2_value
 <#assign prefixName = false>
 </#if>
 <#if (update_passwordSalt??)>
@@ -222,6 +230,14 @@ ${prefixName?string('SET ', ', ')}"source_code" = :update_sourceCode_value
 </#if>
 <#if (update_stateCode??)>
 ${prefixName?string('SET ', ', ')}"state_code" = :update_stateCode_value
+<#assign prefixName = false>
+</#if>
+<#if (update_syncReturnCode??)>
+${prefixName?string('SET ', ', ')}"sync_return_code" = :update_syncReturnCode_value
+<#assign prefixName = false>
+</#if>
+<#if (update_syncReturnMessage??)>
+${prefixName?string('SET ', ', ')}"sync_return_message" = :update_syncReturnMessage_value
 <#assign prefixName = false>
 </#if>
 <#if (update_systemInfoCode??)>

@@ -102,6 +102,8 @@ class r0001 implements java.io.Serializable {
 
             data['lastModifiedDate'] = contentItem['last_modified_date']
 
+            data['lastSyncTime'] = contentItem['last_sync_time']
+
             data['name'] = contentItem['name']
 
             data['orderBy'] = contentItem['order_by_']
@@ -134,9 +136,15 @@ class r0001 implements java.io.Serializable {
 
             data['stateCode'] = contentItem['state_code']
 
+            data['syncReturnCode'] = contentItem['sync_return_code']
+
+            data['syncReturnMessage'] = contentItem['sync_return_message']
+
             data['systemInfoCode'] = contentItem['system_info_code']
 
             data['thirdPartyCode'] = contentItem['third_party_code']
+
+            data['typeCode'] = contentItem['type_code']
 
             data['version'] = contentItem['version_']
 

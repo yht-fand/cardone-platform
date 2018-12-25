@@ -132,6 +132,8 @@ class r0003 implements java.io.Serializable {
 
             data['lastName'] = contentItem['last_name']
 
+            data['lastSyncTime'] = contentItem['last_sync_time']
+
             data['locus'] = contentItem['locus']
 
             data['marryStateCode'] = contentItem['marry_state_code']
@@ -147,6 +149,8 @@ class r0003 implements java.io.Serializable {
             data['orgCode'] = contentItem['org_code']
 
             data['password'] = contentItem['password_']
+
+            data['password2'] = contentItem['password2']
 
             data['passwordSalt'] = contentItem['password_salt']
 
@@ -177,6 +181,10 @@ class r0003 implements java.io.Serializable {
             data['sourceCode'] = contentItem['source_code']
 
             data['stateCode'] = contentItem['state_code']
+
+            data['syncReturnCode'] = contentItem['sync_return_code']
+
+            data['syncReturnMessage'] = contentItem['sync_return_message']
 
             data['systemInfoCode'] = contentItem['system_info_code']
 

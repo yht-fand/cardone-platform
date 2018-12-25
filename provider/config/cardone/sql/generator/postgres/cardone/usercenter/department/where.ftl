@@ -143,6 +143,14 @@ ${prefixName?string('WHERE ', 'AND ')}"last_modified_date" IS NULL
 </#if>
 <#assign prefixName = false>
 </#if>
+<#if (where_and_eq_lastSyncTime??)>
+<#if (where_and_eq_lastSyncTime_value??)>
+${prefixName?string('WHERE ', 'AND ')}"last_sync_time" = :where_and_eq_lastSyncTime_value
+<#else>
+${prefixName?string('WHERE ', 'AND ')}"last_sync_time" IS NULL
+</#if>
+<#assign prefixName = false>
+</#if>
 <#if (where_and_eq_name??)>
 <#if (where_and_eq_name_value??)>
 ${prefixName?string('WHERE ', 'AND ')}"name" = :where_and_eq_name_value
@@ -271,6 +279,22 @@ ${prefixName?string('WHERE ', 'AND ')}("state_code" IS NULL OR "state_code" = ''
 </#if>
 <#assign prefixName = false>
 </#if>
+<#if (where_and_eq_syncReturnCode??)>
+<#if (where_and_eq_syncReturnCode_value??)>
+${prefixName?string('WHERE ', 'AND ')}"sync_return_code" = :where_and_eq_syncReturnCode_value
+<#else>
+${prefixName?string('WHERE ', 'AND ')}("sync_return_code" IS NULL OR "sync_return_code" = '')
+</#if>
+<#assign prefixName = false>
+</#if>
+<#if (where_and_eq_syncReturnMessage??)>
+<#if (where_and_eq_syncReturnMessage_value??)>
+${prefixName?string('WHERE ', 'AND ')}"sync_return_message" = :where_and_eq_syncReturnMessage_value
+<#else>
+${prefixName?string('WHERE ', 'AND ')}("sync_return_message" IS NULL OR "sync_return_message" = '')
+</#if>
+<#assign prefixName = false>
+</#if>
 <#if (where_and_eq_systemInfoCode??)>
 <#if (where_and_eq_systemInfoCode_value??)>
 ${prefixName?string('WHERE ', 'AND ')}"system_info_code" = :where_and_eq_systemInfoCode_value
@@ -284,6 +308,14 @@ ${prefixName?string('WHERE ', 'AND ')}("system_info_code" IS NULL OR "system_inf
 ${prefixName?string('WHERE ', 'AND ')}"third_party_code" = :where_and_eq_thirdPartyCode_value
 <#else>
 ${prefixName?string('WHERE ', 'AND ')}("third_party_code" IS NULL OR "third_party_code" = '')
+</#if>
+<#assign prefixName = false>
+</#if>
+<#if (where_and_eq_typeCode??)>
+<#if (where_and_eq_typeCode_value??)>
+${prefixName?string('WHERE ', 'AND ')}"type_code" = :where_and_eq_typeCode_value
+<#else>
+${prefixName?string('WHERE ', 'AND ')}"type_code" IS NULL
 </#if>
 <#assign prefixName = false>
 </#if>

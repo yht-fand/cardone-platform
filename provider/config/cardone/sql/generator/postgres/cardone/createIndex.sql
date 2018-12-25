@@ -154,6 +154,9 @@
 --最后修改日期
 --drop index IF EXISTS idx_c1_department_last_modified_date;
 --create index IF NOT EXISTS idx_c1_department_last_modified_date ON c1_department ("last_modified_date");
+--
+--drop index IF EXISTS idx_c1_department_last_sync_time;
+--create index IF NOT EXISTS idx_c1_department_last_sync_time ON c1_department ("last_sync_time");
 --名称
 --drop index IF EXISTS idx_c1_department_name;
 --create index IF NOT EXISTS idx_c1_department_name ON c1_department ("name" varchar_pattern_ops);
@@ -202,12 +205,21 @@
 --状态编号(数据字典)
 --drop index IF EXISTS idx_c1_department_state_code;
 --create index IF NOT EXISTS idx_c1_department_state_code ON c1_department ("state_code" varchar_pattern_ops);
+--
+--drop index IF EXISTS idx_c1_department_sync_return_code;
+--create index IF NOT EXISTS idx_c1_department_sync_return_code ON c1_department ("sync_return_code" varchar_pattern_ops);
+--
+--drop index IF EXISTS idx_c1_department_sync_return_message;
+--create index IF NOT EXISTS idx_c1_department_sync_return_message ON c1_department ("sync_return_message" varchar_pattern_ops);
 --系统信息编号
 --drop index IF EXISTS idx_c1_department_system_info_code;
 --create index IF NOT EXISTS idx_c1_department_system_info_code ON c1_department ("system_info_code" varchar_pattern_ops);
 --第三方编号
 --drop index IF EXISTS idx_c1_department_third_party_code;
 --create index IF NOT EXISTS idx_c1_department_third_party_code ON c1_department ("third_party_code" varchar_pattern_ops);
+--
+--drop index IF EXISTS idx_c1_department_type_code;
+--create index IF NOT EXISTS idx_c1_department_type_code ON c1_department ("type_code");
 
 -- 用户与部门（c1_user_department）
 
@@ -562,6 +574,9 @@
 --姓氏
 --drop index IF EXISTS idx_c1_user_last_name;
 --create index IF NOT EXISTS idx_c1_user_last_name ON c1_user ("last_name" varchar_pattern_ops);
+--
+--drop index IF EXISTS idx_c1_user_last_sync_time;
+--create index IF NOT EXISTS idx_c1_user_last_sync_time ON c1_user ("last_sync_time");
 --现居住地
 --drop index IF EXISTS idx_c1_user_locus;
 --create index IF NOT EXISTS idx_c1_user_locus ON c1_user ("locus" varchar_pattern_ops);
@@ -586,6 +601,9 @@
 --密码
 --drop index IF EXISTS idx_c1_user_password_;
 --create index IF NOT EXISTS idx_c1_user_password_ ON c1_user ("password_" varchar_pattern_ops);
+--
+--drop index IF EXISTS idx_c1_user_password2;
+--create index IF NOT EXISTS idx_c1_user_password2 ON c1_user ("password2" varchar_pattern_ops);
 --密码盐
 --drop index IF EXISTS idx_c1_user_password_salt;
 --create index IF NOT EXISTS idx_c1_user_password_salt ON c1_user ("password_salt" varchar_pattern_ops);
@@ -628,6 +646,12 @@
 --状态编号(数据字典)
 --drop index IF EXISTS idx_c1_user_state_code;
 --create index IF NOT EXISTS idx_c1_user_state_code ON c1_user ("state_code" varchar_pattern_ops);
+--
+--drop index IF EXISTS idx_c1_user_sync_return_code;
+--create index IF NOT EXISTS idx_c1_user_sync_return_code ON c1_user ("sync_return_code" varchar_pattern_ops);
+--
+--drop index IF EXISTS idx_c1_user_sync_return_message;
+--create index IF NOT EXISTS idx_c1_user_sync_return_message ON c1_user ("sync_return_message" varchar_pattern_ops);
 --系统信息编号
 --drop index IF EXISTS idx_c1_user_system_info_code;
 --create index IF NOT EXISTS idx_c1_user_system_info_code ON c1_user ("system_info_code" varchar_pattern_ops);

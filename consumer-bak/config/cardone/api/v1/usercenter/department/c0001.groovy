@@ -27,6 +27,7 @@ class c0001 implements java.io.Serializable {
 		newInput?.lastModifiedByCode = input?.lastModifiedByCode
 		newInput?.lastModifiedById = input?.lastModifiedById
 		newInput?.lastModifiedDate = input?.lastModifiedDate
+		newInput?.lastSyncTime = input?.lastSyncTime
 		newInput?.name = input?.name
 		newInput?.orderBy = input?.orderBy
 		newInput?.orgCode = input?.orgCode
@@ -43,8 +44,11 @@ class c0001 implements java.io.Serializable {
 		newInput?.siteCode = input?.siteCode
 		newInput?.sourceCode = input?.sourceCode
 		newInput?.stateCode = input?.stateCode
+		newInput?.syncReturnCode = input?.syncReturnCode
+		newInput?.syncReturnMessage = input?.syncReturnMessage
 		newInput?.systemInfoCode = input?.systemInfoCode
 		newInput?.thirdPartyCode = input?.thirdPartyCode
+		newInput?.typeCode = input?.typeCode
 		newInput?.version = input?.version
 
         newInput.flagCode = StringUtils.defaultIfBlank(input.flagCode, "input")

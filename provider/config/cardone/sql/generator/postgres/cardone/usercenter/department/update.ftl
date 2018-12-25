@@ -72,6 +72,10 @@ ${prefixName?string('SET ', ', ')}"last_modified_by_id" = :update_lastModifiedBy
 ${prefixName?string('SET ', ', ')}"last_modified_date" = :update_lastModifiedDate_value
 <#assign prefixName = false>
 </#if>
+<#if (update_lastSyncTime??)>
+${prefixName?string('SET ', ', ')}"last_sync_time" = :update_lastSyncTime_value
+<#assign prefixName = false>
+</#if>
 <#if (update_name??)>
 ${prefixName?string('SET ', ', ')}"name" = :update_name_value
 <#assign prefixName = false>
@@ -136,12 +140,24 @@ ${prefixName?string('SET ', ', ')}"source_code" = :update_sourceCode_value
 ${prefixName?string('SET ', ', ')}"state_code" = :update_stateCode_value
 <#assign prefixName = false>
 </#if>
+<#if (update_syncReturnCode??)>
+${prefixName?string('SET ', ', ')}"sync_return_code" = :update_syncReturnCode_value
+<#assign prefixName = false>
+</#if>
+<#if (update_syncReturnMessage??)>
+${prefixName?string('SET ', ', ')}"sync_return_message" = :update_syncReturnMessage_value
+<#assign prefixName = false>
+</#if>
 <#if (update_systemInfoCode??)>
 ${prefixName?string('SET ', ', ')}"system_info_code" = :update_systemInfoCode_value
 <#assign prefixName = false>
 </#if>
 <#if (update_thirdPartyCode??)>
 ${prefixName?string('SET ', ', ')}"third_party_code" = :update_thirdPartyCode_value
+<#assign prefixName = false>
+</#if>
+<#if (update_typeCode??)>
+${prefixName?string('SET ', ', ')}"type_code" = :update_typeCode_value
 <#assign prefixName = false>
 </#if>
 <#if (update_version??)>

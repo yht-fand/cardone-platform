@@ -73,6 +73,10 @@ ${prefixName?string('', ', ')}"last_modified_by_id"
 ${prefixName?string('', ', ')}"last_modified_date"
 <#assign prefixName = false>
 </#if>
+<#if (index_lastSyncTime??)>
+${prefixName?string('', ', ')}"last_sync_time"
+<#assign prefixName = false>
+</#if>
 <#if (index_name??)>
 ${prefixName?string('', ', ')}"name"
 <#assign prefixName = false>
@@ -137,12 +141,24 @@ ${prefixName?string('', ', ')}"source_code"
 ${prefixName?string('', ', ')}"state_code"
 <#assign prefixName = false>
 </#if>
+<#if (index_syncReturnCode??)>
+${prefixName?string('', ', ')}"sync_return_code"
+<#assign prefixName = false>
+</#if>
+<#if (index_syncReturnMessage??)>
+${prefixName?string('', ', ')}"sync_return_message"
+<#assign prefixName = false>
+</#if>
 <#if (index_systemInfoCode??)>
 ${prefixName?string('', ', ')}"system_info_code"
 <#assign prefixName = false>
 </#if>
 <#if (index_thirdPartyCode??)>
 ${prefixName?string('', ', ')}"third_party_code"
+<#assign prefixName = false>
+</#if>
+<#if (index_typeCode??)>
+${prefixName?string('', ', ')}"type_code"
 <#assign prefixName = false>
 </#if>
 <#if (index_version??)>

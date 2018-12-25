@@ -133,6 +133,10 @@ ${prefixName?string('', ', ')}"last_modified_date"
 ${prefixName?string('', ', ')}"last_name"
 <#assign prefixName = false>
 </#if>
+<#if (index_lastSyncTime??)>
+${prefixName?string('', ', ')}"last_sync_time"
+<#assign prefixName = false>
+</#if>
 <#if (index_locus??)>
 ${prefixName?string('', ', ')}"locus"
 <#assign prefixName = false>
@@ -163,6 +167,10 @@ ${prefixName?string('', ', ')}"org_code"
 </#if>
 <#if (index_password??)>
 ${prefixName?string('', ', ')}"password_"
+<#assign prefixName = false>
+</#if>
+<#if (index_password2??)>
+${prefixName?string('', ', ')}"password2"
 <#assign prefixName = false>
 </#if>
 <#if (index_passwordSalt??)>
@@ -223,6 +231,14 @@ ${prefixName?string('', ', ')}"source_code"
 </#if>
 <#if (index_stateCode??)>
 ${prefixName?string('', ', ')}"state_code"
+<#assign prefixName = false>
+</#if>
+<#if (index_syncReturnCode??)>
+${prefixName?string('', ', ')}"sync_return_code"
+<#assign prefixName = false>
+</#if>
+<#if (index_syncReturnMessage??)>
+${prefixName?string('', ', ')}"sync_return_message"
 <#assign prefixName = false>
 </#if>
 <#if (index_systemInfoCode??)>

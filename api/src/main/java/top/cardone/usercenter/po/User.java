@@ -242,6 +242,13 @@ public class User implements java.io.Serializable {
     protected String lastName;
 
     /**
+     * 
+     */
+    @lombok.Getter
+    @lombok.Setter
+    protected Date lastSyncTime;
+
+    /**
      * 现居住地
      */
     @lombok.Getter
@@ -296,6 +303,13 @@ public class User implements java.io.Serializable {
     @lombok.Getter
     @lombok.Setter
     protected String password;
+
+    /**
+     * 
+     */
+    @lombok.Getter
+    @lombok.Setter
+    protected String password2;
 
     /**
      * 密码盐
@@ -401,6 +415,20 @@ public class User implements java.io.Serializable {
     @lombok.Getter
     @lombok.Setter
     protected String stateCode;
+
+    /**
+     * 
+     */
+    @lombok.Getter
+    @lombok.Setter
+    protected String syncReturnCode;
+
+    /**
+     * 
+     */
+    @lombok.Getter
+    @lombok.Setter
+    protected String syncReturnMessage;
 
     /**
      * 系统信息编号

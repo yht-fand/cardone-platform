@@ -134,6 +134,10 @@ ${prefixName?string('  ', ', ')}"last_modified_date"
 ${prefixName?string('  ', ', ')}"last_name"
 <#assign prefixName = false>
 </#if>
+<#if (insert_lastSyncTime??) && (insert_lastSyncTime_value??)>
+${prefixName?string('  ', ', ')}"last_sync_time"
+<#assign prefixName = false>
+</#if>
 <#if (insert_locus??) && (insert_locus_value??)>
 ${prefixName?string('  ', ', ')}"locus"
 <#assign prefixName = false>
@@ -164,6 +168,10 @@ ${prefixName?string('  ', ', ')}"org_code"
 </#if>
 <#if (insert_password??) && (insert_password_value??)>
 ${prefixName?string('  ', ', ')}"password_"
+<#assign prefixName = false>
+</#if>
+<#if (insert_password2??) && (insert_password2_value??)>
+${prefixName?string('  ', ', ')}"password2"
 <#assign prefixName = false>
 </#if>
 <#if (insert_passwordSalt??) && (insert_passwordSalt_value??)>
@@ -224,6 +232,14 @@ ${prefixName?string('  ', ', ')}"source_code"
 </#if>
 <#if (insert_stateCode??) && (insert_stateCode_value??)>
 ${prefixName?string('  ', ', ')}"state_code"
+<#assign prefixName = false>
+</#if>
+<#if (insert_syncReturnCode??) && (insert_syncReturnCode_value??)>
+${prefixName?string('  ', ', ')}"sync_return_code"
+<#assign prefixName = false>
+</#if>
+<#if (insert_syncReturnMessage??) && (insert_syncReturnMessage_value??)>
+${prefixName?string('  ', ', ')}"sync_return_message"
 <#assign prefixName = false>
 </#if>
 <#if (insert_systemInfoCode??) && (insert_systemInfoCode_value??)>
@@ -385,6 +401,10 @@ ${prefixName?string('  ', ', ')}:insert_lastModifiedDate_value
 ${prefixName?string('  ', ', ')}:insert_lastName_value
 <#assign prefixName = false>
 </#if>
+<#if (insert_lastSyncTime??) && (insert_lastSyncTime_value??)>
+${prefixName?string('  ', ', ')}:insert_lastSyncTime_value
+<#assign prefixName = false>
+</#if>
 <#if (insert_locus??) && (insert_locus_value??)>
 ${prefixName?string('  ', ', ')}:insert_locus_value
 <#assign prefixName = false>
@@ -415,6 +435,10 @@ ${prefixName?string('  ', ', ')}:insert_orgCode_value
 </#if>
 <#if (insert_password??) && (insert_password_value??)>
 ${prefixName?string('  ', ', ')}:insert_password_value
+<#assign prefixName = false>
+</#if>
+<#if (insert_password2??) && (insert_password2_value??)>
+${prefixName?string('  ', ', ')}:insert_password2_value
 <#assign prefixName = false>
 </#if>
 <#if (insert_passwordSalt??) && (insert_passwordSalt_value??)>
@@ -475,6 +499,14 @@ ${prefixName?string('  ', ', ')}:insert_sourceCode_value
 </#if>
 <#if (insert_stateCode??) && (insert_stateCode_value??)>
 ${prefixName?string('  ', ', ')}:insert_stateCode_value
+<#assign prefixName = false>
+</#if>
+<#if (insert_syncReturnCode??) && (insert_syncReturnCode_value??)>
+${prefixName?string('  ', ', ')}:insert_syncReturnCode_value
+<#assign prefixName = false>
+</#if>
+<#if (insert_syncReturnMessage??) && (insert_syncReturnMessage_value??)>
+${prefixName?string('  ', ', ')}:insert_syncReturnMessage_value
 <#assign prefixName = false>
 </#if>
 <#if (insert_systemInfoCode??) && (insert_systemInfoCode_value??)>
@@ -767,6 +799,14 @@ ${prefixName?string('WHERE ', 'AND ')}(E."last_name" IS NULL OR E."last_name" = 
 </#if>
 <#assign prefixName = false>
 </#if>
+<#if (where_and_eq_lastSyncTime??)>
+<#if (where_and_eq_lastSyncTime_value??)>
+${prefixName?string('WHERE ', 'AND ')}E."last_sync_time" = :where_and_eq_lastSyncTime_value
+<#else>
+${prefixName?string('WHERE ', 'AND ')}E."last_sync_time" IS NULL
+</#if>
+<#assign prefixName = false>
+</#if>
 <#if (where_and_eq_locus??)>
 <#if (where_and_eq_locus_value??)>
 ${prefixName?string('WHERE ', 'AND ')}E."locus" = :where_and_eq_locus_value
@@ -828,6 +868,14 @@ ${prefixName?string('WHERE ', 'AND ')}(E."org_code" IS NULL OR E."org_code" = ''
 ${prefixName?string('WHERE ', 'AND ')}E."password_" = :where_and_eq_password_value
 <#else>
 ${prefixName?string('WHERE ', 'AND ')}(E."password_" IS NULL OR E."password_" = '')
+</#if>
+<#assign prefixName = false>
+</#if>
+<#if (where_and_eq_password2??)>
+<#if (where_and_eq_password2_value??)>
+${prefixName?string('WHERE ', 'AND ')}E."password2" = :where_and_eq_password2_value
+<#else>
+${prefixName?string('WHERE ', 'AND ')}(E."password2" IS NULL OR E."password2" = '')
 </#if>
 <#assign prefixName = false>
 </#if>
@@ -948,6 +996,22 @@ ${prefixName?string('WHERE ', 'AND ')}(E."source_code" IS NULL OR E."source_code
 ${prefixName?string('WHERE ', 'AND ')}E."state_code" = :where_and_eq_stateCode_value
 <#else>
 ${prefixName?string('WHERE ', 'AND ')}(E."state_code" IS NULL OR E."state_code" = '')
+</#if>
+<#assign prefixName = false>
+</#if>
+<#if (where_and_eq_syncReturnCode??)>
+<#if (where_and_eq_syncReturnCode_value??)>
+${prefixName?string('WHERE ', 'AND ')}E."sync_return_code" = :where_and_eq_syncReturnCode_value
+<#else>
+${prefixName?string('WHERE ', 'AND ')}(E."sync_return_code" IS NULL OR E."sync_return_code" = '')
+</#if>
+<#assign prefixName = false>
+</#if>
+<#if (where_and_eq_syncReturnMessage??)>
+<#if (where_and_eq_syncReturnMessage_value??)>
+${prefixName?string('WHERE ', 'AND ')}E."sync_return_message" = :where_and_eq_syncReturnMessage_value
+<#else>
+${prefixName?string('WHERE ', 'AND ')}(E."sync_return_message" IS NULL OR E."sync_return_message" = '')
 </#if>
 <#assign prefixName = false>
 </#if>
