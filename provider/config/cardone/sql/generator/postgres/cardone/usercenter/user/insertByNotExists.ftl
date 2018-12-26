@@ -42,6 +42,30 @@ ${prefixName?string('  ', ', ')}"city_code"
 ${prefixName?string('  ', ', ')}"company_name"
 <#assign prefixName = false>
 </#if>
+<#if (insert_compatibleDepartmentCode1??) && (insert_compatibleDepartmentCode1_value??)>
+${prefixName?string('  ', ', ')}"compatible_department_code_1"
+<#assign prefixName = false>
+</#if>
+<#if (insert_compatibleDepartmentCode2??) && (insert_compatibleDepartmentCode2_value??)>
+${prefixName?string('  ', ', ')}"compatible_department_code_2"
+<#assign prefixName = false>
+</#if>
+<#if (insert_compatiblePassword1??) && (insert_compatiblePassword1_value??)>
+${prefixName?string('  ', ', ')}"compatible_password_1"
+<#assign prefixName = false>
+</#if>
+<#if (insert_compatiblePassword2??) && (insert_compatiblePassword2_value??)>
+${prefixName?string('  ', ', ')}"compatible_password_2"
+<#assign prefixName = false>
+</#if>
+<#if (insert_compatibleUserCode1??) && (insert_compatibleUserCode1_value??)>
+${prefixName?string('  ', ', ')}"compatible_user_code_1"
+<#assign prefixName = false>
+</#if>
+<#if (insert_compatibleUserCode2??) && (insert_compatibleUserCode2_value??)>
+${prefixName?string('  ', ', ')}"compatible_user_code_2"
+<#assign prefixName = false>
+</#if>
 <#if (insert_contact??) && (insert_contact_value??)>
 ${prefixName?string('  ', ', ')}"contact"
 <#assign prefixName = false>
@@ -168,10 +192,6 @@ ${prefixName?string('  ', ', ')}"org_code"
 </#if>
 <#if (insert_password??) && (insert_password_value??)>
 ${prefixName?string('  ', ', ')}"password_"
-<#assign prefixName = false>
-</#if>
-<#if (insert_password2??) && (insert_password2_value??)>
-${prefixName?string('  ', ', ')}"password2"
 <#assign prefixName = false>
 </#if>
 <#if (insert_passwordSalt??) && (insert_passwordSalt_value??)>
@@ -309,6 +329,30 @@ ${prefixName?string('  ', ', ')}:insert_cityCode_value
 ${prefixName?string('  ', ', ')}:insert_companyName_value
 <#assign prefixName = false>
 </#if>
+<#if (insert_compatibleDepartmentCode1??) && (insert_compatibleDepartmentCode1_value??)>
+${prefixName?string('  ', ', ')}:insert_compatibleDepartmentCode1_value
+<#assign prefixName = false>
+</#if>
+<#if (insert_compatibleDepartmentCode2??) && (insert_compatibleDepartmentCode2_value??)>
+${prefixName?string('  ', ', ')}:insert_compatibleDepartmentCode2_value
+<#assign prefixName = false>
+</#if>
+<#if (insert_compatiblePassword1??) && (insert_compatiblePassword1_value??)>
+${prefixName?string('  ', ', ')}:insert_compatiblePassword1_value
+<#assign prefixName = false>
+</#if>
+<#if (insert_compatiblePassword2??) && (insert_compatiblePassword2_value??)>
+${prefixName?string('  ', ', ')}:insert_compatiblePassword2_value
+<#assign prefixName = false>
+</#if>
+<#if (insert_compatibleUserCode1??) && (insert_compatibleUserCode1_value??)>
+${prefixName?string('  ', ', ')}:insert_compatibleUserCode1_value
+<#assign prefixName = false>
+</#if>
+<#if (insert_compatibleUserCode2??) && (insert_compatibleUserCode2_value??)>
+${prefixName?string('  ', ', ')}:insert_compatibleUserCode2_value
+<#assign prefixName = false>
+</#if>
 <#if (insert_contact??) && (insert_contact_value??)>
 ${prefixName?string('  ', ', ')}:insert_contact_value
 <#assign prefixName = false>
@@ -435,10 +479,6 @@ ${prefixName?string('  ', ', ')}:insert_orgCode_value
 </#if>
 <#if (insert_password??) && (insert_password_value??)>
 ${prefixName?string('  ', ', ')}:insert_password_value
-<#assign prefixName = false>
-</#if>
-<#if (insert_password2??) && (insert_password2_value??)>
-${prefixName?string('  ', ', ')}:insert_password2_value
 <#assign prefixName = false>
 </#if>
 <#if (insert_passwordSalt??) && (insert_passwordSalt_value??)>
@@ -612,6 +652,54 @@ ${prefixName?string('WHERE ', 'AND ')}(E."city_code" IS NULL OR E."city_code" = 
 ${prefixName?string('WHERE ', 'AND ')}E."company_name" = :where_and_eq_companyName_value
 <#else>
 ${prefixName?string('WHERE ', 'AND ')}(E."company_name" IS NULL OR E."company_name" = '')
+</#if>
+<#assign prefixName = false>
+</#if>
+<#if (where_and_eq_compatibleDepartmentCode1??)>
+<#if (where_and_eq_compatibleDepartmentCode1_value??)>
+${prefixName?string('WHERE ', 'AND ')}E."compatible_department_code_1" = :where_and_eq_compatibleDepartmentCode1_value
+<#else>
+${prefixName?string('WHERE ', 'AND ')}(E."compatible_department_code_1" IS NULL OR E."compatible_department_code_1" = '')
+</#if>
+<#assign prefixName = false>
+</#if>
+<#if (where_and_eq_compatibleDepartmentCode2??)>
+<#if (where_and_eq_compatibleDepartmentCode2_value??)>
+${prefixName?string('WHERE ', 'AND ')}E."compatible_department_code_2" = :where_and_eq_compatibleDepartmentCode2_value
+<#else>
+${prefixName?string('WHERE ', 'AND ')}(E."compatible_department_code_2" IS NULL OR E."compatible_department_code_2" = '')
+</#if>
+<#assign prefixName = false>
+</#if>
+<#if (where_and_eq_compatiblePassword1??)>
+<#if (where_and_eq_compatiblePassword1_value??)>
+${prefixName?string('WHERE ', 'AND ')}E."compatible_password_1" = :where_and_eq_compatiblePassword1_value
+<#else>
+${prefixName?string('WHERE ', 'AND ')}(E."compatible_password_1" IS NULL OR E."compatible_password_1" = '')
+</#if>
+<#assign prefixName = false>
+</#if>
+<#if (where_and_eq_compatiblePassword2??)>
+<#if (where_and_eq_compatiblePassword2_value??)>
+${prefixName?string('WHERE ', 'AND ')}E."compatible_password_2" = :where_and_eq_compatiblePassword2_value
+<#else>
+${prefixName?string('WHERE ', 'AND ')}(E."compatible_password_2" IS NULL OR E."compatible_password_2" = '')
+</#if>
+<#assign prefixName = false>
+</#if>
+<#if (where_and_eq_compatibleUserCode1??)>
+<#if (where_and_eq_compatibleUserCode1_value??)>
+${prefixName?string('WHERE ', 'AND ')}E."compatible_user_code_1" = :where_and_eq_compatibleUserCode1_value
+<#else>
+${prefixName?string('WHERE ', 'AND ')}(E."compatible_user_code_1" IS NULL OR E."compatible_user_code_1" = '')
+</#if>
+<#assign prefixName = false>
+</#if>
+<#if (where_and_eq_compatibleUserCode2??)>
+<#if (where_and_eq_compatibleUserCode2_value??)>
+${prefixName?string('WHERE ', 'AND ')}E."compatible_user_code_2" = :where_and_eq_compatibleUserCode2_value
+<#else>
+${prefixName?string('WHERE ', 'AND ')}(E."compatible_user_code_2" IS NULL OR E."compatible_user_code_2" = '')
 </#if>
 <#assign prefixName = false>
 </#if>
@@ -868,14 +956,6 @@ ${prefixName?string('WHERE ', 'AND ')}(E."org_code" IS NULL OR E."org_code" = ''
 ${prefixName?string('WHERE ', 'AND ')}E."password_" = :where_and_eq_password_value
 <#else>
 ${prefixName?string('WHERE ', 'AND ')}(E."password_" IS NULL OR E."password_" = '')
-</#if>
-<#assign prefixName = false>
-</#if>
-<#if (where_and_eq_password2??)>
-<#if (where_and_eq_password2_value??)>
-${prefixName?string('WHERE ', 'AND ')}E."password2" = :where_and_eq_password2_value
-<#else>
-${prefixName?string('WHERE ', 'AND ')}(E."password2" IS NULL OR E."password2" = '')
 </#if>
 <#assign prefixName = false>
 </#if>

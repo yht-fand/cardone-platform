@@ -55,6 +55,10 @@ area_code|YES|String(255)|地区编号
 batch_no|YES|String(255)|批次编号
 begin_date|YES|Date(29)|开始日期
 city_code|YES|String(255)|城市编号
+compatible_department_code_1|YES|String(255)|兼容部门编号1
+compatible_department_code_2|YES|String(255)|兼容部门编号2
+compatible_parent_code_1|YES|String(255)|兼容父级编号1
+compatible_parent_code_2|YES|String(255)|兼容父级编号2
 created_by_code|YES|String(255)|创建人编号
 created_by_id|YES|String(255)|创建人标识
 created_date|YES|Date(29)|创建日期
@@ -68,7 +72,7 @@ json_data|YES|Object(2147483647)|json数据
 last_modified_by_code|YES|String(255)|最后修改人编号
 last_modified_by_id|YES|String(255)|最后修改人标识
 last_modified_date|YES|Date(26)|最后修改日期
-last_sync_time|YES|Date(29)|
+last_sync_time|YES|Long(19)|
 name|NO|String(255)|名称
 order_by_|YES|Long(19)|排序
 org_code|YES|String(255)|组织编号
@@ -89,7 +93,6 @@ sync_return_code|YES|String(128)|
 sync_return_message|YES|String(512)|
 system_info_code|YES|String(255)|系统信息编号
 third_party_code|YES|String(255)|第三方编号
-type_code|YES|Short(5)|
 version_|YES|Integer(10)|版本
 
 ##### 用户与部门（c1_user_department）
@@ -210,6 +213,12 @@ birthday|YES|Date(29)|出生日期
 call_name|YES|String(255)|昵称
 city_code|YES|String(255)|城市编号
 company_name|YES|String(255)|工作单位
+compatible_department_code_1|YES|String(255)|兼容部门编号1
+compatible_department_code_2|YES|String(255)|兼容部门编号2
+compatible_password_1|YES|String(255)|兼容密码1
+compatible_password_2|YES|String(255)|兼容密码2
+compatible_user_code_1|YES|String(255)|兼容用户编号1
+compatible_user_code_2|YES|String(255)|兼容用户编号2
 contact|YES|String(255)|联系人
 country_code|YES|String(255)|国家编号(数据字典)
 created_by_code|YES|String(255)|创建人编号
@@ -233,7 +242,7 @@ last_modified_by_code|YES|String(255)|最后修改人编号
 last_modified_by_id|YES|String(255)|最后修改人标识
 last_modified_date|YES|Date(26)|最后修改日期
 last_name|YES|String(255)|姓氏
-last_sync_time|YES|Date(29)|
+last_sync_time|YES|Long(19)|
 locus|YES|String(255)|现居住地
 marry_state_code|YES|String(255)|婚姻状态编号(数据字典)
 mobile_phone|YES|String(255)|手机
@@ -242,7 +251,6 @@ name_pinyin|YES|String(255)|拼音
 order_by_|YES|Long(19)|排序
 org_code|YES|String(255)|组织编号
 password_|NO|String(255)|密码
-password2|YES|String(128)|
 password_salt|YES|String(255)|密码盐
 personal_code|YES|String(255)|个人编号
 personal_id|YES|String(255)|个人标识

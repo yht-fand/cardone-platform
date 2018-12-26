@@ -20,6 +20,22 @@ ${prefixName?string('  ', ', ')}"begin_date"
 ${prefixName?string('  ', ', ')}"city_code"
 <#assign prefixName = false>
 </#if>
+<#if (select_compatibleDepartmentCode1??)>
+${prefixName?string('  ', ', ')}"compatible_department_code_1"
+<#assign prefixName = false>
+</#if>
+<#if (select_compatibleDepartmentCode2??)>
+${prefixName?string('  ', ', ')}"compatible_department_code_2"
+<#assign prefixName = false>
+</#if>
+<#if (select_compatibleParentCode1??)>
+${prefixName?string('  ', ', ')}"compatible_parent_code_1"
+<#assign prefixName = false>
+</#if>
+<#if (select_compatibleParentCode2??)>
+${prefixName?string('  ', ', ')}"compatible_parent_code_2"
+<#assign prefixName = false>
+</#if>
 <#if (select_createdByCode??)>
 ${prefixName?string('  ', ', ')}"created_by_code"
 <#assign prefixName = false>
@@ -156,10 +172,6 @@ ${prefixName?string('  ', ', ')}"system_info_code"
 ${prefixName?string('  ', ', ')}"third_party_code"
 <#assign prefixName = false>
 </#if>
-<#if (select_typeCode??)>
-${prefixName?string('  ', ', ')}"type_code"
-<#assign prefixName = false>
-</#if>
 <#if (select_version??)>
 ${prefixName?string('  ', ', ')}"version_"
 <#assign prefixName = false>
@@ -188,6 +200,22 @@ ${prefixName?string('ORDER BY ', ', ')}"begin_date" ${order_by_beginDate_value!}
 </#if>
 <#if (order_by_cityCode??)>
 ${prefixName?string('ORDER BY ', ', ')}"city_code" ${order_by_cityCode_value!}
+<#assign prefixName = false>
+</#if>
+<#if (order_by_compatibleDepartmentCode1??)>
+${prefixName?string('ORDER BY ', ', ')}"compatible_department_code_1" ${order_by_compatibleDepartmentCode1_value!}
+<#assign prefixName = false>
+</#if>
+<#if (order_by_compatibleDepartmentCode2??)>
+${prefixName?string('ORDER BY ', ', ')}"compatible_department_code_2" ${order_by_compatibleDepartmentCode2_value!}
+<#assign prefixName = false>
+</#if>
+<#if (order_by_compatibleParentCode1??)>
+${prefixName?string('ORDER BY ', ', ')}"compatible_parent_code_1" ${order_by_compatibleParentCode1_value!}
+<#assign prefixName = false>
+</#if>
+<#if (order_by_compatibleParentCode2??)>
+${prefixName?string('ORDER BY ', ', ')}"compatible_parent_code_2" ${order_by_compatibleParentCode2_value!}
 <#assign prefixName = false>
 </#if>
 <#if (order_by_createdByCode??)>
@@ -324,10 +352,6 @@ ${prefixName?string('ORDER BY ', ', ')}"system_info_code" ${order_by_systemInfoC
 </#if>
 <#if (order_by_thirdPartyCode??)>
 ${prefixName?string('ORDER BY ', ', ')}"third_party_code" ${order_by_thirdPartyCode_value!}
-<#assign prefixName = false>
-</#if>
-<#if (order_by_typeCode??)>
-${prefixName?string('ORDER BY ', ', ')}"type_code" ${order_by_typeCode_value!}
 <#assign prefixName = false>
 </#if>
 <#if (order_by_version??)>

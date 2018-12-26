@@ -46,6 +46,34 @@ public class Department implements java.io.Serializable {
     protected String cityCode;
 
     /**
+     * 兼容部门编号1
+     */
+    @lombok.Getter
+    @lombok.Setter
+    protected String compatibleDepartmentCode1;
+
+    /**
+     * 兼容部门编号2
+     */
+    @lombok.Getter
+    @lombok.Setter
+    protected String compatibleDepartmentCode2;
+
+    /**
+     * 兼容父级编号1
+     */
+    @lombok.Getter
+    @lombok.Setter
+    protected String compatibleParentCode1;
+
+    /**
+     * 兼容父级编号2
+     */
+    @lombok.Getter
+    @lombok.Setter
+    protected String compatibleParentCode2;
+
+    /**
      * 创建人编号
      */
     @lombok.Getter
@@ -141,7 +169,7 @@ public class Department implements java.io.Serializable {
      */
     @lombok.Getter
     @lombok.Setter
-    protected Date lastSyncTime;
+    protected Long lastSyncTime;
 
     /**
      * 名称
@@ -282,13 +310,6 @@ public class Department implements java.io.Serializable {
     @lombok.Getter
     @lombok.Setter
     protected String thirdPartyCode;
-
-    /**
-     * 
-     */
-    @lombok.Getter
-    @lombok.Setter
-    protected Short typeCode;
 
     /**
      * 版本

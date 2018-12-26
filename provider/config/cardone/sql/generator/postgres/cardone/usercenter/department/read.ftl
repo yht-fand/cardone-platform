@@ -15,6 +15,18 @@ SELECT
 <#case "cityCode">
 "city_code"
 <#break>
+<#case "compatibleDepartmentCode1">
+"compatible_department_code_1"
+<#break>
+<#case "compatibleDepartmentCode2">
+"compatible_department_code_2"
+<#break>
+<#case "compatibleParentCode1">
+"compatible_parent_code_1"
+<#break>
+<#case "compatibleParentCode2">
+"compatible_parent_code_2"
+<#break>
 <#case "createdByCode">
 "created_by_code"
 <#break>
@@ -116,9 +128,6 @@ SELECT
 <#break>
 <#case "thirdPartyCode">
 "third_party_code"
-<#break>
-<#case "typeCode">
-"type_code"
 <#break>
 <#case "version">
 "version_"

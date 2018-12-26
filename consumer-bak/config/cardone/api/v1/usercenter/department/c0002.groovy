@@ -14,6 +14,10 @@ class c0002 implements java.io.Serializable {
 		newInput?.batchNo = input?.batchNo
 		newInput?.beginDate = input?.beginDate
 		newInput?.cityCode = input?.cityCode
+		newInput?.compatibleDepartmentCode1 = input?.compatibleDepartmentCode1
+		newInput?.compatibleDepartmentCode2 = input?.compatibleDepartmentCode2
+		newInput?.compatibleParentCode1 = input?.compatibleParentCode1
+		newInput?.compatibleParentCode2 = input?.compatibleParentCode2
 		newInput?.createdByCode = input?.createdByCode
 		newInput?.createdById = input?.createdById
 		newInput?.createdDate = input?.createdDate
@@ -48,7 +52,6 @@ class c0002 implements java.io.Serializable {
 		newInput?.syncReturnMessage = input?.syncReturnMessage
 		newInput?.systemInfoCode = input?.systemInfoCode
 		newInput?.thirdPartyCode = input?.thirdPartyCode
-		newInput?.typeCode = input?.typeCode
 		newInput?.version = input?.version
 
         newInput.flagCode = StringUtils.defaultIfBlank(input.flagCode, "input")

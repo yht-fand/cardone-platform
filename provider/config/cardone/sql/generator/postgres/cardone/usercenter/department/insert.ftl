@@ -21,6 +21,22 @@ ${prefixName?string('  ', ', ')}"begin_date"
 ${prefixName?string('  ', ', ')}"city_code"
 <#assign prefixName = false>
 </#if>
+<#if (insert_compatibleDepartmentCode1??) && (insert_compatibleDepartmentCode1_value??)>
+${prefixName?string('  ', ', ')}"compatible_department_code_1"
+<#assign prefixName = false>
+</#if>
+<#if (insert_compatibleDepartmentCode2??) && (insert_compatibleDepartmentCode2_value??)>
+${prefixName?string('  ', ', ')}"compatible_department_code_2"
+<#assign prefixName = false>
+</#if>
+<#if (insert_compatibleParentCode1??) && (insert_compatibleParentCode1_value??)>
+${prefixName?string('  ', ', ')}"compatible_parent_code_1"
+<#assign prefixName = false>
+</#if>
+<#if (insert_compatibleParentCode2??) && (insert_compatibleParentCode2_value??)>
+${prefixName?string('  ', ', ')}"compatible_parent_code_2"
+<#assign prefixName = false>
+</#if>
 <#if (insert_createdByCode??) && (insert_createdByCode_value??)>
 ${prefixName?string('  ', ', ')}"created_by_code"
 <#assign prefixName = false>
@@ -157,10 +173,6 @@ ${prefixName?string('  ', ', ')}"system_info_code"
 ${prefixName?string('  ', ', ')}"third_party_code"
 <#assign prefixName = false>
 </#if>
-<#if (insert_typeCode??) && (insert_typeCode_value??)>
-${prefixName?string('  ', ', ')}"type_code"
-<#assign prefixName = false>
-</#if>
 <#if (insert_version??) && (insert_version_value??)>
 ${prefixName?string('  ', ', ')}"version_"
 <#assign prefixName = false>
@@ -186,6 +198,22 @@ ${prefixName?string('  ', ', ')}:insert_beginDate_value
 </#if>
 <#if (insert_cityCode??) && (insert_cityCode_value??)>
 ${prefixName?string('  ', ', ')}:insert_cityCode_value
+<#assign prefixName = false>
+</#if>
+<#if (insert_compatibleDepartmentCode1??) && (insert_compatibleDepartmentCode1_value??)>
+${prefixName?string('  ', ', ')}:insert_compatibleDepartmentCode1_value
+<#assign prefixName = false>
+</#if>
+<#if (insert_compatibleDepartmentCode2??) && (insert_compatibleDepartmentCode2_value??)>
+${prefixName?string('  ', ', ')}:insert_compatibleDepartmentCode2_value
+<#assign prefixName = false>
+</#if>
+<#if (insert_compatibleParentCode1??) && (insert_compatibleParentCode1_value??)>
+${prefixName?string('  ', ', ')}:insert_compatibleParentCode1_value
+<#assign prefixName = false>
+</#if>
+<#if (insert_compatibleParentCode2??) && (insert_compatibleParentCode2_value??)>
+${prefixName?string('  ', ', ')}:insert_compatibleParentCode2_value
 <#assign prefixName = false>
 </#if>
 <#if (insert_createdByCode??) && (insert_createdByCode_value??)>
@@ -322,10 +350,6 @@ ${prefixName?string('  ', ', ')}:insert_systemInfoCode_value
 </#if>
 <#if (insert_thirdPartyCode??) && (insert_thirdPartyCode_value??)>
 ${prefixName?string('  ', ', ')}:insert_thirdPartyCode_value
-<#assign prefixName = false>
-</#if>
-<#if (insert_typeCode??) && (insert_typeCode_value??)>
-${prefixName?string('  ', ', ')}:insert_typeCode_value
 <#assign prefixName = false>
 </#if>
 <#if (insert_version??) && (insert_version_value??)>

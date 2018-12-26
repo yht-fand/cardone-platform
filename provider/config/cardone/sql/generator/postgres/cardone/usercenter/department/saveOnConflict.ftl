@@ -21,6 +21,22 @@ ${prefixName?string('', ', ')}"begin_date"
 ${prefixName?string('', ', ')}"city_code"
 <#assign prefixName = false>
 </#if>
+<#if (index_compatibleDepartmentCode1??)>
+${prefixName?string('', ', ')}"compatible_department_code_1"
+<#assign prefixName = false>
+</#if>
+<#if (index_compatibleDepartmentCode2??)>
+${prefixName?string('', ', ')}"compatible_department_code_2"
+<#assign prefixName = false>
+</#if>
+<#if (index_compatibleParentCode1??)>
+${prefixName?string('', ', ')}"compatible_parent_code_1"
+<#assign prefixName = false>
+</#if>
+<#if (index_compatibleParentCode2??)>
+${prefixName?string('', ', ')}"compatible_parent_code_2"
+<#assign prefixName = false>
+</#if>
 <#if (index_createdByCode??)>
 ${prefixName?string('', ', ')}"created_by_code"
 <#assign prefixName = false>
@@ -157,10 +173,6 @@ ${prefixName?string('', ', ')}"system_info_code"
 ${prefixName?string('', ', ')}"third_party_code"
 <#assign prefixName = false>
 </#if>
-<#if (index_typeCode??)>
-${prefixName?string('', ', ')}"type_code"
-<#assign prefixName = false>
-</#if>
 <#if (index_version??)>
 ${prefixName?string('', ', ')}"version_"
 <#assign prefixName = false>
@@ -185,6 +197,22 @@ ${prefixName?string('', ', ')}"begin_date" = :update_beginDate_value
 </#if>
 <#if (update_cityCode??)>
 ${prefixName?string('', ', ')}"city_code" = :update_cityCode_value
+<#assign prefixName = false>
+</#if>
+<#if (update_compatibleDepartmentCode1??)>
+${prefixName?string('', ', ')}"compatible_department_code_1" = :update_compatibleDepartmentCode1_value
+<#assign prefixName = false>
+</#if>
+<#if (update_compatibleDepartmentCode2??)>
+${prefixName?string('', ', ')}"compatible_department_code_2" = :update_compatibleDepartmentCode2_value
+<#assign prefixName = false>
+</#if>
+<#if (update_compatibleParentCode1??)>
+${prefixName?string('', ', ')}"compatible_parent_code_1" = :update_compatibleParentCode1_value
+<#assign prefixName = false>
+</#if>
+<#if (update_compatibleParentCode2??)>
+${prefixName?string('', ', ')}"compatible_parent_code_2" = :update_compatibleParentCode2_value
 <#assign prefixName = false>
 </#if>
 <#if (update_createdByCode??)>
@@ -321,10 +349,6 @@ ${prefixName?string('', ', ')}"system_info_code" = :update_systemInfoCode_value
 </#if>
 <#if (update_thirdPartyCode??)>
 ${prefixName?string('', ', ')}"third_party_code" = :update_thirdPartyCode_value
-<#assign prefixName = false>
-</#if>
-<#if (update_typeCode??)>
-${prefixName?string('', ', ')}"type_code" = :update_typeCode_value
 <#assign prefixName = false>
 </#if>
 <#if (update_version??)>

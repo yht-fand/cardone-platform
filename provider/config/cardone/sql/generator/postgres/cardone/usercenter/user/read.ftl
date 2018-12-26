@@ -30,6 +30,24 @@ SELECT
 <#case "companyName">
 "company_name"
 <#break>
+<#case "compatibleDepartmentCode1">
+"compatible_department_code_1"
+<#break>
+<#case "compatibleDepartmentCode2">
+"compatible_department_code_2"
+<#break>
+<#case "compatiblePassword1">
+"compatible_password_1"
+<#break>
+<#case "compatiblePassword2">
+"compatible_password_2"
+<#break>
+<#case "compatibleUserCode1">
+"compatible_user_code_1"
+<#break>
+<#case "compatibleUserCode2">
+"compatible_user_code_2"
+<#break>
 <#case "contact">
 "contact"
 <#break>
@@ -125,9 +143,6 @@ SELECT
 <#break>
 <#case "password">
 "password_"
-<#break>
-<#case "password2">
-"password2"
 <#break>
 <#case "passwordSalt">
 "password_salt"

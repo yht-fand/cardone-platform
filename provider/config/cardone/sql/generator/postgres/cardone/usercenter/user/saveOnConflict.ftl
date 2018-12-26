@@ -41,6 +41,30 @@ ${prefixName?string('', ', ')}"city_code"
 ${prefixName?string('', ', ')}"company_name"
 <#assign prefixName = false>
 </#if>
+<#if (index_compatibleDepartmentCode1??)>
+${prefixName?string('', ', ')}"compatible_department_code_1"
+<#assign prefixName = false>
+</#if>
+<#if (index_compatibleDepartmentCode2??)>
+${prefixName?string('', ', ')}"compatible_department_code_2"
+<#assign prefixName = false>
+</#if>
+<#if (index_compatiblePassword1??)>
+${prefixName?string('', ', ')}"compatible_password_1"
+<#assign prefixName = false>
+</#if>
+<#if (index_compatiblePassword2??)>
+${prefixName?string('', ', ')}"compatible_password_2"
+<#assign prefixName = false>
+</#if>
+<#if (index_compatibleUserCode1??)>
+${prefixName?string('', ', ')}"compatible_user_code_1"
+<#assign prefixName = false>
+</#if>
+<#if (index_compatibleUserCode2??)>
+${prefixName?string('', ', ')}"compatible_user_code_2"
+<#assign prefixName = false>
+</#if>
 <#if (index_contact??)>
 ${prefixName?string('', ', ')}"contact"
 <#assign prefixName = false>
@@ -167,10 +191,6 @@ ${prefixName?string('', ', ')}"org_code"
 </#if>
 <#if (index_password??)>
 ${prefixName?string('', ', ')}"password_"
-<#assign prefixName = false>
-</#if>
-<#if (index_password2??)>
-${prefixName?string('', ', ')}"password2"
 <#assign prefixName = false>
 </#if>
 <#if (index_passwordSalt??)>
@@ -307,6 +327,30 @@ ${prefixName?string('', ', ')}"city_code" = :update_cityCode_value
 ${prefixName?string('', ', ')}"company_name" = :update_companyName_value
 <#assign prefixName = false>
 </#if>
+<#if (update_compatibleDepartmentCode1??)>
+${prefixName?string('', ', ')}"compatible_department_code_1" = :update_compatibleDepartmentCode1_value
+<#assign prefixName = false>
+</#if>
+<#if (update_compatibleDepartmentCode2??)>
+${prefixName?string('', ', ')}"compatible_department_code_2" = :update_compatibleDepartmentCode2_value
+<#assign prefixName = false>
+</#if>
+<#if (update_compatiblePassword1??)>
+${prefixName?string('', ', ')}"compatible_password_1" = :update_compatiblePassword1_value
+<#assign prefixName = false>
+</#if>
+<#if (update_compatiblePassword2??)>
+${prefixName?string('', ', ')}"compatible_password_2" = :update_compatiblePassword2_value
+<#assign prefixName = false>
+</#if>
+<#if (update_compatibleUserCode1??)>
+${prefixName?string('', ', ')}"compatible_user_code_1" = :update_compatibleUserCode1_value
+<#assign prefixName = false>
+</#if>
+<#if (update_compatibleUserCode2??)>
+${prefixName?string('', ', ')}"compatible_user_code_2" = :update_compatibleUserCode2_value
+<#assign prefixName = false>
+</#if>
 <#if (update_contact??)>
 ${prefixName?string('', ', ')}"contact" = :update_contact_value
 <#assign prefixName = false>
@@ -433,10 +477,6 @@ ${prefixName?string('', ', ')}"org_code" = :update_orgCode_value
 </#if>
 <#if (update_password??)>
 ${prefixName?string('', ', ')}"password_" = :update_password_value
-<#assign prefixName = false>
-</#if>
-<#if (update_password2??)>
-${prefixName?string('', ', ')}"password2" = :update_password2_value
 <#assign prefixName = false>
 </#if>
 <#if (update_passwordSalt??)>

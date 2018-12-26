@@ -40,6 +40,30 @@ ${prefixName?string('SET ', ', ')}"city_code" = :update_cityCode_value
 ${prefixName?string('SET ', ', ')}"company_name" = :update_companyName_value
 <#assign prefixName = false>
 </#if>
+<#if (update_compatibleDepartmentCode1??)>
+${prefixName?string('SET ', ', ')}"compatible_department_code_1" = :update_compatibleDepartmentCode1_value
+<#assign prefixName = false>
+</#if>
+<#if (update_compatibleDepartmentCode2??)>
+${prefixName?string('SET ', ', ')}"compatible_department_code_2" = :update_compatibleDepartmentCode2_value
+<#assign prefixName = false>
+</#if>
+<#if (update_compatiblePassword1??)>
+${prefixName?string('SET ', ', ')}"compatible_password_1" = :update_compatiblePassword1_value
+<#assign prefixName = false>
+</#if>
+<#if (update_compatiblePassword2??)>
+${prefixName?string('SET ', ', ')}"compatible_password_2" = :update_compatiblePassword2_value
+<#assign prefixName = false>
+</#if>
+<#if (update_compatibleUserCode1??)>
+${prefixName?string('SET ', ', ')}"compatible_user_code_1" = :update_compatibleUserCode1_value
+<#assign prefixName = false>
+</#if>
+<#if (update_compatibleUserCode2??)>
+${prefixName?string('SET ', ', ')}"compatible_user_code_2" = :update_compatibleUserCode2_value
+<#assign prefixName = false>
+</#if>
 <#if (update_contact??)>
 ${prefixName?string('SET ', ', ')}"contact" = :update_contact_value
 <#assign prefixName = false>
@@ -166,10 +190,6 @@ ${prefixName?string('SET ', ', ')}"org_code" = :update_orgCode_value
 </#if>
 <#if (update_password??)>
 ${prefixName?string('SET ', ', ')}"password_" = :update_password_value
-<#assign prefixName = false>
-</#if>
-<#if (update_password2??)>
-${prefixName?string('SET ', ', ')}"password2" = :update_password2_value
 <#assign prefixName = false>
 </#if>
 <#if (update_passwordSalt??)>

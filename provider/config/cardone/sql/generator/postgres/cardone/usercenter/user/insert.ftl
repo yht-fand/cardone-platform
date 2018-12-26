@@ -41,6 +41,30 @@ ${prefixName?string('  ', ', ')}"city_code"
 ${prefixName?string('  ', ', ')}"company_name"
 <#assign prefixName = false>
 </#if>
+<#if (insert_compatibleDepartmentCode1??) && (insert_compatibleDepartmentCode1_value??)>
+${prefixName?string('  ', ', ')}"compatible_department_code_1"
+<#assign prefixName = false>
+</#if>
+<#if (insert_compatibleDepartmentCode2??) && (insert_compatibleDepartmentCode2_value??)>
+${prefixName?string('  ', ', ')}"compatible_department_code_2"
+<#assign prefixName = false>
+</#if>
+<#if (insert_compatiblePassword1??) && (insert_compatiblePassword1_value??)>
+${prefixName?string('  ', ', ')}"compatible_password_1"
+<#assign prefixName = false>
+</#if>
+<#if (insert_compatiblePassword2??) && (insert_compatiblePassword2_value??)>
+${prefixName?string('  ', ', ')}"compatible_password_2"
+<#assign prefixName = false>
+</#if>
+<#if (insert_compatibleUserCode1??) && (insert_compatibleUserCode1_value??)>
+${prefixName?string('  ', ', ')}"compatible_user_code_1"
+<#assign prefixName = false>
+</#if>
+<#if (insert_compatibleUserCode2??) && (insert_compatibleUserCode2_value??)>
+${prefixName?string('  ', ', ')}"compatible_user_code_2"
+<#assign prefixName = false>
+</#if>
 <#if (insert_contact??) && (insert_contact_value??)>
 ${prefixName?string('  ', ', ')}"contact"
 <#assign prefixName = false>
@@ -167,10 +191,6 @@ ${prefixName?string('  ', ', ')}"org_code"
 </#if>
 <#if (insert_password??) && (insert_password_value??)>
 ${prefixName?string('  ', ', ')}"password_"
-<#assign prefixName = false>
-</#if>
-<#if (insert_password2??) && (insert_password2_value??)>
-${prefixName?string('  ', ', ')}"password2"
 <#assign prefixName = false>
 </#if>
 <#if (insert_passwordSalt??) && (insert_passwordSalt_value??)>
@@ -308,6 +328,30 @@ ${prefixName?string('  ', ', ')}:insert_cityCode_value
 ${prefixName?string('  ', ', ')}:insert_companyName_value
 <#assign prefixName = false>
 </#if>
+<#if (insert_compatibleDepartmentCode1??) && (insert_compatibleDepartmentCode1_value??)>
+${prefixName?string('  ', ', ')}:insert_compatibleDepartmentCode1_value
+<#assign prefixName = false>
+</#if>
+<#if (insert_compatibleDepartmentCode2??) && (insert_compatibleDepartmentCode2_value??)>
+${prefixName?string('  ', ', ')}:insert_compatibleDepartmentCode2_value
+<#assign prefixName = false>
+</#if>
+<#if (insert_compatiblePassword1??) && (insert_compatiblePassword1_value??)>
+${prefixName?string('  ', ', ')}:insert_compatiblePassword1_value
+<#assign prefixName = false>
+</#if>
+<#if (insert_compatiblePassword2??) && (insert_compatiblePassword2_value??)>
+${prefixName?string('  ', ', ')}:insert_compatiblePassword2_value
+<#assign prefixName = false>
+</#if>
+<#if (insert_compatibleUserCode1??) && (insert_compatibleUserCode1_value??)>
+${prefixName?string('  ', ', ')}:insert_compatibleUserCode1_value
+<#assign prefixName = false>
+</#if>
+<#if (insert_compatibleUserCode2??) && (insert_compatibleUserCode2_value??)>
+${prefixName?string('  ', ', ')}:insert_compatibleUserCode2_value
+<#assign prefixName = false>
+</#if>
 <#if (insert_contact??) && (insert_contact_value??)>
 ${prefixName?string('  ', ', ')}:insert_contact_value
 <#assign prefixName = false>
@@ -434,10 +478,6 @@ ${prefixName?string('  ', ', ')}:insert_orgCode_value
 </#if>
 <#if (insert_password??) && (insert_password_value??)>
 ${prefixName?string('  ', ', ')}:insert_password_value
-<#assign prefixName = false>
-</#if>
-<#if (insert_password2??) && (insert_password2_value??)>
-${prefixName?string('  ', ', ')}:insert_password2_value
 <#assign prefixName = false>
 </#if>
 <#if (insert_passwordSalt??) && (insert_passwordSalt_value??)>

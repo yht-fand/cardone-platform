@@ -79,6 +79,54 @@ ${prefixName?string('WHERE ', 'AND ')}("company_name" IS NULL OR "company_name" 
 </#if>
 <#assign prefixName = false>
 </#if>
+<#if (where_and_eq_compatibleDepartmentCode1??)>
+<#if (where_and_eq_compatibleDepartmentCode1_value??)>
+${prefixName?string('WHERE ', 'AND ')}"compatible_department_code_1" = :where_and_eq_compatibleDepartmentCode1_value
+<#else>
+${prefixName?string('WHERE ', 'AND ')}("compatible_department_code_1" IS NULL OR "compatible_department_code_1" = '')
+</#if>
+<#assign prefixName = false>
+</#if>
+<#if (where_and_eq_compatibleDepartmentCode2??)>
+<#if (where_and_eq_compatibleDepartmentCode2_value??)>
+${prefixName?string('WHERE ', 'AND ')}"compatible_department_code_2" = :where_and_eq_compatibleDepartmentCode2_value
+<#else>
+${prefixName?string('WHERE ', 'AND ')}("compatible_department_code_2" IS NULL OR "compatible_department_code_2" = '')
+</#if>
+<#assign prefixName = false>
+</#if>
+<#if (where_and_eq_compatiblePassword1??)>
+<#if (where_and_eq_compatiblePassword1_value??)>
+${prefixName?string('WHERE ', 'AND ')}"compatible_password_1" = :where_and_eq_compatiblePassword1_value
+<#else>
+${prefixName?string('WHERE ', 'AND ')}("compatible_password_1" IS NULL OR "compatible_password_1" = '')
+</#if>
+<#assign prefixName = false>
+</#if>
+<#if (where_and_eq_compatiblePassword2??)>
+<#if (where_and_eq_compatiblePassword2_value??)>
+${prefixName?string('WHERE ', 'AND ')}"compatible_password_2" = :where_and_eq_compatiblePassword2_value
+<#else>
+${prefixName?string('WHERE ', 'AND ')}("compatible_password_2" IS NULL OR "compatible_password_2" = '')
+</#if>
+<#assign prefixName = false>
+</#if>
+<#if (where_and_eq_compatibleUserCode1??)>
+<#if (where_and_eq_compatibleUserCode1_value??)>
+${prefixName?string('WHERE ', 'AND ')}"compatible_user_code_1" = :where_and_eq_compatibleUserCode1_value
+<#else>
+${prefixName?string('WHERE ', 'AND ')}("compatible_user_code_1" IS NULL OR "compatible_user_code_1" = '')
+</#if>
+<#assign prefixName = false>
+</#if>
+<#if (where_and_eq_compatibleUserCode2??)>
+<#if (where_and_eq_compatibleUserCode2_value??)>
+${prefixName?string('WHERE ', 'AND ')}"compatible_user_code_2" = :where_and_eq_compatibleUserCode2_value
+<#else>
+${prefixName?string('WHERE ', 'AND ')}("compatible_user_code_2" IS NULL OR "compatible_user_code_2" = '')
+</#if>
+<#assign prefixName = false>
+</#if>
 <#if (where_and_eq_contact??)>
 <#if (where_and_eq_contact_value??)>
 ${prefixName?string('WHERE ', 'AND ')}"contact" = :where_and_eq_contact_value
@@ -332,14 +380,6 @@ ${prefixName?string('WHERE ', 'AND ')}("org_code" IS NULL OR "org_code" = '')
 ${prefixName?string('WHERE ', 'AND ')}"password_" = :where_and_eq_password_value
 <#else>
 ${prefixName?string('WHERE ', 'AND ')}("password_" IS NULL OR "password_" = '')
-</#if>
-<#assign prefixName = false>
-</#if>
-<#if (where_and_eq_password2??)>
-<#if (where_and_eq_password2_value??)>
-${prefixName?string('WHERE ', 'AND ')}"password2" = :where_and_eq_password2_value
-<#else>
-${prefixName?string('WHERE ', 'AND ')}("password2" IS NULL OR "password2" = '')
 </#if>
 <#assign prefixName = false>
 </#if>

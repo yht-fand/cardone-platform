@@ -40,6 +40,30 @@ ${prefixName?string('  ', ', ')}"city_code"
 ${prefixName?string('  ', ', ')}"company_name"
 <#assign prefixName = false>
 </#if>
+<#if (select_compatibleDepartmentCode1??)>
+${prefixName?string('  ', ', ')}"compatible_department_code_1"
+<#assign prefixName = false>
+</#if>
+<#if (select_compatibleDepartmentCode2??)>
+${prefixName?string('  ', ', ')}"compatible_department_code_2"
+<#assign prefixName = false>
+</#if>
+<#if (select_compatiblePassword1??)>
+${prefixName?string('  ', ', ')}"compatible_password_1"
+<#assign prefixName = false>
+</#if>
+<#if (select_compatiblePassword2??)>
+${prefixName?string('  ', ', ')}"compatible_password_2"
+<#assign prefixName = false>
+</#if>
+<#if (select_compatibleUserCode1??)>
+${prefixName?string('  ', ', ')}"compatible_user_code_1"
+<#assign prefixName = false>
+</#if>
+<#if (select_compatibleUserCode2??)>
+${prefixName?string('  ', ', ')}"compatible_user_code_2"
+<#assign prefixName = false>
+</#if>
 <#if (select_contact??)>
 ${prefixName?string('  ', ', ')}"contact"
 <#assign prefixName = false>
@@ -166,10 +190,6 @@ ${prefixName?string('  ', ', ')}"org_code"
 </#if>
 <#if (select_password??)>
 ${prefixName?string('  ', ', ')}"password_"
-<#assign prefixName = false>
-</#if>
-<#if (select_password2??)>
-${prefixName?string('  ', ', ')}"password2"
 <#assign prefixName = false>
 </#if>
 <#if (select_passwordSalt??)>
@@ -310,6 +330,30 @@ ${prefixName?string('ORDER BY ', ', ')}"city_code" ${order_by_cityCode_value!}
 ${prefixName?string('ORDER BY ', ', ')}"company_name" ${order_by_companyName_value!}
 <#assign prefixName = false>
 </#if>
+<#if (order_by_compatibleDepartmentCode1??)>
+${prefixName?string('ORDER BY ', ', ')}"compatible_department_code_1" ${order_by_compatibleDepartmentCode1_value!}
+<#assign prefixName = false>
+</#if>
+<#if (order_by_compatibleDepartmentCode2??)>
+${prefixName?string('ORDER BY ', ', ')}"compatible_department_code_2" ${order_by_compatibleDepartmentCode2_value!}
+<#assign prefixName = false>
+</#if>
+<#if (order_by_compatiblePassword1??)>
+${prefixName?string('ORDER BY ', ', ')}"compatible_password_1" ${order_by_compatiblePassword1_value!}
+<#assign prefixName = false>
+</#if>
+<#if (order_by_compatiblePassword2??)>
+${prefixName?string('ORDER BY ', ', ')}"compatible_password_2" ${order_by_compatiblePassword2_value!}
+<#assign prefixName = false>
+</#if>
+<#if (order_by_compatibleUserCode1??)>
+${prefixName?string('ORDER BY ', ', ')}"compatible_user_code_1" ${order_by_compatibleUserCode1_value!}
+<#assign prefixName = false>
+</#if>
+<#if (order_by_compatibleUserCode2??)>
+${prefixName?string('ORDER BY ', ', ')}"compatible_user_code_2" ${order_by_compatibleUserCode2_value!}
+<#assign prefixName = false>
+</#if>
 <#if (order_by_contact??)>
 ${prefixName?string('ORDER BY ', ', ')}"contact" ${order_by_contact_value!}
 <#assign prefixName = false>
@@ -436,10 +480,6 @@ ${prefixName?string('ORDER BY ', ', ')}"org_code" ${order_by_orgCode_value!}
 </#if>
 <#if (order_by_password??)>
 ${prefixName?string('ORDER BY ', ', ')}"password_" ${order_by_password_value!}
-<#assign prefixName = false>
-</#if>
-<#if (order_by_password2??)>
-${prefixName?string('ORDER BY ', ', ')}"password2" ${order_by_password2_value!}
 <#assign prefixName = false>
 </#if>
 <#if (order_by_passwordSalt??)>

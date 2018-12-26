@@ -19,6 +19,12 @@ class m0002 implements java.io.Serializable {
 		newInput?.callName = input?.callName
 		newInput?.cityCode = input?.cityCode
 		newInput?.companyName = input?.companyName
+		newInput?.compatibleDepartmentCode1 = input?.compatibleDepartmentCode1
+		newInput?.compatibleDepartmentCode2 = input?.compatibleDepartmentCode2
+		newInput?.compatiblePassword1 = input?.compatiblePassword1
+		newInput?.compatiblePassword2 = input?.compatiblePassword2
+		newInput?.compatibleUserCode1 = input?.compatibleUserCode1
+		newInput?.compatibleUserCode2 = input?.compatibleUserCode2
 		newInput?.contact = input?.contact
 		newInput?.countryCode = input?.countryCode
 		newInput?.createdByCode = input?.createdByCode
@@ -51,7 +57,6 @@ class m0002 implements java.io.Serializable {
 		newInput?.orderBy = input?.orderBy
 		newInput?.orgCode = input?.orgCode
 		newInput?.password = input?.password
-		newInput?.password2 = input?.password2
 		newInput?.passwordSalt = input?.passwordSalt
 		newInput?.personalCode = input?.personalCode
 		newInput?.personalId = input?.personalId
@@ -130,6 +135,12 @@ class m0002 implements java.io.Serializable {
 		newOutput?.callName = output?.call_name
 		newOutput?.cityCode = output?.city_code
 		newOutput?.companyName = output?.company_name
+		newOutput?.compatibleDepartmentCode1 = output?.compatible_department_code_1
+		newOutput?.compatibleDepartmentCode2 = output?.compatible_department_code_2
+		newOutput?.compatiblePassword1 = output?.compatible_password_1
+		newOutput?.compatiblePassword2 = output?.compatible_password_2
+		newOutput?.compatibleUserCode1 = output?.compatible_user_code_1
+		newOutput?.compatibleUserCode2 = output?.compatible_user_code_2
 		newOutput?.contact = output?.contact
 		newOutput?.countryCode = output?.country_code
 		newOutput?.createdByCode = output?.created_by_code
@@ -162,7 +173,6 @@ class m0002 implements java.io.Serializable {
 		newOutput?.orderBy = output?.order_by_
 		newOutput?.orgCode = output?.org_code
 		newOutput?.password = output?.password_
-		newOutput?.password2 = output?.password2
 		newOutput?.passwordSalt = output?.password_salt
 		newOutput?.personalCode = output?.personal_code
 		newOutput?.personalId = output?.personal_id

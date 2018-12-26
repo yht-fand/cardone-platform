@@ -28,6 +28,10 @@ class modifyModal implements java.io.Serializable {
 		newOutput?.batchNo = output?.batch_no
 		newOutput?.beginDate = output?.begin_date
 		newOutput?.cityCode = output?.city_code
+		newOutput?.compatibleDepartmentCode1 = output?.compatible_department_code_1
+		newOutput?.compatibleDepartmentCode2 = output?.compatible_department_code_2
+		newOutput?.compatibleParentCode1 = output?.compatible_parent_code_1
+		newOutput?.compatibleParentCode2 = output?.compatible_parent_code_2
 		newOutput?.createdByCode = output?.created_by_code
 		newOutput?.createdById = output?.created_by_id
 		newOutput?.createdDate = output?.created_date
@@ -62,7 +66,6 @@ class modifyModal implements java.io.Serializable {
 		newOutput?.syncReturnMessage = output?.sync_return_message
 		newOutput?.systemInfoCode = output?.system_info_code
 		newOutput?.thirdPartyCode = output?.third_party_code
-		newOutput?.typeCode = output?.type_code
 		newOutput?.version = output?.version_
 
         newOutput

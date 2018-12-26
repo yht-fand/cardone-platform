@@ -76,6 +76,14 @@ class r0003 implements java.io.Serializable {
 
             data['cityCode'] = contentItem['city_code']
 
+            data['compatibleDepartmentCode1'] = contentItem['compatible_department_code_1']
+
+            data['compatibleDepartmentCode2'] = contentItem['compatible_department_code_2']
+
+            data['compatibleParentCode1'] = contentItem['compatible_parent_code_1']
+
+            data['compatibleParentCode2'] = contentItem['compatible_parent_code_2']
+
             data['createdByCode'] = contentItem['created_by_code']
 
             data['createdById'] = contentItem['created_by_id']
@@ -143,8 +151,6 @@ class r0003 implements java.io.Serializable {
             data['systemInfoCode'] = contentItem['system_info_code']
 
             data['thirdPartyCode'] = contentItem['third_party_code']
-
-            data['typeCode'] = contentItem['type_code']
 
             data['version'] = contentItem['version_']
 

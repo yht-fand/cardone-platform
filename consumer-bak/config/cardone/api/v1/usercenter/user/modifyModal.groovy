@@ -33,6 +33,12 @@ class modifyModal implements java.io.Serializable {
 		newOutput?.callName = output?.call_name
 		newOutput?.cityCode = output?.city_code
 		newOutput?.companyName = output?.company_name
+		newOutput?.compatibleDepartmentCode1 = output?.compatible_department_code_1
+		newOutput?.compatibleDepartmentCode2 = output?.compatible_department_code_2
+		newOutput?.compatiblePassword1 = output?.compatible_password_1
+		newOutput?.compatiblePassword2 = output?.compatible_password_2
+		newOutput?.compatibleUserCode1 = output?.compatible_user_code_1
+		newOutput?.compatibleUserCode2 = output?.compatible_user_code_2
 		newOutput?.contact = output?.contact
 		newOutput?.countryCode = output?.country_code
 		newOutput?.createdByCode = output?.created_by_code
@@ -65,7 +71,6 @@ class modifyModal implements java.io.Serializable {
 		newOutput?.orderBy = output?.order_by_
 		newOutput?.orgCode = output?.org_code
 		newOutput?.password = output?.password_
-		newOutput?.password2 = output?.password2
 		newOutput?.passwordSalt = output?.password_salt
 		newOutput?.personalCode = output?.personal_code
 		newOutput?.personalId = output?.personal_id

@@ -41,6 +41,30 @@ ${prefixName?string('', ', ')}"city_code"
 ${prefixName?string('', ', ')}"company_name"
 <#assign prefixName = false>
 </#if>
+<#if (index_compatibleDepartmentCode1??)>
+${prefixName?string('', ', ')}"compatible_department_code_1"
+<#assign prefixName = false>
+</#if>
+<#if (index_compatibleDepartmentCode2??)>
+${prefixName?string('', ', ')}"compatible_department_code_2"
+<#assign prefixName = false>
+</#if>
+<#if (index_compatiblePassword1??)>
+${prefixName?string('', ', ')}"compatible_password_1"
+<#assign prefixName = false>
+</#if>
+<#if (index_compatiblePassword2??)>
+${prefixName?string('', ', ')}"compatible_password_2"
+<#assign prefixName = false>
+</#if>
+<#if (index_compatibleUserCode1??)>
+${prefixName?string('', ', ')}"compatible_user_code_1"
+<#assign prefixName = false>
+</#if>
+<#if (index_compatibleUserCode2??)>
+${prefixName?string('', ', ')}"compatible_user_code_2"
+<#assign prefixName = false>
+</#if>
 <#if (index_contact??)>
 ${prefixName?string('', ', ')}"contact"
 <#assign prefixName = false>
@@ -167,10 +191,6 @@ ${prefixName?string('', ', ')}"org_code"
 </#if>
 <#if (index_password??)>
 ${prefixName?string('', ', ')}"password_"
-<#assign prefixName = false>
-</#if>
-<#if (index_password2??)>
-${prefixName?string('', ', ')}"password2"
 <#assign prefixName = false>
 </#if>
 <#if (index_passwordSalt??)>

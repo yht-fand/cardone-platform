@@ -21,6 +21,22 @@ ${prefixName?string('', ', ')}"begin_date"
 ${prefixName?string('', ', ')}"city_code"
 <#assign prefixName = false>
 </#if>
+<#if (index_compatibleDepartmentCode1??)>
+${prefixName?string('', ', ')}"compatible_department_code_1"
+<#assign prefixName = false>
+</#if>
+<#if (index_compatibleDepartmentCode2??)>
+${prefixName?string('', ', ')}"compatible_department_code_2"
+<#assign prefixName = false>
+</#if>
+<#if (index_compatibleParentCode1??)>
+${prefixName?string('', ', ')}"compatible_parent_code_1"
+<#assign prefixName = false>
+</#if>
+<#if (index_compatibleParentCode2??)>
+${prefixName?string('', ', ')}"compatible_parent_code_2"
+<#assign prefixName = false>
+</#if>
 <#if (index_createdByCode??)>
 ${prefixName?string('', ', ')}"created_by_code"
 <#assign prefixName = false>
@@ -155,10 +171,6 @@ ${prefixName?string('', ', ')}"system_info_code"
 </#if>
 <#if (index_thirdPartyCode??)>
 ${prefixName?string('', ', ')}"third_party_code"
-<#assign prefixName = false>
-</#if>
-<#if (index_typeCode??)>
-${prefixName?string('', ', ')}"type_code"
 <#assign prefixName = false>
 </#if>
 <#if (index_version??)>

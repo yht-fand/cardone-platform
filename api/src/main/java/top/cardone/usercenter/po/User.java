@@ -81,6 +81,48 @@ public class User implements java.io.Serializable {
     protected String companyName;
 
     /**
+     * 兼容部门编号1
+     */
+    @lombok.Getter
+    @lombok.Setter
+    protected String compatibleDepartmentCode1;
+
+    /**
+     * 兼容部门编号2
+     */
+    @lombok.Getter
+    @lombok.Setter
+    protected String compatibleDepartmentCode2;
+
+    /**
+     * 兼容密码1
+     */
+    @lombok.Getter
+    @lombok.Setter
+    protected String compatiblePassword1;
+
+    /**
+     * 兼容密码2
+     */
+    @lombok.Getter
+    @lombok.Setter
+    protected String compatiblePassword2;
+
+    /**
+     * 兼容用户编号1
+     */
+    @lombok.Getter
+    @lombok.Setter
+    protected String compatibleUserCode1;
+
+    /**
+     * 兼容用户编号2
+     */
+    @lombok.Getter
+    @lombok.Setter
+    protected String compatibleUserCode2;
+
+    /**
      * 联系人
      */
     @lombok.Getter
@@ -246,7 +288,7 @@ public class User implements java.io.Serializable {
      */
     @lombok.Getter
     @lombok.Setter
-    protected Date lastSyncTime;
+    protected Long lastSyncTime;
 
     /**
      * 现居住地
@@ -303,13 +345,6 @@ public class User implements java.io.Serializable {
     @lombok.Getter
     @lombok.Setter
     protected String password;
-
-    /**
-     * 
-     */
-    @lombok.Getter
-    @lombok.Setter
-    protected String password2;
 
     /**
      * 密码盐

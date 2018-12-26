@@ -86,6 +86,18 @@ class r0001 implements java.io.Serializable {
 
             data['companyName'] = contentItem['company_name']
 
+            data['compatibleDepartmentCode1'] = contentItem['compatible_department_code_1']
+
+            data['compatibleDepartmentCode2'] = contentItem['compatible_department_code_2']
+
+            data['compatiblePassword1'] = contentItem['compatible_password_1']
+
+            data['compatiblePassword2'] = contentItem['compatible_password_2']
+
+            data['compatibleUserCode1'] = contentItem['compatible_user_code_1']
+
+            data['compatibleUserCode2'] = contentItem['compatible_user_code_2']
+
             data['contact'] = contentItem['contact']
 
             data['countryCode'] = contentItem['country_code']
@@ -149,8 +161,6 @@ class r0001 implements java.io.Serializable {
             data['orgCode'] = contentItem['org_code']
 
             data['password'] = contentItem['password_']
-
-            data['password2'] = contentItem['password2']
 
             data['passwordSalt'] = contentItem['password_salt']
 

@@ -121,6 +121,18 @@
 --城市编号
 --drop index IF EXISTS idx_c1_department_city_code;
 --create index IF NOT EXISTS idx_c1_department_city_code ON c1_department ("city_code" varchar_pattern_ops);
+--兼容部门编号1
+--drop index IF EXISTS idx_c1_department_compatible_department_code_1;
+--create index IF NOT EXISTS idx_c1_department_compatible_department_code_1 ON c1_department ("compatible_department_code_1" varchar_pattern_ops);
+--兼容部门编号2
+--drop index IF EXISTS idx_c1_department_compatible_department_code_2;
+--create index IF NOT EXISTS idx_c1_department_compatible_department_code_2 ON c1_department ("compatible_department_code_2" varchar_pattern_ops);
+--兼容父级编号1
+--drop index IF EXISTS idx_c1_department_compatible_parent_code_1;
+--create index IF NOT EXISTS idx_c1_department_compatible_parent_code_1 ON c1_department ("compatible_parent_code_1" varchar_pattern_ops);
+--兼容父级编号2
+--drop index IF EXISTS idx_c1_department_compatible_parent_code_2;
+--create index IF NOT EXISTS idx_c1_department_compatible_parent_code_2 ON c1_department ("compatible_parent_code_2" varchar_pattern_ops);
 --创建人编号
 --drop index IF EXISTS idx_c1_department_created_by_code;
 --create index IF NOT EXISTS idx_c1_department_created_by_code ON c1_department ("created_by_code" varchar_pattern_ops);
@@ -217,9 +229,6 @@
 --第三方编号
 --drop index IF EXISTS idx_c1_department_third_party_code;
 --create index IF NOT EXISTS idx_c1_department_third_party_code ON c1_department ("third_party_code" varchar_pattern_ops);
---
---drop index IF EXISTS idx_c1_department_type_code;
---create index IF NOT EXISTS idx_c1_department_type_code ON c1_department ("type_code");
 
 -- 用户与部门（c1_user_department）
 
@@ -514,6 +523,24 @@
 --工作单位
 --drop index IF EXISTS idx_c1_user_company_name;
 --create index IF NOT EXISTS idx_c1_user_company_name ON c1_user ("company_name" varchar_pattern_ops);
+--兼容部门编号1
+--drop index IF EXISTS idx_c1_user_compatible_department_code_1;
+--create index IF NOT EXISTS idx_c1_user_compatible_department_code_1 ON c1_user ("compatible_department_code_1" varchar_pattern_ops);
+--兼容部门编号2
+--drop index IF EXISTS idx_c1_user_compatible_department_code_2;
+--create index IF NOT EXISTS idx_c1_user_compatible_department_code_2 ON c1_user ("compatible_department_code_2" varchar_pattern_ops);
+--兼容密码1
+--drop index IF EXISTS idx_c1_user_compatible_password_1;
+--create index IF NOT EXISTS idx_c1_user_compatible_password_1 ON c1_user ("compatible_password_1" varchar_pattern_ops);
+--兼容密码2
+--drop index IF EXISTS idx_c1_user_compatible_password_2;
+--create index IF NOT EXISTS idx_c1_user_compatible_password_2 ON c1_user ("compatible_password_2" varchar_pattern_ops);
+--兼容用户编号1
+--drop index IF EXISTS idx_c1_user_compatible_user_code_1;
+--create index IF NOT EXISTS idx_c1_user_compatible_user_code_1 ON c1_user ("compatible_user_code_1" varchar_pattern_ops);
+--兼容用户编号2
+--drop index IF EXISTS idx_c1_user_compatible_user_code_2;
+--create index IF NOT EXISTS idx_c1_user_compatible_user_code_2 ON c1_user ("compatible_user_code_2" varchar_pattern_ops);
 --联系人
 --drop index IF EXISTS idx_c1_user_contact;
 --create index IF NOT EXISTS idx_c1_user_contact ON c1_user ("contact" varchar_pattern_ops);
@@ -601,9 +628,6 @@
 --密码
 --drop index IF EXISTS idx_c1_user_password_;
 --create index IF NOT EXISTS idx_c1_user_password_ ON c1_user ("password_" varchar_pattern_ops);
---
---drop index IF EXISTS idx_c1_user_password2;
---create index IF NOT EXISTS idx_c1_user_password2 ON c1_user ("password2" varchar_pattern_ops);
 --密码盐
 --drop index IF EXISTS idx_c1_user_password_salt;
 --create index IF NOT EXISTS idx_c1_user_password_salt ON c1_user ("password_salt" varchar_pattern_ops);

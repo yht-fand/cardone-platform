@@ -20,6 +20,22 @@ ${prefixName?string('SET ', ', ')}"begin_date" = :update_beginDate_value
 ${prefixName?string('SET ', ', ')}"city_code" = :update_cityCode_value
 <#assign prefixName = false>
 </#if>
+<#if (update_compatibleDepartmentCode1??)>
+${prefixName?string('SET ', ', ')}"compatible_department_code_1" = :update_compatibleDepartmentCode1_value
+<#assign prefixName = false>
+</#if>
+<#if (update_compatibleDepartmentCode2??)>
+${prefixName?string('SET ', ', ')}"compatible_department_code_2" = :update_compatibleDepartmentCode2_value
+<#assign prefixName = false>
+</#if>
+<#if (update_compatibleParentCode1??)>
+${prefixName?string('SET ', ', ')}"compatible_parent_code_1" = :update_compatibleParentCode1_value
+<#assign prefixName = false>
+</#if>
+<#if (update_compatibleParentCode2??)>
+${prefixName?string('SET ', ', ')}"compatible_parent_code_2" = :update_compatibleParentCode2_value
+<#assign prefixName = false>
+</#if>
 <#if (update_createdByCode??)>
 ${prefixName?string('SET ', ', ')}"created_by_code" = :update_createdByCode_value
 <#assign prefixName = false>
@@ -154,10 +170,6 @@ ${prefixName?string('SET ', ', ')}"system_info_code" = :update_systemInfoCode_va
 </#if>
 <#if (update_thirdPartyCode??)>
 ${prefixName?string('SET ', ', ')}"third_party_code" = :update_thirdPartyCode_value
-<#assign prefixName = false>
-</#if>
-<#if (update_typeCode??)>
-${prefixName?string('SET ', ', ')}"type_code" = :update_typeCode_value
 <#assign prefixName = false>
 </#if>
 <#if (update_version??)>

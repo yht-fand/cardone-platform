@@ -19,6 +19,12 @@ class u0001 implements java.io.Serializable {
 		newInput?.callName = input?.callName
 		newInput?.cityCode = input?.cityCode
 		newInput?.companyName = input?.companyName
+		newInput?.compatibleDepartmentCode1 = input?.compatibleDepartmentCode1
+		newInput?.compatibleDepartmentCode2 = input?.compatibleDepartmentCode2
+		newInput?.compatiblePassword1 = input?.compatiblePassword1
+		newInput?.compatiblePassword2 = input?.compatiblePassword2
+		newInput?.compatibleUserCode1 = input?.compatibleUserCode1
+		newInput?.compatibleUserCode2 = input?.compatibleUserCode2
 		newInput?.contact = input?.contact
 		newInput?.countryCode = input?.countryCode
 		newInput?.createdByCode = input?.createdByCode
@@ -51,7 +57,6 @@ class u0001 implements java.io.Serializable {
 		newInput?.orderBy = input?.orderBy
 		newInput?.orgCode = input?.orgCode
 		newInput?.password = input?.password
-		newInput?.password2 = input?.password2
 		newInput?.passwordSalt = input?.passwordSalt
 		newInput?.personalCode = input?.personalCode
 		newInput?.personalId = input?.personalId
